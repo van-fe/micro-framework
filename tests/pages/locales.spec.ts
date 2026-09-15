@@ -1,9 +1,18 @@
+import type { Page } from "@playwright/test";
 import { expect, test } from "../e2e/browser-process-fixture";
+
+// VitePress awaits the page module before hydration; SSR headings can appear earlier.
+async function waitForDocumentation(page: Page): Promise<void> {
+  await page.waitForFunction(() => Boolean(
+    (document.querySelector("#app") as HTMLElement & { __vue_app__?: unknown })?.__vue_app__,
+  ));
+}
 
 test("switches corresponding articles and searches within each language", async ({ page }) => {
   const failures: string[] = [];
   page.on("pageerror", (error) => failures.push(error.message));
   await page.goto("guide/getting-started");
+  await waitForDocumentation(page);
   await expect(page.locator("html")).toHaveAttribute("lang", "zh-CN");
   await page.getByRole("button", { name: "切换语言", exact: true }).click();
   await page.locator(".VPNavBarTranslations").getByRole("link", { name: "English", exact: true }).click();
@@ -11,6 +20,7 @@ test("switches corresponding articles and searches within each language", async 
   await expect(page.locator("h1")).toHaveText("Getting started");
   await expect(page.locator("html")).toHaveAttribute("lang", "en-US");
   await page.reload();
+  await waitForDocumentation(page);
   await expect(page.locator("h1")).toHaveText("Getting started");
   const links = await page.locator(".VPNavBarMenu a, .VPSidebar a, .vp-doc a").evaluateAll((elements) =>
     elements.map((element) => (element as HTMLAnchorElement).getAttribute("href")!).filter((href) => href.startsWith("/")),
@@ -41,6 +51,7 @@ test("switches corresponding articles and searches within each language", async 
 test("offers corresponding language navigation on mobile", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("en/reference/document-bridge");
+  await waitForDocumentation(page);
   await expect(page.locator("h1")).toHaveText("Document Bridge and extension plugins");
   await page.getByRole("button", { name: "mobile navigation" }).click();
   await page.locator(".VPNavScreenTranslations button").click();
