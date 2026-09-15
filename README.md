@@ -4,7 +4,7 @@
 
 [Documentation](https://van-fe.github.io/micro-framework/) · [Documentation source](packages/docs/index.md) · [MIT License](LICENSE)
 
-The documentation site will be available after the first GitHub Pages deployment.
+The documentation site is hosted on GitHub Pages and updates automatically after pushes to `main`.
 
 A micro-frontend runtime for modern browsers. Each micro-application instance executes JavaScript in its own hidden, same-origin iframe Realm and renders visible DOM and CSS into an application-owned ShadowRoot.
 
@@ -211,7 +211,7 @@ See [implementation status](packages/docs/reference/implementation-status.md) fo
 
 ## Documentation site
 
-The September 7, 2026 additions include independent previews and tarball consumer acceptance for four CLI frameworks (24/24), React/Vue 3 Hydration, CI configuration, private tarball preparation, artifact integrity checks, and size budgets. Remote CI and official package publication have not been executed. See the release documentation above for physical-device and external production acceptance requirements.
+The September 7, 2026 additions include independent previews and tarball consumer acceptance for four CLI frameworks (24/24), React/Vue 3 Hydration, CI configuration, private tarball preparation, artifact integrity checks, and size budgets. Documentation has been built and deployed through GitHub Actions; official npm publication remains pending. See the release documentation above for physical-device and external production acceptance requirements.
 
 The documentation site lives in `packages/docs` and builds with VitePress. Linked documentation is currently in Chinese.
 

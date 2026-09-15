@@ -4,7 +4,7 @@
 
 [在线文档](https://van-fe.github.io/micro-framework/) · [仓库内文档](packages/docs/index.md) · [MIT 许可证](LICENSE)
 
-在线文档将在首次 GitHub Pages 部署完成后可用。
+在线文档已部署到 GitHub Pages，后续推送到 `main` 会自动更新。
 
 一个面向现代浏览器的微前端运行时。每个微应用实例在独立、同源、不可见的 iframe Realm 中执行 JavaScript，并把可视 DOM 与 CSS 渲染到应用自己的 ShadowRoot。
 
@@ -227,7 +227,7 @@ bun scripts/upstream-issues.mjs check
 ## 文档站
 
 2026-09-07 新增：四框架 CLI 独立预览与 tarball 消费者验收（24/24）、React/Vue 3 Hydration、CI 配置、私有
-tarball 准备、产物完整性与体积预算。未执行远端 CI 或正式包发布，实机与外部生产验收项见上述发布文档。
+tarball 准备、产物完整性与体积预算。文档已通过 GitHub Actions 构建并部署；尚未正式发布 npm 包，实机与外部生产验收项见上述发布文档。
 
 文档站位于 `packages/docs`，使用 VitePress 构建：
 

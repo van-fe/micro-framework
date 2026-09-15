@@ -1,14 +1,14 @@
 # 发布与外部验收
 
 包命名空间统一为 `@micro-framework`，例如 `@micro-framework/runtime`。
-支持内部 tarball 验证、GitHub Pages 文档部署和 npm 发布；工作流配置与本地验收不代表已经远端发布。
+支持内部 tarball 验证、GitHub Pages 文档部署和 npm 发布。文档已通过 GitHub Actions 部署成功；npm 包尚未正式发布，仍需通过下述发布门禁。
 
 ## 自动部署文档
 
 在仓库 Settings → Pages → Build and deployment 中将 Source 设为 **GitHub Actions**。
 `docs.yml` 在默认分支每次 push 后构建并部署，也支持在默认分支手动运行；其他分支不覆盖线上文档。
 VitePress 读取 Pages 返回的 base path，兼容项目子路径和自定义域名，本地开发仍使用 `/`。
-默认站点地址为 `https://van-fe.github.io/micro-framework/`，实际 URL 以部署 job 输出为准。
+在线文档：[Micro Frame 文档站](https://van-fe.github.io/micro-framework/)。当前公开仓库使用 GitHub Actions 作为 Pages 发布来源，后续推送到 `main` 自动更新。
 
 文档站不包含示例服务。可设置仓库 Actions variable `MICRO_FRAME_DEMO_URL` 为已部署的 HTTPS 演示地址；
 未设置时线上页面显示本地运行说明。配置方式参见 [GitHub Pages 官方说明](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)。
