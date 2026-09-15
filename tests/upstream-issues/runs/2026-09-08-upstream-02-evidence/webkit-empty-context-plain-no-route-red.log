@@ -1,0 +1,92 @@
+{"withRoute":false,"desktop":false,"executable":"/Users/fanfangbo/Library/Caches/ms-playwright/webkit-2336/pw_run.sh"}
+{"index":1,"result":"loaded","receivedRequests":1}
+{"index":2,"result":"loaded","receivedRequests":1}
+{"index":3,"result":"loaded","receivedRequests":1}
+{"index":4,"result":"loaded","receivedRequests":1}
+{"index":5,"result":"loaded","receivedRequests":1}
+{"index":6,"result":"loaded","receivedRequests":1}
+{"index":7,"result":"loaded","receivedRequests":1}
+{"index":8,"result":"loaded","receivedRequests":1}
+{"index":9,"result":"loaded","receivedRequests":1}
+{"index":10,"result":"loaded","receivedRequests":1}
+{"index":11,"result":"loaded","receivedRequests":1}
+{"index":12,"result":"loaded","receivedRequests":1}
+{"index":13,"result":"loaded","receivedRequests":1}
+{"index":14,"result":"loaded","receivedRequests":1}
+{"index":15,"result":"loaded","receivedRequests":1}
+{"index":16,"result":"loaded","receivedRequests":1}
+{"index":17,"result":"loaded","receivedRequests":1}
+{"index":18,"result":"loaded","receivedRequests":1}
+{"index":19,"result":"loaded","receivedRequests":1}
+{"index":20,"result":"loaded","receivedRequests":1}
+{"index":21,"result":"loaded","receivedRequests":1}
+{"index":22,"result":"loaded","receivedRequests":1}
+{"index":23,"result":"loaded","receivedRequests":1}
+{"index":24,"result":"loaded","receivedRequests":1}
+{"index":25,"result":"loaded","receivedRequests":1}
+{"index":26,"result":"loaded","receivedRequests":1}
+{"index":27,"result":"loaded","receivedRequests":1}
+{"index":28,"result":"loaded","receivedRequests":1}
+{"index":29,"result":"loaded","receivedRequests":1}
+{"index":30,"result":"loaded","receivedRequests":1}
+{"index":31,"result":"loaded","receivedRequests":1}
+{"index":32,"result":"loaded","receivedRequests":1}
+{"index":33,"result":"loaded","receivedRequests":1}
+{"index":34,"result":"loaded","receivedRequests":1}
+{"index":35,"result":"loaded","receivedRequests":1}
+{"index":36,"result":"loaded","receivedRequests":1}
+{"index":37,"result":"loaded","receivedRequests":1}
+{"index":38,"result":"loaded","receivedRequests":1}
+{"index":39,"result":"loaded","receivedRequests":1}
+{"index":40,"result":"loaded","receivedRequests":1}
+{"index":41,"result":"loaded","receivedRequests":1}
+{"index":42,"result":"loaded","receivedRequests":1}
+{"index":43,"result":"loaded","receivedRequests":1}
+{"index":44,"result":"loaded","receivedRequests":1}
+{"index":45,"result":"loaded","receivedRequests":1}
+{"index":46,"result":"loaded","receivedRequests":1}
+{"index":47,"result":"loaded","receivedRequests":1}
+{"index":48,"result":"loaded","receivedRequests":1}
+{"index":49,"result":"loaded","receivedRequests":1}
+{"index":50,"result":"loaded","receivedRequests":1}
+{"index":51,"result":"loaded","receivedRequests":1}
+{"index":52,"result":"loaded","receivedRequests":1}
+{"index":53,"result":"loaded","receivedRequests":1}
+{"index":54,"result":"loaded","receivedRequests":1}
+{"index":55,"result":"loaded","receivedRequests":1}
+{"index":56,"result":"loaded","receivedRequests":1}
+{"index":57,"result":"loaded","receivedRequests":1}
+{"index":58,"result":"loaded","receivedRequests":1}
+{"index":59,"result":"loaded","receivedRequests":1}
+{"index":60,"result":"loaded","receivedRequests":1}
+{"index":61,"result":"loaded","receivedRequests":1}
+{"index":62,"result":"loaded","receivedRequests":1}
+{"index":63,"result":"loaded","receivedRequests":1}
+{"index":64,"result":"loaded","receivedRequests":1}
+{"index":65,"result":"loaded","receivedRequests":1}
+{"index":66,"result":"loaded","receivedRequests":1}
+{"index":67,"result":"loaded","receivedRequests":1}
+{"index":68,"result":"loaded","receivedRequests":1}
+{"index":69,"result":"loaded","receivedRequests":1}
+{"index":70,"result":"loaded","receivedRequests":1}
+{"index":71,"result":"loaded","receivedRequests":1}
+{"index":72,"result":"loaded","receivedRequests":1}
+{"index":73,"result":"loaded","receivedRequests":1}
+{"index":74,"result":"loaded","receivedRequests":1}
+{"index":75,"result":"failed","receivedRequests":0,"message":"TimeoutError: page.goto: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:55401/control\", waiting until \"load\"\u001b[22m\n","actualURL":"about:blank"}
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+page.goto: Timeout 30000ms exceeded.
+Call log:
+[2m  - navigating to "http://127.0.0.1:55401/control", waiting until "load"[22m
+
+    at /private/tmp/upstream-webkit-empty-context-loop.mjs:22:18 {
+  log: [
+    '  - navigating to "http://127.0.0.1:55401/control", waiting until "load"'
+  ],
+  name: 'TimeoutError'
+}
+
+Node.js v24.19.0

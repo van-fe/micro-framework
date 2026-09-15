@@ -1,0 +1,378 @@
+{
+  "generatedAt": "2026-09-14T08:42:49.686Z",
+  "runId": "mfopt-001-resource-evidence",
+  "baselineSha": "d943bea6f7bab29f9d3ac9e3fb3e7ee4f97778f5",
+  "runtime": {
+    "bun": "unknown",
+    "node": "v24.19.0",
+    "platform": "darwin",
+    "architecture": "arm64"
+  },
+  "mode": "release",
+  "status": "passed",
+  "passed": true,
+  "sentryNetworkGuard": [
+    {
+      "browser": "chromium",
+      "allowlistedOrigins": [
+        "http://127.0.0.1:4373",
+        "http://127.0.0.1:4374",
+        "http://127.0.0.1:4375"
+      ],
+      "blockedProbePaths": [
+        "/probe/beacon",
+        "/probe/fetch",
+        "/probe/iframe",
+        "/probe/worker",
+        "/probe/xhr"
+      ],
+      "fakeReceiverDeliveredPaths": [
+        "/guard.html"
+      ],
+      "activeServiceWorkers": 0
+    },
+    {
+      "browser": "chromium",
+      "allowlistedOrigins": [
+        "http://127.0.0.1:4373",
+        "http://127.0.0.1:4374",
+        "http://127.0.0.1:4375"
+      ],
+      "blockedProbePaths": [
+        "/probe/beacon",
+        "/probe/fetch",
+        "/probe/iframe",
+        "/probe/worker",
+        "/probe/xhr"
+      ],
+      "fakeReceiverDeliveredPaths": [
+        "/guard.html"
+      ],
+      "activeServiceWorkers": 0
+    },
+    {
+      "browser": "firefox",
+      "allowlistedOrigins": [
+        "http://127.0.0.1:4373",
+        "http://127.0.0.1:4374",
+        "http://127.0.0.1:4375"
+      ],
+      "blockedProbePaths": [
+        "/probe/beacon",
+        "/probe/fetch",
+        "/probe/iframe",
+        "/probe/worker",
+        "/probe/xhr"
+      ],
+      "fakeReceiverDeliveredPaths": [
+        "/guard.html"
+      ],
+      "activeServiceWorkers": 0
+    },
+    {
+      "browser": "firefox",
+      "allowlistedOrigins": [
+        "http://127.0.0.1:4373",
+        "http://127.0.0.1:4374",
+        "http://127.0.0.1:4375"
+      ],
+      "blockedProbePaths": [
+        "/probe/beacon",
+        "/probe/fetch",
+        "/probe/iframe",
+        "/probe/worker",
+        "/probe/xhr"
+      ],
+      "fakeReceiverDeliveredPaths": [
+        "/guard.html"
+      ],
+      "activeServiceWorkers": 0
+    },
+    {
+      "browser": "webkit",
+      "allowlistedOrigins": [
+        "http://127.0.0.1:4373",
+        "http://127.0.0.1:4374",
+        "http://127.0.0.1:4375"
+      ],
+      "blockedProbePaths": [
+        "/probe/beacon",
+        "/probe/fetch",
+        "/probe/iframe",
+        "/probe/worker",
+        "/probe/xhr"
+      ],
+      "fakeReceiverDeliveredPaths": [
+        "/guard.html"
+      ],
+      "activeServiceWorkers": 0
+    },
+    {
+      "browser": "webkit",
+      "allowlistedOrigins": [
+        "http://127.0.0.1:4373",
+        "http://127.0.0.1:4374",
+        "http://127.0.0.1:4375"
+      ],
+      "blockedProbePaths": [
+        "/probe/beacon",
+        "/probe/fetch",
+        "/probe/iframe",
+        "/probe/worker",
+        "/probe/xhr"
+      ],
+      "fakeReceiverDeliveredPaths": [
+        "/guard.html"
+      ],
+      "activeServiceWorkers": 0
+    }
+  ],
+  "resourceOwnership": [
+    {
+      "browser": "chromium",
+      "before": {
+        "firstCalls": {
+          "media": 2,
+          "once": 1,
+          "aborted": 0,
+          "legacy": 2,
+          "onchange": 2,
+          "resize": 1,
+          "intersection": 1
+        },
+        "mediaHandlers": 7,
+        "resizeObservers": 2,
+        "intersectionObservers": 2,
+        "explicitlyRemovedHandlers": 0,
+        "explicitlyDisconnectedTargets": 0,
+        "invalidResizeRejected": true,
+        "invalidIntersectionRejected": true,
+        "resizeConstructorMatches": true,
+        "intersectionConstructorMatches": true,
+        "resizeHostInstance": true,
+        "intersectionHostInstance": true
+      },
+      "afterFirst": {
+        "mediaHandlers": 4,
+        "resizeObservers": 1,
+        "intersectionObservers": 1
+      },
+      "afterDestroyedCalls": {
+        "destroyedCallDelta": {
+          "media": 0,
+          "once": 0,
+          "aborted": 0,
+          "legacy": 0,
+          "onchange": 0,
+          "resize": 0,
+          "intersection": 0
+        },
+        "firstMediaHandlers": 0,
+        "firstResizeTargets": 0,
+        "firstIntersectionTargets": 0
+      },
+      "secondStillActive": {
+        "media": 1,
+        "once": 1,
+        "aborted": 0,
+        "legacy": 1,
+        "onchange": 1,
+        "resize": 1,
+        "intersection": 1
+      },
+      "final": {
+        "mediaHandlers": 0,
+        "resizeObservers": 0,
+        "intersectionObservers": 0
+      }
+    },
+    {
+      "browser": "firefox",
+      "before": {
+        "firstCalls": {
+          "media": 2,
+          "once": 1,
+          "aborted": 0,
+          "legacy": 2,
+          "onchange": 2,
+          "resize": 1,
+          "intersection": 1
+        },
+        "mediaHandlers": 7,
+        "resizeObservers": 2,
+        "intersectionObservers": 2,
+        "explicitlyRemovedHandlers": 0,
+        "explicitlyDisconnectedTargets": 0,
+        "invalidResizeRejected": true,
+        "invalidIntersectionRejected": true,
+        "resizeConstructorMatches": true,
+        "intersectionConstructorMatches": true,
+        "resizeHostInstance": true,
+        "intersectionHostInstance": true
+      },
+      "afterFirst": {
+        "mediaHandlers": 4,
+        "resizeObservers": 1,
+        "intersectionObservers": 1
+      },
+      "afterDestroyedCalls": {
+        "destroyedCallDelta": {
+          "media": 0,
+          "once": 0,
+          "aborted": 0,
+          "legacy": 0,
+          "onchange": 0,
+          "resize": 0,
+          "intersection": 0
+        },
+        "firstMediaHandlers": 0,
+        "firstResizeTargets": 0,
+        "firstIntersectionTargets": 0
+      },
+      "secondStillActive": {
+        "media": 1,
+        "once": 1,
+        "aborted": 0,
+        "legacy": 1,
+        "onchange": 1,
+        "resize": 1,
+        "intersection": 1
+      },
+      "final": {
+        "mediaHandlers": 0,
+        "resizeObservers": 0,
+        "intersectionObservers": 0
+      }
+    },
+    {
+      "browser": "webkit",
+      "before": {
+        "firstCalls": {
+          "media": 2,
+          "once": 1,
+          "aborted": 0,
+          "legacy": 2,
+          "onchange": 2,
+          "resize": 1,
+          "intersection": 1
+        },
+        "mediaHandlers": 7,
+        "resizeObservers": 2,
+        "intersectionObservers": 2,
+        "explicitlyRemovedHandlers": 0,
+        "explicitlyDisconnectedTargets": 0,
+        "invalidResizeRejected": true,
+        "invalidIntersectionRejected": true,
+        "resizeConstructorMatches": true,
+        "intersectionConstructorMatches": true,
+        "resizeHostInstance": true,
+        "intersectionHostInstance": true
+      },
+      "afterFirst": {
+        "mediaHandlers": 4,
+        "resizeObservers": 1,
+        "intersectionObservers": 1
+      },
+      "afterDestroyedCalls": {
+        "destroyedCallDelta": {
+          "media": 0,
+          "once": 0,
+          "aborted": 0,
+          "legacy": 0,
+          "onchange": 0,
+          "resize": 0,
+          "intersection": 0
+        },
+        "firstMediaHandlers": 0,
+        "firstResizeTargets": 0,
+        "firstIntersectionTargets": 0
+      },
+      "secondStillActive": {
+        "media": 1,
+        "once": 1,
+        "aborted": 0,
+        "legacy": 1,
+        "onchange": 1,
+        "resize": 1,
+        "intersection": 1
+      },
+      "final": {
+        "mediaHandlers": 0,
+        "resizeObservers": 0,
+        "intersectionObservers": 0
+      }
+    }
+  ],
+  "observerIdentity": [
+    {
+      "browser": "chromium",
+      "distinctResizeConstructor": true,
+      "distinctIntersectionConstructor": true,
+      "resizeStaticPrototype": true,
+      "intersectionStaticPrototype": true,
+      "resizeFrameInstance": true,
+      "resizeHostInstance": true,
+      "intersectionFrameInstance": true,
+      "intersectionHostInstance": true,
+      "mediaHostInstance": true,
+      "resizeConstructorMatches": true,
+      "intersectionConstructorMatches": true,
+      "invalidResizeRejected": true,
+      "invalidIntersectionRejected": true,
+      "mediaDispatchCalls": {
+        "media": 1,
+        "once": 1,
+        "aborted": 0,
+        "legacy": 1,
+        "onchange": 1
+      }
+    },
+    {
+      "browser": "firefox",
+      "distinctResizeConstructor": true,
+      "distinctIntersectionConstructor": true,
+      "resizeStaticPrototype": true,
+      "intersectionStaticPrototype": true,
+      "resizeFrameInstance": true,
+      "resizeHostInstance": true,
+      "intersectionFrameInstance": true,
+      "intersectionHostInstance": true,
+      "mediaHostInstance": true,
+      "resizeConstructorMatches": true,
+      "intersectionConstructorMatches": true,
+      "invalidResizeRejected": true,
+      "invalidIntersectionRejected": true,
+      "mediaDispatchCalls": {
+        "media": 1,
+        "once": 1,
+        "aborted": 0,
+        "legacy": 1,
+        "onchange": 1
+      }
+    },
+    {
+      "browser": "webkit",
+      "distinctResizeConstructor": true,
+      "distinctIntersectionConstructor": true,
+      "resizeStaticPrototype": true,
+      "intersectionStaticPrototype": true,
+      "resizeFrameInstance": true,
+      "resizeHostInstance": true,
+      "intersectionFrameInstance": true,
+      "intersectionHostInstance": true,
+      "mediaHostInstance": true,
+      "resizeConstructorMatches": true,
+      "intersectionConstructorMatches": true,
+      "invalidResizeRejected": true,
+      "invalidIntersectionRejected": true,
+      "mediaDispatchCalls": {
+        "media": 1,
+        "once": 1,
+        "aborted": 0,
+        "legacy": 1,
+        "onchange": 1
+      }
+    }
+  ],
+  "metrics": []
+}

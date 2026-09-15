@@ -1,0 +1,1030 @@
+{
+  "config": {
+    "argv": [
+      "/Users/fanfangbo/.local/share/fnm/node-versions/v24.19.0/installation/bin/node",
+      "/Users/fanfangbo/workspace/micro-framework/node_modules/.bin/playwright",
+      "test",
+      "tests/e2e/upstream-batch02-assets-csp.spec.ts",
+      "tests/e2e/upstream-batch02-components-overlays.spec.ts",
+      "tests/e2e/upstream-batch02-runtime-location.spec.ts",
+      "tests/e2e/upstream-batch02-dom-libraries.spec.ts",
+      "--grep",
+      "Q2408|Q2137|W727|Q1502",
+      "--reporter=line,json"
+    ],
+    "configFile": "/Users/fanfangbo/workspace/micro-framework/playwright.config.ts",
+    "rootDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "line"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "upstream-batch02-assets-csp.spec.ts",
+      "file": "upstream-batch02-assets-csp.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "W727 mounts and styles an HTML application under style-src without unsafe-inline and emits no style CSP violations",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 426,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  -  1\u001b[39m\n\u001b[31m+ Received  + 10\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"blocked\": \"inline\",\u001b[39m\n\u001b[31m+     \"directive\": \"style-src-elem\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"blocked\": \"inline\",\u001b[39m\n\u001b[31m+     \"directive\": \"style-src-elem\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+ ]\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  -  1\u001b[39m\n\u001b[31m+ Received  + 10\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"blocked\": \"inline\",\u001b[39m\n\u001b[31m+     \"directive\": \"style-src-elem\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"blocked\": \"inline\",\u001b[39m\n\u001b[31m+     \"directive\": \"style-src-elem\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-assets-csp.spec.ts:67:126",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-assets-csp.spec.ts",
+                      "column": 126,
+                      "line": 67
+                    },
+                    "snippet": "  65 |   expect(await page.locator(\"micro-app-host\").evaluate(node => getComputedStyle(node).display)).toBe(\"block\");\n  66 |   expect(await page.locator(\"micro-app-body\").evaluate(node => getComputedStyle(node).display)).toBe(\"block\");\n> 67 |   expect(await page.evaluate(() => window.__batch02CspViolations!.filter(event => event.directive.startsWith(\"style-src\")))).toEqual([]);\n     |                                                                                                                              ^\n  68 |   expect(errors).toEqual([]);\n  69 | });\n  70 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-assets-csp.spec.ts",
+                        "column": 126,
+                        "line": 67
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  -  1\u001b[39m\n\u001b[31m+ Received  + 10\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"blocked\": \"inline\",\u001b[39m\n\u001b[31m+     \"directive\": \"style-src-elem\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"blocked\": \"inline\",\u001b[39m\n\u001b[31m+     \"directive\": \"style-src-elem\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n  65 |   expect(await page.locator(\"micro-app-host\").evaluate(node => getComputedStyle(node).display)).toBe(\"block\");\n  66 |   expect(await page.locator(\"micro-app-body\").evaluate(node => getComputedStyle(node).display)).toBe(\"block\");\n> 67 |   expect(await page.evaluate(() => window.__batch02CspViolations!.filter(event => event.directive.startsWith(\"style-src\")))).toEqual([]);\n     |                                                                                                                              ^\n  68 |   expect(errors).toEqual([]);\n  69 | });\n  70 |\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-assets-csp.spec.ts:67:126"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T08:16:23.774Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-assets-cs-8b131-its-no-style-CSP-violations-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-assets-cs-8b131-its-no-style-CSP-violations-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-assets-csp.spec.ts",
+                    "column": 126,
+                    "line": 67
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "36c4034dc77325d02525-19cd5949e19ca1bd888f",
+          "file": "upstream-batch02-assets-csp.spec.ts",
+          "line": 46,
+          "column": 1
+        },
+        {
+          "title": "W727 respects author inline-style nonce authorization without restoring blocked CSS (nonce=true)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 190,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  -  1\u001b[39m\n\u001b[31m+ Received  + 14\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"blocked\": \"inline\",\u001b[39m\n\u001b[31m+     \"directive\": \"style-src-elem\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"blocked\": \"inline\",\u001b[39m\n\u001b[31m+     \"directive\": \"style-src-elem\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"blocked\": \"inline\",\u001b[39m\n\u001b[31m+     \"directive\": \"style-src-elem\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+ ]\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  -  1\u001b[39m\n\u001b[31m+ Received  + 14\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"blocked\": \"inline\",\u001b[39m\n\u001b[31m+     \"directive\": \"style-src-elem\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"blocked\": \"inline\",\u001b[39m\n\u001b[31m+     \"directive\": \"style-src-elem\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"blocked\": \"inline\",\u001b[39m\n\u001b[31m+     \"directive\": \"style-src-elem\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-assets-csp.spec.ts:89:128",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-assets-csp.spec.ts",
+                      "column": 128,
+                      "line": 89
+                    },
+                    "snippet": "  87 |     await expect(probe).toHaveCSS(\"color\",\"rgb(70, 90, 110)\"); await expect(probe).toHaveCSS(\"width\",\"37px\");\n  88 |     expect(await token()).toBe(\"rgb(70, 90, 110)\");\n> 89 |     expect(await page.evaluate(() => window.__batch02CspViolations!.filter(event => event.directive.startsWith(\"style-src\")))).toEqual([]);\n     |                                                                                                                                ^\n  90 |   } else {\n  91 |     await expect.poll(() => page.evaluate(() => window.__batch02CspViolations!.filter(event => event.directive.startsWith(\"style-src\") && event.blocked === \"inline\").length)).toBeGreaterThan(0);\n  92 |     expect(await token()).toBe(\"\"); await expect(probe).not.toHaveCSS(\"color\",\"rgb(70, 90, 110)\");"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-assets-csp.spec.ts",
+                        "column": 128,
+                        "line": 89
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  -  1\u001b[39m\n\u001b[31m+ Received  + 14\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"blocked\": \"inline\",\u001b[39m\n\u001b[31m+     \"directive\": \"style-src-elem\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"blocked\": \"inline\",\u001b[39m\n\u001b[31m+     \"directive\": \"style-src-elem\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"blocked\": \"inline\",\u001b[39m\n\u001b[31m+     \"directive\": \"style-src-elem\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n  87 |     await expect(probe).toHaveCSS(\"color\",\"rgb(70, 90, 110)\"); await expect(probe).toHaveCSS(\"width\",\"37px\");\n  88 |     expect(await token()).toBe(\"rgb(70, 90, 110)\");\n> 89 |     expect(await page.evaluate(() => window.__batch02CspViolations!.filter(event => event.directive.startsWith(\"style-src\")))).toEqual([]);\n     |                                                                                                                                ^\n  90 |   } else {\n  91 |     await expect.poll(() => page.evaluate(() => window.__batch02CspViolations!.filter(event => event.directive.startsWith(\"style-src\") && event.blocked === \"inline\").length)).toBeGreaterThan(0);\n  92 |     expect(await token()).toBe(\"\"); await expect(probe).not.toHaveCSS(\"color\",\"rgb(70, 90, 110)\");\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-assets-csp.spec.ts:89:128"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T08:16:24.645Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-assets-cs-4e1ce-ing-blocked-CSS-nonce-true--chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-assets-cs-4e1ce-ing-blocked-CSS-nonce-true--chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-assets-csp.spec.ts",
+                    "column": 128,
+                    "line": 89
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "36c4034dc77325d02525-541e128d23e9f79e87de",
+          "file": "upstream-batch02-assets-csp.spec.ts",
+          "line": 71,
+          "column": 38
+        },
+        {
+          "title": "W727 respects author inline-style nonce authorization without restoring blocked CSS (nonce=false)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 185,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T08:16:25.156Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "36c4034dc77325d02525-dce66931ec7775ba657c",
+          "file": "upstream-batch02-assets-csp.spec.ts",
+          "line": 71,
+          "column": 38
+        },
+        {
+          "title": "W727 mounts and styles an HTML application under style-src without unsafe-inline and emits no style CSP violations",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 858,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T08:16:31.536Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "36c4034dc77325d02525-ea8aae555d24beaf846d",
+          "file": "upstream-batch02-assets-csp.spec.ts",
+          "line": 46,
+          "column": 1
+        },
+        {
+          "title": "W727 respects author inline-style nonce authorization without restoring blocked CSS (nonce=true)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 240,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T08:16:32.838Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "36c4034dc77325d02525-ad1f28b717ddc7926325",
+          "file": "upstream-batch02-assets-csp.spec.ts",
+          "line": 71,
+          "column": 38
+        },
+        {
+          "title": "W727 respects author inline-style nonce authorization without restoring blocked CSS (nonce=false)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 227,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T08:16:33.083Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "36c4034dc77325d02525-58798f7cf833113c9803",
+          "file": "upstream-batch02-assets-csp.spec.ts",
+          "line": 71,
+          "column": 38
+        },
+        {
+          "title": "W727 mounts and styles an HTML application under style-src without unsafe-inline and emits no style CSP violations",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 10,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 622,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T08:16:41.128Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "36c4034dc77325d02525-9a2c359c367f20e2fbe3",
+          "file": "upstream-batch02-assets-csp.spec.ts",
+          "line": 46,
+          "column": 1
+        },
+        {
+          "title": "W727 respects author inline-style nonce authorization without restoring blocked CSS (nonce=true)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 10,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 243,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T08:16:41.988Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "36c4034dc77325d02525-b668c372009057e3cdaf",
+          "file": "upstream-batch02-assets-csp.spec.ts",
+          "line": 71,
+          "column": 38
+        },
+        {
+          "title": "W727 respects author inline-style nonce authorization without restoring blocked CSS (nonce=false)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 10,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 222,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T08:16:42.236Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "36c4034dc77325d02525-1f02eb17359ea70657b2",
+          "file": "upstream-batch02-assets-csp.spec.ts",
+          "line": 71,
+          "column": 38
+        }
+      ]
+    },
+    {
+      "title": "upstream-batch02-components-overlays.spec.ts",
+      "file": "upstream-batch02-components-overlays.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=true)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1814,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T08:16:25.652Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e147f600b35f9693ffcd-a1c1642274fc8acbd948",
+          "file": "upstream-batch02-components-overlays.spec.ts",
+          "line": 61,
+          "column": 3
+        },
+        {
+          "title": "Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=false)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1704,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T08:16:27.556Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e147f600b35f9693ffcd-81e16287782f462bf926",
+          "file": "upstream-batch02-components-overlays.spec.ts",
+          "line": 61,
+          "column": 3
+        },
+        {
+          "title": "Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=true)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1567,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T08:16:33.648Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e147f600b35f9693ffcd-aac7908991e8c0797ca0",
+          "file": "upstream-batch02-components-overlays.spec.ts",
+          "line": 61,
+          "column": 3
+        },
+        {
+          "title": "Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=false)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1123,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T08:16:35.560Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e147f600b35f9693ffcd-73d67e61961ea2867fed",
+          "file": "upstream-batch02-components-overlays.spec.ts",
+          "line": 61,
+          "column": 3
+        },
+        {
+          "title": "Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=true)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 11,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1416,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T08:16:42.649Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e147f600b35f9693ffcd-d36a24b6dad131b52972",
+          "file": "upstream-batch02-components-overlays.spec.ts",
+          "line": 61,
+          "column": 3
+        },
+        {
+          "title": "Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=false)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 11,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1191,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T08:16:44.225Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e147f600b35f9693ffcd-13b4bad420a224c20f62",
+          "file": "upstream-batch02-components-overlays.spec.ts",
+          "line": 61,
+          "column": 3
+        }
+      ]
+    },
+    {
+      "title": "upstream-batch02-dom-libraries.spec.ts",
+      "file": "upstream-batch02-dom-libraries.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Q2137 eruda 2.4.1 initializes and destroys its dynamic styles in a nested application",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1136,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T08:16:29.507Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "579d60776a3fc8f60751-df9fef08fe0e5798e175",
+          "file": "upstream-batch02-dom-libraries.spec.ts",
+          "line": 38,
+          "column": 1
+        },
+        {
+          "title": "Q2137 eruda 2.4.1 initializes and destroys its dynamic styles in a nested application",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1739,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T08:16:37.072Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "579d60776a3fc8f60751-32e814e7f9475235bac2",
+          "file": "upstream-batch02-dom-libraries.spec.ts",
+          "line": 38,
+          "column": 1
+        },
+        {
+          "title": "Q2137 eruda 2.4.1 initializes and destroys its dynamic styles in a nested application",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1481,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T08:16:45.625Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "579d60776a3fc8f60751-ffa122dd72f89ed86f1d",
+          "file": "upstream-batch02-dom-libraries.spec.ts",
+          "line": 38,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "upstream-batch02-runtime-location.spec.ts",
+      "file": "upstream-batch02-runtime-location.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Q1502 native window.location assignment navigates only the child and disposes after crossing origin",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 189,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T08:16:30.928Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c7420a37da65ce6a20b2-e433d652997717e2219f",
+          "file": "upstream-batch02-runtime-location.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "Q1502 native navigation during a pending module import leaves an unmounted handle that can be explicitly disposed",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 134,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T08:16:31.215Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c7420a37da65ce6a20b2-160c3b16d6198b712263",
+          "file": "upstream-batch02-runtime-location.spec.ts",
+          "line": 41,
+          "column": 1
+        },
+        {
+          "title": "Q1502 native window.location assignment navigates only the child and disposes after crossing origin",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 733,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T08:16:39.501Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c7420a37da65ce6a20b2-b083355ca840bb0ad4c0",
+          "file": "upstream-batch02-runtime-location.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "Q1502 native navigation during a pending module import leaves an unmounted handle that can be explicitly disposed",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 213,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T08:16:40.574Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c7420a37da65ce6a20b2-45d9f0545f374c26b49f",
+          "file": "upstream-batch02-runtime-location.spec.ts",
+          "line": 41,
+          "column": 1
+        },
+        {
+          "title": "Q1502 native window.location assignment navigates only the child and disposes after crossing origin",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 513,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T08:16:47.446Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c7420a37da65ce6a20b2-0b854744cab2811b6578",
+          "file": "upstream-batch02-runtime-location.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "Q1502 native navigation during a pending module import leaves an unmounted handle that can be explicitly disposed",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 234,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T08:16:48.107Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c7420a37da65ce6a20b2-a4eb97c2dcfdfab2163f",
+          "file": "upstream-batch02-runtime-location.spec.ts",
+          "line": 41,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-08T08:16:20.545Z",
+    "duration": 27827.521,
+    "expected": 22,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

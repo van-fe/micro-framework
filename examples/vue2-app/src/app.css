@@ -1,0 +1,190 @@
+:host {
+  color: #17231d;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+#vue2-root {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 24px;
+  color: #17231d;
+  font-size: 16px;
+  line-height: 1.55;
+  background:
+    radial-gradient(circle at 100% 0%, rgb(246 189 96 / 16%), transparent 34%),
+    #fbfcfa;
+}
+
+#vue2-root *,
+#vue2-root *::before,
+#vue2-root *::after {
+  box-sizing: border-box;
+}
+
+.vue2-hero,
+.vue2-eyebrow,
+.queue-header,
+.queue-header > div {
+  display: flex;
+  align-items: center;
+}
+
+.vue2-hero {
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 18px;
+}
+
+.vue2-heading {
+  min-width: 0;
+}
+
+.vue2-eyebrow {
+  gap: 10px;
+  margin-bottom: 7px;
+  color: #69776f;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.vue2-hero h2 {
+  margin: 0;
+  color: #17231d;
+  font-size: clamp(26px, 3vw, 36px);
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+}
+
+.vue2-hero p {
+  max-width: 760px;
+  margin: 10px 0 0;
+  color: #637068;
+  font-size: 16px;
+}
+
+.vue2-alert {
+  margin-bottom: 16px;
+}
+
+.vue2-alert .el-alert__title {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.vue2-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.vue2-metrics .el-card__body {
+  padding: 18px;
+}
+
+.metric-label {
+  color: #69776f;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.metric-value {
+  display: block;
+  margin: 4px 0 10px;
+  color: #17231d;
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+.queue-header {
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.queue-header > div {
+  gap: 12px;
+}
+
+.queue-title {
+  color: #17231d;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.queue-header small,
+.review-summary {
+  color: #7a877f;
+  font-size: 13px;
+}
+
+.vue2-review-dialog {
+  max-width: calc(100% - 40px);
+  border-radius: 16px;
+}
+
+.vue2-review-dialog .el-dialog__title {
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.vue2-dialog-copy p {
+  margin: 0 0 16px;
+  color: #66736a;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.vue2-dialog-scope {
+  display: grid;
+  gap: 4px;
+  padding: 14px;
+  border-radius: 10px;
+  background: #f4f7f2;
+}
+
+.vue2-dialog-scope small { color: #758078; font-size: 13px; }
+.vue2-dialog-scope strong { font-size: 16px; }
+.vue2-dialog-copy code { display: block; margin-top: 14px; color: #758078; font-size: 13px; }
+
+.vue2-queue .el-table {
+  font-size: 14px;
+}
+
+.vue2-queue .el-table th > .cell {
+  color: #526158;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.vue2-queue .el-table td .cell {
+  color: #243128;
+  line-height: 1.45;
+}
+
+.review-summary {
+  padding-top: 12px;
+  text-align: right;
+}
+
+@media (max-width: 720px) {
+  #vue2-root {
+    padding: 18px;
+  }
+
+  .vue2-hero {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .vue2-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .queue-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

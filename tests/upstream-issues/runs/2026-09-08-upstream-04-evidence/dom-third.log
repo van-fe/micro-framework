@@ -1,0 +1,22 @@
+$ vitest run --config vitest.browser.config.ts "tests/browser/upstream-batch03-dom.browser.test.ts" "--reporter=json" "--outputFile=tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/dom-third.json"
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - import "./upstream-batch03-entry-builds" without a file extension (tests/browser/server/upstream-batch03-entry-fixture.ts:4:36). Add the file extension
+  - import "../../support/webpack-compiler" without a file extension (tests/browser/server/upstream-batch02-entry-fixture.ts:7:39). Add the file extension
+  - import "../../support/webpack-compiler" without a file extension (tests/browser/server/upstream-batch03-entry-builds.ts:8:39). Add the file extension
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+
+⎯⎯⎯⎯⎯⎯⎯ Startup Error ⎯⎯⎯⎯⎯⎯⎯⎯
+Error: listen EPERM: operation not permitted 127.0.0.1
+    at Server.setupListenHandle [as _listen2] (node:net:2145:21)
+    at listenInCluster (node:net:2224:12)
+    at node:net:2448:7
+    at processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EPERM',
+  errno: -1,
+  syscall: 'listen',
+  address: '127.0.0.1'
+}
+
+
+
+error: script "test:browser" exited with code 1

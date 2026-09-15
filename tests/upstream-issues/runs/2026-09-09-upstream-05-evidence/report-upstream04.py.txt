@@ -1,0 +1,49 @@
+import pathlib,json,hashlib,collections,datetime,re
+root=pathlib.Path('/Users/fanfangbo/workspace/micro-framework'); u=root/'tests/upstream-issues'; e=u/'runs/2026-09-09-upstream-05-evidence'; c=u/'collections/2026-09-09-batch-04'
+read=lambda p:json.loads(p.read_text())
+write=lambda p,d:p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n')
+sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+summary=read(u/'assessments/2026-09-09-batch-04-completion.json'); catalog=read(u/'catalog.json'); before=read(c/'before.json')
+assert catalog['issues'][:120]==before['issues'] and catalog['sources'][:6]==before['sources']
+commands=read(e/'final-commands.json'); assert len(commands)==8
+for cmd in commands:
+ assert cmd['exitCode']==(1 if cmd['phase']=='artifacts' else 0)
+ cmd['logSha256']=sha(root/cmd['log'])
+counts={}
+for kind in ['unit','browser']:
+ d=read(e/f'final-{kind}.json'); assert d['success'] and d['numFailedTests']==0 and d['numPendingTests']==0
+ counts[kind]=d['numPassedTests']
+for kind in ['e2e','production']:
+ d=read(e/f'final-{kind}.json'); assert not d['errors'] and d['stats']['unexpected']==0 and d['stats']['flaky']==0 and d['stats']['skipped']==0
+ counts[kind]=d['stats']['expected']
+assets=read(e/'first-final/final-assets.json')
+assert all(sha(root/p)==h for p,h in assets.items()),'Asset source changed since earlier source freeze'
+write(e/'final-assets.json',assets)
+artifact=(e/'final-artifacts.log').read_text()
+print(artifact)
+match=re.search(r'(\d+)\s*>\s*50000',artifact)
+if not match: raise ValueError('Inspect gzip budget log before publishing summary')
+gzip=int(match.group(1))
+report={'id':'2026-09-09-upstream-05','collectionBatch':'2026-09-09-batch-04','completedAt':datetime.datetime.now(datetime.timezone.utc).isoformat(),'newIssues':20,'repositories':{'umijs/qiankun':10,'Tencent/wujie':10},'cumulativeIssues':140,'statusCounts':summary['statusCounts'],'cumulativeStatusCounts':dict(collections.Counter(i['status'] for i in catalog['issues'])),'browsers':['Chromium','Firefox','WebKit'],'realSafari':'not-run','testCounts':counts,'gates':commands,'releaseReady':False,'artifactBudget':{'runtimeGzipBytes':gzip,'budgetBytes':50000,'exitCode':1,'thresholdChanged':False},'sourceAudit':str((c/'source-audit.json').relative_to(root)),'fixtureVersions':read(c/'fixture-versions.json'),'old120IssuesAnd6SourcesPreserved':True,'sourceFreeze':{'code':'final-source.json','assets':'final-assets.json','lockSha256':sha(root/'bun.lock')},'history':{'initial':'execution-progress.json','interruptedWorkerRegression':'first-final/final-commands.json','sharedFixtureCountFailure':'second-final/final-commands.json','nativeCssObservations':'native-network-command.json','cssRecoveryFailures':['runtime-network-final.json','runtime-network-verified.json'],'styles':'styles-commands.json'},'limitations':['20条均为无标签补充故障报告；精确bug标签新增0，各仓库缺口10。精确标签open/closed枚举完整；近期补充搜索各返回100条，非全量。','2条fixed仅指对应本地缺陷；10条partial-coverage缺失条件见逐条台账，不计作原场景完全兼容。','CSS原生传输未取消及恢复失败的原始证据保留；timeout-only清理通过不代表CSS恢复通过。','真实Safari及企业微信、原32位Windows Chrome堆内存行为未验证。','完整Runtime体积门禁失败，未提高预算。'],'evidenceSha256':{str(p.relative_to(root)):sha(p) for p in sorted(e.rglob('*')) if p.is_file() and p.suffix in ['.json','.log','.txt','.md']}}
+# Evidence references above are relative to this run evidence directory.
+write(u/'runs/2026-09-09-upstream-05.json',report)
+intro=f'''# 上游问题回归台账
+
+本批新增 **20 条**（qiankun、wujie 各 10），累计 **140 条**。本批 **2 条本地缺陷修复并通过、8 条所列范围回归通过、10 条部分覆盖**；部分覆盖不计作原场景完全兼容。
+
+本批20条均为无标签补充故障报告。精确bug标签完整枚举为 qiankun 40（open 7、closed 33）、wujie 10（open 2、closed 8），均已入旧台账；新增精确标签0，各仓库缺口10。近期补充搜索各取100条（总数2091、835），明确非全量，不用标题冒充标签。
+
+本批记录：[执行证据](runs/2026-09-09-upstream-05.json)、[逐条场景与限制](cases.md)、[完成核对](assessments/2026-09-09-batch-04-completion.json)、[来源审计](collections/2026-09-09-batch-04/source-audit.json)。旧120条及6个历史来源对象保持不变。
+
+最终单测 {counts['unit']}、三引擎 Browser Mode {counts['browser']}、全量 E2E {counts['e2e']}、生产/SSR/离线 {counts['production']} 均通过，无跳过与重试通过项；架构、类型、构建通过。真实 Safari 未运行。Runtime gzip **{gzip} 字节**，超过既定50000字节预算，发布体积门禁仍失败。
+
+修复宿主视口resize未转发导致真实组件浮层错位，以及WebKit保活后第二代相同样式未激活；另修复document.baseURI逻辑基址及由此暴露的Worker源站判定问题。旧W1049计数测试增加独立请求路径，防止三引擎共享HTTP日志串扰，未放宽单次请求断言。所有失败和中断报告均保留。
+
+CSS超时可清理Runtime资源，但原生挂起CSS传输未取消，原URL及更换revision的恢复尝试仍有引擎失败，因此保留部分覆盖。原Umi插件、未提供原工程、真实Safari/企业微信、32位Windows堆内存等差异逐条列明。WebKit通过不代表真实Safari已验证。
+
+## 上一批（2026-09-08-batch-03）
+
+'''
+p=u/'README.md'; old=p.read_text(); old=old.removeprefix('# 上游问题回归台账\n\n');p.write_text(intro+old)
+p=root/'RODEMAP.md'; old=p.read_text().replace('> 更新日期：2026-09-08','> 更新日期：2026-09-09'); marker='## 0. 当前执行状态\n\n'; item=f'- 2026-09-09 第四批上游采集：新增 qiankun/wujie 各10条无标签补充报告，累计140条；本批2条修复、8条所列范围回归通过、10条部分覆盖。单测{counts["unit"]}、三引擎Browser Mode {counts["browser"]}、E2E {counts["e2e"]}、生产/SSR/离线{counts["production"]}通过，真实Safari未运行。Runtime gzip {gzip}字节超过50000字节预算，发布门禁仍失败；挂起CSS恢复等剩余条件见 `tests/upstream-issues/README.md`。\n\n';p.write_text(old.replace(marker,marker+item,1))
+print(json.dumps({'counts':counts,'gzip':gzip,'statuses':summary['statusCounts']},ensure_ascii=False))

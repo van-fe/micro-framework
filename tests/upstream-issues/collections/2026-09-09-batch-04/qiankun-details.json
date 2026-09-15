@@ -1,0 +1,889 @@
+[
+  {
+    "number": 3093,
+    "results": [
+      {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "issue": {
+              "url": "https://github.com/umijs/qiankun/issues/3093",
+              "title": "[Bug] DefaultLoader 拿到的loading永远为true",
+              "issue_number": 3093,
+              "body": " DefaultLoader 拿到的loading永远为true\n\n```\n// .umirc.ts\nqiankun: {\n  master: {\n    defaultLoader: '@/defaultLoader',\n  },\n},\n```\n\n```\n// defaultLoader.tsx\nimport { Spin } from 'antd';\n\nexport default function (loading: boolean) {\n  return <Spin spinning={loading} />;\n}\n```",
+              "state": "open",
+              "user": {
+                "login": "wangzhipeng404",
+                "name": "wangzhipeng404",
+                "email": null,
+                "avatar_url": "https://avatars.githubusercontent.com/u/5989160?v=4",
+                "id": 5989160
+              },
+              "assignees": null,
+              "labels": null,
+              "milestone": null,
+              "state_reason": null,
+              "comments": 0,
+              "created_at": "2025-10-17T08:21:03Z",
+              "updated_at": "2025-10-17T08:21:03Z",
+              "closed_at": null,
+              "display_url": "https://github.com/umijs/qiankun/issues/3093",
+              "display_title": "[Bug] DefaultLoader 拿到的loading永远为true"
+            },
+            "url": "https://github.com/umijs/qiankun/issues/3093",
+            "title": "[Bug] DefaultLoader 拿到的loading永远为true",
+            "display_url": "https://github.com/umijs/qiankun/issues/3093",
+            "display_title": "[Bug] DefaultLoader 拿到的loading永远为true"
+          },
+          "isError": false
+        }
+      },
+      {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "comments": [],
+            "url": "https://github.com/umijs/qiankun/issues/3093",
+            "title": "umijs/qiankun Issue #3093 comments",
+            "display_url": "https://github.com/umijs/qiankun/issues/3093",
+            "display_title": "umijs/qiankun Issue #3093 comments"
+          },
+          "isError": false
+        }
+      }
+    ]
+  },
+  {
+    "number": 3067,
+    "results": [
+      {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "issue": {
+              "url": "https://github.com/umijs/qiankun/issues/3067",
+              "title": "[Bug]隔离没有彻底",
+              "issue_number": 3067,
+              "body": "# 接入乾坤\n\n## What happens?\n\n1 原型上新增的方法属性无法隔离\n2 事件注册无法隔离，addEventListener，customElements.define等\n\n## 最小可复现仓库\n\n任意qiankun项目\n\n## 复现步骤，错误日志以及相关配置\n\n1 主应用修改String.prototype.fn = function() {}\n2 子应用修改String.prototyoe.fnChild = function() {}\n3 另外的子应用 发现两者都能访问\n4 customElements.define两个子应用同时定义会报错(因为两者组件库一致)\n\n\n## 相关环境信息\n\n- **qiankun 版本** 2.10.5\n- **浏览器版本**：chrome 112\n- **操作系统**： windows\n",
+              "state": "open",
+              "user": {
+                "login": "listen80",
+                "name": "listen80",
+                "email": null,
+                "avatar_url": "https://avatars.githubusercontent.com/u/19179984?v=4",
+                "id": 19179984
+              },
+              "assignees": null,
+              "labels": null,
+              "milestone": null,
+              "state_reason": null,
+              "comments": 1,
+              "created_at": "2025-05-12T05:42:02Z",
+              "updated_at": "2026-03-23T06:06:21Z",
+              "closed_at": null,
+              "display_url": "https://github.com/umijs/qiankun/issues/3067",
+              "display_title": "[Bug]隔离没有彻底"
+            },
+            "url": "https://github.com/umijs/qiankun/issues/3067",
+            "title": "[Bug]隔离没有彻底",
+            "display_url": "https://github.com/umijs/qiankun/issues/3067",
+            "display_title": "[Bug]隔离没有彻底"
+          },
+          "isError": false
+        }
+      },
+      {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "comments": [
+              {
+                "url": "https://github.com/umijs/qiankun/issues/3067#issuecomment-4108231243",
+                "body": "(function() {\n    ;(function() {\n        with (this) {\n            const {Array, ArrayBuffer, Boolean, constructor, DataView, Date, decodeURI, decodeURIComponent, encodeURI, encodeURIComponent, Error, escape, EvalError, Float32Array, Float64Array, Function, hasOwnProperty, Infinity, Int16Array, Int32Array, Int8Array, isFinite, isNaN, isPrototypeOf, JSON, Map, Math, NaN, Number, Object, parseFloat, parseInt, Promise, propertyIsEnumerable, Proxy, RangeError, ReferenceError, Reflect, RegExp, Set, String, Symbol, SyntaxError, toLocaleString, toString, TypeError, Uint16Array, Uint32Array, Uint8Array, Uint8ClampedArray, undefined, unescape, URIError, valueOf, WeakMap, WeakSet, window, self, globalThis, requestAnimationFrame} = this;\n            import('/subapp-001/index.BHypw0D1.js').finally( () => {\n\n                const qiankunLifeCycle = window.moudleQiankunAppLifeCycles && window.moudleQiankunAppLifeCycles['app-trade'];\n                if (qiankunLifeCycle) {\n                    window.proxy.vitemount( (props) => qiankunLifeCycle.mount(props));\n                    window.proxy.viteunmount( (props) => qiankunLifeCycle.unmount(props));\n                    window.proxy.vitebootstrap( () => qiankunLifeCycle.bootstrap());\n                    window.proxy.viteupdate( (props) => qiankunLifeCycle.update(props));\n                }\n\n            }\n            )\n        }\n    }\n    ).bind(window.proxy)();\n}\n)\n",
+                "user": {
+                  "login": "kocokolo",
+                  "name": "kocokolo",
+                  "email": null,
+                  "avatar_url": "https://avatars.githubusercontent.com/u/1078246?v=4",
+                  "id": 1078246
+                },
+                "id": 4108231243,
+                "pull_request_review_id": null,
+                "in_reply_to_id": null,
+                "created_at": null,
+                "updated_at": null,
+                "review": null,
+                "side": null,
+                "line": null,
+                "start_line": null,
+                "path": null,
+                "body_html": "<p dir=\"auto\">(function() {<br>\n;(function() {<br>\nwith (this) {<br>\nconst {Array, ArrayBuffer, Boolean, constructor, DataView, Date, decodeURI, decodeURIComponent, encodeURI, encodeURIComponent, Error, escape, EvalError, Float32Array, Float64Array, Function, hasOwnProperty, Infinity, Int16Array, Int32Array, Int8Array, isFinite, isNaN, isPrototypeOf, JSON, Map, Math, NaN, Number, Object, parseFloat, parseInt, Promise, propertyIsEnumerable, Proxy, RangeError, ReferenceError, Reflect, RegExp, Set, String, Symbol, SyntaxError, toLocaleString, toString, TypeError, Uint16Array, Uint32Array, Uint8Array, Uint8ClampedArray, undefined, unescape, URIError, valueOf, WeakMap, WeakSet, window, self, globalThis, requestAnimationFrame} = this;<br>\nimport('/subapp-001/index.BHypw0D1.js').finally( () =&gt; {</p>\n<div class=\"snippet-clipboard-content notranslate position-relative overflow-auto\" data-snippet-clipboard-copy-content=\"            const qiankunLifeCycle = window.moudleQiankunAppLifeCycles &amp;&amp; window.moudleQiankunAppLifeCycles['app-trade'];\n            if (qiankunLifeCycle) {\n                window.proxy.vitemount( (props) =&gt; qiankunLifeCycle.mount(props));\n                window.proxy.viteunmount( (props) =&gt; qiankunLifeCycle.unmount(props));\n                window.proxy.vitebootstrap( () =&gt; qiankunLifeCycle.bootstrap());\n                window.proxy.viteupdate( (props) =&gt; qiankunLifeCycle.update(props));\n            }\n\n        }\n        )\n    }\n}\n).bind(window.proxy)();\"><pre class=\"notranslate\"><code class=\"notranslate\">            const qiankunLifeCycle = window.moudleQiankunAppLifeCycles &amp;&amp; window.moudleQiankunAppLifeCycles['app-trade'];\n            if (qiankunLifeCycle) {\n                window.proxy.vitemount( (props) =&gt; qiankunLifeCycle.mount(props));\n                window.proxy.viteunmount( (props) =&gt; qiankunLifeCycle.unmount(props));\n                window.proxy.vitebootstrap( () =&gt; qiankunLifeCycle.bootstrap());\n                window.proxy.viteupdate( (props) =&gt; qiankunLifeCycle.update(props));\n            }\n\n        }\n        )\n    }\n}\n).bind(window.proxy)();\n</code></pre></div>\n<p dir=\"auto\">}<br>\n)</p>"
+              }
+            ],
+            "url": "https://github.com/umijs/qiankun/issues/3067",
+            "title": "umijs/qiankun Issue #3067 comments",
+            "display_url": "https://github.com/umijs/qiankun/issues/3067",
+            "display_title": "umijs/qiankun Issue #3067 comments"
+          },
+          "isError": false
+        }
+      }
+    ]
+  },
+  {
+    "number": 3042,
+    "results": [
+      {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "issue": {
+              "url": "https://github.com/umijs/qiankun/issues/3042",
+              "title": "'get' on proxy: property 'createElement' is a read-only and non-configurable data property on the proxy target but the proxy did not return its actual value (expected 'function createElement() { [native code] }' but got 'function(){nI.__currentLockin",
+              "issue_number": 3042,
+              "body": "## What happens?\n\nhave a error like 'get' on proxy: property 'createElement' is a read-only and non-configurable data property on the proxy target but the proxy did not return its actual value (expected 'function createElement() { [native code] }' but got 'function(){nI.__currentLockin...\n\n## Mini Showcase Repository(REQUIRED)\n\ncan't know how to reduce it\n\n## How To Reproduce\n\n**Steps to reproduce the behavior:** 1. 2.\n\n**Expected behavior** 1. 2.\n\nShould have no error?\n\n\n## Context\n\n- **qiankun Version**:    2.10.12\n- **Platform Version**: window 10 \n- **Browser Version**: Chrome 127.0.6523",
+              "state": "closed",
+              "user": {
+                "login": "Flcwl",
+                "name": "Flcwl",
+                "email": null,
+                "avatar_url": "https://avatars.githubusercontent.com/u/26050644?v=4",
+                "id": 26050644
+              },
+              "assignees": null,
+              "labels": null,
+              "milestone": null,
+              "state_reason": "not_planned",
+              "comments": 1,
+              "created_at": "2025-01-26T07:10:00Z",
+              "updated_at": "2025-01-26T07:10:21Z",
+              "closed_at": "2025-01-26T07:10:21Z",
+              "display_url": "https://github.com/umijs/qiankun/issues/3042",
+              "display_title": "'get' on proxy: property 'createElement' is a read-only and non-configurable data property on the proxy target but the proxy did not return its actual value (expected 'function createElement() { [native code] }' but got 'function(){nI.__currentLockin"
+            },
+            "url": "https://github.com/umijs/qiankun/issues/3042",
+            "title": "'get' on proxy: property 'createElement' is a read-only and non-configurable data property on the proxy target but the proxy did not return its actual value (expected 'function createElement() { [native code] }' but got 'function(){nI.__currentLockin",
+            "display_url": "https://github.com/umijs/qiankun/issues/3042",
+            "display_title": "'get' on proxy: property 'createElement' is a read-only and non-configurable data property on the proxy target but the proxy did not return its actual value (expected 'function createElement() { [native code] }' but got 'function(){nI.__currentLockin"
+          },
+          "isError": false
+        }
+      },
+      {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "comments": [
+              {
+                "url": "https://github.com/umijs/qiankun/issues/3042#issuecomment-2614248728",
+                "body": "由于缺乏足够的信息(github、stackblitz、codesandbox等可复现仓库)，我们暂时关闭了该 Issue。请修改（不要回复） Issue 提供[最小重现](https://stackoverflow.com/help/minimal-reproducible-example)以重新开启。谢谢。如果只是单独的技术咨询，可移步 https://qiankun.umijs.org/#-community 交流~\n<!-- Created by actions-cool/maintain-one-comment -->",
+                "user": {
+                  "login": "github-actions[bot]",
+                  "name": "github-actions[bot]",
+                  "email": null,
+                  "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+                  "id": 41898282
+                },
+                "id": 2614248728,
+                "pull_request_review_id": null,
+                "in_reply_to_id": null,
+                "created_at": null,
+                "updated_at": null,
+                "review": null,
+                "side": null,
+                "line": null,
+                "start_line": null,
+                "path": null,
+                "body_html": "<p dir=\"auto\">由于缺乏足够的信息(github、stackblitz、codesandbox等可复现仓库)，我们暂时关闭了该 Issue。请修改（不要回复） Issue 提供<a href=\"https://stackoverflow.com/help/minimal-reproducible-example\" rel=\"nofollow\">最小重现</a>以重新开启。谢谢。如果只是单独的技术咨询，可移步 <a href=\"https://qiankun.umijs.org/#-community\" rel=\"nofollow\">https://qiankun.umijs.org/#-community</a> 交流~</p>\n"
+              }
+            ],
+            "url": "https://github.com/umijs/qiankun/issues/3042",
+            "title": "umijs/qiankun Issue #3042 comments",
+            "display_url": "https://github.com/umijs/qiankun/issues/3042",
+            "display_title": "umijs/qiankun Issue #3042 comments"
+          },
+          "isError": false
+        }
+      }
+    ]
+  },
+  {
+    "number": 3018,
+    "results": [
+      {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "issue": {
+              "url": "https://github.com/umijs/qiankun/issues/3018",
+              "title": "[Feature Request] 添加对Element.insertAdjacentElement()方法的劫持",
+              "issue_number": 3018,
+              "body": "## 背景\r\n\r\nqiankun目前支持微应用使用**appendChild**、**insertBefore**动态添加样式表和脚本元素。并[劫持了这两个方法](https://github.com/umijs/qiankun/blob/master/src/sandbox/patchers/dynamicAppend/common.ts#L430)。但是对于**insertAdjacentElement**方法没有劫持。\r\n\r\n而Vite下处理`import \"xxxx.css\"`的时候，它最终会使用**insertAdjacentElement**方法添加动态样式表。\r\n\r\n```javascript\r\nlet lastInsertedStyle;\r\nfunction updateStyle(id, content) {\r\n  let style = sheetsMap.get(id);\r\n  if (!style) {\r\n    //...\r\n    if (!lastInsertedStyle) {\r\n      document.head.appendChild(style);\r\n      //...\r\n    } else {\r\n      lastInsertedStyle.insertAdjacentElement(\"afterend\", style);\r\n    }\r\n    lastInsertedStyle = style;\r\n  }\r\n```\r\n\r\n这就导致了vite应用里的样式，在应用卸载后再次加载时，无法被[rebuild()](https://github.com/umijs/qiankun/blob/master/src/sandbox/patchers/dynamicAppend/forLooseSandbox.ts#L76)\r\n\r\n## 建议\r\n\r\n在[patchHTMLDynamicAppendPrototypeFunctions](https://github.com/umijs/qiankun/blob/master/src/sandbox/patchers/dynamicAppend/common.ts#L432)方法里，添加** HTMLHeadElement.prototype.insertAdjacentElement**劫持的相关代码，和**appendChild**其实是一样的。\r\n\r\n辛苦各位开发大姥！！\r\n\r\n",
+              "state": "open",
+              "user": {
+                "login": "missmess",
+                "name": "missmess",
+                "email": null,
+                "avatar_url": "https://avatars.githubusercontent.com/u/20296208?v=4",
+                "id": 20296208
+              },
+              "assignees": null,
+              "labels": null,
+              "milestone": null,
+              "state_reason": null,
+              "comments": 0,
+              "created_at": "2024-10-28T11:03:33Z",
+              "updated_at": "2024-10-28T11:03:33Z",
+              "closed_at": null,
+              "display_url": "https://github.com/umijs/qiankun/issues/3018",
+              "display_title": "[Feature Request] 添加对Element.insertAdjacentElement()方法的劫持"
+            },
+            "url": "https://github.com/umijs/qiankun/issues/3018",
+            "title": "[Feature Request] 添加对Element.insertAdjacentElement()方法的劫持",
+            "display_url": "https://github.com/umijs/qiankun/issues/3018",
+            "display_title": "[Feature Request] 添加对Element.insertAdjacentElement()方法的劫持"
+          },
+          "isError": false
+        }
+      },
+      {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "comments": [],
+            "url": "https://github.com/umijs/qiankun/issues/3018",
+            "title": "umijs/qiankun Issue #3018 comments",
+            "display_url": "https://github.com/umijs/qiankun/issues/3018",
+            "display_title": "umijs/qiankun Issue #3018 comments"
+          },
+          "isError": false
+        }
+      }
+    ]
+  },
+  {
+    "number": 3007,
+    "results": [
+      {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "issue": {
+              "url": "https://github.com/umijs/qiankun/issues/3007",
+              "title": "乾坤使用{ sandbox : { experimentalStyleIsolation: true } }方式，vue组件内scoped属性样式没有加上特定的选择器来限定，全局样式有加",
+              "issue_number": 3007,
+              "body": "## What happens?\r\n<img width=\"1450\" alt=\"image\" src=\"https://github.com/user-attachments/assets/8a91f7d6-9dfd-41eb-abd5-bf194441cbfe\">\r\nvue组件内的scoped属性样式，没有加上特殊前缀隔离。全局的样式及不加scoped属性的样式，是有加上隔离的。\r\n\r\n子项目是使用vite。现在测试发现是因为使用vite的原因，导致除全局样式文件外，其他动态加载的js/css都不会被qiankun劫持，导致没有被加上特定前缀\r\n\r\n## Mini Showcase Repository(REQUIRED)\r\n\r\n> Provide a mini GitHub repository which can reproduce the issue.\r\n\r\n<!-- YOUR_REPOSITORY_URL -->\r\n\r\n## How To Reproduce\r\n\r\n**Steps to reproduce the behavior:** 1. 2.\r\n\r\n**Expected behavior** 1. 2.\r\n\r\n## Context\r\n\r\n- **qiankun Version**:  2.10.16\r\n- **Platform Version**:\r\n- **Browser Version**:\r\n",
+              "state": "open",
+              "user": {
+                "login": "Woomay",
+                "name": "Woomay",
+                "email": null,
+                "avatar_url": "https://avatars.githubusercontent.com/u/30943765?v=4",
+                "id": 30943765
+              },
+              "assignees": null,
+              "labels": null,
+              "milestone": null,
+              "state_reason": null,
+              "comments": 2,
+              "created_at": "2024-09-09T03:03:27Z",
+              "updated_at": "2024-11-18T07:20:13Z",
+              "closed_at": null,
+              "display_url": "https://github.com/umijs/qiankun/issues/3007",
+              "display_title": "乾坤使用{ sandbox : { experimentalStyleIsolation: true } }方式，vue组件内scoped属性样式没有加上特定的选择器来限定，全局样式有加"
+            },
+            "url": "https://github.com/umijs/qiankun/issues/3007",
+            "title": "乾坤使用{ sandbox : { experimentalStyleIsolation: true } }方式，vue组件内scoped属性样式没有加上特定的选择器来限定，全局样式有加",
+            "display_url": "https://github.com/umijs/qiankun/issues/3007",
+            "display_title": "乾坤使用{ sandbox : { experimentalStyleIsolation: true } }方式，vue组件内scoped属性样式没有加上特定的选择器来限定，全局样式有加"
+          },
+          "isError": false
+        }
+      },
+      {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "comments": [
+              {
+                "url": "https://github.com/umijs/qiankun/issues/3007#issuecomment-2481854150",
+                "body": "有什么解决办法吗，目前我们不得不把整个子应用都增加类名前缀",
+                "user": {
+                  "login": "Houliang0239",
+                  "name": "Houliang0239",
+                  "email": null,
+                  "avatar_url": "https://avatars.githubusercontent.com/u/44111577?v=4",
+                  "id": 44111577
+                },
+                "id": 2481854150,
+                "pull_request_review_id": null,
+                "in_reply_to_id": null,
+                "created_at": null,
+                "updated_at": null,
+                "review": null,
+                "side": null,
+                "line": null,
+                "start_line": null,
+                "path": null,
+                "body_html": "<p dir=\"auto\">有什么解决办法吗，目前我们不得不把整个子应用都增加类名前缀</p>"
+              },
+              {
+                "url": "https://github.com/umijs/qiankun/issues/3007#issuecomment-2482137212",
+                "body": "\r\n\r\n\r\n\r\n> 目前\r\n\r\n没有。我们现在的方案也是子应用增加特殊类名前缀",
+                "user": {
+                  "login": "Woomay",
+                  "name": "Woomay",
+                  "email": null,
+                  "avatar_url": "https://avatars.githubusercontent.com/u/30943765?v=4",
+                  "id": 30943765
+                },
+                "id": 2482137212,
+                "pull_request_review_id": null,
+                "in_reply_to_id": null,
+                "created_at": null,
+                "updated_at": null,
+                "review": null,
+                "side": null,
+                "line": null,
+                "start_line": null,
+                "path": null,
+                "body_html": "<blockquote>\n<p dir=\"auto\">目前</p>\n</blockquote>\n<p dir=\"auto\">没有。我们现在的方案也是子应用增加特殊类名前缀</p>"
+              }
+            ],
+            "url": "https://github.com/umijs/qiankun/issues/3007",
+            "title": "umijs/qiankun Issue #3007 comments",
+            "display_url": "https://github.com/umijs/qiankun/issues/3007",
+            "display_title": "umijs/qiankun Issue #3007 comments"
+          },
+          "isError": false
+        }
+      }
+    ]
+  },
+  {
+    "number": 3001,
+    "results": [
+      {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "issue": {
+              "url": "https://github.com/umijs/qiankun/issues/3001",
+              "title": "手动加载子应用，子应用加载失败报错时，主应用会被重新渲染",
+              "issue_number": 3001,
+              "body": "场景是同时存在很多子应用，所以选择手动加载子应用的方式。\r\n子应用加载失败时发生的情况：\r\n1.主应用会被重新渲染（重走一遍render()）。\r\n2.主应用的main.js里也有写乾坤的生命周期钩子的时候，unmount会被调用",
+              "state": "closed",
+              "user": {
+                "login": "haolhz",
+                "name": "haolhz",
+                "email": null,
+                "avatar_url": "https://avatars.githubusercontent.com/u/20113679?v=4",
+                "id": 20113679
+              },
+              "assignees": null,
+              "labels": null,
+              "milestone": null,
+              "state_reason": "not_planned",
+              "comments": 1,
+              "created_at": "2024-08-20T08:38:55Z",
+              "updated_at": "2024-08-20T08:39:17Z",
+              "closed_at": "2024-08-20T08:39:16Z",
+              "display_url": "https://github.com/umijs/qiankun/issues/3001",
+              "display_title": "手动加载子应用，子应用加载失败报错时，主应用会被重新渲染"
+            },
+            "url": "https://github.com/umijs/qiankun/issues/3001",
+            "title": "手动加载子应用，子应用加载失败报错时，主应用会被重新渲染",
+            "display_url": "https://github.com/umijs/qiankun/issues/3001",
+            "display_title": "手动加载子应用，子应用加载失败报错时，主应用会被重新渲染"
+          },
+          "isError": false
+        }
+      },
+      {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "comments": [
+              {
+                "url": "https://github.com/umijs/qiankun/issues/3001#issuecomment-2298300367",
+                "body": "由于缺乏足够的信息(github、stackblitz、codesandbox等可复现仓库)，我们暂时关闭了该 Issue。请修改（不要回复） Issue 提供[最小重现](https://stackoverflow.com/help/minimal-reproducible-example)以重新开启。谢谢。如果只是单独的技术咨询，可移步 https://qiankun.umijs.org/#-community 交流~\n<!-- Created by actions-cool/maintain-one-comment -->",
+                "user": {
+                  "login": "github-actions[bot]",
+                  "name": "github-actions[bot]",
+                  "email": null,
+                  "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+                  "id": 41898282
+                },
+                "id": 2298300367,
+                "pull_request_review_id": null,
+                "in_reply_to_id": null,
+                "created_at": null,
+                "updated_at": null,
+                "review": null,
+                "side": null,
+                "line": null,
+                "start_line": null,
+                "path": null,
+                "body_html": "<p dir=\"auto\">由于缺乏足够的信息(github、stackblitz、codesandbox等可复现仓库)，我们暂时关闭了该 Issue。请修改（不要回复） Issue 提供<a href=\"https://stackoverflow.com/help/minimal-reproducible-example\" rel=\"nofollow\">最小重现</a>以重新开启。谢谢。如果只是单独的技术咨询，可移步 <a href=\"https://qiankun.umijs.org/#-community\" rel=\"nofollow\">https://qiankun.umijs.org/#-community</a> 交流~</p>\n"
+              }
+            ],
+            "url": "https://github.com/umijs/qiankun/issues/3001",
+            "title": "umijs/qiankun Issue #3001 comments",
+            "display_url": "https://github.com/umijs/qiankun/issues/3001",
+            "display_title": "umijs/qiankun Issue #3001 comments"
+          },
+          "isError": false
+        }
+      }
+    ]
+  },
+  {
+    "number": 2991,
+    "results": [
+      {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "issue": {
+              "url": "https://github.com/umijs/qiankun/issues/2991",
+              "title": "[Bug]使用loadMicroApp加载应用后，切换子应用，旧应用内存不会卸载，切换越多的应用，内存在持续增加",
+              "issue_number": 2991,
+              "body": "# 提问之前强烈建立您能先阅读一下[《如何正确的提出一个 Issue》](https://github.com/umijs/qiankun/issues/1115)\r\n\r\n<!--\r\n感谢您向我们反馈问题，为了高效的解决问题，我们期望你能提供以下信息：\r\n-->\r\n\r\n## What happens?\r\n\r\n使用loadMicroApp加载应用后，切换子应用，旧应用内存不会卸载，切换越多的应用，内存在持续增加。\r\n\r\nQiankun + vue2.x\r\n\r\n子应用在unmount有进行卸载。\r\n\r\n![image](https://github.com/user-attachments/assets/8a253c55-99d3-4b20-89ec-ba8462294d2e)\r\n\r\n\r\n并且内存随随便便就上G了\r\n\r\n![6fa39f5744624c7784b85258f20456a](https://github.com/user-attachments/assets/1dca11a2-d990-46a6-8a7d-5fef2ff914d5)\r\n\r\n这个问题很影响使用，在32位浏览器没几下就崩溃了，内存不够用。希望官网能引起重视\r\n\r\n## 相关环境信息\r\n\r\n- **qiankun 版本** 2.10.6\r\n- **浏览器版本**：谷歌任意版本\r\n- **操作系统**：win10\r\n",
+              "state": "open",
+              "user": {
+                "login": "MaJiaXuan",
+                "name": "MaJiaXuan",
+                "email": null,
+                "avatar_url": "https://avatars.githubusercontent.com/u/24503453?v=4",
+                "id": 24503453
+              },
+              "assignees": null,
+              "labels": null,
+              "milestone": null,
+              "state_reason": null,
+              "comments": 1,
+              "created_at": "2024-07-28T09:38:47Z",
+              "updated_at": "2024-09-30T01:37:05Z",
+              "closed_at": null,
+              "display_url": "https://github.com/umijs/qiankun/issues/2991",
+              "display_title": "[Bug]使用loadMicroApp加载应用后，切换子应用，旧应用内存不会卸载，切换越多的应用，内存在持续增加"
+            },
+            "url": "https://github.com/umijs/qiankun/issues/2991",
+            "title": "[Bug]使用loadMicroApp加载应用后，切换子应用，旧应用内存不会卸载，切换越多的应用，内存在持续增加",
+            "display_url": "https://github.com/umijs/qiankun/issues/2991",
+            "display_title": "[Bug]使用loadMicroApp加载应用后，切换子应用，旧应用内存不会卸载，切换越多的应用，内存在持续增加"
+          },
+          "isError": false
+        }
+      },
+      {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "comments": [
+              {
+                "url": "https://github.com/umijs/qiankun/issues/2991#issuecomment-2381842349",
+                "body": "loadMicroApp返回的对象不是可以卸载的嘛，官网有个卸载方法，试过了吗",
+                "user": {
+                  "login": "Jseven86",
+                  "name": "Jseven86",
+                  "email": null,
+                  "avatar_url": "https://avatars.githubusercontent.com/u/55723225?v=4",
+                  "id": 55723225
+                },
+                "id": 2381842349,
+                "pull_request_review_id": null,
+                "in_reply_to_id": null,
+                "created_at": null,
+                "updated_at": null,
+                "review": null,
+                "side": null,
+                "line": null,
+                "start_line": null,
+                "path": null,
+                "body_html": "<p dir=\"auto\">loadMicroApp返回的对象不是可以卸载的嘛，官网有个卸载方法，试过了吗</p>"
+              }
+            ],
+            "url": "https://github.com/umijs/qiankun/issues/2991",
+            "title": "umijs/qiankun Issue #2991 comments",
+            "display_url": "https://github.com/umijs/qiankun/issues/2991",
+            "display_title": "umijs/qiankun Issue #2991 comments"
+          },
+          "isError": false
+        }
+      }
+    ]
+  },
+  {
+    "number": 2990,
+    "results": [
+      {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "issue": {
+              "url": "https://github.com/umijs/qiankun/issues/2990",
+              "title": "父应用首次进入子应用， 子应用为hash路由时， 在子应用组件mounted 钩子函数中进行路由跳转报错",
+              "issue_number": 2990,
+              "body": "## 父应用为history，子应用为hash路由时，在父应用首次进入子应用时， 子应用的组件mounted 钩子函数中做$router.push 的动作，会抛错\r\n\r\n![image](https://github.com/user-attachments/assets/e7b30fb3-0e78-49d0-acab-2104286c6355)\r\n\r\n但若子应用为history 路由则不会抛错\r\ngithub地址：https://github.com/YxJaycexY/qiankun-test-demo.git\r\n- **Browser Version**:\r\n",
+              "state": "open",
+              "user": {
+                "login": "YxJaycexY",
+                "name": "YxJaycexY",
+                "email": null,
+                "avatar_url": "https://avatars.githubusercontent.com/u/44988907?v=4",
+                "id": 44988907
+              },
+              "assignees": null,
+              "labels": null,
+              "milestone": null,
+              "state_reason": null,
+              "comments": 0,
+              "created_at": "2024-07-19T02:38:57Z",
+              "updated_at": "2024-07-19T02:38:57Z",
+              "closed_at": null,
+              "display_url": "https://github.com/umijs/qiankun/issues/2990",
+              "display_title": "父应用首次进入子应用， 子应用为hash路由时， 在子应用组件mounted 钩子函数中进行路由跳转报错"
+            },
+            "url": "https://github.com/umijs/qiankun/issues/2990",
+            "title": "父应用首次进入子应用， 子应用为hash路由时， 在子应用组件mounted 钩子函数中进行路由跳转报错",
+            "display_url": "https://github.com/umijs/qiankun/issues/2990",
+            "display_title": "父应用首次进入子应用， 子应用为hash路由时， 在子应用组件mounted 钩子函数中进行路由跳转报错"
+          },
+          "isError": false
+        }
+      },
+      {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "comments": [],
+            "url": "https://github.com/umijs/qiankun/issues/2990",
+            "title": "umijs/qiankun Issue #2990 comments",
+            "display_url": "https://github.com/umijs/qiankun/issues/2990",
+            "display_title": "umijs/qiankun Issue #2990 comments"
+          },
+          "isError": false
+        }
+      }
+    ]
+  },
+  {
+    "number": 2976,
+    "results": [
+      {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "issue": {
+              "url": "https://github.com/umijs/qiankun/issues/2976",
+              "title": "qiankun在子应用页面刷新后在切换子应用的其他页面报错Uncaught Error: [qiankun]: Wrapper element for xxx is not existed!",
+              "issue_number": 2976,
+              "body": "What happens?\r\n     主应用引入了一个子应用的三个页面，在主应用页面，无论刷新还是怎么样进入都是正常的，子应用页面也是正常访问的\r\n      在子应用的页面刷新后，在切换子应用其他的页面会就会报错 Uncaught Error: [qiankun]: Wrapper element for xxx is not existed!， 还会把生命周期中的数据 里的name也就是子应用的name 修改为 原name+_1\r\n\r\n最小可复现仓库\r\n我用是<MicroApp>组件引入的方式\r\n",
+              "state": "closed",
+              "user": {
+                "login": "HLDipsy",
+                "name": "HLDipsy",
+                "email": null,
+                "avatar_url": "https://avatars.githubusercontent.com/u/112858085?v=4",
+                "id": 112858085
+              },
+              "assignees": null,
+              "labels": null,
+              "milestone": null,
+              "state_reason": "not_planned",
+              "comments": 3,
+              "created_at": "2024-06-19T00:27:51Z",
+              "updated_at": "2024-09-29T06:15:25Z",
+              "closed_at": "2024-06-19T00:28:28Z",
+              "display_url": "https://github.com/umijs/qiankun/issues/2976",
+              "display_title": "qiankun在子应用页面刷新后在切换子应用的其他页面报错Uncaught Error: [qiankun]: Wrapper element for xxx is not existed!"
+            },
+            "url": "https://github.com/umijs/qiankun/issues/2976",
+            "title": "qiankun在子应用页面刷新后在切换子应用的其他页面报错Uncaught Error: [qiankun]: Wrapper element for xxx is not existed!",
+            "display_url": "https://github.com/umijs/qiankun/issues/2976",
+            "display_title": "qiankun在子应用页面刷新后在切换子应用的其他页面报错Uncaught Error: [qiankun]: Wrapper element for xxx is not existed!"
+          },
+          "isError": false
+        }
+      },
+      {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "comments": [
+              {
+                "url": "https://github.com/umijs/qiankun/issues/2976#issuecomment-2177299122",
+                "body": "由于缺乏足够的信息(github、stackblitz、codesandbox等可复现仓库)，我们暂时关闭了该 Issue。请修改（不要回复） Issue 提供[最小重现](https://stackoverflow.com/help/minimal-reproducible-example)以重新开启。谢谢。如果只是单独的技术咨询，可移步 https://qiankun.umijs.org/#-community 交流~\n<!-- Created by actions-cool/maintain-one-comment -->",
+                "user": {
+                  "login": "github-actions[bot]",
+                  "name": "github-actions[bot]",
+                  "email": null,
+                  "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+                  "id": 41898282
+                },
+                "id": 2177299122,
+                "pull_request_review_id": null,
+                "in_reply_to_id": null,
+                "created_at": null,
+                "updated_at": null,
+                "review": null,
+                "side": null,
+                "line": null,
+                "start_line": null,
+                "path": null,
+                "body_html": "<p dir=\"auto\">由于缺乏足够的信息(github、stackblitz、codesandbox等可复现仓库)，我们暂时关闭了该 Issue。请修改（不要回复） Issue 提供<a href=\"https://stackoverflow.com/help/minimal-reproducible-example\" rel=\"nofollow\">最小重现</a>以重新开启。谢谢。如果只是单独的技术咨询，可移步 <a href=\"https://qiankun.umijs.org/#-community\" rel=\"nofollow\">https://qiankun.umijs.org/#-community</a> 交流~</p>\n"
+              },
+              {
+                "url": "https://github.com/umijs/qiankun/issues/2976#issuecomment-2306345406",
+                "body": "解决了吗",
+                "user": {
+                  "login": "Reeyc",
+                  "name": "Reeyc",
+                  "email": null,
+                  "avatar_url": "https://avatars.githubusercontent.com/u/51184461?v=4",
+                  "id": 51184461
+                },
+                "id": 2306345406,
+                "pull_request_review_id": null,
+                "in_reply_to_id": null,
+                "created_at": null,
+                "updated_at": null,
+                "review": null,
+                "side": null,
+                "line": null,
+                "start_line": null,
+                "path": null,
+                "body_html": "<p dir=\"auto\">解决了吗</p>"
+              },
+              {
+                "url": "https://github.com/umijs/qiankun/issues/2976#issuecomment-2381124862",
+                "body": "解决了吗 请问 @HLDipsy ",
+                "user": {
+                  "login": "wh1teYu",
+                  "name": "wh1teYu",
+                  "email": null,
+                  "avatar_url": "https://avatars.githubusercontent.com/u/46552582?v=4",
+                  "id": 46552582
+                },
+                "id": 2381124862,
+                "pull_request_review_id": null,
+                "in_reply_to_id": null,
+                "created_at": null,
+                "updated_at": null,
+                "review": null,
+                "side": null,
+                "line": null,
+                "start_line": null,
+                "path": null,
+                "body_html": "<p dir=\"auto\">解决了吗 请问 <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/HLDipsy/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/HLDipsy\">@HLDipsy</a></p>"
+              }
+            ],
+            "url": "https://github.com/umijs/qiankun/issues/2976",
+            "title": "umijs/qiankun Issue #2976 comments",
+            "display_url": "https://github.com/umijs/qiankun/issues/2976",
+            "display_title": "umijs/qiankun Issue #2976 comments"
+          },
+          "isError": false
+        }
+      }
+    ]
+  },
+  {
+    "number": 3129,
+    "results": [
+      {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "issue": {
+              "url": "https://github.com/umijs/qiankun/issues/3129",
+              "title": "[Bug]qiankun会自动创建内联<script>与<style>，以及使用new Function反向解析字符串为执行代码，导致浏览器CSP策略需要带上 unsafe-inline与unsafe-eval，容易导致xss攻击",
+              "issue_number": 3129,
+              "body": "## What happens?\n\nqiankun会自动创建内联`<script>`与`<style>`，以及使用`new Function`反向解析字符串为执行代码，导致浏览器CSP策略需要带上 `unsafe-inline`与`unsafe-eval`，容易导致xss攻击\n\n## 复现步骤，错误日志以及相关配置\n为了整改业务CSP头包含 `unsafe-inline`与`unsafe-eval`的安全问题，将qiankun的页面配置CSP策略为：`Content-Security-Policy: default-src 'self';`\n宽松csp策略，qiankun正常运行：`Content-Security-Policy: default-src 'self' unsafe-inline unsafe-eval;`\n严格csp策略，qiankun运行报错：`Content-Security-Policy: default-src 'self';`\n报错信息如下：\n~~~\nmain.bf4057f9.js:2 Uncaught EvalError: Evaluating a string as JavaScript violates the following Content Security Policy directive because 'unsafe-eval' is not an allowed source of script: default-src 'self'\".\n~~~\n\n## 相关环境信息\n\n- **qiankun 版本**：2.10.16\n- **浏览器版本**：Microsoft Edge 148.0.3967.54 \n- **操作系统**：Windows 11\n",
+              "state": "open",
+              "user": {
+                "login": "no-timing",
+                "name": "no-timing",
+                "email": null,
+                "avatar_url": "https://avatars.githubusercontent.com/u/39131787?v=4",
+                "id": 39131787
+              },
+              "assignees": null,
+              "labels": null,
+              "milestone": null,
+              "state_reason": null,
+              "comments": 1,
+              "created_at": "2026-05-22T02:02:22Z",
+              "updated_at": "2026-05-22T02:03:26Z",
+              "closed_at": null,
+              "display_url": "https://github.com/umijs/qiankun/issues/3129",
+              "display_title": "[Bug]qiankun会自动创建内联<script>与<style>，以及使用new Function反向解析字符串为执行代码，导致浏览器CSP策略需要带上 unsafe-inline与unsafe-eval，容易导致xss攻击"
+            },
+            "url": "https://github.com/umijs/qiankun/issues/3129",
+            "title": "[Bug]qiankun会自动创建内联<script>与<style>，以及使用new Function反向解析字符串为执行代码，导致浏览器CSP策略需要带上 unsafe-inline与unsafe-eval，容易导致xss攻击",
+            "display_url": "https://github.com/umijs/qiankun/issues/3129",
+            "display_title": "[Bug]qiankun会自动创建内联<script>与<style>，以及使用new Function反向解析字符串为执行代码，导致浏览器CSP策略需要带上 unsafe-inline与unsafe-eval，容易导致xss攻击"
+          },
+          "isError": false
+        }
+      },
+      {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "comments": [
+              {
+                "url": "https://github.com/umijs/qiankun/issues/3129#issuecomment-4514315591",
+                "body": "这是来自QQ邮箱的假期自动回复邮件。\n \n您好，我最近正在休假中，无法亲自回复您的邮件。我将在假期结束后，尽快给您回复。",
+                "user": {
+                  "login": "WoodenMan001",
+                  "name": "WoodenMan001",
+                  "email": null,
+                  "avatar_url": "https://avatars.githubusercontent.com/u/31469634?v=4",
+                  "id": 31469634
+                },
+                "id": 4514315591,
+                "pull_request_review_id": null,
+                "in_reply_to_id": null,
+                "created_at": null,
+                "updated_at": null,
+                "review": null,
+                "side": null,
+                "line": null,
+                "start_line": null,
+                "path": null,
+                "body_html": "<div class=\"email-fragment\">这是来自QQ邮箱的假期自动回复邮件。\n \n您好，我最近正在休假中，无法亲自回复您的邮件。我将在假期结束后，尽快给您回复。</div>"
+              }
+            ],
+            "url": "https://github.com/umijs/qiankun/issues/3129",
+            "title": "umijs/qiankun Issue #3129 comments",
+            "display_url": "https://github.com/umijs/qiankun/issues/3129",
+            "display_title": "umijs/qiankun Issue #3129 comments"
+          },
+          "isError": false
+        }
+      }
+    ]
+  }
+]

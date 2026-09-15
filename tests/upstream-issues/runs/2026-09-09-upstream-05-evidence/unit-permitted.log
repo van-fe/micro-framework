@@ -1,0 +1,185 @@
+$ vitest run "--reporter=verbose" "--reporter=json" "--outputFile=tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/unit-permitted.json"
+
+ RUN  v4.1.11 /Users/fanfangbo/workspace/micro-framework
+
+ ✓ packages/runtime-core/src/loading/application-preloader.test.ts > ApplicationPreloader > does not reuse a completed anonymous prefetch for a credentialed entry 16ms
+ ✓ packages/runtime-core/src/loading/application-preloader.test.ts > ApplicationPreloader > deduplicates concurrent and completed entry prefetches 0ms
+ ✓ packages/runtime-core/src/loading/application-preloader.test.ts > ApplicationPreloader > allows an explicit retry after a failed prefetch 1ms
+ ✓ packages/runtime-core/src/loading/application-preloader.test.ts > ApplicationPreloader > aborts in-flight work without reporting an error when an app is forgotten 1ms
+ ✓ packages/cli/src/dev-registry-server.test.ts > local development registry and CORS proxy > serves a registry and proxies only configured asset prefixes with local CORS 36ms
+ ✓ packages/cli/src/dev-registry-server.test.ts > local development registry and CORS proxy > refuses a remote bind unless it is explicitly authorized 1ms
+ ✓ packages/offline-cache/src/worker-cache-store.test.ts > offline worker cache store > atomically includes the native Realm document and preserves its response policy headers 23ms
+ ✓ packages/offline-cache/src/worker-cache-store.test.ts > offline worker cache store > does not activate an update whose required Realm document cannot be fetched 3ms
+ ✓ packages/offline-cache/src/worker-cache-store.test.ts > offline worker cache store > caches a configured same-origin Realm document separately from a CDN-only application allowlist 1ms
+ ✓ packages/offline-cache/src/worker-cache-store.test.ts > offline worker cache store > reclaims inactive framework caches before staging a new application 0ms
+ ✓ packages/offline-cache/src/worker-cache-store.test.ts > offline worker cache store > evicts the oldest other active application and retries after a quota failure 18ms
+ ✓ packages/offline-cache/src/worker-cache-store.test.ts > offline worker cache store > preserves the target rollback version when quota recovery is exhausted 1ms
+ ✓ packages/offline-cache/src/worker-cache-store.test.ts > offline worker cache store > keeps the committed version active when stale-cache cleanup fails 1ms
+ ✓ packages/runtime-core/src/application/lifecycle.test.ts > runLifecycle > runs lifecycle arrays sequentially 1ms
+ ✓ packages/runtime-core/src/application/lifecycle.test.ts > runLifecycle > rejects a lifecycle that exceeds its timeout 6ms
+ ✓ packages/runtime-core/src/application/lifecycle.test.ts > runLifecycle > cancels a pending lifecycle through AbortSignal 1ms
+ ✓ packages/runtime-core/src/application/lifecycle.test.ts > cancelled lifecycle sequences > does not invoke later callbacks after abort 0ms
+ ✓ packages/runtime-core/src/application/lifecycle.test.ts > cancelled lifecycle sequences > does not invoke later callbacks after timeout 6ms
+ ✓ packages/entry-resolver/src/prefetch-entry.test.ts > prefetchEntryResources > uses the configured credentials for a manifest and every prefetched resource 15ms
+ ✓ packages/entry-resolver/src/prefetch-entry.test.ts > prefetchEntryResources > prefetches a direct entry with cache and SRI metadata 1ms
+ ✓ packages/entry-resolver/src/prefetch-entry.test.ts > prefetchEntryResources > forwards cancellation to the browser fetch 1ms
+ ✓ packages/server-registry/src/rollout.test.ts > server rollout selection > assigns stable tenant cohorts across users and covers weighted variants 70ms
+ ✓ packages/server-registry/src/rollout.test.ts > server rollout selection > uses targeting rules before weights and rejects unknown identities 1ms
+ ✓ packages/server-registry/src/rollout.test.ts > server rollout selection > supports immediate rollback and excludes policy identities from client bootstrap 0ms
+ ✓ packages/deployment-diagnostics/src/deployment-scanner.test.ts > deployment scanner > verifies CSP, CORS, MIME and every schema v2 manifest digest 25ms
+ ✓ packages/deployment-diagnostics/src/deployment-scanner.test.ts > deployment scanner > returns actionable diagnostics for a blocked and mutated module 2ms
+ ✓ packages/deployment-diagnostics/src/deployment-scanner.test.ts > deployment scanner > rejects an invalid manifest and missing integrity metadata 1ms
+ ✓ packages/vite-plugin/src/micro-host-plugin.test.ts > microHost > emits the Realm bootstrap beside host chunks in the configured assets directory 56ms
+ ✓ packages/vite-plugin/src/build-manifest.test.ts > createBuildManifest > produces deterministic module graph, shared requirements, and SHA-384 metadata 7ms
+ ✓ packages/vite-plugin/src/build-manifest.test.ts > createBuildManifest > optionally signs the canonical manifest with Ed25519 4ms
+ ✓ packages/devtools/src/runtime-telemetry.test.ts > measures lifecycle transitions, bounds exports, omits error text and releases marks 3ms
+ ✓ packages/devtools/src/runtime-telemetry.test.ts > retains failed exports for bounded retry 1ms
+ ✓ packages/devtools/src/runtime-telemetry.test.ts > keeps same-name instances distinct in Inspector 6ms
+ ✓ packages/devtools/src/runtime-telemetry.test.ts > exports explicit memory samples only when supported and applies redaction 0ms
+ ✓ packages/webpack-plugin/src/workspace-topology.test.ts > upstream workspace dependency topology > Q2701 the real workspace package graph remains acyclic 190ms
+ ✓ packages/webpack-plugin/src/workspace-topology.test.ts > upstream workspace dependency topology > Q2701 the same checker rejects mutually dependent workspace packages with the cycle path 34ms
+ ✓ packages/server-registry/src/server-registry.test.ts > ServerApplicationRegistry > returns deterministic route-aware application snapshots 7ms
+ ✓ packages/server-registry/src/server-registry.test.ts > ServerApplicationRegistry > renders a CSP nonce, native Import Map, and script-safe JSON bootstrap 0ms
+ ✓ packages/server-registry/src/server-registry.test.ts > ServerApplicationRegistry > rejects unserializable server registrations 0ms
+ ✓ packages/server-registry/src/server-registry.test.ts > ServerApplicationRegistry > registers parsed server applications through the Runtime port 1ms
+ ✓ packages/vite-plugin/src/micro-application-plugin.test.ts > microApplication > preserves exports and final-byte integrity (sourcemap=false) 55ms
+ ✓ packages/vite-plugin/src/micro-application-plugin.test.ts > microApplication > preserves exports and final-byte integrity (sourcemap=true) 31ms
+ ✓ packages/capability-broker/src/resource-capability-handler.test.ts > resource capability handler > owns, explicitly releases, and finally destroys user/display media 3ms
+ ✓ packages/capability-broker/src/resource-capability-handler.test.ts > resource capability handler > routes fullscreen, pointer lock, and picture-in-picture to application elements 1ms
+ ✓ packages/capability-broker/src/resource-capability-handler.test.ts > resource capability handler > releases wake locks explicitly and during final destroy 1ms
+ ✓ packages/capability-broker/src/resource-capability-handler.test.ts > resource capability handler > completes successful payments and aborts pending requests on destroy 2ms
+ ✓ packages/capability-broker/src/resource-capability-handler.test.ts > resource capability handler > closes owned notifications and popup windows during destroy 1ms
+ ✓ packages/vite-plugin/src/micro-application-plugin.test.ts > microApplication > preserves exports and final-byte integrity (sourcemap=hidden) 31ms
+ ✓ packages/vite-plugin/src/micro-application-plugin.test.ts > microApplication > preserves exports and final-byte integrity (sourcemap=inline) 35ms
+ ✓ packages/vite-plugin/src/shared-conflict-report.test.ts > createSharedDependencyConflictReport > reports compatible ranges and major-version conflicts deterministically 9ms
+ ✓ packages/runtime-core/src/loading/automatic-preload-coordinator.test.ts > automatic preload policy > avoids implicit transfers while offline, data saving, or on a 2g connection 1ms
+ ✓ packages/runtime-core/src/loading/automatic-preload-coordinator.test.ts > automatic preload policy > limits manifest fan-out on 3g and otherwise uses the six-request ceiling 0ms
+ ✓ packages/runtime-core/src/loading/automatic-preload-coordinator.test.ts > automatic preload policy > resolves application overrides, route awareness, and the all strategy 0ms
+ ✓ packages/runtime-core/src/loading/automatic-preload-coordinator.test.ts > automatic preload policy > uses a bounded timer when a browser never delivers its idle callback 2ms
+ ✓ packages/runtime-core/src/loading/automatic-preload-coordinator.test.ts > automatic preload policy > rechecks viewport visibility after a style mutation when IntersectionObserver stays silent 2ms
+ ✓ packages/ssr/src/render.test.ts > SSR application surface renderer > emits a deterministic Declarative Shadow DOM surface 8ms
+ ✓ packages/ssr/src/render.test.ts > SSR application surface renderer > preserves application chunks instead of buffering the body 1ms
+ ✓ packages/ssr/src/render.test.ts > SSR application surface renderer > rejects ambiguous hydration identifiers 1ms
+ ✓ packages/deployment-diagnostics/src/cors-configuration.test.ts > CORS configuration assistant > creates deterministic single-origin Vite and Nginx settings 2ms
+ ✓ packages/deployment-diagnostics/src/cors-configuration.test.ts > CORS configuration assistant > uses an allowlisted origin echo for multiple credentialed hosts 0ms
+ ✓ packages/deployment-diagnostics/src/cors-configuration.test.ts > CORS configuration assistant > rejects wildcard, non-origin and header-injection input 0ms
+ ✓ packages/runtime-core/src/loading/load-circuit-breaker.test.ts > LoadCircuitBreaker > opens after the configured failures and resets after cooldown 2ms
+ ✓ packages/runtime-core/src/loading/load-circuit-breaker.test.ts > LoadCircuitBreaker > clears accumulated failures after a successful fallback 0ms
+ ✓ packages/capability-broker/src/data-capability-handlers.test.ts > data capability handlers > keeps an exhaustive owner for every public capability 2ms
+ ✓ packages/capability-broker/src/data-capability-handlers.test.ts > data capability handlers > queries host user activation and permission state 2ms
+ ✓ packages/capability-broker/src/data-capability-handlers.test.ts > data capability handlers > reads and writes text through the host clipboard 0ms
+ ✓ packages/capability-broker/src/data-capability-handlers.test.ts > data capability handlers > invokes all three host file pickers with their original options 1ms
+ ✓ packages/capability-broker/src/data-capability-handlers.test.ts > data capability handlers > serializes WebAuthn create/get results without leaking credential instances 1ms
+ ✓ packages/capability-broker/src/data-capability-handlers.test.ts > data capability handlers > validates Web Share data and requests notification permission 4ms
+ ✓ packages/capability-broker/src/data-capability-handlers.test.ts > data capability handlers > returns stable not-available results when optional host APIs are absent 0ms
+ ✓ packages/capability-broker/src/browser-capability-broker.test.ts > BrowserCapabilityBroker > denies privileged capabilities unless they are explicitly allowed 1ms
+ ✓ packages/capability-broker/src/browser-capability-broker.test.ts > BrowserCapabilityBroker > requires an active host user gesture for privileged capabilities 0ms
+ ✓ packages/capability-broker/src/browser-capability-broker.test.ts > BrowserCapabilityBroker > rejects inputs that cannot cross a structured-clone boundary 1ms
+ ✓ packages/capability-broker/src/browser-capability-broker.test.ts > BrowserCapabilityBroker > reports capabilities blocked by the host Permissions Policy 0ms
+ ✓ packages/capability-broker/src/browser-capability-broker.test.ts > BrowserCapabilityBroker > maps host DOMException failures to stable capability errors 0ms
+ ✓ packages/capability-broker/src/browser-capability-broker.test.ts > BrowserCapabilityBroker > clones media input and releases owned tracks during destroy 1ms
+ ✓ packages/shared-resolver/src/resolve-shared-dependencies.test.ts > resolveSharedDependencies > selects the highest compatible version for imports and absolute scopes 3ms
+ ✓ packages/shared-resolver/src/resolve-shared-dependencies.test.ts > resolveSharedDependencies > deduplicates identical module preload URLs 0ms
+ ✓ packages/shared-resolver/src/resolve-shared-dependencies.test.ts > resolveSharedDependencies > reports 'invalid ranges' with typed diagnostics 0ms
+ ✓ packages/shared-resolver/src/resolve-shared-dependencies.test.ts > resolveSharedDependencies > reports 'missing compatible versions' with typed diagnostics 0ms
+ ✓ packages/shared-resolver/src/resolve-shared-dependencies.test.ts > resolveSharedDependencies > reports 'duplicate normalized versions' with typed diagnostics 0ms
+ ✓ packages/shared-resolver/src/resolve-shared-dependencies.test.ts > resolveSharedDependencies > reports 'invalid prefix targets' with typed diagnostics 0ms
+ ✓ packages/migration-tools/src/migration-tools.test.ts > qiankun migration planning > maps route registrations and preserves the source default prefetch behavior 1ms
+ ✓ packages/migration-tools/src/migration-tools.test.ts > qiankun migration planning > keeps named prefetch targets and requires an explicit timing review 0ms
+ ✓ packages/migration-tools/src/migration-tools.test.ts > qiankun migration planning > blocks inline resource entries and custom loading hooks 0ms
+ ✓ packages/migration-tools/src/migration-tools.test.ts > wujie migration planning > merges setup and start options into a manual Runtime registration 0ms
+ ✓ packages/migration-tools/src/migration-tools.test.ts > wujie migration planning > marks child lifecycle and route synchronization for review 0ms
+ ✓ packages/migration-tools/src/migration-tools.test.ts > wujie migration planning > maps keep-alive for review while source rewriting still blocks the plan 0ms
+ ✓ packages/migration-tools/src/migration-tools.test.ts > wujie migration planning > maps alive and preload execution to keepAlive plus Realm prewarming 0ms
+ ✓ packages/realm-host/src/realm-loading-plan.test.ts > createRealmLoadingPlan > applies the entry credentials to generated preloads while honoring explicit CORS 1ms
+ ✓ packages/realm-host/src/realm-loading-plan.test.ts > createRealmLoadingPlan > preloads the direct module entry after shared dependencies 2ms
+ ✓ packages/realm-host/src/realm-loading-plan.test.ts > createRealmLoadingPlan > preserves declared preloads without inventing preloads for HTML module scripts 0ms
+ ✓ packages/realm-host/src/realm-loading-plan.test.ts > createRealmLoadingPlan > loads direct entries without speculative preloads unless integrity requires one 0ms
+ ✓ packages/realm-host/src/realm-loading-plan.test.ts > createRealmLoadingPlan > rejects conflicting preload metadata for the same URL 0ms
+ ✓ packages/entry-resolver/src/html-import-map.test.ts > HTML import map normalization > resolves scoped URLs, relative specifier keys and prefix addresses at the application base 1ms
+ ✓ packages/entry-resolver/src/html-import-map.test.ts > HTML import map normalization > preserves blocked null addresses and normalizes invalid targets to blocked entries 0ms
+ ✓ packages/entry-resolver/src/html-import-map.test.ts > HTML import map normalization > retains first-map bindings and nonce while adding new imports and scoped bindings 0ms
+ ✓ packages/entry-resolver/src/html-import-map.test.ts > HTML import map normalization > rejects merging maps with distinct CSP authorization instead of borrowing the first nonce 0ms
+ ✓ packages/entry-resolver/src/html-import-map.test.ts > HTML import map normalization > rejects malformed JSON and non-object root or mapping sections before entry execution 0ms
+ ✓ packages/runtime-core/src/infrastructure/services.test.ts > runtime services > invokes registered service methods with their receiver and async result 2ms
+ ✓ packages/runtime-core/src/infrastructure/services.test.ts > runtime services > publishes service-name changes for active channels 1ms
+ ✓ packages/runtime-core/src/infrastructure/services.test.ts > runtime services > clears all event listeners during runtime teardown 0ms
+ ✓ packages/realm-host/src/html-import-map-plan.test.ts > explicit shared requirements override authored bindings while retaining other application mappings and nonce 3ms
+ ✓ packages/webpack-plugin/src/micro-host-webpack-plugin.test.ts > emits the native Realm HTML document and external bootstrap through a real Webpack compilation 361ms
+ ✓ packages/visual-bridge/src/scheduler-bridge.test.ts > scheduler bridge > tracks host scheduler handles and blocks callbacks after destroy 2ms
+ ✓ packages/offline-cache/src/offline-cache-manager.test.ts > normalizeOfflineApplication > resolves, deduplicates, and sorts allowlisted HTTP resources 1ms
+ ✓ packages/offline-cache/src/offline-cache-manager.test.ts > normalizeOfflineApplication > rejects empty metadata, non-HTTP URLs, and origins outside the allowlist 1ms
+ ✓ packages/offline-cache/src/offline-cache-manager.test.ts > normalizeMaxActiveEvictions > defaults to one bounded LRU eviction and rejects unsafe policy values 0ms
+ ✓ packages/runtime-core/src/infrastructure/resource-scope.test.ts > ManagedResourceScope > disposes resources in reverse order and remains idempotent 1ms
+ ✓ packages/runtime-core/src/infrastructure/resource-scope.test.ts > ManagedResourceScope > attempts every cleanup before reporting aggregate failures 1ms
+ ✓ packages/realm-host/src/module-loader.test.ts > Realm module request URLs > preserves the failed entry URL and original browser error when import rejects 2ms
+ ✓ packages/realm-host/src/module-loader.test.ts > Realm module request URLs > increments inside one Realm but reuses the bounded sequence in a new Realm 1ms
+ ✓ packages/migration-tools/src/source-scanner.test.ts > migration source scanner > classifies safe qiankun imports and browser compatibility review patterns 22ms
+ ✓ packages/migration-tools/src/source-scanner.test.ts > migration source scanner > requires compatibility review for global document writes without rewriting source 4ms
+ ✓ packages/migration-tools/src/source-scanner.test.ts > migration source scanner > does not confuse local bindings or independent iframe documents with the app document 3ms
+ ✓ packages/migration-tools/src/source-scanner.test.ts > migration source scanner > keeps a global write diagnostic outside a shadowing scope 2ms
+ ✓ packages/migration-tools/src/source-scanner.test.ts > migration source scanner > uses the TypeScript syntax tree instead of matching comments or string contents 1ms
+ ✓ packages/migration-tools/src/source-scanner.test.ts > migration source scanner > requires review for wujie globals and host API imports 1ms
+ ✓ packages/migration-tools/src/source-scanner.test.ts > migration source scanner > rewrites only compatible named qiankun imports 1ms
+ ✓ packages/migration-tools/src/source-scanner.test.ts > migration source scanner > scans Vue SFC script, template expressions, and style selectors with original locations 9ms
+ ✓ packages/migration-tools/src/source-scanner.test.ts > migration source scanner > ignores Vue template text and CSS comments while rewriting only an SFC script import 2ms
+ ✓ packages/migration-tools/src/source-scanner.test.ts > migration source scanner > requires review when an SFC block is external and blocks structurally invalid SFC input 1ms
+ ✓ packages/migration-tools/src/source-scanner.test.ts > migration source scanner > parses SCSS, Less, indented Sass, and Stylus selectors with source locations 9ms
+ ✓ packages/storage/src/memory-storage.test.ts > MemoryStorage > stores structured snapshots and supports delete and clear 1ms
+ ✓ packages/storage/src/memory-storage.test.ts > MemoryStorage > rejects empty or padded keys 1ms
+ ✓ packages/deployment-diagnostics/src/csp-policy.test.ts > CSP policy diagnostics > applies directive fallback and host wildcard matching 1ms
+ ✓ packages/deployment-diagnostics/src/csp-policy.test.ts > CSP policy diagnostics > identifies unsafe-eval without treating nonces as URL sources 0ms
+ ✓ packages/cli/src/cli.test.ts > micro-frame CLI > generates adapter-native application templates for every supported framework 2ms
+ ✓ packages/cli/src/cli.test.ts > micro-frame CLI > creates a complete template without overwriting the workspace root 13ms
+ ✓ packages/cli/src/cli.test.ts > micro-frame CLI > creates pinned standalone consumers with an optional scoped registry 15ms
+ ✓ packages/cli/src/cli.test.ts > micro-frame CLI > rejects invalid standalone options: "--framework-version" 2ms
+ ✓ packages/cli/src/cli.test.ts > micro-frame CLI > rejects invalid standalone options: "--framework-version" 1ms
+ ✓ packages/cli/src/cli.test.ts > micro-frame CLI > rejects invalid standalone options: "--framework-version" 3ms
+ ✓ packages/cli/src/cli.test.ts > micro-frame CLI > rejects invalid standalone options: "--registry" 2ms
+ ✓ packages/cli/src/cli.test.ts > micro-frame CLI > rejects invalid standalone options: "--framework-version" 3ms
+ ✓ packages/cli/src/cli.test.ts > micro-frame CLI > scans source and applies only the safe import codemod 10ms
+ ✓ packages/cli/src/cli.test.ts > micro-frame CLI > discovers Vue SFC files recursively and rewrites only their script blocks 12ms
+ ✓ packages/cli/src/cli.test.ts > micro-frame CLI > requires review for document.write compatibility and accepts --allow-review 12ms
+ ✓ packages/cli/src/cli.test.ts > micro-frame CLI > retains a blocking exit code for unsupported source patterns 2ms
+ ✓ packages/cli/src/cli.test.ts > micro-frame CLI > runs deployment diagnostics from a JSON configuration 3ms
+ ✓ packages/cli/src/cli.test.ts > micro-frame CLI > prints validated CORS plans for Vite and Nginx 1ms
+ ✓ packages/offline-cache/src/runtime-resources.test.ts > offline native Realm document resources > uses the host-origin deployment endpoint rather than an application-relative path 1ms
+ ✓ packages/offline-cache/src/runtime-resources.test.ts > offline native Realm document resources > preserves custom same-origin document paths and queries while removing navigation fragments 0ms
+ ✓ packages/offline-cache/src/runtime-resources.test.ts > offline native Realm document resources > rejects cross-origin and non-HTTP documents instead of caching an unusable Realm 0ms
+ ✓ packages/realm-host/src/script-scheduler.test.ts > HTML Entry script scheduler > starts async scripts immediately without blocking ordered and deferred work 2ms
+ ✓ packages/realm-host/src/script-scheduler.test.ts > HTML Entry script scheduler > ignores async and defer on inline classic scripts but defers inline modules 0ms
+ ✓ packages/strong-isolation/src/frame-host.test.ts > strong isolation frame policy > normalizes explicit least-privilege sandbox tokens 1ms
+ ✓ packages/strong-isolation/src/frame-host.test.ts > strong isolation frame policy > requires a cross-origin HTTP(S) HTML document 0ms
+ ✓ packages/dom-guard/src/eslint-plugin.test.ts > no-host-escape ESLint rule > reports host Window escape hatches and Service Worker registration 1ms
+ ✓ packages/dom-guard/src/eslint-plugin.test.ts > no-host-escape ESLint rule > does not report ordinary application-local DOM access 0ms
+ ✓ packages/runtime-core/src/state/create-store.test.ts > createStore > publishes immutable snapshots and supports unsubscribe 2ms
+ ✓ packages/storage/src/browser-resource-namespace.test.ts > browser resource namespace configuration > uses secure defaults without changing legacy Web Storage 1ms
+ ✓ packages/storage/src/browser-resource-namespace.test.ts > browser resource namespace configuration > supports explicit all-on and all-off modes 0ms
+ ✓ packages/storage/src/browser-resource-namespace.test.ts > browser resource namespace configuration > creates a stable application prefix 0ms
+ ✓ packages/entry-resolver/src/index.test.ts > rewriteCssUrls > resolves relative CSS assets without changing absolute or data URLs 2ms
+ ✓ packages/entry-resolver/src/index.test.ts > rewriteCssUrls > rewrites string and url candidates in standard image-set functions 0ms
+ ✓ packages/entry-resolver/src/index.test.ts > rewriteSrcset > preserves data URL commas while resolving relative candidates and descriptors 0ms
+ ✓ packages/entry-resolver/src/index.test.ts > rewriteSrcset > handles descriptor-free candidates separated by trailing commas 0ms
+ ✓ packages/adapter-vanilla/src/vanilla-lifecycle.test.ts > createVanillaLifecycle > owns renderer cleanup and makes repeated unmount harmless 1ms
+ ✓ packages/dom-surface/src/application-css-values.test.ts > application CSS values > resolves dimensions in calc and variables while preserving strings and resource URLs 1ms
+ ✓ packages/dom-surface/src/application-css-values.test.ts > application CSS values > renames complete font families without matching substrings in unrelated names 0ms
+ ✓ packages/dom-surface/src/document-style-token-bridge.test.ts > normalizeDocumentTokenSelector > maps document roots and body selectors without copying unrelated selectors 1ms
+ ✓ packages/dom-surface/src/document-style-token-bridge.test.ts > normalizeDocumentTokenSelector > keeps selector lists and functional conditions intact 0ms
+ ✓ packages/dom-surface/src/document-style-token-bridge.test.ts > normalizeDocumentTokenSelector > ignores selectors that already work inside the ShadowRoot 0ms
+ ✓ packages/compat-api/src/compat-contracts.test.ts > compatibility contracts > maps familiar lifecycle hooks to applications and preserves array order 1ms
+ ✓ packages/compat-api/src/compat-contracts.test.ts > compatibility contracts > keeps global state snapshots, immediate notification, and unsubscribe semantics 1ms
+ ✓ packages/compat-api/src/compat-contracts.test.ts > compatibility contracts > deduplicates and idempotently removes global error handlers 0ms
+ ✓ packages/compat-api/src/compat-contracts.test.ts > compatibility contracts > runs the first-mounted callback once and uses a microtask after it already occurred 0ms
+ ✓ packages/compat-api/src/compat-contracts.test.ts > compatibility contracts > delegates registered and direct entry prefetch targets to the default Runtime 1ms
+ ✓ packages/runtime-core/src/routing/matches-route.test.ts > routing mode matching > uses pathname in history mode 1ms
+ ✓ packages/runtime-core/src/routing/matches-route.test.ts > routing mode matching > normalizes hash and hashbang paths 0ms
+ ✓ packages/runtime-core/src/routing/matches-route.test.ts > routing mode matching > keeps function rules on the real Location contract 0ms
+ ✓ packages/webpack-plugin/src/upstream-build-regressions.test.ts > upstream webpack build completion > Q2795 a real plugin compilation closes the compiler and lets its process exit 694ms
+ ✓ packages/webpack-plugin/src/upstream-build-regressions.test.ts > upstream webpack build completion > Q2795 a failing real compilation closes and exits with a concrete build error 232ms
+
+ Test Files  49 passed (49)
+      Tests  174 passed (174)
+   Start at  11:26:26
+   Duration  1.12s (transform 2.08s, setup 0ms, import 3.73s, tests 2.25s, environment 2ms)
+
+JSON report written to /Users/fanfangbo/workspace/micro-framework/tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/unit-permitted.json

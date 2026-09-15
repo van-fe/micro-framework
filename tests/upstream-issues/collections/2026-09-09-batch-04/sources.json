@@ -1,0 +1,30 @@
+[
+  {
+    "repository": "umijs/qiankun",
+    "collectionBatch": "2026-09-09-batch-04",
+    "collectedAt": "2026-09-09T03:11:48.062354+00:00",
+    "exactBugTotal": 40,
+    "exactBugNew": 0,
+    "supplementaryNew": 10,
+    "exactBugShortfall": 10,
+    "queryArchive": "tests/upstream-issues/collections/2026-09-09-batch-04/qiankun-bug.json",
+    "recentTotal": 2091,
+    "recentReturned": 100,
+    "recentTruncated": true,
+    "incompleteResults": false
+  },
+  {
+    "repository": "Tencent/wujie",
+    "collectionBatch": "2026-09-09-batch-04",
+    "collectedAt": "2026-09-09T03:11:48.062354+00:00",
+    "exactBugTotal": 10,
+    "exactBugNew": 0,
+    "supplementaryNew": 10,
+    "exactBugShortfall": 10,
+    "queryArchive": "tests/upstream-issues/collections/2026-09-09-batch-04/wujie-bug.json",
+    "recentTotal": 835,
+    "recentReturned": 100,
+    "recentTruncated": true,
+    "incompleteResults": false
+  }
+]

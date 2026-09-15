@@ -1,0 +1,52 @@
+
+Running 9 tests using 1 worker
+
+(node:55026) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/9] [chromium] › tests/e2e/upstream-batch04-native-network.spec.ts:8:3 › W1057 native pending stylesheet transport control (remove-link)
+[chromium] › tests/e2e/upstream-batch04-native-network.spec.ts:8:3 › W1057 native pending stylesheet transport control (remove-link)
+NATIVE_STYLESHEET_TRANSPORT {"browser":"chromium","cleanup":"remove-link","requestObserved":true,"pendingTransportClosedWithin5000ms":false,"serverEndedResponse":false,"userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.7922.34 Safari/537.36","note":"Server cleanup occurs only after this attachment. Passing this control means observation completed, not transport cancellation succeeded."}
+
+[2/9] [chromium] › tests/e2e/upstream-batch04-native-network.spec.ts:8:3 › W1057 native pending stylesheet transport control (clear-href)
+[chromium] › tests/e2e/upstream-batch04-native-network.spec.ts:8:3 › W1057 native pending stylesheet transport control (clear-href)
+NATIVE_STYLESHEET_TRANSPORT {"browser":"chromium","cleanup":"clear-href","requestObserved":true,"pendingTransportClosedWithin5000ms":false,"serverEndedResponse":false,"userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.7922.34 Safari/537.36","note":"Server cleanup occurs only after this attachment. Passing this control means observation completed, not transport cancellation succeeded."}
+
+[3/9] [chromium] › tests/e2e/upstream-batch04-native-network.spec.ts:8:3 › W1057 native pending stylesheet transport control (remove-shadow-host)
+[chromium] › tests/e2e/upstream-batch04-native-network.spec.ts:8:3 › W1057 native pending stylesheet transport control (remove-shadow-host)
+NATIVE_STYLESHEET_TRANSPORT {"browser":"chromium","cleanup":"remove-shadow-host","requestObserved":true,"pendingTransportClosedWithin5000ms":false,"serverEndedResponse":false,"userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.7922.34 Safari/537.36","note":"Server cleanup occurs only after this attachment. Passing this control means observation completed, not transport cancellation succeeded."}
+
+(node:55046) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[4/9] [firefox] › tests/e2e/upstream-batch04-native-network.spec.ts:8:3 › W1057 native pending stylesheet transport control (remove-link)
+[firefox] › tests/e2e/upstream-batch04-native-network.spec.ts:8:3 › W1057 native pending stylesheet transport control (remove-link)
+NATIVE_STYLESHEET_TRANSPORT {"browser":"firefox","cleanup":"remove-link","requestObserved":true,"pendingTransportClosedWithin5000ms":false,"serverEndedResponse":false,"userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:153.0) Gecko/20100101 Firefox/153.0","note":"Server cleanup occurs only after this attachment. Passing this control means observation completed, not transport cancellation succeeded."}
+
+[5/9] [firefox] › tests/e2e/upstream-batch04-native-network.spec.ts:8:3 › W1057 native pending stylesheet transport control (clear-href)
+[firefox] › tests/e2e/upstream-batch04-native-network.spec.ts:8:3 › W1057 native pending stylesheet transport control (clear-href)
+NATIVE_STYLESHEET_TRANSPORT {"browser":"firefox","cleanup":"clear-href","requestObserved":true,"pendingTransportClosedWithin5000ms":false,"serverEndedResponse":false,"userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:153.0) Gecko/20100101 Firefox/153.0","note":"Server cleanup occurs only after this attachment. Passing this control means observation completed, not transport cancellation succeeded."}
+
+[6/9] [firefox] › tests/e2e/upstream-batch04-native-network.spec.ts:8:3 › W1057 native pending stylesheet transport control (remove-shadow-host)
+[firefox] › tests/e2e/upstream-batch04-native-network.spec.ts:8:3 › W1057 native pending stylesheet transport control (remove-shadow-host)
+NATIVE_STYLESHEET_TRANSPORT {"browser":"firefox","cleanup":"remove-shadow-host","requestObserved":true,"pendingTransportClosedWithin5000ms":false,"serverEndedResponse":false,"userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:153.0) Gecko/20100101 Firefox/153.0","note":"Server cleanup occurs only after this attachment. Passing this control means observation completed, not transport cancellation succeeded."}
+
+(node:55100) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[7/9] [webkit] › tests/e2e/upstream-batch04-native-network.spec.ts:8:3 › W1057 native pending stylesheet transport control (remove-link)
+[webkit] › tests/e2e/upstream-batch04-native-network.spec.ts:8:3 › W1057 native pending stylesheet transport control (remove-link)
+NATIVE_STYLESHEET_TRANSPORT {"browser":"webkit","cleanup":"remove-link","requestObserved":true,"pendingTransportClosedWithin5000ms":false,"serverEndedResponse":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.5 Safari/605.1.15","note":"Server cleanup occurs only after this attachment. Passing this control means observation completed, not transport cancellation succeeded."}
+
+[8/9] [webkit] › tests/e2e/upstream-batch04-native-network.spec.ts:8:3 › W1057 native pending stylesheet transport control (clear-href)
+[webkit] › tests/e2e/upstream-batch04-native-network.spec.ts:8:3 › W1057 native pending stylesheet transport control (clear-href)
+NATIVE_STYLESHEET_TRANSPORT {"browser":"webkit","cleanup":"clear-href","requestObserved":true,"pendingTransportClosedWithin5000ms":false,"serverEndedResponse":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.5 Safari/605.1.15","note":"Server cleanup occurs only after this attachment. Passing this control means observation completed, not transport cancellation succeeded."}
+
+[9/9] [webkit] › tests/e2e/upstream-batch04-native-network.spec.ts:8:3 › W1057 native pending stylesheet transport control (remove-shadow-host)
+[webkit] › tests/e2e/upstream-batch04-native-network.spec.ts:8:3 › W1057 native pending stylesheet transport control (remove-shadow-host)
+NATIVE_STYLESHEET_TRANSPORT {"browser":"webkit","cleanup":"remove-shadow-host","requestObserved":true,"pendingTransportClosedWithin5000ms":false,"serverEndedResponse":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.5 Safari/605.1.15","note":"Server cleanup occurs only after this attachment. Passing this control means observation completed, not transport cancellation succeeded."}
+
+  9 passed (53.3s)

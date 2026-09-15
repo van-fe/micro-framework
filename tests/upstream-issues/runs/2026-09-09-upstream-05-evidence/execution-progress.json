@@ -1,0 +1,71 @@
+{
+  "runId": "2026-09-09-upstream-05",
+  "status": "in-progress",
+  "commands": [
+    {
+      "command": "bun install --frozen-lockfile",
+      "exitCode": 0,
+      "log": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/install.log"
+    },
+    {
+      "command": "bun run build",
+      "exitCode": 0,
+      "log": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/build.log"
+    },
+    {
+      "command": "bun run typecheck",
+      "exitCode": 0,
+      "log": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/typecheck.log"
+    },
+    {
+      "command": "bun run test:browser tests/browser/upstream-batch04-dom.browser.test.ts tests/browser/upstream-batch03-dom.browser.test.ts --reporter=verbose --reporter=json --outputFile=tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/target-browser.json",
+      "exitCode": 1,
+      "log": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/target-browser.log"
+    },
+    {
+      "command": "bun run test:browser tests/browser/upstream-batch04-dom.browser.test.ts tests/browser/upstream-batch03-dom.browser.test.ts --reporter=verbose --reporter=json --outputFile=tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/target-browser-permitted.json",
+      "exitCode": 0,
+      "log": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/target-browser-permitted.log"
+    },
+    {
+      "command": "PLAYWRIGHT_JSON_OUTPUT_NAME=tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/target-e2e.json bunx playwright test tests/e2e/upstream-batch04- --reporter=line,json",
+      "exitCode": 1,
+      "log": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/target-e2e.log"
+    },
+    {
+      "command": "bun run test:unit --reporter=json --outputFile=tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/unit.json",
+      "exitCode": 1,
+      "log": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/unit.log"
+    },
+    {
+      "command": "bun run test:unit --reporter=verbose --reporter=json --outputFile=tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/unit-permitted.json",
+      "exitCode": 0,
+      "log": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/unit-permitted.log"
+    },
+    {
+      "command": "bun run build",
+      "exitCode": 0,
+      "log": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/build-after-fixes.log"
+    },
+    {
+      "command": "bun run typecheck",
+      "exitCode": 0,
+      "log": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/typecheck-after-fixes.log"
+    },
+    {
+      "command": "bun run test:browser tests/browser/upstream-batch04- tests/browser/viewport-events.browser.test.ts --reporter=verbose --reporter=json --outputFile=tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/fixed-browser.json",
+      "exitCode": 0,
+      "log": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/fixed-browser.log"
+    },
+    {
+      "command": "PLAYWRIGHT_JSON_OUTPUT_NAME=tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/fixed-e2e.json bunx playwright test tests/e2e/upstream-batch04- --reporter=line,json",
+      "exitCode": 1,
+      "log": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/fixed-e2e.log"
+    },
+    {
+      "command": "bun run check:artifacts",
+      "exitCode": 1,
+      "log": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/artifacts.log"
+    }
+  ]
+}

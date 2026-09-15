@@ -1,0 +1,125 @@
+{
+  "commands": [
+    {
+      "command": "PLAYWRIGHT_JSON_OUTPUT_NAME=tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/styles-diagnostic.json bunx playwright test tests/e2e/upstream-batch04-styles.spec.ts --project=webkit --reporter=line,json > tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/styles-diagnostic.log 2>&1",
+      "exitCode": 1,
+      "description": "red: second generation computed color black with present active-looking CSSOM",
+      "stats": {
+        "startTime": "2026-09-09T03:36:21.220Z",
+        "duration": 10573.259,
+        "expected": 0,
+        "skipped": 0,
+        "unexpected": 1,
+        "flaky": 0
+      },
+      "report": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/styles-diagnostic.json",
+      "log": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/styles-diagnostic.log"
+    },
+    {
+      "command": "PLAYWRIGHT_JSON_OUTPUT_NAME=tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/styles-native.json bunx playwright test tests/e2e/upstream-batch04-style-native.spec.ts --project=webkit --reporter=line,json > tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/styles-native.log 2>&1",
+      "exitCode": 0,
+      "description": "native control unconditional CSSOM release and reflected release both normal",
+      "stats": {
+        "startTime": "2026-09-09T03:37:00.618Z",
+        "duration": 3789.9849999999997,
+        "expected": 1,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "report": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/styles-native.json",
+      "log": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/styles-native.log"
+    },
+    {
+      "command": "PLAYWRIGHT_JSON_OUTPUT_NAME=tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/styles-native-guard.json bunx playwright test tests/e2e/upstream-batch04-style-native.spec.ts --project=webkit --reporter=line,json > tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/styles-native-guard.log 2>&1",
+      "exitCode": 0,
+      "description": "native control adds equality guard; both normal",
+      "stats": {
+        "startTime": "2026-09-09T03:37:58.403Z",
+        "duration": 5046.777,
+        "expected": 1,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "report": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/styles-native-guard.json",
+      "log": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/styles-native-guard.log"
+    },
+    {
+      "command": "PLAYWRIGHT_JSON_OUTPUT_NAME=tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/styles-native-cssom.json bunx playwright test tests/e2e/upstream-batch04-style-native.spec.ts --project=webkit --reporter=line,json > tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/styles-native-cssom.log 2>&1",
+      "exitCode": 0,
+      "description": "native control adds cssRules inspection and animation frame layout; both normal",
+      "stats": {
+        "startTime": "2026-09-09T03:39:08.802Z",
+        "duration": 4926.8859999999995,
+        "expected": 1,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "report": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/styles-native-cssom.json",
+      "log": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/styles-native-cssom.log"
+    },
+    {
+      "command": "PLAYWRIGHT_JSON_OUTPUT_NAME=tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/styles-activate.json bunx playwright test tests/e2e/upstream-batch04-styles.spec.ts --project=webkit --reporter=line,json > tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/styles-activate.log 2>&1",
+      "exitCode": 0,
+      "description": "green with explicit same-value CSSOM activation and diagnostic output",
+      "stats": {
+        "startTime": "2026-09-09T03:38:42.801Z",
+        "duration": 5062.261,
+        "expected": 1,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "report": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/styles-activate.json",
+      "log": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/styles-activate.log"
+    },
+    {
+      "command": "PLAYWRIGHT_JSON_OUTPUT_NAME=tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/styles-final.json bunx playwright test tests/e2e/upstream-batch04-styles.spec.ts  --reporter=line,json > tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/styles-final.log 2>&1",
+      "exitCode": 0,
+      "description": "three-engine final contract without diagnostic logging",
+      "stats": {
+        "startTime": "2026-09-09T03:39:45.078Z",
+        "duration": 7012.469,
+        "expected": 3,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "report": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/styles-final.json",
+      "log": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/styles-final.log"
+    },
+    {
+      "command": "bun run build:framework > tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/styles-build.log 2>&1",
+      "exitCode": 0,
+      "description": "Used this framework build directly for activate and final runs; only explanatory source comment changed after build."
+    }
+  ],
+  "initialSandboxStart": {
+    "exitCode": 1,
+    "message": "webServer startup failed before test execution; reexecuted with approved local fixture server permissions"
+  },
+  "sourceHashes": [
+    {
+      "path": "packages/dom-surface/src/style-activation.ts",
+      "sha256": "1a09a8f12f3ba0fd0b1510096c72e71407fc3df3eb8034f7a00d515b424c0dcf"
+    },
+    {
+      "path": "tests/e2e/upstream-batch04-styles.spec.ts",
+      "sha256": "f0decd638a8179f123b568f2c9c81b5da74a22caf0ab2e6601f6f7ba35bf14b1"
+    },
+    {
+      "path": "tests/upstream-issues/collections/2026-09-09-batch-04/style-native-control.spec.ts.txt",
+      "sha256": "bfeaa4dbdf2d11df7d62a92e6e5004ea21f95145bf810ff3d73d61188fd0ddf9"
+    }
+  ],
+  "nativeConclusion": "Simplified native ShadowRoot controls did not reproduce the full framework lifecycle failure; do not classify it as a proven browser-only defect.",
+  "fixedConclusion": "In the framework repeat-dispose-create condition, reapplying CSSOM media at release restores the cascade even when CSSOM mediaText already equals authored media; original second-generation behavior red then all 3 engines green.",
+  "tests": [
+    {
+      "path": "tests/e2e/upstream-batch04-styles.spec.ts",
+      "title": "Q3018 preserves module initialized adjacent styles across keepAlive hide return and disposal recreation"
+    }
+  ]
+}

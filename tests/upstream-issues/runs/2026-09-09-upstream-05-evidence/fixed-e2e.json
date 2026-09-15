@@ -1,0 +1,2453 @@
+{
+  "config": {
+    "argv": [
+      "/Users/fanfangbo/.local/share/fnm/node-versions/v24.19.0/installation/bin/node",
+      "/Users/fanfangbo/workspace/micro-framework/node_modules/.bin/playwright",
+      "test",
+      "tests/e2e/upstream-batch04-",
+      "--reporter=line,json"
+    ],
+    "configFile": "/Users/fanfangbo/workspace/micro-framework/playwright.config.ts",
+    "rootDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "line"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "upstream-batch04-canvas-base.spec.ts",
+      "file": "upstream-batch04-canvas-base.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "W992 retains painted canvas pixels and native node identity over keepAlive hide and return",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 404,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:28:27.601Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dec6b74121be1aaa1c9e-42b15e4b1bdbc6c29c8d",
+          "file": "upstream-batch04-canvas-base.spec.ts",
+          "line": 5,
+          "column": 1
+        },
+        {
+          "title": "W1044 resolves relative HTML resources from the child base in a fresh isolated browser context",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 146,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:28:28.204Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dec6b74121be1aaa1c9e-7675cf370d4c49a5b516",
+          "file": "upstream-batch04-canvas-base.spec.ts",
+          "line": 27,
+          "column": 1
+        },
+        {
+          "title": "W992 retains painted canvas pixels and native node identity over keepAlive hide and return",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 764,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:28:54.437Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dec6b74121be1aaa1c9e-f2a6e2e2f00132b89370",
+          "file": "upstream-batch04-canvas-base.spec.ts",
+          "line": 5,
+          "column": 1
+        },
+        {
+          "title": "W1044 resolves relative HTML resources from the child base in a fresh isolated browser context",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 225,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:28:55.657Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dec6b74121be1aaa1c9e-0f0c5bd53e5d8f83ae49",
+          "file": "upstream-batch04-canvas-base.spec.ts",
+          "line": 27,
+          "column": 1
+        },
+        {
+          "title": "W992 retains painted canvas pixels and native node identity over keepAlive hide and return",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 16,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 718,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:29:28.205Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dec6b74121be1aaa1c9e-53c2e26e55d15aa5d6be",
+          "file": "upstream-batch04-canvas-base.spec.ts",
+          "line": 5,
+          "column": 1
+        },
+        {
+          "title": "W1044 resolves relative HTML resources from the child base in a fresh isolated browser context",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 16,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 285,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:29:29.089Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dec6b74121be1aaa1c9e-72cff5f75328781ad539",
+          "file": "upstream-batch04-canvas-base.spec.ts",
+          "line": 27,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "upstream-batch04-components.spec.ts",
+      "file": "upstream-batch04-components.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "W1012 renders real bpmn-js SVG transforms and flow geometry in the application Realm",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 262,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:28:28.555Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "da451b94eff427bbfe87-7dc98898213cf564d132",
+          "file": "upstream-batch04-components.spec.ts",
+          "line": 10,
+          "column": 1
+        },
+        {
+          "title": "W1038 reanchors Element UI Select after viewport enlargement with local=false",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1778,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:28:28.898Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "da451b94eff427bbfe87-bb1144922d8a0921b8ad",
+          "file": "upstream-batch04-components.spec.ts",
+          "line": 26,
+          "column": 34
+        },
+        {
+          "title": "W1038 reanchors Element UI Select after viewport enlargement with local=true",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1609,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:28:30.680Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "da451b94eff427bbfe87-cf2b181bc7b30d4106b2",
+          "file": "upstream-batch04-components.spec.ts",
+          "line": 26,
+          "column": 34
+        },
+        {
+          "title": "W1038 reanchors react menu after visible viewport enlargement",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1679,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:28:32.293Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "da451b94eff427bbfe87-fffb9692919f08fbe896",
+          "file": "upstream-batch04-components.spec.ts",
+          "line": 44,
+          "column": 51
+        },
+        {
+          "title": "W1038 reanchors vue3 menu after visible viewport enlargement",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1089,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:28:33.976Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "da451b94eff427bbfe87-1798d60ba7d13728dcce",
+          "file": "upstream-batch04-components.spec.ts",
+          "line": 44,
+          "column": 51
+        },
+        {
+          "title": "W1012 renders real bpmn-js SVG transforms and flow geometry in the application Realm",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 717,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:28:56.204Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "da451b94eff427bbfe87-4084572b802dc3d7f17d",
+          "file": "upstream-batch04-components.spec.ts",
+          "line": 10,
+          "column": 1
+        },
+        {
+          "title": "W1038 reanchors Element UI Select after viewport enlargement with local=false",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1173,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:28:57.272Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "da451b94eff427bbfe87-842372cb96f1b3c1016d",
+          "file": "upstream-batch04-components.spec.ts",
+          "line": 26,
+          "column": 34
+        },
+        {
+          "title": "W1038 reanchors Element UI Select after viewport enlargement with local=true",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1206,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:28:58.452Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "da451b94eff427bbfe87-013c4e8d55a1755977bd",
+          "file": "upstream-batch04-components.spec.ts",
+          "line": 26,
+          "column": 34
+        },
+        {
+          "title": "W1038 reanchors react menu after visible viewport enlargement",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1710,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:28:59.663Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "da451b94eff427bbfe87-0fc5a2e33211813ce811",
+          "file": "upstream-batch04-components.spec.ts",
+          "line": 44,
+          "column": 51
+        },
+        {
+          "title": "W1038 reanchors vue3 menu after visible viewport enlargement",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 965,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:29:01.378Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "da451b94eff427bbfe87-adf42b9c6e35addf0317",
+          "file": "upstream-batch04-components.spec.ts",
+          "line": 44,
+          "column": 51
+        },
+        {
+          "title": "W1012 renders real bpmn-js SVG transforms and flow geometry in the application Realm",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 17,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 552,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:29:29.570Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "da451b94eff427bbfe87-ae0274d013f3d03b4bd0",
+          "file": "upstream-batch04-components.spec.ts",
+          "line": 10,
+          "column": 1
+        },
+        {
+          "title": "W1038 reanchors Element UI Select after viewport enlargement with local=false",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 17,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1244,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:29:30.270Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "da451b94eff427bbfe87-d5457fd5c5e50cc1b074",
+          "file": "upstream-batch04-components.spec.ts",
+          "line": 26,
+          "column": 34
+        },
+        {
+          "title": "W1038 reanchors Element UI Select after viewport enlargement with local=true",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 17,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1231,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:29:31.523Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "da451b94eff427bbfe87-ff8a60cfd702abdcad0d",
+          "file": "upstream-batch04-components.spec.ts",
+          "line": 26,
+          "column": 34
+        },
+        {
+          "title": "W1038 reanchors react menu after visible viewport enlargement",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 17,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1522,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:29:32.759Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "da451b94eff427bbfe87-6bf781767cde0d2c71b5",
+          "file": "upstream-batch04-components.spec.ts",
+          "line": 44,
+          "column": 51
+        },
+        {
+          "title": "W1038 reanchors vue3 menu after visible viewport enlargement",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 17,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 982,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:29:34.286Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "da451b94eff427bbfe87-fe47075800969f025d13",
+          "file": "upstream-batch04-components.spec.ts",
+          "line": 44,
+          "column": 51
+        }
+      ]
+    },
+    {
+      "title": "upstream-batch04-csp.spec.ts",
+      "file": "upstream-batch04-csp.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Q3129 mounts external modules without unsafe inline scripts or eval under same origin CSP",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 203,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:28:35.269Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fee3dddefacbb96d9e90-e1f2fab7630b3b12e9d5",
+          "file": "upstream-batch04-csp.spec.ts",
+          "line": 5,
+          "column": 1
+        },
+        {
+          "title": "Q3129 mounts external modules without unsafe inline scripts or eval under same origin CSP",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 10,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 759,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:29:02.690Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fee3dddefacbb96d9e90-d47a0526fe1adf8aaaf7",
+          "file": "upstream-batch04-csp.spec.ts",
+          "line": 5,
+          "column": 1
+        },
+        {
+          "title": "Q3129 mounts external modules without unsafe inline scripts or eval under same origin CSP",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 18,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 469,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:29:35.474Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fee3dddefacbb96d9e90-9f93dcde75103145360d",
+          "file": "upstream-batch04-csp.spec.ts",
+          "line": 5,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "upstream-batch04-routing.spec.ts",
+      "file": "upstream-batch04-routing.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Q2990 performs Vue hash router push in mounted under a history host without changing its URL",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 306,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:28:35.752Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c282c3453068be647f17-3e31f290c5368a96d640",
+          "file": "upstream-batch04-routing.spec.ts",
+          "line": 41,
+          "column": 1
+        },
+        {
+          "title": "Q2976 W1007 W1045 keeps an explicit child route through repeated reloads and subsequent navigation without recursive encoding",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 524,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:28:36.159Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c282c3453068be647f17-59e134a78a8ce332e573",
+          "file": "upstream-batch04-routing.spec.ts",
+          "line": 50,
+          "column": 1
+        },
+        {
+          "title": "Q2990 performs Vue hash router push in mounted under a history host without changing its URL",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 11,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 702,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:29:04.155Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c282c3453068be647f17-7e28e4c1901470ea7865",
+          "file": "upstream-batch04-routing.spec.ts",
+          "line": 41,
+          "column": 1
+        },
+        {
+          "title": "Q2976 W1007 W1045 keeps an explicit child route through repeated reloads and subsequent navigation without recursive encoding",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 11,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 583,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:29:05.206Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c282c3453068be647f17-5312e161c3d07762467c",
+          "file": "upstream-batch04-routing.spec.ts",
+          "line": 50,
+          "column": 1
+        },
+        {
+          "title": "Q2990 performs Vue hash router push in mounted under a history host without changing its URL",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 19,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 473,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:29:36.293Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c282c3453068be647f17-6f4b973dfd9aedda6d80",
+          "file": "upstream-batch04-routing.spec.ts",
+          "line": 41,
+          "column": 1
+        },
+        {
+          "title": "Q2976 W1007 W1045 keeps an explicit child route through repeated reloads and subsequent navigation without recursive encoding",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 19,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 631,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:29:36.914Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c282c3453068be647f17-4447f0d08bed0b61d572",
+          "file": "upstream-batch04-routing.spec.ts",
+          "line": 50,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "upstream-batch04-runtime-lifecycle.spec.ts",
+      "file": "upstream-batch04-runtime-lifecycle.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Q2991 repeatedly destroys real Vue 2 instances and subscriptions without retaining connected Realms",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 384,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:28:36.877Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ac54c03ddcb5f006e26f-93c7588c83e43dbbb6c4",
+          "file": "upstream-batch04-runtime-lifecycle.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "W1039 reopens a real host dialog with an alive Vue router after repeated child navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 363,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:28:37.344Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ac54c03ddcb5f006e26f-73e0f454c86e2fd0d462",
+          "file": "upstream-batch04-runtime-lifecycle.spec.ts",
+          "line": 33,
+          "column": 1
+        },
+        {
+          "title": "Q2991 repeatedly destroys real Vue 2 instances and subscriptions without retaining connected Realms",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 854,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:29:06.107Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ac54c03ddcb5f006e26f-c5edb9c76b595528a3bd",
+          "file": "upstream-batch04-runtime-lifecycle.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "W1039 reopens a real host dialog with an alive Vue router after repeated child navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 533,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:29:07.308Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ac54c03ddcb5f006e26f-7d9909fd72fd9531713d",
+          "file": "upstream-batch04-runtime-lifecycle.spec.ts",
+          "line": 33,
+          "column": 1
+        },
+        {
+          "title": "Q2991 repeatedly destroys real Vue 2 instances and subscriptions without retaining connected Realms",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 20,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 717,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:29:37.735Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ac54c03ddcb5f006e26f-203516832e024e22a904",
+          "file": "upstream-batch04-runtime-lifecycle.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "W1039 reopens a real host dialog with an alive Vue router after repeated child navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 20,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 693,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:29:38.598Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ac54c03ddcb5f006e26f-c7b8822fa5d4987f4a2a",
+          "file": "upstream-batch04-runtime-lifecycle.spec.ts",
+          "line": 33,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "upstream-batch04-runtime-loading.spec.ts",
+      "file": "upstream-batch04-runtime-loading.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Q3001 Q3093 manual load failure preserves host and sibling while lifecycle loading settles",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 230,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:28:37.906Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8ff1b8fe7a1d006b1f7-d5fe57a47fc8ff046438",
+          "file": "upstream-batch04-runtime-loading.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "W1057 configured load timeout removes a delayed entry Realm and permits recovery at the same URL",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2157,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:28:38.218Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8ff1b8fe7a1d006b1f7-4a474193200a2bf96da0",
+          "file": "upstream-batch04-runtime-loading.spec.ts",
+          "line": 46,
+          "column": 1
+        },
+        {
+          "title": "W976 W1017 delayed resource A-B-A switching retains one interactive application (keepAlive=false)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 644,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:28:40.378Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8ff1b8fe7a1d006b1f7-244f1d37cf85f4514cb1",
+          "file": "upstream-batch04-runtime-loading.spec.ts",
+          "line": 79,
+          "column": 40
+        },
+        {
+          "title": "W976 W1017 delayed resource A-B-A switching retains one interactive application (keepAlive=true)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 670,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:28:41.027Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8ff1b8fe7a1d006b1f7-20b9c41ac6513a9f3742",
+          "file": "upstream-batch04-runtime-loading.spec.ts",
+          "line": 79,
+          "column": 40
+        },
+        {
+          "title": "Q3093 native lifecycle loading indicator clears after manual load (success=true)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 236,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:28:41.701Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8ff1b8fe7a1d006b1f7-9aa37049f991bd213524",
+          "file": "upstream-batch04-runtime-loading.spec.ts",
+          "line": 109,
+          "column": 39
+        },
+        {
+          "title": "Q3093 native lifecycle loading indicator clears after manual load (success=false)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 117,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:28:41.941Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8ff1b8fe7a1d006b1f7-770c5d3f24f600982b1e",
+          "file": "upstream-batch04-runtime-loading.spec.ts",
+          "line": 109,
+          "column": 39
+        },
+        {
+          "title": "Q3001 Q3093 manual load failure preserves host and sibling while lifecycle loading settles",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 734,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:29:08.176Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8ff1b8fe7a1d006b1f7-6270464210d08228f8e2",
+          "file": "upstream-batch04-runtime-loading.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "W1057 configured load timeout removes a delayed entry Realm and permits recovery at the same URL",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2255,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:29:09.255Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8ff1b8fe7a1d006b1f7-c26cd95d5c510d3e1f3a",
+          "file": "upstream-batch04-runtime-loading.spec.ts",
+          "line": 46,
+          "column": 1
+        },
+        {
+          "title": "W976 W1017 delayed resource A-B-A switching retains one interactive application (keepAlive=false)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 932,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:29:11.514Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8ff1b8fe7a1d006b1f7-b571cf175c8942a9954c",
+          "file": "upstream-batch04-runtime-loading.spec.ts",
+          "line": 79,
+          "column": 40
+        },
+        {
+          "title": "W976 W1017 delayed resource A-B-A switching retains one interactive application (keepAlive=true)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 647,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:29:12.450Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8ff1b8fe7a1d006b1f7-587cd91a9e3bffa16d22",
+          "file": "upstream-batch04-runtime-loading.spec.ts",
+          "line": 79,
+          "column": 40
+        },
+        {
+          "title": "Q3093 native lifecycle loading indicator clears after manual load (success=true)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 334,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:29:13.100Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8ff1b8fe7a1d006b1f7-2f681045b50f5e8dc9f3",
+          "file": "upstream-batch04-runtime-loading.spec.ts",
+          "line": 109,
+          "column": 39
+        },
+        {
+          "title": "Q3093 native lifecycle loading indicator clears after manual load (success=false)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 206,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:29:13.438Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8ff1b8fe7a1d006b1f7-3efb373b1a677b518a55",
+          "file": "upstream-batch04-runtime-loading.spec.ts",
+          "line": 109,
+          "column": 39
+        },
+        {
+          "title": "Q3001 Q3093 manual load failure preserves host and sibling while lifecycle loading settles",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 21,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 556,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:29:39.492Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8ff1b8fe7a1d006b1f7-7e38e94dc3ed46c4271d",
+          "file": "upstream-batch04-runtime-loading.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "W1057 configured load timeout removes a delayed entry Realm and permits recovery at the same URL",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 21,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2326,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:29:40.197Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8ff1b8fe7a1d006b1f7-d36f55ddef6633e2fe66",
+          "file": "upstream-batch04-runtime-loading.spec.ts",
+          "line": 46,
+          "column": 1
+        },
+        {
+          "title": "W976 W1017 delayed resource A-B-A switching retains one interactive application (keepAlive=false)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 21,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 933,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:29:42.528Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8ff1b8fe7a1d006b1f7-399530731643b6d00395",
+          "file": "upstream-batch04-runtime-loading.spec.ts",
+          "line": 79,
+          "column": 40
+        },
+        {
+          "title": "W976 W1017 delayed resource A-B-A switching retains one interactive application (keepAlive=true)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 21,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 702,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:29:43.466Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8ff1b8fe7a1d006b1f7-f0a0164576247d868b93",
+          "file": "upstream-batch04-runtime-loading.spec.ts",
+          "line": 79,
+          "column": 40
+        },
+        {
+          "title": "Q3093 native lifecycle loading indicator clears after manual load (success=true)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 21,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 347,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:29:44.172Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8ff1b8fe7a1d006b1f7-8a5188804d9a74743382",
+          "file": "upstream-batch04-runtime-loading.spec.ts",
+          "line": 109,
+          "column": 39
+        },
+        {
+          "title": "Q3093 native lifecycle loading indicator clears after manual load (success=false)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 21,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 202,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:29:44.523Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8ff1b8fe7a1d006b1f7-f7fc3ae61277112eff15",
+          "file": "upstream-batch04-runtime-loading.spec.ts",
+          "line": 109,
+          "column": 39
+        }
+      ]
+    },
+    {
+      "title": "upstream-batch04-runtime-network.spec.ts",
+      "file": "upstream-batch04-runtime-network.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "W1057 HTML script timeout closes the pending transport and recovers at the same URL",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3194,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:28:42.250Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6d477db95fb75f7961be-b830ef22cd4778e9b2bb",
+          "file": "upstream-batch04-runtime-network.spec.ts",
+          "line": 6,
+          "column": 53
+        },
+        {
+          "title": "W1057 HTML style timeout closes the pending transport and recovers at the same URL",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 7992,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m\"/slow.css\"\u001b[39m\nReceived array: \u001b[31m[]\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m\"/slow.css\"\u001b[39m\nReceived array: \u001b[31m[]\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-network.spec.ts:24:51",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-network.spec.ts",
+                      "column": 51,
+                      "line": 24
+                    },
+                    "snippet": "  22 |   await expect(page.locator('#html-timeout-slot iframe, #html-timeout-slot micro-app-host')).toHaveCount(0);\n  23 |   // Must precede server recovery/cleanup; ending it ourselves is not cancellation evidence.\n> 24 |   await expect.poll(() => slowDeployment.aborted).toContain(resource);\n     |                                                   ^\n  25 |   slowDeployment.slow = false;\n  26 |   await page.evaluate(async url => {\n  27 |     const s = window.__upstreamRuntime__!;"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-network.spec.ts",
+                        "column": 51,
+                        "line": 24
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m\"/slow.css\"\u001b[39m\nReceived array: \u001b[31m[]\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n\n  22 |   await expect(page.locator('#html-timeout-slot iframe, #html-timeout-slot micro-app-host')).toHaveCount(0);\n  23 |   // Must precede server recovery/cleanup; ending it ourselves is not cancellation evidence.\n> 24 |   await expect.poll(() => slowDeployment.aborted).toContain(resource);\n     |                                                   ^\n  25 |   slowDeployment.slow = false;\n  26 |   await page.evaluate(async url => {\n  27 |     const s = window.__upstreamRuntime__!;\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-network.spec.ts:24:51"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:28:45.542Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-runtime-n-2850e-nd-recovers-at-the-same-URL-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-runtime-n-2850e-nd-recovers-at-the-same-URL-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-network.spec.ts",
+                    "column": 51,
+                    "line": 24
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "6d477db95fb75f7961be-dbfa7224ba6df5c42454",
+          "file": "upstream-batch04-runtime-network.spec.ts",
+          "line": 6,
+          "column": 53
+        },
+        {
+          "title": "W1057 HTML script timeout closes the pending transport and recovers at the same URL",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 14,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3690,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:29:13.980Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6d477db95fb75f7961be-c3af2251d9d7dfbc4a45",
+          "file": "upstream-batch04-runtime-network.spec.ts",
+          "line": 6,
+          "column": 53
+        },
+        {
+          "title": "W1057 HTML style timeout closes the pending transport and recovers at the same URL",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 14,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 8123,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m\"/slow.css\"\u001b[39m\nReceived array: \u001b[31m[]\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m\"/slow.css\"\u001b[39m\nReceived array: \u001b[31m[]\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-network.spec.ts:24:51",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-network.spec.ts",
+                      "column": 51,
+                      "line": 24
+                    },
+                    "snippet": "  22 |   await expect(page.locator('#html-timeout-slot iframe, #html-timeout-slot micro-app-host')).toHaveCount(0);\n  23 |   // Must precede server recovery/cleanup; ending it ourselves is not cancellation evidence.\n> 24 |   await expect.poll(() => slowDeployment.aborted).toContain(resource);\n     |                                                   ^\n  25 |   slowDeployment.slow = false;\n  26 |   await page.evaluate(async url => {\n  27 |     const s = window.__upstreamRuntime__!;"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-network.spec.ts",
+                        "column": 51,
+                        "line": 24
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m\"/slow.css\"\u001b[39m\nReceived array: \u001b[31m[]\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n\n  22 |   await expect(page.locator('#html-timeout-slot iframe, #html-timeout-slot micro-app-host')).toHaveCount(0);\n  23 |   // Must precede server recovery/cleanup; ending it ourselves is not cancellation evidence.\n> 24 |   await expect.poll(() => slowDeployment.aborted).toContain(resource);\n     |                                                   ^\n  25 |   slowDeployment.slow = false;\n  26 |   await page.evaluate(async url => {\n  27 |     const s = window.__upstreamRuntime__!;\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-network.spec.ts:24:51"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:29:18.052Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-runtime-n-2850e-nd-recovers-at-the-same-URL-firefox/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-runtime-n-2850e-nd-recovers-at-the-same-URL-firefox/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-network.spec.ts",
+                    "column": 51,
+                    "line": 24
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "6d477db95fb75f7961be-a1fc88ce2329c9baab76",
+          "file": "upstream-batch04-runtime-network.spec.ts",
+          "line": 6,
+          "column": 53
+        },
+        {
+          "title": "W1057 HTML script timeout closes the pending transport and recovers at the same URL",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 22,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3474,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:29:44.925Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6d477db95fb75f7961be-b8e55a091f7e7bc01fe4",
+          "file": "upstream-batch04-runtime-network.spec.ts",
+          "line": 6,
+          "column": 53
+        },
+        {
+          "title": "W1057 HTML style timeout closes the pending transport and recovers at the same URL",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 22,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 8080,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m\"/slow.css\"\u001b[39m\nReceived array: \u001b[31m[]\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m\"/slow.css\"\u001b[39m\nReceived array: \u001b[31m[]\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-network.spec.ts:24:51",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-network.spec.ts",
+                      "column": 51,
+                      "line": 24
+                    },
+                    "snippet": "  22 |   await expect(page.locator('#html-timeout-slot iframe, #html-timeout-slot micro-app-host')).toHaveCount(0);\n  23 |   // Must precede server recovery/cleanup; ending it ourselves is not cancellation evidence.\n> 24 |   await expect.poll(() => slowDeployment.aborted).toContain(resource);\n     |                                                   ^\n  25 |   slowDeployment.slow = false;\n  26 |   await page.evaluate(async url => {\n  27 |     const s = window.__upstreamRuntime__!;"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-network.spec.ts",
+                        "column": 51,
+                        "line": 24
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m\"/slow.css\"\u001b[39m\nReceived array: \u001b[31m[]\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n\n  22 |   await expect(page.locator('#html-timeout-slot iframe, #html-timeout-slot micro-app-host')).toHaveCount(0);\n  23 |   // Must precede server recovery/cleanup; ending it ourselves is not cancellation evidence.\n> 24 |   await expect.poll(() => slowDeployment.aborted).toContain(resource);\n     |                                                   ^\n  25 |   slowDeployment.slow = false;\n  26 |   await page.evaluate(async url => {\n  27 |     const s = window.__upstreamRuntime__!;\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-network.spec.ts:24:51"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:29:48.547Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-runtime-n-2850e-nd-recovers-at-the-same-URL-webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-runtime-n-2850e-nd-recovers-at-the-same-URL-webkit/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-network.spec.ts",
+                    "column": 51,
+                    "line": 24
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "6d477db95fb75f7961be-a5e215cca14399e00435",
+          "file": "upstream-batch04-runtime-network.spec.ts",
+          "line": 6,
+          "column": 53
+        }
+      ]
+    },
+    {
+      "title": "upstream-batch04-styles.spec.ts",
+      "file": "upstream-batch04-styles.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Q3018 preserves module initialized adjacent styles across keepAlive hide return and disposal recreation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 414,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:28:53.751Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b6366a0961a77a89eeb9-d72dee183ff1ea10039c",
+          "file": "upstream-batch04-styles.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "Q3018 preserves module initialized adjacent styles across keepAlive hide return and disposal recreation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 15,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 990,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:29:26.523Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b6366a0961a77a89eeb9-6f359854b289ee589fd3",
+          "file": "upstream-batch04-styles.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "Q3018 preserves module initialized adjacent styles across keepAlive hide return and disposal recreation",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 23,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5780,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCSS\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#adjacent-style-slot .batch04-style-first')\nExpected: \u001b[32m\"rgb(\u001b[7m11, 22, 33\u001b[27m)\"\u001b[39m\nReceived: \u001b[31m\"rgb(\u001b[7m0, 0, 0\u001b[27m)\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCSS\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#adjacent-style-slot .batch04-style-first')\u001b[22m\n\u001b[2m    14 × locator resolved to <p class=\"batch04-style-first\">First style</p>\u001b[22m\n\u001b[2m       - unexpected value \"rgb(0, 0, 0)\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCSS\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#adjacent-style-slot .batch04-style-first')\nExpected: \u001b[32m\"rgb(\u001b[7m11, 22, 33\u001b[27m)\"\u001b[39m\nReceived: \u001b[31m\"rgb(\u001b[7m0, 0, 0\u001b[27m)\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCSS\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#adjacent-style-slot .batch04-style-first')\u001b[22m\n\u001b[2m    14 × locator resolved to <p class=\"batch04-style-first\">First style</p>\u001b[22m\n\u001b[2m       - unexpected value \"rgb(0, 0, 0)\"\u001b[22m\n\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-styles.spec.ts:47:79",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-styles.spec.ts",
+                      "column": 79,
+                      "line": 47
+                    },
+                    "snippet": "  45 |     });\n  46 |     for (let cycle = 0; cycle < 3; cycle++) {\n> 47 |       await expect(page.locator('#adjacent-style-slot .batch04-style-first')).toHaveCSS('color', 'rgb(11, 22, 33)');\n     |                                                                               ^\n  48 |       await expect(page.locator('#adjacent-style-slot .batch04-style-second')).toHaveCSS('color', 'rgb(44, 55, 66)');\n  49 |       await expect(page.locator('#adjacent-style-slot .batch04-style-second')).toHaveCSS('width', '84px');\n  50 |       await page.locator('#adjacent-style-slot button').click();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-styles.spec.ts",
+                        "column": 79,
+                        "line": 47
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCSS\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#adjacent-style-slot .batch04-style-first')\nExpected: \u001b[32m\"rgb(\u001b[7m11, 22, 33\u001b[27m)\"\u001b[39m\nReceived: \u001b[31m\"rgb(\u001b[7m0, 0, 0\u001b[27m)\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCSS\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#adjacent-style-slot .batch04-style-first')\u001b[22m\n\u001b[2m    14 × locator resolved to <p class=\"batch04-style-first\">First style</p>\u001b[22m\n\u001b[2m       - unexpected value \"rgb(0, 0, 0)\"\u001b[22m\n\n\n  45 |     });\n  46 |     for (let cycle = 0; cycle < 3; cycle++) {\n> 47 |       await expect(page.locator('#adjacent-style-slot .batch04-style-first')).toHaveCSS('color', 'rgb(11, 22, 33)');\n     |                                                                               ^\n  48 |       await expect(page.locator('#adjacent-style-slot .batch04-style-second')).toHaveCSS('color', 'rgb(44, 55, 66)');\n  49 |       await expect(page.locator('#adjacent-style-slot .batch04-style-second')).toHaveCSS('width', '84px');\n  50 |       await page.locator('#adjacent-style-slot button').click();\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-styles.spec.ts:47:79"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:29:56.849Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-styles-Q3-7152d-urn-and-disposal-recreation-webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-styles-Q3-7152d-urn-and-disposal-recreation-webkit/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-styles.spec.ts",
+                    "column": 79,
+                    "line": 47
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b6366a0961a77a89eeb9-8a5547afb7515ae74065",
+          "file": "upstream-batch04-styles.spec.ts",
+          "line": 6,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-09T03:28:23.308Z",
+    "duration": 99536.89199999999,
+    "expected": 59,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  }
+}

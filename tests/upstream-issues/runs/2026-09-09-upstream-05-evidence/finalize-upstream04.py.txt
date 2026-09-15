@@ -1,0 +1,74 @@
+import json,pathlib,hashlib,datetime,collections
+root=pathlib.Path('/Users/fanfangbo/workspace/micro-framework')
+base=root/'tests/upstream-issues/collections/2026-09-09-batch-04'
+evidence=root/'tests/upstream-issues/runs/2026-09-09-upstream-05-evidence'
+runid='2026-09-09-upstream-05'
+read=lambda p:json.loads(p.read_text())
+write=lambda p,d:p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n')
+browser=read(evidence/'final-browser.json'); e2e=read(evidence/'final-e2e.json'); production=read(evidence/'final-production.json')
+assert browser['success'] and browser['numFailedTests']==0 and browser['numPendingTests']==0
+for report in [e2e,production]:
+ assert not report['errors'] and report['stats']['unexpected']==0 and report['stats']['flaky']==0 and report['stats']['skipped']==0
+passed=collections.defaultdict(list)
+for suite in browser['testResults']:
+ assert suite['status']=='passed'
+ for a in suite['assertionResults']:
+  assert a['status']=='passed' and not a['failureMessages']
+  passed[(str(pathlib.Path(suite['name']).relative_to(root)),a['fullName'])].append('browser-instance')
+def scan(suites,prefix):
+ for suite in suites:
+  for spec in suite.get('specs',[]):
+   for test in spec['tests']:
+    assert test['status']=='expected' and len(test['results'])==1 and test['results'][0]['status']=='passed' and test['results'][0]['retry']==0
+    passed[(prefix+spec['file'],spec['title'])].append(test['projectName'])
+  scan(suite.get('suites',[]),prefix)
+scan(e2e['suites'],'tests/e2e/');scan(production['suites'],'tests/production/')
+assessments={}
+for filename in ['dom-assessment.json','runtime-assessment.json','routing-components-assessment.json']:
+ data=read(base/filename)
+ for item in data.get('items',data.get('issues',[])):assessments[item['id']]=item
+catalog=read(root/'tests/upstream-issues/catalog.json');before=read(base/'before.json')
+assert catalog['issues'][:len(before['issues'])]==before['issues']
+assert catalog['sources'][:len(before['sources'])]==before['sources']
+overrides=read(base/'final-overrides.json')
+now=datetime.datetime.now(datetime.timezone.utc).isoformat()
+new=[i for i in catalog['issues'] if i.get('collectionBatch')=='2026-09-09-batch-04']
+assert len(new)==20
+for issue in new:
+ a={**assessments[issue['id']],**overrides.get(issue['id'],{})}
+ bindings=a['tests']
+ for test in bindings:
+  engines=passed[(test['path'],test['title'])]
+  assert len(engines)==3,(issue['id'],test,engines)
+  if not test['path'].startswith('tests/browser/'):
+   assert set(engines)=={'chromium','firefox','webkit'}
+ issue['tests']=[{**t,'runId':runid} for t in bindings]
+ status=a.get('status',a.get('suggestedStatusAfterPass',a.get('recommendedStatusAfterPass','regression-passed')))
+ issue['status']=status
+ limitations=a.get('limitations',[])
+ if isinstance(limitations,str):limitations=[limitations]
+ issue['coverageLimitations']=limitations
+ issue['localContract']=a.get('localContract',a.get('conditions',issue['localContract']))
+ issue['resolution']=issue['localContract']+'。所列测试在Chromium、Firefox、WebKit通过；真实Safari未运行。范围限制：'+'；'.join(limitations)
+ issue['verifiedAt']=now
+ issue['fixtureVersions']=read(base/'fixture-versions.json')
+ if status=='partial-coverage':
+  issue['statusReason']='已通过所列本地合同；原场景仍缺以下关键条件：'+'；'.join(limitations)
+  issue['nextAction']=a.get('nextAction','取得原工程、配置和对应版本，补齐上述差异条件后再次执行三引擎及必要真实设备验证。')
+ else:
+  issue.pop('statusReason',None);issue.pop('nextAction',None)
+ if 'relatedFixes' in a:issue['relatedFixes']=a['relatedFixes']
+ if 'failureEvidence' in a:issue['failureEvidence']=a['failureEvidence']
+write(root/'tests/upstream-issues/catalog.json',catalog)
+counts=dict(collections.Counter(i['status'] for i in new))
+summary={'collectionBatch':'2026-09-09-batch-04','runId':runid,'completedAt':now,'newIssues':len(new),'cumulativeIssues':len(catalog['issues']),'statusCounts':counts,'old120IssuesAndSourcesPreserved':True,'preciseBugNew':0,'supplementaryNew':20,'exactBugShortfallPerRepository':10,'engines':['chromium','firefox','webkit'],'realSafari':False,'releaseReady':False,'issueStatuses':{i['id']:i['status'] for i in new}}
+write(root/'tests/upstream-issues/assessments/2026-09-09-batch-04-completion.json',summary)
+cases=root/'tests/upstream-issues/cases.md'
+text=cases.read_text().split('\n## 2026-09-09-batch-04\n')[0]+'\n## 2026-09-09-batch-04\n\n'
+for i in new:
+ text+=f"### [{i['id']}]({i['url']}) — {i['status']}\n\n原始触发：{i['scenario']}\n\n本地验证：{i['resolution']}\n\n"
+ for t in i['tests']:text+=f"- `{t['path']}` — {t['title']}（{runid}）\n"
+ if i.get('nextAction'):text+='\n下一步：'+i['nextAction']+'\n'
+ text+='\n'
+cases.write_text(text)
+print(json.dumps(summary,ensure_ascii=False,indent=2))

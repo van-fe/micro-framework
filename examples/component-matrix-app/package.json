@@ -1,0 +1,44 @@
+{
+  "name": "@micro-framework/example-component-matrix",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 5180 --strictPort",
+    "build": "vite build",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@antv/x6": "3.1.8",
+    "@micro-framework/adapter-vanilla": "workspace:*",
+    "@micro-framework/contracts": "workspace:*",
+    "@micro-framework/runtime": "workspace:*",
+    "ant-design-vue": "4.2.6",
+    "bpmn-js": "3.5.0",
+    "echarts": "6.1.0",
+    "element-plus": "2.14.5",
+    "leaflet": "1.9.4",
+    "maplibre-gl": "6.6.0",
+    "monaco-editor": "0.56.0",
+    "naive-ui": "2.45.3",
+    "quill": "2.0.3",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "react-is": "19.2.8",
+    "recharts": "3.10.1",
+    "sortablejs": "1.15.7",
+    "three": "0.185.1",
+    "vue": "3.5.42",
+    "vue2": "npm:vue@2.7.16"
+  },
+  "devDependencies": {
+    "@micro-framework/vite-plugin": "workspace:*",
+    "@types/leaflet": "1.9.22",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.5",
+    "@types/three": "0.185.4",
+    "typescript": "6.0.3",
+    "vite": "8.2.2"
+  }
+}

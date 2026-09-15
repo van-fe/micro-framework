@@ -1,0 +1,13 @@
+<!doctype html><html><head><style>.upstream-cascade { color: rgb(10, 20, 30); }</style></head>
+<body><section id="style-location"><style id="body-sheet" media="all">.upstream-cascade { color: rgb(70, 80, 90); }</style></section>
+<p class="upstream-cascade">body wins</p>
+<script>
+window.BodyCascadeLifecycle = { mount() {}, unmount() {} };
+setTimeout(() => {
+  const sheet = document.createElement('style');
+  sheet.id = 'async-head-sheet';
+  sheet.textContent = '.upstream-cascade { color: rgb(110, 120, 130); }';
+  document.head.appendChild(sheet);
+  window.asyncHeadReady = true;
+}, 25);
+</script></body></html>

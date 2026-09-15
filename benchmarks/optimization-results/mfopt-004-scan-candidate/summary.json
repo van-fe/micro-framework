@@ -1,0 +1,271 @@
+{
+  "generatedAt": "2026-09-14T09:33:10.367Z",
+  "runId": "mfopt-004-scan-candidate",
+  "baselineSha": "d943bea6f7bab29f9d3ac9e3fb3e7ee4f97778f5",
+  "runtime": {
+    "bun": "unknown",
+    "node": "v24.19.0",
+    "platform": "darwin",
+    "architecture": "arm64"
+  },
+  "mode": "release",
+  "status": "passed",
+  "passed": true,
+  "sentryNetworkGuard": [
+    {
+      "browser": "chromium",
+      "allowlistedOrigins": [
+        "http://127.0.0.1:4373",
+        "http://127.0.0.1:4374",
+        "http://127.0.0.1:4375"
+      ],
+      "blockedProbePaths": [
+        "/probe/beacon",
+        "/probe/fetch",
+        "/probe/iframe",
+        "/probe/worker",
+        "/probe/xhr"
+      ],
+      "fakeReceiverDeliveredPaths": [
+        "/guard.html"
+      ],
+      "activeServiceWorkers": 0
+    },
+    {
+      "browser": "firefox",
+      "allowlistedOrigins": [
+        "http://127.0.0.1:4373",
+        "http://127.0.0.1:4374",
+        "http://127.0.0.1:4375"
+      ],
+      "blockedProbePaths": [
+        "/probe/beacon",
+        "/probe/fetch",
+        "/probe/iframe",
+        "/probe/worker",
+        "/probe/xhr"
+      ],
+      "fakeReceiverDeliveredPaths": [
+        "/guard.html"
+      ],
+      "activeServiceWorkers": 0
+    },
+    {
+      "browser": "webkit",
+      "allowlistedOrigins": [
+        "http://127.0.0.1:4373",
+        "http://127.0.0.1:4374",
+        "http://127.0.0.1:4375"
+      ],
+      "blockedProbePaths": [
+        "/probe/beacon",
+        "/probe/fetch",
+        "/probe/iframe",
+        "/probe/worker",
+        "/probe/xhr"
+      ],
+      "fakeReceiverDeliveredPaths": [
+        "/guard.html"
+      ],
+      "activeServiceWorkers": 0
+    }
+  ],
+  "resourceOwnership": [],
+  "observerIdentity": [],
+  "cleanupFailures": [],
+  "cleanupRecovery": [],
+  "entryCache": [],
+  "entryCacheComparisons": [],
+  "styleScans": [
+    {
+      "browser": "chromium",
+      "firstMount": {
+        "queryCalls": 46,
+        "wildcardCalls": 7,
+        "queriedNodes": 219,
+        "computedStyleReads": 17,
+        "queryCounts": {
+          "micro-app-body,micro-app-overlay": 8,
+          "[role='dialog'],[aria-modal='true'],dialog[open]": 8,
+          "script[type=\"importmap\"]": 1,
+          "script": 1,
+          "style, link[rel~=\"stylesheet\"][href]": 1,
+          "link[rel~=\"modulepreload\"][href]": 1,
+          "base": 1,
+          "*": 7,
+          "style:not([data-micro-surface-style]):not([data-micro-document-tokens]),link[rel~='stylesheet']": 4,
+          "[style]": 9,
+          "style,link[rel='stylesheet']": 3,
+          "link[rel~=\"stylesheet\"][href], img": 2
+        }
+      },
+      "firstDispose": {
+        "queryCalls": 8,
+        "wildcardCalls": 0,
+        "queriedNodes": 8,
+        "computedStyleReads": 2,
+        "queryCounts": {
+          "micro-app-body,micro-app-overlay": 2,
+          "[role='dialog'],[aria-modal='true'],dialog[open]": 2,
+          "style,link": 2,
+          "style": 2
+        }
+      },
+      "repeatedMount": {
+        "queryCalls": 39,
+        "wildcardCalls": 5,
+        "queriedNodes": 216,
+        "computedStyleReads": 17,
+        "queryCounts": {
+          "micro-app-body,micro-app-overlay": 8,
+          "[role='dialog'],[aria-modal='true'],dialog[open]": 8,
+          "*": 5,
+          "style:not([data-micro-surface-style]):not([data-micro-document-tokens]),link[rel~='stylesheet']": 4,
+          "[style]": 9,
+          "style,link[rel='stylesheet']": 3,
+          "link[rel~=\"stylesheet\"][href], img": 2
+        }
+      },
+      "repeatedDispose": {
+        "queryCalls": 8,
+        "wildcardCalls": 0,
+        "queriedNodes": 8,
+        "computedStyleReads": 2,
+        "queryCounts": {
+          "micro-app-body,micro-app-overlay": 2,
+          "[role='dialog'],[aria-modal='true'],dialog[open]": 2,
+          "style,link": 2,
+          "style": 2
+        }
+      },
+      "remaining": 0
+    },
+    {
+      "browser": "firefox",
+      "firstMount": {
+        "queryCalls": 46,
+        "wildcardCalls": 7,
+        "queriedNodes": 219,
+        "computedStyleReads": 17,
+        "queryCounts": {
+          "micro-app-body,micro-app-overlay": 8,
+          "[role='dialog'],[aria-modal='true'],dialog[open]": 8,
+          "script[type=\"importmap\"]": 1,
+          "script": 1,
+          "style, link[rel~=\"stylesheet\"][href]": 1,
+          "link[rel~=\"modulepreload\"][href]": 1,
+          "base": 1,
+          "*": 7,
+          "style:not([data-micro-surface-style]):not([data-micro-document-tokens]),link[rel~='stylesheet']": 4,
+          "[style]": 9,
+          "style,link[rel='stylesheet']": 3,
+          "link[rel~=\"stylesheet\"][href], img": 2
+        }
+      },
+      "firstDispose": {
+        "queryCalls": 8,
+        "wildcardCalls": 0,
+        "queriedNodes": 8,
+        "computedStyleReads": 2,
+        "queryCounts": {
+          "micro-app-body,micro-app-overlay": 2,
+          "[role='dialog'],[aria-modal='true'],dialog[open]": 2,
+          "style,link": 2,
+          "style": 2
+        }
+      },
+      "repeatedMount": {
+        "queryCalls": 39,
+        "wildcardCalls": 5,
+        "queriedNodes": 216,
+        "computedStyleReads": 17,
+        "queryCounts": {
+          "micro-app-body,micro-app-overlay": 8,
+          "[role='dialog'],[aria-modal='true'],dialog[open]": 8,
+          "*": 5,
+          "style:not([data-micro-surface-style]):not([data-micro-document-tokens]),link[rel~='stylesheet']": 4,
+          "[style]": 9,
+          "style,link[rel='stylesheet']": 3,
+          "link[rel~=\"stylesheet\"][href], img": 2
+        }
+      },
+      "repeatedDispose": {
+        "queryCalls": 8,
+        "wildcardCalls": 0,
+        "queriedNodes": 8,
+        "computedStyleReads": 2,
+        "queryCounts": {
+          "micro-app-body,micro-app-overlay": 2,
+          "[role='dialog'],[aria-modal='true'],dialog[open]": 2,
+          "style,link": 2,
+          "style": 2
+        }
+      },
+      "remaining": 0
+    },
+    {
+      "browser": "webkit",
+      "firstMount": {
+        "queryCalls": 46,
+        "wildcardCalls": 7,
+        "queriedNodes": 219,
+        "computedStyleReads": 17,
+        "queryCounts": {
+          "micro-app-body,micro-app-overlay": 8,
+          "[role='dialog'],[aria-modal='true'],dialog[open]": 8,
+          "script[type=\"importmap\"]": 1,
+          "script": 1,
+          "style, link[rel~=\"stylesheet\"][href]": 1,
+          "link[rel~=\"modulepreload\"][href]": 1,
+          "base": 1,
+          "*": 7,
+          "style:not([data-micro-surface-style]):not([data-micro-document-tokens]),link[rel~='stylesheet']": 4,
+          "[style]": 9,
+          "style,link[rel='stylesheet']": 3,
+          "link[rel~=\"stylesheet\"][href], img": 2
+        }
+      },
+      "firstDispose": {
+        "queryCalls": 8,
+        "wildcardCalls": 0,
+        "queriedNodes": 8,
+        "computedStyleReads": 2,
+        "queryCounts": {
+          "micro-app-body,micro-app-overlay": 2,
+          "[role='dialog'],[aria-modal='true'],dialog[open]": 2,
+          "style,link": 2,
+          "style": 2
+        }
+      },
+      "repeatedMount": {
+        "queryCalls": 39,
+        "wildcardCalls": 5,
+        "queriedNodes": 216,
+        "computedStyleReads": 17,
+        "queryCounts": {
+          "micro-app-body,micro-app-overlay": 8,
+          "[role='dialog'],[aria-modal='true'],dialog[open]": 8,
+          "*": 5,
+          "style:not([data-micro-surface-style]):not([data-micro-document-tokens]),link[rel~='stylesheet']": 4,
+          "[style]": 9,
+          "style,link[rel='stylesheet']": 3,
+          "link[rel~=\"stylesheet\"][href], img": 2
+        }
+      },
+      "repeatedDispose": {
+        "queryCalls": 8,
+        "wildcardCalls": 0,
+        "queriedNodes": 8,
+        "computedStyleReads": 2,
+        "queryCounts": {
+          "micro-app-body,micro-app-overlay": 2,
+          "[role='dialog'],[aria-modal='true'],dialog[open]": 2,
+          "style,link": 2,
+          "style": 2
+        }
+      },
+      "remaining": 0
+    }
+  ],
+  "metrics": []
+}

@@ -1,0 +1,26 @@
+{
+  "name": "@micro-framework/example-ssr-host",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@micro-framework/runtime": "workspace:*",
+    "@micro-framework/adapter-react": "workspace:*",
+    "@micro-framework/adapter-vue": "workspace:*",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "vue": "3.5.42"
+  },
+  "devDependencies": {
+    "@micro-framework/vite-plugin": "workspace:*",
+    "typescript": "6.0.3",
+    "vite": "8.2.2",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.5"
+  }
+}

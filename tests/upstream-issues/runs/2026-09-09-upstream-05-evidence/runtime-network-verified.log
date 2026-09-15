@@ -1,0 +1,86 @@
+
+Running 6 tests using 1 worker
+
+(node:55443) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/6] [chromium] › tests/e2e/upstream-batch04-runtime-network.spec.ts:6:53 › W1057 HTML script timeout releases Runtime resources and recovers at the same entry URL
+[2/6] [chromium] › tests/e2e/upstream-batch04-runtime-network.spec.ts:6:53 › W1057 HTML style timeout releases Runtime resources and recovers at the same entry URL
+(node:55470) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[3/6] [firefox] › tests/e2e/upstream-batch04-runtime-network.spec.ts:6:53 › W1057 HTML script timeout releases Runtime resources and recovers at the same entry URL
+[4/6] [firefox] › tests/e2e/upstream-batch04-runtime-network.spec.ts:6:53 › W1057 HTML style timeout releases Runtime resources and recovers at the same entry URL
+  1) [firefox] › tests/e2e/upstream-batch04-runtime-network.spec.ts:6:53 › W1057 HTML style timeout releases Runtime resources and recovers at the same entry URL 
+
+    Error: page.evaluate: All application entries failed for slow-html (attempt 1: slow-html.load exceeded 2000ms.).
+    #k@http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:405:9
+    async*#C@http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:191:41
+    mount@http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:181:91
+    mountApp@http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:991:19
+    @debugger eval code line 311 > eval:3:36
+    evaluate@debugger eval code:313:16
+    @debugger eval code:1:44
+    @debugger eval code:1:62
+
+        at #k@http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:405:9
+        at async*#C@http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:191:41
+        at mount@http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:181:91
+        at mountApp@http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:991:19
+        at @debugger eval code line 311 > eval:3:36
+        at evaluate@debugger eval code:313:16
+        at @debugger eval code:1:44
+        at @debugger eval code:1:62
+        at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-network.spec.ts:30:14
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 0
+    + Received  + 5
+
+    @@ -2,6 +2,11 @@
+        Object {
+          "message": "AggregateError: All application entries failed for slow-html (attempt 1: slow-html.load exceeded 2000ms.).",
+          "name": "slow-html",
+          "phase": "mount",
+        },
+    +   Object {
+    +     "message": "AggregateError: All application entries failed for slow-html (attempt 1: slow-html.load exceeded 2000ms.).",
+    +     "name": "slow-html",
+    +     "phase": "mount",
+    +   },
+      ]
+
+       at upstream-runtime-fixture.ts:77
+
+      75 |         return result;
+      76 |       });
+    > 77 |       expect(result.errors).toEqual(result.expectedErrors);
+         |                             ^
+      78 |       expect(result.children).toBe(0);
+      79 |       expect(pageErrors).toEqual([]);
+      80 |     }
+        at Object.base.extend.runtimeCase.auto (/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-runtime-fixture.ts:77:29)
+
+    Error Context: test-results/upstream-batch04-runtime-n-3e6b4-overs-at-the-same-entry-URL-firefox/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/upstream-batch04-runtime-n-3e6b4-overs-at-the-same-entry-URL-firefox/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/upstream-batch04-runtime-n-3e6b4-overs-at-the-same-entry-URL-firefox/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+(node:55483) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[5/6] [webkit] › tests/e2e/upstream-batch04-runtime-network.spec.ts:6:53 › W1057 HTML script timeout releases Runtime resources and recovers at the same entry URL
+[6/6] [webkit] › tests/e2e/upstream-batch04-runtime-network.spec.ts:6:53 › W1057 HTML style timeout releases Runtime resources and recovers at the same entry URL
+  1 failed
+    [firefox] › tests/e2e/upstream-batch04-runtime-network.spec.ts:6:53 › W1057 HTML style timeout releases Runtime resources and recovers at the same entry URL 
+  5 passed (28.1s)

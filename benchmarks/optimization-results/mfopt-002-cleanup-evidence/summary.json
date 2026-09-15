@@ -1,0 +1,389 @@
+{
+  "generatedAt": "2026-09-14T09:01:53.088Z",
+  "runId": "mfopt-002-cleanup-evidence",
+  "baselineSha": "d943bea6f7bab29f9d3ac9e3fb3e7ee4f97778f5",
+  "runtime": {
+    "bun": "unknown",
+    "node": "v24.19.0",
+    "platform": "darwin",
+    "architecture": "arm64"
+  },
+  "mode": "release",
+  "status": "passed",
+  "passed": true,
+  "sentryNetworkGuard": [
+    {
+      "browser": "chromium",
+      "allowlistedOrigins": [
+        "http://127.0.0.1:4373",
+        "http://127.0.0.1:4374",
+        "http://127.0.0.1:4375"
+      ],
+      "blockedProbePaths": [
+        "/probe/beacon",
+        "/probe/fetch",
+        "/probe/iframe",
+        "/probe/worker",
+        "/probe/xhr"
+      ],
+      "fakeReceiverDeliveredPaths": [
+        "/guard.html"
+      ],
+      "activeServiceWorkers": 0
+    },
+    {
+      "browser": "chromium",
+      "allowlistedOrigins": [
+        "http://127.0.0.1:4373",
+        "http://127.0.0.1:4374",
+        "http://127.0.0.1:4375"
+      ],
+      "blockedProbePaths": [
+        "/probe/beacon",
+        "/probe/fetch",
+        "/probe/iframe",
+        "/probe/worker",
+        "/probe/xhr"
+      ],
+      "fakeReceiverDeliveredPaths": [
+        "/guard.html"
+      ],
+      "activeServiceWorkers": 0
+    },
+    {
+      "browser": "firefox",
+      "allowlistedOrigins": [
+        "http://127.0.0.1:4373",
+        "http://127.0.0.1:4374",
+        "http://127.0.0.1:4375"
+      ],
+      "blockedProbePaths": [
+        "/probe/beacon",
+        "/probe/fetch",
+        "/probe/iframe",
+        "/probe/worker",
+        "/probe/xhr"
+      ],
+      "fakeReceiverDeliveredPaths": [
+        "/guard.html"
+      ],
+      "activeServiceWorkers": 0
+    },
+    {
+      "browser": "firefox",
+      "allowlistedOrigins": [
+        "http://127.0.0.1:4373",
+        "http://127.0.0.1:4374",
+        "http://127.0.0.1:4375"
+      ],
+      "blockedProbePaths": [
+        "/probe/beacon",
+        "/probe/fetch",
+        "/probe/iframe",
+        "/probe/worker",
+        "/probe/xhr"
+      ],
+      "fakeReceiverDeliveredPaths": [
+        "/guard.html"
+      ],
+      "activeServiceWorkers": 0
+    },
+    {
+      "browser": "webkit",
+      "allowlistedOrigins": [
+        "http://127.0.0.1:4373",
+        "http://127.0.0.1:4374",
+        "http://127.0.0.1:4375"
+      ],
+      "blockedProbePaths": [
+        "/probe/beacon",
+        "/probe/fetch",
+        "/probe/iframe",
+        "/probe/worker",
+        "/probe/xhr"
+      ],
+      "fakeReceiverDeliveredPaths": [
+        "/guard.html"
+      ],
+      "activeServiceWorkers": 0
+    },
+    {
+      "browser": "webkit",
+      "allowlistedOrigins": [
+        "http://127.0.0.1:4373",
+        "http://127.0.0.1:4374",
+        "http://127.0.0.1:4375"
+      ],
+      "blockedProbePaths": [
+        "/probe/beacon",
+        "/probe/fetch",
+        "/probe/iframe",
+        "/probe/worker",
+        "/probe/xhr"
+      ],
+      "fakeReceiverDeliveredPaths": [
+        "/guard.html"
+      ],
+      "activeServiceWorkers": 0
+    }
+  ],
+  "resourceOwnership": [],
+  "observerIdentity": [],
+  "cleanupFailures": [
+    {
+      "browser": "chromium",
+      "firstDispose": {
+        "status": "resolved"
+      },
+      "afterFirst": {
+        "status": "disposed",
+        "mediaHandlers": 0,
+        "resizeObservers": 0,
+        "intersectionObservers": 0,
+        "surfaceHosts": 0,
+        "realms": 0,
+        "errors": [
+          {
+            "phase": "cleanup",
+            "error": {
+              "name": "AggregateError",
+              "message": "Application cleanup-failure-owner cleanup failed after releasing references.",
+              "errors": [
+                {
+                  "name": "AggregateError",
+                  "message": "Unable to release the application Realm bindings.",
+                  "errors": [
+                    {
+                      "name": "AggregateError",
+                      "message": "Document Bridge destruction failed after cleanup.",
+                      "errors": [
+                        {
+                          "name": "AggregateError",
+                          "message": "Visual Bridge destruction failed after cleanup.",
+                          "errors": [
+                            {
+                              "name": "AggregateError",
+                              "message": "Media query bridge destruction failed after cleanup.",
+                              "errors": [
+                                {
+                                  "name": "Error",
+                                  "message": "injected media-query cleanup failure"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "secondDispose": "resolved"
+    },
+    {
+      "browser": "firefox",
+      "firstDispose": {
+        "status": "resolved"
+      },
+      "afterFirst": {
+        "status": "disposed",
+        "mediaHandlers": 0,
+        "resizeObservers": 0,
+        "intersectionObservers": 0,
+        "surfaceHosts": 0,
+        "realms": 0,
+        "errors": [
+          {
+            "phase": "cleanup",
+            "error": {
+              "name": "AggregateError",
+              "message": "Application cleanup-failure-owner cleanup failed after releasing references.",
+              "errors": [
+                {
+                  "name": "AggregateError",
+                  "message": "Unable to release the application Realm bindings.",
+                  "errors": [
+                    {
+                      "name": "AggregateError",
+                      "message": "Document Bridge destruction failed after cleanup.",
+                      "errors": [
+                        {
+                          "name": "AggregateError",
+                          "message": "Visual Bridge destruction failed after cleanup.",
+                          "errors": [
+                            {
+                              "name": "AggregateError",
+                              "message": "Media query bridge destruction failed after cleanup.",
+                              "errors": [
+                                {
+                                  "name": "Error",
+                                  "message": "injected media-query cleanup failure"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "secondDispose": "resolved"
+    },
+    {
+      "browser": "webkit",
+      "firstDispose": {
+        "status": "resolved"
+      },
+      "afterFirst": {
+        "status": "disposed",
+        "mediaHandlers": 0,
+        "resizeObservers": 0,
+        "intersectionObservers": 0,
+        "surfaceHosts": 0,
+        "realms": 0,
+        "errors": [
+          {
+            "phase": "cleanup",
+            "error": {
+              "name": "AggregateError",
+              "message": "Application cleanup-failure-owner cleanup failed after releasing references.",
+              "errors": [
+                {
+                  "name": "AggregateError",
+                  "message": "Unable to release the application Realm bindings.",
+                  "errors": [
+                    {
+                      "name": "AggregateError",
+                      "message": "Document Bridge destruction failed after cleanup.",
+                      "errors": [
+                        {
+                          "name": "AggregateError",
+                          "message": "Visual Bridge destruction failed after cleanup.",
+                          "errors": [
+                            {
+                              "name": "AggregateError",
+                              "message": "Media query bridge destruction failed after cleanup.",
+                              "errors": [
+                                {
+                                  "name": "Error",
+                                  "message": "injected media-query cleanup failure"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "secondDispose": "resolved"
+    }
+  ],
+  "cleanupRecovery": [
+    {
+      "browser": "chromium",
+      "plugin": {
+        "cleanupOrder": [
+          "second",
+          "first"
+        ],
+        "aggregateLogged": true,
+        "errorPreserved": true,
+        "surfaces": 0,
+        "realms": 0
+      },
+      "fallback": {
+        "status": "mounted",
+        "surfaces": 1,
+        "realms": 1
+      },
+      "fallbackAfterDispose": {
+        "surfaces": 0,
+        "realms": 0
+      },
+      "canceled": {
+        "settled": [
+          "fulfilled",
+          "fulfilled"
+        ],
+        "surfaces": 0,
+        "realms": 0
+      }
+    },
+    {
+      "browser": "firefox",
+      "plugin": {
+        "cleanupOrder": [
+          "second",
+          "first"
+        ],
+        "aggregateLogged": true,
+        "errorPreserved": true,
+        "surfaces": 0,
+        "realms": 0
+      },
+      "fallback": {
+        "status": "mounted",
+        "surfaces": 1,
+        "realms": 1
+      },
+      "fallbackAfterDispose": {
+        "surfaces": 0,
+        "realms": 0
+      },
+      "canceled": {
+        "settled": [
+          "fulfilled",
+          "fulfilled"
+        ],
+        "surfaces": 0,
+        "realms": 0
+      }
+    },
+    {
+      "browser": "webkit",
+      "plugin": {
+        "cleanupOrder": [
+          "second",
+          "first"
+        ],
+        "aggregateLogged": true,
+        "errorPreserved": true,
+        "surfaces": 0,
+        "realms": 0
+      },
+      "fallback": {
+        "status": "mounted",
+        "surfaces": 1,
+        "realms": 1
+      },
+      "fallbackAfterDispose": {
+        "surfaces": 0,
+        "realms": 0
+      },
+      "canceled": {
+        "settled": [
+          "fulfilled",
+          "fulfilled"
+        ],
+        "surfaces": 0,
+        "realms": 0
+      }
+    }
+  ],
+  "metrics": []
+}

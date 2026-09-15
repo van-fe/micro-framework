@@ -1,0 +1,86 @@
+[
+  {
+    "name": "chromium",
+    "mode": "setOffline",
+    "setup": {
+      "type": "basic"
+    },
+    "navigation": {
+      "timeout": false,
+      "url": "http://127.0.0.1:53819/realm.html",
+      "controlled": true
+    },
+    "failed": []
+  },
+  {
+    "name": "chromium",
+    "mode": "socketFailure",
+    "setup": {
+      "type": "basic"
+    },
+    "navigation": {
+      "timeout": false,
+      "url": "http://127.0.0.1:53819/realm.html",
+      "controlled": true
+    },
+    "failed": []
+  },
+  {
+    "name": "firefox",
+    "mode": "setOffline",
+    "setup": {
+      "type": "basic"
+    },
+    "navigation": {
+      "timeout": false,
+      "url": "http://127.0.0.1:53819/realm.html",
+      "controlled": true
+    },
+    "failed": []
+  },
+  {
+    "name": "firefox",
+    "mode": "socketFailure",
+    "setup": {
+      "type": "basic"
+    },
+    "navigation": {
+      "timeout": false,
+      "url": "http://127.0.0.1:53819/realm.html",
+      "controlled": true
+    },
+    "failed": []
+  },
+  {
+    "name": "webkit",
+    "mode": "setOffline",
+    "setup": {
+      "type": "basic"
+    },
+    "navigation": {
+      "timeout": true,
+      "url": "about:blank"
+    },
+    "failed": [
+      {
+        "url": "http://127.0.0.1:53819/realm.html",
+        "failure": {
+          "errorText": "WebKit encountered an internal error"
+        }
+      }
+    ]
+  },
+  {
+    "name": "webkit",
+    "mode": "socketFailure",
+    "setup": {
+      "type": "basic"
+    },
+    "navigation": {
+      "timeout": false,
+      "url": "http://127.0.0.1:53819/realm.html",
+      "controlled": true
+    },
+    "failed": []
+  }
+]

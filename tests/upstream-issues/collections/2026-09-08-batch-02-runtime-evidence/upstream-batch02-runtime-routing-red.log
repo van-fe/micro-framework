@@ -1,0 +1,124 @@
+
+Running 3 tests using 1 worker
+
+(node:26376) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/3] [chromium] › tests/e2e/upstream-batch02-runtime-routing.spec.ts:6:1 › Q1245 cold Vue Router hash-home to history-home to hash-about loads the first lazy route in its own Realm
+  1) [chromium] › tests/e2e/upstream-batch02-runtime-routing.spec.ts:6:1 › Q1245 cold Vue Router hash-home to history-home to hash-about loads the first lazy route in its own Realm 
+
+    Error: expect(page).toHaveURL(expected) failed
+
+    Expected pattern: /#\/hash\/about$/
+    Received string:  "http://127.0.0.1:5173/benchmark.html#/history/home"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toHaveURL" with timeout 5000ms
+        13 × locator resolved to <html lang="en">…</html>
+           - unexpected value "http://127.0.0.1:5173/benchmark.html#/history/home"
+
+
+      30 |   expect(lazyRequests).toEqual([]);
+      31 |   await page.getByRole("button", { name: "Open cold hash about", exact: true }).click();
+    > 32 |   await expect(page).toHaveURL(/#\/hash\/about$/);
+         |                      ^
+      33 |   await expectStatus(page, "cold-hash", "mounted");
+      34 |   const about = page.getByRole("button", { name: "Lazy about clicks: 0", exact: true });
+      35 |   await expect(about).toBeVisible();
+        at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-routing.spec.ts:32:22
+
+    Error Context: test-results/upstream-batch02-runtime-r-8653b-lazy-route-in-its-own-Realm-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/upstream-batch02-runtime-r-8653b-lazy-route-in-its-own-Realm-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/upstream-batch02-runtime-r-8653b-lazy-route-in-its-own-Realm-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+(node:26401) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[2/3] [chromium] › tests/e2e/upstream-batch02-runtime-switching.spec.ts:7:3 › Q2346 rapid native tab switching leaves hidden Realms unable to intercept host or application clicks (keepAlive=false)
+  2) [chromium] › tests/e2e/upstream-batch02-runtime-switching.spec.ts:7:3 › Q2346 rapid native tab switching leaves hidden Realms unable to intercept host or application clicks (keepAlive=false) 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+      Object {
+    -   "allRealmsHidden": true,
+    +   "allRealmsHidden": false,
+        "appHit": true,
+        "hostHit": true,
+      }
+
+      68 |         appHit: host.shadowRoot!.elementFromPoint(bounds.x + bounds.width / 2, bounds.y + bounds.height / 2) === button,
+      69 |       };
+    > 70 |     })).toEqual({ allRealmsHidden: true, hostHit: true, appHit: true });
+         |         ^
+      71 |   });
+      72 | }
+      73 |
+        at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-switching.spec.ts:70:9
+
+    Error Context: test-results/upstream-batch02-runtime-s-17df3-ion-clicks-keepAlive-false--chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/upstream-batch02-runtime-s-17df3-ion-clicks-keepAlive-false--chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/upstream-batch02-runtime-s-17df3-ion-clicks-keepAlive-false--chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+(node:26428) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[3/3] [chromium] › tests/e2e/upstream-batch02-runtime-switching.spec.ts:7:3 › Q2346 rapid native tab switching leaves hidden Realms unable to intercept host or application clicks (keepAlive=true)
+  3) [chromium] › tests/e2e/upstream-batch02-runtime-switching.spec.ts:7:3 › Q2346 rapid native tab switching leaves hidden Realms unable to intercept host or application clicks (keepAlive=true) 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+      Object {
+    -   "allRealmsHidden": true,
+    +   "allRealmsHidden": false,
+        "appHit": true,
+        "hostHit": true,
+      }
+
+      68 |         appHit: host.shadowRoot!.elementFromPoint(bounds.x + bounds.width / 2, bounds.y + bounds.height / 2) === button,
+      69 |       };
+    > 70 |     })).toEqual({ allRealmsHidden: true, hostHit: true, appHit: true });
+         |         ^
+      71 |   });
+      72 | }
+      73 |
+        at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-switching.spec.ts:70:9
+
+    Error Context: test-results/upstream-batch02-runtime-s-ce0f5-tion-clicks-keepAlive-true--chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/upstream-batch02-runtime-s-ce0f5-tion-clicks-keepAlive-true--chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/upstream-batch02-runtime-s-ce0f5-tion-clicks-keepAlive-true--chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+  3 failed
+    [chromium] › tests/e2e/upstream-batch02-runtime-routing.spec.ts:6:1 › Q1245 cold Vue Router hash-home to history-home to hash-about loads the first lazy route in its own Realm 
+    [chromium] › tests/e2e/upstream-batch02-runtime-switching.spec.ts:7:3 › Q2346 rapid native tab switching leaves hidden Realms unable to intercept host or application clicks (keepAlive=false) 
+    [chromium] › tests/e2e/upstream-batch02-runtime-switching.spec.ts:7:3 › Q2346 rapid native tab switching leaves hidden Realms unable to intercept host or application clicks (keepAlive=true) 

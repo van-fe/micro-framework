@@ -1,0 +1,31 @@
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - import "../../support/webpack-compiler" without a file extension (tests/browser/server/upstream-batch02-entry-fixture.ts:7:39). Add the file extension
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+
+ RUN  v4.1.11 /Users/fanfangbo/workspace/micro-framework
+
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - import "../../support/webpack-compiler" without a file extension (tests/browser/server/upstream-batch02-entry-fixture.ts:7:39). Add the file extension
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+ ✓ |browser-webkit| tests/browser/upstream-batch02-root-shadow.browser.test.ts (1 test) 51ms
+ ✓ |browser-chromium| tests/browser/upstream-readiness-cascade.browser.test.ts (2 tests) 574ms
+     ✓ W49 dispatches document readiness and window load once after their application resources  474ms
+ ✓ |browser-webkit| tests/browser/upstream-readiness-cascade.browser.test.ts (2 tests) 557ms
+     ✓ W49 dispatches document readiness and window load once after their application resources  486ms
+ ✓ |browser-chromium| tests/browser/upstream-batch02-dom-font-messages.browser.test.ts (6 tests) 314ms
+ ✓ |browser-chromium| tests/browser/upstream-batch02-dom-styles.browser.test.ts (3 tests) 130ms
+ ✓ |browser-chromium| tests/browser/upstream-batch02-root-shadow.browser.test.ts (1 test) 7ms
+ ✓ |browser-webkit| tests/browser/upstream-batch02-dom-font-messages.browser.test.ts (6 tests) 289ms
+ ✓ |browser-firefox| tests/browser/upstream-readiness-cascade.browser.test.ts (2 tests) 565ms
+     ✓ W49 dispatches document readiness and window load once after their application resources  480ms
+ ✓ |browser-webkit| tests/browser/upstream-batch02-dom-styles.browser.test.ts (3 tests) 133ms
+ ✓ |browser-firefox| tests/browser/upstream-batch02-dom-font-messages.browser.test.ts (6 tests) 312ms
+ ✓ |browser-firefox| tests/browser/upstream-batch02-dom-styles.browser.test.ts (3 tests) 145ms
+ ✓ |browser-firefox| tests/browser/upstream-batch02-root-shadow.browser.test.ts (1 test) 12ms
+
+ Test Files  12 passed (12)
+      Tests  36 passed (36)
+   Start at  16:09:54
+   Duration  3.10s (transform 0ms, setup 0ms, import 390ms, tests 3.09s, environment 0ms)
+
+JSON report written to /Users/fanfangbo/workspace/micro-framework/tests/upstream-issues/collections/2026-09-08-batch-02-root-shadow-final.json

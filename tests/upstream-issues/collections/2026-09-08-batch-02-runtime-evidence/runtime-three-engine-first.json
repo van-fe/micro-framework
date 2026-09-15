@@ -1,0 +1,1705 @@
+{
+  "config": {
+    "argv": [
+      "/Users/fanfangbo/.local/share/fnm/node-versions/v24.19.0/installation/bin/node",
+      "/Users/fanfangbo/workspace/micro-framework/node_modules/.bin/playwright",
+      "test",
+      "tests/e2e/upstream-batch02-runtime-loading.spec.ts",
+      "tests/e2e/upstream-batch02-runtime-clipboard.spec.ts",
+      "tests/e2e/upstream-batch02-runtime-routing.spec.ts",
+      "tests/e2e/upstream-batch02-runtime-switching.spec.ts",
+      "tests/e2e/upstream-batch02-runtime-location.spec.ts",
+      "--reporter=json",
+      "--trace=on"
+    ],
+    "configFile": "/Users/fanfangbo/workspace/micro-framework/playwright.config.ts",
+    "rootDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "upstream-batch02-runtime-clipboard.spec.ts",
+      "file": "upstream-batch02-runtime-clipboard.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "W298 mediates native clipboard.readText through focused host activation and policy (allowed=false)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 411,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:57:45.013Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-c-e49e2-n-and-policy-allowed-false--chromium/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ddfb7153cee771b13085-a7e1c97b049a3fa96ba7",
+          "file": "upstream-batch02-runtime-clipboard.spec.ts",
+          "line": 19,
+          "column": 3
+        },
+        {
+          "title": "W298 mediates native clipboard.readText through focused host activation and policy (allowed=true)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5198,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:57:45.646Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-c-48078-on-and-policy-allowed-true--chromium/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ddfb7153cee771b13085-22e97a7cf7e6b00ef57d",
+          "file": "upstream-batch02-runtime-clipboard.spec.ts",
+          "line": 19,
+          "column": 3
+        },
+        {
+          "title": "W298 mediates native clipboard.readText through focused host activation and policy (allowed=false)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 30066,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-clipboard.spec.ts",
+                        "column": 33,
+                        "line": 116
+                      },
+                      "message": "Error: page.evaluate: Test timeout of 30000ms exceeded.\n\n  114 |       })).toEqual({ hidden: true, active: \"MICRO-APP-HOST\", iframeNativeFocused: false, distinctNavigator: true });\n  115 |     } finally {\n> 116 |       const result = await page.evaluate(async () => {\n      |                                 ^\n  117 |         const state = window.__clipboardCase__!;\n  118 |         const frame = document.querySelector<HTMLIFrameElement>(\"#clipboard-slot iframe\")!;\n  119 |         const clipboard = frame.contentWindow!.navigator.clipboard;\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-clipboard.spec.ts:116:33"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:57:55.798Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-c-e49e2-n-and-policy-allowed-false--firefox/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-c-e49e2-n-and-policy-allowed-false--firefox/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "ddfb7153cee771b13085-9ef2dbca3195f4eca4ca",
+          "file": "upstream-batch02-runtime-clipboard.spec.ts",
+          "line": 19,
+          "column": 3
+        },
+        {
+          "title": "W298 mediates native clipboard.readText through focused host activation and policy (allowed=true)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 30080,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-clipboard.spec.ts",
+                        "column": 33,
+                        "line": 116
+                      },
+                      "message": "Error: page.evaluate: Test timeout of 30000ms exceeded.\n\n  114 |       })).toEqual({ hidden: true, active: \"MICRO-APP-HOST\", iframeNativeFocused: false, distinctNavigator: true });\n  115 |     } finally {\n> 116 |       const result = await page.evaluate(async () => {\n      |                                 ^\n  117 |         const state = window.__clipboardCase__!;\n  118 |         const frame = document.querySelector<HTMLIFrameElement>(\"#clipboard-slot iframe\")!;\n  119 |         const clipboard = frame.contentWindow!.navigator.clipboard;\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-clipboard.spec.ts:116:33"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:58:26.740Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-c-48078-on-and-policy-allowed-true--firefox/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-c-48078-on-and-policy-allowed-true--firefox/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "ddfb7153cee771b13085-f07f4a82b68364fb911d",
+          "file": "upstream-batch02-runtime-clipboard.spec.ts",
+          "line": 19,
+          "column": 3
+        },
+        {
+          "title": "W298 mediates native clipboard.readText through focused host activation and policy (allowed=false)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 656,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:59:08.035Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-c-e49e2-n-and-policy-allowed-false--webkit/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ddfb7153cee771b13085-eee6daee52ed3b4da3f4",
+          "file": "upstream-batch02-runtime-clipboard.spec.ts",
+          "line": 19,
+          "column": 3
+        },
+        {
+          "title": "W298 mediates native clipboard.readText through focused host activation and policy (allowed=true)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5324,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:59:08.881Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-c-48078-on-and-policy-allowed-true--webkit/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ddfb7153cee771b13085-5b79ca0cc3181c138dbd",
+          "file": "upstream-batch02-runtime-clipboard.spec.ts",
+          "line": 19,
+          "column": 3
+        }
+      ]
+    },
+    {
+      "title": "upstream-batch02-runtime-loading.spec.ts",
+      "file": "upstream-batch02-runtime-loading.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Q1990 retries the identical HTML entry after offline recovery and sends a fresh HTTP request",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 220,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:57:51.046Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-l-15f40--sends-a-fresh-HTTP-request-chromium/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e9a3a1f72a7773749f12-18e3a3e32a19da552ddf",
+          "file": "upstream-batch02-runtime-loading.spec.ts",
+          "line": 37,
+          "column": 3
+        },
+        {
+          "title": "Q1885 retries the identical HTML entry after server-stopped recovery and sends a fresh HTTP request",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 211,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:57:51.361Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-l-37807--sends-a-fresh-HTTP-request-chromium/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e9a3a1f72a7773749f12-0a1d9b7ee0585f72c157",
+          "file": "upstream-batch02-runtime-loading.spec.ts",
+          "line": 37,
+          "column": 3
+        },
+        {
+          "title": "Q2166 disposes a cached application and loads a new deployment and failed-chunk recovery at the identical entry URL",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 336,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:57:51.583Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-l-b775b--at-the-identical-entry-URL-chromium/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e9a3a1f72a7773749f12-d52da6f52b1b05321ad7",
+          "file": "upstream-batch02-runtime-loading.spec.ts",
+          "line": 56,
+          "column": 1
+        },
+        {
+          "title": "W1028 reports a removed deployment chunk to the runtime error subscriber and permits explicit new-entry recovery",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 224,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:57:51.932Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-l-1fdcc-explicit-new-entry-recovery-chromium/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e9a3a1f72a7773749f12-339b0ad1137bc3a0839d",
+          "file": "upstream-batch02-runtime-loading.spec.ts",
+          "line": 82,
+          "column": 1
+        },
+        {
+          "title": "Q1990 retries the identical HTML entry after offline recovery and sends a fresh HTTP request",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 747,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:58:57.618Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-l-15f40--sends-a-fresh-HTTP-request-firefox/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e9a3a1f72a7773749f12-b47f5775928a13df2948",
+          "file": "upstream-batch02-runtime-loading.spec.ts",
+          "line": 37,
+          "column": 3
+        },
+        {
+          "title": "Q1885 retries the identical HTML entry after server-stopped recovery and sends a fresh HTTP request",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 279,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:58:58.762Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-l-37807--sends-a-fresh-HTTP-request-firefox/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e9a3a1f72a7773749f12-e13d9a607d9c0b96f38c",
+          "file": "upstream-batch02-runtime-loading.spec.ts",
+          "line": 37,
+          "column": 3
+        },
+        {
+          "title": "Q2166 disposes a cached application and loads a new deployment and failed-chunk recovery at the identical entry URL",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 401,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:58:59.049Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-l-b775b--at-the-identical-entry-URL-firefox/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e9a3a1f72a7773749f12-e2333113bd31ff30a540",
+          "file": "upstream-batch02-runtime-loading.spec.ts",
+          "line": 56,
+          "column": 1
+        },
+        {
+          "title": "W1028 reports a removed deployment chunk to the runtime error subscriber and permits explicit new-entry recovery",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 329,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:58:59.461Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-l-1fdcc-explicit-new-entry-recovery-firefox/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e9a3a1f72a7773749f12-56c76a460422820e6919",
+          "file": "upstream-batch02-runtime-loading.spec.ts",
+          "line": 82,
+          "column": 1
+        },
+        {
+          "title": "Q1990 retries the identical HTML entry after offline recovery and sends a fresh HTTP request",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 14,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 504,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:59:14.405Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-l-15f40--sends-a-fresh-HTTP-request-webkit/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e9a3a1f72a7773749f12-555a90e1bda10a325a49",
+          "file": "upstream-batch02-runtime-loading.spec.ts",
+          "line": 37,
+          "column": 3
+        },
+        {
+          "title": "Q1885 retries the identical HTML entry after server-stopped recovery and sends a fresh HTTP request",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 14,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 295,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:59:15.065Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-l-37807--sends-a-fresh-HTTP-request-webkit/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e9a3a1f72a7773749f12-426b7ac2b42787ec27fb",
+          "file": "upstream-batch02-runtime-loading.spec.ts",
+          "line": 37,
+          "column": 3
+        },
+        {
+          "title": "Q2166 disposes a cached application and loads a new deployment and failed-chunk recovery at the identical entry URL",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 14,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 396,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeNull\u001b[2m()\u001b[22m\n\nReceived: \u001b[31m\"AggregateError: All application entries failed for deployed (attempt 1: TypeError: Importing a module script failed.).\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeNull\u001b[2m()\u001b[22m\n\nReceived: \u001b[31m\"AggregateError: All application entries failed for deployed (attempt 1: TypeError: Importing a module script failed.).\"\u001b[39m\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-loading.spec.ts:76:55",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-loading.spec.ts",
+                      "column": 55,
+                      "line": 76
+                    },
+                    "snippet": "  74 |   await expectFailureCleaned(page);\n  75 |   deployment.missing = false;\n> 76 |   expect(await mountDeployment(page, deployment.url)).toBeNull();\n     |                                                       ^\n  77 |   await clickDeployment(page, 3);\n  78 |   expect(deployment.requests.filter(path => path === \"/index.html\")).toHaveLength(4);\n  79 |   expect(deployment.requests.filter(path => path === \"/entry.v3.js\").length).toBeGreaterThanOrEqual(2);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-loading.spec.ts",
+                        "column": 55,
+                        "line": 76
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeNull\u001b[2m()\u001b[22m\n\nReceived: \u001b[31m\"AggregateError: All application entries failed for deployed (attempt 1: TypeError: Importing a module script failed.).\"\u001b[39m\n\n  74 |   await expectFailureCleaned(page);\n  75 |   deployment.missing = false;\n> 76 |   expect(await mountDeployment(page, deployment.url)).toBeNull();\n     |                                                       ^\n  77 |   await clickDeployment(page, 3);\n  78 |   expect(deployment.requests.filter(path => path === \"/index.html\")).toHaveLength(4);\n  79 |   expect(deployment.requests.filter(path => path === \"/entry.v3.js\").length).toBeGreaterThanOrEqual(2);\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-loading.spec.ts:76:55"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-runtime-fixture.ts",
+                        "column": 29,
+                        "line": 77
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 0\u001b[39m\n\u001b[31m+ Received  + 5\u001b[39m\n\n\u001b[33m@@ -2,6 +2,11 @@\u001b[39m\n\u001b[2m    Object {\u001b[22m\n\u001b[2m      \"message\": \"AggregateError: All application entries failed for deployed (attempt 1: TypeError: Importing a module script failed.).\",\u001b[22m\n\u001b[2m      \"name\": \"deployed\",\u001b[22m\n\u001b[2m      \"phase\": \"mount\",\u001b[22m\n\u001b[2m    },\u001b[22m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"message\": \"AggregateError: All application entries failed for deployed (attempt 1: TypeError: Importing a module script failed.).\",\u001b[39m\n\u001b[31m+     \"name\": \"deployed\",\u001b[39m\n\u001b[31m+     \"phase\": \"mount\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[2m  ]\u001b[22m\n\n   at upstream-runtime-fixture.ts:77\n\n  75 |         return result;\n  76 |       });\n> 77 |       expect(result.errors).toEqual(result.expectedErrors);\n     |                             ^\n  78 |       expect(result.children).toBe(0);\n  79 |       expect(pageErrors).toEqual([]);\n  80 |     }\n    at Object.base.extend.runtimeCase.auto (/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-runtime-fixture.ts:77:29)"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:59:15.372Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-l-b775b--at-the-identical-entry-URL-webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-l-b775b--at-the-identical-entry-URL-webkit/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-loading.spec.ts",
+                    "column": 55,
+                    "line": 76
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e9a3a1f72a7773749f12-b1b2603ac736130999bf",
+          "file": "upstream-batch02-runtime-loading.spec.ts",
+          "line": 56,
+          "column": 1
+        },
+        {
+          "title": "W1028 reports a removed deployment chunk to the runtime error subscriber and permits explicit new-entry recovery",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 15,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 481,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\n\u001b[1mMatcher error\u001b[22m: \u001b[31mreceived\u001b[39m value must not be null nor undefined\n\nReceived has value: \u001b[31mnull\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\n\u001b[1mMatcher error\u001b[22m: \u001b[31mreceived\u001b[39m value must not be null nor undefined\n\nReceived has value: \u001b[31mnull\u001b[39m\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-loading.spec.ts:89:55",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-loading.spec.ts",
+                      "column": 55,
+                      "line": 89
+                    },
+                    "snippet": "  87 |   // The server still supplies the old HTML while the old hashed asset has been deleted.\n  88 |   deployment.missing = true;\n> 89 |   expect(await mountDeployment(page, deployment.url)).toContain(\"All application entries failed\");\n     |                                                       ^\n  90 |   await expectFailureCleaned(page);\n  91 |   expect(deployment.requests.filter(path => path === \"/entry.v1.js\").length).toBeGreaterThanOrEqual(2);\n  92 |   const failed = await page.evaluate(() => window.__upstreamRuntime__!.errors);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-loading.spec.ts",
+                        "column": 55,
+                        "line": 89
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\n\u001b[1mMatcher error\u001b[22m: \u001b[31mreceived\u001b[39m value must not be null nor undefined\n\nReceived has value: \u001b[31mnull\u001b[39m\n\n  87 |   // The server still supplies the old HTML while the old hashed asset has been deleted.\n  88 |   deployment.missing = true;\n> 89 |   expect(await mountDeployment(page, deployment.url)).toContain(\"All application entries failed\");\n     |                                                       ^\n  90 |   await expectFailureCleaned(page);\n  91 |   expect(deployment.requests.filter(path => path === \"/entry.v1.js\").length).toBeGreaterThanOrEqual(2);\n  92 |   const failed = await page.evaluate(() => window.__upstreamRuntime__!.errors);\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-loading.spec.ts:89:55"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:59:15.966Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-l-1fdcc-explicit-new-entry-recovery-webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-l-1fdcc-explicit-new-entry-recovery-webkit/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-loading.spec.ts",
+                    "column": 55,
+                    "line": 89
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e9a3a1f72a7773749f12-f91fdb84213de3322458",
+          "file": "upstream-batch02-runtime-loading.spec.ts",
+          "line": 82,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "upstream-batch02-runtime-location.spec.ts",
+      "file": "upstream-batch02-runtime-location.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Q1502 native window.location assignment navigates only the child and disposes after crossing origin",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 205,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:57:52.359Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-l-ddce3-poses-after-crossing-origin-chromium/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c7420a37da65ce6a20b2-e433d652997717e2219f",
+          "file": "upstream-batch02-runtime-location.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "Q1502 native window.location assignment navigates only the child and disposes after crossing origin",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 803,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:59:00.140Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-l-ddce3-poses-after-crossing-origin-firefox/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c7420a37da65ce6a20b2-b083355ca840bb0ad4c0",
+          "file": "upstream-batch02-runtime-location.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "Q1502 native window.location assignment navigates only the child and disposes after crossing origin",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 16,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 463,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:59:16.774Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-l-ddce3-poses-after-crossing-origin-webkit/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c7420a37da65ce6a20b2-0b854744cab2811b6578",
+          "file": "upstream-batch02-runtime-location.spec.ts",
+          "line": 6,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "upstream-batch02-runtime-routing.spec.ts",
+      "file": "upstream-batch02-runtime-routing.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Q1245 cold Vue Router hash-home to history-home to hash-about loads the first lazy route in its own Realm",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 602,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Q1245 history Realm {\"location\":\"http://127.0.0.1:5173/home\",\"documentURL\":\"http://127.0.0.1:5173/home\",\"entryRealmSurvived\":true}\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:57:52.847Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-r-8653b-lazy-route-in-its-own-Realm-chromium/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c842a460ae1add63ef07-e653c7ca67cd3dc5a597",
+          "file": "upstream-batch02-runtime-routing.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "Q1245 Realm document initialization rejects a foreign origin and cancels a pending same-origin navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 173,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:57:53.545Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-r-ed4c8-ding-same-origin-navigation-chromium/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c842a460ae1add63ef07-2258cb44fd5a53d0a5a8",
+          "file": "upstream-batch02-runtime-routing.spec.ts",
+          "line": 55,
+          "column": 1
+        },
+        {
+          "title": "Q1245 cold Vue Router hash-home to history-home to hash-about loads the first lazy route in its own Realm",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 10,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1149,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Q1245 history Realm {\"location\":\"http://127.0.0.1:5173/home\",\"documentURL\":\"http://127.0.0.1:5173/home\",\"entryRealmSurvived\":true}\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:59:01.665Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-r-8653b-lazy-route-in-its-own-Realm-firefox/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c842a460ae1add63ef07-9e201e4f39e63585a040",
+          "file": "upstream-batch02-runtime-routing.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "Q1245 Realm document initialization rejects a foreign origin and cancels a pending same-origin navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 10,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 220,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:59:03.185Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-r-ed4c8-ding-same-origin-navigation-firefox/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c842a460ae1add63ef07-010ca8649e66a3f593bd",
+          "file": "upstream-batch02-runtime-routing.spec.ts",
+          "line": 55,
+          "column": 1
+        },
+        {
+          "title": "Q1245 cold Vue Router hash-home to history-home to hash-about loads the first lazy route in its own Realm",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 17,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 733,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Q1245 history Realm {\"location\":\"http://127.0.0.1:5173/home\",\"documentURL\":\"http://127.0.0.1:5173/home\",\"entryRealmSurvived\":true}\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:59:17.557Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-r-8653b-lazy-route-in-its-own-Realm-webkit/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c842a460ae1add63ef07-4a88f0984a31b54822d9",
+          "file": "upstream-batch02-runtime-routing.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "Q1245 Realm document initialization rejects a foreign origin and cancels a pending same-origin navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 17,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 219,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:59:18.433Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-r-ed4c8-ding-same-origin-navigation-webkit/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c842a460ae1add63ef07-8845fa5086a0360ab3c6",
+          "file": "upstream-batch02-runtime-routing.spec.ts",
+          "line": 55,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "upstream-batch02-runtime-switching.spec.ts",
+      "file": "upstream-batch02-runtime-switching.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Q2346 rapid native tab switching leaves hidden Realms unable to intercept host or application clicks (keepAlive=false)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 633,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"display\": \"none\",\u001b[39m\n\u001b[31m+   \"display\": \"\",\u001b[39m\n\u001b[2m    \"height\": 0,\u001b[22m\n\u001b[2m    \"hidden\": true,\u001b[22m\n\u001b[2m    \"width\": 0,\u001b[22m\n\u001b[2m  }\u001b[22m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"display\": \"none\",\u001b[39m\n\u001b[31m+   \"display\": \"\",\u001b[39m\n\u001b[2m    \"height\": 0,\u001b[22m\n\u001b[2m    \"hidden\": true,\u001b[22m\n\u001b[2m    \"width\": 0,\u001b[22m\n\u001b[2m  }\u001b[22m\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-switching.spec.ts:72:55",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-switching.spec.ts",
+                      "column": 55,
+                      "line": 72
+                    },
+                    "snippet": "  70 |     });\n  71 |     expect(hitTest.frames.length).toBeGreaterThan(0);\n> 72 |     for (const frame of hitTest.frames) expect(frame).toEqual({ hidden: true, display: \"none\", width: 0, height: 0 });\n     |                                                       ^\n  73 |     expect({ hostHit: hitTest.hostHit, appHit: hitTest.appHit }).toEqual({ hostHit: true, appHit: true });\n  74 |   });\n  75 | }"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-switching.spec.ts",
+                        "column": 55,
+                        "line": 72
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"display\": \"none\",\u001b[39m\n\u001b[31m+   \"display\": \"\",\u001b[39m\n\u001b[2m    \"height\": 0,\u001b[22m\n\u001b[2m    \"hidden\": true,\u001b[22m\n\u001b[2m    \"width\": 0,\u001b[22m\n\u001b[2m  }\u001b[22m\n\n  70 |     });\n  71 |     expect(hitTest.frames.length).toBeGreaterThan(0);\n> 72 |     for (const frame of hitTest.frames) expect(frame).toEqual({ hidden: true, display: \"none\", width: 0, height: 0 });\n     |                                                       ^\n  73 |     expect({ hostHit: hitTest.hostHit, appHit: hitTest.appHit }).toEqual({ hostHit: true, appHit: true });\n  74 |   });\n  75 | }\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-switching.spec.ts:72:55"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:57:53.912Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-s-17df3-ion-clicks-keepAlive-false--chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-s-17df3-ion-clicks-keepAlive-false--chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-switching.spec.ts",
+                    "column": 55,
+                    "line": 72
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "0123f1eab92be535a6f4-d709fec5867ce4368acb",
+          "file": "upstream-batch02-runtime-switching.spec.ts",
+          "line": 7,
+          "column": 3
+        },
+        {
+          "title": "Q2346 rapid native tab switching leaves hidden Realms unable to intercept host or application clicks (keepAlive=true)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 666,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"display\": \"none\",\u001b[39m\n\u001b[31m+   \"display\": \"\",\u001b[39m\n\u001b[2m    \"height\": 0,\u001b[22m\n\u001b[2m    \"hidden\": true,\u001b[22m\n\u001b[2m    \"width\": 0,\u001b[22m\n\u001b[2m  }\u001b[22m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"display\": \"none\",\u001b[39m\n\u001b[31m+   \"display\": \"\",\u001b[39m\n\u001b[2m    \"height\": 0,\u001b[22m\n\u001b[2m    \"hidden\": true,\u001b[22m\n\u001b[2m    \"width\": 0,\u001b[22m\n\u001b[2m  }\u001b[22m\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-switching.spec.ts:72:55",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-switching.spec.ts",
+                      "column": 55,
+                      "line": 72
+                    },
+                    "snippet": "  70 |     });\n  71 |     expect(hitTest.frames.length).toBeGreaterThan(0);\n> 72 |     for (const frame of hitTest.frames) expect(frame).toEqual({ hidden: true, display: \"none\", width: 0, height: 0 });\n     |                                                       ^\n  73 |     expect({ hostHit: hitTest.hostHit, appHit: hitTest.appHit }).toEqual({ hostHit: true, appHit: true });\n  74 |   });\n  75 | }"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-switching.spec.ts",
+                        "column": 55,
+                        "line": 72
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"display\": \"none\",\u001b[39m\n\u001b[31m+   \"display\": \"\",\u001b[39m\n\u001b[2m    \"height\": 0,\u001b[22m\n\u001b[2m    \"hidden\": true,\u001b[22m\n\u001b[2m    \"width\": 0,\u001b[22m\n\u001b[2m  }\u001b[22m\n\n  70 |     });\n  71 |     expect(hitTest.frames.length).toBeGreaterThan(0);\n> 72 |     for (const frame of hitTest.frames) expect(frame).toEqual({ hidden: true, display: \"none\", width: 0, height: 0 });\n     |                                                       ^\n  73 |     expect({ hostHit: hitTest.hostHit, appHit: hitTest.appHit }).toEqual({ hostHit: true, appHit: true });\n  74 |   });\n  75 | }\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-switching.spec.ts:72:55"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:57:54.828Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-s-ce0f5-tion-clicks-keepAlive-true--chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-s-ce0f5-tion-clicks-keepAlive-true--chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-switching.spec.ts",
+                    "column": 55,
+                    "line": 72
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "0123f1eab92be535a6f4-131c710f0d13715cea58",
+          "file": "upstream-batch02-runtime-switching.spec.ts",
+          "line": 7,
+          "column": 3
+        },
+        {
+          "title": "Q2346 rapid native tab switching leaves hidden Realms unable to intercept host or application clicks (keepAlive=false)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 11,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1423,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"display\": \"none\",\u001b[39m\n\u001b[31m+   \"display\": \"\",\u001b[39m\n\u001b[2m    \"height\": 0,\u001b[22m\n\u001b[2m    \"hidden\": true,\u001b[22m\n\u001b[2m    \"width\": 0,\u001b[22m\n\u001b[2m  }\u001b[22m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"display\": \"none\",\u001b[39m\n\u001b[31m+   \"display\": \"\",\u001b[39m\n\u001b[2m    \"height\": 0,\u001b[22m\n\u001b[2m    \"hidden\": true,\u001b[22m\n\u001b[2m    \"width\": 0,\u001b[22m\n\u001b[2m  }\u001b[22m\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-switching.spec.ts:72:55",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-switching.spec.ts",
+                      "column": 55,
+                      "line": 72
+                    },
+                    "snippet": "  70 |     });\n  71 |     expect(hitTest.frames.length).toBeGreaterThan(0);\n> 72 |     for (const frame of hitTest.frames) expect(frame).toEqual({ hidden: true, display: \"none\", width: 0, height: 0 });\n     |                                                       ^\n  73 |     expect({ hostHit: hitTest.hostHit, appHit: hitTest.appHit }).toEqual({ hostHit: true, appHit: true });\n  74 |   });\n  75 | }"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-switching.spec.ts",
+                        "column": 55,
+                        "line": 72
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"display\": \"none\",\u001b[39m\n\u001b[31m+   \"display\": \"\",\u001b[39m\n\u001b[2m    \"height\": 0,\u001b[22m\n\u001b[2m    \"hidden\": true,\u001b[22m\n\u001b[2m    \"width\": 0,\u001b[22m\n\u001b[2m  }\u001b[22m\n\n  70 |     });\n  71 |     expect(hitTest.frames.length).toBeGreaterThan(0);\n> 72 |     for (const frame of hitTest.frames) expect(frame).toEqual({ hidden: true, display: \"none\", width: 0, height: 0 });\n     |                                                       ^\n  73 |     expect({ hostHit: hitTest.hostHit, appHit: hitTest.appHit }).toEqual({ hostHit: true, appHit: true });\n  74 |   });\n  75 | }\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-switching.spec.ts:72:55"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:59:03.781Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-s-17df3-ion-clicks-keepAlive-false--firefox/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-s-17df3-ion-clicks-keepAlive-false--firefox/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-switching.spec.ts",
+                    "column": 55,
+                    "line": 72
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "0123f1eab92be535a6f4-8fb149a17a57cdd58428",
+          "file": "upstream-batch02-runtime-switching.spec.ts",
+          "line": 7,
+          "column": 3
+        },
+        {
+          "title": "Q2346 rapid native tab switching leaves hidden Realms unable to intercept host or application clicks (keepAlive=true)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1341,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"display\": \"none\",\u001b[39m\n\u001b[31m+   \"display\": \"\",\u001b[39m\n\u001b[2m    \"height\": 0,\u001b[22m\n\u001b[2m    \"hidden\": true,\u001b[22m\n\u001b[2m    \"width\": 0,\u001b[22m\n\u001b[2m  }\u001b[22m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"display\": \"none\",\u001b[39m\n\u001b[31m+   \"display\": \"\",\u001b[39m\n\u001b[2m    \"height\": 0,\u001b[22m\n\u001b[2m    \"hidden\": true,\u001b[22m\n\u001b[2m    \"width\": 0,\u001b[22m\n\u001b[2m  }\u001b[22m\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-switching.spec.ts:72:55",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-switching.spec.ts",
+                      "column": 55,
+                      "line": 72
+                    },
+                    "snippet": "  70 |     });\n  71 |     expect(hitTest.frames.length).toBeGreaterThan(0);\n> 72 |     for (const frame of hitTest.frames) expect(frame).toEqual({ hidden: true, display: \"none\", width: 0, height: 0 });\n     |                                                       ^\n  73 |     expect({ hostHit: hitTest.hostHit, appHit: hitTest.appHit }).toEqual({ hostHit: true, appHit: true });\n  74 |   });\n  75 | }"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-switching.spec.ts",
+                        "column": 55,
+                        "line": 72
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"display\": \"none\",\u001b[39m\n\u001b[31m+   \"display\": \"\",\u001b[39m\n\u001b[2m    \"height\": 0,\u001b[22m\n\u001b[2m    \"hidden\": true,\u001b[22m\n\u001b[2m    \"width\": 0,\u001b[22m\n\u001b[2m  }\u001b[22m\n\n  70 |     });\n  71 |     expect(hitTest.frames.length).toBeGreaterThan(0);\n> 72 |     for (const frame of hitTest.frames) expect(frame).toEqual({ hidden: true, display: \"none\", width: 0, height: 0 });\n     |                                                       ^\n  73 |     expect({ hostHit: hitTest.hostHit, appHit: hitTest.appHit }).toEqual({ hostHit: true, appHit: true });\n  74 |   });\n  75 | }\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-switching.spec.ts:72:55"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:59:05.983Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-s-ce0f5-tion-clicks-keepAlive-true--firefox/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-s-ce0f5-tion-clicks-keepAlive-true--firefox/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-switching.spec.ts",
+                    "column": 55,
+                    "line": 72
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "0123f1eab92be535a6f4-af2f68146226c422b04c",
+          "file": "upstream-batch02-runtime-switching.spec.ts",
+          "line": 7,
+          "column": 3
+        },
+        {
+          "title": "Q2346 rapid native tab switching leaves hidden Realms unable to intercept host or application clicks (keepAlive=false)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 18,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1182,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:59:18.837Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-s-17df3-ion-clicks-keepAlive-false--webkit/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0123f1eab92be535a6f4-9ea580595d1b81f87a18",
+          "file": "upstream-batch02-runtime-switching.spec.ts",
+          "line": 7,
+          "column": 3
+        },
+        {
+          "title": "Q2346 rapid native tab switching leaves hidden Realms unable to intercept host or application clicks (keepAlive=true)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 18,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 896,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:59:20.156Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-s-ce0f5-tion-clicks-keepAlive-true--webkit/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0123f1eab92be535a6f4-a4d072d7551795912313",
+          "file": "upstream-batch02-runtime-switching.spec.ts",
+          "line": 7,
+          "column": 3
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-08T06:57:41.738Z",
+    "duration": 99350.896,
+    "expected": 25,
+    "skipped": 0,
+    "unexpected": 8,
+    "flaky": 0
+  }
+}

@@ -1,0 +1,401 @@
+{
+  "schemaVersion": 1,
+  "collectionBatch": "2026-09-08-batch-02",
+  "updatedAt": "2026-09-08T08:35:09.333641+00:00",
+  "notes": [
+    "只记录真实执行证据；首轮失败待排除测试时序问题，不能全部称框架bug。",
+    "新版本选择仅用于缺少原始锁文件时的明确同类场景；没有运行完整upstream仓库或IE11。"
+  ],
+  "versionEvidence": [
+    {
+      "dependency": "webpack",
+      "version": "5.110.3",
+      "source": "examples/angular-app/package.json",
+      "reason": "使用已有精确版本；root新增测试依赖未升级webpack"
+    },
+    {
+      "dependency": "ant-design-vue",
+      "version": "4.2.6",
+      "source": "https://github.com/vueComponent/ant-design-vue/releases/tag/4.2.6"
+    },
+    {
+      "dependency": "sortablejs",
+      "version": "1.15.7",
+      "source": "https://github.com/SortableJS/Sortable/releases/tag/1.15.7"
+    },
+    {
+      "dependency": "element-ui",
+      "version": "2.15.14",
+      "source": "examples/vue2-app/package.json",
+      "upstreamReproduction": "https://github.com/gongshun/qiankun-vue-demo/blob/report-bug/app-vue-history/package.json",
+      "versionDifference": "原repro声明^2.15.13；本地复用已有2.15.14"
+    },
+    {
+      "dependency": "vue",
+      "version": "2.7.16",
+      "source": "examples/vue2-app/package.json",
+      "versionDifference": "W1104原报告2.6.14；本地生命周期adapter公开peer为^2.7.16"
+    },
+    {
+      "dependency": "vue",
+      "version": "3.5.42",
+      "source": "examples/component-matrix-app/package.json"
+    },
+    {
+      "dependency": "element-plus",
+      "version": "2.14.5",
+      "source": "examples/component-matrix-app/package.json"
+    },
+    {
+      "dependency": "monaco-editor",
+      "version": "0.56.0",
+      "source": "examples/component-matrix-app/package.json"
+    }
+  ],
+  "issues": [
+    {
+      "id": "umijs/qiankun#2795",
+      "versions": {
+        "webpack": "5.110.3"
+      },
+      "scope": "真实本项目webpack插件编译成功/依赖解析失败均关闭compiler且子进程有限时间退出；非照搬上游npm脚本命名机制",
+      "tests": [
+        "Q2795 a real plugin compilation closes the compiler and lets its process exit",
+        "Q2795 a failing real compilation closes and exits with a concrete build error"
+      ],
+      "testPath": "packages/webpack-plugin/src/upstream-build-regressions.test.ts",
+      "status": "unit-passed",
+      "redEvidence": null,
+      "run": "tests/upstream-issues/runs/2026-09-08-batch-02-components-build-unit.json",
+      "recommendedStatus": "regression-passed"
+    },
+    {
+      "id": "umijs/qiankun#2701",
+      "scope": "实际workspace依赖图无环；同一个生产architecture checker对相互依赖fixture退出1并给环路径",
+      "tests": [
+        "Q2701 the real workspace package graph remains acyclic",
+        "Q2701 the same checker rejects mutually dependent workspace packages with the cycle path"
+      ],
+      "testPath": "packages/webpack-plugin/src/workspace-topology.test.ts",
+      "status": "unit-passed",
+      "redEvidence": null,
+      "run": "tests/upstream-issues/runs/2026-09-08-batch-02-components-build-unit.json",
+      "recommendedStatus": "regression-passed"
+    },
+    {
+      "id": "umijs/qiankun#2298",
+      "versions": {
+        "webpack": "5.110.3",
+        "react": "19.2.8"
+      },
+      "scope": "真实Webpack5.110.3+React19.2.8产物；在entry执行前定义getter/setter的chunkLoadingGlobal，初始runtime与动态lazy chunk均真实写入该accessor并执行。没有运行完整CRA脚手架。",
+      "sourceEvidence": [
+        "https://github.com/umijs/qiankun/releases/tag/v2.8.3",
+        "https://github.com/umijs/qiankun/pull/2302"
+      ],
+      "status": "three-engine-passed",
+      "tests": [
+        "Q2298 a real Webpack React lazy chunk keeps a pre-existing global accessor writable"
+      ],
+      "redEvidence": null,
+      "testPath": "tests/e2e/upstream-batch02-components-webpack.spec.ts",
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-02-components-sources.json",
+      "run": "tests/upstream-issues/runs/2026-09-08-batch-02-components-three-engines-first.json",
+      "projects": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ],
+      "recommendedStatus": "regression-passed"
+    },
+    {
+      "id": "umijs/qiankun#1116",
+      "versions": {
+        "monaco-editor": "0.56.0"
+      },
+      "scope": "真实基座→应用A→应用B的Monaco，父容器scrollTop180+宿主页scrollY180后继续真实滚编辑器，保持父滚动并点击既有第16行第7列输入X，断言最终代码和光标；Chromium/Firefox/WebKit均通过。",
+      "testPath": "tests/e2e/upstream-batch02-components-nested.spec.ts",
+      "tests": [
+        "Q1116 Monaco places the caret after parent and editor scrolling in a nested application"
+      ],
+      "status": "three-engine-passed",
+      "recommendedStatus": "regression-passed",
+      "classificationNote": "本地未观察到原报告的光标坐标错误；首次失败是准备阶段30秒耗尽。最终真实双滚动/光标/编辑三引擎通过，性能修复作为附带修复记录。",
+      "run": "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/batch02-e2e-first.json",
+      "projects": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ],
+      "redEvidence": null,
+      "relatedFixes": [
+        {
+          "module": "packages/dom-surface/src/application-style-bridge.ts",
+          "behavior": "避免普通class/style变更触发全量CSS扫描，解除嵌套Monaco准备阶段性能阻塞。",
+          "redEvidence": {
+            "report": "tests/upstream-issues/runs/2026-09-08-batch-02-components-three-engines-first.json",
+            "projects": [
+              "chromium",
+              "firefox",
+              "webkit"
+            ],
+            "failure": "三引擎均在准备步骤耗尽30秒总时限，尚未到caret断言；Chromium挂载后每个DOM/API调用约2.5秒，真实wheel已产生scrollTop50。检查nested Monaco全量CSS刷新开销，不能记光标兼容通过。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "umijs/qiankun#2408",
+      "versions": {
+        "vue": "2.7.16",
+        "element-ui": "2.15.14"
+      },
+      "scope": "Vue2.7.16+ElementUI2.15.14真实Drawer内Select，默认body portal与显式popperAppendToBody=false两模式在Chromium/Firefox/WebKit均完成输入点击、下拉出现、真实几何对齐及South选中；Vue warnings为空，Runtime销毁后无残留且宿主构造器/监听原型保持原值。不是原仓全部版本组合或实际Safari验证。",
+      "testPath": "tests/e2e/upstream-batch02-components-overlays.spec.ts",
+      "tests": [
+        "Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=false)",
+        "Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=true)",
+        "Q2408 fixed offset coordinates use the native Realm document root and preserve transformed local containers"
+      ],
+      "status": "three-engine-passed",
+      "redEvidence": {
+        "report": "tests/upstream-issues/runs/2026-09-08-batch-02-components-three-engines-first.json",
+        "projects": [
+          "chromium",
+          "firefox",
+          "webkit"
+        ],
+        "failure": "默认body portal稳定后横向错位；显式local portal定位和选择成功，但真实Vue updatePopper触发getComputedStyle非Element错误。两模式三引擎均失败。",
+        "finalBuildReport": "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/batch02-e2e-first.json"
+      },
+      "recommendedStatus": "fixed",
+      "diagnosticEvidence": [
+        "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/q2408-portal-diagnostic.json",
+        "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/q2408-local-diagnostic.json"
+      ],
+      "diagnosis": "原生CDP捕获new Popper→_getOffsets：popper自身display:none/position:fixed/rect0，offsetParent为空导致fallback到公共documentElement(surface.host)；getScrollParent沿宿主祖先走到宿主Document并调用getComputedStyle(Document)抛TypeError。默认portal停在x148，anchor为x852；local虽初始x852也在创建期抛错。",
+      "run": "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/final-corrections-e2e.json",
+      "projects": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ],
+      "fixModules": [
+        "packages/visual-bridge/src/fixed-offset-parent-bridge.ts",
+        "packages/visual-bridge/src/document-scroll-bridge.ts"
+      ],
+      "resolution": "原生CDP证实Popper首次构造在自身display:none时读取offsetParent，旧桥返回null造成fallback到surface.host并遍历到宿主Document后getComputedStyle报错。固定坐标桥现在为满足隐藏预定位条件的节点返回iframe真实HTML根，配合已存在的文档滚动/viewport client尺寸桥；不改变可视父节点、display或布局box。",
+      "prepositionLimits": "新增隐藏分支仅用于已连接的position:fixed元素自身display:none、祖先没有display:none且没有检测到局部固定包含块的情况。transform/perspective/filter/backdrop-filter、contain布局/绘制、content-visibility:auto或相关will-change祖先会保留原生结果；实际Browser合同直接验证transform局部容器、隐藏祖先、断开节点。元素getClientRects仍为空、offsetWidth仍0且display仍none；没有将所有无布局框元素统一改为坐标根。原生非null offsetParent和应用自有属性保留。",
+      "verification": {
+        "e2eCases": [
+          {
+            "title": "Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=true)",
+            "project": "chromium",
+            "status": "passed",
+            "durationMs": 1814
+          },
+          {
+            "title": "Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=false)",
+            "project": "chromium",
+            "status": "passed",
+            "durationMs": 1704
+          },
+          {
+            "title": "Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=true)",
+            "project": "firefox",
+            "status": "passed",
+            "durationMs": 1567
+          },
+          {
+            "title": "Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=false)",
+            "project": "firefox",
+            "status": "passed",
+            "durationMs": 1123
+          },
+          {
+            "title": "Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=true)",
+            "project": "webkit",
+            "status": "passed",
+            "durationMs": 1416
+          },
+          {
+            "title": "Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=false)",
+            "project": "webkit",
+            "status": "passed",
+            "durationMs": 1191
+          }
+        ],
+        "geometryAssertions": "两模式都要求dropdown与input的x差<5px，dropdown在input下方或上方的相邻距离<16px；局部模式额外要求dropdown.closest(.el-select)存在。通过记录证明这些断言，没有另存最终绝对坐标。",
+        "interactionAssertions": "点击South后data-selected=South，data-warnings=[]；afterEach真实destroy清除iframe/surface、运行时错误为空、宿主MouseEvent/FocusEvent及EventTarget.addEventListener保持原值。",
+        "contractExecutions": 3
+      },
+      "testBindings": [
+        {
+          "path": "tests/e2e/upstream-batch02-components-overlays.spec.ts",
+          "title": "Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=false)",
+          "level": "e2e",
+          "run": "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/final-corrections-e2e.json"
+        },
+        {
+          "path": "tests/e2e/upstream-batch02-components-overlays.spec.ts",
+          "title": "Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=true)",
+          "level": "e2e",
+          "run": "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/final-corrections-e2e.json"
+        },
+        {
+          "path": "tests/browser/upstream-batch02-fixed-position.browser.test.ts",
+          "title": "Q2408 fixed offset coordinates use the native Realm document root and preserve transformed local containers",
+          "level": "browser",
+          "run": "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/final-browser.json"
+        }
+      ],
+      "testPaths": [
+        "tests/e2e/upstream-batch02-components-overlays.spec.ts",
+        "tests/browser/upstream-batch02-fixed-position.browser.test.ts"
+      ]
+    },
+    {
+      "id": "Tencent/wujie#1106",
+      "versions": {
+        "vue": "3.5.42",
+        "ant-design-vue": "4.2.6"
+      },
+      "scope": "保留默认虚拟Select500选项、先真实wheel再真实鼠标拖thumb并选择后方选项；非关闭virtual workaround",
+      "testPath": "tests/e2e/upstream-batch02-components-overlays.spec.ts",
+      "tests": [
+        "W1106 Ant Design Vue default virtual Select scrolls by dragging its real scrollbar thumb"
+      ],
+      "status": "three-engine-passed",
+      "redEvidence": {
+        "report": "tests/upstream-issues/runs/2026-09-08-batch-02-components-chromium-initial.json",
+        "project": "chromium",
+        "failure": "wheel令scrollTop120正常，拖thumb90px后仍120"
+      },
+      "run": "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/w1106-drag-held-three-engines.json",
+      "projects": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ],
+      "recommendedStatus": "fixed",
+      "fixModules": [
+        "packages/visual-bridge/src/window-input-events.ts"
+      ],
+      "additionalTestTimingEvidence": {
+        "fullRunFailureReport": "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/full-e2e-before-navigation-test-fix.json",
+        "fullRunFailureTrace": "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/w1106-webkit-full-run-red-trace.zip",
+        "embeddedControl": "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/w1106-webkit-embedded-diagnostic.json",
+        "standaloneControl": "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/w1106-webkit-standalone-diagnostic.json",
+        "controlSource": "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/w1106-webkit-diagnostic.spec.ts.txt",
+        "observation": "原full trace已命中thumb并进入moving，但12步move用3.8ms，move/outside/up约10ms内完成。真实无框架AntDV页面也复现：down772ms/up785ms且lastRAF始终771ms，15个window move已送达，pending moveRaf161在mouseup中被组件取消，scrollTop保持120。嵌入模式对照在up前发生RAF，全部15个move到应用window，scrollTop120→5358。",
+        "classification": "这是同库原生RAF取消时序的测试驱动问题，不增加本地框架bug数量；原先window输入桥缺失的实际红证据及fixed分类保留。",
+        "testChange": "真实90px拖动后保持鼠标按下，等待与原断言相同的scrollTop>before+500，再横向移出应用并松手；松手后原滚动阈值、moving清理、选择和warnings断言均保留。没有sleep、retry或timeout调整。",
+        "verification": "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/w1106-drag-held-three-engines.json",
+        "projects": [
+          "chromium",
+          "firefox",
+          "webkit"
+        ],
+        "result": "3/3 passed"
+      }
+    },
+    {
+      "id": "Tencent/wujie#300",
+      "versions": {
+        "vue": "3.5.42",
+        "element-plus": "2.14.5"
+      },
+      "scope": "真实ElInput/ElButton触发trusted mouseenter/leave/click与focus/blur，检查instanceof和Vue warnHandler空；非下拉定位",
+      "testPath": "tests/e2e/upstream-batch02-components-overlays.spec.ts",
+      "tests": [
+        "W300 Element Plus validates trusted mouse and focus events without cross-Realm Vue warnings"
+      ],
+      "status": "three-engine-passed",
+      "redEvidence": null,
+      "run": "tests/upstream-issues/runs/2026-09-08-batch-02-components-three-engines-first.json",
+      "projects": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ],
+      "recommendedStatus": "regression-passed"
+    },
+    {
+      "id": "Tencent/wujie#697",
+      "versions": {
+        "sortablejs": "1.15.7"
+      },
+      "scope": "基座Runtime加载A，A自身iframe创建Runtime加载B，B真实SortableJS默认拖动排序Alpha到Gamma后；检查不同iframe与ShadowRoot归属。未使用vue-draggable-next包装。",
+      "testPath": "tests/e2e/upstream-batch02-components-nested.spec.ts",
+      "tests": [
+        "W697 SortableJS sorts a grandchild application's list using a real mouse drag"
+      ],
+      "status": "three-engine-passed",
+      "redEvidence": null,
+      "run": "tests/upstream-issues/runs/2026-09-08-batch-02-components-three-engines-first.json",
+      "projects": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ],
+      "recommendedStatus": "regression-passed"
+    },
+    {
+      "id": "Tencent/wujie#1104",
+      "versions": {
+        "vue": "2.7.16"
+      },
+      "scope": "本项目无WujieVue同名Vue2宿主包装组件；验证实际createVue2Lifecycle适配器挂载/更新只收业务label、不隐式声明style且无reserved-prop警告。不是原WujieVue2.1.0+Vue2.6.14原仓复现。",
+      "testPath": "tests/e2e/upstream-batch02-components-overlays.spec.ts",
+      "tests": [
+        "W1104 the Vue 2 lifecycle adapter does not declare an implicit reserved style prop"
+      ],
+      "status": "three-engine-passed",
+      "redEvidence": null,
+      "run": "tests/upstream-issues/runs/2026-09-08-batch-02-components-three-engines-first.json",
+      "projects": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ],
+      "recommendedStatus": "regression-passed"
+    },
+    {
+      "id": "umijs/qiankun#701",
+      "scope": "IE11缺fetch及UIEvent super/Babel setPrototypeOf转译错误两分支均不属项目现代浏览器支持基线",
+      "status": "out-of-scope",
+      "tests": [],
+      "resolution": "RODEMAP.md:121、1035明确现代Chrome/Edge/Firefox/Safari与Baseline Widely Available；未运行IE11，不计兼容成功。",
+      "redEvidence": null,
+      "recommendedStatus": "out-of-scope"
+    }
+  ],
+  "runs": [
+    {
+      "report": "tests/upstream-issues/runs/2026-09-08-batch-02-components-chromium-initial.json",
+      "command": "PLAYWRIGHT_JSON_OUTPUT_FILE=/private/tmp/batch02-components-chromium-red.json bun x playwright test tests/e2e/upstream-batch02-components-overlays.spec.ts tests/e2e/upstream-batch02-components-nested.spec.ts --project=chromium --reporter=line,json",
+      "exitCode": 1,
+      "total": 7,
+      "passed": 3,
+      "failed": 4,
+      "frameworkBuild": "existing dist; no build before this run"
+    },
+    {
+      "report": "tests/upstream-issues/runs/2026-09-08-batch-02-components-build-unit.json",
+      "command": "bun run test:unit packages/webpack-plugin/src/upstream-build-regressions.test.ts packages/webpack-plugin/src/workspace-topology.test.ts --reporter=json --outputFile=/private/tmp/batch02-components-build-unit.json",
+      "exitCode": 0,
+      "total": 4,
+      "passed": 4,
+      "failed": 0,
+      "notes": "前两次失败属于测试worker包解析及工具deprecation日志期望修正，不作框架缺陷红测证据。"
+    },
+    {
+      "report": "tests/upstream-issues/runs/2026-09-08-batch-02-components-three-engines-first.json",
+      "command": "bun x playwright test tests/e2e/upstream-batch02-components-overlays.spec.ts tests/e2e/upstream-batch02-components-nested.spec.ts tests/e2e/upstream-batch02-components-webpack.spec.ts --reporter=line,json",
+      "exitCode": 1,
+      "passed": 15,
+      "failed": 9,
+      "skipped": 0
+    }
+  ]
+}

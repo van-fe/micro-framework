@@ -1,0 +1,300 @@
+{
+  "config": {
+    "argv": [
+      "/Users/fanfangbo/.local/share/fnm/node-versions/v24.19.0/installation/bin/node",
+      "/Users/fanfangbo/workspace/micro-framework/node_modules/.bin/playwright",
+      "test",
+      "tests/e2e/upstream-batch02-assets-csp.spec.ts",
+      "tests/e2e/upstream-batch02-runtime-location.spec.ts",
+      "--project=chromium",
+      "--reporter=json"
+    ],
+    "configFile": "/Users/fanfangbo/workspace/micro-framework/playwright.config.ts",
+    "rootDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "upstream-batch02-assets-csp.spec.ts",
+      "file": "upstream-batch02-assets-csp.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "W779 loads four then five and six real Vue images and mixed backgrounds from the application origin",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 469,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:48:07.506Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "36c4034dc77325d02525-2006fa9ae6b6e1bacba0",
+          "file": "upstream-batch02-assets-csp.spec.ts",
+          "line": 17,
+          "column": 1
+        },
+        {
+          "title": "W727 mounts and styles an HTML application under style-src without unsafe-inline and emits no style CSP violations",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 128,
+                  "error": {
+                    "message": "Error: page.evaluate: AggregateError: All application entries failed for csp-entry (attempt 1: Failed to fetch).\n    at #k (http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:405:9)\n    at async #C (http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:191:28)\n    at async S.mount (http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:184:4)\n    at async L.mountApp (http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:991:11)\n    at async eval (eval at evaluate (:311:30), <anonymous>:7:5)\n    at async <anonymous>:337:30",
+                    "stack": "Error: page.evaluate: AggregateError: All application entries failed for csp-entry (attempt 1: Failed to fetch).\n    at #k (http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:405:9)\n    at async #C (http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:191:28)\n    at async S.mount (http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:184:4)\n    at async L.mountApp (http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:991:11)\n    at async eval (eval at evaluate (:311:30), <anonymous>:7:5)\n    at async <anonymous>:337:30\n    at #k (http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:405:9)\n    at async #C (http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:191:28)\n    at async S.mount (http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:184:4)\n    at async L.mountApp (http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:991:11)\n    at async eval (eval at evaluate (:311:30), <anonymous>:7:5)\n    at async <anonymous>:337:30\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-assets-csp.spec.ts:60:14",
+                    "location": {
+                      "file": "http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js",
+                      "column": 9,
+                      "line": 405
+                    }
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js",
+                        "column": 9,
+                        "line": 405
+                      },
+                      "message": "Error: page.evaluate: AggregateError: All application entries failed for csp-entry (attempt 1: Failed to fetch).\n    at #k (http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:405:9)\n    at async #C (http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:191:28)\n    at async S.mount (http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:184:4)\n    at async L.mountApp (http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:991:11)\n    at async eval (eval at evaluate (:311:30), <anonymous>:7:5)\n    at async <anonymous>:337:30\n    at #k (http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:405:9)\n    at async #C (http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:191:28)\n    at async S.mount (http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:184:4)\n    at async L.mountApp (http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:991:11)\n    at async eval (eval at evaluate (:311:30), <anonymous>:7:5)\n    at async <anonymous>:337:30\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-assets-csp.spec.ts:60:14"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:48:08.162Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-assets-cs-8b131-its-no-style-CSP-violations-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-assets-cs-8b131-its-no-style-CSP-violations-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js",
+                    "column": 9,
+                    "line": 405
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "36c4034dc77325d02525-19cd5949e19ca1bd888f",
+          "file": "upstream-batch02-assets-csp.spec.ts",
+          "line": 46,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "upstream-batch02-runtime-location.spec.ts",
+      "file": "upstream-batch02-runtime-location.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Q1502 native window.location assignment navigates only the child and disposes after crossing origin",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 285,
+                  "error": {
+                    "message": "Error: page.evaluate: SecurityError: Failed to read a named property 'removeEventListener' from 'Window': Blocked a frame with origin \"http://127.0.0.1:5173\" from accessing a cross-origin frame.\n    at N.destroy (http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/realm-host/dist/index.js:434:29)\n    at #N (http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:526:12)\n    at async #O (http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:366:6)\n    at async eval (eval at evaluate (:311:30), <anonymous>:4:5)\n    at async <anonymous>:337:30",
+                    "stack": "Error: page.evaluate: SecurityError: Failed to read a named property 'removeEventListener' from 'Window': Blocked a frame with origin \"http://127.0.0.1:5173\" from accessing a cross-origin frame.\n    at N.destroy (http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/realm-host/dist/index.js:434:29)\n    at #N (http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:526:12)\n    at async #O (http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:366:6)\n    at async eval (eval at evaluate (:311:30), <anonymous>:4:5)\n    at async <anonymous>:337:30\n    at N.destroy (http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/realm-host/dist/index.js:434:29)\n    at #N (http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:526:12)\n    at async #O (http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:366:6)\n    at async eval (eval at evaluate (:311:30), <anonymous>:4:5)\n    at async <anonymous>:337:30\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-location.spec.ts:32:30",
+                    "location": {
+                      "file": "http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/realm-host/dist/index.js",
+                      "column": 29,
+                      "line": 434
+                    }
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/realm-host/dist/index.js",
+                        "column": 29,
+                        "line": 434
+                      },
+                      "message": "Error: page.evaluate: SecurityError: Failed to read a named property 'removeEventListener' from 'Window': Blocked a frame with origin \"http://127.0.0.1:5173\" from accessing a cross-origin frame.\n    at N.destroy (http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/realm-host/dist/index.js:434:29)\n    at #N (http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:526:12)\n    at async #O (http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:366:6)\n    at async eval (eval at evaluate (:311:30), <anonymous>:4:5)\n    at async <anonymous>:337:30\n    at N.destroy (http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/realm-host/dist/index.js:434:29)\n    at #N (http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:526:12)\n    at async #O (http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:366:6)\n    at async eval (eval at evaluate (:311:30), <anonymous>:4:5)\n    at async <anonymous>:337:30\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-location.spec.ts:32:30"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-runtime-fixture.ts",
+                        "column": 29,
+                        "line": 77
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  -  1\u001b[39m\n\u001b[31m+ Received  + 12\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"message\": \"SecurityError: Failed to read a named property 'removeEventListener' from 'Window': Blocked a frame with origin \\\"http://127.0.0.1:5173\\\" from accessing a cross-origin frame.\",\u001b[39m\n\u001b[31m+     \"name\": \"native-location\",\u001b[39m\n\u001b[31m+     \"phase\": \"unmount\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"message\": \"SecurityError: Failed to read a named property 'removeEventListener' from 'Window': Blocked a frame with origin \\\"http://127.0.0.1:5173\\\" from accessing a cross-origin frame.\",\u001b[39m\n\u001b[31m+     \"name\": \"native-location\",\u001b[39m\n\u001b[31m+     \"phase\": \"dispose\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n   at upstream-runtime-fixture.ts:77\n\n  75 |         return result;\n  76 |       });\n> 77 |       expect(result.errors).toEqual(result.expectedErrors);\n     |                             ^\n  78 |       expect(result.children).toBe(0);\n  79 |       expect(pageErrors).toEqual([]);\n  80 |     }\n    at Object.base.extend.runtimeCase.auto (/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-runtime-fixture.ts:77:29)"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:48:08.502Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-l-ddce3-poses-after-crossing-origin-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-l-ddce3-poses-after-crossing-origin-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/realm-host/dist/index.js",
+                    "column": 29,
+                    "line": 434
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c7420a37da65ce6a20b2-e433d652997717e2219f",
+          "file": "upstream-batch02-runtime-location.spec.ts",
+          "line": 6,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-08T06:48:04.306Z",
+    "duration": 4618.624,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

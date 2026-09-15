@@ -1,0 +1,122 @@
+{
+  "executionStatus": "not-run-agent-source-preparation-only",
+  "issues": [
+    {
+      "id": "umijs/qiankun#3093",
+      "suggestedStatusAfterPass": "regression-passed",
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-batch04-runtime-loading.spec.ts",
+          "title": "Q3001 Q3093 manual load failure preserves host and sibling while lifecycle loading settles"
+        },
+        {
+          "path": "tests/e2e/upstream-batch04-runtime-loading.spec.ts",
+          "title": "Q3093 native lifecycle loading indicator clears after manual load (success=true)"
+        },
+        {
+          "path": "tests/e2e/upstream-batch04-runtime-loading.spec.ts",
+          "title": "Q3093 native lifecycle loading indicator clears after manual load (success=false)"
+        }
+      ],
+      "conditions": "Native Runtime lifecycle drives real host loading UI: pending HTML request shows data-loading=true; successful mount and failed/error/disposed load both hide UI and set false. Success button stays interactive; failure resources removed.",
+      "limitations": "Equivalent native loading UI contract; original Umi defaultLoader callback is not a public API of this runtime and its plugin integration is not executed."
+    },
+    {
+      "id": "umijs/qiankun#3001",
+      "suggestedStatusAfterPass": "regression-passed",
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-batch04-runtime-loading.spec.ts",
+          "title": "Q3001 Q3093 manual load failure preserves host and sibling while lifecycle loading settles"
+        }
+      ],
+      "conditions": "Manual HTML load responds 503; host has lifecycle exports with mount/unmount counters; established sibling retains its actual frame, state and click interactions; host sentinel identity and handlers survive; failed slot removes surface/Realm. Failure history includes error followed by final disposed, as mountApp performs cleanup before rejecting.",
+      "limitations": "Representative native Runtime manual-loading contract; original application and main.js not supplied upstream."
+    },
+    {
+      "id": "umijs/qiankun#2991",
+      "suggestedStatusAfterPass": "partial-coverage",
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-batch04-runtime-lifecycle.spec.ts",
+          "title": "Q2991 repeatedly destroys real Vue 2 instances and subscriptions without retaining connected Realms"
+        }
+      ],
+      "conditions": "Vue 2.7.16 real component mounts/clicks/disposes four times; destroyed hook count, event subscription release, iframe disconnection and DOM cleanup checked each cycle. Vue destroyed hook sends an acknowledged service call; async unmount awaits it before MessagePort teardown. This avoids treating queued fire-and-forget teardown events as synchronous evidence.",
+      "limitations": "Does not prove garbage collection, bounded heap growth, original 32-bit Windows Chrome memory behavior or absence of retained detached objects; explicit saved iframe references in probe intentionally prevent heap reclamation measurement."
+    },
+    {
+      "id": "Tencent/wujie#1057",
+      "suggestedStatusAfterPass": "partial-coverage",
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-batch04-runtime-loading.spec.ts",
+          "title": "W1057 configured load timeout removes a delayed entry Realm and permits recovery at the same URL"
+        },
+        {
+          "path": "tests/e2e/upstream-batch04-runtime-network.spec.ts",
+          "title": "W1057 HTML script timeout cancels transport and recovers at the same URL"
+        },
+        {
+          "path": "tests/e2e/upstream-batch04-runtime-network.spec.ts",
+          "title": "W1057 HTML stylesheet timeout-only releases Runtime resources with native transport remaining pending"
+        }
+      ],
+      "conditions": "Module timeout probe plus real HTML external classic script and CSS served by node:http. Runtime load timeout rejects and removes Realm/surface. Classic script branch asserts physical transport close and same-URL recovery with clicks/CSS color. Stylesheet branch asserts only timeout/DOM cleanup and records transport limitation; it makes no CSS recovery assertion.",
+      "limitations": "Native control 9 cases (3 engines × remove link / clear href / remove ShadowRoot host) observed no stylesheet transport cancellation within 5000ms. CSS waiting/DOM cleanup and recovery are tested; physical CSS transport cancellation is not claimed. See native-network.json/log and archived native-network.spec.ts.txt. Real Safari not executed. Chromium/Firefox reuse a still-pending identical CSS URL, so same-resource recovery timed out (runtime-network-final.json). Verified recovery uses the same HTML entry with an explicitly new CSS revision query; the old response remains open until fixture teardown and is never claimed cancelled. Versioned-CSS recovery attempt also times out in Firefox (runtime-network-verified.json); Chromium/WebKit pass that narrower recovery. No physical CSS cancellation or all-engine CSS recovery claim is justified.",
+      "executionNote": "Final timeout-only test source and renamed titles not rerun by subagent; root must bind new titles only after actual final verification. Existing failed reports retained; this is an evidence-backed test contract correction, no product fix.",
+      "archivedProbes": [
+        "native-network.spec.ts.txt",
+        "runtime-network-versioned-css-recovery.spec.ts.txt",
+        "runtime-network-versioned-css-fixture.ts.txt",
+        "runtime-network-original-css-recovery.spec.ts.txt",
+        "runtime-network-original-css-fixture.ts.txt"
+      ],
+      "archiveNote": "Versioned recovery source copied verbatim before final contraction. Original same-CSS recovery source reconstructed by reverting only the versioned CSS URL / new request-evidence additions; historical actual execution remains runtime-network-final.json/log (exit 1). Native source copied before removal."
+    },
+    {
+      "id": "Tencent/wujie#1039",
+      "suggestedStatusAfterPass": "regression-passed",
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-batch04-runtime-lifecycle.spec.ts",
+          "title": "W1039 reopens a real host dialog with an alive Vue router after repeated child navigation"
+        }
+      ],
+      "conditions": "Native host dialog contains an alive Vue3/Vue Router application; 3 close/unmount/open/mount cycles with child forward/back routes, preserved counter and same connected iframe; final disposal removes owned resources.",
+      "limitations": "Original dialog library and reproduction missing; uses native HTMLDialogElement with real Vue3/Vue Router fixture."
+    },
+    {
+      "id": "Tencent/wujie#976",
+      "suggestedStatusAfterPass": "regression-passed",
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-batch04-runtime-loading.spec.ts",
+          "title": "W976 W1017 delayed resource A-B-A switching retains one interactive application (keepAlive=false)"
+        },
+        {
+          "path": "tests/e2e/upstream-batch04-runtime-loading.spec.ts",
+          "title": "W976 W1017 delayed resource A-B-A switching retains one interactive application (keepAlive=true)"
+        }
+      ],
+      "conditions": "Real A module request delayed until host hash route transitions A-B-A; final A interactive and second B-A transition preserves/reset state per keepAlive; fixture teardown checks resources/errors.",
+      "limitations": "Minimal module probe of weak-network overlapping loading; upstream exact application unspecified."
+    },
+    {
+      "id": "Tencent/wujie#1017",
+      "suggestedStatusAfterPass": "partial-coverage",
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-batch04-runtime-loading.spec.ts",
+          "title": "W976 W1017 delayed resource A-B-A switching retains one interactive application (keepAlive=false)"
+        },
+        {
+          "path": "tests/e2e/upstream-batch04-runtime-loading.spec.ts",
+          "title": "W976 W1017 delayed resource A-B-A switching retains one interactive application (keepAlive=true)"
+        }
+      ],
+      "conditions": "Same delayed-network A-B-A race probe as W976.",
+      "limitations": "Original report explicitly differs from W976 but omits project and timing; exact createElement/uninitialized variable code path and WeCom Safari are not reproduced. WebKit does not establish real Safari/WeCom coverage."
+    }
+  ]
+}

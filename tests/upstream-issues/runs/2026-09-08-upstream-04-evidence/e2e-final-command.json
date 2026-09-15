@@ -1,0 +1,15 @@
+{
+  "name": "e2e-final",
+  "command": [
+    "bunx",
+    "playwright",
+    "test",
+    "--reporter=json"
+  ],
+  "cwd": "/Users/fanfangbo/workspace/micro-framework",
+  "startedAt": "2026-09-08T10:57:46.796615+00:00",
+  "completedAt": "2026-09-08T11:01:03.895381+00:00",
+  "durationSeconds": 197.04283775000002,
+  "exitCode": 130,
+  "log": "tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/e2e-final.log"
+}

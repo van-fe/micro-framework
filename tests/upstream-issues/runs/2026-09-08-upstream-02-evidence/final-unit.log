@@ -1,0 +1,2 @@
+$ vitest run "--reporter=json" "--outputFile=/private/tmp/micro-upstream-final-unit.json"
+JSON report written to /private/tmp/micro-upstream-final-unit.json

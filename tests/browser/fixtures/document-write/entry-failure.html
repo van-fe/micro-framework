@@ -1,0 +1,5 @@
+<!doctype html>
+<script>
+  document.write('<script src="./missing-script.js"><\/script>');
+  window.DocumentWriteFailedLifecycle = { mount() {}, unmount() {} };
+</script>

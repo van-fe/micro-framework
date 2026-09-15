@@ -1,0 +1,72 @@
+{
+  "note": "root依据实际exec/write_stdin返回值记录；executionGroup为final-csp-marker-build-gates的六项由session70018以&&串行执行，整体exitCode0；后续独立门禁各有实际执行记录。",
+  "executions": [
+    {
+      "id": "browser",
+      "command": "bun run test:browser --reporter=verbose --reporter=json --outputFile=tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/final-browser.json",
+      "exitCode": 0,
+      "toolSessionId": 70018,
+      "executionGroup": "final-csp-marker-build-gates"
+    },
+    {
+      "id": "install",
+      "command": "bun install --frozen-lockfile",
+      "exitCode": 0,
+      "toolSessionId": 70018,
+      "executionGroup": "final-csp-marker-build-gates"
+    },
+    {
+      "id": "architecture",
+      "command": "bun run check:architecture",
+      "exitCode": 0,
+      "toolSessionId": 70018,
+      "executionGroup": "final-csp-marker-build-gates"
+    },
+    {
+      "id": "typecheck",
+      "command": "bun run typecheck",
+      "exitCode": 0,
+      "toolSessionId": 70018,
+      "executionGroup": "final-csp-marker-build-gates"
+    },
+    {
+      "id": "build",
+      "command": "bun run build",
+      "exitCode": 0,
+      "toolSessionId": 70018,
+      "executionGroup": "final-csp-marker-build-gates"
+    },
+    {
+      "id": "unit",
+      "command": "bun run test:unit --reporter=verbose --reporter=json --outputFile=tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/final-unit.json",
+      "exitCode": 0,
+      "toolSessionId": 70018,
+      "executionGroup": "final-csp-marker-build-gates"
+    },
+    {
+      "id": "e2e",
+      "command": "PLAYWRIGHT_JSON_OUTPUT_NAME=tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/final-e2e.json bunx playwright test --reporter=line,json",
+      "exitCode": 0,
+      "toolSessionId": 57771
+    },
+    {
+      "id": "production",
+      "command": "PLAYWRIGHT_JSON_OUTPUT_NAME=tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/final-production.json bunx playwright test --config playwright.production.config.ts --reporter=line,json",
+      "exitCode": 0,
+      "toolSessionId": 23964
+    },
+    {
+      "id": "artifacts",
+      "command": "bun run check:artifacts",
+      "exitCode": 1,
+      "toolChunkId": "eda0d4",
+      "reason": "bundledRuntimeGzipBytes: 109025 > 50000"
+    },
+    {
+      "id": "test-types-after-harness-alignment",
+      "command": "bun run typecheck:tests",
+      "exitCode": 0,
+      "toolSessionId": 56970
+    }
+  ]
+}

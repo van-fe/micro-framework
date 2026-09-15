@@ -1,0 +1,46 @@
+import { isolateBrowserProcess } from './browser-process-fixture';
+import { addSlot, expect, test } from './upstream-batch04-runtime-network-fixture';
+
+isolateBrowserProcess(import.meta.url);
+
+// Native control: no Runtime application or document bridge creates these nodes.
+for (const cleanup of ['remove-link', 'clear-href', 'remove-shadow-host'] as const) {
+  test(`W1057 native pending stylesheet transport control (${cleanup})`, async ({ page, slowDeployment }, testInfo) => {
+    slowDeployment.blocked = 'style';
+    await addSlot(page, 'native-style-host');
+    await page.evaluate(url => {
+      const host = document.querySelector('#native-style-host')!;
+      const root = host.attachShadow({ mode: 'open' });
+      const link = document.createElement('link'); link.rel = 'stylesheet';
+      link.href = new URL('/slow.css', url).href; root.appendChild(link);
+    }, slowDeployment.url);
+    await expect.poll(() => slowDeployment.requests.includes('/slow.css')).toBe(true);
+    await page.evaluate(cleanup => {
+      const host = document.querySelector('#native-style-host')!;
+      const link = host.shadowRoot!.querySelector('link')!;
+      if (cleanup === 'remove-link') link.remove();
+      else if (cleanup === 'clear-href') link.removeAttribute('href');
+      else host.remove();
+    }, cleanup);
+    let closed = false;
+    try {
+      // Same bounded observation used by the Runtime transport assertion.
+      await expect.poll(() => slowDeployment.aborted, { timeout: 5000 }).toContain('/slow.css');
+      closed = true;
+    } catch {
+      // This is an observation probe, not a product compatibility pass.
+      closed = slowDeployment.aborted.includes('/slow.css');
+    }
+    const evidence = {
+      browser: testInfo.project.name,
+      cleanup,
+      requestObserved: slowDeployment.requests.includes('/slow.css'),
+      pendingTransportClosedWithin5000ms: closed,
+      serverEndedResponse: false,
+      userAgent: await page.evaluate(() => navigator.userAgent),
+      note: 'Server cleanup occurs only after this attachment. Passing this control means observation completed, not transport cancellation succeeded.',
+    };
+    await testInfo.attach('native-stylesheet-transport', { contentType: 'application/json', body: JSON.stringify(evidence, null, 2) });
+    console.log('NATIVE_STYLESHEET_TRANSPORT', JSON.stringify(evidence));
+  });
+}

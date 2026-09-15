@@ -1,0 +1,310 @@
+{
+  "id": "2026-09-08-completion",
+  "assessedAt": "2026-09-08T05:13:20.193574+00:00",
+  "kind": "executed-scenarios-and-status-update",
+  "verificationRun": "2026-09-08-upstream-02",
+  "note": "逐条状态以实际执行的测试名称、引擎结果和 resolution 的覆盖范围核对。行为完成与发布体积失败分别记录；未运行真实 Safari。",
+  "previousCounts": {
+    "regression-passed": 18,
+    "test-not-written": 14,
+    "fixed": 2,
+    "partial-coverage": 1,
+    "contract-not-assessed": 1,
+    "out-of-scope": 1,
+    "missing-reproduction-details": 2,
+    "partially-unsupported": 1
+  },
+  "currentCounts": {
+    "regression-passed": 31,
+    "fixed": 8,
+    "out-of-scope": 1
+  },
+  "changes": [
+    {
+      "id": "umijs/qiankun#3019",
+      "from": "regression-passed",
+      "to": "regression-passed",
+      "reason": "创建两个Realm后销毁并创建第三个；宿主head/Node原型方法身份不变，动态style进入各自ShadowRoot。 证据范围：Chromium/Firefox/WebKit；真实Safari本轮未运行。",
+      "mappedTests": 1
+    },
+    {
+      "id": "umijs/qiankun#2368",
+      "from": "regression-passed",
+      "to": "regression-passed",
+      "reason": "Runtime.mountApp同名同入口三实例，删除中间容器后原位新增；四个历史instanceId唯一、首尾iframe及交互状态保留。未重跑旧框架loadMicroApp实现。 证据范围：Chromium/Firefox/WebKit；真实Safari本轮未运行。",
+      "mappedTests": 1
+    },
+    {
+      "id": "umijs/qiankun#578",
+      "from": "regression-passed",
+      "to": "regression-passed",
+      "reason": "宿主通过真实hash路由离开子应用后动态加载路由link CSS；宿主计算样式正常，资源不被已卸载应用劫持。 证据：本批Chromium/Firefox/WebKit全部通过；本轮未运行真实Safari。",
+      "mappedTests": 2
+    },
+    {
+      "id": "umijs/qiankun#2735",
+      "from": "test-not-written",
+      "to": "regression-passed",
+      "reason": "真实hash导航与浏览器后退形成A-B-A，keepAlive开/关均检查激活后计数交互、实例/iframe身份和清理。 证据：本批Chromium/Firefox/WebKit全部通过；本轮未运行真实Safari。",
+      "mappedTests": 2
+    },
+    {
+      "id": "umijs/qiankun#2854",
+      "from": "test-not-written",
+      "to": "regression-passed",
+      "reason": "同name、同container首次HTML入口404后显式改为健康entry，再次请求成功并可交互，失败surface与iframe得到回收。 证据：本批Chromium/Firefox/WebKit全部通过；本轮未运行真实Safari。",
+      "mappedTests": 1
+    },
+    {
+      "id": "umijs/qiankun#2171",
+      "from": "regression-passed",
+      "to": "regression-passed",
+      "reason": "HTML经真实HTTP加载带空格的CSS及经典脚本文件，文件名完整编码，样式生效且生命周期可执行。 证据范围：Chromium/Firefox/WebKit；真实Safari本轮未运行。",
+      "mappedTests": 1
+    },
+    {
+      "id": "umijs/qiankun#2362",
+      "from": "test-not-written",
+      "to": "regression-passed",
+      "reason": "由真实服务器将a/b/c响应完成顺序反转为c/b/a；iframe动态classic script均async=false，执行仍严格a/b/c。 证据：本批Chromium/Firefox/WebKit全部通过；本轮未运行真实Safari。",
+      "mappedTests": 1
+    },
+    {
+      "id": "umijs/qiankun#1089",
+      "from": "test-not-written",
+      "to": "fixed",
+      "reason": "先测出卸载尚未完成时mount提前切换状态；串行化真实卸载并登记操作后再进入用户钩子，覆盖keepAlive两模式、首次挂载取消、最新卸载优先和监听器重入，并验证keepAlive零容量淘汰不自等待。 证据：本批Chromium/Firefox/WebKit全部通过；本轮未运行真实Safari。",
+      "mappedTests": 8
+    },
+    {
+      "id": "umijs/qiankun#222",
+      "from": "test-not-written",
+      "to": "regression-passed",
+      "reason": "真实React+AntD confirm.onOk直接触发宿主hash路由切换应用，目标应用正常挂载，原确认框及事件收尾不产生pageerror。 证据：本批Chromium/Firefox/WebKit全部通过；本轮未运行真实Safari。",
+      "mappedTests": 1
+    },
+    {
+      "id": "umijs/qiankun#951",
+      "from": "fixed",
+      "to": "fixed",
+      "reason": "先在三个引擎复现正确父surface.removeChild(script)抛NotFoundError，再用WeakMap跟踪所属head/body修复；覆盖错误父节点、异域Realm节点、移动重插、同步自移除。实际parentNode仍是iframe原生head，不承诺任意insertBefore参考节点语义。 证据范围：Chromium/Firefox/WebKit；真实Safari本轮未运行。",
+      "mappedTests": 5
+    },
+    {
+      "id": "umijs/qiankun#1271",
+      "from": "partial-coverage",
+      "to": "fixed",
+      "reason": "HTML Entry原body中的style保留嵌套DOM位置、media与id；异步追加同优先级head style后body样式仍占优。将放置策略临时回退为全部放入head时三引擎均失败，恢复位置修复后通过。 证据：本批Chromium/Firefox/WebKit全部通过；本轮未运行真实Safari。",
+      "mappedTests": 2
+    },
+    {
+      "id": "umijs/qiankun#1613",
+      "from": "test-not-written",
+      "to": "regression-passed",
+      "reason": "真实iframe classic脚本采用Lodash式global/self/Object探测与UMD写入_，验证宿主已有/未有_两种状态、两个兄弟实例全局隔离和globalThis/self/经典this一致；测试等价UMD入口，不运行完整Lodash发行包。 证据：本批Chromium/Firefox/WebKit全部通过；本轮未运行真实Safari。",
+      "mappedTests": 2
+    },
+    {
+      "id": "umijs/qiankun#1266",
+      "from": "test-not-written",
+      "to": "regression-passed",
+      "reason": "在iframe中缓存document，分别从Promise和timer回调创建并加载脚本，执行保留iframe Realm，宿主与兄弟全局不受影响。 证据：本批Chromium/Firefox/WebKit全部通过；本轮未运行真实Safari。",
+      "mappedTests": 1
+    },
+    {
+      "id": "umijs/qiankun#420",
+      "from": "regression-passed",
+      "to": "regression-passed",
+      "reason": "head.insertBefore动态style的节点归属和插入顺序保持，真实computedStyle正确且宿主head不被修改；通用DOM探针未安装原Emotion版本。 证据范围：Chromium/Firefox/WebKit；真实Safari本轮未运行。",
+      "mappedTests": 1
+    },
+    {
+      "id": "umijs/qiankun#1449",
+      "from": "regression-passed",
+      "to": "regression-passed",
+      "reason": "应用ESM在真实iframe执行，对window自定义函数调用call/apply/bind均更新显式receiver。 证据范围：Chromium/Firefox/WebKit；真实Safari本轮未运行。",
+      "mappedTests": 1
+    },
+    {
+      "id": "umijs/qiankun#748",
+      "from": "regression-passed",
+      "to": "regression-passed",
+      "reason": "真实iframe内的window构造函数保留prototype扩展、new、继承字段与instanceof；宿主无对应全局。 证据范围：Chromium/Firefox/WebKit；真实Safari本轮未运行。",
+      "mappedTests": 1
+    },
+    {
+      "id": "umijs/qiankun#886",
+      "from": "test-not-written",
+      "to": "regression-passed",
+      "reason": "真实ESM入口顶层ReferenceError、bootstrap ReferenceError两条路径后切换健康应用，目标应用可交互且失败实例资源清理。 证据：本批Chromium/Firefox/WebKit全部通过；本轮未运行真实Safari。",
+      "mappedTests": 2
+    },
+    {
+      "id": "umijs/qiankun#341",
+      "from": "contract-not-assessed",
+      "to": "regression-passed",
+      "reason": "新增AppEntry.credentials公开契约；真实双源HTTP服务器核对Cookie，include/same-origin贯穿HTML入口、预取、static classic/module/link、ESM静态/动态图、运行期script/link/modulepreload及write资源；显式crossorigin优先，省略保持原默认。该配置表达请求凭据，不实现任意fetch代码变换，也不绕过CORS或浏览器Cookie政策。 证据：本批Chromium/Firefox/WebKit全部通过；本轮未运行真实Safari。",
+      "mappedTests": 5
+    },
+    {
+      "id": "umijs/qiankun#187",
+      "from": "fixed",
+      "to": "fixed",
+      "reason": "实际发现提取器先收集所有link再收集style，破坏交错顺序；改为一次按文档顺序遍历。三引擎解析顺序与真实外链CSS计算样式均通过；HTML body样式原位置问题另见Q1271。 证据范围：Chromium/Firefox/WebKit；真实Safari本轮未运行。",
+      "mappedTests": 2
+    },
+    {
+      "id": "umijs/qiankun#777",
+      "from": "regression-passed",
+      "to": "regression-passed",
+      "reason": "经典脚本先注册生命周期，再写不相关全局及console自赋值；未指定globalName，自动发现仍正确并可mount/unmount。 证据范围：Chromium/Firefox/WebKit；真实Safari本轮未运行。",
+      "mappedTests": 1
+    },
+    {
+      "id": "Tencent/wujie#835",
+      "from": "regression-passed",
+      "to": "regression-passed",
+      "reason": "两个持续存活的兄弟应用分别监听window自定义事件，同步交错派发只到对应实例；移除后不再收到，宿主不接收。测试使用先监听再派发的正确顺序。 证据：本批Chromium/Firefox/WebKit全部通过；本轮未运行真实Safari。",
+      "mappedTests": 2
+    },
+    {
+      "id": "Tencent/wujie#823",
+      "from": "regression-passed",
+      "to": "regression-passed",
+      "reason": "真实React应用含AntD事件，keepAlive=false覆盖beforeUnmount/unmount延迟，keepAlive=true覆盖beforeUnmount/deactivate延迟，等待对应阶段后再激活；按钮状态与事件可用，旧surface/iframe不重复，最终清理无错误。 证据：本批Chromium/Firefox/WebKit全部通过；本轮未运行真实Safari。",
+      "mappedTests": 5
+    },
+    {
+      "id": "Tencent/wujie#116",
+      "from": "regression-passed",
+      "to": "regression-passed",
+      "reason": "保活的同一iframe/surface/style.sheet和CSSOM规则在重新激活后保留。该回归额外发现失活后仍可见：修复:host显示样式覆盖hidden的缺陷，并验证尺寸归零、不可聚焦、重新激活恢复原布局与焦点。未复现本地CSSOM规则丢失；未运行原twind包。 证据范围：Chromium/Firefox/WebKit；真实Safari本轮未运行。",
+      "mappedTests": 2
+    },
+    {
+      "id": "Tencent/wujie#107",
+      "from": "regression-passed",
+      "to": "fixed",
+      "reason": "真实点击#fragment、空href会导航应用iframe hash并保留宿主URL，hashchange及交互状态正确；应用Document监听器preventDefault仍生效。修复前已观察到宿主hash被误改。 证据：本批Chromium/Firefox/WebKit全部通过；本轮未运行真实Safari。",
+      "mappedTests": 2
+    },
+    {
+      "id": "Tencent/wujie#102",
+      "from": "regression-passed",
+      "to": "regression-passed",
+      "reason": "真实iframe内window函数的call/apply/bind保持原生this，结果不写入全局。 证据范围：Chromium/Firefox/WebKit；真实Safari本轮未运行。",
+      "mappedTests": 1
+    },
+    {
+      "id": "Tencent/wujie#78",
+      "from": "regression-passed",
+      "to": "regression-passed",
+      "reason": "同一个style与link分别连续移除/重插，真实外链CSS重新加载生效、节点身份和id保持，无属性重复定义异常。 证据：本批Chromium/Firefox/WebKit全部通过；本轮未运行真实Safari。",
+      "mappedTests": 3
+    },
+    {
+      "id": "Tencent/wujie#67",
+      "from": "missing-reproduction-details",
+      "to": "fixed",
+      "reason": "真实X6 3.1.8默认body Dnd，从palette拖入画布；覆盖宿主偏移、页面滚动与scale(.85)，预览跟随指针，drop坐标遵循实际grid snapping，保持ShadowRoot归属。先复现mousemove缺失、文档滚动值不一致和缩放祖先影响预览，逐项在底层修复。原issue未给出锁定版本，本次记录所选版本与真实触发条件。 证据：本批Chromium/Firefox/WebKit全部通过；本轮未运行真实Safari。",
+      "mappedTests": 5
+    },
+    {
+      "id": "Tencent/wujie#49",
+      "from": "partially-unsupported",
+      "to": "fixed",
+      "reason": "应用document.write/writeln已由明确拒绝改为流式兼容，验证分段HTML、原位置、同步/嵌套classic、外部依赖、资源URL、数据脚本、inert template、open/close、子iframe原生写入、实例隔离与取消；并验证应用readyState、defer、DOMContentLoaded、async、图片完成及window.onload/load的顺序和单次派发。兼容写入不等同完整导航解析器：晚期write追加；同一JS调用栈不等待外部下载；写入内联module原生异步执行，不保证在flush或生命周期发现前完成。 证据：本批Chromium/Firefox/WebKit全部通过；本轮未运行真实Safari。",
+      "mappedTests": 23
+    },
+    {
+      "id": "Tencent/wujie#12",
+      "from": "regression-passed",
+      "to": "regression-passed",
+      "reason": "真实Vite WebSocket CSS update，测试改动源CSS后验证:root变量与实际几何/颜色更新，iframe与按钮状态不重建，宿主与兄弟隔离；finally恢复源CSS文件。 证据：本批Chromium/Firefox/WebKit全部通过；本轮未运行真实Safari。",
+      "mappedTests": 2
+    },
+    {
+      "id": "Tencent/wujie#832",
+      "from": "test-not-written",
+      "to": "regression-passed",
+      "reason": "使用原复现锁定的bpmn-js 3.5.0与Vue 2.7.16，真实Vue2 host/child插入BPMN图，验证Start/Task/Flow SVG绘制，Firefox及其余两引擎通过。 证据：本批Chromium/Firefox/WebKit全部通过；本轮未运行真实Safari。",
+      "mappedTests": 1
+    },
+    {
+      "id": "Tencent/wujie#830",
+      "from": "missing-reproduction-details",
+      "to": "regression-passed",
+      "reason": "真实naive-ui 2.45.3/Vue 3.5.42 NSelect默认body portal，keepAlive false/true两种A-B-A后更改宿主偏移/滚动，展开定位与选项点击正确。原issue缺少版本与组件锁定，本次采用明确记录的代表性下拉组件。 证据：本批Chromium/Firefox/WebKit全部通过；本轮未运行真实Safari。",
+      "mappedTests": 2
+    },
+    {
+      "id": "Tencent/wujie#829",
+      "from": "test-not-written",
+      "to": "regression-passed",
+      "reason": "真实Recharts 3.10.1/React 19.2.8，页面滚动140px后鼠标依次命中三根bar下部，Tooltip显示各自正确label。 证据：本批Chromium/Firefox/WebKit全部通过；本轮未运行真实Safari。",
+      "mappedTests": 1
+    },
+    {
+      "id": "Tencent/wujie#882",
+      "from": "regression-passed",
+      "to": "regression-passed",
+      "reason": "document.querySelector(\":root\")返回本应用surface.host而不是null或宿主html。 证据范围：Chromium/Firefox/WebKit；真实Safari本轮未运行。",
+      "mappedTests": 1
+    },
+    {
+      "id": "Tencent/wujie#485",
+      "from": "regression-passed",
+      "to": "regression-passed",
+      "reason": "标准rel=stylesheet/href动态link在真实加载后保留id，应用getElementById返回同一对象，宿主查询不到。 证据范围：Chromium/Firefox/WebKit；真实Safari本轮未运行。",
+      "mappedTests": 1
+    },
+    {
+      "id": "Tencent/wujie#209",
+      "from": "test-not-written",
+      "to": "fixed",
+      "reason": "先在三引擎复现iframe constructed CSSStyleSheet被可见嵌套ShadowRoot采用时NotAllowedError；改用可见Document作为构造归属，同时保留iframe原型/newTarget及子类，验证adoptedStyleSheets、replaceSync、兄弟隔离和宿主构造器不变。覆盖原问题的sheet归属机制，不宣称完整Iconpark或Custom Element Registry生态。 证据：本批Chromium/Firefox/WebKit全部通过；本轮未运行真实Safari。",
+      "mappedTests": 1
+    },
+    {
+      "id": "Tencent/wujie#988",
+      "from": "regression-passed",
+      "to": "regression-passed",
+      "reason": "两个持续存活应用各自document自定义事件同步交错派发与监听移除隔离通过；此范围不包括所有任意可见DOM自定义事件的冒泡桥接。 证据：本批Chromium/Firefox/WebKit全部通过；本轮未运行真实Safari。",
+      "mappedTests": 2
+    },
+    {
+      "id": "Tencent/wujie#896",
+      "from": "test-not-written",
+      "to": "regression-passed",
+      "reason": "真实Element Plus 2.14.5 dialog draggable，按原生动画稳定后拖至宿主视口右下边界，位置误差小于4px，面板保持应用归属。 证据：本批Chromium/Firefox/WebKit全部通过；本轮未运行真实Safari。",
+      "mappedTests": 1
+    },
+    {
+      "id": "Tencent/wujie#770",
+      "from": "test-not-written",
+      "to": "regression-passed",
+      "reason": "两个应用轮流创建、缓存和读取Selection；选择从A切到B时A不能读取B文本或清除B选区，document/window入口与缓存对象保持各实例范围。 证据：本批Chromium/Firefox/WebKit全部通过；本轮未运行真实Safari。",
+      "mappedTests": 1
+    },
+    {
+      "id": "Tencent/wujie#288",
+      "from": "test-not-written",
+      "to": "regression-passed",
+      "reason": "真实Monaco Editor 0.56.0，用鼠标命中已有第二行代码中部，检查caret行列号，再输入字符并验证精确插入位置；并非仅键盘编辑探针。 证据：本批Chromium/Firefox/WebKit全部通过；本轮未运行真实Safari。",
+      "mappedTests": 1
+    }
+  ],
+  "unchangedExcludedIssues": [
+    "Tencent/wujie#70"
+  ],
+  "historicalEvidence": [
+    {
+      "path": "tests/upstream-issues/runs/2026-09-08-upstream-01.json",
+      "sha256": "2c1ca390ce98623189cd83338e1078d52a0c77e8021fd1dcae360cfa9634b2b3"
+    },
+    {
+      "path": "tests/upstream-issues/assessments/2026-09-08-status-clarification.json",
+      "sha256": "d3818c4f2a57c3a799360e537ff574eb527e4177f18ac955a1853cf17236f617"
+    }
+  ]
+}

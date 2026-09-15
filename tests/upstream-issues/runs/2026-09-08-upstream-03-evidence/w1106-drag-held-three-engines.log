@@ -1,0 +1,19 @@
+
+Running 3 tests using 1 worker
+
+(node:63893) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/3] [chromium] › tests/e2e/upstream-batch02-components-overlays.spec.ts:9:1 › W1106 Ant Design Vue default virtual Select scrolls by dragging its real scrollbar thumb
+(node:63898) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[2/3] [firefox] › tests/e2e/upstream-batch02-components-overlays.spec.ts:9:1 › W1106 Ant Design Vue default virtual Select scrolls by dragging its real scrollbar thumb
+(node:63906) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[3/3] [webkit] › tests/e2e/upstream-batch02-components-overlays.spec.ts:9:1 › W1106 Ant Design Vue default virtual Select scrolls by dragging its real scrollbar thumb
+  3 passed (9.1s)

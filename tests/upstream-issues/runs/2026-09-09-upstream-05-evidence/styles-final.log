@@ -1,0 +1,19 @@
+
+Running 3 tests using 1 worker
+
+(node:56746) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/3] [chromium] › tests/e2e/upstream-batch04-styles.spec.ts:6:1 › Q3018 preserves module initialized adjacent styles across keepAlive hide return and disposal recreation
+(node:56754) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[2/3] [firefox] › tests/e2e/upstream-batch04-styles.spec.ts:6:1 › Q3018 preserves module initialized adjacent styles across keepAlive hide return and disposal recreation
+(node:56762) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[3/3] [webkit] › tests/e2e/upstream-batch04-styles.spec.ts:6:1 › Q3018 preserves module initialized adjacent styles across keepAlive hide return and disposal recreation
+  3 passed (7.0s)

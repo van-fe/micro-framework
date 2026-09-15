@@ -1,0 +1,511 @@
+{
+  "config": {
+    "argv": [
+      "/Users/fanfangbo/.local/share/fnm/node-versions/v24.19.0/installation/bin/node",
+      "/Users/fanfangbo/workspace/micro-framework/node_modules/.bin/playwright",
+      "test",
+      "tests/e2e/upstream-batch04-native-network.spec.ts",
+      "--reporter=json,line"
+    ],
+    "configFile": "/Users/fanfangbo/workspace/micro-framework/playwright.config.ts",
+    "rootDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ],
+      [
+        "line"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "upstream-batch04-native-network.spec.ts",
+      "file": "upstream-batch04-native-network.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "W1057 native pending stylesheet transport control (remove-link)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5279,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "NATIVE_STYLESHEET_TRANSPORT {\"browser\":\"chromium\",\"cleanup\":\"remove-link\",\"requestObserved\":true,\"pendingTransportClosedWithin5000ms\":false,\"serverEndedResponse\":false,\"userAgent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.7922.34 Safari/537.36\",\"note\":\"Server cleanup occurs only after this attachment. Passing this control means observation completed, not transport cancellation succeeded.\"}\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:30:46.904Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-stylesheet-transport",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAiY2xlYW51cCI6ICJyZW1vdmUtbGluayIsCiAgInJlcXVlc3RPYnNlcnZlZCI6IHRydWUsCiAgInBlbmRpbmdUcmFuc3BvcnRDbG9zZWRXaXRoaW41MDAwbXMiOiBmYWxzZSwKICAic2VydmVyRW5kZWRSZXNwb25zZSI6IGZhbHNlLAogICJ1c2VyQWdlbnQiOiAiTW96aWxsYS81LjAgKFdpbmRvd3MgTlQgMTAuMDsgV2luNjQ7IHg2NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzE1MS4wLjc5MjIuMzQgU2FmYXJpLzUzNy4zNiIsCiAgIm5vdGUiOiAiU2VydmVyIGNsZWFudXAgb2NjdXJzIG9ubHkgYWZ0ZXIgdGhpcyBhdHRhY2htZW50LiBQYXNzaW5nIHRoaXMgY29udHJvbCBtZWFucyBvYnNlcnZhdGlvbiBjb21wbGV0ZWQsIG5vdCB0cmFuc3BvcnQgY2FuY2VsbGF0aW9uIHN1Y2NlZWRlZC4iCn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d631d7b6fc83acfea2e3-75669e354a223ac8a37f",
+          "file": "upstream-batch04-native-network.spec.ts",
+          "line": 8,
+          "column": 3
+        },
+        {
+          "title": "W1057 native pending stylesheet transport control (clear-href)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5083,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "NATIVE_STYLESHEET_TRANSPORT {\"browser\":\"chromium\",\"cleanup\":\"clear-href\",\"requestObserved\":true,\"pendingTransportClosedWithin5000ms\":false,\"serverEndedResponse\":false,\"userAgent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.7922.34 Safari/537.36\",\"note\":\"Server cleanup occurs only after this attachment. Passing this control means observation completed, not transport cancellation succeeded.\"}\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:30:52.368Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-stylesheet-transport",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAiY2xlYW51cCI6ICJjbGVhci1ocmVmIiwKICAicmVxdWVzdE9ic2VydmVkIjogdHJ1ZSwKICAicGVuZGluZ1RyYW5zcG9ydENsb3NlZFdpdGhpbjUwMDBtcyI6IGZhbHNlLAogICJzZXJ2ZXJFbmRlZFJlc3BvbnNlIjogZmFsc2UsCiAgInVzZXJBZ2VudCI6ICJNb3ppbGxhLzUuMCAoV2luZG93cyBOVCAxMC4wOyBXaW42NDsgeDY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvMTUxLjAuNzkyMi4zNCBTYWZhcmkvNTM3LjM2IiwKICAibm90ZSI6ICJTZXJ2ZXIgY2xlYW51cCBvY2N1cnMgb25seSBhZnRlciB0aGlzIGF0dGFjaG1lbnQuIFBhc3NpbmcgdGhpcyBjb250cm9sIG1lYW5zIG9ic2VydmF0aW9uIGNvbXBsZXRlZCwgbm90IHRyYW5zcG9ydCBjYW5jZWxsYXRpb24gc3VjY2VlZGVkLiIKfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d631d7b6fc83acfea2e3-6fd753d35e7d18da028f",
+          "file": "upstream-batch04-native-network.spec.ts",
+          "line": 8,
+          "column": 3
+        },
+        {
+          "title": "W1057 native pending stylesheet transport control (remove-shadow-host)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5100,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "NATIVE_STYLESHEET_TRANSPORT {\"browser\":\"chromium\",\"cleanup\":\"remove-shadow-host\",\"requestObserved\":true,\"pendingTransportClosedWithin5000ms\":false,\"serverEndedResponse\":false,\"userAgent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.7922.34 Safari/537.36\",\"note\":\"Server cleanup occurs only after this attachment. Passing this control means observation completed, not transport cancellation succeeded.\"}\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:30:57.456Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-stylesheet-transport",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAiY2xlYW51cCI6ICJyZW1vdmUtc2hhZG93LWhvc3QiLAogICJyZXF1ZXN0T2JzZXJ2ZWQiOiB0cnVlLAogICJwZW5kaW5nVHJhbnNwb3J0Q2xvc2VkV2l0aGluNTAwMG1zIjogZmFsc2UsCiAgInNlcnZlckVuZGVkUmVzcG9uc2UiOiBmYWxzZSwKICAidXNlckFnZW50IjogIk1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNTEuMC43OTIyLjM0IFNhZmFyaS81MzcuMzYiLAogICJub3RlIjogIlNlcnZlciBjbGVhbnVwIG9jY3VycyBvbmx5IGFmdGVyIHRoaXMgYXR0YWNobWVudC4gUGFzc2luZyB0aGlzIGNvbnRyb2wgbWVhbnMgb2JzZXJ2YXRpb24gY29tcGxldGVkLCBub3QgdHJhbnNwb3J0IGNhbmNlbGxhdGlvbiBzdWNjZWVkZWQuIgp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d631d7b6fc83acfea2e3-33e36049819355a488a5",
+          "file": "upstream-batch04-native-network.spec.ts",
+          "line": 8,
+          "column": 3
+        },
+        {
+          "title": "W1057 native pending stylesheet transport control (remove-link)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5709,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "NATIVE_STYLESHEET_TRANSPORT {\"browser\":\"firefox\",\"cleanup\":\"remove-link\",\"requestObserved\":true,\"pendingTransportClosedWithin5000ms\":false,\"serverEndedResponse\":false,\"userAgent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:153.0) Gecko/20100101 Firefox/153.0\",\"note\":\"Server cleanup occurs only after this attachment. Passing this control means observation completed, not transport cancellation succeeded.\"}\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:31:02.773Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-stylesheet-transport",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImZpcmVmb3giLAogICJjbGVhbnVwIjogInJlbW92ZS1saW5rIiwKICAicmVxdWVzdE9ic2VydmVkIjogdHJ1ZSwKICAicGVuZGluZ1RyYW5zcG9ydENsb3NlZFdpdGhpbjUwMDBtcyI6IGZhbHNlLAogICJzZXJ2ZXJFbmRlZFJlc3BvbnNlIjogZmFsc2UsCiAgInVzZXJBZ2VudCI6ICJNb3ppbGxhLzUuMCAoV2luZG93cyBOVCAxMC4wOyBXaW42NDsgeDY0OyBydjoxNTMuMCkgR2Vja28vMjAxMDAxMDEgRmlyZWZveC8xNTMuMCIsCiAgIm5vdGUiOiAiU2VydmVyIGNsZWFudXAgb2NjdXJzIG9ubHkgYWZ0ZXIgdGhpcyBhdHRhY2htZW50LiBQYXNzaW5nIHRoaXMgY29udHJvbCBtZWFucyBvYnNlcnZhdGlvbiBjb21wbGV0ZWQsIG5vdCB0cmFuc3BvcnQgY2FuY2VsbGF0aW9uIHN1Y2NlZWRlZC4iCn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d631d7b6fc83acfea2e3-f8fc690bd0b1a00dd35f",
+          "file": "upstream-batch04-native-network.spec.ts",
+          "line": 8,
+          "column": 3
+        },
+        {
+          "title": "W1057 native pending stylesheet transport control (clear-href)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5209,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "NATIVE_STYLESHEET_TRANSPORT {\"browser\":\"firefox\",\"cleanup\":\"clear-href\",\"requestObserved\":true,\"pendingTransportClosedWithin5000ms\":false,\"serverEndedResponse\":false,\"userAgent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:153.0) Gecko/20100101 Firefox/153.0\",\"note\":\"Server cleanup occurs only after this attachment. Passing this control means observation completed, not transport cancellation succeeded.\"}\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:31:08.956Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-stylesheet-transport",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImZpcmVmb3giLAogICJjbGVhbnVwIjogImNsZWFyLWhyZWYiLAogICJyZXF1ZXN0T2JzZXJ2ZWQiOiB0cnVlLAogICJwZW5kaW5nVHJhbnNwb3J0Q2xvc2VkV2l0aGluNTAwMG1zIjogZmFsc2UsCiAgInNlcnZlckVuZGVkUmVzcG9uc2UiOiBmYWxzZSwKICAidXNlckFnZW50IjogIk1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQ7IHJ2OjE1My4wKSBHZWNrby8yMDEwMDEwMSBGaXJlZm94LzE1My4wIiwKICAibm90ZSI6ICJTZXJ2ZXIgY2xlYW51cCBvY2N1cnMgb25seSBhZnRlciB0aGlzIGF0dGFjaG1lbnQuIFBhc3NpbmcgdGhpcyBjb250cm9sIG1lYW5zIG9ic2VydmF0aW9uIGNvbXBsZXRlZCwgbm90IHRyYW5zcG9ydCBjYW5jZWxsYXRpb24gc3VjY2VlZGVkLiIKfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d631d7b6fc83acfea2e3-eb8ba1116d263c84f44f",
+          "file": "upstream-batch04-native-network.spec.ts",
+          "line": 8,
+          "column": 3
+        },
+        {
+          "title": "W1057 native pending stylesheet transport control (remove-shadow-host)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5186,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "NATIVE_STYLESHEET_TRANSPORT {\"browser\":\"firefox\",\"cleanup\":\"remove-shadow-host\",\"requestObserved\":true,\"pendingTransportClosedWithin5000ms\":false,\"serverEndedResponse\":false,\"userAgent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:153.0) Gecko/20100101 Firefox/153.0\",\"note\":\"Server cleanup occurs only after this attachment. Passing this control means observation completed, not transport cancellation succeeded.\"}\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:31:14.170Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-stylesheet-transport",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImZpcmVmb3giLAogICJjbGVhbnVwIjogInJlbW92ZS1zaGFkb3ctaG9zdCIsCiAgInJlcXVlc3RPYnNlcnZlZCI6IHRydWUsCiAgInBlbmRpbmdUcmFuc3BvcnRDbG9zZWRXaXRoaW41MDAwbXMiOiBmYWxzZSwKICAic2VydmVyRW5kZWRSZXNwb25zZSI6IGZhbHNlLAogICJ1c2VyQWdlbnQiOiAiTW96aWxsYS81LjAgKFdpbmRvd3MgTlQgMTAuMDsgV2luNjQ7IHg2NDsgcnY6MTUzLjApIEdlY2tvLzIwMTAwMTAxIEZpcmVmb3gvMTUzLjAiLAogICJub3RlIjogIlNlcnZlciBjbGVhbnVwIG9jY3VycyBvbmx5IGFmdGVyIHRoaXMgYXR0YWNobWVudC4gUGFzc2luZyB0aGlzIGNvbnRyb2wgbWVhbnMgb2JzZXJ2YXRpb24gY29tcGxldGVkLCBub3QgdHJhbnNwb3J0IGNhbmNlbGxhdGlvbiBzdWNjZWVkZWQuIgp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d631d7b6fc83acfea2e3-a669268cf9cfe0b8b959",
+          "file": "upstream-batch04-native-network.spec.ts",
+          "line": 8,
+          "column": 3
+        },
+        {
+          "title": "W1057 native pending stylesheet transport control (remove-link)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5666,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "NATIVE_STYLESHEET_TRANSPORT {\"browser\":\"webkit\",\"cleanup\":\"remove-link\",\"requestObserved\":true,\"pendingTransportClosedWithin5000ms\":false,\"serverEndedResponse\":false,\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.5 Safari/605.1.15\",\"note\":\"Server cleanup occurs only after this attachment. Passing this control means observation completed, not transport cancellation succeeded.\"}\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:31:19.738Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-stylesheet-transport",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogIndlYmtpdCIsCiAgImNsZWFudXAiOiAicmVtb3ZlLWxpbmsiLAogICJyZXF1ZXN0T2JzZXJ2ZWQiOiB0cnVlLAogICJwZW5kaW5nVHJhbnNwb3J0Q2xvc2VkV2l0aGluNTAwMG1zIjogZmFsc2UsCiAgInNlcnZlckVuZGVkUmVzcG9uc2UiOiBmYWxzZSwKICAidXNlckFnZW50IjogIk1vemlsbGEvNS4wIChNYWNpbnRvc2g7IEludGVsIE1hYyBPUyBYIDEwXzE1XzcpIEFwcGxlV2ViS2l0LzYwNS4xLjE1IChLSFRNTCwgbGlrZSBHZWNrbykgVmVyc2lvbi8yNi41IFNhZmFyaS82MDUuMS4xNSIsCiAgIm5vdGUiOiAiU2VydmVyIGNsZWFudXAgb2NjdXJzIG9ubHkgYWZ0ZXIgdGhpcyBhdHRhY2htZW50LiBQYXNzaW5nIHRoaXMgY29udHJvbCBtZWFucyBvYnNlcnZhdGlvbiBjb21wbGV0ZWQsIG5vdCB0cmFuc3BvcnQgY2FuY2VsbGF0aW9uIHN1Y2NlZWRlZC4iCn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d631d7b6fc83acfea2e3-2d1504b259e2145fa94e",
+          "file": "upstream-batch04-native-network.spec.ts",
+          "line": 8,
+          "column": 3
+        },
+        {
+          "title": "W1057 native pending stylesheet transport control (clear-href)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5184,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "NATIVE_STYLESHEET_TRANSPORT {\"browser\":\"webkit\",\"cleanup\":\"clear-href\",\"requestObserved\":true,\"pendingTransportClosedWithin5000ms\":false,\"serverEndedResponse\":false,\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.5 Safari/605.1.15\",\"note\":\"Server cleanup occurs only after this attachment. Passing this control means observation completed, not transport cancellation succeeded.\"}\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:31:25.595Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-stylesheet-transport",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogIndlYmtpdCIsCiAgImNsZWFudXAiOiAiY2xlYXItaHJlZiIsCiAgInJlcXVlc3RPYnNlcnZlZCI6IHRydWUsCiAgInBlbmRpbmdUcmFuc3BvcnRDbG9zZWRXaXRoaW41MDAwbXMiOiBmYWxzZSwKICAic2VydmVyRW5kZWRSZXNwb25zZSI6IGZhbHNlLAogICJ1c2VyQWdlbnQiOiAiTW96aWxsYS81LjAgKE1hY2ludG9zaDsgSW50ZWwgTWFjIE9TIFggMTBfMTVfNykgQXBwbGVXZWJLaXQvNjA1LjEuMTUgKEtIVE1MLCBsaWtlIEdlY2tvKSBWZXJzaW9uLzI2LjUgU2FmYXJpLzYwNS4xLjE1IiwKICAibm90ZSI6ICJTZXJ2ZXIgY2xlYW51cCBvY2N1cnMgb25seSBhZnRlciB0aGlzIGF0dGFjaG1lbnQuIFBhc3NpbmcgdGhpcyBjb250cm9sIG1lYW5zIG9ic2VydmF0aW9uIGNvbXBsZXRlZCwgbm90IHRyYW5zcG9ydCBjYW5jZWxsYXRpb24gc3VjY2VlZGVkLiIKfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d631d7b6fc83acfea2e3-7c41b56e2e61aec37668",
+          "file": "upstream-batch04-native-network.spec.ts",
+          "line": 8,
+          "column": 3
+        },
+        {
+          "title": "W1057 native pending stylesheet transport control (remove-shadow-host)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5173,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "NATIVE_STYLESHEET_TRANSPORT {\"browser\":\"webkit\",\"cleanup\":\"remove-shadow-host\",\"requestObserved\":true,\"pendingTransportClosedWithin5000ms\":false,\"serverEndedResponse\":false,\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.5 Safari/605.1.15\",\"note\":\"Server cleanup occurs only after this attachment. Passing this control means observation completed, not transport cancellation succeeded.\"}\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:31:30.785Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-stylesheet-transport",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogIndlYmtpdCIsCiAgImNsZWFudXAiOiAicmVtb3ZlLXNoYWRvdy1ob3N0IiwKICAicmVxdWVzdE9ic2VydmVkIjogdHJ1ZSwKICAicGVuZGluZ1RyYW5zcG9ydENsb3NlZFdpdGhpbjUwMDBtcyI6IGZhbHNlLAogICJzZXJ2ZXJFbmRlZFJlc3BvbnNlIjogZmFsc2UsCiAgInVzZXJBZ2VudCI6ICJNb3ppbGxhLzUuMCAoTWFjaW50b3NoOyBJbnRlbCBNYWMgT1MgWCAxMF8xNV83KSBBcHBsZVdlYktpdC82MDUuMS4xNSAoS0hUTUwsIGxpa2UgR2Vja28pIFZlcnNpb24vMjYuNSBTYWZhcmkvNjA1LjEuMTUiLAogICJub3RlIjogIlNlcnZlciBjbGVhbnVwIG9jY3VycyBvbmx5IGFmdGVyIHRoaXMgYXR0YWNobWVudC4gUGFzc2luZyB0aGlzIGNvbnRyb2wgbWVhbnMgb2JzZXJ2YXRpb24gY29tcGxldGVkLCBub3QgdHJhbnNwb3J0IGNhbmNlbGxhdGlvbiBzdWNjZWVkZWQuIgp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d631d7b6fc83acfea2e3-85ac4f582f413e44a1f5",
+          "file": "upstream-batch04-native-network.spec.ts",
+          "line": 8,
+          "column": 3
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-09T03:30:42.666Z",
+    "duration": 53329.685,
+    "expected": 9,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

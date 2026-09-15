@@ -1,0 +1,45 @@
+$ vitest run --config vitest.browser.config.ts tests/browser/resource-namespace.browser.test.ts "--reporter=verbose" "--reporter=json" "--outputFile=tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/worker-origin-browser.json"
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - import "../../support/webpack-compiler" without a file extension (tests/browser/server/upstream-batch02-entry-fixture.ts:7:39). Add the file extension
+  - import "./upstream-batch03-entry-builds" without a file extension (tests/browser/server/upstream-batch03-entry-fixture.ts:4:36). Add the file extension
+  - import "../../support/webpack-compiler" without a file extension (tests/browser/server/upstream-batch03-entry-builds.ts:8:39). Add the file extension
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+
+ RUN  v4.1.11 /Users/fanfangbo/workspace/micro-framework
+
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - import "./upstream-batch03-entry-builds" without a file extension (tests/browser/server/upstream-batch03-entry-fixture.ts:4:36). Add the file extension
+  - import "../../support/webpack-compiler" without a file extension (tests/browser/server/upstream-batch02-entry-fixture.ts:7:39). Add the file extension
+  - import "../../support/webpack-compiler" without a file extension (tests/browser/server/upstream-batch03-entry-builds.ts:8:39). Add the file extension
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+ ✓ |browser-chromium| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > loads cross-origin module and classic Workers through Realm-owned wrappers 29ms
+ ✓ |browser-chromium| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > resolves relative Workers from a foreign document base while retaining the inherited execution origin 7ms
+ ✓ |browser-chromium| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > isolates localStorage and sessionStorage while preserving the Storage contract 3ms
+ ✓ |browser-chromium| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > filters and de-prefixes Web Storage events for the current application 55ms
+ ✓ |browser-webkit| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > loads cross-origin module and classic Workers through Realm-owned wrappers 13ms
+ ✓ |browser-webkit| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > resolves relative Workers from a foreign document base while retaining the inherited execution origin 10ms
+ ✓ |browser-webkit| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > isolates localStorage and sessionStorage while preserving the Storage contract 3ms
+ ✓ |browser-webkit| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > filters and de-prefixes Web Storage events for the current application 54ms
+ ✓ |browser-webkit| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > maps logical IndexedDB names to independent physical databases 8ms
+ ✓ |browser-chromium| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > maps logical IndexedDB names to independent physical databases 11ms
+ ✓ |browser-chromium| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > isolates BroadcastChannel traffic and closes owned channels on teardown 56ms
+ ✓ |browser-chromium| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > isolates Web Lock names and releases a held lock when its Realm is destroyed 5ms
+ ✓ |browser-chromium| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > uses the application prefix as the SharedWorker identity when supported 9ms
+ ✓ |browser-webkit| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > isolates BroadcastChannel traffic and closes owned channels on teardown 56ms
+ ✓ |browser-webkit| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > isolates Web Lock names and releases a held lock when its Realm is destroyed 4ms
+ ✓ |browser-webkit| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > uses the application prefix as the SharedWorker identity when supported 8ms
+ ✓ |browser-firefox| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > loads cross-origin module and classic Workers through Realm-owned wrappers 26ms
+ ✓ |browser-firefox| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > resolves relative Workers from a foreign document base while retaining the inherited execution origin 12ms
+ ✓ |browser-firefox| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > isolates localStorage and sessionStorage while preserving the Storage contract 5ms
+ ✓ |browser-firefox| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > filters and de-prefixes Web Storage events for the current application 64ms
+ ✓ |browser-firefox| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > maps logical IndexedDB names to independent physical databases 11ms
+ ✓ |browser-firefox| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > isolates BroadcastChannel traffic and closes owned channels on teardown 56ms
+ ✓ |browser-firefox| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > isolates Web Lock names and releases a held lock when its Realm is destroyed 6ms
+ ✓ |browser-firefox| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > uses the application prefix as the SharedWorker identity when supported 12ms
+
+ Test Files  3 passed (3)
+      Tests  24 passed (24)
+   Start at  11:47:42
+   Duration  2.04s (transform 0ms, setup 0ms, import 58ms, tests 524ms, environment 0ms)
+
+JSON report written to /Users/fanfangbo/workspace/micro-framework/tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/worker-origin-browser.json

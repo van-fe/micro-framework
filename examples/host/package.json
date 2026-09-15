@@ -1,0 +1,23 @@
+{
+  "name": "@micro-framework/example-host",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 5173 --strictPort",
+    "preview": "vite preview",
+    "build": "vite build",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@micro-framework/offline-cache": "workspace:*",
+    "@micro-framework/runtime": "workspace:*",
+    "@micro-framework/document-write": "workspace:*"
+  },
+  "devDependencies": {
+    "@micro-framework/vite-plugin": "workspace:*",
+    "typescript": "6.0.3",
+    "vite": "8.2.2"
+  }
+}

@@ -1,0 +1,2 @@
+$ vitest run --config vitest.browser.config.ts "--reporter=json" "--outputFile=/private/tmp/micro-upstream-final-browser.json"
+JSON report written to /private/tmp/micro-upstream-final-browser.json

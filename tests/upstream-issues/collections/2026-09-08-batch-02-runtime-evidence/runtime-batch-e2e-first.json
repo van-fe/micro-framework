@@ -1,0 +1,3662 @@
+{
+  "config": {
+    "argv": [
+      "/Users/fanfangbo/.local/share/fnm/node-versions/v24.19.0/installation/bin/node",
+      "/Users/fanfangbo/workspace/micro-framework/node_modules/.bin/playwright",
+      "test",
+      "tests/e2e/upstream-batch02-assets-csp.spec.ts",
+      "tests/e2e/upstream-batch02-components-nested.spec.ts",
+      "tests/e2e/upstream-batch02-components-overlays.spec.ts",
+      "tests/e2e/upstream-batch02-components-webpack.spec.ts",
+      "tests/e2e/upstream-batch02-dom-libraries.spec.ts",
+      "tests/e2e/upstream-batch02-jsplumb.spec.ts",
+      "tests/e2e/upstream-batch02-runtime-clipboard.spec.ts",
+      "tests/e2e/upstream-batch02-runtime-loading.spec.ts",
+      "tests/e2e/upstream-batch02-runtime-location.spec.ts",
+      "tests/e2e/upstream-batch02-runtime-routing.spec.ts",
+      "tests/e2e/upstream-batch02-runtime-switching.spec.ts",
+      "--reporter=line,json"
+    ],
+    "configFile": "/Users/fanfangbo/workspace/micro-framework/playwright.config.ts",
+    "rootDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "line"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "upstream-batch02-assets-csp.spec.ts",
+      "file": "upstream-batch02-assets-csp.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "W779 loads four then five and six real Vue images and mixed backgrounds from the application origin",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 554,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:54:42.471Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "36c4034dc77325d02525-2006fa9ae6b6e1bacba0",
+          "file": "upstream-batch02-assets-csp.spec.ts",
+          "line": 17,
+          "column": 1
+        },
+        {
+          "title": "W727 mounts and styles an HTML application under style-src without unsafe-inline and emits no style CSP violations",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 153,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  -  1\u001b[39m\n\u001b[31m+ Received  + 10\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"blocked\": \"inline\",\u001b[39m\n\u001b[31m+     \"directive\": \"style-src-elem\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"blocked\": \"inline\",\u001b[39m\n\u001b[31m+     \"directive\": \"style-src-elem\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+ ]\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  -  1\u001b[39m\n\u001b[31m+ Received  + 10\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"blocked\": \"inline\",\u001b[39m\n\u001b[31m+     \"directive\": \"style-src-elem\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"blocked\": \"inline\",\u001b[39m\n\u001b[31m+     \"directive\": \"style-src-elem\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-assets-csp.spec.ts:67:126",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-assets-csp.spec.ts",
+                      "column": 126,
+                      "line": 67
+                    },
+                    "snippet": "  65 |   expect(await page.locator(\"micro-app-host\").evaluate(node => getComputedStyle(node).display)).toBe(\"block\");\n  66 |   expect(await page.locator(\"micro-app-body\").evaluate(node => getComputedStyle(node).display)).toBe(\"block\");\n> 67 |   expect(await page.evaluate(() => window.__batch02CspViolations!.filter(event => event.directive.startsWith(\"style-src\")))).toEqual([]);\n     |                                                                                                                              ^\n  68 |   expect(errors).toEqual([]);\n  69 | });\n  70 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-assets-csp.spec.ts",
+                        "column": 126,
+                        "line": 67
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  -  1\u001b[39m\n\u001b[31m+ Received  + 10\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"blocked\": \"inline\",\u001b[39m\n\u001b[31m+     \"directive\": \"style-src-elem\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"blocked\": \"inline\",\u001b[39m\n\u001b[31m+     \"directive\": \"style-src-elem\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n  65 |   expect(await page.locator(\"micro-app-host\").evaluate(node => getComputedStyle(node).display)).toBe(\"block\");\n  66 |   expect(await page.locator(\"micro-app-body\").evaluate(node => getComputedStyle(node).display)).toBe(\"block\");\n> 67 |   expect(await page.evaluate(() => window.__batch02CspViolations!.filter(event => event.directive.startsWith(\"style-src\")))).toEqual([]);\n     |                                                                                                                              ^\n  68 |   expect(errors).toEqual([]);\n  69 | });\n  70 |\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-assets-csp.spec.ts:67:126"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:54:43.175Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-assets-cs-8b131-its-no-style-CSP-violations-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-assets-cs-8b131-its-no-style-CSP-violations-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-assets-csp.spec.ts",
+                    "column": 126,
+                    "line": 67
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "36c4034dc77325d02525-19cd5949e19ca1bd888f",
+          "file": "upstream-batch02-assets-csp.spec.ts",
+          "line": 46,
+          "column": 1
+        },
+        {
+          "title": "W727 respects author inline-style nonce authorization without restoring blocked CSS (nonce=true)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 143,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  -  1\u001b[39m\n\u001b[31m+ Received  + 14\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"blocked\": \"inline\",\u001b[39m\n\u001b[31m+     \"directive\": \"style-src-elem\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"blocked\": \"inline\",\u001b[39m\n\u001b[31m+     \"directive\": \"style-src-elem\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"blocked\": \"inline\",\u001b[39m\n\u001b[31m+     \"directive\": \"style-src-elem\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+ ]\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  -  1\u001b[39m\n\u001b[31m+ Received  + 14\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"blocked\": \"inline\",\u001b[39m\n\u001b[31m+     \"directive\": \"style-src-elem\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"blocked\": \"inline\",\u001b[39m\n\u001b[31m+     \"directive\": \"style-src-elem\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"blocked\": \"inline\",\u001b[39m\n\u001b[31m+     \"directive\": \"style-src-elem\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-assets-csp.spec.ts:89:128",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-assets-csp.spec.ts",
+                      "column": 128,
+                      "line": 89
+                    },
+                    "snippet": "  87 |     await expect(probe).toHaveCSS(\"color\",\"rgb(70, 90, 110)\"); await expect(probe).toHaveCSS(\"width\",\"37px\");\n  88 |     expect(await token()).toBe(\"rgb(70, 90, 110)\");\n> 89 |     expect(await page.evaluate(() => window.__batch02CspViolations!.filter(event => event.directive.startsWith(\"style-src\")))).toEqual([]);\n     |                                                                                                                                ^\n  90 |   } else {\n  91 |     await expect.poll(() => page.evaluate(() => window.__batch02CspViolations!.filter(event => event.directive.startsWith(\"style-src\") && event.blocked === \"inline\").length)).toBeGreaterThan(0);\n  92 |     expect(await token()).toBe(\"\"); await expect(probe).not.toHaveCSS(\"color\",\"rgb(70, 90, 110)\");"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-assets-csp.spec.ts",
+                        "column": 128,
+                        "line": 89
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  -  1\u001b[39m\n\u001b[31m+ Received  + 14\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"blocked\": \"inline\",\u001b[39m\n\u001b[31m+     \"directive\": \"style-src-elem\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"blocked\": \"inline\",\u001b[39m\n\u001b[31m+     \"directive\": \"style-src-elem\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"blocked\": \"inline\",\u001b[39m\n\u001b[31m+     \"directive\": \"style-src-elem\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n  87 |     await expect(probe).toHaveCSS(\"color\",\"rgb(70, 90, 110)\"); await expect(probe).toHaveCSS(\"width\",\"37px\");\n  88 |     expect(await token()).toBe(\"rgb(70, 90, 110)\");\n> 89 |     expect(await page.evaluate(() => window.__batch02CspViolations!.filter(event => event.directive.startsWith(\"style-src\")))).toEqual([]);\n     |                                                                                                                                ^\n  90 |   } else {\n  91 |     await expect.poll(() => page.evaluate(() => window.__batch02CspViolations!.filter(event => event.directive.startsWith(\"style-src\") && event.blocked === \"inline\").length)).toBeGreaterThan(0);\n  92 |     expect(await token()).toBe(\"\"); await expect(probe).not.toHaveCSS(\"color\",\"rgb(70, 90, 110)\");\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-assets-csp.spec.ts:89:128"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:54:43.512Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-assets-cs-4e1ce-ing-blocked-CSS-nonce-true--chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-assets-cs-4e1ce-ing-blocked-CSS-nonce-true--chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-assets-csp.spec.ts",
+                    "column": 128,
+                    "line": 89
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "36c4034dc77325d02525-541e128d23e9f79e87de",
+          "file": "upstream-batch02-assets-csp.spec.ts",
+          "line": 71,
+          "column": 38
+        },
+        {
+          "title": "W727 respects author inline-style nonce authorization without restoring blocked CSS (nonce=false)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 133,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:54:43.899Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "36c4034dc77325d02525-dce66931ec7775ba657c",
+          "file": "upstream-batch02-assets-csp.spec.ts",
+          "line": 71,
+          "column": 38
+        },
+        {
+          "title": "W779 loads four then five and six real Vue images and mixed backgrounds from the application origin",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 15,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 881,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:15.235Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "36c4034dc77325d02525-28016fda5469bb354f88",
+          "file": "upstream-batch02-assets-csp.spec.ts",
+          "line": 17,
+          "column": 1
+        },
+        {
+          "title": "W727 mounts and styles an HTML application under style-src without unsafe-inline and emits no style CSP violations",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 15,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 267,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:16.564Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "36c4034dc77325d02525-ea8aae555d24beaf846d",
+          "file": "upstream-batch02-assets-csp.spec.ts",
+          "line": 46,
+          "column": 1
+        },
+        {
+          "title": "W727 respects author inline-style nonce authorization without restoring blocked CSS (nonce=true)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 15,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 244,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:16.836Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "36c4034dc77325d02525-ad1f28b717ddc7926325",
+          "file": "upstream-batch02-assets-csp.spec.ts",
+          "line": 71,
+          "column": 38
+        },
+        {
+          "title": "W727 respects author inline-style nonce authorization without restoring blocked CSS (nonce=false)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 15,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 226,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:17.089Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "36c4034dc77325d02525-58798f7cf833113c9803",
+          "file": "upstream-batch02-assets-csp.spec.ts",
+          "line": 71,
+          "column": 38
+        },
+        {
+          "title": "W779 loads four then five and six real Vue images and mixed backgrounds from the application origin",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 28,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1671,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:56:00.151Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "36c4034dc77325d02525-a8fac03c6e79dd83daaa",
+          "file": "upstream-batch02-assets-csp.spec.ts",
+          "line": 17,
+          "column": 1
+        },
+        {
+          "title": "W727 mounts and styles an HTML application under style-src without unsafe-inline and emits no style CSP violations",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 28,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 288,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:56:02.084Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "36c4034dc77325d02525-9a2c359c367f20e2fbe3",
+          "file": "upstream-batch02-assets-csp.spec.ts",
+          "line": 46,
+          "column": 1
+        },
+        {
+          "title": "W727 respects author inline-style nonce authorization without restoring blocked CSS (nonce=true)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 28,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 226,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:56:02.377Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "36c4034dc77325d02525-b668c372009057e3cdaf",
+          "file": "upstream-batch02-assets-csp.spec.ts",
+          "line": 71,
+          "column": 38
+        },
+        {
+          "title": "W727 respects author inline-style nonce authorization without restoring blocked CSS (nonce=false)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 28,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 241,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:56:02.608Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "36c4034dc77325d02525-1f02eb17359ea70657b2",
+          "file": "upstream-batch02-assets-csp.spec.ts",
+          "line": 71,
+          "column": 38
+        }
+      ]
+    },
+    {
+      "title": "upstream-batch02-components-nested.spec.ts",
+      "file": "upstream-batch02-components-nested.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "W697 SortableJS sorts a grandchild application's list using a real mouse drag",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 370,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:54:44.266Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "303fc31c7a6a4dacd3b9-b7e292d5d93387959c8e",
+          "file": "upstream-batch02-components-nested.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "Q1116 Monaco places the caret after parent and editor scrolling in a nested application",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1491,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:54:44.710Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "303fc31c7a6a4dacd3b9-97a79231e68622822e47",
+          "file": "upstream-batch02-components-nested.spec.ts",
+          "line": 21,
+          "column": 1
+        },
+        {
+          "title": "W697 SortableJS sorts a grandchild application's list using a real mouse drag",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 16,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 815,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:17.658Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "303fc31c7a6a4dacd3b9-37c16f1939aff96f5d01",
+          "file": "upstream-batch02-components-nested.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "Q1116 Monaco places the caret after parent and editor scrolling in a nested application",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 16,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1074,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:18.837Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "303fc31c7a6a4dacd3b9-c2e461c7adc225ff9610",
+          "file": "upstream-batch02-components-nested.spec.ts",
+          "line": 21,
+          "column": 1
+        },
+        {
+          "title": "W697 SortableJS sorts a grandchild application's list using a real mouse drag",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 29,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 566,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:56:03.048Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "303fc31c7a6a4dacd3b9-fdb8f1d6d4fbb0fa4e54",
+          "file": "upstream-batch02-components-nested.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "Q1116 Monaco places the caret after parent and editor scrolling in a nested application",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 29,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 941,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:56:03.766Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "303fc31c7a6a4dacd3b9-515faf70b45e2056aa61",
+          "file": "upstream-batch02-components-nested.spec.ts",
+          "line": 21,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "upstream-batch02-components-overlays.spec.ts",
+      "file": "upstream-batch02-components-overlays.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "W1106 Ant Design Vue default virtual Select scrolls by dragging its real scrollbar thumb",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1071,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:54:46.422Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e147f600b35f9693ffcd-53a2b861d6dc46119dcc",
+          "file": "upstream-batch02-components-overlays.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "W300 Element Plus validates trusted mouse and focus events without cross-Realm Vue warnings",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 582,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:54:47.588Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e147f600b35f9693ffcd-1ed867169668ba82af08",
+          "file": "upstream-batch02-components-overlays.spec.ts",
+          "line": 40,
+          "column": 1
+        },
+        {
+          "title": "Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=true)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6381,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"adjacentY\": true,\u001b[22m\n\u001b[32m-   \"alignedX\": true,\u001b[39m\n\u001b[31m+   \"alignedX\": false,\u001b[39m\n\u001b[2m  }\u001b[22m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"adjacentY\": true,\u001b[22m\n\u001b[32m-   \"alignedX\": true,\u001b[39m\n\u001b[31m+   \"alignedX\": false,\u001b[39m\n\u001b[2m  }\u001b[22m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts:77:8",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts",
+                      "column": 8,
+                      "line": 77
+                    },
+                    "snippet": "  75 |         adjacentY: Math.min(Math.abs(floating.y - (anchor.y + anchor.height)), Math.abs(floating.y + floating.height - anchor.y)) < 16,\n  76 |       };\n> 77 |     }).toEqual({ alignedX: true, adjacentY: true });\n     |        ^\n  78 |     if (local) expect(await menu.evaluate((element) => Boolean(element.closest(\".el-select\")))).toBe(true);\n  79 |     await menu.getByText(\"South\", { exact: true }).click();\n  80 |     await expect(page.locator(\".batch02-vue2-drawer\")).toHaveAttribute(\"data-selected\", \"South\");"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts",
+                        "column": 8,
+                        "line": 77
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"adjacentY\": true,\u001b[22m\n\u001b[32m-   \"alignedX\": true,\u001b[39m\n\u001b[31m+   \"alignedX\": false,\u001b[39m\n\u001b[2m  }\u001b[22m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n\n  75 |         adjacentY: Math.min(Math.abs(floating.y - (anchor.y + anchor.height)), Math.abs(floating.y + floating.height - anchor.y)) < 16,\n  76 |       };\n> 77 |     }).toEqual({ alignedX: true, adjacentY: true });\n     |        ^\n  78 |     if (local) expect(await menu.evaluate((element) => Boolean(element.closest(\".el-select\")))).toBe(true);\n  79 |     await menu.getByText(\"South\", { exact: true }).click();\n  80 |     await expect(page.locator(\".batch02-vue2-drawer\")).toHaveAttribute(\"data-selected\", \"South\");\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts:77:8"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:54:48.174Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-component-e35c0-or-popperAppendToBody-true--chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-component-e35c0-or-popperAppendToBody-true--chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts",
+                    "column": 8,
+                    "line": 77
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e147f600b35f9693ffcd-a1c1642274fc8acbd948",
+          "file": "upstream-batch02-components-overlays.spec.ts",
+          "line": 61,
+          "column": 3
+        },
+        {
+          "title": "Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=false)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6749,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.batch02-vue2-drawer')\nExpected: \u001b[32m\"[]\"\u001b[39m\nReceived: \u001b[31m\"[\u001b[7m\\\"Error in event handler for \\\\\\\"updatePopper\\\\\\\": \\\\\\\"TypeError: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'.\\\\\\\"\\\"\u001b[27m]\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.batch02-vue2-drawer')\u001b[22m\n\u001b[2m    14 × locator resolved to <section data-ready=\"true\" data-selected=\"South\" class=\"batch02-vue2-drawer\" data-warnings=\"[\"Error in event handler for \\\"updatePopper\\\": \\\"TypeError: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'.\\\"\"]\">…</section>\u001b[22m\n\u001b[2m       - unexpected value \"[\"Error in event handler for \\\"updatePopper\\\": \\\"TypeError: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'.\\\"\"]\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.batch02-vue2-drawer')\nExpected: \u001b[32m\"[]\"\u001b[39m\nReceived: \u001b[31m\"[\u001b[7m\\\"Error in event handler for \\\\\\\"updatePopper\\\\\\\": \\\\\\\"TypeError: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'.\\\\\\\"\\\"\u001b[27m]\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.batch02-vue2-drawer')\u001b[22m\n\u001b[2m    14 × locator resolved to <section data-ready=\"true\" data-selected=\"South\" class=\"batch02-vue2-drawer\" data-warnings=\"[\"Error in event handler for \\\"updatePopper\\\": \\\"TypeError: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'.\\\"\"]\">…</section>\u001b[22m\n\u001b[2m       - unexpected value \"[\"Error in event handler for \\\"updatePopper\\\": \\\"TypeError: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'.\\\"\"]\"\u001b[22m\n\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts:81:56",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts",
+                      "column": 56,
+                      "line": 81
+                    },
+                    "snippet": "  79 |     await menu.getByText(\"South\", { exact: true }).click();\n  80 |     await expect(page.locator(\".batch02-vue2-drawer\")).toHaveAttribute(\"data-selected\", \"South\");\n> 81 |     await expect(page.locator(\".batch02-vue2-drawer\")).toHaveAttribute(\"data-warnings\", \"[]\");\n     |                                                        ^\n  82 |   });\n  83 | }\n  84 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts",
+                        "column": 56,
+                        "line": 81
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.batch02-vue2-drawer')\nExpected: \u001b[32m\"[]\"\u001b[39m\nReceived: \u001b[31m\"[\u001b[7m\\\"Error in event handler for \\\\\\\"updatePopper\\\\\\\": \\\\\\\"TypeError: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'.\\\\\\\"\\\"\u001b[27m]\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.batch02-vue2-drawer')\u001b[22m\n\u001b[2m    14 × locator resolved to <section data-ready=\"true\" data-selected=\"South\" class=\"batch02-vue2-drawer\" data-warnings=\"[\"Error in event handler for \\\"updatePopper\\\": \\\"TypeError: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'.\\\"\"]\">…</section>\u001b[22m\n\u001b[2m       - unexpected value \"[\"Error in event handler for \\\"updatePopper\\\": \\\"TypeError: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'.\\\"\"]\"\u001b[22m\n\n\n  79 |     await menu.getByText(\"South\", { exact: true }).click();\n  80 |     await expect(page.locator(\".batch02-vue2-drawer\")).toHaveAttribute(\"data-selected\", \"South\");\n> 81 |     await expect(page.locator(\".batch02-vue2-drawer\")).toHaveAttribute(\"data-warnings\", \"[]\");\n     |                                                        ^\n  82 |   });\n  83 | }\n  84 |\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts:81:56"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:54:54.782Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-component-65456-r-popperAppendToBody-false--chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-component-65456-r-popperAppendToBody-false--chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts",
+                    "column": 56,
+                    "line": 81
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e147f600b35f9693ffcd-81e16287782f462bf926",
+          "file": "upstream-batch02-components-overlays.spec.ts",
+          "line": 61,
+          "column": 3
+        },
+        {
+          "title": "W1104 the Vue 2 lifecycle adapter does not declare an implicit reserved style prop",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 159,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:01.862Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e147f600b35f9693ffcd-3a182e1d51fddef29494",
+          "file": "upstream-batch02-components-overlays.spec.ts",
+          "line": 85,
+          "column": 1
+        },
+        {
+          "title": "W1106 Ant Design Vue default virtual Select scrolls by dragging its real scrollbar thumb",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 17,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1531,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:20.281Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e147f600b35f9693ffcd-527e05f5dc76a0a20871",
+          "file": "upstream-batch02-components-overlays.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "W300 Element Plus validates trusted mouse and focus events without cross-Realm Vue warnings",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 17,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 548,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:22.170Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e147f600b35f9693ffcd-b4653ade34ecf8c6a857",
+          "file": "upstream-batch02-components-overlays.spec.ts",
+          "line": 40,
+          "column": 1
+        },
+        {
+          "title": "Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=true)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 17,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5805,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"adjacentY\": true,\u001b[22m\n\u001b[32m-   \"alignedX\": true,\u001b[39m\n\u001b[31m+   \"alignedX\": false,\u001b[39m\n\u001b[2m  }\u001b[22m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"adjacentY\": true,\u001b[22m\n\u001b[32m-   \"alignedX\": true,\u001b[39m\n\u001b[31m+   \"alignedX\": false,\u001b[39m\n\u001b[2m  }\u001b[22m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts:77:8",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts",
+                      "column": 8,
+                      "line": 77
+                    },
+                    "snippet": "  75 |         adjacentY: Math.min(Math.abs(floating.y - (anchor.y + anchor.height)), Math.abs(floating.y + floating.height - anchor.y)) < 16,\n  76 |       };\n> 77 |     }).toEqual({ alignedX: true, adjacentY: true });\n     |        ^\n  78 |     if (local) expect(await menu.evaluate((element) => Boolean(element.closest(\".el-select\")))).toBe(true);\n  79 |     await menu.getByText(\"South\", { exact: true }).click();\n  80 |     await expect(page.locator(\".batch02-vue2-drawer\")).toHaveAttribute(\"data-selected\", \"South\");"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts",
+                        "column": 8,
+                        "line": 77
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"adjacentY\": true,\u001b[22m\n\u001b[32m-   \"alignedX\": true,\u001b[39m\n\u001b[31m+   \"alignedX\": false,\u001b[39m\n\u001b[2m  }\u001b[22m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n\n  75 |         adjacentY: Math.min(Math.abs(floating.y - (anchor.y + anchor.height)), Math.abs(floating.y + floating.height - anchor.y)) < 16,\n  76 |       };\n> 77 |     }).toEqual({ alignedX: true, adjacentY: true });\n     |        ^\n  78 |     if (local) expect(await menu.evaluate((element) => Boolean(element.closest(\".el-select\")))).toBe(true);\n  79 |     await menu.getByText(\"South\", { exact: true }).click();\n  80 |     await expect(page.locator(\".batch02-vue2-drawer\")).toHaveAttribute(\"data-selected\", \"South\");\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts:77:8"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:22.723Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-component-e35c0-or-popperAppendToBody-true--firefox/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-component-e35c0-or-popperAppendToBody-true--firefox/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts",
+                    "column": 8,
+                    "line": 77
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e147f600b35f9693ffcd-aac7908991e8c0797ca0",
+          "file": "upstream-batch02-components-overlays.spec.ts",
+          "line": 61,
+          "column": 3
+        },
+        {
+          "title": "Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=false)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 18,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6609,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.batch02-vue2-drawer')\nExpected: \u001b[32m\"[]\"\u001b[39m\nReceived: \u001b[31m\"[\u001b[7m\\\"Error in event handler for \\\\\\\"updatePopper\\\\\\\": \\\\\\\"TypeError: Window.getComputedStyle: Argument 1 does not implement interface Element.\\\\\\\"\\\"\u001b[27m]\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.batch02-vue2-drawer')\u001b[22m\n\u001b[2m    14 × locator resolved to <section data-ready=\"true\" data-selected=\"South\" class=\"batch02-vue2-drawer\" data-warnings=\"[\"Error in event handler for \\\"updatePopper\\\": \\\"TypeError: Window.getComputedStyle: Argument 1 does not implement interface Element.\\\"\"]\">…</section>\u001b[22m\n\u001b[2m       - unexpected value \"[\"Error in event handler for \\\"updatePopper\\\": \\\"TypeError: Window.getComputedStyle: Argument 1 does not implement interface Element.\\\"\"]\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.batch02-vue2-drawer')\nExpected: \u001b[32m\"[]\"\u001b[39m\nReceived: \u001b[31m\"[\u001b[7m\\\"Error in event handler for \\\\\\\"updatePopper\\\\\\\": \\\\\\\"TypeError: Window.getComputedStyle: Argument 1 does not implement interface Element.\\\\\\\"\\\"\u001b[27m]\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.batch02-vue2-drawer')\u001b[22m\n\u001b[2m    14 × locator resolved to <section data-ready=\"true\" data-selected=\"South\" class=\"batch02-vue2-drawer\" data-warnings=\"[\"Error in event handler for \\\"updatePopper\\\": \\\"TypeError: Window.getComputedStyle: Argument 1 does not implement interface Element.\\\"\"]\">…</section>\u001b[22m\n\u001b[2m       - unexpected value \"[\"Error in event handler for \\\"updatePopper\\\": \\\"TypeError: Window.getComputedStyle: Argument 1 does not implement interface Element.\\\"\"]\"\u001b[22m\n\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts:81:56",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts",
+                      "column": 56,
+                      "line": 81
+                    },
+                    "snippet": "  79 |     await menu.getByText(\"South\", { exact: true }).click();\n  80 |     await expect(page.locator(\".batch02-vue2-drawer\")).toHaveAttribute(\"data-selected\", \"South\");\n> 81 |     await expect(page.locator(\".batch02-vue2-drawer\")).toHaveAttribute(\"data-warnings\", \"[]\");\n     |                                                        ^\n  82 |   });\n  83 | }\n  84 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts",
+                        "column": 56,
+                        "line": 81
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.batch02-vue2-drawer')\nExpected: \u001b[32m\"[]\"\u001b[39m\nReceived: \u001b[31m\"[\u001b[7m\\\"Error in event handler for \\\\\\\"updatePopper\\\\\\\": \\\\\\\"TypeError: Window.getComputedStyle: Argument 1 does not implement interface Element.\\\\\\\"\\\"\u001b[27m]\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.batch02-vue2-drawer')\u001b[22m\n\u001b[2m    14 × locator resolved to <section data-ready=\"true\" data-selected=\"South\" class=\"batch02-vue2-drawer\" data-warnings=\"[\"Error in event handler for \\\"updatePopper\\\": \\\"TypeError: Window.getComputedStyle: Argument 1 does not implement interface Element.\\\"\"]\">…</section>\u001b[22m\n\u001b[2m       - unexpected value \"[\"Error in event handler for \\\"updatePopper\\\": \\\"TypeError: Window.getComputedStyle: Argument 1 does not implement interface Element.\\\"\"]\"\u001b[22m\n\n\n  79 |     await menu.getByText(\"South\", { exact: true }).click();\n  80 |     await expect(page.locator(\".batch02-vue2-drawer\")).toHaveAttribute(\"data-selected\", \"South\");\n> 81 |     await expect(page.locator(\".batch02-vue2-drawer\")).toHaveAttribute(\"data-warnings\", \"[]\");\n     |                                                        ^\n  82 |   });\n  83 | }\n  84 |\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts:81:56"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:28.887Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-component-65456-r-popperAppendToBody-false--firefox/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-component-65456-r-popperAppendToBody-false--firefox/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts",
+                    "column": 56,
+                    "line": 81
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e147f600b35f9693ffcd-73d67e61961ea2867fed",
+          "file": "upstream-batch02-components-overlays.spec.ts",
+          "line": 61,
+          "column": 3
+        },
+        {
+          "title": "W1104 the Vue 2 lifecycle adapter does not declare an implicit reserved style prop",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 19,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 729,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:36.232Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e147f600b35f9693ffcd-d597454e10c968f97f42",
+          "file": "upstream-batch02-components-overlays.spec.ts",
+          "line": 85,
+          "column": 1
+        },
+        {
+          "title": "W1106 Ant Design Vue default virtual Select scrolls by dragging its real scrollbar thumb",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 30,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1264,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:56:04.913Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e147f600b35f9693ffcd-a9e9a9f0131fef028993",
+          "file": "upstream-batch02-components-overlays.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "W300 Element Plus validates trusted mouse and focus events without cross-Realm Vue warnings",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 30,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 585,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:56:06.317Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e147f600b35f9693ffcd-644fe9a14f60b0c1d08f",
+          "file": "upstream-batch02-components-overlays.spec.ts",
+          "line": 40,
+          "column": 1
+        },
+        {
+          "title": "Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=true)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 30,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5884,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"adjacentY\": true,\u001b[22m\n\u001b[32m-   \"alignedX\": true,\u001b[39m\n\u001b[31m+   \"alignedX\": false,\u001b[39m\n\u001b[2m  }\u001b[22m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"adjacentY\": true,\u001b[22m\n\u001b[32m-   \"alignedX\": true,\u001b[39m\n\u001b[31m+   \"alignedX\": false,\u001b[39m\n\u001b[2m  }\u001b[22m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts:77:8",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts",
+                      "column": 8,
+                      "line": 77
+                    },
+                    "snippet": "  75 |         adjacentY: Math.min(Math.abs(floating.y - (anchor.y + anchor.height)), Math.abs(floating.y + floating.height - anchor.y)) < 16,\n  76 |       };\n> 77 |     }).toEqual({ alignedX: true, adjacentY: true });\n     |        ^\n  78 |     if (local) expect(await menu.evaluate((element) => Boolean(element.closest(\".el-select\")))).toBe(true);\n  79 |     await menu.getByText(\"South\", { exact: true }).click();\n  80 |     await expect(page.locator(\".batch02-vue2-drawer\")).toHaveAttribute(\"data-selected\", \"South\");"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts",
+                        "column": 8,
+                        "line": 77
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"adjacentY\": true,\u001b[22m\n\u001b[32m-   \"alignedX\": true,\u001b[39m\n\u001b[31m+   \"alignedX\": false,\u001b[39m\n\u001b[2m  }\u001b[22m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n\n  75 |         adjacentY: Math.min(Math.abs(floating.y - (anchor.y + anchor.height)), Math.abs(floating.y + floating.height - anchor.y)) < 16,\n  76 |       };\n> 77 |     }).toEqual({ alignedX: true, adjacentY: true });\n     |        ^\n  78 |     if (local) expect(await menu.evaluate((element) => Boolean(element.closest(\".el-select\")))).toBe(true);\n  79 |     await menu.getByText(\"South\", { exact: true }).click();\n  80 |     await expect(page.locator(\".batch02-vue2-drawer\")).toHaveAttribute(\"data-selected\", \"South\");\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts:77:8"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:56:06.907Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-component-e35c0-or-popperAppendToBody-true--webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-component-e35c0-or-popperAppendToBody-true--webkit/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts",
+                    "column": 8,
+                    "line": 77
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e147f600b35f9693ffcd-d36a24b6dad131b52972",
+          "file": "upstream-batch02-components-overlays.spec.ts",
+          "line": 61,
+          "column": 3
+        },
+        {
+          "title": "Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=false)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 31,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6449,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.batch02-vue2-drawer')\nExpected: \u001b[32m\"[]\"\u001b[39m\nReceived: \u001b[31m\"[\u001b[7m\\\"Error in event handler for \\\\\\\"updatePopper\\\\\\\": \\\\\\\"TypeError: Argument 1 ('element') to Window.getComputedStyle must be an instance of Element\\\\\\\"\\\"\u001b[27m]\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.batch02-vue2-drawer')\u001b[22m\n\u001b[2m    14 × locator resolved to <section data-ready=\"true\" data-selected=\"South\" class=\"batch02-vue2-drawer\" data-warnings=\"[\"Error in event handler for \\\"updatePopper\\\": \\\"TypeError: Argument 1 ('element') to Window.getComputedStyle must be an instance of Element\\\"\"]\">…</section>\u001b[22m\n\u001b[2m       - unexpected value \"[\"Error in event handler for \\\"updatePopper\\\": \\\"TypeError: Argument 1 ('element') to Window.getComputedStyle must be an instance of Element\\\"\"]\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.batch02-vue2-drawer')\nExpected: \u001b[32m\"[]\"\u001b[39m\nReceived: \u001b[31m\"[\u001b[7m\\\"Error in event handler for \\\\\\\"updatePopper\\\\\\\": \\\\\\\"TypeError: Argument 1 ('element') to Window.getComputedStyle must be an instance of Element\\\\\\\"\\\"\u001b[27m]\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.batch02-vue2-drawer')\u001b[22m\n\u001b[2m    14 × locator resolved to <section data-ready=\"true\" data-selected=\"South\" class=\"batch02-vue2-drawer\" data-warnings=\"[\"Error in event handler for \\\"updatePopper\\\": \\\"TypeError: Argument 1 ('element') to Window.getComputedStyle must be an instance of Element\\\"\"]\">…</section>\u001b[22m\n\u001b[2m       - unexpected value \"[\"Error in event handler for \\\"updatePopper\\\": \\\"TypeError: Argument 1 ('element') to Window.getComputedStyle must be an instance of Element\\\"\"]\"\u001b[22m\n\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts:81:56",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts",
+                      "column": 56,
+                      "line": 81
+                    },
+                    "snippet": "  79 |     await menu.getByText(\"South\", { exact: true }).click();\n  80 |     await expect(page.locator(\".batch02-vue2-drawer\")).toHaveAttribute(\"data-selected\", \"South\");\n> 81 |     await expect(page.locator(\".batch02-vue2-drawer\")).toHaveAttribute(\"data-warnings\", \"[]\");\n     |                                                        ^\n  82 |   });\n  83 | }\n  84 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts",
+                        "column": 56,
+                        "line": 81
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.batch02-vue2-drawer')\nExpected: \u001b[32m\"[]\"\u001b[39m\nReceived: \u001b[31m\"[\u001b[7m\\\"Error in event handler for \\\\\\\"updatePopper\\\\\\\": \\\\\\\"TypeError: Argument 1 ('element') to Window.getComputedStyle must be an instance of Element\\\\\\\"\\\"\u001b[27m]\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.batch02-vue2-drawer')\u001b[22m\n\u001b[2m    14 × locator resolved to <section data-ready=\"true\" data-selected=\"South\" class=\"batch02-vue2-drawer\" data-warnings=\"[\"Error in event handler for \\\"updatePopper\\\": \\\"TypeError: Argument 1 ('element') to Window.getComputedStyle must be an instance of Element\\\"\"]\">…</section>\u001b[22m\n\u001b[2m       - unexpected value \"[\"Error in event handler for \\\"updatePopper\\\": \\\"TypeError: Argument 1 ('element') to Window.getComputedStyle must be an instance of Element\\\"\"]\"\u001b[22m\n\n\n  79 |     await menu.getByText(\"South\", { exact: true }).click();\n  80 |     await expect(page.locator(\".batch02-vue2-drawer\")).toHaveAttribute(\"data-selected\", \"South\");\n> 81 |     await expect(page.locator(\".batch02-vue2-drawer\")).toHaveAttribute(\"data-warnings\", \"[]\");\n     |                                                        ^\n  82 |   });\n  83 | }\n  84 |\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts:81:56"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:56:13.014Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-component-65456-r-popperAppendToBody-false--webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-component-65456-r-popperAppendToBody-false--webkit/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts",
+                    "column": 56,
+                    "line": 81
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e147f600b35f9693ffcd-13b4bad420a224c20f62",
+          "file": "upstream-batch02-components-overlays.spec.ts",
+          "line": 61,
+          "column": 3
+        },
+        {
+          "title": "W1104 the Vue 2 lifecycle adapter does not declare an implicit reserved style prop",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 32,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 433,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:56:19.829Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e147f600b35f9693ffcd-1826fdefda6fbe5c2167",
+          "file": "upstream-batch02-components-overlays.spec.ts",
+          "line": 85,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "upstream-batch02-components-webpack.spec.ts",
+      "file": "upstream-batch02-components-webpack.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Q2298 a real Webpack React lazy chunk keeps a pre-existing global accessor writable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 529,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:02.301Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "832775f658ac4a177358-4eeb3817584bb86584c8",
+          "file": "upstream-batch02-components-webpack.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "Q2298 a real Webpack React lazy chunk keeps a pre-existing global accessor writable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 20,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 940,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:37.657Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "832775f658ac4a177358-2f8b149ccafef16c0b26",
+          "file": "upstream-batch02-components-webpack.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "Q2298 a real Webpack React lazy chunk keeps a pre-existing global accessor writable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 33,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 754,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:56:20.607Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "832775f658ac4a177358-3a6a8405beeeb124accd",
+          "file": "upstream-batch02-components-webpack.spec.ts",
+          "line": 6,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "upstream-batch02-dom-libraries.spec.ts",
+      "file": "upstream-batch02-dom-libraries.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "W262 DOMPurify 2.3.0 sanitizes parsed documents inside its native application Realm",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 153,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:03.125Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "579d60776a3fc8f60751-52b144d817cfaf5cd385",
+          "file": "upstream-batch02-dom-libraries.spec.ts",
+          "line": 19,
+          "column": 1
+        },
+        {
+          "title": "Q2137 eruda 2.4.1 initializes and destroys its dynamic styles in a nested application",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 200,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:03.366Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "579d60776a3fc8f60751-df9fef08fe0e5798e175",
+          "file": "upstream-batch02-dom-libraries.spec.ts",
+          "line": 38,
+          "column": 1
+        },
+        {
+          "title": "Q2141 Emotion 11 keeps generated CSS correct over A to B to A (keepAlive=true)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 492,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:03.572Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "579d60776a3fc8f60751-ce3417fa4abb8e5ffbd1",
+          "file": "upstream-batch02-dom-libraries.spec.ts",
+          "line": 62,
+          "column": 39
+        },
+        {
+          "title": "Q2141 Emotion 11 keeps generated CSS correct over A to B to A (keepAlive=false)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 484,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:04.068Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "579d60776a3fc8f60751-40ae71c030157bfcb3ee",
+          "file": "upstream-batch02-dom-libraries.spec.ts",
+          "line": 62,
+          "column": 39
+        },
+        {
+          "title": "W1065 a root-relative target blank link opens the application origin in a native popup",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 194,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:04.558Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "579d60776a3fc8f60751-e8bb6748b28b00c24cc0",
+          "file": "upstream-batch02-dom-libraries.spec.ts",
+          "line": 85,
+          "column": 1
+        },
+        {
+          "title": "W262 DOMPurify 2.3.0 sanitizes parsed documents inside its native application Realm",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 21,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 888,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:39.321Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "579d60776a3fc8f60751-9e84fd5617b52d9792b2",
+          "file": "upstream-batch02-dom-libraries.spec.ts",
+          "line": 19,
+          "column": 1
+        },
+        {
+          "title": "Q2137 eruda 2.4.1 initializes and destroys its dynamic styles in a nested application",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 21,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 354,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:40.596Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "579d60776a3fc8f60751-32e814e7f9475235bac2",
+          "file": "upstream-batch02-dom-libraries.spec.ts",
+          "line": 38,
+          "column": 1
+        },
+        {
+          "title": "Q2141 Emotion 11 keeps generated CSS correct over A to B to A (keepAlive=true)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 21,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 617,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:40.955Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "579d60776a3fc8f60751-8e04a2f2a9a63317f1e9",
+          "file": "upstream-batch02-dom-libraries.spec.ts",
+          "line": 62,
+          "column": 39
+        },
+        {
+          "title": "Q2141 Emotion 11 keeps generated CSS correct over A to B to A (keepAlive=false)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 21,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 634,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:41.576Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "579d60776a3fc8f60751-2c0604d1c8cf2c3f2831",
+          "file": "upstream-batch02-dom-libraries.spec.ts",
+          "line": 62,
+          "column": 39
+        },
+        {
+          "title": "W1065 a root-relative target blank link opens the application origin in a native popup",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 21,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 275,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:42.214Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "579d60776a3fc8f60751-5b7251df97760d3e13ab",
+          "file": "upstream-batch02-dom-libraries.spec.ts",
+          "line": 85,
+          "column": 1
+        },
+        {
+          "title": "W262 DOMPurify 2.3.0 sanitizes parsed documents inside its native application Realm",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 34,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 422,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:56:21.699Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "579d60776a3fc8f60751-5efd3da00e23dd7233f7",
+          "file": "upstream-batch02-dom-libraries.spec.ts",
+          "line": 19,
+          "column": 1
+        },
+        {
+          "title": "Q2137 eruda 2.4.1 initializes and destroys its dynamic styles in a nested application",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 34,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 353,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:56:22.272Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "579d60776a3fc8f60751-ffa122dd72f89ed86f1d",
+          "file": "upstream-batch02-dom-libraries.spec.ts",
+          "line": 38,
+          "column": 1
+        },
+        {
+          "title": "Q2141 Emotion 11 keeps generated CSS correct over A to B to A (keepAlive=true)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 34,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 568,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:56:22.630Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "579d60776a3fc8f60751-d64d2a092c487a46fa7d",
+          "file": "upstream-batch02-dom-libraries.spec.ts",
+          "line": 62,
+          "column": 39
+        },
+        {
+          "title": "Q2141 Emotion 11 keeps generated CSS correct over A to B to A (keepAlive=false)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 34,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 591,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:56:23.203Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "579d60776a3fc8f60751-f73605929c3362b4895a",
+          "file": "upstream-batch02-dom-libraries.spec.ts",
+          "line": 62,
+          "column": 39
+        },
+        {
+          "title": "W1065 a root-relative target blank link opens the application origin in a native popup",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 34,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 289,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:56:23.798Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "579d60776a3fc8f60751-041404480b4e2658169c",
+          "file": "upstream-batch02-dom-libraries.spec.ts",
+          "line": 85,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "upstream-batch02-jsplumb.spec.ts",
+      "file": "upstream-batch02-jsplumb.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Q1174 jsPlumb 2.11.2 creates reconnects and drags real connectors in independent native Realms",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 462,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:04.933Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4b8cb0de390da04b2fe8-0a66eb2e0f9c8e08ded6",
+          "file": "upstream-batch02-jsplumb.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "Q1174 jsPlumb 2.11.2 creates reconnects and drags real connectors in independent native Realms",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 22,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1007,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:42.848Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4b8cb0de390da04b2fe8-b0b283d3ef45a84641e9",
+          "file": "upstream-batch02-jsplumb.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "Q1174 jsPlumb 2.11.2 creates reconnects and drags real connectors in independent native Realms",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 35,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 673,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:56:24.293Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4b8cb0de390da04b2fe8-b9d87d760a37e7a1aa4d",
+          "file": "upstream-batch02-jsplumb.spec.ts",
+          "line": 6,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "upstream-batch02-runtime-clipboard.spec.ts",
+      "file": "upstream-batch02-runtime-clipboard.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "W298 forwards clipboard.readText via controlled clipboard ports with real host focus and activation (allowed=false)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 10,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 199,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:05.690Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ddfb7153cee771b13085-e28db3bf841947d491e9",
+          "file": "upstream-batch02-runtime-clipboard.spec.ts",
+          "line": 19,
+          "column": 3
+        },
+        {
+          "title": "W298 forwards clipboard.readText via controlled clipboard ports with real host focus and activation (allowed=true)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 10,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5195,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:05.983Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ddfb7153cee771b13085-53419825a67b535b82f3",
+          "file": "upstream-batch02-runtime-clipboard.spec.ts",
+          "line": 19,
+          "column": 3
+        },
+        {
+          "title": "W298 forwards clipboard.readText via controlled clipboard ports with real host focus and activation (allowed=false)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 23,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 721,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:44.552Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ddfb7153cee771b13085-72dd60f9344c3b0d50c5",
+          "file": "upstream-batch02-runtime-clipboard.spec.ts",
+          "line": 19,
+          "column": 3
+        },
+        {
+          "title": "W298 forwards clipboard.readText via controlled clipboard ports with real host focus and activation (allowed=true)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 23,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5290,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:45.643Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ddfb7153cee771b13085-10627239fbefee32fb47",
+          "file": "upstream-batch02-runtime-clipboard.spec.ts",
+          "line": 19,
+          "column": 3
+        },
+        {
+          "title": "W298 forwards clipboard.readText via controlled clipboard ports with real host focus and activation (allowed=false)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 36,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 457,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:56:25.303Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ddfb7153cee771b13085-afebb0b9d315e09a0de6",
+          "file": "upstream-batch02-runtime-clipboard.spec.ts",
+          "line": 19,
+          "column": 3
+        },
+        {
+          "title": "W298 forwards clipboard.readText via controlled clipboard ports with real host focus and activation (allowed=true)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 36,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5309,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:56:25.898Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ddfb7153cee771b13085-87607a9862ab9e6c4ef1",
+          "file": "upstream-batch02-runtime-clipboard.spec.ts",
+          "line": 19,
+          "column": 3
+        }
+      ]
+    },
+    {
+      "title": "upstream-batch02-runtime-loading.spec.ts",
+      "file": "upstream-batch02-runtime-loading.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Q1990 retries the identical HTML entry after offline recovery and sends a fresh HTTP request",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 11,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 198,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:11.374Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e9a3a1f72a7773749f12-18e3a3e32a19da552ddf",
+          "file": "upstream-batch02-runtime-loading.spec.ts",
+          "line": 37,
+          "column": 3
+        },
+        {
+          "title": "Q1885 retries the identical HTML entry after server-stopped recovery and sends a fresh HTTP request",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 11,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 162,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:11.671Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e9a3a1f72a7773749f12-0a1d9b7ee0585f72c157",
+          "file": "upstream-batch02-runtime-loading.spec.ts",
+          "line": 37,
+          "column": 3
+        },
+        {
+          "title": "Q2166 disposes a cached application and loads a new deployment and failed-chunk recovery at the identical entry URL",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 11,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 227,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:11.836Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e9a3a1f72a7773749f12-d52da6f52b1b05321ad7",
+          "file": "upstream-batch02-runtime-loading.spec.ts",
+          "line": 56,
+          "column": 1
+        },
+        {
+          "title": "W1028 reports a removed deployment chunk to the runtime error subscriber and permits explicit new-entry recovery",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 11,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 196,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:12.069Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e9a3a1f72a7773749f12-339b0ad1137bc3a0839d",
+          "file": "upstream-batch02-runtime-loading.spec.ts",
+          "line": 82,
+          "column": 1
+        },
+        {
+          "title": "Q1990 retries the identical HTML entry after offline recovery and sends a fresh HTTP request",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 24,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 732,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:51.266Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e9a3a1f72a7773749f12-b47f5775928a13df2948",
+          "file": "upstream-batch02-runtime-loading.spec.ts",
+          "line": 37,
+          "column": 3
+        },
+        {
+          "title": "Q1885 retries the identical HTML entry after server-stopped recovery and sends a fresh HTTP request",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 24,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 260,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:52.345Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e9a3a1f72a7773749f12-e13d9a607d9c0b96f38c",
+          "file": "upstream-batch02-runtime-loading.spec.ts",
+          "line": 37,
+          "column": 3
+        },
+        {
+          "title": "Q2166 disposes a cached application and loads a new deployment and failed-chunk recovery at the identical entry URL",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 24,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 392,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:52.611Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e9a3a1f72a7773749f12-e2333113bd31ff30a540",
+          "file": "upstream-batch02-runtime-loading.spec.ts",
+          "line": 56,
+          "column": 1
+        },
+        {
+          "title": "W1028 reports a removed deployment chunk to the runtime error subscriber and permits explicit new-entry recovery",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 24,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 330,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:53.007Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e9a3a1f72a7773749f12-56c76a460422820e6919",
+          "file": "upstream-batch02-runtime-loading.spec.ts",
+          "line": 82,
+          "column": 1
+        },
+        {
+          "title": "Q1990 retries the identical HTML entry after offline recovery and sends a fresh HTTP request",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 37,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 499,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:56:31.402Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e9a3a1f72a7773749f12-555a90e1bda10a325a49",
+          "file": "upstream-batch02-runtime-loading.spec.ts",
+          "line": 37,
+          "column": 3
+        },
+        {
+          "title": "Q1885 retries the identical HTML entry after server-stopped recovery and sends a fresh HTTP request",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 37,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 298,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:56:32.058Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e9a3a1f72a7773749f12-426b7ac2b42787ec27fb",
+          "file": "upstream-batch02-runtime-loading.spec.ts",
+          "line": 37,
+          "column": 3
+        },
+        {
+          "title": "Q2166 disposes a cached application and loads a new deployment and failed-chunk recovery at the identical entry URL",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 37,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 434,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:56:32.361Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e9a3a1f72a7773749f12-b1b2603ac736130999bf",
+          "file": "upstream-batch02-runtime-loading.spec.ts",
+          "line": 56,
+          "column": 1
+        },
+        {
+          "title": "W1028 reports a removed deployment chunk to the runtime error subscriber and permits explicit new-entry recovery",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 37,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 391,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:56:32.800Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e9a3a1f72a7773749f12-f91fdb84213de3322458",
+          "file": "upstream-batch02-runtime-loading.spec.ts",
+          "line": 82,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "upstream-batch02-runtime-location.spec.ts",
+      "file": "upstream-batch02-runtime-location.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Q1502 native window.location assignment navigates only the child and disposes after crossing origin",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 184,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:12.447Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c7420a37da65ce6a20b2-e433d652997717e2219f",
+          "file": "upstream-batch02-runtime-location.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "Q1502 native navigation during a pending module import aborts and releases the departing Realm",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 146,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"errors\": Array [],\u001b[22m\n\u001b[2m    \"remaining\": 0,\u001b[22m\n\u001b[32m-   \"status\": \"disposed\",\u001b[39m\n\u001b[31m+   \"status\": \"unmounted\",\u001b[39m\n\u001b[2m  }\u001b[22m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"errors\": Array [],\u001b[22m\n\u001b[2m    \"remaining\": 0,\u001b[22m\n\u001b[32m-   \"status\": \"disposed\",\u001b[39m\n\u001b[31m+   \"status\": \"unmounted\",\u001b[39m\n\u001b[2m  }\u001b[22m\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-location.spec.ts:59:18",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-location.spec.ts",
+                      "column": 18,
+                      "line": 59
+                    },
+                    "snippet": "  57 |     return { status: handle.getStatus(), remaining: state.slots[0]!.childElementCount, errors: state.errors };\n  58 |   });\n> 59 |   expect(result).toEqual({ status: \"disposed\", remaining: 0, errors: [] });\n     |                  ^\n  60 |   expect(page.url()).toBe(hostURL);\n  61 |   expect(deployment.requests).toContain(\"/navigation-target.html\");\n  62 | });"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-location.spec.ts",
+                        "column": 18,
+                        "line": 59
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"errors\": Array [],\u001b[22m\n\u001b[2m    \"remaining\": 0,\u001b[22m\n\u001b[32m-   \"status\": \"disposed\",\u001b[39m\n\u001b[31m+   \"status\": \"unmounted\",\u001b[39m\n\u001b[2m  }\u001b[22m\n\n  57 |     return { status: handle.getStatus(), remaining: state.slots[0]!.childElementCount, errors: state.errors };\n  58 |   });\n> 59 |   expect(result).toEqual({ status: \"disposed\", remaining: 0, errors: [] });\n     |                  ^\n  60 |   expect(page.url()).toBe(hostURL);\n  61 |   expect(deployment.requests).toContain(\"/navigation-target.html\");\n  62 | });\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-location.spec.ts:59:18"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:12.715Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-l-b11e3-eleases-the-departing-Realm-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-l-b11e3-eleases-the-departing-Realm-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-location.spec.ts",
+                    "column": 18,
+                    "line": 59
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c7420a37da65ce6a20b2-e30dd6fbbc1b9fdf2e94",
+          "file": "upstream-batch02-runtime-location.spec.ts",
+          "line": 41,
+          "column": 1
+        },
+        {
+          "title": "Q1502 native window.location assignment navigates only the child and disposes after crossing origin",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 25,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 716,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:53.675Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c7420a37da65ce6a20b2-b083355ca840bb0ad4c0",
+          "file": "upstream-batch02-runtime-location.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "Q1502 native navigation during a pending module import aborts and releases the departing Realm",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 25,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 239,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"errors\": Array [],\u001b[22m\n\u001b[2m    \"remaining\": 0,\u001b[22m\n\u001b[32m-   \"status\": \"disposed\",\u001b[39m\n\u001b[31m+   \"status\": \"unmounted\",\u001b[39m\n\u001b[2m  }\u001b[22m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"errors\": Array [],\u001b[22m\n\u001b[2m    \"remaining\": 0,\u001b[22m\n\u001b[32m-   \"status\": \"disposed\",\u001b[39m\n\u001b[31m+   \"status\": \"unmounted\",\u001b[39m\n\u001b[2m  }\u001b[22m\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-location.spec.ts:59:18",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-location.spec.ts",
+                      "column": 18,
+                      "line": 59
+                    },
+                    "snippet": "  57 |     return { status: handle.getStatus(), remaining: state.slots[0]!.childElementCount, errors: state.errors };\n  58 |   });\n> 59 |   expect(result).toEqual({ status: \"disposed\", remaining: 0, errors: [] });\n     |                  ^\n  60 |   expect(page.url()).toBe(hostURL);\n  61 |   expect(deployment.requests).toContain(\"/navigation-target.html\");\n  62 | });"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-location.spec.ts",
+                        "column": 18,
+                        "line": 59
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"errors\": Array [],\u001b[22m\n\u001b[2m    \"remaining\": 0,\u001b[22m\n\u001b[32m-   \"status\": \"disposed\",\u001b[39m\n\u001b[31m+   \"status\": \"unmounted\",\u001b[39m\n\u001b[2m  }\u001b[22m\n\n  57 |     return { status: handle.getStatus(), remaining: state.slots[0]!.childElementCount, errors: state.errors };\n  58 |   });\n> 59 |   expect(result).toEqual({ status: \"disposed\", remaining: 0, errors: [] });\n     |                  ^\n  60 |   expect(page.url()).toBe(hostURL);\n  61 |   expect(deployment.requests).toContain(\"/navigation-target.html\");\n  62 | });\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-location.spec.ts:59:18"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:54.737Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-l-b11e3-eleases-the-departing-Realm-firefox/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-l-b11e3-eleases-the-departing-Realm-firefox/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-location.spec.ts",
+                    "column": 18,
+                    "line": 59
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c7420a37da65ce6a20b2-1630e0caa40c98b6acc3",
+          "file": "upstream-batch02-runtime-location.spec.ts",
+          "line": 41,
+          "column": 1
+        },
+        {
+          "title": "Q1502 native window.location assignment navigates only the child and disposes after crossing origin",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 38,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 473,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:56:33.382Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c7420a37da65ce6a20b2-0b854744cab2811b6578",
+          "file": "upstream-batch02-runtime-location.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "Q1502 native navigation during a pending module import aborts and releases the departing Realm",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 38,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 253,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"errors\": Array [],\u001b[22m\n\u001b[2m    \"remaining\": 0,\u001b[22m\n\u001b[32m-   \"status\": \"disposed\",\u001b[39m\n\u001b[31m+   \"status\": \"unmounted\",\u001b[39m\n\u001b[2m  }\u001b[22m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"errors\": Array [],\u001b[22m\n\u001b[2m    \"remaining\": 0,\u001b[22m\n\u001b[32m-   \"status\": \"disposed\",\u001b[39m\n\u001b[31m+   \"status\": \"unmounted\",\u001b[39m\n\u001b[2m  }\u001b[22m\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-location.spec.ts:59:18",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-location.spec.ts",
+                      "column": 18,
+                      "line": 59
+                    },
+                    "snippet": "  57 |     return { status: handle.getStatus(), remaining: state.slots[0]!.childElementCount, errors: state.errors };\n  58 |   });\n> 59 |   expect(result).toEqual({ status: \"disposed\", remaining: 0, errors: [] });\n     |                  ^\n  60 |   expect(page.url()).toBe(hostURL);\n  61 |   expect(deployment.requests).toContain(\"/navigation-target.html\");\n  62 | });"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-location.spec.ts",
+                        "column": 18,
+                        "line": 59
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"errors\": Array [],\u001b[22m\n\u001b[2m    \"remaining\": 0,\u001b[22m\n\u001b[32m-   \"status\": \"disposed\",\u001b[39m\n\u001b[31m+   \"status\": \"unmounted\",\u001b[39m\n\u001b[2m  }\u001b[22m\n\n  57 |     return { status: handle.getStatus(), remaining: state.slots[0]!.childElementCount, errors: state.errors };\n  58 |   });\n> 59 |   expect(result).toEqual({ status: \"disposed\", remaining: 0, errors: [] });\n     |                  ^\n  60 |   expect(page.url()).toBe(hostURL);\n  61 |   expect(deployment.requests).toContain(\"/navigation-target.html\");\n  62 | });\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-location.spec.ts:59:18"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:56:33.998Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-l-b11e3-eleases-the-departing-Realm-webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-l-b11e3-eleases-the-departing-Realm-webkit/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-location.spec.ts",
+                    "column": 18,
+                    "line": 59
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c7420a37da65ce6a20b2-7e24140f1a46c171bc8f",
+          "file": "upstream-batch02-runtime-location.spec.ts",
+          "line": 41,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "upstream-batch02-runtime-routing.spec.ts",
+      "file": "upstream-batch02-runtime-routing.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Q1245 cold Vue Router hash-home to history-home to hash-about loads the first lazy route in its own Realm",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 353,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Q1245 history Realm {\"location\":\"http://127.0.0.1:5173/home\",\"documentURL\":\"http://127.0.0.1:5173/home\",\"entryRealmSurvived\":true}\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:13.061Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c842a460ae1add63ef07-e653c7ca67cd3dc5a597",
+          "file": "upstream-batch02-runtime-routing.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "Q1245 Realm document initialization rejects a foreign origin and cancels a pending same-origin navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 112,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:13.491Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c842a460ae1add63ef07-2258cb44fd5a53d0a5a8",
+          "file": "upstream-batch02-runtime-routing.spec.ts",
+          "line": 55,
+          "column": 1
+        },
+        {
+          "title": "Q1245 cold Vue Router hash-home to history-home to hash-about loads the first lazy route in its own Realm",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 26,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1024,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Q1245 history Realm {\"location\":\"http://127.0.0.1:5173/home\",\"documentURL\":\"http://127.0.0.1:5173/home\",\"entryRealmSurvived\":true}\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:55.317Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c842a460ae1add63ef07-9e201e4f39e63585a040",
+          "file": "upstream-batch02-runtime-routing.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "Q1245 Realm document initialization rejects a foreign origin and cancels a pending same-origin navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 26,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 204,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:56.712Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c842a460ae1add63ef07-010ca8649e66a3f593bd",
+          "file": "upstream-batch02-runtime-routing.spec.ts",
+          "line": 55,
+          "column": 1
+        },
+        {
+          "title": "Q1245 cold Vue Router hash-home to history-home to hash-about loads the first lazy route in its own Realm",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 39,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 776,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Q1245 history Realm {\"location\":\"http://127.0.0.1:5173/home\",\"documentURL\":\"http://127.0.0.1:5173/home\",\"entryRealmSurvived\":true}\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:56:34.453Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c842a460ae1add63ef07-4a88f0984a31b54822d9",
+          "file": "upstream-batch02-runtime-routing.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "Q1245 Realm document initialization rejects a foreign origin and cancels a pending same-origin navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 39,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 221,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:56:35.383Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c842a460ae1add63ef07-8845fa5086a0360ab3c6",
+          "file": "upstream-batch02-runtime-routing.spec.ts",
+          "line": 55,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "upstream-batch02-runtime-switching.spec.ts",
+      "file": "upstream-batch02-runtime-switching.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Q2346 rapid native tab switching leaves hidden Realms unable to intercept host or application clicks (keepAlive=false)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 14,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 600,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:13.784Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0123f1eab92be535a6f4-d709fec5867ce4368acb",
+          "file": "upstream-batch02-runtime-switching.spec.ts",
+          "line": 7,
+          "column": 3
+        },
+        {
+          "title": "Q2346 rapid native tab switching leaves hidden Realms unable to intercept host or application clicks (keepAlive=true)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 14,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 579,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:14.473Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0123f1eab92be535a6f4-131c710f0d13715cea58",
+          "file": "upstream-batch02-runtime-switching.spec.ts",
+          "line": 7,
+          "column": 3
+        },
+        {
+          "title": "Q2346 rapid native tab switching leaves hidden Realms unable to intercept host or application clicks (keepAlive=false)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 27,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1316,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:57.247Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0123f1eab92be535a6f4-8fb149a17a57cdd58428",
+          "file": "upstream-batch02-runtime-switching.spec.ts",
+          "line": 7,
+          "column": 3
+        },
+        {
+          "title": "Q2346 rapid native tab switching leaves hidden Realms unable to intercept host or application clicks (keepAlive=true)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 27,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 861,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:55:58.933Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0123f1eab92be535a6f4-af2f68146226c422b04c",
+          "file": "upstream-batch02-runtime-switching.spec.ts",
+          "line": 7,
+          "column": 3
+        },
+        {
+          "title": "Q2346 rapid native tab switching leaves hidden Realms unable to intercept host or application clicks (keepAlive=false)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 40,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1221,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:56:35.796Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0123f1eab92be535a6f4-9ea580595d1b81f87a18",
+          "file": "upstream-batch02-runtime-switching.spec.ts",
+          "line": 7,
+          "column": 3
+        },
+        {
+          "title": "Q2346 rapid native tab switching leaves hidden Realms unable to intercept host or application clicks (keepAlive=true)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 40,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 911,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:56:37.155Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0123f1eab92be535a6f4-a4d072d7551795912313",
+          "file": "upstream-batch02-runtime-switching.spec.ts",
+          "line": 7,
+          "column": 3
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-08T07:54:40.488Z",
+    "duration": 117611.04500000001,
+    "expected": 79,
+    "skipped": 0,
+    "unexpected": 11,
+    "flaky": 0
+  }
+}

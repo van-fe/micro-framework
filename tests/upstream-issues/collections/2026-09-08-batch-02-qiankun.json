@@ -1,0 +1,745 @@
+{
+  "schemaVersion": 1,
+  "collectedAt": "2026-09-08T06:12:04Z",
+  "collectionBatch": "2026-09-08-batch-02",
+  "sources": [
+    {
+      "repository": "umijs/qiankun",
+      "collectionBatch": "2026-09-08-batch-02",
+      "query": "repo:umijs/qiankun is:issue label:bug",
+      "searchReturnedCount": 40,
+      "openSearchReturnedCount": 7,
+      "closedSearchReturnedCount": 33,
+      "priorCatalogIssueCount": 20,
+      "collected": 20,
+      "selection": "bug-label",
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-02-qiankun-sources.json",
+      "countCaveat": "returnedCount 仅为本次 GitHub connector 查询返回数量；未以 total_count 或标签页另行证明仓库全量。",
+      "selectionNote": "三次查询返回并去重后40条；排除采集开始前catalog已有20条，余20条全部保留，包括构建工具、相近重试报告与IE11。不得将其声称20种新运行时缺陷。"
+    }
+  ],
+  "issues": [
+    {
+      "id": "umijs/qiankun#2951",
+      "repository": "umijs/qiankun",
+      "number": 2951,
+      "url": "https://github.com/umijs/qiankun/issues/2951",
+      "title": "3.0 的 demo 切换应用（react16）报错 Illegal invocation",
+      "labels": [
+        "bug"
+      ],
+      "selection": "bug-label",
+      "status": "collected",
+      "tests": [],
+      "resolution": "",
+      "collectionBatch": "2026-09-08-batch-02",
+      "state": "closed",
+      "createdAt": "2024-04-26T03:45:40Z",
+      "updatedAt": "2025-06-23T13:37:01Z",
+      "collectedAt": "2026-09-08T06:12:04Z",
+      "labelVerifiedAt": "2026-09-08T06:12:04Z",
+      "labelVerification": "github_fetch_issue labels contains exact bug; original labels and full body/comments in sourceArchive",
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-02-qiankun-sources.json",
+      "applicability": "candidate",
+      "group": "realm-events",
+      "scenario": "qiankun 3.0.0-rc.19 的 next 示例切换到 React16 时抛 Illegal invocation。评论定位到 eeebd3f 提交：原生 window.addEventListener/removeEventListener 的 receiver 从真实 window 换成沙箱 global。",
+      "expectedBehavior": "应用安装、移除和卸载原生 Window 监听器时 receiver 保持真实应用 iframe Window；切换可完成且不修改宿主监听器。",
+      "suggestedLayer": "realm-host / effects / dom-bridge",
+      "testLevel": "browser + e2e",
+      "testIdea": "在真实 iframe 应用注册普通、capture、once Window 监听器，原生分发后验证回调 this、event.currentTarget 与应用 Window 一致；随后卸载重挂真实 React 应用，监听器不重复、宿主不污染。",
+      "newTrigger": "原生 add/removeEventListener receiver；区别于旧 Q1449 普通函数 this。",
+      "relatedIssues": [
+        "umijs/qiankun#1449"
+      ],
+      "reproductionUrls": [
+        "https://github.com/umijs/qiankun/tree/next/examples",
+        "https://github.com/umijs/qiankun/commit/eeebd3f76aa3a9d026b4f3a4e86682088e6295c1"
+      ]
+    },
+    {
+      "id": "umijs/qiankun#1990",
+      "repository": "umijs/qiankun",
+      "number": 1990,
+      "url": "https://github.com/umijs/qiankun/issues/1990",
+      "title": "网络或其他原因导致子应用加载失败，无法手动重新加载",
+      "labels": [
+        "bug"
+      ],
+      "selection": "bug-label",
+      "status": "collected",
+      "tests": [],
+      "resolution": "",
+      "collectionBatch": "2026-09-08-batch-02",
+      "state": "closed",
+      "createdAt": "2022-03-03T16:15:55Z",
+      "updatedAt": "2024-03-06T03:46:13Z",
+      "collectedAt": "2026-09-08T06:12:04Z",
+      "labelVerifiedAt": "2026-09-08T06:12:04Z",
+      "labelVerification": "github_fetch_issue labels contains exact bug; original labels and full body/comments in sourceArchive",
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-02-qiankun-sources.json",
+      "applicability": "candidate",
+      "group": "runtime-retry",
+      "scenario": "qiankun 2.6.3 中浏览器断网后 loadMicroApp 首次失败，网络恢复后卸载并以同一 entry URL 再加载，直接重抛缓存错误，无法恢复。",
+      "expectedBehavior": "失败的加载结果不能永久阻止显式重试；网络恢复后同 URL 应有真实新请求并可挂载。",
+      "suggestedLayer": "runtime-core / entry-resolver",
+      "testLevel": "e2e",
+      "testIdea": "Playwright context 离线令 entry 请求失败，恢复 online 后对同 URL 显式重试；验证服务端新请求、可见 mount 结果及失败 iframe/surface 清理。",
+      "newTrigger": "浏览器离线→在线，同 URL；与 Q1885 服务端停止→恢复及旧 Q2854 更换备用地址区分。",
+      "relatedIssues": [
+        "umijs/qiankun#1885",
+        "umijs/qiankun#2854"
+      ],
+      "notes": "与 Q1885 同类失败缓存，可共用基础设施，但需独立网络切换触发断言。"
+    },
+    {
+      "id": "umijs/qiankun#2166",
+      "repository": "umijs/qiankun",
+      "number": 2166,
+      "url": "https://github.com/umijs/qiankun/issues/2166",
+      "title": "[Feature Request] 能否提供彻底卸载loadMicroApp加载的子应用，下次进入能重新走首次流程",
+      "labels": [
+        "bug"
+      ],
+      "selection": "bug-label",
+      "status": "collected",
+      "tests": [],
+      "resolution": "",
+      "collectionBatch": "2026-09-08-batch-02",
+      "state": "closed",
+      "createdAt": "2022-06-29T07:06:14Z",
+      "updatedAt": "2024-03-06T03:46:01Z",
+      "collectedAt": "2026-09-08T06:12:04Z",
+      "labelVerifiedAt": "2026-09-08T06:12:04Z",
+      "labelVerification": "github_fetch_issue labels contains exact bug; original labels and full body/comments in sourceArchive",
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-02-qiankun-sources.json",
+      "applicability": "candidate",
+      "group": "runtime-cache",
+      "scenario": "原 issue 虽以 Feature Request 命名但带精确 bug 标签：子应用首次成功后发布更新版本，再次进入仍使用之前缓存；另有首次部分 JS 请求失败后不能彻底卸载重试的报告。",
+      "expectedBehavior": "本项目需按公开 dispose、缓存及 HTTP 缓存契约判断何时创建新 Realm、重新获取入口和执行新版本；不能以 URL 加时间戳作为框架修复。",
+      "suggestedLayer": "runtime-core / entry-resolver / realm-host",
+      "testLevel": "e2e",
+      "testIdea": "受控服务先返回 v1，无缓存响应头；完整 dispose 后同 URL 返回 v2，再创建 Runtime/app，验证入口与脚本新请求、v2 执行标记、新 Realm 和旧全局清理；另测入口成功但后续脚本失败后的重新创建。",
+      "newTrigger": "已成功加载后的同 URL 发布更新，区别于首次失败重试。",
+      "relatedIssues": [
+        "umijs/qiankun#1990",
+        "umijs/qiankun#1885"
+      ],
+      "notes": "并不预先承诺绕过浏览器 HTTP 缓存、保活缓存或原生 ESM URL 缓存；须记录实际选定入口类型与重载边界。"
+    },
+    {
+      "id": "umijs/qiankun#1885",
+      "repository": "umijs/qiankun",
+      "number": 1885,
+      "url": "https://github.com/umijs/qiankun/issues/1885",
+      "title": "loadMicroApp 加载失败后，再一次执行，并不会重新发起http请求，而是直接报错",
+      "labels": [
+        "bug"
+      ],
+      "selection": "bug-label",
+      "status": "collected",
+      "tests": [],
+      "resolution": "",
+      "collectionBatch": "2026-09-08-batch-02",
+      "state": "closed",
+      "createdAt": "2021-12-22T13:05:27Z",
+      "updatedAt": "2024-03-06T03:45:52Z",
+      "collectedAt": "2026-09-08T06:12:04Z",
+      "labelVerifiedAt": "2026-09-08T06:12:04Z",
+      "labelVerification": "github_fetch_issue labels contains exact bug; original labels and full body/comments in sourceArchive",
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-02-qiankun-sources.json",
+      "applicability": "candidate",
+      "group": "runtime-retry",
+      "scenario": "qiankun 2.6.3 首次加载时子应用服务不可用，恢复服务后同 URL 再次调用 loadMicroApp 不再发 HTTP 请求，直接报上次错误。",
+      "expectedBehavior": "显式重试能够重新请求已经恢复的服务并执行挂载。",
+      "suggestedLayer": "runtime-core / entry-resolver",
+      "testLevel": "e2e",
+      "testIdea": "让同一受控 entry URL 首次连接失败/503，恢复服务响应后重试同 URL；计数第二次请求并验证应用脚本执行和可见 DOM，不能用改变 URL 绕过。",
+      "newTrigger": "服务端失败→恢复且地址不变。",
+      "relatedIssues": [
+        "umijs/qiankun#1990",
+        "umijs/qiankun#2854"
+      ],
+      "notes": "与 Q1990 是同类错误缓存的独立 upstream 报告，台账不得称两种全新机制。"
+    },
+    {
+      "id": "umijs/qiankun#2795",
+      "repository": "umijs/qiankun",
+      "number": 2795,
+      "url": "https://github.com/umijs/qiankun/issues/2795",
+      "title": "[Bug] webpack-plugin 单测 ci 上无法运行",
+      "labels": [
+        "bug"
+      ],
+      "selection": "bug-label",
+      "status": "collected",
+      "tests": [],
+      "resolution": "",
+      "collectionBatch": "2026-09-08-batch-02",
+      "state": "closed",
+      "createdAt": "2023-11-07T10:23:09Z",
+      "updatedAt": "2024-02-26T07:20:52Z",
+      "collectedAt": "2026-09-08T06:12:04Z",
+      "labelVerifiedAt": "2026-09-08T06:12:04Z",
+      "labelVerification": "github_fetch_issue labels contains exact bug; original labels and full body/comments in sourceArchive",
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-02-qiankun-sources.json",
+      "applicability": "candidate",
+      "group": "build-tooling",
+      "scenario": "qiankun next 的 webpack-plugin 单测 script 改名为 test 后，从根目录 npm test 会卡在 webpack build 阶段，CI 无法结束。",
+      "expectedBehavior": "本项目的打包工具测试应具有明确完成/失败路径，compiler 和辅助资源在结束时释放，测试进程可终止。",
+      "suggestedLayer": "build tooling / test orchestration",
+      "testLevel": "unit + build integration",
+      "testIdea": "按本项目 Bun/Vite preset 运行最小真实构建 fixture，成功和构建失败两条路径均等待并关闭构建器，设置有界超时并验证子进程退出码；若无 webpack plugin 产品则仅映射为对应构建生命周期契约。",
+      "newTrigger": "测试脚本发现规则触发构建挂起，非浏览器运行时兼容。",
+      "reproductionUrls": [
+        "https://github.com/umijs/qiankun/pull/2794#discussion_r1384679545",
+        "https://github.com/umijs/qiankun/pull/2800"
+      ],
+      "notes": "原问题的 npm/webpack 工作流不直接照搬到本项目；必须区分 upstream 工具问题与本项目已执行构建契约。"
+    },
+    {
+      "id": "umijs/qiankun#2694",
+      "repository": "umijs/qiankun",
+      "number": 2694,
+      "url": "https://github.com/umijs/qiankun/issues/2694",
+      "title": "inline script should not add sourceURL",
+      "labels": [
+        "bug"
+      ],
+      "selection": "bug-label",
+      "status": "collected",
+      "tests": [],
+      "resolution": "",
+      "collectionBatch": "2026-09-08-batch-02",
+      "state": "closed",
+      "createdAt": "2023-09-20T07:40:31Z",
+      "updatedAt": "2024-01-03T13:32:15Z",
+      "collectedAt": "2026-09-08T06:12:04Z",
+      "labelVerifiedAt": "2026-09-08T06:12:04Z",
+      "labelVerification": "github_fetch_issue labels contains exact bug; original labels and full body/comments in sourceArchive",
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-02-qiankun-sources.json",
+      "applicability": "candidate",
+      "group": "entry-diagnostics",
+      "scenario": "inline script 被加入 sourceURL 标记，调试器将内联代码错误归属为外部资源。正文只有截图，评论确认 sourceURL 用于外部 JS 定位，不应给 inline script 增加该注释。",
+      "expectedBehavior": "框架保持原始 JS 源码；内联脚本原生执行且不伪造外部 URL，外部脚本保留实际请求 URL 的调试来源。",
+      "suggestedLayer": "entry-resolver / realm-host",
+      "testLevel": "browser + e2e",
+      "testIdea": "HTML Entry 同时提供带可识别原始源码的 inline 与 external script；检查执行 iframe script 的文本无注入 sourceURL，原生错误事件/堆栈保留可解释来源，外部 filename 指向真实 URL。",
+      "newTrigger": "源码与调试来源保真，区别于脚本功能性执行成功。",
+      "notes": "各浏览器堆栈格式不同，不能依赖 Chrome DevTools UI 作为三引擎通用断言；也不能改写源码制造预期。"
+    },
+    {
+      "id": "umijs/qiankun#2701",
+      "repository": "umijs/qiankun",
+      "number": 2701,
+      "url": "https://github.com/umijs/qiankun/issues/2701",
+      "title": "@qiankunjs/shared 和 @qiankunjs/sandbox 相互依赖",
+      "labels": [
+        "bug"
+      ],
+      "selection": "bug-label",
+      "status": "collected",
+      "tests": [],
+      "resolution": "",
+      "collectionBatch": "2026-09-08-batch-02",
+      "state": "closed",
+      "createdAt": "2023-09-26T03:11:13Z",
+      "updatedAt": "2023-10-24T11:54:43Z",
+      "collectedAt": "2026-09-08T06:12:04Z",
+      "labelVerifiedAt": "2026-09-08T06:12:04Z",
+      "labelVerification": "github_fetch_issue labels contains exact bug; original labels and full body/comments in sourceArchive",
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-02-qiankun-sources.json",
+      "applicability": "candidate",
+      "group": "build-tooling",
+      "scenario": "@qiankunjs/shared 与 @qiankunjs/sandbox 互相依赖，包拓扑无法正确识别，构建不能按依赖顺序完成。",
+      "expectedBehavior": "本项目 workspace 依赖方向单向，构建计划无环且依赖先于被依赖方的使用者构建。",
+      "suggestedLayer": "workspace architecture / build tooling",
+      "testLevel": "unit + clean build",
+      "testIdea": "对实际 workspace package.json 和构建调度生成依赖图，验证 DAG；给图算法注入双向依赖应报告完整环路径，另验证真实全量构建按公开 exports 完成。",
+      "newTrigger": "包间依赖环与构建拓扑；非 Realm 运行时错误。"
+    },
+    {
+      "id": "umijs/qiankun#2727",
+      "repository": "umijs/qiankun",
+      "number": 2727,
+      "url": "https://github.com/umijs/qiankun/issues/2727",
+      "title": "[Bug] 3.0 loader bug",
+      "labels": [
+        "bug"
+      ],
+      "selection": "bug-label",
+      "status": "collected",
+      "tests": [],
+      "resolution": "",
+      "collectionBatch": "2026-09-08-batch-02",
+      "state": "closed",
+      "createdAt": "2023-10-11T11:24:14Z",
+      "updatedAt": "2023-10-23T08:56:18Z",
+      "collectedAt": "2026-09-08T06:12:04Z",
+      "labelVerifiedAt": "2026-09-08T06:12:04Z",
+      "labelVerification": "github_fetch_issue labels contains exact bug; original labels and full body/comments in sourceArchive",
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-02-qiankun-sources.json",
+      "applicability": "candidate",
+      "group": "entry-multi-instance",
+      "scenario": "3.0 loader 同时多次加载同一个微应用时，webpack 根据同 URL script 已存在而跳过再次插入执行，第二实例缺失全局；同 issue 还报告 2/3 运行时改同一 HTMLHeadElement.prototype.appendChild 冲突及 streaming HTML 下 beforeLoad 无法在 DOM 就绪后、JS 前读取 appConfig。",
+      "expectedBehavior": "每个实例拥有独立脚本发现与执行上下文，不能被另一实例标签误判已执行；宿主原型不被修改；HTML/生命周期顺序必须按本项目明确契约验证。",
+      "suggestedLayer": "entry-resolver / realm-host / dom-bridge / runtime-core",
+      "testLevel": "e2e + browser",
+      "testIdea": "真实 webpack runtime 同 URL 加载两个实例并触发同一 lazy chunk，分别验证全局与 DOM；同时快照宿主 head 原型。另用分段 HTML 含 appConfig 和后续脚本记录 DOM可读→明确钩子→JS 顺序，只对项目已有生命周期承诺断言。",
+      "newTrigger": "webpack 按 URL 查找已存在标签的去重路径；并包含两个不得遗漏的子场景。",
+      "relatedIssues": [
+        "umijs/qiankun#3019"
+      ],
+      "subscenarios": [
+        {
+          "scenario": "同 URL webpack 多实例脚本去重",
+          "contract": "每实例脚本执行与 DOM 查询隔离"
+        },
+        {
+          "scenario": "不同运行时共存时 head 原型互踩",
+          "contract": "不修改宿主 HTMLHeadElement.prototype；本项目双实例/共存边界"
+        },
+        {
+          "scenario": "streaming HTML appConfig 与 beforeLoad 顺序",
+          "contract": "需评估本项目 beforeLoad 的时机；不能把 entry 后挂载前其他钩子冒称同名兼容"
+        }
+      ],
+      "reproductionUrls": [
+        "https://github.com/webpack/webpack/blob/1f13ff9fe587e094df59d660b4611b1bd19aed4c/lib/runtime/LoadScriptRuntimeModule.js#L131-L136",
+        "https://github.com/umijs/qiankun/pull/2730",
+        "https://github.com/umijs/qiankun/pull/2736",
+        "https://github.com/umijs/qiankun/issues/2749"
+      ]
+    },
+    {
+      "id": "umijs/qiankun#1116",
+      "repository": "umijs/qiankun",
+      "number": 1116,
+      "url": "https://github.com/umijs/qiankun/issues/1116",
+      "title": "子应用使用react-monaco-editor编辑器 ，双滚动条的情况下父层级滚动条有滚动，编辑器无法光标定位",
+      "labels": [
+        "bug"
+      ],
+      "selection": "bug-label",
+      "status": "collected",
+      "tests": [],
+      "resolution": "",
+      "collectionBatch": "2026-09-08-batch-02",
+      "state": "closed",
+      "createdAt": "2020-12-03T01:44:10Z",
+      "updatedAt": "2023-08-02T09:09:08Z",
+      "collectedAt": "2026-09-08T06:12:04Z",
+      "labelVerifiedAt": "2026-09-08T06:12:04Z",
+      "labelVerification": "github_fetch_issue labels contains exact bug; original labels and full body/comments in sourceArchive",
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-02-qiankun-sources.json",
+      "applicability": "candidate",
+      "group": "real-component-nested",
+      "scenario": "子应用内再嵌套子应用，react-monaco-editor 出现内外双滚动条；父层级滚动后点击编辑器无法定位光标。评论定位 Monaco 以 window===event.view 判断 iframe 嵌套关系，代理身份不同导致错误坐标补偿。",
+      "expectedBehavior": "真实 Monaco 在嵌套应用与双滚动容器中点击现有文本，可将光标放到目标行列并编辑；事件 view、可见坐标与应用 Realm 契约一致。",
+      "suggestedLayer": "visual-bridge / dom-bridge / nested runtime",
+      "testLevel": "e2e (real Monaco)",
+      "testIdea": "建立真实外层应用和内层 Monaco fixture，分别滚动父容器、内层页面和编辑器，点击指定行列中部并输入；验证模型文本与 caret、宿主文档及原型未改变，三引擎运行。",
+      "newTrigger": "嵌套应用 + 双层滚动 + event.view 身份分支；旧 W288 仅既有代码中部点击。",
+      "relatedIssues": [
+        "Tencent/wujie#288"
+      ],
+      "reproductionUrls": [
+        "https://github.com/xiaoxiao992/qiankun",
+        "https://github.com/microsoft/vscode/blob/c2276264b06d9e0d42baf13e35b76395e14e12e2/src/vs/base/browser/iframe.ts#L91",
+        "https://github.com/microsoft/vscode/blob/c2276264b06d9e0d42baf13e35b76395e14e12e2/src/vs/base/browser/mouseEvent.ts#L77"
+      ],
+      "notes": "上游评论提供全局修改 UIEvent.prototype.view 的 workaround；本项目不可采用，需最低层实例范围的通用语义。"
+    },
+    {
+      "id": "umijs/qiankun#1212",
+      "repository": "umijs/qiankun",
+      "number": 1212,
+      "url": "https://github.com/umijs/qiankun/issues/1212",
+      "title": "[BUG] proxySandbox 的 setter 逻辑中缺少了rawWindow上定义了setter和getter的属性",
+      "labels": [
+        "bug"
+      ],
+      "selection": "bug-label",
+      "status": "collected",
+      "tests": [],
+      "resolution": "",
+      "collectionBatch": "2026-09-08-batch-02",
+      "state": "open",
+      "createdAt": "2021-01-14T07:38:20Z",
+      "updatedAt": "2023-06-19T12:11:17Z",
+      "collectedAt": "2026-09-08T06:12:04Z",
+      "labelVerifiedAt": "2026-09-08T06:12:04Z",
+      "labelVerification": "github_fetch_issue labels contains exact bug; original labels and full body/comments in sourceArchive",
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-02-qiankun-sources.json",
+      "applicability": "candidate",
+      "group": "realm-accessors",
+      "scenario": "qiankun 2.3.x ProxySandbox setter 把 rawWindow accessor 当只读属性，window.name 及自定义 getter/setter 写入无效；直接调用原生 accessor 又会因 this 不是 Window 抛 Illegal invocation。评论另提 React 开发版读取 window.event 时同类错误。",
+      "expectedBehavior": "原生 Window accessor 在真实 iframe Window 上工作；自定义 accessor 的读写、receiver 和属性描述符保持原生语义，宿主与兄弟实例隔离。",
+      "suggestedLayer": "realm-host / dom-bridge",
+      "testLevel": "browser",
+      "testIdea": "iframe 原生脚本给 window.name 赋值并读回，定义带 getter/setter 的自定义属性记录 this，重复读写和删除；真实事件处理期间读取 window.event（仅支持引擎按原生基线），验证宿主/兄弟 name 未变化。",
+      "newTrigger": "Window 原生与自定义 accessor 的写入语义，不是普通全局属性。"
+    },
+    {
+      "id": "umijs/qiankun#2408",
+      "repository": "umijs/qiankun",
+      "number": 2408,
+      "url": "https://github.com/umijs/qiankun/issues/2408",
+      "title": "[Bug]2.10.1版本 子应用是elementui时el-select控件弹出位置错误即使设置了 el-select 属性 popper-append-to-body=false 还是不能解决 2.9.3版本没有该问题",
+      "labels": [
+        "bug"
+      ],
+      "selection": "bug-label",
+      "status": "collected",
+      "tests": [],
+      "resolution": "",
+      "collectionBatch": "2026-09-08-batch-02",
+      "state": "closed",
+      "createdAt": "2023-02-23T13:39:37Z",
+      "updatedAt": "2023-05-25T08:32:43Z",
+      "collectedAt": "2026-09-08T06:12:04Z",
+      "labelVerifiedAt": "2026-09-08T06:12:04Z",
+      "labelVerification": "github_fetch_issue labels contains exact bug; original labels and full body/comments in sourceArchive",
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-02-qiankun-sources.json",
+      "applicability": "candidate",
+      "group": "real-component-overlay",
+      "scenario": "qiankun 2.10.1 中 Element UI el-select 下拉错位，显式 popper-append-to-body=false 仍失败；评论定位 document 与 parentNode 身份比较失败，进而 getComputedStyle(document) 报错。另有 body 上 el-drawer 内 el-select focus 后下拉出现在屏幕左上角的具体触发。",
+      "expectedBehavior": "真实 Element UI Select 默认 portal 与显式本地容器定位均正确；Drawer 内 focus 触发保持输入框锚点，开发者本地容器语义不被强制改为 viewport。",
+      "suggestedLayer": "dom-bridge / visual-bridge / dom-surface",
+      "testLevel": "e2e (real Vue 2 + Element UI)",
+      "testIdea": "真实 Element UI Drawer 内 Select，分别测默认 body 弹层和 popper-append-to-body=false；打开Drawer→滚动容器→focus Select→点击选项，验证弹层锚点、可见值和无 getComputedStyle(Document) 异常。",
+      "newTrigger": "Element UI 原生 document-parentNode 比较、显式本地容器和 Drawer 内 focus；区别于旧 W830 NaiveUI 切换、W896 ElementPlus draggable。",
+      "relatedIssues": [
+        "Tencent/wujie#830",
+        "Tencent/wujie#896"
+      ],
+      "reproductionUrls": [
+        "https://github.com/gongshun/qiankun-vue-demo/tree/report-bug",
+        "https://github.com/ElemeFE/element/blob/f14b5ba5406b0f682499663fc5d6fb10864b3146/src/utils/popper.js#L1060"
+      ]
+    },
+    {
+      "id": "umijs/qiankun#2378",
+      "repository": "umijs/qiankun",
+      "number": 2378,
+      "url": "https://github.com/umijs/qiankun/issues/2378",
+      "title": "qiankun does not work with AdGuard",
+      "labels": [
+        "bug"
+      ],
+      "selection": "bug-label",
+      "status": "collected",
+      "tests": [],
+      "resolution": "",
+      "collectionBatch": "2026-09-08-batch-02",
+      "state": "closed",
+      "createdAt": "2023-01-28T12:26:09Z",
+      "updatedAt": "2023-02-27T03:31:48Z",
+      "collectedAt": "2026-09-08T06:12:04Z",
+      "labelVerifiedAt": "2026-09-08T06:12:04Z",
+      "labelVerification": "github_fetch_issue labels contains exact bug; original labels and full body/comments in sourceArchive",
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-02-qiankun-sources.json",
+      "applicability": "candidate",
+      "group": "entry-html-url",
+      "scenario": "AdGuard 注入的 script src 查询参数含 HTML 字符实体 &amp;，HTML loader 将字面 &amp; 保留在请求 URL，导致服务返回 400。评论确认应采用 HTML 解析实体语义，decodeURI 等 URL 解码并不等价。",
+      "expectedBehavior": "HTML 属性按浏览器规则解码字符实体后再解析相对 URL；百分号编码与本来作为数据的字符不能重复解码。",
+      "suggestedLayer": "entry-resolver",
+      "testLevel": "unit + e2e",
+      "testIdea": "HTML Entry 引入 src='assets/app.js?a=1&amp;b=2' 并含数字实体、重复参数和 %26amp%3B 数据；服务端断言实际 query 与浏览器原生解析一致且脚本在 iframe 执行。覆盖同类 link href 属性。",
+      "newTrigger": "HTML 字符实体与 URL 百分号编码之间的边界。",
+      "notes": "使用受控等价注入 HTML 即可验证通用加载契约；不宣称安装并验证整个 AdGuard 产品。"
+    },
+    {
+      "id": "umijs/qiankun#2346",
+      "repository": "umijs/qiankun",
+      "number": 2346,
+      "url": "https://github.com/umijs/qiankun/issues/2346",
+      "title": "examples启动后，快速点击切换tab，会导致出现一个iframe浮层，所有点击操作无法触发",
+      "labels": [
+        "bug"
+      ],
+      "selection": "bug-label",
+      "status": "collected",
+      "tests": [],
+      "resolution": "",
+      "collectionBatch": "2026-09-08-batch-02",
+      "state": "open",
+      "createdAt": "2022-11-25T01:23:42Z",
+      "updatedAt": "2023-02-15T10:32:30Z",
+      "collectedAt": "2026-09-08T06:12:04Z",
+      "labelVerifiedAt": "2026-09-08T06:12:04Z",
+      "labelVerification": "github_fetch_issue labels contains exact bug; original labels and full body/comments in sourceArchive",
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-02-qiankun-sources.json",
+      "applicability": "candidate",
+      "group": "runtime-visible-cleanup",
+      "scenario": "qiankun 2.8.4 官方 examples 快速切换多个 tab 后出现覆盖页面的 iframe 浮层，所有鼠标点击失效。原报告环境 Windows11/Chrome107。",
+      "expectedBehavior": "应用切换与取消不得使隐藏执行 iframe 成为可见顶层命中目标，宿主和当前应用可继续交互，过时实例清理。",
+      "suggestedLayer": "runtime-core / realm-host / dom-surface",
+      "testLevel": "e2e",
+      "testIdea": "人为延迟 entry 与 mount，连续切换 tab 形成重叠加载/取消，结束后用真实鼠标点击宿主和活动应用按钮；检查页面 elementFromPoint、执行 iframe 隐藏及旧 surface/iframe 数量。",
+      "newTrigger": "高速切换后的可见命中与透明 iframe 遮挡，不只验证生命周期状态。",
+      "relatedIssues": [
+        "umijs/qiankun#1089"
+      ]
+    },
+    {
+      "id": "umijs/qiankun#2298",
+      "repository": "umijs/qiankun",
+      "number": 2298,
+      "url": "https://github.com/umijs/qiankun/issues/2298",
+      "title": "yarn examples:start-multiple启动项目，在页面点击 mount 按钮报错",
+      "labels": [
+        "bug"
+      ],
+      "selection": "bug-label",
+      "status": "collected",
+      "tests": [],
+      "resolution": "",
+      "collectionBatch": "2026-09-08-batch-02",
+      "state": "closed",
+      "createdAt": "2022-10-12T10:24:47Z",
+      "updatedAt": "2022-10-14T01:48:20Z",
+      "collectedAt": "2026-09-08T06:12:04Z",
+      "labelVerifiedAt": "2026-09-08T06:12:04Z",
+      "labelVerification": "github_fetch_issue labels contains exact bug; original labels and full body/comments in sourceArchive",
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-02-qiankun-sources.json",
+      "applicability": "insufficient-info",
+      "group": "real-component-bundler",
+      "scenario": "qiankun 2.8.1 官方 examples:start-multiple 点击 mount 报错。唯一评论关联 Q2300：2.8.2 加载 CRA 构建子应用不兼容/死循环，2.7.4 正常，2.8.3 修复；原始异常细节仅截图。",
+      "expectedBehavior": "真实 CRA/webpack 产物在多实例手动 mount 时应完成挂载、执行脚本且不无限递归；要声称覆盖上游具体异常还需对应堆栈或修复差异。",
+      "suggestedLayer": "realm-host / entry-resolver / real application integration",
+      "testLevel": "e2e (real CRA/webpack output)",
+      "testIdea": "读取官方 v2.8.3 对应修复和原图调用栈后缩小触发；用实际 CRA/webpack bundle 同时或连续 mount 多实例并设置有界成功信号和页面异常收集。普通 mount 基线只作部分证据。",
+      "newTrigger": "CRA 构建产物、多实例 imperative mount；底层确切递归分支尚待提取。",
+      "relatedIssues": [
+        "umijs/qiankun#2300"
+      ],
+      "missingDetails": [
+        "原始截图中的完整异常调用栈及具体递归 API；当前正文/评论没有可复制文本"
+      ],
+      "reproductionUrls": [
+        "https://github.com/umijs/qiankun/issues/2300"
+      ]
+    },
+    {
+      "id": "umijs/qiankun#2137",
+      "repository": "umijs/qiankun",
+      "number": 2137,
+      "url": "https://github.com/umijs/qiankun/issues/2137",
+      "title": "主应用qiankun@2.7.2， 子应用qiankun@2.6.3，子应用存在动态加载的STYLE_TAG_NAME时，shadow dom隔离下，不能直接获取到元素报错",
+      "labels": [
+        "bug"
+      ],
+      "selection": "bug-label",
+      "status": "collected",
+      "tests": [],
+      "resolution": "",
+      "collectionBatch": "2026-09-08-batch-02",
+      "state": "closed",
+      "createdAt": "2022-06-07T23:32:51Z",
+      "updatedAt": "2022-06-15T16:16:15Z",
+      "collectedAt": "2026-09-08T06:12:04Z",
+      "labelVerifiedAt": "2026-09-08T06:12:04Z",
+      "labelVerification": "github_fetch_issue labels contains exact bug; original labels and full body/comments in sourceArchive",
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-02-qiankun-sources.json",
+      "applicability": "candidate",
+      "group": "nested-dom-style",
+      "scenario": "嵌套微应用：主应用 qiankun 2.7.2、子应用 qiankun 2.6.3 且 strictStyleIsolation。子应用动态创建 CSS/style 时 getAppWrapperHeadElement 无法穿透 ShadowRoot 找到 head，mountDOM 为 undefined 后调用 contains 抛错；堆栈涉及 eruda 2.4.1。",
+      "expectedBehavior": "嵌套 Runtime 各自的动态 style/link 应找到所属应用可见 head 并正常渲染，不能通过普通 document/head 查找越过或遗漏 ShadowRoot。",
+      "suggestedLayer": "dom-surface / dom-bridge / nested runtime",
+      "testLevel": "browser + e2e",
+      "testIdea": "真实父应用再挂载子 Runtime，子应用原生创建/删除 style 和 link 并重复挂载，验证子节点 computedStyle 变化、父/宿主样式不污染、每层清理；必要时运行同版 eruda 复现原调用链。",
+      "newTrigger": "多层 ShadowRoot + 内层 Runtime 动态样式路由。",
+      "reproductionUrls": [
+        "https://github.com/liangskyli/umi4-qiankun-strictStyleIsolation-bug"
+      ]
+    },
+    {
+      "id": "umijs/qiankun#2141",
+      "repository": "umijs/qiankun",
+      "number": 2141,
+      "url": "https://github.com/umijs/qiankun/issues/2141",
+      "title": "最新版本2.7.2的升级导致切换子应用加载的当前css文件丢失",
+      "labels": [
+        "bug",
+        "Need Reproduction"
+      ],
+      "selection": "bug-label",
+      "status": "collected",
+      "tests": [],
+      "resolution": "",
+      "collectionBatch": "2026-09-08-batch-02",
+      "state": "closed",
+      "createdAt": "2022-06-09T01:08:54Z",
+      "updatedAt": "2022-06-15T15:46:02Z",
+      "collectedAt": "2026-09-08T06:12:04Z",
+      "labelVerifiedAt": "2026-09-08T06:12:04Z",
+      "labelVerification": "github_fetch_issue labels contains exact bug; original labels and full body/comments in sourceArchive",
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-02-qiankun-sources.json",
+      "applicability": "candidate",
+      "group": "dom-style-remount",
+      "scenario": "qiankun 2.7.2、umi 3.5.26/plugin 2.22.1：A 首页→B 首页→A 首页，当前 CSS 文件丢失；2.7.1 正常。评论补充 Emotion 同样受影响；上游仍保留 Need Reproduction 标签。",
+      "expectedBehavior": "切换与重新激活时，当前实例所需动态 CSS/Emotion 样式应恢复；清理前一实例不能误删新实例样式。",
+      "suggestedLayer": "dom-bridge / dom-surface / runtime-core",
+      "testLevel": "e2e (real dynamic style consumer)",
+      "testIdea": "用真实 Emotion 或对应构建输出让 A 动态插入样式，执行 A→B→A，验证目标 computedStyle、样式 sheet 所属 ShadowRoot 和同名资源引用；分别明确普通卸载重建与 keepAlive 模式。",
+      "newTrigger": "版本回归下切回原应用导致样式恢复丢失；与旧 W116 CSSOM insertRule 保活样式共享可相关但不能替代其具体流程。",
+      "relatedIssues": [
+        "Tencent/wujie#116"
+      ],
+      "missingDetails": [
+        "原 issue 无最小仓库，Emotion 具体版本/调用方式未给出"
+      ],
+      "notes": "仍为 collected；上游 Need Reproduction 不是本地无法复现结论。实际执行须记录所选库版本与布局。"
+    },
+    {
+      "id": "umijs/qiankun#1502",
+      "repository": "umijs/qiankun",
+      "number": 1502,
+      "url": "https://github.com/umijs/qiankun/issues/1502",
+      "title": "沙箱启用时，子应用使用 window.location = 'https://www.baidu.com' 报错",
+      "labels": [
+        "bug"
+      ],
+      "selection": "bug-label",
+      "status": "collected",
+      "tests": [],
+      "resolution": "",
+      "collectionBatch": "2026-09-08-batch-02",
+      "state": "open",
+      "createdAt": "2021-06-10T03:41:27Z",
+      "updatedAt": "2021-07-21T10:42:18Z",
+      "collectedAt": "2026-09-08T06:12:04Z",
+      "labelVerifiedAt": "2026-09-08T06:12:04Z",
+      "labelVerification": "github_fetch_issue labels contains exact bug; original labels and full body/comments in sourceArchive",
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-02-qiankun-sources.json",
+      "applicability": "candidate",
+      "group": "realm-navigation",
+      "scenario": "qiankun 2.4.2 沙箱中直接 window.location='https://www.baidu.com' 抛 native receiver TypeError，而 location.href 写法工作；第三方 custom-protocol-check 内置直接赋值，应用无法统一改写。",
+      "expectedBehavior": "真实应用 Window 的 Location setter 保留浏览器原生导航语义；按本项目边界在应用 iframe 导航，不让宿主导航或用源码改写兼容。",
+      "suggestedLayer": "realm-host / navigation contract",
+      "testLevel": "browser + e2e",
+      "testIdea": "由应用 iframe 原生脚本直接给 window.location 赋受控同源目的地址；等待 iframe 实际导航并核查 host URL 不变。记录 Runtime 对整页 iframe 导航后的生命周期可支持范围，不用仅赋 hash 的替代断言冒充整页导航。",
+      "newTrigger": "直接给 Window.location setter 赋字符串，与旧 W107 anchor/hash 点击不同。",
+      "relatedIssues": [
+        "Tencent/wujie#107"
+      ],
+      "reproductionUrls": [
+        "https://github.com/vireshshah/custom-protocol-check/pull/13"
+      ],
+      "notes": "原 custom protocol 外部应用唤起不纳入受控浏览器断言；这里只验证底层 Location setter。"
+    },
+    {
+      "id": "umijs/qiankun#1174",
+      "repository": "umijs/qiankun",
+      "number": 1174,
+      "url": "https://github.com/umijs/qiankun/issues/1174",
+      "title": "[BUG] getTargetValue的缓存机制导致window上函数的this指向错误",
+      "labels": [
+        "bug"
+      ],
+      "selection": "bug-label",
+      "status": "collected",
+      "tests": [],
+      "resolution": "",
+      "collectionBatch": "2026-09-08-batch-02",
+      "state": "closed",
+      "createdAt": "2020-12-22T10:40:05Z",
+      "updatedAt": "2021-05-10T07:16:20Z",
+      "collectedAt": "2026-09-08T06:12:04Z",
+      "labelVerifiedAt": "2026-09-08T06:12:04Z",
+      "labelVerification": "github_fetch_issue labels contains exact bug; original labels and full body/comments in sourceArchive",
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-02-qiankun-sources.json",
+      "applicability": "candidate",
+      "group": "real-component-function",
+      "scenario": "qiankun 2.3.2 的 getTargetValue/isConstructable 缓存让某些 window 函数被错误 bind，真实 jsPlumb 使用处 this 指向错误；2.0.24 正常。提供 Orange-C/qiankun error-case 分支 React16 示例；作者说明原始精确条件需进一步定位。",
+      "expectedBehavior": "真实 iframe 中库的全局函数保留原始身份、构造能力和调用 receiver；本地 this 与原生独立运行基线一致。",
+      "suggestedLayer": "realm-host / dom-bridge",
+      "testLevel": "e2e (real jsPlumb) + browser",
+      "testIdea": "先读取 error-case 分支提取 jsPlumb 版本和调用链，安装同版真实 jsPlumb，在 iframe 渲染连接/拖动并重复读取/调用相关 window 函数；补充普通调用、.call、自定义 constructor 的通用 Realm 契约。",
+      "newTrigger": "函数 constructable 分类和绑定结果缓存影响真实库，不能由旧普通函数 this 测试直接覆盖。",
+      "relatedIssues": [
+        "umijs/qiankun#1449"
+      ],
+      "reproductionUrls": [
+        "https://github.com/Orange-C/qiankun/tree/error-case"
+      ],
+      "missingDetails": [
+        "需从 error-case 仓库进一步提取具体 jsPlumb 版本和导致错误绑定的函数"
+      ]
+    },
+    {
+      "id": "umijs/qiankun#1245",
+      "repository": "umijs/qiankun",
+      "number": 1245,
+      "url": "https://github.com/umijs/qiankun/issues/1245",
+      "title": "子应用之间第一次路由跳转，vue-router报错",
+      "labels": [
+        "bug"
+      ],
+      "selection": "bug-label",
+      "status": "collected",
+      "tests": [],
+      "resolution": "",
+      "collectionBatch": "2026-09-08-batch-02",
+      "state": "open",
+      "createdAt": "2021-02-01T05:30:48Z",
+      "updatedAt": "2021-04-16T11:46:59Z",
+      "collectedAt": "2026-09-08T06:12:04Z",
+      "labelVerifiedAt": "2026-09-08T06:12:04Z",
+      "labelVerification": "github_fetch_issue labels contains exact bug; original labels and full body/comments in sourceArchive",
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-02-qiankun-sources.json",
+      "applicability": "candidate",
+      "group": "runtime-router-lazy",
+      "scenario": "Vue2.6.11/VueRouter3.2.0 与 qiankun2.3.6：在 hash/home 刷新→切到 history/home→跨应用跳到尚未访问的 hash/about，首次 lazy chunk 失败/空白，预热后正常。讨论曾指向缓存 Vue 实例；后续 normal 分支在无缓存但由宿主 CDN 共享 Vue/router 时也报告异常。",
+      "expectedBehavior": "在本项目独立 iframe Realm 与明确路由契约下，跨应用首次进入未加载的 lazy 路由应正确解析 chunk 地址并显示页面，重访也正常。",
+      "suggestedLayer": "runtime-core / routing / entry-resolver",
+      "testLevel": "e2e (real Vue 2 + Vue Router + lazy chunk)",
+      "testIdea": "真实双应用 history/hash 或项目支持的等价组合，冷启动不预访问 about，从另一个应用导航进入并验证 chunk 请求URL、实际新代码执行和页面；分别记录保活与完整重建。",
+      "newTrigger": "跨应用冷 lazy route + 路由模式切换；预加载/warmup不可掩盖。",
+      "reproductionUrls": [
+        "https://github.com/GOGOGOSIR/qiankunDemo",
+        "https://github.com/GOGOGOSIR/qiankunDemo/tree/normal",
+        "https://github.com/GOGOGOSIR/qiankunKeepAliveDemo"
+      ],
+      "notes": "宿主向应用共享 Vue/router 函数对象与 iframe Realm 隔离不等价；如只验证独立库版本，必须保留这一原报告分支范围差异。"
+    },
+    {
+      "id": "umijs/qiankun#701",
+      "repository": "umijs/qiankun",
+      "number": 701,
+      "url": "https://github.com/umijs/qiankun/issues/701",
+      "title": "IE11无法启动,[import-html-entry] Here is no \"fetch\" on the window env, you need to polyfill it",
+      "labels": [
+        "bug"
+      ],
+      "selection": "bug-label",
+      "status": "collected",
+      "tests": [],
+      "resolution": "",
+      "collectionBatch": "2026-09-08-batch-02",
+      "state": "closed",
+      "createdAt": "2020-07-01T03:45:16Z",
+      "updatedAt": "2020-07-15T15:46:23Z",
+      "collectedAt": "2026-09-08T06:12:04Z",
+      "labelVerifiedAt": "2026-09-08T06:12:04Z",
+      "labelVerification": "github_fetch_issue labels contains exact bug; original labels and full body/comments in sourceArchive",
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-02-qiankun-sources.json",
+      "applicability": "out-of-scope",
+      "group": "legacy-browser",
+      "scenario": "IE11 启动 qiankun2.0.15 先因缺 fetch 失败；补 polyfill 后又因 UIEvent patcher 的 super 转译产物在 Babel setPrototypeOf + IE 上不能运行。评论说明这是两个不同原因。",
+      "expectedBehavior": "本项目按明确支持浏览器基线处理能力要求；不将 Chromium/Firefox/WebKit 通过当 IE11 支持。",
+      "suggestedLayer": "browser capability policy / build target",
+      "testLevel": "policy assessment",
+      "testIdea": "对照本项目浏览器基线记录 IE11 排除；若添加能力诊断测试，只能证明缺失能力给出明确错误，不代表 IE11 可运行或补齐 UIEvent/Babel 兼容。",
+      "newTrigger": "IE11 fetch 缺失 + UIEvent subclass 转译错误；与旧 W70 IE 白屏处于同一排除平台。",
+      "relatedIssues": [
+        "Tencent/wujie#70"
+      ],
+      "reproductionUrls": [
+        "https://github.com/anLl/qiankun-ie",
+        "https://github.com/umijs/qiankun/releases/tag/v2.0.16"
+      ],
+      "notes": "采集阶段 status 仍为 collected；applicability 预分类不等于完成处理，最终排除由主控明确记录产品基线。"
+    }
+  ]
+}

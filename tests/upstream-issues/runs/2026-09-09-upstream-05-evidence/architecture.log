@@ -1,0 +1,4 @@
+$ bun run .agents/skills/micro-framework-engineering/scripts/check-architecture.ts
+warning: packages/runtime-core/src/runtime/micro-runtime.ts has 365 lines; review its responsibilities.
+warning: packages/runtime-core/src/application/app-controller.ts has 545 lines; review its responsibilities.
+Architecture check passed for 30 workspace packages.

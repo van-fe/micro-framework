@@ -1,0 +1,9 @@
+
+ RUN  v4.1.11 /Users/fanfangbo/workspace/micro-framework
+
+
+ Test Files  2 passed (2)
+      Tests  13 passed (13)
+   Start at  14:31:29
+   Duration  106ms (transform 49ms, setup 0ms, import 67ms, tests 8ms, environment 0ms)
+

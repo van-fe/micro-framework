@@ -1,0 +1,1110 @@
+[
+  {
+    "number": 1057,
+    "results": [
+      {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "issue": {
+              "url": "https://github.com/Tencent/wujie/issues/1057",
+              "title": "子应用资源通过fetch请求时，对应资源服务响应超时导致子应用长时间白屏",
+              "issue_number": 1057,
+              "body": "公司项目中使用wujie嵌套的vue子应用出现长时间白屏问题，白屏时间长达3分钟（这个时间与fetch请求资源超时响应的时间相关）",
+              "state": "closed",
+              "user": {
+                "login": "xiaobai-web715",
+                "name": "xiaobai-web715",
+                "email": null,
+                "avatar_url": "https://avatars.githubusercontent.com/u/81091224?v=4",
+                "id": 81091224
+              },
+              "assignees": null,
+              "labels": null,
+              "milestone": null,
+              "state_reason": "completed",
+              "comments": 7,
+              "created_at": "2026-01-09T00:40:47Z",
+              "updated_at": "2026-01-09T03:05:30Z",
+              "closed_at": "2026-01-09T03:05:30Z",
+              "display_url": "https://github.com/Tencent/wujie/issues/1057",
+              "display_title": "子应用资源通过fetch请求时，对应资源服务响应超时导致子应用长时间白屏"
+            },
+            "url": "https://github.com/Tencent/wujie/issues/1057",
+            "title": "子应用资源通过fetch请求时，对应资源服务响应超时导致子应用长时间白屏",
+            "display_url": "https://github.com/Tencent/wujie/issues/1057",
+            "display_title": "子应用资源通过fetch请求时，对应资源服务响应超时导致子应用长时间白屏"
+          },
+          "isError": false
+        }
+      },
+      {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "comments": [
+              {
+                "url": "https://github.com/Tencent/wujie/issues/1057#issuecomment-3726584233",
+                "body": "项目中需要用到一个边缘功能埋点信息上报的功能，使用的三方库vue-matomo 会创建一个script来加载一个matomo.js的资源。这个资源访问超时，响应返回的时间长达3分钟，使得整个子应用后续的资源加载都处于推迟状态。",
+                "user": {
+                  "login": "xiaobai-web715",
+                  "name": "xiaobai-web715",
+                  "email": null,
+                  "avatar_url": "https://avatars.githubusercontent.com/u/81091224?v=4",
+                  "id": 81091224
+                },
+                "id": 3726584233,
+                "pull_request_review_id": null,
+                "in_reply_to_id": null,
+                "created_at": null,
+                "updated_at": null,
+                "review": null,
+                "side": null,
+                "line": null,
+                "start_line": null,
+                "path": null,
+                "body_html": "<p dir=\"auto\">项目中需要用到一个边缘功能埋点信息上报的功能，使用的三方库vue-matomo 会创建一个script来加载一个matomo.js的资源。这个资源访问超时，响应返回的时间长达3分钟，使得整个子应用后续的资源加载都处于推迟状态。</p>"
+              },
+              {
+                "url": "https://github.com/Tencent/wujie/issues/1057#issuecomment-3726589920",
+                "body": "<img width=\"1440\" height=\"900\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/1b885c74-317e-40fa-a88c-b58f413604ce\" />\n因为后续创建script会被then链式创建任务推入到execQueue任务队列中等待解析代理执行，所以整个链都处于推迟状态了",
+                "user": {
+                  "login": "xiaobai-web715",
+                  "name": "xiaobai-web715",
+                  "email": null,
+                  "avatar_url": "https://avatars.githubusercontent.com/u/81091224?v=4",
+                  "id": 81091224
+                },
+                "id": 3726589920,
+                "pull_request_review_id": null,
+                "in_reply_to_id": null,
+                "created_at": null,
+                "updated_at": null,
+                "review": null,
+                "side": null,
+                "line": null,
+                "start_line": null,
+                "path": null,
+                "body_html": "<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://private-user-images.githubusercontent.com/81091224/533654129-1b885c74-317e-40fa-a88c-b58f413604ce.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODg5MjM2OTUsIm5iZiI6MTc4ODkyMzM5NSwicGF0aCI6Ii84MTA5MTIyNC81MzM2NTQxMjktMWI4ODVjNzQtMzE3ZS00MGZhLWE4OGMtYjU4ZjQxMzYwNGNlLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA5MDklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwOTA5VDAzMDk1NVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTU0OGQ1OTcwMDNkMTg2ODEyYzdjZDAxYTQ3MGU0YmFkZmMxZTMwOWI3YmJkZmI3YTQzOGY2YTlmMmQxYWIxOTUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.nxa58lcMx8UvKzD2DEy8OnIUvhhxju4uO76a85th22c\"><img width=\"1440\" height=\"900\" alt=\"Image\" src=\"https://private-user-images.githubusercontent.com/81091224/533654129-1b885c74-317e-40fa-a88c-b58f413604ce.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODg5MjM2OTUsIm5iZiI6MTc4ODkyMzM5NSwicGF0aCI6Ii84MTA5MTIyNC81MzM2NTQxMjktMWI4ODVjNzQtMzE3ZS00MGZhLWE4OGMtYjU4ZjQxMzYwNGNlLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA5MDklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwOTA5VDAzMDk1NVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTU0OGQ1OTcwMDNkMTg2ODEyYzdjZDAxYTQ3MGU0YmFkZmMxZTMwOWI3YmJkZmI3YTQzOGY2YTlmMmQxYWIxOTUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.nxa58lcMx8UvKzD2DEy8OnIUvhhxju4uO76a85th22c\" style=\"max-width: 100%; height: auto; max-height: 900px;; aspect-ratio: 1440 / 900; background-color: var(--bgColor-muted); border-radius: 6px\" class=\"js-gh-image-fallback\"></a>\n因为后续创建script会被then链式创建任务推入到execQueue任务队列中等待解析代理执行，所以整个链都处于推迟状态了"
+              },
+              {
+                "url": "https://github.com/Tencent/wujie/issues/1057#issuecomment-3726695244",
+                "body": "是不是可以设置一个cancelRequest（是否取消超时请求）和timeout（超时等待时间）两个参数来对阻塞性的fetch资源请求做超时取消控制",
+                "user": {
+                  "login": "xiaobai-web715",
+                  "name": "xiaobai-web715",
+                  "email": null,
+                  "avatar_url": "https://avatars.githubusercontent.com/u/81091224?v=4",
+                  "id": 81091224
+                },
+                "id": 3726695244,
+                "pull_request_review_id": null,
+                "in_reply_to_id": null,
+                "created_at": null,
+                "updated_at": null,
+                "review": null,
+                "side": null,
+                "line": null,
+                "start_line": null,
+                "path": null,
+                "body_html": "<p dir=\"auto\">是不是可以设置一个cancelRequest（是否取消超时请求）和timeout（超时等待时间）两个参数来对阻塞性的fetch资源请求做超时取消控制</p>"
+              },
+              {
+                "url": "https://github.com/Tencent/wujie/issues/1057#issuecomment-3726801754",
+                "body": "<img width=\"1876\" height=\"658\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/4b417cbd-bbc8-4d38-8626-20cff0e80d22\" />\n\n<img width=\"2866\" height=\"220\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/88e36f10-ad98-4da9-9ac2-688600731d6c\" /> 通过主应用控制是否开启以及等待时间字段来调整效果",
+                "user": {
+                  "login": "xiaobai-web715",
+                  "name": "xiaobai-web715",
+                  "email": null,
+                  "avatar_url": "https://avatars.githubusercontent.com/u/81091224?v=4",
+                  "id": 81091224
+                },
+                "id": 3726801754,
+                "pull_request_review_id": null,
+                "in_reply_to_id": null,
+                "created_at": null,
+                "updated_at": null,
+                "review": null,
+                "side": null,
+                "line": null,
+                "start_line": null,
+                "path": null,
+                "body_html": "<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://private-user-images.githubusercontent.com/81091224/533697383-4b417cbd-bbc8-4d38-8626-20cff0e80d22.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODg5MjM2OTUsIm5iZiI6MTc4ODkyMzM5NSwicGF0aCI6Ii84MTA5MTIyNC81MzM2OTczODMtNGI0MTdjYmQtYmJjOC00ZDM4LTg2MjYtMjBjZmYwZTgwZDIyLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA5MDklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwOTA5VDAzMDk1NVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWJlMDJkNjI5NTRiNGM2MDNiY2Q4MjAyNWFhYTA3ODhiYjQyNDMwMGU4NGJiZGFhMmQ0NjJkZTMwODUzNGEwMzkmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.KQU3AL4VBfqPV-5wTN-wNvdAnlu7FfR_FWcjGxBFdbE\"><img width=\"1876\" height=\"658\" alt=\"Image\" src=\"https://private-user-images.githubusercontent.com/81091224/533697383-4b417cbd-bbc8-4d38-8626-20cff0e80d22.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODg5MjM2OTUsIm5iZiI6MTc4ODkyMzM5NSwicGF0aCI6Ii84MTA5MTIyNC81MzM2OTczODMtNGI0MTdjYmQtYmJjOC00ZDM4LTg2MjYtMjBjZmYwZTgwZDIyLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA5MDklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwOTA5VDAzMDk1NVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWJlMDJkNjI5NTRiNGM2MDNiY2Q4MjAyNWFhYTA3ODhiYjQyNDMwMGU4NGJiZGFhMmQ0NjJkZTMwODUzNGEwMzkmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.KQU3AL4VBfqPV-5wTN-wNvdAnlu7FfR_FWcjGxBFdbE\" style=\"max-width: 100%; height: auto; max-height: 658px;; aspect-ratio: 1876 / 658; background-color: var(--bgColor-muted); border-radius: 6px\" class=\"js-gh-image-fallback\"></a>\n<p dir=\"auto\"><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://private-user-images.githubusercontent.com/81091224/533697482-88e36f10-ad98-4da9-9ac2-688600731d6c.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODg5MjM2OTUsIm5iZiI6MTc4ODkyMzM5NSwicGF0aCI6Ii84MTA5MTIyNC81MzM2OTc0ODItODhlMzZmMTAtYWQ5OC00ZGE5LTlhYzItNjg4NjAwNzMxZDZjLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA5MDklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwOTA5VDAzMDk1NVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTIzMGRjNWQ1Y2Y5MzE5ODgxNTMyYTY1YmQzYjk5NTIxYjNkMzBmYWEwNjdlNWU0YTkzMjkzZTY4N2I3MjZhZTQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.ZIIZ6Nn8vuLy7KNqRRpWrcHnG-Qu1sfeec8oKu2Wwg4\"><img width=\"2000\" height=\"154\" alt=\"Image\" src=\"https://private-user-images.githubusercontent.com/81091224/533697482-88e36f10-ad98-4da9-9ac2-688600731d6c.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODg5MjM2OTUsIm5iZiI6MTc4ODkyMzM5NSwicGF0aCI6Ii84MTA5MTIyNC81MzM2OTc0ODItODhlMzZmMTAtYWQ5OC00ZGE5LTlhYzItNjg4NjAwNzMxZDZjLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA5MDklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwOTA5VDAzMDk1NVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTIzMGRjNWQ1Y2Y5MzE5ODgxNTMyYTY1YmQzYjk5NTIxYjNkMzBmYWEwNjdlNWU0YTkzMjkzZTY4N2I3MjZhZTQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.ZIIZ6Nn8vuLy7KNqRRpWrcHnG-Qu1sfeec8oKu2Wwg4\" style=\"max-width: 100%; height: auto; max-height: 154px;; aspect-ratio: 2000 / 154; background-color: var(--bgColor-muted); border-radius: 6px\" class=\"js-gh-image-fallback\"></a> 通过主应用控制是否开启以及等待时间字段来调整效果</p>"
+              },
+              {
+                "url": "https://github.com/Tencent/wujie/issues/1057#issuecomment-3726808187",
+                "body": "自定义 fetch 没有办法解决这个问题吗？",
+                "user": {
+                  "login": "yiludege",
+                  "name": "yiludege",
+                  "email": null,
+                  "avatar_url": "https://avatars.githubusercontent.com/u/19788268?v=4",
+                  "id": 19788268
+                },
+                "id": 3726808187,
+                "pull_request_review_id": null,
+                "in_reply_to_id": null,
+                "created_at": null,
+                "updated_at": null,
+                "review": null,
+                "side": null,
+                "line": null,
+                "start_line": null,
+                "path": null,
+                "body_html": "<p dir=\"auto\">自定义 fetch 没有办法解决这个问题吗？</p>"
+              },
+              {
+                "url": "https://github.com/Tencent/wujie/issues/1057#issuecomment-3726828475",
+                "body": "您说的是对的，主应用是可以通过自定义的fetch来控制超时时间。我最开始考虑的出发点是主子应用如果不是跨域情况下的话其实并不需要自定义的fetch来配置允许携带跨域相关的配置项，这可能就会直接用wujie中的默认fetch的方法，而不需要主应用添加额外的代码了，所以我把这个功能收到了wujie中来通过配置项的方式提供选择控制的效果",
+                "user": {
+                  "login": "xiaobai-web715",
+                  "name": "xiaobai-web715",
+                  "email": null,
+                  "avatar_url": "https://avatars.githubusercontent.com/u/81091224?v=4",
+                  "id": 81091224
+                },
+                "id": 3726828475,
+                "pull_request_review_id": null,
+                "in_reply_to_id": null,
+                "created_at": null,
+                "updated_at": null,
+                "review": null,
+                "side": null,
+                "line": null,
+                "start_line": null,
+                "path": null,
+                "body_html": "<p dir=\"auto\">您说的是对的，主应用是可以通过自定义的fetch来控制超时时间。我最开始考虑的出发点是主子应用如果不是跨域情况下的话其实并不需要自定义的fetch来配置允许携带跨域相关的配置项，这可能就会直接用wujie中的默认fetch的方法，而不需要主应用添加额外的代码了，所以我把这个功能收到了wujie中来通过配置项的方式提供选择控制的效果</p>"
+              },
+              {
+                "url": "https://github.com/Tencent/wujie/issues/1057#issuecomment-3726839831",
+                "body": "因为框架开发最好不要做加法而是做减法特别是微前端框架，配置已经很多了理解成本很高，所以建议包装一个 fetch，也可以贴一下代码到 issue 后续别人看到这个问题有个参考",
+                "user": {
+                  "login": "yiludege",
+                  "name": "yiludege",
+                  "email": null,
+                  "avatar_url": "https://avatars.githubusercontent.com/u/19788268?v=4",
+                  "id": 19788268
+                },
+                "id": 3726839831,
+                "pull_request_review_id": null,
+                "in_reply_to_id": null,
+                "created_at": null,
+                "updated_at": null,
+                "review": null,
+                "side": null,
+                "line": null,
+                "start_line": null,
+                "path": null,
+                "body_html": "<p dir=\"auto\">因为框架开发最好不要做加法而是做减法特别是微前端框架，配置已经很多了理解成本很高，所以建议包装一个 fetch，也可以贴一下代码到 issue 后续别人看到这个问题有个参考</p>"
+              }
+            ],
+            "url": "https://github.com/Tencent/wujie/issues/1057",
+            "title": "Tencent/wujie Issue #1057 comments",
+            "display_url": "https://github.com/Tencent/wujie/issues/1057",
+            "display_title": "Tencent/wujie Issue #1057 comments"
+          },
+          "isError": false
+        }
+      }
+    ]
+  },
+  {
+    "number": 1045,
+    "results": [
+      {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "issue": {
+              "url": "https://github.com/Tencent/wujie/issues/1045",
+              "title": "设置路由同步后，每刷新一次就会在url后加一个编码后的参数",
+              "issue_number": 1045,
+              "body": "http://localhost:2000//schedule/list?view-crm-pc=%2Fschedule%2Flist%3Fview-crm-pc%3D%2Fschedule%2Flist",
+              "state": "closed",
+              "user": {
+                "login": "huanFunny",
+                "name": "huanFunny",
+                "email": null,
+                "avatar_url": "https://avatars.githubusercontent.com/u/23498466?v=4",
+                "id": 23498466
+              },
+              "assignees": null,
+              "labels": null,
+              "milestone": null,
+              "state_reason": "completed",
+              "comments": 1,
+              "created_at": "2025-12-22T07:59:41Z",
+              "updated_at": "2026-06-06T07:59:21Z",
+              "closed_at": "2026-06-06T07:59:21Z",
+              "display_url": "https://github.com/Tencent/wujie/issues/1045",
+              "display_title": "设置路由同步后，每刷新一次就会在url后加一个编码后的参数"
+            },
+            "url": "https://github.com/Tencent/wujie/issues/1045",
+            "title": "设置路由同步后，每刷新一次就会在url后加一个编码后的参数",
+            "display_url": "https://github.com/Tencent/wujie/issues/1045",
+            "display_title": "设置路由同步后，每刷新一次就会在url后加一个编码后的参数"
+          },
+          "isError": false
+        }
+      },
+      {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "comments": [
+              {
+                "url": "https://github.com/Tencent/wujie/issues/1045#issuecomment-4637890609",
+                "body": "本地 demo 没有办法复现这个问题",
+                "user": {
+                  "login": "yiludege",
+                  "name": "yiludege",
+                  "email": null,
+                  "avatar_url": "https://avatars.githubusercontent.com/u/19788268?v=4",
+                  "id": 19788268
+                },
+                "id": 4637890609,
+                "pull_request_review_id": null,
+                "in_reply_to_id": null,
+                "created_at": null,
+                "updated_at": null,
+                "review": null,
+                "side": null,
+                "line": null,
+                "start_line": null,
+                "path": null,
+                "body_html": "<p dir=\"auto\">本地 demo 没有办法复现这个问题</p>"
+              }
+            ],
+            "url": "https://github.com/Tencent/wujie/issues/1045",
+            "title": "Tencent/wujie Issue #1045 comments",
+            "display_url": "https://github.com/Tencent/wujie/issues/1045",
+            "display_title": "Tencent/wujie Issue #1045 comments"
+          },
+          "isError": false
+        }
+      }
+    ]
+  },
+  {
+    "number": 1044,
+    "results": [
+      {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "issue": {
+              "url": "https://github.com/Tencent/wujie/issues/1044",
+              "title": "无痕模式一直loading，base路径指向错误",
+              "issue_number": 1044,
+              "body": "无痕模式下，某些情况会导致base 拼接 location.pathname 来自 主域\n\n<img width=\"1741\" height=\"411\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/9da76e46-0ed2-4974-91b1-2b85bd4caa58\" />",
+              "state": "open",
+              "user": {
+                "login": "opendesign-os",
+                "name": "opendesign-os",
+                "email": null,
+                "avatar_url": "https://avatars.githubusercontent.com/u/237899166?v=4",
+                "id": 237899166
+              },
+              "assignees": null,
+              "labels": null,
+              "milestone": null,
+              "state_reason": null,
+              "comments": 0,
+              "created_at": "2025-12-11T10:10:10Z",
+              "updated_at": "2025-12-11T10:15:21Z",
+              "closed_at": null,
+              "display_url": "https://github.com/Tencent/wujie/issues/1044",
+              "display_title": "无痕模式一直loading，base路径指向错误"
+            },
+            "url": "https://github.com/Tencent/wujie/issues/1044",
+            "title": "无痕模式一直loading，base路径指向错误",
+            "display_url": "https://github.com/Tencent/wujie/issues/1044",
+            "display_title": "无痕模式一直loading，base路径指向错误"
+          },
+          "isError": false
+        }
+      },
+      {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "comments": [],
+            "url": "https://github.com/Tencent/wujie/issues/1044",
+            "title": "Tencent/wujie Issue #1044 comments",
+            "display_url": "https://github.com/Tencent/wujie/issues/1044",
+            "display_title": "Tencent/wujie Issue #1044 comments"
+          },
+          "isError": false
+        }
+      }
+    ]
+  },
+  {
+    "number": 1039,
+    "results": [
+      {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "issue": {
+              "url": "https://github.com/Tencent/wujie/issues/1039",
+              "title": "弹窗里面内嵌的无界应用， 在不断的关闭和打开、跳转链接后出现报错，页面空白。",
+              "issue_number": 1039,
+              "body": "应用保活的情况下，打开弹窗加载微前端应用body内容为空，页面空白\n控制台会抛出以下异常\nTypeError: Cannot set properties of null (setting 'fetch')\n    at Wujie._callee$ (<anonymous>:5957:36)\n    at tryCatch (<anonymous>:815584:16)\n    at Generator.<anonymous> (<anonymous>:815672:17)\n    at Generator.next (<anonymous>:815613:21)\n    at asyncGeneratorStep (<anonymous>:814861:24)\n    at _next (<anonymous>:814880:9)",
+              "state": "open",
+              "user": {
+                "login": "pangyuanling2019",
+                "name": "pangyuanling2019",
+                "email": null,
+                "avatar_url": "https://avatars.githubusercontent.com/u/52436341?v=4",
+                "id": 52436341
+              },
+              "assignees": null,
+              "labels": null,
+              "milestone": null,
+              "state_reason": "reopened",
+              "comments": 2,
+              "created_at": "2025-11-14T07:37:48Z",
+              "updated_at": "2026-06-06T07:30:25Z",
+              "closed_at": null,
+              "display_url": "https://github.com/Tencent/wujie/issues/1039",
+              "display_title": "弹窗里面内嵌的无界应用， 在不断的关闭和打开、跳转链接后出现报错，页面空白。"
+            },
+            "url": "https://github.com/Tencent/wujie/issues/1039",
+            "title": "弹窗里面内嵌的无界应用， 在不断的关闭和打开、跳转链接后出现报错，页面空白。",
+            "display_url": "https://github.com/Tencent/wujie/issues/1039",
+            "display_title": "弹窗里面内嵌的无界应用， 在不断的关闭和打开、跳转链接后出现报错，页面空白。"
+          },
+          "isError": false
+        }
+      },
+      {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "comments": [
+              {
+                "url": "https://github.com/Tencent/wujie/issues/1039#issuecomment-4637813730",
+                "body": "最新版本已经解决了弹窗定位问题。\n\n请按照官方文档配置：https://wujie-micro.github.io/doc/question/#_4%E3%80%81%E5%86%92%E6%B3%A1%E7%B3%BB%E5%88%97%E7%BB%84%E4%BB%B6-%E6%AF%94%E5%A6%82%E4%B8%8B%E6%8B%89%E6%A1%86-%E5%BC%B9%E5%87%BA%E4%BD%8D%E7%BD%AE%E4%B8%8D%E6%AD%A3%E7%A1%AE\n\n该文档详细说明了如何解决冒泡系列组件（下拉框、弹出位置不正确）的问题。",
+                "user": {
+                  "login": "yiludege",
+                  "name": "yiludege",
+                  "email": null,
+                  "avatar_url": "https://avatars.githubusercontent.com/u/19788268?v=4",
+                  "id": 19788268
+                },
+                "id": 4637813730,
+                "pull_request_review_id": null,
+                "in_reply_to_id": null,
+                "created_at": null,
+                "updated_at": null,
+                "review": null,
+                "side": null,
+                "line": null,
+                "start_line": null,
+                "path": null,
+                "body_html": "<p dir=\"auto\">最新版本已经解决了弹窗定位问题。</p>\n<p dir=\"auto\">请按照官方文档配置：<a href=\"https://wujie-micro.github.io/doc/question/#_4%E3%80%81%E5%86%92%E6%B3%A1%E7%B3%BB%E5%88%97%E7%BB%84%E4%BB%B6-%E6%AF%94%E5%A6%82%E4%B8%8B%E6%8B%89%E6%A1%86-%E5%BC%B9%E5%87%BA%E4%BD%8D%E7%BD%AE%E4%B8%8D%E6%AD%A3%E7%A1%AE\" rel=\"nofollow\">https://wujie-micro.github.io/doc/question/#_4%E3%80%81%E5%86%92%E6%B3%A1%E7%B3%BB%E5%88%97%E7%BB%84%E4%BB%B6-%E6%AF%94%E5%A6%82%E4%B8%8B%E6%8B%89%E6%A1%86-%E5%BC%B9%E5%87%BA%E4%BD%8D%E7%BD%AE%E4%B8%8D%E6%AD%A3%E7%A1%AE</a></p>\n<p dir=\"auto\">该文档详细说明了如何解决冒泡系列组件（下拉框、弹出位置不正确）的问题。</p>"
+              },
+              {
+                "url": "https://github.com/Tencent/wujie/issues/1039#issuecomment-4637826825",
+                "body": "抱歉误关闭，此问题与下拉弹窗定位无关，重新打开。",
+                "user": {
+                  "login": "yiludege",
+                  "name": "yiludege",
+                  "email": null,
+                  "avatar_url": "https://avatars.githubusercontent.com/u/19788268?v=4",
+                  "id": 19788268
+                },
+                "id": 4637826825,
+                "pull_request_review_id": null,
+                "in_reply_to_id": null,
+                "created_at": null,
+                "updated_at": null,
+                "review": null,
+                "side": null,
+                "line": null,
+                "start_line": null,
+                "path": null,
+                "body_html": "<p dir=\"auto\">抱歉误关闭，此问题与下拉弹窗定位无关，重新打开。</p>"
+              }
+            ],
+            "url": "https://github.com/Tencent/wujie/issues/1039",
+            "title": "Tencent/wujie Issue #1039 comments",
+            "display_url": "https://github.com/Tencent/wujie/issues/1039",
+            "display_title": "Tencent/wujie Issue #1039 comments"
+          },
+          "isError": false
+        }
+      }
+    ]
+  },
+  {
+    "number": 1038,
+    "results": [
+      {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "issue": {
+              "url": "https://github.com/Tencent/wujie/issues/1038",
+              "title": "半屏(非全屏)模式下打开Web页面，然后拖动窗变大，下拉选项框错位，官网例子也有同样问题",
+              "issue_number": 1038,
+              "body": "\n<img width=\"885\" height=\"519\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/59ddbf08-d776-4fc7-af49-4648e19bd307\" />\n\n<img width=\"949\" height=\"456\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/3cf8c930-0bad-4a6c-a8d3-d92d9064c315\" />",
+              "state": "closed",
+              "user": {
+                "login": "Stephen-Monster",
+                "name": "Stephen-Monster",
+                "email": null,
+                "avatar_url": "https://avatars.githubusercontent.com/u/43607215?v=4",
+                "id": 43607215
+              },
+              "assignees": null,
+              "labels": null,
+              "milestone": null,
+              "state_reason": "completed",
+              "comments": 4,
+              "created_at": "2025-11-07T05:22:46Z",
+              "updated_at": "2026-06-06T07:23:03Z",
+              "closed_at": "2026-06-06T07:22:31Z",
+              "display_url": "https://github.com/Tencent/wujie/issues/1038",
+              "display_title": "半屏(非全屏)模式下打开Web页面，然后拖动窗变大，下拉选项框错位，官网例子也有同样问题"
+            },
+            "url": "https://github.com/Tencent/wujie/issues/1038",
+            "title": "半屏(非全屏)模式下打开Web页面，然后拖动窗变大，下拉选项框错位，官网例子也有同样问题",
+            "display_url": "https://github.com/Tencent/wujie/issues/1038",
+            "display_title": "半屏(非全屏)模式下打开Web页面，然后拖动窗变大，下拉选项框错位，官网例子也有同样问题"
+          },
+          "isError": false
+        }
+      },
+      {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "comments": [
+              {
+                "url": "https://github.com/Tencent/wujie/issues/1038#issuecomment-3520957849",
+                "body": "你找找issure就解决了\n",
+                "user": {
+                  "login": "ngwszsd",
+                  "name": "ngwszsd",
+                  "email": null,
+                  "avatar_url": "https://avatars.githubusercontent.com/u/45424459?v=4",
+                  "id": 45424459
+                },
+                "id": 3520957849,
+                "pull_request_review_id": null,
+                "in_reply_to_id": null,
+                "created_at": null,
+                "updated_at": null,
+                "review": null,
+                "side": null,
+                "line": null,
+                "start_line": null,
+                "path": null,
+                "body_html": "<p dir=\"auto\">你找找issure就解决了</p>"
+              },
+              {
+                "url": "https://github.com/Tencent/wujie/issues/1038#issuecomment-3520959784",
+                "body": "这是来自QQ邮箱的假期自动回复邮件。\n \n您好，我最近正在休假中，无法亲自回复您的邮件。我将在假期结束后，尽快给您回复。",
+                "user": {
+                  "login": "Stephen-Monster",
+                  "name": "Stephen-Monster",
+                  "email": null,
+                  "avatar_url": "https://avatars.githubusercontent.com/u/43607215?v=4",
+                  "id": 43607215
+                },
+                "id": 3520959784,
+                "pull_request_review_id": null,
+                "in_reply_to_id": null,
+                "created_at": null,
+                "updated_at": null,
+                "review": null,
+                "side": null,
+                "line": null,
+                "start_line": null,
+                "path": null,
+                "body_html": "<div class=\"email-fragment\">这是来自QQ邮箱的假期自动回复邮件。\n \n您好，我最近正在休假中，无法亲自回复您的邮件。我将在假期结束后，尽快给您回复。</div>"
+              },
+              {
+                "url": "https://github.com/Tencent/wujie/issues/1038#issuecomment-4637809010",
+                "body": "最新版本已经解决了弹窗定位问题。\n\n请按照官方文档配置：https://wujie-micro.github.io/doc/question/#_4%E3%80%81%E5%86%92%E6%B3%A1%E7%B3%BB%E5%88%97%E7%BB%84%E4%BB%B6-%E6%AF%94%E5%A6%82%E4%B8%8B%E6%8B%89%E6%A1%86-%E5%BC%B9%E5%87%BA%E4%BD%8D%E7%BD%AE%E4%B8%8D%E6%AD%A3%E7%A1%AE\n\n该文档详细说明了如何解决冒泡系列组件（下拉框、弹出位置不正确）的问题。",
+                "user": {
+                  "login": "yiludege",
+                  "name": "yiludege",
+                  "email": null,
+                  "avatar_url": "https://avatars.githubusercontent.com/u/19788268?v=4",
+                  "id": 19788268
+                },
+                "id": 4637809010,
+                "pull_request_review_id": null,
+                "in_reply_to_id": null,
+                "created_at": null,
+                "updated_at": null,
+                "review": null,
+                "side": null,
+                "line": null,
+                "start_line": null,
+                "path": null,
+                "body_html": "<p dir=\"auto\">最新版本已经解决了弹窗定位问题。</p>\n<p dir=\"auto\">请按照官方文档配置：<a href=\"https://wujie-micro.github.io/doc/question/#_4%E3%80%81%E5%86%92%E6%B3%A1%E7%B3%BB%E5%88%97%E7%BB%84%E4%BB%B6-%E6%AF%94%E5%A6%82%E4%B8%8B%E6%8B%89%E6%A1%86-%E5%BC%B9%E5%87%BA%E4%BD%8D%E7%BD%AE%E4%B8%8D%E6%AD%A3%E7%A1%AE\" rel=\"nofollow\">https://wujie-micro.github.io/doc/question/#_4%E3%80%81%E5%86%92%E6%B3%A1%E7%B3%BB%E5%88%97%E7%BB%84%E4%BB%B6-%E6%AF%94%E5%A6%82%E4%B8%8B%E6%8B%89%E6%A1%86-%E5%BC%B9%E5%87%BA%E4%BD%8D%E7%BD%AE%E4%B8%8D%E6%AD%A3%E7%A1%AE</a></p>\n<p dir=\"auto\">该文档详细说明了如何解决冒泡系列组件（下拉框、弹出位置不正确）的问题。</p>"
+              },
+              {
+                "url": "https://github.com/Tencent/wujie/issues/1038#issuecomment-4637810503",
+                "body": "这是来自QQ邮箱的假期自动回复邮件。\n \n您好，我最近正在休假中，无法亲自回复您的邮件。我将在假期结束后，尽快给您回复。",
+                "user": {
+                  "login": "Stephen-Monster",
+                  "name": "Stephen-Monster",
+                  "email": null,
+                  "avatar_url": "https://avatars.githubusercontent.com/u/43607215?v=4",
+                  "id": 43607215
+                },
+                "id": 4637810503,
+                "pull_request_review_id": null,
+                "in_reply_to_id": null,
+                "created_at": null,
+                "updated_at": null,
+                "review": null,
+                "side": null,
+                "line": null,
+                "start_line": null,
+                "path": null,
+                "body_html": "<div class=\"email-fragment\">这是来自QQ邮箱的假期自动回复邮件。\n \n您好，我最近正在休假中，无法亲自回复您的邮件。我将在假期结束后，尽快给您回复。</div>"
+              }
+            ],
+            "url": "https://github.com/Tencent/wujie/issues/1038",
+            "title": "Tencent/wujie Issue #1038 comments",
+            "display_url": "https://github.com/Tencent/wujie/issues/1038",
+            "display_title": "Tencent/wujie Issue #1038 comments"
+          },
+          "isError": false
+        }
+      }
+    ]
+  },
+  {
+    "number": 1017,
+    "results": [
+      {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "issue": {
+              "url": "https://github.com/Tencent/wujie/issues/1017",
+              "title": "多个子应用时，快速切换时从A到B，有概率发生报错，导致A空白，B正常",
+              "issue_number": 1017,
+              "body": "与#976类似但不同，版本升级后依然会有的。子应用资源在谷歌浏览器内报错TypeError: Cannot read properties of undefined (reading 'createElement')，企微(safari)报Cannot access uninitialized variable",
+              "state": "open",
+              "user": {
+                "login": "hhli8",
+                "name": "hhli8",
+                "email": null,
+                "avatar_url": "https://avatars.githubusercontent.com/u/22502046?v=4",
+                "id": 22502046
+              },
+              "assignees": null,
+              "labels": null,
+              "milestone": null,
+              "state_reason": null,
+              "comments": 0,
+              "created_at": "2025-07-14T09:36:17Z",
+              "updated_at": "2025-07-14T09:36:17Z",
+              "closed_at": null,
+              "display_url": "https://github.com/Tencent/wujie/issues/1017",
+              "display_title": "多个子应用时，快速切换时从A到B，有概率发生报错，导致A空白，B正常"
+            },
+            "url": "https://github.com/Tencent/wujie/issues/1017",
+            "title": "多个子应用时，快速切换时从A到B，有概率发生报错，导致A空白，B正常",
+            "display_url": "https://github.com/Tencent/wujie/issues/1017",
+            "display_title": "多个子应用时，快速切换时从A到B，有概率发生报错，导致A空白，B正常"
+          },
+          "isError": false
+        }
+      },
+      {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "comments": [],
+            "url": "https://github.com/Tencent/wujie/issues/1017",
+            "title": "Tencent/wujie Issue #1017 comments",
+            "display_url": "https://github.com/Tencent/wujie/issues/1017",
+            "display_title": "Tencent/wujie Issue #1017 comments"
+          },
+          "isError": false
+        }
+      }
+    ]
+  },
+  {
+    "number": 1012,
+    "results": [
+      {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "issue": {
+              "url": "https://github.com/Tencent/wujie/issues/1012",
+              "title": "在火狐浏览器（Firefox）中使用无界微前端系统时，打开包含 bpmn（业务流程建模）关页面会触发SVGTransformList错误",
+              "issue_number": 1012,
+              "body": "**描述**\n在火狐浏览器（Firefox）中使用无界微前端系统时，打开包含 bpmn（业务流程建模）的相关页面会触发以下错误：\nSVGTransformList.appendItem: Argument 1 does not implement interface SVGTransform\n\n**如何复现**\n给出详细的复现步骤\n1、使用 Firefox 浏览器（测试版本：140.0.2）访问基于 wujie 构建的微前端系统\n2、导航至包含 BPMN 图表的页面（使用 bpmn-js 库渲染，bpmn依赖svg相关）\n3、页面加载时触发错误，BPMN 区域显示空白，控制台报错：\n    SVGTransformList.appendItem: Argument 1 does not implement interface SVGTransform.\n4、使用其他主流浏览器如chrome、edge正常、使用iframe嵌入正常\n\n**错误截图**\n\n![Image](https://github.com/user-attachments/assets/ddc81971-8362-49ca-8076-662c6ed78a9a)\n\n",
+              "state": "open",
+              "user": {
+                "login": "Lebornandanthony",
+                "name": "Lebornandanthony",
+                "email": null,
+                "avatar_url": "https://avatars.githubusercontent.com/u/20470768?v=4",
+                "id": 20470768
+              },
+              "assignees": null,
+              "labels": null,
+              "milestone": null,
+              "state_reason": null,
+              "comments": 1,
+              "created_at": "2025-07-01T06:58:37Z",
+              "updated_at": "2025-11-13T07:13:33Z",
+              "closed_at": null,
+              "display_url": "https://github.com/Tencent/wujie/issues/1012",
+              "display_title": "在火狐浏览器（Firefox）中使用无界微前端系统时，打开包含 bpmn（业务流程建模）关页面会触发SVGTransformList错误"
+            },
+            "url": "https://github.com/Tencent/wujie/issues/1012",
+            "title": "在火狐浏览器（Firefox）中使用无界微前端系统时，打开包含 bpmn（业务流程建模）关页面会触发SVGTransformList错误",
+            "display_url": "https://github.com/Tencent/wujie/issues/1012",
+            "display_title": "在火狐浏览器（Firefox）中使用无界微前端系统时，打开包含 bpmn（业务流程建模）关页面会触发SVGTransformList错误"
+          },
+          "isError": false
+        }
+      },
+      {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "comments": [
+              {
+                "url": "https://github.com/Tencent/wujie/issues/1012#issuecomment-3525950178",
+                "body": "这个问题有兼容办法吗？",
+                "user": {
+                  "login": "Lebornandanthony",
+                  "name": "Lebornandanthony",
+                  "email": null,
+                  "avatar_url": "https://avatars.githubusercontent.com/u/20470768?v=4",
+                  "id": 20470768
+                },
+                "id": 3525950178,
+                "pull_request_review_id": null,
+                "in_reply_to_id": null,
+                "created_at": null,
+                "updated_at": null,
+                "review": null,
+                "side": null,
+                "line": null,
+                "start_line": null,
+                "path": null,
+                "body_html": "<p dir=\"auto\">这个问题有兼容办法吗？</p>"
+              }
+            ],
+            "url": "https://github.com/Tencent/wujie/issues/1012",
+            "title": "Tencent/wujie Issue #1012 comments",
+            "display_url": "https://github.com/Tencent/wujie/issues/1012",
+            "display_title": "Tencent/wujie Issue #1012 comments"
+          },
+          "isError": false
+        }
+      }
+    ]
+  },
+  {
+    "number": 992,
+    "results": [
+      {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "issue": {
+              "url": "https://github.com/Tencent/wujie/issues/992",
+              "title": "切换子应用后canvas无法正常显示",
+              "issue_number": 992,
+              "body": "描述：保活场景下，从其他应用切回包含canvas的子应用，canvas会显示空\n\n<!-- Failed to upload \"image.png\" -->\n",
+              "state": "open",
+              "user": {
+                "login": "7dingdang0",
+                "name": "7dingdang0",
+                "email": null,
+                "avatar_url": "https://avatars.githubusercontent.com/u/59381450?v=4",
+                "id": 59381450
+              },
+              "assignees": null,
+              "labels": null,
+              "milestone": null,
+              "state_reason": null,
+              "comments": 2,
+              "created_at": "2025-04-29T02:23:01Z",
+              "updated_at": "2025-04-30T09:58:34Z",
+              "closed_at": null,
+              "display_url": "https://github.com/Tencent/wujie/issues/992",
+              "display_title": "切换子应用后canvas无法正常显示"
+            },
+            "url": "https://github.com/Tencent/wujie/issues/992",
+            "title": "切换子应用后canvas无法正常显示",
+            "display_url": "https://github.com/Tencent/wujie/issues/992",
+            "display_title": "切换子应用后canvas无法正常显示"
+          },
+          "isError": false
+        }
+      },
+      {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "comments": [
+              {
+                "url": "https://github.com/Tencent/wujie/issues/992#issuecomment-2841433289",
+                "body": "无法复现",
+                "user": {
+                  "login": "ngwszsd",
+                  "name": "ngwszsd",
+                  "email": null,
+                  "avatar_url": "https://avatars.githubusercontent.com/u/45424459?v=4",
+                  "id": 45424459
+                },
+                "id": 2841433289,
+                "pull_request_review_id": null,
+                "in_reply_to_id": null,
+                "created_at": null,
+                "updated_at": null,
+                "review": null,
+                "side": null,
+                "line": null,
+                "start_line": null,
+                "path": null,
+                "body_html": "<p dir=\"auto\">无法复现</p>"
+              },
+              {
+                "url": "https://github.com/Tencent/wujie/issues/992#issuecomment-2841450019",
+                "body": "> 无法复现\n\n使用降级模式",
+                "user": {
+                  "login": "7dingdang0",
+                  "name": "7dingdang0",
+                  "email": null,
+                  "avatar_url": "https://avatars.githubusercontent.com/u/59381450?v=4",
+                  "id": 59381450
+                },
+                "id": 2841450019,
+                "pull_request_review_id": null,
+                "in_reply_to_id": null,
+                "created_at": null,
+                "updated_at": null,
+                "review": null,
+                "side": null,
+                "line": null,
+                "start_line": null,
+                "path": null,
+                "body_html": "<blockquote>\n<p dir=\"auto\">无法复现</p>\n</blockquote>\n<p dir=\"auto\">使用降级模式</p>"
+              }
+            ],
+            "url": "https://github.com/Tencent/wujie/issues/992",
+            "title": "Tencent/wujie Issue #992 comments",
+            "display_url": "https://github.com/Tencent/wujie/issues/992",
+            "display_title": "Tencent/wujie Issue #992 comments"
+          },
+          "isError": false
+        }
+      }
+    ]
+  },
+  {
+    "number": 1007,
+    "results": [
+      {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "issue": {
+              "url": "https://github.com/Tencent/wujie/issues/1007",
+              "title": "刷新浏览器后 浏览器url及子应用会跳转回子应用首页",
+              "issue_number": 1007,
+              "body": "如题，路由守卫中显示  点击刷新按钮后 路由会先跳转到当前打开的路由 随后立马跳向子应用首页 也就是最初进入无界是用的路由， 期望有个配置 开启后点击刷新 子应用访问路由保持不变 ",
+              "state": "open",
+              "user": {
+                "login": "Kaysem",
+                "name": "Kaysem",
+                "email": null,
+                "avatar_url": "https://avatars.githubusercontent.com/u/26379010?v=4",
+                "id": 26379010
+              },
+              "assignees": null,
+              "labels": null,
+              "milestone": null,
+              "state_reason": null,
+              "comments": 1,
+              "created_at": "2025-06-11T12:59:02Z",
+              "updated_at": "2025-06-27T01:59:48Z",
+              "closed_at": null,
+              "display_url": "https://github.com/Tencent/wujie/issues/1007",
+              "display_title": "刷新浏览器后 浏览器url及子应用会跳转回子应用首页"
+            },
+            "url": "https://github.com/Tencent/wujie/issues/1007",
+            "title": "刷新浏览器后 浏览器url及子应用会跳转回子应用首页",
+            "display_url": "https://github.com/Tencent/wujie/issues/1007",
+            "display_title": "刷新浏览器后 浏览器url及子应用会跳转回子应用首页"
+          },
+          "isError": false
+        }
+      },
+      {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "comments": [
+              {
+                "url": "https://github.com/Tencent/wujie/issues/1007#issuecomment-3011095620",
+                "body": "https://wujie-micro.github.io/doc/guide/sync.html",
+                "user": {
+                  "login": "ngwszsd",
+                  "name": "ngwszsd",
+                  "email": null,
+                  "avatar_url": "https://avatars.githubusercontent.com/u/45424459?v=4",
+                  "id": 45424459
+                },
+                "id": 3011095620,
+                "pull_request_review_id": null,
+                "in_reply_to_id": null,
+                "created_at": null,
+                "updated_at": null,
+                "review": null,
+                "side": null,
+                "line": null,
+                "start_line": null,
+                "path": null,
+                "body_html": "<p dir=\"auto\"><a href=\"https://wujie-micro.github.io/doc/guide/sync.html\" rel=\"nofollow\">https://wujie-micro.github.io/doc/guide/sync.html</a></p>"
+              }
+            ],
+            "url": "https://github.com/Tencent/wujie/issues/1007",
+            "title": "Tencent/wujie Issue #1007 comments",
+            "display_url": "https://github.com/Tencent/wujie/issues/1007",
+            "display_title": "Tencent/wujie Issue #1007 comments"
+          },
+          "isError": false
+        }
+      }
+    ]
+  },
+  {
+    "number": 976,
+    "results": [
+      {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "issue": {
+              "url": "https://github.com/Tencent/wujie/issues/976",
+              "title": "快速切换子应用并切换回来，页面渲染undefined",
+              "issue_number": 976,
+              "body": "<!-- 请尽量按照下面几个方面给出解决bug必须得信息 -->\n\n**描述bug**\n在弱网场景快速切换子应用再切换回来，可能导致页面渲染undefined\n\n**如何复现**\n给出详细的复现步骤\n1、第一步 xxx\n2、 第二步 xxx\n\n**错误截图**\n如果有可以将截图带上\n\n**最小复现仓库或者地址**\n重要！！！，请尽量给出复现仓库，这样能极大加快bug解决速度\n",
+              "state": "closed",
+              "user": {
+                "login": "yiludege",
+                "name": "yiludege",
+                "email": null,
+                "avatar_url": "https://avatars.githubusercontent.com/u/19788268?v=4",
+                "id": 19788268
+              },
+              "assignees": null,
+              "labels": null,
+              "milestone": null,
+              "state_reason": "completed",
+              "comments": 2,
+              "created_at": "2025-04-08T04:51:20Z",
+              "updated_at": "2025-04-11T08:11:58Z",
+              "closed_at": "2025-04-08T08:08:27Z",
+              "display_url": "https://github.com/Tencent/wujie/issues/976",
+              "display_title": "快速切换子应用并切换回来，页面渲染undefined"
+            },
+            "url": "https://github.com/Tencent/wujie/issues/976",
+            "title": "快速切换子应用并切换回来，页面渲染undefined",
+            "display_url": "https://github.com/Tencent/wujie/issues/976",
+            "display_title": "快速切换子应用并切换回来，页面渲染undefined"
+          },
+          "isError": false
+        }
+      },
+      {
+        "status": "fulfilled",
+        "value": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Action completed."
+            }
+          ],
+          "structuredContent": {
+            "comments": [
+              {
+                "url": "https://github.com/Tencent/wujie/issues/976#issuecomment-2785218847",
+                "body": "由于子应用还没有渲染是异步完成的，打开子应用后快速切换到其他应用再快速切换回来，导致上一次子应用渲染还没有完成又进行了新一次的渲染，两次同步渲染会相互干扰导致页面异常，采用全局队列来解决这个问题",
+                "user": {
+                  "login": "yiludege",
+                  "name": "yiludege",
+                  "email": null,
+                  "avatar_url": "https://avatars.githubusercontent.com/u/19788268?v=4",
+                  "id": 19788268
+                },
+                "id": 2785218847,
+                "pull_request_review_id": null,
+                "in_reply_to_id": null,
+                "created_at": null,
+                "updated_at": null,
+                "review": null,
+                "side": null,
+                "line": null,
+                "start_line": null,
+                "path": null,
+                "body_html": "<p dir=\"auto\">由于子应用还没有渲染是异步完成的，打开子应用后快速切换到其他应用再快速切换回来，导致上一次子应用渲染还没有完成又进行了新一次的渲染，两次同步渲染会相互干扰导致页面异常，采用全局队列来解决这个问题</p>"
+              },
+              {
+                "url": "https://github.com/Tencent/wujie/issues/976#issuecomment-2796171458",
+                "body": "我昨天碰到了这个问题，就是第一次渲染没问题，后续渲染就出不来了，排查了好久才发现是版本更新导致的，然后回退到以前版本就好了",
+                "user": {
+                  "login": "yyxq",
+                  "name": "yyxq",
+                  "email": null,
+                  "avatar_url": "https://avatars.githubusercontent.com/u/29999357?v=4",
+                  "id": 29999357
+                },
+                "id": 2796171458,
+                "pull_request_review_id": null,
+                "in_reply_to_id": null,
+                "created_at": null,
+                "updated_at": null,
+                "review": null,
+                "side": null,
+                "line": null,
+                "start_line": null,
+                "path": null,
+                "body_html": "<p dir=\"auto\">我昨天碰到了这个问题，就是第一次渲染没问题，后续渲染就出不来了，排查了好久才发现是版本更新导致的，然后回退到以前版本就好了</p>"
+              }
+            ],
+            "url": "https://github.com/Tencent/wujie/issues/976",
+            "title": "Tencent/wujie Issue #976 comments",
+            "display_url": "https://github.com/Tencent/wujie/issues/976",
+            "display_title": "Tencent/wujie Issue #976 comments"
+          },
+          "isError": false
+        }
+      }
+    ]
+  }
+]

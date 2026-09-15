@@ -1,0 +1,176 @@
+{
+  "generatedAt": "2026-09-14T09:20:21.717Z",
+  "runId": "mfopt-003-cache-contracts",
+  "baselineSha": "d943bea6f7bab29f9d3ac9e3fb3e7ee4f97778f5",
+  "runtime": {
+    "bun": "unknown",
+    "node": "v24.19.0",
+    "platform": "darwin",
+    "architecture": "arm64"
+  },
+  "mode": "release",
+  "status": "passed",
+  "passed": true,
+  "sentryNetworkGuard": [
+    {
+      "browser": "chromium",
+      "allowlistedOrigins": [
+        "http://127.0.0.1:4373",
+        "http://127.0.0.1:4374",
+        "http://127.0.0.1:4375"
+      ],
+      "blockedProbePaths": [
+        "/probe/beacon",
+        "/probe/fetch",
+        "/probe/iframe",
+        "/probe/worker",
+        "/probe/xhr"
+      ],
+      "fakeReceiverDeliveredPaths": [
+        "/guard.html"
+      ],
+      "activeServiceWorkers": 0
+    },
+    {
+      "browser": "firefox",
+      "allowlistedOrigins": [
+        "http://127.0.0.1:4373",
+        "http://127.0.0.1:4374",
+        "http://127.0.0.1:4375"
+      ],
+      "blockedProbePaths": [
+        "/probe/beacon",
+        "/probe/fetch",
+        "/probe/iframe",
+        "/probe/worker",
+        "/probe/xhr"
+      ],
+      "fakeReceiverDeliveredPaths": [
+        "/guard.html"
+      ],
+      "activeServiceWorkers": 0
+    },
+    {
+      "browser": "webkit",
+      "allowlistedOrigins": [
+        "http://127.0.0.1:4373",
+        "http://127.0.0.1:4374",
+        "http://127.0.0.1:4375"
+      ],
+      "blockedProbePaths": [
+        "/probe/beacon",
+        "/probe/fetch",
+        "/probe/iframe",
+        "/probe/worker",
+        "/probe/xhr"
+      ],
+      "fakeReceiverDeliveredPaths": [
+        "/guard.html"
+      ],
+      "activeServiceWorkers": 0
+    }
+  ],
+  "resourceOwnership": [],
+  "observerIdentity": [],
+  "cleanupFailures": [],
+  "cleanupRecovery": [],
+  "entryCache": [
+    {
+      "browser": "chromium",
+      "reused": {
+        "resources": {
+          "/component.html": 1,
+          "/component.js": 2
+        },
+        "remaining": 0
+      },
+      "credentialIsolation": {
+        "resources": {
+          "/component.html": 2,
+          "/component.js": 2
+        },
+        "remaining": 0
+      },
+      "disabled": {
+        "resources": {
+          "/component.html": 2,
+          "/component.js": 2
+        },
+        "remaining": 0
+      },
+      "retry": {
+        "firstFailure": true,
+        "resources": {
+          "/flaky.html": 2,
+          "/component.js": 1
+        },
+        "remaining": 0
+      }
+    },
+    {
+      "browser": "firefox",
+      "reused": {
+        "resources": {
+          "/component.html": 1,
+          "/component.js": 2
+        },
+        "remaining": 0
+      },
+      "credentialIsolation": {
+        "resources": {
+          "/component.html": 2,
+          "/component.js": 2
+        },
+        "remaining": 0
+      },
+      "disabled": {
+        "resources": {
+          "/component.html": 2,
+          "/component.js": 2
+        },
+        "remaining": 0
+      },
+      "retry": {
+        "firstFailure": true,
+        "resources": {
+          "/flaky.html": 2,
+          "/component.js": 1
+        },
+        "remaining": 0
+      }
+    },
+    {
+      "browser": "webkit",
+      "reused": {
+        "resources": {
+          "/component.html": 1,
+          "/component.js": 2
+        },
+        "remaining": 0
+      },
+      "credentialIsolation": {
+        "resources": {
+          "/component.html": 2,
+          "/component.js": 2
+        },
+        "remaining": 0
+      },
+      "disabled": {
+        "resources": {
+          "/component.html": 2,
+          "/component.js": 2
+        },
+        "remaining": 0
+      },
+      "retry": {
+        "firstFailure": true,
+        "resources": {
+          "/flaky.html": 2,
+          "/component.js": 1
+        },
+        "remaining": 0
+      }
+    }
+  ],
+  "metrics": []
+}

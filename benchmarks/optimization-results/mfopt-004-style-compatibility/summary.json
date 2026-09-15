@@ -1,0 +1,124 @@
+{
+  "generatedAt": "2026-09-14T09:41:51.967Z",
+  "runId": "mfopt-004-style-compatibility",
+  "runtime": {
+    "bun": "unknown",
+    "node": "v24.19.0",
+    "platform": "darwin",
+    "architecture": "arm64"
+  },
+  "mode": "release",
+  "status": "passed",
+  "passed": true,
+  "sentryNetworkGuard": [
+    {
+      "browser": "chromium",
+      "allowlistedOrigins": [
+        "http://127.0.0.1:4373",
+        "http://127.0.0.1:4374",
+        "http://127.0.0.1:4375"
+      ],
+      "blockedProbePaths": [
+        "/probe/beacon",
+        "/probe/fetch",
+        "/probe/iframe",
+        "/probe/worker",
+        "/probe/xhr"
+      ],
+      "fakeReceiverDeliveredPaths": [
+        "/guard.html"
+      ],
+      "activeServiceWorkers": 0
+    },
+    {
+      "browser": "firefox",
+      "allowlistedOrigins": [
+        "http://127.0.0.1:4373",
+        "http://127.0.0.1:4374",
+        "http://127.0.0.1:4375"
+      ],
+      "blockedProbePaths": [
+        "/probe/beacon",
+        "/probe/fetch",
+        "/probe/iframe",
+        "/probe/worker",
+        "/probe/xhr"
+      ],
+      "fakeReceiverDeliveredPaths": [
+        "/guard.html"
+      ],
+      "activeServiceWorkers": 0
+    },
+    {
+      "browser": "webkit",
+      "allowlistedOrigins": [
+        "http://127.0.0.1:4373",
+        "http://127.0.0.1:4374",
+        "http://127.0.0.1:4375"
+      ],
+      "blockedProbePaths": [
+        "/probe/beacon",
+        "/probe/fetch",
+        "/probe/iframe",
+        "/probe/worker",
+        "/probe/xhr"
+      ],
+      "fakeReceiverDeliveredPaths": [
+        "/guard.html"
+      ],
+      "activeServiceWorkers": 0
+    }
+  ],
+  "resourceOwnership": [],
+  "observerIdentity": [],
+  "cleanupFailures": [],
+  "cleanupRecovery": [],
+  "entryCache": [],
+  "entryCacheComparisons": [],
+  "styleScans": [],
+  "styleCompatibility": [
+    {
+      "browser": "chromium",
+      "values": {
+        "remWidth": "40px",
+        "fontFamily": "micro-font-0cfed3c6-0d75-4708-afdf-8a7bce9a7c3e-0",
+        "svgWidth": "40px",
+        "svgFill": "rgb(17, 85, 153)",
+        "nestedWidth": "40px",
+        "dynamicBeforeRemoval": "60px",
+        "dynamicAfterRemoval": "0px"
+      },
+      "overlayPromoted": true,
+      "remaining": 0
+    },
+    {
+      "browser": "firefox",
+      "values": {
+        "remWidth": "40px",
+        "fontFamily": "\"micro-font-2a46850e-5d8c-4780-9ae1-609877a373b8-0\"",
+        "svgWidth": "40px",
+        "svgFill": "rgb(17, 85, 153)",
+        "nestedWidth": "40px",
+        "dynamicBeforeRemoval": "60px",
+        "dynamicAfterRemoval": "0px"
+      },
+      "overlayPromoted": true,
+      "remaining": 0
+    },
+    {
+      "browser": "webkit",
+      "values": {
+        "remWidth": "40px",
+        "fontFamily": "micro-font-d95ef31a-eb09-4dfc-a0d0-3a57b9d523a3-0",
+        "svgWidth": "40px",
+        "svgFill": "rgb(17, 85, 153)",
+        "nestedWidth": "40px",
+        "dynamicBeforeRemoval": "60px",
+        "dynamicAfterRemoval": "0px"
+      },
+      "overlayPromoted": true,
+      "remaining": 0
+    }
+  ],
+  "metrics": []
+}

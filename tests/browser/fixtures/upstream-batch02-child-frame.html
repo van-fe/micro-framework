@@ -1,0 +1,5 @@
+<!doctype html><html><body><script>
+window.addEventListener('message', event => {
+  if (event.data?.batch02 === 'request') parent.postMessage({batch02:'reply', token:event.data.token}, location.origin);
+});
+</script></body></html>

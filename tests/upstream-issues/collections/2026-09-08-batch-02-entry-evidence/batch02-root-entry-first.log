@@ -1,0 +1,13 @@
+$ vitest run --config vitest.browser.config.ts "tests/browser/upstream-batch02-entry.browser.test.ts" "tests/browser/upstream-batch02-native.browser.test.ts" "--reporter=json" "--outputFile=/private/tmp/batch02-root-entry-first.json"
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - import "../../support/webpack-compiler" without a file extension (tests/browser/server/upstream-batch02-entry-fixture.ts:6:39). Add the file extension
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - import "../../support/webpack-compiler" without a file extension (tests/browser/server/upstream-batch02-entry-fixture.ts:6:39). Add the file extension
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+2:36:56 PM [vite] (client) Re-optimizing dependencies because vite config has changed
+JSON report written to /private/tmp/batch02-root-entry-first.json
+close timed out after 10000ms
+Tests closed successfully but something prevents the main process from exiting
+You can try to identify the cause by enabling "hanging-process" reporter. See https://vitest.dev/guide/reporters.html#hanging-process-reporter
+error: script "test:browser" exited with code 1

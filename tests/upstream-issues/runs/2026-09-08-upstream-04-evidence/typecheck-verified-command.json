@@ -1,0 +1,14 @@
+{
+  "name": "typecheck-verified",
+  "command": [
+    "bun",
+    "run",
+    "typecheck"
+  ],
+  "cwd": "/Users/fanfangbo/workspace/micro-framework",
+  "startedAt": "2026-09-08T11:01:15.541062+00:00",
+  "completedAt": "2026-09-08T11:01:28.360388+00:00",
+  "durationSeconds": 12.819209375,
+  "exitCode": 0,
+  "log": "tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/typecheck-verified.log"
+}

@@ -1,0 +1,1863 @@
+{
+  "schemaVersion": 1,
+  "collectionBatch": "2026-09-08-batch-02",
+  "collectedAt": "2026-09-08T06:12:04Z",
+  "repository": "umijs/qiankun",
+  "scope": "精确 label:bug，排除收集前 catalog.json 全部已有 ID；本文件为采集证据，不代表本地复现或兼容验证。",
+  "searches": [
+    {
+      "query": "repo:umijs/qiankun is:issue label:bug",
+      "topn": 100,
+      "sort": "updated",
+      "order": "desc",
+      "returnedCount": 40,
+      "issues": [
+        {
+          "number": 3019,
+          "title": "[Bug] patchHTMLDynamicAppendPrototypeFunctions方法逻辑存在问题",
+          "url": "https://github.com/umijs/qiankun/issues/3019",
+          "labels": null
+        },
+        {
+          "number": 2951,
+          "title": "3.0 的 demo 切换应用（react16）报错 Illegal invocation",
+          "url": "https://github.com/umijs/qiankun/issues/2951",
+          "labels": null
+        },
+        {
+          "number": 2368,
+          "title": "【bug】关于loadMicroApp + 多实例 + 动态增减 tabs  导致的 appContainerXPathKey 计算结果存在重复",
+          "url": "https://github.com/umijs/qiankun/issues/2368",
+          "labels": null
+        },
+        {
+          "number": 578,
+          "title": "从子项目页面跳转到主项目自身的页面时，主项目页面的css未加载",
+          "url": "https://github.com/umijs/qiankun/issues/578",
+          "labels": null
+        },
+        {
+          "number": 2735,
+          "title": "重新挂载子应用报错 「SKIP_BECAUSE_BROKEN」",
+          "url": "https://github.com/umijs/qiankun/issues/2735",
+          "labels": null
+        },
+        {
+          "number": 2854,
+          "title": "[Bug]资源加载出错然后换一个entry, 但是name不变的话, 不会再次请求新资源",
+          "url": "https://github.com/umijs/qiankun/issues/2854",
+          "labels": null
+        },
+        {
+          "number": 1990,
+          "title": "网络或其他原因导致子应用加载失败，无法手动重新加载",
+          "url": "https://github.com/umijs/qiankun/issues/1990",
+          "labels": null
+        },
+        {
+          "number": 2166,
+          "title": "[Feature Request] 能否提供彻底卸载loadMicroApp加载的子应用，下次进入能重新走首次流程",
+          "url": "https://github.com/umijs/qiankun/issues/2166",
+          "labels": null
+        },
+        {
+          "number": 1885,
+          "title": "loadMicroApp 加载失败后，再一次执行，并不会重新发起http请求，而是直接报错",
+          "url": "https://github.com/umijs/qiankun/issues/1885",
+          "labels": null
+        },
+        {
+          "number": 2171,
+          "title": "当子应用中有引用带空格的资源文件时，会导致子应用加载失败",
+          "url": "https://github.com/umijs/qiankun/issues/2171",
+          "labels": null
+        },
+        {
+          "number": 2795,
+          "title": "[Bug] webpack-plugin 单测 ci 上无法运行",
+          "url": "https://github.com/umijs/qiankun/issues/2795",
+          "labels": null
+        },
+        {
+          "number": 2694,
+          "title": "inline script should not add sourceURL",
+          "url": "https://github.com/umijs/qiankun/issues/2694",
+          "labels": null
+        },
+        {
+          "number": 2362,
+          "title": "子应用动态插入的script脚本，无法保证脚步执行顺序",
+          "url": "https://github.com/umijs/qiankun/issues/2362",
+          "labels": null
+        },
+        {
+          "number": 1089,
+          "title": "[Bug] 在某些情况下 sandbox 使用的 initialAppWrapperElement 为 null,  导致渲染异常",
+          "url": "https://github.com/umijs/qiankun/issues/1089",
+          "labels": null
+        },
+        {
+          "number": 2701,
+          "title": "@qiankunjs/shared 和 @qiankunjs/sandbox 相互依赖",
+          "url": "https://github.com/umijs/qiankun/issues/2701",
+          "labels": null
+        },
+        {
+          "number": 2727,
+          "title": "[Bug] 3.0 loader bug",
+          "url": "https://github.com/umijs/qiankun/issues/2727",
+          "labels": null
+        },
+        {
+          "number": 1116,
+          "title": "子应用使用react-monaco-editor编辑器 ，双滚动条的情况下父层级滚动条有滚动，编辑器无法光标定位",
+          "url": "https://github.com/umijs/qiankun/issues/1116",
+          "labels": null
+        },
+        {
+          "number": 222,
+          "title": "AntD confirm 等全局挂载且有监听的组件切换子应用时，会报错并系统崩溃。",
+          "url": "https://github.com/umijs/qiankun/issues/222",
+          "labels": null
+        },
+        {
+          "number": 1212,
+          "title": "[BUG] proxySandbox 的 setter 逻辑中缺少了rawWindow上定义了setter和getter的属性",
+          "url": "https://github.com/umijs/qiankun/issues/1212",
+          "labels": null
+        },
+        {
+          "number": 2408,
+          "title": "[Bug]2.10.1版本 子应用是elementui时el-select控件弹出位置错误即使设置了 el-select 属性 popper-append-to-body=false 还是不能解决 2.9.3版本没有该问题",
+          "url": "https://github.com/umijs/qiankun/issues/2408",
+          "labels": null
+        },
+        {
+          "number": 2378,
+          "title": "qiankun does not work with AdGuard",
+          "url": "https://github.com/umijs/qiankun/issues/2378",
+          "labels": null
+        },
+        {
+          "number": 2346,
+          "title": "examples启动后，快速点击切换tab，会导致出现一个iframe浮层，所有点击操作无法触发",
+          "url": "https://github.com/umijs/qiankun/issues/2346",
+          "labels": null
+        },
+        {
+          "number": 951,
+          "title": "[Bug]document.head.removeChild(script)错误-Failed to execute 'removeChild' on 'Node'",
+          "url": "https://github.com/umijs/qiankun/issues/951",
+          "labels": null
+        },
+        {
+          "number": 2298,
+          "title": "yarn examples:start-multiple启动项目，在页面点击 mount 按钮报错",
+          "url": "https://github.com/umijs/qiankun/issues/2298",
+          "labels": null
+        },
+        {
+          "number": 2137,
+          "title": "主应用qiankun@2.7.2， 子应用qiankun@2.6.3，子应用存在动态加载的STYLE_TAG_NAME时，shadow dom隔离下，不能直接获取到元素报错",
+          "url": "https://github.com/umijs/qiankun/issues/2137",
+          "labels": null
+        },
+        {
+          "number": 2141,
+          "title": "最新版本2.7.2的升级导致切换子应用加载的当前css文件丢失",
+          "url": "https://github.com/umijs/qiankun/issues/2141",
+          "labels": null
+        },
+        {
+          "number": 1271,
+          "title": "[Bug]子项目异步插入到 head 标签的 style 位置不正确",
+          "url": "https://github.com/umijs/qiankun/issues/1271",
+          "labels": null
+        },
+        {
+          "number": 1613,
+          "title": "[Bug]子应用使用lodash会污染到主应用的window变量",
+          "url": "https://github.com/umijs/qiankun/issues/1613",
+          "labels": null
+        },
+        {
+          "number": 1266,
+          "title": "[Bug]微应用中在异步回调中动态插入的脚本，无法正确地被沙箱代理",
+          "url": "https://github.com/umijs/qiankun/issues/1266",
+          "labels": null
+        },
+        {
+          "number": 1502,
+          "title": "沙箱启用时，子应用使用 window.location = 'https://www.baidu.com' 报错",
+          "url": "https://github.com/umijs/qiankun/issues/1502",
+          "labels": null
+        },
+        {
+          "number": 420,
+          "title": "[Bug] emotion.js 使用了insertBefore 动态插入 style, dynamicHeadAppend 未重写这个方法，导致污染head",
+          "url": "https://github.com/umijs/qiankun/issues/420",
+          "labels": null
+        },
+        {
+          "number": 1449,
+          "title": "sandbox proxy result in function lose apply this",
+          "url": "https://github.com/umijs/qiankun/issues/1449",
+          "labels": null
+        },
+        {
+          "number": 1174,
+          "title": "[BUG] getTargetValue的缓存机制导致window上函数的this指向错误",
+          "url": "https://github.com/umijs/qiankun/issues/1174",
+          "labels": null
+        },
+        {
+          "number": 1245,
+          "title": "子应用之间第一次路由跳转，vue-router报错",
+          "url": "https://github.com/umijs/qiankun/issues/1245",
+          "labels": null
+        },
+        {
+          "number": 777,
+          "title": "[Bug][带复现repo]查找子应用入口的\"最后一个挂载到window下变量\"的问题",
+          "url": "https://github.com/umijs/qiankun/issues/777",
+          "labels": null
+        },
+        {
+          "number": 748,
+          "title": "proxy.test.prototype is undefined",
+          "url": "https://github.com/umijs/qiankun/issues/748",
+          "labels": null
+        },
+        {
+          "number": 886,
+          "title": "在子应用的bootstrap阶段发生错误，会无法再加载其他的应用",
+          "url": "https://github.com/umijs/qiankun/issues/886",
+          "labels": null
+        },
+        {
+          "number": 701,
+          "title": "IE11无法启动,[import-html-entry] Here is no \"fetch\" on the window env, you need to polyfill it",
+          "url": "https://github.com/umijs/qiankun/issues/701",
+          "labels": null
+        },
+        {
+          "number": 341,
+          "title": "项目内部路由跳转按需加载的文件无法传递cookie",
+          "url": "https://github.com/umijs/qiankun/issues/341",
+          "labels": null
+        },
+        {
+          "number": 187,
+          "title": "子项目样式覆盖问题",
+          "url": "https://github.com/umijs/qiankun/issues/187",
+          "labels": null
+        }
+      ]
+    },
+    {
+      "query": "repo:umijs/qiankun is:issue label:bug is:open",
+      "topn": 100,
+      "sort": "created",
+      "order": "asc",
+      "returnedCount": 7,
+      "issues": [
+        {
+          "number": 1212,
+          "title": "[BUG] proxySandbox 的 setter 逻辑中缺少了rawWindow上定义了setter和getter的属性",
+          "url": "https://github.com/umijs/qiankun/issues/1212",
+          "labels": null
+        },
+        {
+          "number": 1245,
+          "title": "子应用之间第一次路由跳转，vue-router报错",
+          "url": "https://github.com/umijs/qiankun/issues/1245",
+          "labels": null
+        },
+        {
+          "number": 1449,
+          "title": "sandbox proxy result in function lose apply this",
+          "url": "https://github.com/umijs/qiankun/issues/1449",
+          "labels": null
+        },
+        {
+          "number": 1502,
+          "title": "沙箱启用时，子应用使用 window.location = 'https://www.baidu.com' 报错",
+          "url": "https://github.com/umijs/qiankun/issues/1502",
+          "labels": null
+        },
+        {
+          "number": 1613,
+          "title": "[Bug]子应用使用lodash会污染到主应用的window变量",
+          "url": "https://github.com/umijs/qiankun/issues/1613",
+          "labels": null
+        },
+        {
+          "number": 2346,
+          "title": "examples启动后，快速点击切换tab，会导致出现一个iframe浮层，所有点击操作无法触发",
+          "url": "https://github.com/umijs/qiankun/issues/2346",
+          "labels": null
+        },
+        {
+          "number": 2368,
+          "title": "【bug】关于loadMicroApp + 多实例 + 动态增减 tabs  导致的 appContainerXPathKey 计算结果存在重复",
+          "url": "https://github.com/umijs/qiankun/issues/2368",
+          "labels": null
+        }
+      ]
+    },
+    {
+      "query": "repo:umijs/qiankun is:issue label:bug is:closed",
+      "topn": 100,
+      "sort": "created",
+      "order": "asc",
+      "returnedCount": 33,
+      "issues": [
+        {
+          "number": 187,
+          "title": "子项目样式覆盖问题",
+          "url": "https://github.com/umijs/qiankun/issues/187",
+          "labels": null
+        },
+        {
+          "number": 222,
+          "title": "AntD confirm 等全局挂载且有监听的组件切换子应用时，会报错并系统崩溃。",
+          "url": "https://github.com/umijs/qiankun/issues/222",
+          "labels": null
+        },
+        {
+          "number": 341,
+          "title": "项目内部路由跳转按需加载的文件无法传递cookie",
+          "url": "https://github.com/umijs/qiankun/issues/341",
+          "labels": null
+        },
+        {
+          "number": 420,
+          "title": "[Bug] emotion.js 使用了insertBefore 动态插入 style, dynamicHeadAppend 未重写这个方法，导致污染head",
+          "url": "https://github.com/umijs/qiankun/issues/420",
+          "labels": null
+        },
+        {
+          "number": 578,
+          "title": "从子项目页面跳转到主项目自身的页面时，主项目页面的css未加载",
+          "url": "https://github.com/umijs/qiankun/issues/578",
+          "labels": null
+        },
+        {
+          "number": 701,
+          "title": "IE11无法启动,[import-html-entry] Here is no \"fetch\" on the window env, you need to polyfill it",
+          "url": "https://github.com/umijs/qiankun/issues/701",
+          "labels": null
+        },
+        {
+          "number": 748,
+          "title": "proxy.test.prototype is undefined",
+          "url": "https://github.com/umijs/qiankun/issues/748",
+          "labels": null
+        },
+        {
+          "number": 777,
+          "title": "[Bug][带复现repo]查找子应用入口的\"最后一个挂载到window下变量\"的问题",
+          "url": "https://github.com/umijs/qiankun/issues/777",
+          "labels": null
+        },
+        {
+          "number": 886,
+          "title": "在子应用的bootstrap阶段发生错误，会无法再加载其他的应用",
+          "url": "https://github.com/umijs/qiankun/issues/886",
+          "labels": null
+        },
+        {
+          "number": 951,
+          "title": "[Bug]document.head.removeChild(script)错误-Failed to execute 'removeChild' on 'Node'",
+          "url": "https://github.com/umijs/qiankun/issues/951",
+          "labels": null
+        },
+        {
+          "number": 1089,
+          "title": "[Bug] 在某些情况下 sandbox 使用的 initialAppWrapperElement 为 null,  导致渲染异常",
+          "url": "https://github.com/umijs/qiankun/issues/1089",
+          "labels": null
+        },
+        {
+          "number": 1116,
+          "title": "子应用使用react-monaco-editor编辑器 ，双滚动条的情况下父层级滚动条有滚动，编辑器无法光标定位",
+          "url": "https://github.com/umijs/qiankun/issues/1116",
+          "labels": null
+        },
+        {
+          "number": 1174,
+          "title": "[BUG] getTargetValue的缓存机制导致window上函数的this指向错误",
+          "url": "https://github.com/umijs/qiankun/issues/1174",
+          "labels": null
+        },
+        {
+          "number": 1266,
+          "title": "[Bug]微应用中在异步回调中动态插入的脚本，无法正确地被沙箱代理",
+          "url": "https://github.com/umijs/qiankun/issues/1266",
+          "labels": null
+        },
+        {
+          "number": 1271,
+          "title": "[Bug]子项目异步插入到 head 标签的 style 位置不正确",
+          "url": "https://github.com/umijs/qiankun/issues/1271",
+          "labels": null
+        },
+        {
+          "number": 1885,
+          "title": "loadMicroApp 加载失败后，再一次执行，并不会重新发起http请求，而是直接报错",
+          "url": "https://github.com/umijs/qiankun/issues/1885",
+          "labels": null
+        },
+        {
+          "number": 1990,
+          "title": "网络或其他原因导致子应用加载失败，无法手动重新加载",
+          "url": "https://github.com/umijs/qiankun/issues/1990",
+          "labels": null
+        },
+        {
+          "number": 2137,
+          "title": "主应用qiankun@2.7.2， 子应用qiankun@2.6.3，子应用存在动态加载的STYLE_TAG_NAME时，shadow dom隔离下，不能直接获取到元素报错",
+          "url": "https://github.com/umijs/qiankun/issues/2137",
+          "labels": null
+        },
+        {
+          "number": 2141,
+          "title": "最新版本2.7.2的升级导致切换子应用加载的当前css文件丢失",
+          "url": "https://github.com/umijs/qiankun/issues/2141",
+          "labels": null
+        },
+        {
+          "number": 2166,
+          "title": "[Feature Request] 能否提供彻底卸载loadMicroApp加载的子应用，下次进入能重新走首次流程",
+          "url": "https://github.com/umijs/qiankun/issues/2166",
+          "labels": null
+        },
+        {
+          "number": 2171,
+          "title": "当子应用中有引用带空格的资源文件时，会导致子应用加载失败",
+          "url": "https://github.com/umijs/qiankun/issues/2171",
+          "labels": null
+        },
+        {
+          "number": 2298,
+          "title": "yarn examples:start-multiple启动项目，在页面点击 mount 按钮报错",
+          "url": "https://github.com/umijs/qiankun/issues/2298",
+          "labels": null
+        },
+        {
+          "number": 2362,
+          "title": "子应用动态插入的script脚本，无法保证脚步执行顺序",
+          "url": "https://github.com/umijs/qiankun/issues/2362",
+          "labels": null
+        },
+        {
+          "number": 2378,
+          "title": "qiankun does not work with AdGuard",
+          "url": "https://github.com/umijs/qiankun/issues/2378",
+          "labels": null
+        },
+        {
+          "number": 2408,
+          "title": "[Bug]2.10.1版本 子应用是elementui时el-select控件弹出位置错误即使设置了 el-select 属性 popper-append-to-body=false 还是不能解决 2.9.3版本没有该问题",
+          "url": "https://github.com/umijs/qiankun/issues/2408",
+          "labels": null
+        },
+        {
+          "number": 2694,
+          "title": "inline script should not add sourceURL",
+          "url": "https://github.com/umijs/qiankun/issues/2694",
+          "labels": null
+        },
+        {
+          "number": 2701,
+          "title": "@qiankunjs/shared 和 @qiankunjs/sandbox 相互依赖",
+          "url": "https://github.com/umijs/qiankun/issues/2701",
+          "labels": null
+        },
+        {
+          "number": 2727,
+          "title": "[Bug] 3.0 loader bug",
+          "url": "https://github.com/umijs/qiankun/issues/2727",
+          "labels": null
+        },
+        {
+          "number": 2735,
+          "title": "重新挂载子应用报错 「SKIP_BECAUSE_BROKEN」",
+          "url": "https://github.com/umijs/qiankun/issues/2735",
+          "labels": null
+        },
+        {
+          "number": 2795,
+          "title": "[Bug] webpack-plugin 单测 ci 上无法运行",
+          "url": "https://github.com/umijs/qiankun/issues/2795",
+          "labels": null
+        },
+        {
+          "number": 2854,
+          "title": "[Bug]资源加载出错然后换一个entry, 但是name不变的话, 不会再次请求新资源",
+          "url": "https://github.com/umijs/qiankun/issues/2854",
+          "labels": null
+        },
+        {
+          "number": 2951,
+          "title": "3.0 的 demo 切换应用（react16）报错 Illegal invocation",
+          "url": "https://github.com/umijs/qiankun/issues/2951",
+          "labels": null
+        },
+        {
+          "number": 3019,
+          "title": "[Bug] patchHTMLDynamicAppendPrototypeFunctions方法逻辑存在问题",
+          "url": "https://github.com/umijs/qiankun/issues/3019",
+          "labels": null
+        }
+      ]
+    }
+  ],
+  "countCaveat": "returnedCount 仅为本次 GitHub connector 查询返回数量；未以 total_count 或标签页另行证明仓库全量。",
+  "supplementaryEvidence": [
+    {
+      "kind": "related-issue",
+      "supports": "umijs/qiankun#2298",
+      "repository": "umijs/qiankun",
+      "number": 2300,
+      "url": "https://github.com/umijs/qiankun/issues/2300",
+      "title": "最新2.8.2版本对部分框架打包的子应用兼容有问题",
+      "labels": [],
+      "body": "## What happens?\r\n\r\n安装最新版本后以往可以正常加载的子应用报错\r\n将qiankun版本写死成2.7.4后恢复正常\r\n子应用打包脚手架为create-react-app\r\n\r\n## Context\r\n\r\n![image](https://user-images.githubusercontent.com/48002519/195503270-33b6f86a-135f-4510-aa24-ddf578fdbb3c.png)\r\n\r\n",
+      "updatedAt": "2022-10-13T14:09:53Z",
+      "comments": [
+        {
+          "id": 1277031851,
+          "url": "https://github.com/umijs/qiankun/issues/2300#issuecomment-1277031851",
+          "author": "tranthotuong",
+          "body": "me too. I have the same an issue\r\n![image](https://user-images.githubusercontent.com/50495846/195505170-148db397-b211-4ee2-9d8e-28fc767e9a9e.png)\r\n"
+        },
+        {
+          "id": 1277138679,
+          "url": "https://github.com/umijs/qiankun/issues/2300#issuecomment-1277138679",
+          "author": "zeusyaoyao",
+          "body": "+1, 升级到2.8.2，create-react-app 构建的子应用直接死循环了"
+        },
+        {
+          "id": 1277678190,
+          "url": "https://github.com/umijs/qiankun/issues/2300#issuecomment-1277678190",
+          "author": "kuitos",
+          "body": "released v2.8.3"
+        }
+      ],
+      "note": "仅上下文证据；无bug标签，不纳入本批20条。"
+    },
+    {
+      "kind": "commit-diff",
+      "supports": "umijs/qiankun#2951",
+      "repository": "umijs/qiankun",
+      "sha": "eeebd3f76aa3a9d026b4f3a4e86682088e6295c1",
+      "url": "https://github.com/umijs/qiankun/commit/eeebd3f76aa3a9d026b4f3a4e86682088e6295c1",
+      "message": "🎨 optimize code (#2924)",
+      "files": [
+        {
+          "filename": "src/sandbox/patchers/windowListener.ts",
+          "patch": "@@ -1,4 +1,3 @@\n-/* eslint-disable no-param-reassign */\n /**\n  * @author Kuitos\n  * @since 2019-04-11\n@@ -17,61 +16,58 @@ type ListenerMapObject = {\n \n const DEFAULT_OPTIONS: AddEventListenerOptions = { capture: false, once: false, passive: false };\n \n-// 移除cacheListener\n+const normalizeOptions = (rawOptions?: boolean | AddEventListenerOptions): AddEventListenerOptions => {\n+  if (typeof rawOptions === 'object') {\n+    return rawOptions ?? DEFAULT_OPTIONS;\n+  }\n+  return { capture: !!rawOptions, once: false, passive: false };\n+};\n+\n+const findListenerIndex = (\n+  listeners: ListenerMapObject[],\n+  rawListener: EventListenerOrEventListenerObject,\n+  options: AddEventListenerOptions,\n+): number =>\n+  listeners.findIndex((item) => item.rawListener === rawListener && item.options.capture === options.capture);\n+\n const removeCacheListener = (\n   listenerMap: Map<string, ListenerMapObject[]>,\n   type: string,\n   rawListener: EventListenerOrEventListenerObject,\n   rawOptions?: boolean | AddEventListenerOptions,\n ): ListenerMapObject => {\n-  // 处理 options，确保它是一个对象\n-  let options = typeof rawOptions === 'object' ? rawOptions : { capture: !!rawOptions };\n-  // 如果 options 为 null，使用默认值\n-  options = options ?? DEFAULT_OPTIONS;\n-\n+  const options = normalizeOptions(rawOptions);\n   const cachedTypeListeners = listenerMap.get(type) || [];\n-  // listener和capture/useCapture都相同，认为是同一个监听\n-  // https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener\n-  const findIndex = cachedTypeListeners.findIndex(\n-    (item) => item.rawListener === rawListener && item.options.capture == options.capture,\n-  );\n+\n+  const findIndex = findListenerIndex(cachedTypeListeners, rawListener, options);\n   if (findIndex > -1) {\n-    const cacheListener = cachedTypeListeners[findIndex];\n-    cachedTypeListeners.splice(findIndex, 1);\n-    return cacheListener;\n+    return cachedTypeListeners.splice(findIndex, 1)[0];\n   }\n \n-  // 返回原始listener和options\n   return { listener: rawListener, rawListener, options };\n };\n \n-// 添加监听构造一个cacheListener对象，考虑到多次添加同一个监听和once的情况\n const addCacheListener = (\n   listenerMap: Map<string, ListenerMapObject[]>,\n   type: string,\n   rawListener: EventListenerOrEventListenerObject,\n   rawOptions?: boolean | AddEventListenerOptions,\n ): ListenerMapObject | undefined => {\n-  // 处理 options，确保它是一个对象\n-  let options = typeof rawOptions === 'object' ? rawOptions : { capture: !!rawOptions };\n-  // 如果 options 为 null，使用默认值\n-  options = options ?? DEFAULT_OPTIONS;\n-\n+  const options = normalizeOptions(rawOptions);\n   const cachedTypeListeners = listenerMap.get(type) || [];\n-  // listener和capture/useCapture都相同，认为是同一个监听\n-  // https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener\n-  const findIndex = cachedTypeListeners.findIndex(\n-    (item) => item.rawListener === rawListener && item.options.capture == options.capture,\n-  );\n-  // 如果事件已经添加到了target的event listeners 列表中，直接返回不需要添加第二次\n+\n+  const findIndex = findListenerIndex(cachedTypeListeners, rawListener, options);\n+  // avoid duplicated listener in the listener list\n   if (findIndex > -1) return;\n \n   let listener: EventListenerOrEventListenerObject = rawListener;\n-  if (options.once)\n+  if (options.once) {\n     listener = (event: Event) => {\n       (rawListener as EventListener)(event);\n       removeCacheListener(listenerMap, type, rawListener, options);\n     };\n+  }\n+\n   const cacheListener = { listener, options, rawListener };\n   listenerMap.set(type, [...cachedTypeListeners, cacheListener]);\n   return cacheListener;\n@@ -86,10 +82,9 @@ export default function patch(global: WindowProxy) {\n     rawOptions?: boolean | AddEventListenerOptions,\n   ) => {\n     const addListener = addCacheListener(listenerMap, type, rawListener, rawOptions);\n-    // 如果返回空，则代表事件已经添加过了，不需要重复添加\n+\n     if (!addListener) return;\n-    const { listener, options } = addListener;\n-    return rawAddEventListener.call(window, type, listener, options);\n+    return rawAddEventListener.call(global, type, addListener.listener, addListener.options);\n   };\n \n   global.removeEventListener = (\n@@ -98,18 +93,18 @@ export default function patch(global: WindowProxy) {\n     rawOptions?: boolean | AddEventListenerOptions,\n   ) => {\n     const { listener, options } = removeCacheListener(listenerMap, type, rawListener, rawOptions);\n-    return rawRemoveEventListener.call(window, type, listener, options);\n+    return rawRemoveEventListener.call(global, type, listener, options);\n   };\n \n   return function free() {\n-    listenerMap.forEach((listeners, type) =>\n-      [...listeners].forEach(({ rawListener, options }) => global.removeEventListener(type, rawListener, options)),\n-    );\n-    // 清空listenerMap，避免listenerMap中还存有listener导致内存泄漏\n+    listenerMap.forEach((listeners, type) => {\n+      listeners.forEach(({ rawListener, options }) => {\n+        global.removeEventListener(type, rawListener, options);\n+      });\n+    });\n     listenerMap.clear();\n     global.addEventListener = rawAddEventListener;\n     global.removeEventListener = rawRemoveEventListener;\n-\n     return noop;\n   };\n }"
+        }
+      ],
+      "diff": "@@ -1,4 +1,3 @@\n-/* eslint-disable no-param-reassign */\n /**\n  * @author Kuitos\n  * @since 2019-04-11\n@@ -17,61 +16,58 @@ type ListenerMapObject = {\n \n const DEFAULT_OPTIONS: AddEventListenerOptions = { capture: false, once: false, passive: false };\n \n-// 移除cacheListener\n+const normalizeOptions = (rawOptions?: boolean | AddEventListenerOptions): AddEventListenerOptions => {\n+  if (typeof rawOptions === 'object') {\n+    return rawOptions ?? DEFAULT_OPTIONS;\n+  }\n+  return { capture: !!rawOptions, once: false, passive: false };\n+};\n+\n+const findListenerIndex = (\n+  listeners: ListenerMapObject[],\n+  rawListener: EventListenerOrEventListenerObject,\n+  options: AddEventListenerOptions,\n+): number =>\n+  listeners.findIndex((item) => item.rawListener === rawListener && item.options.capture === options.capture);\n+\n const removeCacheListener = (\n   listenerMap: Map<string, ListenerMapObject[]>,\n   type: string,\n   rawListener: EventListenerOrEventListenerObject,\n   rawOptions?: boolean | AddEventListenerOptions,\n ): ListenerMapObject => {\n-  // 处理 options，确保它是一个对象\n-  let options = typeof rawOptions === 'object' ? rawOptions : { capture: !!rawOptions };\n-  // 如果 options 为 null，使用默认值\n-  options = options ?? DEFAULT_OPTIONS;\n-\n+  const options = normalizeOptions(rawOptions);\n   const cachedTypeListeners = listenerMap.get(type) || [];\n-  // listener和capture/useCapture都相同，认为是同一个监听\n-  // https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener\n-  const findIndex = cachedTypeListeners.findIndex(\n-    (item) => item.rawListener === rawListener && item.options.capture == options.capture,\n-  );\n+\n+  const findIndex = findListenerIndex(cachedTypeListeners, rawListener, options);\n   if (findIndex > -1) {\n-    const cacheListener = cachedTypeListeners[findIndex];\n-    cachedTypeListeners.splice(findIndex, 1);\n-    return cacheListener;\n+    return cachedTypeListeners.splice(findIndex, 1)[0];\n   }\n \n-  // 返回原始listener和options\n   return { listener: rawListener, rawListener, options };\n };\n \n-// 添加监听构造一个cacheListener对象，考虑到多次添加同一个监听和once的情况\n const addCacheListener = (\n   listenerMap: Map<string, ListenerMapObject[]>,\n   type: string,\n   rawListener: EventListenerOrEventListenerObject,\n   rawOptions?: boolean | AddEventListenerOptions,\n ): ListenerMapObject | undefined => {\n-  // 处理 options，确保它是一个对象\n-  let options = typeof rawOptions === 'object' ? rawOptions : { capture: !!rawOptions };\n-  // 如果 options 为 null，使用默认值\n-  options = options ?? DEFAULT_OPTIONS;\n-\n+  const options = normalizeOptions(rawOptions);\n   const cachedTypeListeners = listenerMap.get(type) || [];\n-  // listener和capture/useCapture都相同，认为是同一个监听\n-  // https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener\n-  const findIndex = cachedTypeListeners.findIndex(\n-    (item) => item.rawListener === rawListener && item.options.capture == options.capture,\n-  );\n-  // 如果事件已经添加到了target的event listeners 列表中，直接返回不需要添加第二次\n+\n+  const findIndex = findListenerIndex(cachedTypeListeners, rawListener, options);\n+  // avoid duplicated listener in the listener list\n   if (findIndex > -1) return;\n \n   let listener: EventListenerOrEventListenerObject = rawListener;\n-  if (options.once)\n+  if (options.once) {\n     listener = (event: Event) => {\n       (rawListener as EventListener)(event);\n       removeCacheListener(listenerMap, type, rawListener, options);\n     };\n+  }\n+\n   const cacheListener = { listener, options, rawListener };\n   listenerMap.set(type, [...cachedTypeListeners, cacheListener]);\n   return cacheListener;\n@@ -86,10 +82,9 @@ export default function patch(global: WindowProxy) {\n     rawOptions?: boolean | AddEventListenerOptions,\n   ) => {\n     const addListener = addCacheListener(listenerMap, type, rawListener, rawOptions);\n-    // 如果返回空，则代表事件已经添加过了，不需要重复添加\n+\n     if (!addListener) return;\n-    const { listener, options } = addListener;\n-    return rawAddEventListener.call(window, type, listener, options);\n+    return rawAddEventListener.call(global, type, addListener.listener, addListener.options);\n   };\n \n   global.removeEventListener = (\n@@ -98,18 +93,18 @@ export default function patch(global: WindowProxy) {\n     rawOptions?: boolean | AddEventListenerOptions,\n   ) => {\n     const { listener, options } = removeCacheListener(listenerMap, type, rawListener, rawOptions);\n-    return rawRemoveEventListener.call(window, type, listener, options);\n+    return rawRemoveEventListener.call(global, type, listener, options);\n   };\n \n   return function free() {\n-    listenerMap.forEach((listeners, type) =>\n-      [...listeners].forEach(({ rawListener, options }) => global.removeEventListener(type, rawListener, options)),\n-    );\n-    // 清空listenerMap，避免listenerMap中还存有listener导致内存泄漏\n+    listenerMap.forEach((listeners, type) => {\n+      listeners.forEach(({ rawListener, options }) => {\n+        global.removeEventListener(type, rawListener, options);\n+      });\n+    });\n     listenerMap.clear();\n     global.addEventListener = rawAddEventListener;\n     global.removeEventListener = rawRemoveEventListener;\n-\n     return noop;\n   };\n }"
+    }
+  ],
+  "issues": [
+    {
+      "id": "umijs/qiankun#2951",
+      "repository": "umijs/qiankun",
+      "number": 2951,
+      "url": "https://github.com/umijs/qiankun/issues/2951",
+      "title": "3.0 的 demo 切换应用（react16）报错 Illegal invocation",
+      "state": "closed",
+      "stateReason": "completed",
+      "labels": [
+        {
+          "name": "bug",
+          "color": "d73a4a",
+          "description": "Something isn't working"
+        }
+      ],
+      "createdAt": "2024-04-26T03:45:40Z",
+      "updatedAt": "2025-06-23T13:37:01Z",
+      "closedAt": "2025-06-23T13:37:01Z",
+      "body": "## What happens?\r\n\r\n运行 3.0 的 next 分支上的 example 切换 react16 提示 Illegal invocation\r\n\r\n![image](https://github.com/umijs/qiankun/assets/23078182/1b91c07a-31f0-48ce-8423-c0fef843010f)\r\n\r\n## 最小可复现仓库\r\n\r\nnext 分支上的 example\r\n\r\n<!-- 你的仓库链接 -->\r\n\r\n## 复现步骤，错误日志以及相关配置\r\n\r\n1. 启动 example\r\n2. 点击 React16\r\n\r\n## 相关环境信息\r\n\r\n- **qiankun 版本**: 3.0.0-rc.19\r\n- **浏览器版本**：chrome 124.0.6367.62\r\n- **操作系统**：mac m1\r\n",
+      "reportedCommentCount": 2,
+      "fetchedAt": "2026-09-08T06:12:04Z",
+      "labelEvidence": {
+        "method": "github_fetch_issue",
+        "exactLabel": "bug",
+        "present": true
+      },
+      "comments": [
+        {
+          "id": 2078582896,
+          "url": "https://github.com/umijs/qiankun/issues/2951#issuecomment-2078582896",
+          "author": "HighSkySky",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "next:\r\n![image](https://github.com/umijs/qiankun/assets/23078182/bb87af1f-646f-45fe-8616-e7ecd7f3666e)\r\n![image](https://github.com/umijs/qiankun/assets/23078182/767ee551-0b67-4843-bf35-1066c4ceb9b1)\r\n![image](https://github.com/umijs/qiankun/assets/23078182/b1dbd95c-1e36-44b1-a7d9-6bc49a1e10db)\r\nmaster 分支去除 zone.js 之后也存在报错：\r\n![image](https://github.com/umijs/qiankun/assets/23078182/ad7b2881-3cb0-4ce3-bc4b-e890fd82b483)\r\n\r\n"
+        },
+        {
+          "id": 2095158072,
+          "url": "https://github.com/umijs/qiankun/issues/2951#issuecomment-2095158072",
+          "author": "HighSkySky",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "[eeebd3f](https://github.com/umijs/qiankun/commit/eeebd3f76aa3a9d026b4f3a4e86682088e6295c1)\r\nmaster 也存在问题，这个提交引入，需要把 global 改回 window"
+        }
+      ]
+    },
+    {
+      "id": "umijs/qiankun#1990",
+      "repository": "umijs/qiankun",
+      "number": 1990,
+      "url": "https://github.com/umijs/qiankun/issues/1990",
+      "title": "网络或其他原因导致子应用加载失败，无法手动重新加载",
+      "state": "closed",
+      "stateReason": "completed",
+      "labels": [
+        {
+          "name": "bug",
+          "color": "d73a4a",
+          "description": "Something isn't working"
+        }
+      ],
+      "createdAt": "2022-03-03T16:15:55Z",
+      "updatedAt": "2024-03-06T03:46:13Z",
+      "closedAt": "2024-03-06T03:46:13Z",
+      "body": "## What happens?\r\n使用loadMicroApp加载子应用，无法手动重新加载\r\n------------------------------------------------------------------\r\nFailed to load the subapplication using loadMicroApp and cannot be manually reloaded\r\n\r\n## 复现步骤，错误日志以及相关配置\r\n1. 关闭网络\r\n2. 调用loadMicroApp加载子应用\r\n3 加载失败后，没有可供重试的API\r\n4. 此时卸载掉旧的实例再重新调用loadMicroApp， 并不会真的发出请求，而是把刚才加载的错误重新抛出了\r\n------------------------------------------------------------------\r\n1. Shut down the network\r\n2. Call loadMicroApp to load subapplications\r\n3 No API is available for retry after the loading fails\r\n4. Uninstalling the old instance and calling loadMicroApp again does not actually issue the request. Instead, it rethrows the error that was just loaded\r\n\r\n## 相关环境信息\r\n\r\n- **qiankun 版本** 2.6.3\r\n- **浏览器版本**： 98.0.4758.109\r\n- **操作系统**：mac 12.1\r\n",
+      "reportedCommentCount": 4,
+      "fetchedAt": "2026-09-08T06:12:04Z",
+      "labelEvidence": {
+        "method": "github_fetch_issue",
+        "exactLabel": "bug",
+        "present": true
+      },
+      "comments": [
+        {
+          "id": 1211623593,
+          "url": "https://github.com/umijs/qiankun/issues/1990#issuecomment-1211623593",
+          "author": "w578202450",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "我也遇到了这个问题，大佬们能不能给个方案"
+        },
+        {
+          "id": 1211629554,
+          "url": "https://github.com/umijs/qiankun/issues/1990#issuecomment-1211629554",
+          "author": "xioozq",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "> 我也遇到了这个问题，大佬们能不能给个方案\r\n\r\n修改源码， 跳过缓存  @w578202450 "
+        },
+        {
+          "id": 1505140333,
+          "url": "https://github.com/umijs/qiankun/issues/1990#issuecomment-1505140333",
+          "author": "yinran100",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "> > 我也遇到了这个问题，大佬们能不能给个方案\r\n> \r\n> 修改源码， 跳过缓存 @w578202450\r\n\r\n哪段源码"
+        },
+        {
+          "id": 1509636198,
+          "url": "https://github.com/umijs/qiankun/issues/1990#issuecomment-1509636198",
+          "author": "xioozq",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "> > > 我也遇到了这个问题，大佬们能不能给个方案\r\n> > \r\n> > \r\n> > 修改源码， 跳过缓存 @w578202450\r\n> \r\n> 哪段源码\r\n\r\nsrc/api.ts > memorizedLoadingFn"
+        }
+      ]
+    },
+    {
+      "id": "umijs/qiankun#2166",
+      "repository": "umijs/qiankun",
+      "number": 2166,
+      "url": "https://github.com/umijs/qiankun/issues/2166",
+      "title": "[Feature Request] 能否提供彻底卸载loadMicroApp加载的子应用，下次进入能重新走首次流程",
+      "state": "closed",
+      "stateReason": "completed",
+      "labels": [
+        {
+          "name": "bug",
+          "color": "d73a4a",
+          "description": "Something isn't working"
+        }
+      ],
+      "createdAt": "2022-06-29T07:06:14Z",
+      "updatedAt": "2024-03-06T03:46:01Z",
+      "closedAt": "2024-03-06T03:46:01Z",
+      "body": "## Background\r\n\r\n生产可能已经发布了新的子应用，但是用户由于已加载过子应用，导致无法获取到更新后的子应用\r\n且子应用在部分js应网络问题加载失败后，无法通过再次加载子应用来提供访问重试的方案\r\n## Proposal\r\n\r\n建议提供彻底卸载方法来移除已加载过的子应用，能让子应用像首次加载子应用一样的流程",
+      "reportedCommentCount": 3,
+      "fetchedAt": "2026-09-08T06:12:04Z",
+      "labelEvidence": {
+        "method": "github_fetch_issue",
+        "exactLabel": "bug",
+        "present": true
+      },
+      "comments": [
+        {
+          "id": 1174871085,
+          "url": "https://github.com/umijs/qiankun/issues/2166#issuecomment-1174871085",
+          "author": "kuaifengle",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "每个加载完毕的微应用 都有生命周期函数可以执行\r\n\r\n![image](https://user-images.githubusercontent.com/24524172/177303161-5a53ddd8-0928-4770-a0dc-b3cc1e1f3712.png)\r\n\r\n销毁的函数:  unmount()\r\n\r\n```\r\n// 加载微应用\r\n let microApp = loadMicroApp({})\r\n\r\n// 销毁微应用\r\nmicroApp.unmount()\r\n\r\n```\r\n"
+        },
+        {
+          "id": 1188888301,
+          "url": "https://github.com/umijs/qiankun/issues/2166#issuecomment-1188888301",
+          "author": "XSnowHoly",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "> 每个加载完毕的微应用 都有生命周期函数可以执行\r\n> \r\n> ![image](https://user-images.githubusercontent.com/24524172/177303161-5a53ddd8-0928-4770-a0dc-b3cc1e1f3712.png)\r\n> \r\n> 销毁的函数: unmount()\r\n> \r\n> ```\r\n> // 加载微应用\r\n>  let microApp = loadMicroApp({})\r\n> \r\n> // 销毁微应用\r\n> microApp.unmount()\r\n> ```\r\n\r\n如果因为网络问题没有加载成功微应用如何重试？"
+        },
+        {
+          "id": 1191072740,
+          "url": "https://github.com/umijs/qiankun/issues/2166#issuecomment-1191072740",
+          "author": "kuaifengle",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "可以先查询微应用是否加载成功 再确定是否需要卸载\r\n```      \r\n     if (microApp.getStatus() == 'MOUNTED') {\r\n                   microApp.unmount()\r\n             }\r\n```"
+        }
+      ]
+    },
+    {
+      "id": "umijs/qiankun#1885",
+      "repository": "umijs/qiankun",
+      "number": 1885,
+      "url": "https://github.com/umijs/qiankun/issues/1885",
+      "title": "loadMicroApp 加载失败后，再一次执行，并不会重新发起http请求，而是直接报错",
+      "state": "closed",
+      "stateReason": "completed",
+      "labels": [
+        {
+          "name": "bug",
+          "color": "d73a4a",
+          "description": "Something isn't working"
+        }
+      ],
+      "createdAt": "2021-12-22T13:05:27Z",
+      "updatedAt": "2024-03-06T03:45:52Z",
+      "closedAt": "2024-03-06T03:45:52Z",
+      "body": "## What happens?\r\n\r\nloadMicroApp 加载失败后，再一次执行，并不会重新发起http请求，而是直接报错\r\n\r\n## Mini Showcase Repository(REQUIRED)\r\n暂无\r\n\r\n## How To Reproduce\r\n\r\n将微应用服务停止 ，使用loadMicroApp 加载微应用，可以得到失败，然后将微应用重启，再次使用loadMicroApp 加载，此时不会发起新的请求，而是报错\r\n\r\n## Context\r\n\r\n- **qiankun Version**: 2.6.3\r\n- **Platform Version**:window10\r\n- **Browser Version**:Google Chrome 版本 96.0.4664.110（正式版本） (x86_64)\r\n",
+      "reportedCommentCount": 5,
+      "fetchedAt": "2026-09-08T06:12:04Z",
+      "labelEvidence": {
+        "method": "github_fetch_issue",
+        "exactLabel": "bug",
+        "present": true
+      },
+      "comments": [
+        {
+          "id": 1000139401,
+          "url": "https://github.com/umijs/qiankun/issues/1885#issuecomment-1000139401",
+          "author": "ViavaCos",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "所以，报错是什么，不能再次加载还是加载不到资源？感觉提供个报错信息可能更有利于解决问题。"
+        },
+        {
+          "id": 1002371874,
+          "url": "https://github.com/umijs/qiankun/issues/1885#issuecomment-1002371874",
+          "author": "falseLuffy",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "> 所以，报错是什么，不能再次加载还是加载不到资源？感觉提供个报错信息可能更有利于解决问题。\r\n\r\n不能再次发起请求。"
+        },
+        {
+          "id": 1081486063,
+          "url": "https://github.com/umijs/qiankun/issues/1885#issuecomment-1081486063",
+          "author": "XSnowHoly",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "我也碰到这个问题，qiankun 官方是否可以考虑优化一下手动加载失败后的重试机制？"
+        },
+        {
+          "id": 1124571777,
+          "url": "https://github.com/umijs/qiankun/issues/1885#issuecomment-1124571777",
+          "author": "dangc9",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "你可以配置一个动态entry地址，比如  entry:  ``http://localhost:8080/?timestamp=${new Date().getTime()}``"
+        },
+        {
+          "id": 1124622337,
+          "url": "https://github.com/umijs/qiankun/issues/1885#issuecomment-1124622337",
+          "author": "falseLuffy",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "> 你可以配置一个动态entry地址，比如 entry: `http://localhost:8080/?timestamp=${new Date().getTime()}`\r\n\r\n\r\n这样每次执行loadMicroApp都会重新请求资源，效率将会大大降低\r\n"
+        }
+      ]
+    },
+    {
+      "id": "umijs/qiankun#2795",
+      "repository": "umijs/qiankun",
+      "number": 2795,
+      "url": "https://github.com/umijs/qiankun/issues/2795",
+      "title": "[Bug] webpack-plugin 单测 ci 上无法运行",
+      "state": "closed",
+      "stateReason": "completed",
+      "labels": [
+        {
+          "name": "bug",
+          "color": "d73a4a",
+          "description": "Something isn't working"
+        }
+      ],
+      "createdAt": "2023-11-07T10:23:09Z",
+      "updatedAt": "2024-02-26T07:20:52Z",
+      "closedAt": "2024-02-26T07:20:52Z",
+      "body": "ref https://github.com/umijs/qiankun/pull/2794#discussion_r1384679545\r\n\r\n复现步骤：\r\n1. 这里 script 改为 test https://github.com/umijs/qiankun/blob/next/packages/webpack-plugin/package.json#L11\r\n2. 项目根目录执行 npm test\r\n\r\n会发现卡在了 webpack build 环节",
+      "reportedCommentCount": 2,
+      "fetchedAt": "2026-09-08T06:12:04Z",
+      "labelEvidence": {
+        "method": "github_fetch_issue",
+        "exactLabel": "bug",
+        "present": true
+      },
+      "comments": [
+        {
+          "id": 1798222179,
+          "url": "https://github.com/umijs/qiankun/issues/2795#issuecomment-1798222179",
+          "author": "kuitos",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "@nayonglin cc"
+        },
+        {
+          "id": 1802143408,
+          "url": "https://github.com/umijs/qiankun/issues/2795#issuecomment-1802143408",
+          "author": "nayonglin",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "> @nayonglin cc\r\n\r\n#2800 "
+        }
+      ]
+    },
+    {
+      "id": "umijs/qiankun#2694",
+      "repository": "umijs/qiankun",
+      "number": 2694,
+      "url": "https://github.com/umijs/qiankun/issues/2694",
+      "title": "inline script should not add sourceURL",
+      "state": "closed",
+      "stateReason": "completed",
+      "labels": [
+        {
+          "name": "bug",
+          "color": "d73a4a",
+          "description": "Something isn't working"
+        }
+      ],
+      "createdAt": "2023-09-20T07:40:31Z",
+      "updatedAt": "2024-01-03T13:32:15Z",
+      "closedAt": "2024-01-03T13:32:15Z",
+      "body": "![image](https://github.com/umijs/qiankun/assets/5206843/7ed3b1ac-fe8a-4434-80fc-cffc972159f7)",
+      "reportedCommentCount": 3,
+      "fetchedAt": "2026-09-08T06:12:04Z",
+      "labelEvidence": {
+        "method": "github_fetch_issue",
+        "exactLabel": "bug",
+        "present": true
+      },
+      "comments": [
+        {
+          "id": 1862285840,
+          "url": "https://github.com/umijs/qiankun/issues/2694#issuecomment-1862285840",
+          "author": "wanghangit",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "这里我有一个疑问，sourceMap应该加载的是map.js文件，而这里的实现逻辑拼接的是src或者baseURL，好像不能起到调试的作用。\r\n这里的本意是想在with语句执行报错可以映射到加载的原文件中吗，如果是这样的话baseUrl换成entry是不是更合理些，而不是删掉"
+        },
+        {
+          "id": 1862357508,
+          "url": "https://github.com/umijs/qiankun/issues/2694#issuecomment-1862357508",
+          "author": "kuitos",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "sourceURL 是为了报错时 Chrome source 能跳到正确的外链 js，不是用来做 sourcemap 的，内联的 script 则没有这个问题"
+        },
+        {
+          "id": 1862413281,
+          "url": "https://github.com/umijs/qiankun/issues/2694#issuecomment-1862413281",
+          "author": "wanghangit",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "> sourceURL 是为了报错时 Chrome source 能跳到正确的外链 js，不是用来做 sourcemap 的，内联的 script 则没有这个问题\r\n\r\n这里有一个疑问，添加sourceURL的动机是沙箱内执行用的createObjectURL是一个临时的地址。所有只有这个场景需要？\r\n\r\n还有我看目前下测试用例比较少，我是在这个pr中增加上下游的测试用例，还是只测我这一个方法就好了\r\n已提pr https://github.com/umijs/qiankun/pull/2850"
+        }
+      ]
+    },
+    {
+      "id": "umijs/qiankun#2701",
+      "repository": "umijs/qiankun",
+      "number": 2701,
+      "url": "https://github.com/umijs/qiankun/issues/2701",
+      "title": "@qiankunjs/shared 和 @qiankunjs/sandbox 相互依赖",
+      "state": "closed",
+      "stateReason": "completed",
+      "labels": [
+        {
+          "name": "bug",
+          "color": "d73a4a",
+          "description": "Something isn't working"
+        }
+      ],
+      "createdAt": "2023-09-26T03:11:13Z",
+      "updatedAt": "2023-10-24T11:54:43Z",
+      "closedAt": "2023-10-24T11:54:42Z",
+      "body": "## 问题描述\r\n@qiankunjs/shared 和 @qiankunjs/sandbox 之间有个相互依赖，导致子包拓扑关系没有正确识别，所以在 build 的时候没有办法按照依赖顺序正确构建\r\n\r\n## 代码\r\n\r\n![image](https://github.com/umijs/qiankun/assets/22069371/2c6d91b6-cd2f-477d-b76e-7d6292c7b627)\r\n",
+      "reportedCommentCount": 1,
+      "fetchedAt": "2026-09-08T06:12:04Z",
+      "labelEvidence": {
+        "method": "github_fetch_issue",
+        "exactLabel": "bug",
+        "present": true
+      },
+      "comments": [
+        {
+          "id": 1777062188,
+          "url": "https://github.com/umijs/qiankun/issues/2701#issuecomment-1777062188",
+          "author": "kuitos",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "resolved"
+        }
+      ]
+    },
+    {
+      "id": "umijs/qiankun#2727",
+      "repository": "umijs/qiankun",
+      "number": 2727,
+      "url": "https://github.com/umijs/qiankun/issues/2727",
+      "title": "[Bug] 3.0 loader bug",
+      "state": "closed",
+      "stateReason": "completed",
+      "labels": [
+        {
+          "name": "bug",
+          "color": "d73a4a",
+          "description": "Something isn't working"
+        }
+      ],
+      "createdAt": "2023-10-11T11:24:14Z",
+      "updatedAt": "2023-10-23T08:56:18Z",
+      "closedAt": "2023-10-23T08:56:18Z",
+      "body": "3.0 目前测试下来的关于加载的 bug：\r\n- [x] 同一个微应用多次加载时，由于 webpack 的「缓存」特性 https://github.com/webpack/webpack/blob/1f13ff9fe587e094df59d660b4611b1bd19aed4c/lib/runtime/LoadScriptRuntimeModule.js#L131-L136 ，从而导致此前已经插入过的同一个 script 不会再重复插入 & 执行，从而导致子应用执行异常。（比如同时加载一个子应用两次，那么第二次子应用的 js 不会再重复执行，从而导致第二次加载沙箱内信息缺失）fixed by https://github.com/umijs/qiankun/pull/2730\r\n- [x] 3.0 无法跟 2.0 运行时共存，因为都修改了 HTMLHeadElement.prototype.appendChild，考虑 3.0 里直接在沙箱的 document head 上改写 appendChild 而不是全局原型链上 fixed by #2736 \r\n- [x] 3.0 采用了流式加载，导致没办法在子应用 js 执行前，HTML DOM 加载完毕后执行 beforeLoad 钩子，比如燕鸥场景在 beforeLoad 里获取子应用 HTML 里的 appConfig ref #2749",
+      "reportedCommentCount": 0,
+      "fetchedAt": "2026-09-08T06:12:04Z",
+      "labelEvidence": {
+        "method": "github_fetch_issue",
+        "exactLabel": "bug",
+        "present": true
+      },
+      "comments": []
+    },
+    {
+      "id": "umijs/qiankun#1116",
+      "repository": "umijs/qiankun",
+      "number": 1116,
+      "url": "https://github.com/umijs/qiankun/issues/1116",
+      "title": "子应用使用react-monaco-editor编辑器 ，双滚动条的情况下父层级滚动条有滚动，编辑器无法光标定位",
+      "state": "closed",
+      "stateReason": "completed",
+      "labels": [
+        {
+          "name": "bug",
+          "color": "d73a4a",
+          "description": "Something isn't working"
+        }
+      ],
+      "createdAt": "2020-12-03T01:44:10Z",
+      "updatedAt": "2023-08-02T09:09:08Z",
+      "closedAt": "2023-07-31T13:30:27Z",
+      "body": "#项目是有umi-qiankun\r\n用了qiankun的嵌套子应用方式\r\n\r\n\r\n## 最小可复现仓库\r\nhttps://github.com/xiaoxiao992/qiankun\r\n\r\n## 复现步骤，错误日志以及相关配置\r\n###子子应用使用了react-monaco-editor编辑器，页面存在双滚动条的情况下，\r\n1、滚动外层滚动条\r\n2、点击react-monaco-editor编辑器位置，无法光标定位\r\n3、无错误日志\r\n###\r\n但是单独起子子应用，不存在这个问题\r\n1、滚动外层滚动条\r\n2、点击react-monaco-editor编辑器位置，光标可以定位\r\n\r\n\r\n\r\n",
+      "reportedCommentCount": 6,
+      "fetchedAt": "2026-09-08T06:12:04Z",
+      "labelEvidence": {
+        "method": "github_fetch_issue",
+        "exactLabel": "bug",
+        "present": true
+      },
+      "comments": [
+        {
+          "id": 765238627,
+          "url": "https://github.com/umijs/qiankun/issues/1116#issuecomment-765238627",
+          "author": "topwood",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "+1，希望能给一个方案"
+        },
+        {
+          "id": 768940123,
+          "url": "https://github.com/umijs/qiankun/issues/1116#issuecomment-768940123",
+          "author": "topwood",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "关闭沙箱可以解，但是可能会引入其他问题"
+        },
+        {
+          "id": 896556495,
+          "url": "https://github.com/umijs/qiankun/issues/1116#issuecomment-896556495",
+          "author": "gongshun",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "类似问题 https://github.com/umijs/qiankun/issues/1586"
+        },
+        {
+          "id": 1021973733,
+          "url": "https://github.com/umijs/qiankun/issues/1116#issuecomment-1021973733",
+          "author": "Alibor",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": " 解决了部分问题，但是光标还是没有出来，看原因是js中动态插入的css有问题。\r\nstart({ \r\n        excludeAssetFilter: (assetUrl) => {\r\n          return assetUrl.includes('monaco-editor');\r\n        },\r\n  })\r\n"
+        },
+        {
+          "id": 1658354924,
+          "url": "https://github.com/umijs/qiankun/issues/1116#issuecomment-1658354924",
+          "author": "kuitos",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "问题产生原因：\r\n1. 在 monaco 下编辑器内会计算坐标 https://github.com/microsoft/vscode/blob/c2276264b06d9e0d42baf13e35b76395e14e12e2/src/vs/base/browser/iframe.ts#L91\r\n2. 坐标计算发生在mouseEvent 触发时，通过 event.view 来跟当前 window 对象对比，判断是否是 iframe https://github.com/microsoft/vscode/blob/c2276264b06d9e0d42baf13e35b76395e14e12e2/src/vs/base/browser/mouseEvent.ts#L77\r\n3. 在 qiankun 沙箱下，`window === e.view`永远返回 false，被误认为是 iframe 嵌套，最终导致计算错误"
+        },
+        {
+          "id": 1658377349,
+          "url": "https://github.com/umijs/qiankun/issues/1116#issuecomment-1658377349",
+          "author": "kuitos",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "手动修复方案，在加载 monaco 之前加上：\r\n```js\r\nuseEffect(() => {\r\n  const rawDescriptor = Object.getOwnPropertyDescriptor(UIEvent.prototype, 'view');\r\n  Object.defineProperty(UIEvent.prototype, 'view', { value: window });\r\n  \r\n  return () => { \r\n    Object.defineProperty(UIEvent.prototype, 'view', rawDescriptor);  \r\n }\r\n}, []);\r\n```"
+        }
+      ]
+    },
+    {
+      "id": "umijs/qiankun#1212",
+      "repository": "umijs/qiankun",
+      "number": 1212,
+      "url": "https://github.com/umijs/qiankun/issues/1212",
+      "title": "[BUG] proxySandbox 的 setter 逻辑中缺少了rawWindow上定义了setter和getter的属性",
+      "state": "open",
+      "stateReason": null,
+      "labels": [
+        {
+          "name": "bug",
+          "color": "d73a4a",
+          "description": "Something isn't working"
+        }
+      ],
+      "createdAt": "2021-01-14T07:38:20Z",
+      "updatedAt": "2023-06-19T12:11:17Z",
+      "closedAt": null,
+      "body": "## What happens?\r\n\r\n![image](https://user-images.githubusercontent.com/8469262/104557817-d4bcab80-567c-11eb-931c-e9ff928a3752.png)\r\n![image](https://user-images.githubusercontent.com/8469262/104557878-eb630280-567c-11eb-86f0-b9eeb0b74b4f.png)\r\n图1逻辑中只对有writable的属性进行了赋值，但如图2有些原生属性是用set和get定义的，比如window.name（同时不能排除用户自己在window上用set和get定义属性）。所以当我在子应用中赋值window.name会因为这段逻辑导致赋值无效。\r\n\r\n![image](https://user-images.githubusercontent.com/8469262/104558083-35e47f00-567d-11eb-9f18-4b9240c56a9d.png)\r\n之后我尝试了用上图这段代码去复刻浏览器的行为，但是某些原生属性的set和get函数有native逻辑，必须在window对象中执行，否则会报错Illegal invocation。但是如果使用bind后的set和get函数，就会导致rawWindow上的属性也被改变（当然实际上这些属性可能就是浏览器的原生唯一属性，没法模拟），会造成一个永久性的修改。所以这段处理也不算完美。暂时只能修改到这个程度，请问你们对于这个bug的修复有什么好的想法吗？\r\n\r\n## Context\r\n\r\n- **qiankun Version**: 2.3.x\r\n- **Platform Version**:\r\n- **Browser Version**:\r\n",
+      "reportedCommentCount": 2,
+      "fetchedAt": "2026-09-08T06:12:04Z",
+      "labelEvidence": {
+        "method": "github_fetch_issue",
+        "exactLabel": "bug",
+        "present": true
+      },
+      "comments": [
+        {
+          "id": 843237190,
+          "url": "https://github.com/umijs/qiankun/issues/1212#issuecomment-843237190",
+          "author": "eightHundreds",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "\r\n![image](https://user-images.githubusercontent.com/18695431/118667127-4de42f00-b826-11eb-83c7-ec7888a6753f.png)\r\n\r\n\r\n我也遇到了Illegal invocation问题\r\n\r\nreact-dom 的development 内部,也对原生属性赋值, 在某些场景下(无法描述),去读取 fakeWindow.event时会报`Illegal invocation`错误\r\n\r\n\r\n"
+        },
+        {
+          "id": 1597074746,
+          "url": "https://github.com/umijs/qiankun/issues/1212#issuecomment-1597074746",
+          "author": "eightHundreds",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "> ![image](https://user-images.githubusercontent.com/18695431/118667127-4de42f00-b826-11eb-83c7-ec7888a6753f.png)\r\n> \r\n> 我也遇到了Illegal invocation问题\r\n> \r\n> react-dom 的development 内部,也对原生属性赋值, 在某些场景下(无法描述),去读取 fakeWindow.event时会报`Illegal invocation`错误\r\n\r\n一种解决思路是, 主应用与子应用用umd react"
+        }
+      ]
+    },
+    {
+      "id": "umijs/qiankun#2408",
+      "repository": "umijs/qiankun",
+      "number": 2408,
+      "url": "https://github.com/umijs/qiankun/issues/2408",
+      "title": "[Bug]2.10.1版本 子应用是elementui时el-select控件弹出位置错误即使设置了 el-select 属性 popper-append-to-body=false 还是不能解决 2.9.3版本没有该问题",
+      "state": "closed",
+      "stateReason": "completed",
+      "labels": [
+        {
+          "name": "bug",
+          "color": "d73a4a",
+          "description": "Something isn't working"
+        }
+      ],
+      "createdAt": "2023-02-23T13:39:37Z",
+      "updatedAt": "2023-05-25T08:32:43Z",
+      "closedAt": "2023-02-27T14:48:42Z",
+      "body": "2.10.1版本   \r\n子应用是elementui时el-select控件弹出位置错误即使设置了\r\nel-select  属性  popper-append-to-body=false  还是不能解决\r\n2.9.3版本没有该问题\r\n\r\n\r\n",
+      "reportedCommentCount": 6,
+      "fetchedAt": "2026-09-08T06:12:04Z",
+      "labelEvidence": {
+        "method": "github_fetch_issue",
+        "exactLabel": "bug",
+        "present": true
+      },
+      "comments": [
+        {
+          "id": 1442800500,
+          "url": "https://github.com/umijs/qiankun/issues/2408#issuecomment-1442800500",
+          "author": "liuruibin",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "我也遇到同样的问题，现在是\"qiankun\": \">2.10.1 || 2.9.3\",希望下个版本可以解决"
+        },
+        {
+          "id": 1445301586,
+          "url": "https://github.com/umijs/qiankun/issues/2408#issuecomment-1445301586",
+          "author": "github-actions[bot]",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "Hello @wushujia789. In order to facilitate location and troubleshooting, we need you to provide a realistic example. Please forking these link [codesandbox](https://codesandbox.io/) or clone [qiankun examples](https://github.com/umijs/qiankun/tree/master/examples) to your GitHub repository.\n\n你好 @wushujia789, 为了方便定位和排查问题，我们需要你提供一个重现实例，请提供一个尽可能精简的链接 [codesandbox](https://codesandbox.io/) 或直接 clone [qiankun examples](https://github.com/umijs/qiankun/tree/master/examples)，并上传到你的 GitHub 仓库。\n\n![](https://gw.alipayobjects.com/zos/antfincdn/y9kwg7DVCd/reproduce.gif)"
+        },
+        {
+          "id": 1445999651,
+          "url": "https://github.com/umijs/qiankun/issues/2408#issuecomment-1445999651",
+          "author": "gongshun",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "复现demo：https://github.com/gongshun/qiankun-vue-demo/tree/report-bug\r\n\r\n复现步骤：\r\n1. 根目录安装依赖：`npm i`\r\n2. 给主子应用安装依赖：`npm run install-all`\r\n3. 启动主子应用：`npm run start-all`\r\n4. 浏览器访问：http://localhost:8080/app-vue-history/\r\n\r\n![image](https://user-images.githubusercontent.com/29347231/221526936-44d07d7b-df18-4fa7-a9ca-02b648e54fc2.png)\r\n\r\n@kuitos "
+        },
+        {
+          "id": 1446018814,
+          "url": "https://github.com/umijs/qiankun/issues/2408#issuecomment-1446018814",
+          "author": "zeyongTsai",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "element-ui popper.js 内部有对 window.document 和 元素的 parentNode 进行对比的逻辑，在2.10.x  qiankun 实现了 document 的 proxy，导致这个判断失败，进而不能正确计算出元素的位置。"
+        },
+        {
+          "id": 1446229105,
+          "url": "https://github.com/umijs/qiankun/issues/2408#issuecomment-1446229105",
+          "author": "kuitos",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "https://github.com/ElemeFE/element/blob/f14b5ba5406b0f682499663fc5d6fb10864b3146/src/utils/popper.js#L1060\r\n这里判断始终是 false 导致 getComputedStyle 方法会走到 `getComputedStyle(document)` 导致报错\r\n![image](https://user-images.githubusercontent.com/5206843/221561787-d0e136a8-7f23-443a-a129-a7856f5107e5.png)\r\n"
+        },
+        {
+          "id": 1562503268,
+          "url": "https://github.com/umijs/qiankun/issues/2408#issuecomment-1562503268",
+          "author": "zrui1121",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "2.10.6版本，同样的问题还是存在，问题描述：\r\n1、在el-drawer里面的el-select的下拉框，会在el-select触发focus事件时候，下拉框出现在屏幕左上角\r\n2、el-drawer挂载在body上\r\n3、只在el-drawer里面的el-select触发focus事件会复现，其他情况正常"
+        }
+      ]
+    },
+    {
+      "id": "umijs/qiankun#2378",
+      "repository": "umijs/qiankun",
+      "number": 2378,
+      "url": "https://github.com/umijs/qiankun/issues/2378",
+      "title": "qiankun does not work with AdGuard",
+      "state": "closed",
+      "stateReason": "completed",
+      "labels": [
+        {
+          "name": "bug",
+          "color": "d73a4a",
+          "description": "Something isn't working"
+        }
+      ],
+      "createdAt": "2023-01-28T12:26:09Z",
+      "updatedAt": "2023-02-27T03:31:48Z",
+      "closedAt": "2023-02-27T03:31:48Z",
+      "body": "## What happens?\r\n\r\n当AdGuard开启的时候，子应用[project-key]在cdn，qiankun无法加载子应用 \r\n报错信息：\r\n`\r\napplication 'project-key' died in status LOADING_SOURCE_CODE: //local.adguard.org?ts=1673424687935&amp;type=content-script&amp;dmn=g.alicdn.com&amp;pth=%2Fweb%2Fproject-key%2F1.0.25%2Fbuild%2Findex.html&amp;app=msedge.exe&amp;css=3&amp;js=1&amp;rel=0&amp;rji=0&amp;sbe=1 load failed with status 400\r\n`\r\n\r\n## Mini Showcase Repository(REQUIRED)\r\n普通的qiankun应用，AdGuard关闭的情况下正常访问。\r\n\r\n\r\n## 复现方式：\r\n1. 安装AdGuard**软件**（不是浏览器插件）\r\n2. 浏览器安装AdGuard浏览器助手插件\r\n3. 子应用cnd链接如果是https，需要开启过滤 https\r\n\r\nAdGuard 设置生效示例：\r\n![新建项目](https://user-images.githubusercontent.com/123796160/215264971-7ecac307-6f17-4a5d-967f-788c3232bf50.jpg)\r\n\r\n## 猜测原因:\r\nAdGuard 的劫持请求存在`&amp;` 在html里访问自动转换 `&amp;`为 & 加载成功， 但是在import-html-entry 中fetch则不会自动转换\r\n`<!--  script //local.adguard.org?ts=1673837448404&amp;type=content-script&amp;dmn=... replaced by import-html-entry -->`\r\n\r\n## 单点解决方案\r\n参考官方文档，把adguard请求过滤：\r\nhttps://qiankun.umijs.org/zh/faq#%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%E7%94%B1%E4%BA%8E%E8%BF%90%E8%90%A5%E5%95%86%E5%8A%A8%E6%80%81%E6%8F%92%E5%85%A5%E7%9A%84%E8%84%9A%E6%9C%AC%E5%8A%A0%E8%BD%BD%E5%BC%82%E5%B8%B8%E5%AF%BC%E8%87%B4%E5%BE%AE%E5%BA%94%E7%94%A8%E5%8A%A0%E8%BD%BD%E5%A4%B1%E8%B4%A5%E7%9A%84%E9%97%AE%E9%A2%98\r\n\r\n    options: {\r\n      prefetch: true,\r\n      sandbox: true,\r\n      async fetch(url, ...args): Promise<any> {\r\n        // 子应用中如果被adgurad劫持\r\n        if (typeof url === 'string' && url.indexOf('adguard') > -1) {\r\n          return {\r\n            async text() {\r\n              return '';\r\n            },\r\n          };\r\n        }\r\n        return window.fetch(url, ...args);\r\n      },\r\n    }\r\n\r\n\r\n## 问题\r\nAdGuard用户比较多，目前每天有1-2个用户会出现这个问题，无法访问。或者还有其他的情况导致url存在 `&amp;`\r\n\r\n是否可以在 import-html-entry fetch子应用的时候就可以转换一下url？\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+      "reportedCommentCount": 3,
+      "fetchedAt": "2026-09-08T06:12:04Z",
+      "labelEvidence": {
+        "method": "github_fetch_issue",
+        "exactLabel": "bug",
+        "present": true
+      },
+      "comments": [
+        {
+          "id": 1435919025,
+          "url": "https://github.com/umijs/qiankun/issues/2378#issuecomment-1435919025",
+          "author": "gongshun",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "### 问题分析\r\n\r\n的确是这个原因，不过`&amp;` 转义为`&`是浏览器解析 html 时自动做的，url 的几个解码函数并不能实现（unescape、decodeURI、decodeURIComponent）\r\n\r\n[常见的几个转义符号](https://developer.mozilla.org/zh-CN/docs/Glossary/Entity)如下，[完整的符号转换](https://html.spec.whatwg.org/multipage/named-characters.html#named-character-references)就比较多了\r\n\r\n![image](https://user-images.githubusercontent.com/29347231/219935332-5f1979d0-fcc0-4234-8bfc-6f8fadef1571.png)\r\n\r\n### 解决方案\r\n\r\n修改 import-html-entry，在 js/css 文件的请求之前，对 url 进行一下解码，具体做法有以下两个：\r\n\r\n1. 直接用字符串替换\r\n\r\n先定义好替换规则，然后直接字符串替换，缺点是无法枚举所有的字符\r\n\r\n```js\r\nurl = url.replace('&amp;','&')\r\n```\r\n\r\n2. 借助 DOM 解析\r\n\r\n![image](https://user-images.githubusercontent.com/29347231/219936026-1ac89a08-d4a2-4606-9adf-6a7ecba3f971.png)\r\n\r\n如果是这样做的话，可以直接解析子应用的整个 html ，然后直接获取里面的 script、link 和 style 等标签，也不用正则匹配了，不过改动较大  @kuitos \r\n\r\n### 临时解决方案\r\n\r\n使用自定义的 getTemplate  ，手动转换 html 中的转义字符串\r\n\r\n```\r\nstart({\r\n  getTemplate(tpl) {\r\n    return tpl.replace('&amp;','&')\r\n  },\r\n});\r\n```"
+        },
+        {
+          "id": 1437790843,
+          "url": "https://github.com/umijs/qiankun/issues/2378#issuecomment-1437790843",
+          "author": "kuitos",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "第二个方案不用全部改吧？匹配出 srcript url 之后，在 push 到数组之前，用 DOMParser 处理一下是不是就行"
+        },
+        {
+          "id": 1438202476,
+          "url": "https://github.com/umijs/qiankun/issues/2378#issuecomment-1438202476",
+          "author": "gongshun",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "> 第二个方案不用全部改吧？匹配出 srcript url 之后，在 push 到数组之前，用 DOMParser 处理一下是不是就行\r\n\r\n可以的，只修改这部分代码就行，晚点我改一下"
+        }
+      ]
+    },
+    {
+      "id": "umijs/qiankun#2346",
+      "repository": "umijs/qiankun",
+      "number": 2346,
+      "url": "https://github.com/umijs/qiankun/issues/2346",
+      "title": "examples启动后，快速点击切换tab，会导致出现一个iframe浮层，所有点击操作无法触发",
+      "state": "open",
+      "stateReason": null,
+      "labels": [
+        {
+          "name": "bug",
+          "color": "d73a4a",
+          "description": "Something isn't working"
+        }
+      ],
+      "createdAt": "2022-11-25T01:23:42Z",
+      "updatedAt": "2023-02-15T10:32:30Z",
+      "closedAt": null,
+      "body": "## What happens?\r\n快速点击Tab导致出现一个Iframe浮层，整个body都被盖住，无法触发任何操作。\r\n\r\n## Mini Showcase Repository(REQUIRED)\r\n原仓库-master分支\r\n\r\n## How To Reproduce\r\nmaster分支直接运行\r\n- npm run examples:install\r\n- npm run examples:start\r\n- 打开主应用，快速点击/切换左侧tab\r\n- 复现该BUG，出现iframe浮层，所有点击无法触发\r\n\r\n![image](https://user-images.githubusercontent.com/15866249/203882010-9c600d30-080d-4d43-a8ae-15b88c8287c8.png)\r\n![image](https://user-images.githubusercontent.com/15866249/203882036-901b2c1b-1f03-40e2-83aa-b0ab51ac1911.png)\r\n\r\n\r\n## Context\r\n\r\n- **qiankun Version**: 2.8.4\r\n- **Platform Version**: Windows11'64bit\r\n- **Browser Version**: Chrome 107.0.5304.108\r\n",
+      "reportedCommentCount": 0,
+      "fetchedAt": "2026-09-08T06:12:04Z",
+      "labelEvidence": {
+        "method": "github_fetch_issue",
+        "exactLabel": "bug",
+        "present": true
+      },
+      "comments": []
+    },
+    {
+      "id": "umijs/qiankun#2298",
+      "repository": "umijs/qiankun",
+      "number": 2298,
+      "url": "https://github.com/umijs/qiankun/issues/2298",
+      "title": "yarn examples:start-multiple启动项目，在页面点击 mount 按钮报错",
+      "state": "closed",
+      "stateReason": "completed",
+      "labels": [
+        {
+          "name": "bug",
+          "color": "d73a4a",
+          "description": "Something isn't working"
+        }
+      ],
+      "createdAt": "2022-10-12T10:24:47Z",
+      "updatedAt": "2022-10-14T01:48:20Z",
+      "closedAt": "2022-10-14T01:48:20Z",
+      "body": "## What happens?\r\n\r\nyarn examples:start-multiple启动项目，在页面点击 mount 按钮报错\r\n\r\n## Mini Showcase Repository(REQUIRED)\r\n\r\n示例代码仓库\r\n\r\n## How To Reproduce\r\nstep1:\r\nyarn examples:start-multiple\r\nstep2:\r\n点击 mount 按钮\r\n\r\n**\r\n![image](https://user-images.githubusercontent.com/44920775/195319052-ecf56e20-a781-40cd-9b9e-7f209b207939.png)\r\n**\r\n\r\n## Context\r\n\r\n- **qiankun Version**: 2.8.1\r\n- **Platform Version**:\r\n- **Browser Version**: chrome 105.0.5195.125\r\n",
+      "reportedCommentCount": 1,
+      "fetchedAt": "2026-09-08T06:12:04Z",
+      "labelEvidence": {
+        "method": "github_fetch_issue",
+        "exactLabel": "bug",
+        "present": true
+      },
+      "comments": [
+        {
+          "id": 1278366889,
+          "url": "https://github.com/umijs/qiankun/issues/2298#issuecomment-1278366889",
+          "author": "gongshun",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "与 https://github.com/umijs/qiankun/issues/2300 相同，已发布2.8.3"
+        }
+      ]
+    },
+    {
+      "id": "umijs/qiankun#2137",
+      "repository": "umijs/qiankun",
+      "number": 2137,
+      "url": "https://github.com/umijs/qiankun/issues/2137",
+      "title": "主应用qiankun@2.7.2， 子应用qiankun@2.6.3，子应用存在动态加载的STYLE_TAG_NAME时，shadow dom隔离下，不能直接获取到元素报错",
+      "state": "closed",
+      "stateReason": "completed",
+      "labels": [
+        {
+          "name": "bug",
+          "color": "d73a4a",
+          "description": "Something isn't working"
+        }
+      ],
+      "createdAt": "2022-06-07T23:32:51Z",
+      "updatedAt": "2022-06-15T16:16:15Z",
+      "closedAt": "2022-06-15T16:16:15Z",
+      "body": "# 提问之前强烈建立您能先阅读一下[《如何正确的提出一个 Issue》](https://github.com/umijs/qiankun/issues/1115)\r\n\r\n<!--\r\n感谢您向我们反馈问题，为了高效的解决问题，我们期望你能提供以下信息：\r\n-->\r\n\r\n## What happens?\r\n\r\n<!-- 清晰的描述下遇到的问题。-->\r\n\r\n## 最小可复现仓库\r\n\r\n为节约大家的时间，无复现步骤的 ISSUE 会被关闭，提供之后再 REOPEN\r\n<!-- https://github.com/YOUR_REPOSITORY_URL -->\r\n\r\n## 复现步骤，错误日志以及相关配置\r\n主应用qiankun@2.7.2， 子应用qiankun@2.6.3，\r\n使用strictStyleIsolation隔离，主应用加载子应用报错\r\n主应用qiankun@2.7.2， 子应用qiankun@2.6.3，子应用存在动态加载的STYLE_TAG_NAME时，shadow dom隔离下，不能直接获取到元素报错\r\n```\r\n[import-html-entry]: error occurs while executing normal script //cdn.bootcdn.net/ajax/libs/eruda/2.4.1/eruda.min.js\r\nconsole.<computed> @ mf-dep____vendor.925ff15d.js:113872\r\nconsole.<computed> @ devScripts.js:6523\r\n（匿名） @ mf-dep____vendor.925ff15d.js:67281\r\nsetTimeout（异步）\r\nthrowNonBlockingError @ mf-dep____vendor.925ff15d.js:67280\r\nexec @ mf-dep____vendor.925ff15d.js:67346\r\nschedule @ mf-dep____vendor.925ff15d.js:67369\r\nschedule @ mf-dep____vendor.925ff15d.js:67374\r\nschedule @ mf-dep____vendor.925ff15d.js:67374\r\nschedule @ mf-dep____vendor.925ff15d.js:67374\r\n（匿名） @ mf-dep____vendor.925ff15d.js:67380\r\n（匿名） @ mf-dep____vendor.925ff15d.js:67379\r\nPromise.then（异步）\r\n_execScripts @ mf-dep____vendor.925ff15d.js:67310\r\nexecScripts @ mf-dep____vendor.925ff15d.js:67443\r\n_callee17$ @ mf-dep____vendor.925ff15d.js:77644\r\ntryCatch @ mf-dep____vendor.925ff15d.js:77328\r\n（匿名） @ mf-dep____vendor.925ff15d.js:77328\r\n（匿名） @ mf-dep____vendor.925ff15d.js:77328\r\nfulfilled @ mf-dep____vendor.925ff15d.js:15218\r\nPromise.then（异步）\r\nstep @ mf-dep____vendor.925ff15d.js:15233\r\nfulfilled @ mf-dep____vendor.925ff15d.js:15218\r\nPromise.then（异步）\r\nstep @ mf-dep____vendor.925ff15d.js:15233\r\nfulfilled @ mf-dep____vendor.925ff15d.js:15218\r\nPromise.then（异步）\r\nstep @ mf-dep____vendor.925ff15d.js:15233\r\n（匿名） @ mf-dep____vendor.925ff15d.js:15236\r\n__awaiter @ mf-dep____vendor.925ff15d.js:15215\r\nloadApp @ mf-dep____vendor.925ff15d.js:77553\r\n_callee5$ @ mf-dep____vendor.925ff15d.js:76885\r\ntryCatch @ mf-dep____vendor.925ff15d.js:76621\r\n（匿名） @ mf-dep____vendor.925ff15d.js:76621\r\n（匿名） @ mf-dep____vendor.925ff15d.js:76621\r\n（匿名） @ mf-dep____vendor.925ff15d.js:15236\r\n__awaiter @ mf-dep____vendor.925ff15d.js:15215\r\nmemorizedLoadingFn @ mf-dep____vendor.925ff15d.js:76824\r\nW @ mf-dep____vendor.925ff15d.js:126043\r\nC @ mf-dep____vendor.925ff15d.js:126043\r\nloadMicroApp @ mf-dep____vendor.925ff15d.js:76919\r\n（匿名） @ MicroApp.tsx:156\r\ncommitHookEffectListMount @ mf-dep____vendor.925ff15d.js:107062\r\ncommitPassiveMountOnFiber @ mf-dep____vendor.925ff15d.js:108829\r\ncommitPassiveMountEffects_complete @ mf-dep____vendor.925ff15d.js:108794\r\ncommitPassiveMountEffects_begin @ mf-dep____vendor.925ff15d.js:108781\r\ncommitPassiveMountEffects @ mf-dep____vendor.925ff15d.js:108769\r\nflushPassiveEffectsImpl @ mf-dep____vendor.925ff15d.js:111003\r\nflushPassiveEffects @ mf-dep____vendor.925ff15d.js:110948\r\n（匿名） @ mf-dep____vendor.925ff15d.js:110738\r\nworkLoop @ mf-dep____vendor.925ff15d.js:125613\r\nflushWork @ mf-dep____vendor.925ff15d.js:125586\r\nperformWorkUntilDeadline @ mf-dep____vendor.925ff15d.js:125880\r\nqueue.<computed> @ mf-dep____vendor.925ff15d.js:48148\r\nrun @ mf-dep____vendor.925ff15d.js:48122\r\nlistener @ mf-dep____vendor.925ff15d.js:48133\r\npostMessage（异步）\r\npost @ mf-dep____vendor.925ff15d.js:48138\r\nsetImmediate @ mf-dep____vendor.925ff15d.js:48150\r\nschedulePerformWorkUntilDeadline @ mf-dep____vendor.925ff15d.js:125911\r\nperformWorkUntilDeadline @ mf-dep____vendor.925ff15d.js:125885\r\nqueue.<computed> @ mf-dep____vendor.925ff15d.js:48148\r\nrun @ mf-dep____vendor.925ff15d.js:48122\r\nlistener @ mf-dep____vendor.925ff15d.js:48133\r\npostMessage（异步）\r\npost @ mf-dep____vendor.925ff15d.js:48138\r\nsetImmediate @ mf-dep____vendor.925ff15d.js:48150\r\nschedulePerformWorkUntilDeadline @ mf-dep____vendor.925ff15d.js:125911\r\nrequestHostCallback @ mf-dep____vendor.925ff15d.js:125935\r\nunstable_scheduleCallback @ mf-dep____vendor.925ff15d.js:125788\r\nscheduleCallback$1 @ mf-dep____vendor.925ff15d.js:111504\r\nensureRootIsScheduled @ mf-dep____vendor.925ff15d.js:109652\r\nscheduleUpdateOnFiber @ mf-dep____vendor.925ff15d.js:109441\r\nupdateContainer @ mf-dep____vendor.925ff15d.js:112817\r\npush../node_modules/react-dom/cjs/react-dom.development.js.ReactDOMHydrationRoot.render.ReactDOMRoot.render @ mf-dep____vendor.925ff15d.js:113229\r\nrenderClient @ mf-dep____vendor.925ff15d.js:16691\r\ninitialValue @ umi.ts:53\r\n_callee2$ @ masterRuntimePlugin.tsx:104\r\ntryCatch @ mf-dep____vendor.925ff15d.js:124645\r\ninvoke @ mf-dep____vendor.925ff15d.js:124876\r\n（匿名） @ mf-dep____vendor.925ff15d.js:124701\r\nasyncGeneratorStep @ mf-dep____vendor.925ff15d.js:10178\r\n_next @ mf-dep____vendor.925ff15d.js:10200\r\nPromise.then（异步）\r\nasyncGeneratorStep @ mf-dep____vendor.925ff15d.js:10188\r\n_next @ mf-dep____vendor.925ff15d.js:10200\r\n（匿名） @ mf-dep____vendor.925ff15d.js:10207\r\n（匿名） @ mf-dep____vendor.925ff15d.js:10196\r\n_render @ masterRuntimePlugin.tsx:71\r\nrender @ masterRuntimePlugin.tsx:71\r\n（匿名） @ mf-dep____vendor.925ff15d.js:126323\r\n（匿名） @ mf-dep____vendor.925ff15d.js:126278\r\n_callee$ @ umi.ts:30\r\ntryCatch @ mf-dep____vendor.925ff15d.js:124645\r\ninvoke @ mf-dep____vendor.925ff15d.js:124876\r\n（匿名） @ mf-dep____vendor.925ff15d.js:124701\r\nasyncGeneratorStep @ mf-dep____vendor.925ff15d.js:10178\r\n_next @ mf-dep____vendor.925ff15d.js:10200\r\nPromise.then（异步）\r\nasyncGeneratorStep @ mf-dep____vendor.925ff15d.js:10188\r\n_next @ mf-dep____vendor.925ff15d.js:10200\r\nPromise.then（异步）\r\nasyncGeneratorStep @ mf-dep____vendor.925ff15d.js:10188\r\n_next @ mf-dep____vendor.925ff15d.js:10200\r\n（匿名） @ mf-dep____vendor.925ff15d.js:10207\r\n（匿名） @ mf-dep____vendor.925ff15d.js:10196\r\n_render @ umi.ts:16\r\nrender @ umi.ts:16\r\n./.umi/umi.ts @ umi.ts:59\r\noptions.factory @ react refresh:6\r\n__webpack_require__ @ bootstrap:24\r\nfn @ hot module replacement:62\r\nPromise.then（异步）\r\n（匿名） @ umi.js:2\r\nawait in （匿名）（异步）\r\n__webpack_require__.a @ async module:63\r\n./mfsu-virtual-entry/umi.js @ RefreshUtils.js:271\r\noptions.factory @ react refresh:6\r\n__webpack_require__ @ bootstrap:24\r\n（匿名） @ startup:5\r\n（匿名） @ startup:5\r\nmf-dep____vendor.925ff15d.js:79085 Uncaught TypeError: Cannot read properties of undefined (reading 'contains')\r\n    at HTMLHeadElement.appendChildOrInsertBefore [as appendChild] (mf-dep____vendor.925ff15d.js:79085:42)\r\n    at O (//cdn.bootcdn.net/ajax/libs/eruda/2.4.1/eruda.min.js:1:447958)\r\n    at Module.c (//cdn.bootcdn.net/ajax/libs/eruda/2.4.1/eruda.min.js:1:520788)\r\n    at e (//cdn.bootcdn.net/ajax/libs/eruda/2.4.1/eruda.min.js:1:543812)\r\n    at Object.c (//cdn.bootcdn.net/ajax/libs/eruda/2.4.1/eruda.min.js:1:298420)\r\n    at e (//cdn.bootcdn.net/ajax/libs/eruda/2.4.1/eruda.min.js:1:543812)\r\n    at eval (//cdn.bootcdn.net/ajax/libs/eruda/2.4.1/eruda.min.js:1:543715)\r\n    at eval (//cdn.bootcdn.net/ajax/libs/eruda/2.4.1/eruda.min.js:1:277)\r\n    at Proxy.eval (//cdn.bootcdn.net/ajax/libs/eruda/2.4.1/eruda.min.js:1:281)\r\n    at window.__TEMP_EVAL_FUNC__ (//cdn.bootcdn.net/ajax/libs/eruda/2.4.1/eruda.min.js:3:23)\r\n    at evalCode (mf-dep____vendor.925ff15d.js:67959:12)\r\n    at geval (mf-dep____vendor.925ff15d.js:67314:55)\r\n    at exec (mf-dep____vendor.925ff15d.js:67343:13)\r\n    at schedule (mf-dep____vendor.925ff15d.js:67369:9)\r\n    at schedule (mf-dep____vendor.925ff15d.js:67374:11)\r\n    at schedule (mf-dep____vendor.925ff15d.js:67374:11)\r\n    at schedule (mf-dep____vendor.925ff15d.js:67374:11)\r\n    at mf-dep____vendor.925ff15d.js:67380:14\r\n    at new Promise (<anonymous>)\r\n    at mf-dep____vendor.925ff15d.js:67379:12\r\n```\r\n报错原因：\r\n子应用存在动态加载的STYLE_TAG_NAME时，shadow dom隔离下，不能直接获取到元素\r\n```\r\nvar getAppWrapperHeadElement = function getAppWrapperHeadElement(appWrapper) {\r\nvar rootElement = 'host' in appWrapper ? appWrapper.host : appWrapper;\r\n// shadow dom隔离，这里不能直接获取到元素\r\nreturn rootElement.getElementsByTagName(utils__WEBPACK_IMPORTED_MODULE_1_.qiankunHeadTagName)[0];\r\n};\r\n\r\n导致这里报错了\r\nvar mountDOM = target === 'head' ? getAppWrapperHeadElement(appWrapper) : appWrapper;\r\n dynamicStyleSheetElements.push(stylesheetElement);\r\n// mountDOM为undefined 导致 错误：Uncaught TypeError: Cannot read properties of undefined (reading 'contains')\r\nvar referenceNode = mountDOM.contains(refChild) ? refChild : null;\r\nreturn rawDOMAppendOrInsertBefore.call(mountDOM, stylesheetElement, referenceNode);\r\n\r\n\r\n\r\n          \r\n```\r\n\r\n<!-- 请提供复现步骤，错误日志以及相关配置 -->\r\n<!-- 可以尝试不要锁版本，重新安装依赖试试先 -->\r\n\r\n## 相关环境信息\r\n\r\n- **qiankun 版本** 主应用qiankun@2.7.2 子应用qiankun@2.6.3\r\n- **浏览器版本**：\r\n- **操作系统**：\r\n",
+      "reportedCommentCount": 2,
+      "fetchedAt": "2026-09-08T06:12:04Z",
+      "labelEvidence": {
+        "method": "github_fetch_issue",
+        "exactLabel": "bug",
+        "present": true
+      },
+      "comments": [
+        {
+          "id": 1149581803,
+          "url": "https://github.com/umijs/qiankun/issues/2137#issuecomment-1149581803",
+          "author": "github-actions[bot]",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "Hello @liangskyli. In order to facilitate location and troubleshooting, we need you to provide a realistic example. Please forking these link [codesandbox](https://codesandbox.io/) or clone [qiankun examples](https://github.com/umijs/qiankun/tree/master/examples) to your GitHub repository.\n\n你好 @liangskyli, 为了方便定位和排查问题，我们需要你提供一个重现实例，请提供一个尽可能精简的链接 [codesandbox](https://codesandbox.io/) 或直接 clone [qiankun examples](https://github.com/umijs/qiankun/tree/master/examples)，并上传到你的 GitHub 仓库。\n\n![](https://gw.alipayobjects.com/zos/antfincdn/y9kwg7DVCd/reproduce.gif)"
+        },
+        {
+          "id": 1150511266,
+          "url": "https://github.com/umijs/qiankun/issues/2137#issuecomment-1150511266",
+          "author": "liangskyli",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "复现DEMO：https://github.com/liangskyli/umi4-qiankun-strictStyleIsolation-bug"
+        }
+      ]
+    },
+    {
+      "id": "umijs/qiankun#2141",
+      "repository": "umijs/qiankun",
+      "number": 2141,
+      "url": "https://github.com/umijs/qiankun/issues/2141",
+      "title": "最新版本2.7.2的升级导致切换子应用加载的当前css文件丢失",
+      "state": "closed",
+      "stateReason": "completed",
+      "labels": [
+        {
+          "name": "bug",
+          "color": "d73a4a",
+          "description": "Something isn't working"
+        },
+        {
+          "name": "Need Reproduction",
+          "color": "fef2c0",
+          "description": ""
+        }
+      ],
+      "createdAt": "2022-06-09T01:08:54Z",
+      "updatedAt": "2022-06-15T15:46:02Z",
+      "closedAt": "2022-06-15T15:46:02Z",
+      "body": "## What happens?\r\nqiankun 2.7.2 切换子应用加载的当前页面引入的css文件丢失\r\n\r\n## How To Reproduce\r\n加载子应用A和B，操作顺序 1.打开子应用A第一个页面 2.打开子应用B第一个页面 3.重新打开子应用A第一个页面\r\n\r\n- **qiankun Version**: 2.7.2\r\n- **umi**: 3.5.26\r\n- **@umijs/plugin-qiankun**: 2.22.1\r\n\r\n<img width=\"1445\" alt=\"image\" src=\"https://user-images.githubusercontent.com/11408703/172742829-571ff290-ca06-4543-94ad-aa231ce6a8f1.png\">\r\n\r\n",
+      "reportedCommentCount": 6,
+      "fetchedAt": "2026-09-08T06:12:04Z",
+      "labelEvidence": {
+        "method": "github_fetch_issue",
+        "exactLabel": "bug",
+        "present": true
+      },
+      "comments": [
+        {
+          "id": 1150571124,
+          "url": "https://github.com/umijs/qiankun/issues/2141#issuecomment-1150571124",
+          "author": "boyrest",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "切回版本2.7.1问题解决"
+        },
+        {
+          "id": 1150619137,
+          "url": "https://github.com/umijs/qiankun/issues/2141#issuecomment-1150619137",
+          "author": "zzjin23",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "+1"
+        },
+        {
+          "id": 1150671564,
+          "url": "https://github.com/umijs/qiankun/issues/2141#issuecomment-1150671564",
+          "author": "zgf123",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "这个能否在2.7.3 版本修复呢"
+        },
+        {
+          "id": 1150676394,
+          "url": "https://github.com/umijs/qiankun/issues/2141#issuecomment-1150676394",
+          "author": "lucaslz2020",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "我也是~"
+        },
+        {
+          "id": 1152100416,
+          "url": "https://github.com/umijs/qiankun/issues/2141#issuecomment-1152100416",
+          "author": "lhmiao",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "使用 emotion 时同遇到这个问题，回退至 v2.7.1 版本解决"
+        },
+        {
+          "id": 1153742587,
+          "url": "https://github.com/umijs/qiankun/issues/2141#issuecomment-1153742587",
+          "author": "github-actions[bot]",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "Hello @boyrest. In order to facilitate location and troubleshooting, we need you to provide a realistic example. Please forking these link [codesandbox](https://codesandbox.io/) or clone [qiankun examples](https://github.com/umijs/qiankun/tree/master/examples) to your GitHub repository.\n\n你好 @boyrest, 为了方便定位和排查问题，我们需要你提供一个重现实例，请提供一个尽可能精简的链接 [codesandbox](https://codesandbox.io/) 或直接 clone [qiankun examples](https://github.com/umijs/qiankun/tree/master/examples)，并上传到你的 GitHub 仓库。\n\n![](https://gw.alipayobjects.com/zos/antfincdn/y9kwg7DVCd/reproduce.gif)"
+        }
+      ]
+    },
+    {
+      "id": "umijs/qiankun#1502",
+      "repository": "umijs/qiankun",
+      "number": 1502,
+      "url": "https://github.com/umijs/qiankun/issues/1502",
+      "title": "沙箱启用时，子应用使用 window.location = 'https://www.baidu.com' 报错",
+      "state": "open",
+      "stateReason": null,
+      "labels": [
+        {
+          "name": "bug",
+          "color": "d73a4a",
+          "description": "Something isn't working"
+        }
+      ],
+      "createdAt": "2021-06-10T03:41:27Z",
+      "updatedAt": "2021-07-21T10:42:18Z",
+      "closedAt": null,
+      "body": "## What happens?\r\n\r\n子应用使用 window.location = 'https://www.baidu.com' 报错（如果是业务代码，用 window.location.href = 'https://www.baidu.com'即可解决，但是有些是在外部库里的逻辑）\r\n\r\n## How To Reproduce\r\n\r\n官方例子即可复现，可以直接跑起来，在控制台执行 window.proxy.location = 'https://www.baidu.com' \r\n\r\n## Context\r\n\r\n- **qiankun Version**: 2.4.2\r\n",
+      "reportedCommentCount": 6,
+      "fetchedAt": "2026-09-08T06:12:04Z",
+      "labelEvidence": {
+        "method": "github_fetch_issue",
+        "exactLabel": "bug",
+        "present": true
+      },
+      "comments": [
+        {
+          "id": 859242418,
+          "url": "https://github.com/umijs/qiankun/issues/1502#issuecomment-859242418",
+          "author": "gongshun",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "报错信息\r\n\r\n![image](https://user-images.githubusercontent.com/29347231/121628097-30178c00-caab-11eb-8a24-0c4107b54ddf.png)\r\n\r\n![image](https://user-images.githubusercontent.com/29347231/121628138-402f6b80-caab-11eb-97f0-fecc9cd21c7e.png)\r\n"
+        },
+        {
+          "id": 859248823,
+          "url": "https://github.com/umijs/qiankun/issues/1502#issuecomment-859248823",
+          "author": "haixiangyan",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "开启了沙箱，实际上是开启了 ProxySandbox。原理是会将当前 window 对象拷贝一份成 fakeWindow，然后通过 ES 6 的 Proxy 监听 fakeWindow。所以当你使用 `window.location = 'xxx' 的时候，其实是操作了 fakeWindow 这个普通对象，也即 `fakeWindow.location = 'xxx'`。\r\n\r\n而像 `window.locaiton` 这种 navtive 操作是需要真实 window 上下文的，fakeWindow 只是个普通对象，所以会报这个 TypeError 的错误。可以参考[这个帖子](https://stackoverflow.com/questions/9677985/uncaught-typeerror-illegal-invocation-in-chrome)。\r\n\r\n这个例子的解决方法是指定 window 作为 this 来调用，但是子应用好像也获取不到真实 window，所以我想到的解决方法是将 location 作为沙箱的白名单，来避免 location 变量被代理，但是貌似官方并没有暴露这个 API，难~"
+        },
+        {
+          "id": 861457905,
+          "url": "https://github.com/umijs/qiankun/issues/1502#issuecomment-861457905",
+          "author": "daxuewen",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "> 开启了沙箱，实际上是开启了 ProxySandbox。原理是会将当前 window 对象拷贝一份成 fakeWindow，然后通过 ES 6 的 Proxy 监听 fakeWindow。所以当你使用 `window.location = 'xxx' 的时候，其实是操作了 fakeWindow 这个普通对象，也即 `fakeWindow.location = 'xxx'`。\r\n> \r\n> 而像 `window.locaiton` 这种 navtive 操作是需要真实 window 上下文的，fakeWindow 只是个普通对象，所以会报这个 TypeError 的错误。可以参考[这个帖子](https://stackoverflow.com/questions/9677985/uncaught-typeerror-illegal-invocation-in-chrome)。\r\n> \r\n> 这个例子的解决方法是指定 window 作为 this 来调用，但是子应用好像也获取不到真实 window，所以我想到的解决方法是将 location 作为沙箱的白名单，来避免 location 变量被代理，但是貌似官方并没有暴露这个 API，难~\r\n\r\n嗯，`window.location = 'xxx' 的使用会被有些库内置（比如：custom-protocol-check 我们也尝试修复了 https://github.com/vireshshah/custom-protocol-check/pull/13#issue-666454657 ）。还是希望官网能从沙箱层面解决下。"
+        },
+        {
+          "id": 862104436,
+          "url": "https://github.com/umijs/qiankun/issues/1502#issuecomment-862104436",
+          "author": "haixiangyan",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "沙箱开一个白名单可能是比较好的解决方法😃"
+        },
+        {
+          "id": 884048486,
+          "url": "https://github.com/umijs/qiankun/issues/1502#issuecomment-884048486",
+          "author": "ZzzMackie",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "可以用globalThis来获取真实的window"
+        },
+        {
+          "id": 884088334,
+          "url": "https://github.com/umijs/qiankun/issues/1502#issuecomment-884088334",
+          "author": "LeuisKen",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "> 可以用globalThis来获取真实的window\r\n\r\n如上所述，主要还是管不了第三方包：https://github.com/vireshshah/custom-protocol-check/pull/13"
+        }
+      ]
+    },
+    {
+      "id": "umijs/qiankun#1174",
+      "repository": "umijs/qiankun",
+      "number": 1174,
+      "url": "https://github.com/umijs/qiankun/issues/1174",
+      "title": "[BUG] getTargetValue的缓存机制导致window上函数的this指向错误",
+      "state": "closed",
+      "stateReason": "completed",
+      "labels": [
+        {
+          "name": "bug",
+          "color": "d73a4a",
+          "description": "Something isn't working"
+        }
+      ],
+      "createdAt": "2020-12-22T10:40:05Z",
+      "updatedAt": "2021-05-10T07:16:20Z",
+      "closedAt": "2021-04-13T06:24:48Z",
+      "body": "## What happens?\r\n![image](https://user-images.githubusercontent.com/8469262/102879082-35910380-4484-11eb-9dc9-037ebe246d94.png)\r\n![image](https://user-images.githubusercontent.com/8469262/102879058-2d38c880-4484-11eb-973b-7ed61e8209cd.png)\r\n\r\ngetTargetValue和isConstructable的缓存机制导致获取window上的某些函数时，在应该返回没有bind过的函数时返回了bind过的函数。复现条件具体细节不明，但是在我们业务中使用jsplumb的地方就会出现这个bug，我已经在qiankun的example里面复现了这个case。这个bug在我们使用2.0.24的qiankun时是没有的，我在排查后发现了这两处改动，我目前是在本地直接去除了缓存逻辑，希望尽快修复。\r\n\r\n## Mini Showcase Repository(REQUIRED)\r\n\r\nhttps://github.com/Orange-C/qiankun\r\nerror-case 分支\r\n\r\n## How To Reproduce\r\n\r\n1. yarn\r\n2. yarn example:install\r\n3. yarn example:start\r\n4. 打开react16的页面\r\n\r\n## Context\r\n\r\n- **qiankun Version**: 2.3.2\r\n- **Platform Version**: windows10\r\n- **Browser Version**: chrome\r\n",
+      "reportedCommentCount": 15,
+      "fetchedAt": "2026-09-08T06:12:04Z",
+      "labelEvidence": {
+        "method": "github_fetch_issue",
+        "exactLabel": "bug",
+        "present": true
+      },
+      "comments": [
+        {
+          "id": 749475950,
+          "url": "https://github.com/umijs/qiankun/issues/1174#issuecomment-749475950",
+          "author": "Orange-C",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "@kuitos 之前在群里反馈过的问题"
+        },
+        {
+          "id": 767414914,
+          "url": "https://github.com/umijs/qiankun/issues/1174#issuecomment-767414914",
+          "author": "weihaonan",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "请问如何去除本地缓存逻辑"
+        },
+        {
+          "id": 767987030,
+          "url": "https://github.com/umijs/qiankun/issues/1174#issuecomment-767987030",
+          "author": "Orange-C",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "> 请问如何去除本地缓存逻辑\r\n\r\n注释掉两个图中红框的内容即可，请问你也遇到这个问题了吗？"
+        },
+        {
+          "id": 772268179,
+          "url": "https://github.com/umijs/qiankun/issues/1174#issuecomment-772268179",
+          "author": "weihaonan",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "@Orange-C 对  项目中用的jsplumb"
+        },
+        {
+          "id": 783331587,
+          "url": "https://github.com/umijs/qiankun/issues/1174#issuecomment-783331587",
+          "author": "direcee",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "> @Orange-C 对 项目中用的jsplumb\r\n\r\n请问有解决方案么，我也遇到了这个问题"
+        },
+        {
+          "id": 788544729,
+          "url": "https://github.com/umijs/qiankun/issues/1174#issuecomment-788544729",
+          "author": "zhenxin111",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "同样的问题"
+        },
+        {
+          "id": 789080114,
+          "url": "https://github.com/umijs/qiankun/issues/1174#issuecomment-789080114",
+          "author": "henryxie2093",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "同样在引用 jsplumb是出现了这个问题，一个比较tricky的做法：\r\n\r\n子应用中将jsplumb 在webpack中 externals 引入\r\n在壳应用中将jsplumb通过cdn或是本地引入到index.html中"
+        },
+        {
+          "id": 789371238,
+          "url": "https://github.com/umijs/qiankun/issues/1174#issuecomment-789371238",
+          "author": "karstum",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "> 同样在引用 jsplumb是出现了这个问题，一个比较tricky的做法：\r\n> \r\n> 子应用中将jsplumb 在webpack中 externals 引入\r\n> 在壳应用中将jsplumb通过cdn引入\r\n\r\n可以详解一下, 上个代码什么的吗?"
+        },
+        {
+          "id": 815729752,
+          "url": "https://github.com/umijs/qiankun/issues/1174#issuecomment-815729752",
+          "author": "foxFallingSkies",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "可解决了。。头疼这个问题哦"
+        },
+        {
+          "id": 815730709,
+          "url": "https://github.com/umijs/qiankun/issues/1174#issuecomment-815730709",
+          "author": "foxFallingSkies",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "4个月了。。官方可解决了。。。。"
+        },
+        {
+          "id": 822382292,
+          "url": "https://github.com/umijs/qiankun/issues/1174#issuecomment-822382292",
+          "author": "foxFallingSkies",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "看了下。现在的版本是1.5.。。那到底是用2.4还是用1.5"
+        },
+        {
+          "id": 823010154,
+          "url": "https://github.com/umijs/qiankun/issues/1174#issuecomment-823010154",
+          "author": "direcee",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "这版本号更新的有问题吧..."
+        },
+        {
+          "id": 823783005,
+          "url": "https://github.com/umijs/qiankun/issues/1174#issuecomment-823783005",
+          "author": "kuitos",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "这个修复还没发版呢，看版本发布时间就知道了😑\r\n\r\n1.x 我们也在维护，所以 github release log 上有发布记录，看 npm dist tag 去 npm 仓库 https://www.npmjs.com/package/qiankun"
+        },
+        {
+          "id": 836112363,
+          "url": "https://github.com/umijs/qiankun/issues/1174#issuecomment-836112363",
+          "author": "foxFallingSkies",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "> 这个修复还没发版呢，看版本发布时间就知道了😑\r\n> \r\n> 1.x 我们也在维护，所以 github release log 上有发布记录，看 npm dist tag 去 npm 仓库 https://www.npmjs.com/package/qiankun\r\n\r\n具体什么时候会在2.x版本上上上去，可有计划"
+        },
+        {
+          "id": 836282148,
+          "url": "https://github.com/umijs/qiankun/issues/1174#issuecomment-836282148",
+          "author": "kuitos",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "已经发了，watch 一下 release log 吧"
+        }
+      ]
+    },
+    {
+      "id": "umijs/qiankun#1245",
+      "repository": "umijs/qiankun",
+      "number": 1245,
+      "url": "https://github.com/umijs/qiankun/issues/1245",
+      "title": "子应用之间第一次路由跳转，vue-router报错",
+      "state": "open",
+      "stateReason": null,
+      "labels": [
+        {
+          "name": "bug",
+          "color": "d73a4a",
+          "description": "Something isn't working"
+        }
+      ],
+      "createdAt": "2021-02-01T05:30:48Z",
+      "updatedAt": "2021-04-16T11:46:59Z",
+      "closedAt": null,
+      "body": "## 问题概述\r\n\r\n子应用之间第一次路由跳转，vue-router报错\r\n\r\n## demo地址\r\n\r\nhttps://github.com/GOGOGOSIR/qiankunDemo\r\n\r\n## 重现步骤\r\n\r\n1. 运行项目后，点击app-vue-history\r\n2. 然后点击hash about按钮跳转至app-vue-hash应用的about页\r\n3. 结果vue-router会报vue-router.js:2134 ChunkLoadError: Loading chunk 1 failed.\r\n\r\n## 特别提示\r\n1. 如果先加载了（或者说已经访问过了）app-vue-hash应用的about页，执行以上步骤不会有任何报错\r\n2. 如果将qiankun的版本降至v2.1.0以下的版本，如：v2.0.26则不会出现以上问题\r\n\r\n## 相关版本\r\n\r\n- **qiankun Version**: v2.3.6\r\n- **Platform Version**: vue: v2.6.11 , vue-router: v3.2.0\r\n- **Browser Version**: chrome\r\n",
+      "reportedCommentCount": 8,
+      "fetchedAt": "2026-09-08T06:12:04Z",
+      "labelEvidence": {
+        "method": "github_fetch_issue",
+        "exactLabel": "bug",
+        "present": true
+      },
+      "comments": [
+        {
+          "id": 770877451,
+          "url": "https://github.com/umijs/qiankun/issues/1245#issuecomment-770877451",
+          "author": "gongshun",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "没有复现 \r\n\r\n![1](https://user-images.githubusercontent.com/29347231/106468085-74c96000-64d8-11eb-8710-891f4eb4b7ec.gif)\r\n\r\n不过子应用之间的跳转，最好不要用子应用的 router 对象， https://qiankun.umijs.org/zh/faq#%E5%BE%AE%E5%BA%94%E7%94%A8%E4%B9%8B%E9%97%B4%E5%A6%82%E4%BD%95%E8%B7%B3%E8%BD%AC%EF%BC%9F\r\n"
+        },
+        {
+          "id": 771304076,
+          "url": "https://github.com/umijs/qiankun/issues/1245#issuecomment-771304076",
+          "author": "121595113",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "<img width=\"820\" alt=\"image\" src=\"https://user-images.githubusercontent.com/9419773/106543314-70d12880-6540-11eb-8b0a-ec170beb7010.png\">\r\n@gongshun 复现步骤：\r\n\r\n- 在`/app-vue-hash/home`下刷新\r\n- 点击app-vue-history\r\n- 在` /app-vue-history/home`下点击hash about，可复现\r\n\r\n感觉不是乾坤的问题，报错是在执行mount之前"
+        },
+        {
+          "id": 771335486,
+          "url": "https://github.com/umijs/qiankun/issues/1245#issuecomment-771335486",
+          "author": "GOGOGOSIR",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "> <img alt=\"image\" width=\"820\" src=\"https://user-images.githubusercontent.com/9419773/106543314-70d12880-6540-11eb-8b0a-ec170beb7010.png\">\r\n> \r\n> @gongshun 复现步骤：\r\n> * 在`/app-vue-hash/home`下刷新\r\n> * 点击app-vue-history\r\n> * 在` /app-vue-history/home`下点击hash about，可复现\r\n> \r\n> 感觉不是乾坤的问题，报错是在执行mount之前\r\n\r\n但是2.0.26版本就不会有问题，如果升级至这个版本以上的就会出现这个问题"
+        },
+        {
+          "id": 771399514,
+          "url": "https://github.com/umijs/qiankun/issues/1245#issuecomment-771399514",
+          "author": "gongshun",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "> - 在/app-vue-hash/home下刷新\r\n> - 点击app-vue-history\r\n> - 在 /app-vue-history/home下点击hash about，可复现\r\n\r\n这步骤的确可以复现，但是报错主要原因是缓存 vue 实例导致的，如果按照常规写法，则不会有问题"
+        },
+        {
+          "id": 772343416,
+          "url": "https://github.com/umijs/qiankun/issues/1245#issuecomment-772343416",
+          "author": "GOGOGOSIR",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "> > * 在/app-vue-hash/home下刷新\r\n> > * 点击app-vue-history\r\n> > * 在 /app-vue-history/home下点击hash about，可复现\r\n> \r\n> 这步骤的确可以复现，但是报错主要原因是缓存 vue 实例导致的，如果按照常规写法，则不会有问题\r\n\r\n由于每个子应用项目都有各自的路由信息，如果通过主应用传入的vue-router实例去跳转，将不好获取对应子路由的路由信息，我觉得qiankun@2.0.26这个版本，支持子路由通过自己的vue-router实例去跳转，比较合理些"
+        },
+        {
+          "id": 773913862,
+          "url": "https://github.com/umijs/qiankun/issues/1245#issuecomment-773913862",
+          "author": "GOGOGOSIR",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "> > > * 在/app-vue-hash/home下刷新\r\n> > > * 点击app-vue-history\r\n> > > * 在 /app-vue-history/home下点击hash about，可复现\r\n> > \r\n> > \r\n> > 这步骤的确可以复现，但是报错主要原因是缓存 vue 实例导致的，如果按照常规写法，则不会有问题\r\n> \r\n> 由于每个子应用项目都有各自的路由信息，如果通过主应用传入的vue-router实例去跳转，将不好获取对应子路由的路由信息，我觉得qiankun@2.0.26这个版本，支持子路由通过自己的vue-router实例去跳转，比较合理些\r\n\r\n你好，我根据你给出的提示，在app-vue-history 应用，通过主应用传进来的vuerouter实例去跳转，还是会出现“vue-router.js:2134 ChunkLoadError: Loading chunk 1 failed.”的问题，最新的demo：https://github.com/GOGOGOSIR/qiankunDemo"
+        },
+        {
+          "id": 773995470,
+          "url": "https://github.com/umijs/qiankun/issues/1245#issuecomment-773995470",
+          "author": "GOGOGOSIR",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "> > * 在/app-vue-hash/home下刷新\r\n> > * 点击app-vue-history\r\n> > * 在 /app-vue-history/home下点击hash about，可复现\r\n> \r\n> 这步骤的确可以复现，但是报错主要原因是缓存 vue 实例导致的，如果按照常规写法，则不会有问题\r\n\r\n对于主要原因是缓存 vue 实例导致的，我这里提供了一个 demo：https://github.com/GOGOGOSIR/qiankunKeepAliveDemo\r\n\r\n问题描述：\r\n1. 运行应用后，在 http://localhost:8080/app-vue-hash/ 页面，点击 history about 按钮或主应用go history about（通过主应用传入的vuerouter去跳转），跳转至app-vue-history的about页，此时页面渲染是空的，如果我访问过此页面则正常。\r\n\r\n补充说明：\r\n这个例子的问题，和上个例子的问题，其实是一致的。都是：当没访问过某个应用的页面，直接通过另一个应用的某个页面直接跳转，都不能正确跳转过去。\r\n而之前采用缓存vue实例的方式实现页面的缓存，应用之间的跳转则通过自身的vue-router实例去实现，在qiankun高于2.0.26都会出现问题，希望官方能够修复下，谢谢！"
+        },
+        {
+          "id": 821118701,
+          "url": "https://github.com/umijs/qiankun/issues/1245#issuecomment-821118701",
+          "author": "GOGOGOSIR",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "去掉缓存，vue 和 vue-router 在主应用通过cdn引入，子应用共享的demo\r\n问题描述：\r\n如果vue和vue-router是通过cdn的方式引入，当跨应用页面跳转的时候，如果没有访问过该页面，这时候无论是通过父应用的路由还是子应用的路由实例去跳转，vue-router都会报错，而通过npm的形式安装的则是正常的，这种情况有解决方法吗? qiankun版本是2.4.0\r\n![cdn](https://user-images.githubusercontent.com/26272801/115019791-3eeb2380-9eec-11eb-9661-44ec2883152b.gif)\r\n如果版本回退至2.0.15\r\n![68DF06DF-1641-4759-ADE7-F63C8AF64BBB](https://user-images.githubusercontent.com/26272801/115019887-5d511f00-9eec-11eb-9d8a-2c28893ba3ad.gif)\r\n\r\n仓库地址：\r\nhttps://github.com/GOGOGOSIR/qiankunDemo\r\n分支为 normal分支\r\n"
+        }
+      ]
+    },
+    {
+      "id": "umijs/qiankun#701",
+      "repository": "umijs/qiankun",
+      "number": 701,
+      "url": "https://github.com/umijs/qiankun/issues/701",
+      "title": "IE11无法启动,[import-html-entry] Here is no \"fetch\" on the window env, you need to polyfill it",
+      "state": "closed",
+      "stateReason": "completed",
+      "labels": [
+        {
+          "name": "bug",
+          "color": "d73a4a",
+          "description": "Something isn't working"
+        }
+      ],
+      "createdAt": "2020-07-01T03:45:16Z",
+      "updatedAt": "2020-07-15T15:46:23Z",
+      "closedAt": "2020-07-03T02:52:31Z",
+      "body": "## What happens?\r\n\r\nIE11无法启动,[import-html-entry] Here is no \"fetch\" on the window env, you need to polyfill it\r\n## Mini Showcase Repository(REQUIRED)\r\n\r\n> Provide a mini GitHub repository which can reproduce the issue.\r\n\r\n<!-- https://github.com/YOUR_REPOSITORY_URL -->\r\n\r\n## How To Reproduce\r\n\r\n**Steps to reproduce the behavior:** 1. 2.\r\n### 1:   使用vue-cli生成空项目，按步骤进行qiankun配置\r\n### 2：使用ie11打开\r\n![image](https://user-images.githubusercontent.com/11817793/86199675-4fb0ef80-bb8d-11ea-94bf-c6b3131977f2.png)\r\n### 3:   安装fetch垫片，fetch-polyfill或者isomorphic-fetch\r\n### 4：没有报fetch错误，出现了新的错误\r\n![image](https://user-images.githubusercontent.com/11817793/86200618-c3ec9280-bb8f-11ea-927e-5300b2f4b468.png)\r\n### 5：点入报错js\r\n![image](https://user-images.githubusercontent.com/11817793/86200643-db2b8000-bb8f-11ea-8d7d-c6463f54a4f1.png)\r\n\r\n**Expected behavior** 1. 2.\r\n\r\n## Context\r\n\r\n- **qiankun Version**:2.0.15\r\n- **Platform Version**:vue\r\n- **Browser Version**:ie11\r\n",
+      "reportedCommentCount": 14,
+      "fetchedAt": "2026-09-08T06:12:04Z",
+      "labelEvidence": {
+        "method": "github_fetch_issue",
+        "exactLabel": "bug",
+        "present": true
+      },
+      "comments": [
+        {
+          "id": 652259475,
+          "url": "https://github.com/umijs/qiankun/issues/701#issuecomment-652259475",
+          "author": "kuitos",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "@howel52 看下是不是同一个问题 https://github.com/umijs/qiankun/issues/565#issuecomment-641672927"
+        },
+        {
+          "id": 652350676,
+          "url": "https://github.com/umijs/qiankun/issues/701#issuecomment-652350676",
+          "author": "anLl",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "> @howel52 看下是不是同一个问题 [#565 (comment)](https://github.com/umijs/qiankun/issues/565#issuecomment-641672927)\r\n\r\n不是一个问题，能帮忙解决一下么\r\n\r\n[qiankun-ie](https://github.com/anLl/qiankun-ie)"
+        },
+        {
+          "id": 652402914,
+          "url": "https://github.com/umijs/qiankun/issues/701#issuecomment-652402914",
+          "author": "howel52",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "我找台 windows 看看"
+        },
+        {
+          "id": 652404897,
+          "url": "https://github.com/umijs/qiankun/issues/701#issuecomment-652404897",
+          "author": "anLl",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "> 我找台 windows 看看\r\n哥，能加个微信嘛，或者钉钉么，我在钉钉1群，火烧眉毛了，客户突然要ie11，都蒙了"
+        },
+        {
+          "id": 652490752,
+          "url": "https://github.com/umijs/qiankun/issues/701#issuecomment-652490752",
+          "author": "howel52",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "此楼大概是有两个问题：\r\n1. IE 需要 fetch polyfill\r\n2. 在 patcher 里验证了下，`super` 写法构建后的产物在  `@babel/runtime/helpers/esm/setPrototypeOf + IE` 里跑不起来了\r\n\r\n第一个不是问题\r\n\r\n第二个目前看只有 IE 会有关于 setPrototypeOf 的问题，UIEvent 的 patcher 是为了解决 ProxySandbox 的问题，IE 里其实不会有 Proxy，这么看的话是不是部分 patcher 是不用打在 IE 上的 @kuitos \r\n\r\n（不过这个 super 写法构建完后在 IE 上跑不起来是有点奇怪）"
+        },
+        {
+          "id": 652735362,
+          "url": "https://github.com/umijs/qiankun/issues/701#issuecomment-652735362",
+          "author": "kuitos",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "> UIEvent 的 patcher 是为了解决 ProxySandbox 的问题，IE 里其实不会有 Proxy，这么看的话是不是部分 patcher 是不用打在 IE 上的 @kuitos\r\n\r\n+1，调整一下整理出一个只为 Proxy 沙箱服务的 patcher 集？"
+        },
+        {
+          "id": 652769383,
+          "url": "https://github.com/umijs/qiankun/issues/701#issuecomment-652769383",
+          "author": "anLl",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "> > UIEvent 的 patcher 是为了解决 ProxySandbox 的问题，IE 里其实不会有 Proxy，这么看的话是不是部分 patcher 是不用打在 IE 上的 @kuitos\r\n> \r\n> +1，调整一下整理出一个只为 Proxy 沙箱服务的 patcher 集？\r\n\r\n我这边如何修改呢，丢丢着急"
+        },
+        {
+          "id": 652774923,
+          "url": "https://github.com/umijs/qiankun/issues/701#issuecomment-652774923",
+          "author": "shinji3887",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "顶，同样的问题，测试机器为win10+ie11\r\nqiankun版本为2.0.15\r\n![image](https://user-images.githubusercontent.com/38430452/86317405-e9e26780-bc61-11ea-833f-342de796c5bb.png)\r\n"
+        },
+        {
+          "id": 652786263,
+          "url": "https://github.com/umijs/qiankun/issues/701#issuecomment-652786263",
+          "author": "howel52",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "> 我这边如何修改呢\r\n\r\n不等发包的话可以 alias 掉 patcher UIEvent 的 es 代码，参考这个 https://github.com/umijs/qiankun/issues/52#issuecomment-569386202  "
+        },
+        {
+          "id": 653298814,
+          "url": "https://github.com/umijs/qiankun/issues/701#issuecomment-653298814",
+          "author": "anLl",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "> > 我这边如何修改呢\r\n> \r\n> 不等发包的话可以 alias 掉 patcher UIEvent 的 es 代码，参考这个 [#52 (comment)](https://github.com/umijs/qiankun/issues/52#issuecomment-569386202)\r\n\r\n\r\n> > 我这边如何修改呢\r\n> \r\n> 不等发包的话可以 alias 掉 patcher UIEvent 的 es 代码，参考这个 [#52 (comment)](https://github.com/umijs/qiankun/issues/52#issuecomment-569386202)\r\n\r\n不要意思啊，我再问问什么时候发新版本喃"
+        },
+        {
+          "id": 653349370,
+          "url": "https://github.com/umijs/qiankun/issues/701#issuecomment-653349370",
+          "author": "howel52",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "@anLl  [v2.0.16](https://github.com/umijs/qiankun/releases/tag/v2.0.16)"
+        },
+        {
+          "id": 653356754,
+          "url": "https://github.com/umijs/qiankun/issues/701#issuecomment-653356754",
+          "author": "anLl",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "> @anLl [v2.0.16](https://github.com/umijs/qiankun/releases/tag/v2.0.16)\r\n\r\n万分感谢，万分感谢~"
+        },
+        {
+          "id": 654557374,
+          "url": "https://github.com/umijs/qiankun/issues/701#issuecomment-654557374",
+          "author": "liuxiuqian",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "> > @anLl [v2.0.16](https://github.com/umijs/qiankun/releases/tag/v2.0.16)\r\n> \r\n> 万分感谢，万分感谢~\r\n问题解决了吗 我引入最新的 v2.0.16 还是会存在问题\r\n"
+        },
+        {
+          "id": 658844424,
+          "url": "https://github.com/umijs/qiankun/issues/701#issuecomment-658844424",
+          "author": "shinji3887",
+          "createdAt": null,
+          "updatedAt": null,
+          "body": "ie支持fetch，应该用fetch-polyfill还是whatwg-fetch呢？\r\n看了下fetch-polyfill最后一次更新是5年前了，whatwg-fetch更新比较频繁\r\n官方文档上面似乎写的也是whatwg-fetch"
+        }
+      ]
+    }
+  ]
+}

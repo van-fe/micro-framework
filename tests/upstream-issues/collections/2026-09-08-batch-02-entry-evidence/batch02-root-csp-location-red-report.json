@@ -1,0 +1,313 @@
+{
+  "config": {
+    "argv": [
+      "/Users/fanfangbo/.local/share/fnm/node-versions/v24.19.0/installation/bin/node",
+      "/Users/fanfangbo/workspace/micro-framework/node_modules/.bin/playwright",
+      "test",
+      "tests/e2e/upstream-batch02-assets-csp.spec.ts",
+      "tests/e2e/upstream-batch02-runtime-location.spec.ts",
+      "--project=chromium",
+      "--reporter=json"
+    ],
+    "configFile": "/Users/fanfangbo/workspace/micro-framework/playwright.config.ts",
+    "rootDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "upstream-batch02-assets-csp.spec.ts",
+      "file": "upstream-batch02-assets-csp.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "W779 loads four then five and six real Vue images and mixed backgrounds from the application origin",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 30041,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-assets-csp.spec.ts",
+                        "column": 14,
+                        "line": 25
+                      },
+                      "message": "Error: page.waitForFunction: Test timeout of 30000ms exceeded.\n\n  23 |   page.on(\"pageerror\", (error) => pageErrors.push(error.message));\n  24 |   await page.goto(\"/benchmark.html\");\n> 25 |   await page.waitForFunction(() => Boolean(window.__createMicroFrameBenchmarkRuntime__));\n     |              ^\n  26 |   await page.evaluate(async () => {\n  27 |     const runtime = window.__createMicroFrameBenchmarkRuntime__!();\n  28 |     window.__batch02AssetRuntime = runtime;\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-assets-csp.spec.ts:25:14"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:45:38.961Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-assets-cs-61249-from-the-application-origin-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-assets-cs-61249-from-the-application-origin-chromium/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "36c4034dc77325d02525-2006fa9ae6b6e1bacba0",
+          "file": "upstream-batch02-assets-csp.spec.ts",
+          "line": 17,
+          "column": 1
+        },
+        {
+          "title": "W727 mounts and styles an HTML application under style-src without unsafe-inline and emits no style CSP violations",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 30040,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-assets-csp.spec.ts",
+                        "column": 14,
+                        "line": 59
+                      },
+                      "message": "Error: page.waitForFunction: Test timeout of 30000ms exceeded.\n\n  57 |   }));\n  58 |   await page.goto(\"/__batch02-csp-host.html\");\n> 59 |   await page.waitForFunction(() => Boolean(window.__createMicroFrameBenchmarkRuntime__));\n     |              ^\n  60 |   await page.evaluate(async () => {\n  61 |     const { origin } = await (await fetch(\"/__batch02-entry\")).json() as { origin: string };\n  62 |     const runtime = window.__createMicroFrameBenchmarkRuntime__!();\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-assets-csp.spec.ts:59:14"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:46:09.413Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-assets-cs-8b131-its-no-style-CSP-violations-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-assets-cs-8b131-its-no-style-CSP-violations-chromium/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "36c4034dc77325d02525-19cd5949e19ca1bd888f",
+          "file": "upstream-batch02-assets-csp.spec.ts",
+          "line": 46,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "upstream-batch02-runtime-location.spec.ts",
+      "file": "upstream-batch02-runtime-location.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Q1502 native window.location assignment navigates only the child and disposes after crossing origin",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 92,
+                  "error": {
+                    "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5173/benchmark.html\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5173/benchmark.html\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5173/benchmark.html\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5173/benchmark.html\", waiting until \"load\"\u001b[22m\n\n    at Object.base.extend.runtimeCase.auto (/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-runtime-fixture.ts:44:16)",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-runtime-fixture.ts",
+                      "column": 16,
+                      "line": 44
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mupstream-runtime-fixture.ts:44\n\n  42 |       contentType: \"text/javascript\", body: counterEntry,\n  43 |     }));\n> 44 |     await page.goto(\"/benchmark.html\");\n     |                ^\n  45 |     await page.waitForFunction(() => Boolean(window.__createMicroFrameBenchmarkRuntime__));\n  46 |     await page.evaluate(() => {\n  47 |       const runtime = window.__createMicroFrameBenchmarkRuntime__!({"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-runtime-fixture.ts",
+                        "column": 16,
+                        "line": 44
+                      },
+                      "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5173/benchmark.html\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5173/benchmark.html\", waiting until \"load\"\u001b[22m\n\n\n   at upstream-runtime-fixture.ts:44\n\n  42 |       contentType: \"text/javascript\", body: counterEntry,\n  43 |     }));\n> 44 |     await page.goto(\"/benchmark.html\");\n     |                ^\n  45 |     await page.waitForFunction(() => Boolean(window.__createMicroFrameBenchmarkRuntime__));\n  46 |     await page.evaluate(() => {\n  47 |       const runtime = window.__createMicroFrameBenchmarkRuntime__!({\n    at Object.base.extend.runtimeCase.auto (/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-runtime-fixture.ts:44:16)"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:46:39.754Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-l-ddce3-poses-after-crossing-origin-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-runtime-l-ddce3-poses-after-crossing-origin-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-runtime-fixture.ts",
+                    "column": 16,
+                    "line": 44
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c7420a37da65ce6a20b2-e433d652997717e2219f",
+          "file": "upstream-batch02-runtime-location.spec.ts",
+          "line": 6,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-08T06:45:36.454Z",
+    "duration": 63531.848000000005,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 3,
+    "flaky": 0
+  }
+}

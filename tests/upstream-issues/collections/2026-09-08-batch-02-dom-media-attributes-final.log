@@ -1,0 +1,19 @@
+
+ RUN  v4.1.11 /Users/fanfangbo/workspace/micro-framework
+
+ ✓ |browser-chromium| tests/browser/upstream-readiness-cascade.browser.test.ts (2 tests) 555ms
+     ✓ W49 dispatches document readiness and window load once after their application resources  473ms
+ ✓ |browser-webkit| tests/browser/upstream-readiness-cascade.browser.test.ts (2 tests) 559ms
+     ✓ W49 dispatches document readiness and window load once after their application resources  481ms
+ ✓ |browser-chromium| tests/browser/upstream-batch02-dom-font-messages.browser.test.ts (6 tests) 287ms
+ ✓ |browser-webkit| tests/browser/upstream-batch02-dom-font-messages.browser.test.ts (6 tests) 302ms
+ ✓ |browser-firefox| tests/browser/upstream-readiness-cascade.browser.test.ts (2 tests) 563ms
+     ✓ W49 dispatches document readiness and window load once after their application resources  481ms
+ ✓ |browser-firefox| tests/browser/upstream-batch02-dom-font-messages.browser.test.ts (6 tests) 315ms
+
+ Test Files  6 passed (6)
+      Tests  24 passed (24)
+   Start at  15:49:23
+   Duration  2.65s (transform 0ms, setup 0ms, import 311ms, tests 2.58s, environment 0ms)
+
+JSON report written to /Users/fanfangbo/workspace/micro-framework/tests/upstream-issues/collections/2026-09-08-batch-02-dom-media-attributes-final.json

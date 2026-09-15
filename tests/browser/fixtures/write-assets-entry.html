@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head><base href="./write-assets/"></head>
+  <body>
+    <main id="asset-write-container">
+      <!-- author-comment -->
+      <script>
+        window.WriteAssetsLifecycle = { mount() {}, unmount() {} };
+        document.write('<style>#write-action { color: rgb(21, 43, 65); background-image: url(./pixel.svg); }</style>');
+        document.write('<button id="write-action" onclick="window.__writeClickRealm = window !== top; window.__writeClickCount = (window.__writeClickCount || 0) + 1">Run</button>');
+        document.write('<a id="write-link" href="./details.html">Details</a>');
+        document.write('<script id="write-data" type="application/json">{"enabled":true}<\/script>');
+        document.write('<template id="write-template"><script>window.__writeTemplateExecuted = true;<\/script><b>inert</b></template>');
+        document.write('<svg><script>window.__writeSvgHostExecuted = true;<\/script><circle r="5" /></svg>');
+      </script>
+      <span id="asset-following">following</span>
+    </main>
+  </body>
+</html>

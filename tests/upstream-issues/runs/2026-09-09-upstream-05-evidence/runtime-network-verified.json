@@ -1,0 +1,421 @@
+{
+  "config": {
+    "argv": [
+      "/Users/fanfangbo/.local/share/fnm/node-versions/v24.19.0/installation/bin/node",
+      "/Users/fanfangbo/workspace/micro-framework/node_modules/.bin/playwright",
+      "test",
+      "tests/e2e/upstream-batch04-runtime-network.spec.ts",
+      "--reporter=json,line"
+    ],
+    "configFile": "/Users/fanfangbo/workspace/micro-framework/playwright.config.ts",
+    "rootDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ],
+      [
+        "line"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "upstream-batch04-runtime-network.spec.ts",
+      "file": "upstream-batch04-runtime-network.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "W1057 HTML script timeout releases Runtime resources and recovers at the same entry URL",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3390,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:33:54.542Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-transport-observation",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiY2hyb21pdW0iLCJibG9ja2VkIjoic2NyaXB0IiwiY2xvc2VkQmVmb3JlUmVjb3ZlcnkiOnRydWUsImxpbWl0YXRpb24iOm51bGx9"
+                    },
+                    {
+                      "name": "recovery-request-evidence",
+                      "contentType": "application/json",
+                      "body": "eyJyZXF1ZXN0VXJscyI6WyIvaW5kZXguaHRtbCIsIi9zbG93LmNzcyIsIi9zbG93LmpzIiwiL2luZGV4Lmh0bWwiLCIvc2xvdy5jc3MiLCIvc2xvdy5qcyJdLCJvbGRUcmFuc3BvcnRDbG9zZWQiOnRydWUsInJlY292ZXJ5IjoiU2FtZSBIVE1MIGVudHJ5IGFuZCBzY3JpcHQgVVJMIn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6d477db95fb75f7961be-005e09304200f8906a1a",
+          "file": "upstream-batch04-runtime-network.spec.ts",
+          "line": 6,
+          "column": 53
+        },
+        {
+          "title": "W1057 HTML style timeout releases Runtime resources and recovers at the same entry URL",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3167,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:33:58.204Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-transport-observation",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiY2hyb21pdW0iLCJibG9ja2VkIjoic3R5bGUiLCJjbG9zZWRCZWZvcmVSZWNvdmVyeSI6ZmFsc2UsImxpbWl0YXRpb24iOiJOYXRpdmUgcGVuZGluZyBzdHlsZXNoZWV0IHRyYW5zcG9ydCByZW1haW5zIG9wZW4gYWZ0ZXIgbGluay9ob3N0IHJlbW92YWwgaW4gYWxsIHRocmVlIHRlc3RlZCBlbmdpbmVzOyBSdW50aW1lIHdhaXRpbmcgYW5kIG93bmVkIERPTSBhcmUgY2FuY2VsbGVkLCBwaHlzaWNhbCB0cmFuc3BvcnQgY2FuY2VsbGF0aW9uIGlzIG5vdCBjbGFpbWVkLiJ9"
+                    },
+                    {
+                      "name": "recovery-request-evidence",
+                      "contentType": "application/json",
+                      "body": "eyJyZXF1ZXN0VXJscyI6WyIvaW5kZXguaHRtbCIsIi9zbG93LmNzcyIsIi9zbG93LmpzIiwiL2luZGV4Lmh0bWwiLCIvc2xvdy5jc3M/cmVjb3Zlcnk9MSIsIi9zbG93LmpzIl0sIm9sZFRyYW5zcG9ydENsb3NlZCI6ZmFsc2UsInJlY292ZXJ5IjoiU2FtZSBIVE1MIGVudHJ5LCBleHBsaWNpdGx5IG5ldyBDU1MgcmV2aXNpb24gVVJMOyBvcmlnaW5hbCBwZW5kaW5nIHJlc3BvbnNlIGlzIG5vdCBlbmRlZCBieSB0aGUgc2VydmVyLiJ9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6d477db95fb75f7961be-2d5ca8f6fd56f4861198",
+          "file": "upstream-batch04-runtime-network.spec.ts",
+          "line": 6,
+          "column": 53
+        },
+        {
+          "title": "W1057 HTML script timeout releases Runtime resources and recovers at the same entry URL",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3783,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:34:01.567Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-transport-observation",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiZmlyZWZveCIsImJsb2NrZWQiOiJzY3JpcHQiLCJjbG9zZWRCZWZvcmVSZWNvdmVyeSI6dHJ1ZSwibGltaXRhdGlvbiI6bnVsbH0="
+                    },
+                    {
+                      "name": "recovery-request-evidence",
+                      "contentType": "application/json",
+                      "body": "eyJyZXF1ZXN0VXJscyI6WyIvaW5kZXguaHRtbCIsIi9zbG93LmNzcyIsIi9zbG93LmpzIiwiL2luZGV4Lmh0bWwiLCIvc2xvdy5qcyJdLCJvbGRUcmFuc3BvcnRDbG9zZWQiOnRydWUsInJlY292ZXJ5IjoiU2FtZSBIVE1MIGVudHJ5IGFuZCBzY3JpcHQgVVJMIn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6d477db95fb75f7961be-907fe9d799f4d8abe8d3",
+          "file": "upstream-batch04-runtime-network.spec.ts",
+          "line": 6,
+          "column": 53
+        },
+        {
+          "title": "W1057 HTML style timeout releases Runtime resources and recovers at the same entry URL",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5285,
+                  "error": {
+                    "message": "Error: page.evaluate: All application entries failed for slow-html (attempt 1: slow-html.load exceeded 2000ms.).\n#k@http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:405:9\nasync*#C@http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:191:41\nmount@http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:181:91\nmountApp@http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:991:19\n@debugger eval code line 311 > eval:3:36\nevaluate@debugger eval code:313:16\n@debugger eval code:1:44\n@debugger eval code:1:62\n",
+                    "stack": "Error: page.evaluate: All application entries failed for slow-html (attempt 1: slow-html.load exceeded 2000ms.).\n#k@http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:405:9\nasync*#C@http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:191:41\nmount@http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:181:91\nmountApp@http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:991:19\n@debugger eval code line 311 > eval:3:36\nevaluate@debugger eval code:313:16\n@debugger eval code:1:44\n@debugger eval code:1:62\n\n    at #k@http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:405:9\n    at async*#C@http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:191:41\n    at mount@http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:181:91\n    at mountApp@http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:991:19\n    at @debugger eval code line 311 > eval:3:36\n    at evaluate@debugger eval code:313:16\n    at @debugger eval code:1:44\n    at @debugger eval code:1:62\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-network.spec.ts:30:14",
+                    "location": {
+                      "file": "#k@http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js",
+                      "column": 9,
+                      "line": 405
+                    }
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "#k@http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js",
+                        "column": 9,
+                        "line": 405
+                      },
+                      "message": "Error: page.evaluate: All application entries failed for slow-html (attempt 1: slow-html.load exceeded 2000ms.).\n#k@http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:405:9\nasync*#C@http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:191:41\nmount@http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:181:91\nmountApp@http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:991:19\n@debugger eval code line 311 > eval:3:36\nevaluate@debugger eval code:313:16\n@debugger eval code:1:44\n@debugger eval code:1:62\n\n    at #k@http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:405:9\n    at async*#C@http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:191:41\n    at mount@http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:181:91\n    at mountApp@http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:991:19\n    at @debugger eval code line 311 > eval:3:36\n    at evaluate@debugger eval code:313:16\n    at @debugger eval code:1:44\n    at @debugger eval code:1:62\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-network.spec.ts:30:14"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-runtime-fixture.ts",
+                        "column": 29,
+                        "line": 77
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 0\u001b[39m\n\u001b[31m+ Received  + 5\u001b[39m\n\n\u001b[33m@@ -2,6 +2,11 @@\u001b[39m\n\u001b[2m    Object {\u001b[22m\n\u001b[2m      \"message\": \"AggregateError: All application entries failed for slow-html (attempt 1: slow-html.load exceeded 2000ms.).\",\u001b[22m\n\u001b[2m      \"name\": \"slow-html\",\u001b[22m\n\u001b[2m      \"phase\": \"mount\",\u001b[22m\n\u001b[2m    },\u001b[22m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"message\": \"AggregateError: All application entries failed for slow-html (attempt 1: slow-html.load exceeded 2000ms.).\",\u001b[39m\n\u001b[31m+     \"name\": \"slow-html\",\u001b[39m\n\u001b[31m+     \"phase\": \"mount\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[2m  ]\u001b[22m\n\n   at upstream-runtime-fixture.ts:77\n\n  75 |         return result;\n  76 |       });\n> 77 |       expect(result.errors).toEqual(result.expectedErrors);\n     |                             ^\n  78 |       expect(result.children).toBe(0);\n  79 |       expect(pageErrors).toEqual([]);\n  80 |     }\n    at Object.base.extend.runtimeCase.auto (/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-runtime-fixture.ts:77:29)"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:34:05.770Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-transport-observation",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoiZmlyZWZveCIsImJsb2NrZWQiOiJzdHlsZSIsImNsb3NlZEJlZm9yZVJlY292ZXJ5IjpmYWxzZSwibGltaXRhdGlvbiI6Ik5hdGl2ZSBwZW5kaW5nIHN0eWxlc2hlZXQgdHJhbnNwb3J0IHJlbWFpbnMgb3BlbiBhZnRlciBsaW5rL2hvc3QgcmVtb3ZhbCBpbiBhbGwgdGhyZWUgdGVzdGVkIGVuZ2luZXM7IFJ1bnRpbWUgd2FpdGluZyBhbmQgb3duZWQgRE9NIGFyZSBjYW5jZWxsZWQsIHBoeXNpY2FsIHRyYW5zcG9ydCBjYW5jZWxsYXRpb24gaXMgbm90IGNsYWltZWQuIn0="
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-runtime-n-3e6b4-overs-at-the-same-entry-URL-firefox/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-runtime-n-3e6b4-overs-at-the-same-entry-URL-firefox/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "#k@http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js",
+                    "column": 9,
+                    "line": 405
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "6d477db95fb75f7961be-76abfadadf00dd157a45",
+          "file": "upstream-batch04-runtime-network.spec.ts",
+          "line": 6,
+          "column": 53
+        },
+        {
+          "title": "W1057 HTML script timeout releases Runtime resources and recovers at the same entry URL",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3628,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:34:11.433Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-transport-observation",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoid2Via2l0IiwiYmxvY2tlZCI6InNjcmlwdCIsImNsb3NlZEJlZm9yZVJlY292ZXJ5Ijp0cnVlLCJsaW1pdGF0aW9uIjpudWxsfQ=="
+                    },
+                    {
+                      "name": "recovery-request-evidence",
+                      "contentType": "application/json",
+                      "body": "eyJyZXF1ZXN0VXJscyI6WyIvaW5kZXguaHRtbCIsIi9zbG93LmNzcyIsIi9zbG93LmpzIiwiL2luZGV4Lmh0bWwiLCIvc2xvdy5jc3MiLCIvc2xvdy5qcyJdLCJvbGRUcmFuc3BvcnRDbG9zZWQiOnRydWUsInJlY292ZXJ5IjoiU2FtZSBIVE1MIGVudHJ5IGFuZCBzY3JpcHQgVVJMIn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6d477db95fb75f7961be-32ea3e6d5d4d39fb60fd",
+          "file": "upstream-batch04-runtime-network.spec.ts",
+          "line": 6,
+          "column": 53
+        },
+        {
+          "title": "W1057 HTML style timeout releases Runtime resources and recovers at the same entry URL",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3315,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:34:15.256Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-transport-observation",
+                      "contentType": "application/json",
+                      "body": "eyJicm93c2VyIjoid2Via2l0IiwiYmxvY2tlZCI6InN0eWxlIiwiY2xvc2VkQmVmb3JlUmVjb3ZlcnkiOmZhbHNlLCJsaW1pdGF0aW9uIjoiTmF0aXZlIHBlbmRpbmcgc3R5bGVzaGVldCB0cmFuc3BvcnQgcmVtYWlucyBvcGVuIGFmdGVyIGxpbmsvaG9zdCByZW1vdmFsIGluIGFsbCB0aHJlZSB0ZXN0ZWQgZW5naW5lczsgUnVudGltZSB3YWl0aW5nIGFuZCBvd25lZCBET00gYXJlIGNhbmNlbGxlZCwgcGh5c2ljYWwgdHJhbnNwb3J0IGNhbmNlbGxhdGlvbiBpcyBub3QgY2xhaW1lZC4ifQ=="
+                    },
+                    {
+                      "name": "recovery-request-evidence",
+                      "contentType": "application/json",
+                      "body": "eyJyZXF1ZXN0VXJscyI6WyIvaW5kZXguaHRtbCIsIi9zbG93LmNzcyIsIi9zbG93LmpzIiwiL2luZGV4Lmh0bWwiLCIvc2xvdy5jc3M/cmVjb3Zlcnk9MSIsIi9zbG93LmpzIl0sIm9sZFRyYW5zcG9ydENsb3NlZCI6ZmFsc2UsInJlY292ZXJ5IjoiU2FtZSBIVE1MIGVudHJ5LCBleHBsaWNpdGx5IG5ldyBDU1MgcmV2aXNpb24gVVJMOyBvcmlnaW5hbCBwZW5kaW5nIHJlc3BvbnNlIGlzIG5vdCBlbmRlZCBieSB0aGUgc2VydmVyLiJ9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6d477db95fb75f7961be-2d9ac6fe79d2c79fcd9a",
+          "file": "upstream-batch04-runtime-network.spec.ts",
+          "line": 6,
+          "column": 53
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-09T03:33:50.549Z",
+    "duration": 28056.117000000002,
+    "expected": 5,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

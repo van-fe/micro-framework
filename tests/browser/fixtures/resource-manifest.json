@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 2,
+  "application": "resource-browser-contract",
+  "entry": "resource-entry.js",
+  "chunks": [
+    {
+      "file": "resource-entry.js",
+      "entry": true,
+      "imports": [],
+      "dynamicImports": [],
+      "integrity": "sha384-DTUJc9mnoMYWbvM91U22wwbhC6oeEmOMZfzmQ9CfLzstiiynKYLSy3A23iiJhymN"
+    }
+  ],
+  "assets": [
+    {
+      "file": "resource-entry.css",
+      "integrity": "sha384-wG0oTmVoA66/CF7iC0acBqoamRiEdmcB9em7bfv2/krwakkCw3V9wfD8FCe5XjDG"
+    }
+  ]
+}

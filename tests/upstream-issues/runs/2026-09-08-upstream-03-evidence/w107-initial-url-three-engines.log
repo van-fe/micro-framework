@@ -1,0 +1,19 @@
+
+Running 3 tests using 1 worker
+
+(node:63994) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/3] [chromium] › tests/e2e/upstream-runtime-navigation.spec.ts:85:1 › W107 keeps empty and fragment anchor clicks inside the application without navigating the host
+(node:63999) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[2/3] [firefox] › tests/e2e/upstream-runtime-navigation.spec.ts:85:1 › W107 keeps empty and fragment anchor clicks inside the application without navigating the host
+(node:64007) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[3/3] [webkit] › tests/e2e/upstream-runtime-navigation.spec.ts:85:1 › W107 keeps empty and fragment anchor clicks inside the application without navigating the host
+  3 passed (6.7s)

@@ -1,0 +1,18 @@
+
+Running 1 test using 1 worker
+
+(node:59007) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/1] [chromium] › tests/e2e/upstream-batch02-csp-diagnostic.spec.ts:23:1 › native text/plain style control without creating a runtime
+[chromium] › tests/e2e/upstream-batch02-csp-diagnostic.spec.ts:23:1 › native text/plain style control without creating a runtime
+NATIVE_CONTROL plain-style [{"directive":"style-src-elem","line":14,"source":"","node":"<style type=\"text/plain\">:host{--probe:updated}</style>"},{"directive":"style-src-elem","line":15,"source":"","node":"<style type=\"text/plain\">:host{--probe:updated}</style>"},{"directive":"style-src-elem","line":15,"source":"","node":"<style type=\"text/plain\">:host{--probe:updated}</style>"}]
+
+NATIVE_CONTROL style-comment [{"directive":"style-src-elem","line":14,"source":"","node":"<style type=\"text/plain\"><!--:host{--probe:updated}--></style>"},{"directive":"style-src-elem","line":15,"source":"","node":"<style type=\"text/plain\"><!--:host{--probe:updated}--></style>"}]
+
+NATIVE_CONTROL template-text []
+
+NATIVE_CONTROL constructed-sheet []
+
+  1 passed (3.8s)

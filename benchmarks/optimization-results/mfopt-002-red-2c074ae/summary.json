@@ -1,0 +1,93 @@
+{
+  "generatedAt": "2026-09-14T08:51:36.835Z",
+  "runId": "mfopt-002-red-2c074ae",
+  "baselineSha": "d943bea6f7bab29f9d3ac9e3fb3e7ee4f97778f5",
+  "runtime": {
+    "bun": "unknown",
+    "node": "v24.19.0",
+    "platform": "darwin",
+    "architecture": "arm64"
+  },
+  "mode": "release",
+  "status": "failed",
+  "passed": false,
+  "sentryNetworkGuard": [
+    {
+      "browser": "chromium",
+      "allowlistedOrigins": [
+        "http://127.0.0.1:4373",
+        "http://127.0.0.1:4374",
+        "http://127.0.0.1:4375"
+      ],
+      "blockedProbePaths": [
+        "/probe/beacon",
+        "/probe/fetch",
+        "/probe/iframe",
+        "/probe/worker",
+        "/probe/xhr"
+      ],
+      "fakeReceiverDeliveredPaths": [
+        "/guard.html"
+      ],
+      "activeServiceWorkers": 0
+    }
+  ],
+  "resourceOwnership": [],
+  "observerIdentity": [],
+  "cleanupFailures": [
+    {
+      "browser": "chromium",
+      "firstDispose": {
+        "status": "rejected",
+        "error": {
+          "name": "AggregateError",
+          "message": "Unable to release the application Realm bindings.",
+          "errors": [
+            {
+              "name": "Error",
+              "message": "injected media-query cleanup failure"
+            }
+          ]
+        }
+      },
+      "afterFirst": {
+        "status": "disposed",
+        "mediaHandlers": 0,
+        "resizeObservers": 1,
+        "intersectionObservers": 1,
+        "surfaceHosts": 0,
+        "realms": 0,
+        "errors": [
+          {
+            "phase": "unmount",
+            "error": {
+              "name": "AggregateError",
+              "message": "Unable to release the application Realm bindings.",
+              "errors": [
+                {
+                  "name": "Error",
+                  "message": "injected media-query cleanup failure"
+                }
+              ]
+            }
+          },
+          {
+            "phase": "dispose",
+            "error": {
+              "name": "AggregateError",
+              "message": "Unable to release the application Realm bindings.",
+              "errors": [
+                {
+                  "name": "Error",
+                  "message": "injected media-query cleanup failure"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "secondDispose": "resolved"
+    }
+  ],
+  "metrics": []
+}

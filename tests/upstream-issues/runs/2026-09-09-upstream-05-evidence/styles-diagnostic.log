@@ -1,0 +1,97 @@
+
+Running 1 test using 1 worker
+
+(node:55708) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/1] [webkit] › tests/e2e/upstream-batch04-styles.spec.ts:6:1 › Q3018 preserves module initialized adjacent styles across keepAlive hide return and disposal recreation
+[webkit] › tests/e2e/upstream-batch04-styles.spec.ts:6:1 › Q3018 preserves module initialized adjacent styles across keepAlive hide return and disposal recreation
+Q3018_DIAGNOSTIC 0 [
+  {
+    text: '.batch04-style-first { color: rgb(11,22,33) }',
+    media: '',
+    rawMedia: 'not all',
+    sheetMedia: '',
+    disabled: false,
+    rules: [ '.batch04-style-first { color: rgb(11, 22, 33); }' ],
+    connected: true,
+    owner: true
+  },
+  {
+    text: '.batch04-style-second { color: rgb(44,55,66); width: 84px }',
+    media: '',
+    rawMedia: 'not all',
+    sheetMedia: '',
+    disabled: false,
+    rules: [
+      '.batch04-style-second { color: rgb(44, 55, 66); width: 84px; }'
+    ],
+    connected: true,
+    owner: true
+  }
+]
+
+Q3018_DIAGNOSTIC 1 [
+  {
+    text: '.batch04-style-first { color: rgb(11,22,33) }',
+    media: '',
+    rawMedia: 'not all',
+    sheetMedia: '',
+    disabled: false,
+    rules: [ '.batch04-style-first { color: rgb(11, 22, 33); }' ],
+    connected: true,
+    owner: true
+  },
+  {
+    text: '.batch04-style-second { color: rgb(44,55,66); width: 84px }',
+    media: '',
+    rawMedia: 'not all',
+    sheetMedia: '',
+    disabled: false,
+    rules: [
+      '.batch04-style-second { color: rgb(44, 55, 66); width: 84px; }'
+    ],
+    connected: true,
+    owner: true
+  }
+]
+
+  1) [webkit] › tests/e2e/upstream-batch04-styles.spec.ts:6:1 › Q3018 preserves module initialized adjacent styles across keepAlive hide return and disposal recreation 
+
+    Error: expect(locator).toHaveCSS(expected) failed
+
+    Locator:  locator('#adjacent-style-slot .batch04-style-first')
+    Expected: "rgb(11, 22, 33)"
+    Received: "rgb(0, 0, 0)"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCSS" with timeout 5000ms
+      - waiting for locator('#adjacent-style-slot .batch04-style-first')
+        14 × locator resolved to <p class="batch04-style-first">First style</p>
+           - unexpected value "rgb(0, 0, 0)"
+
+
+      53 |     }));
+      54 |     for (let cycle = 0; cycle < 3; cycle++) {
+    > 55 |       await expect(page.locator('#adjacent-style-slot .batch04-style-first')).toHaveCSS('color', 'rgb(11, 22, 33)');
+         |                                                                               ^
+      56 |       await expect(page.locator('#adjacent-style-slot .batch04-style-second')).toHaveCSS('color', 'rgb(44, 55, 66)');
+      57 |       await expect(page.locator('#adjacent-style-slot .batch04-style-second')).toHaveCSS('width', '84px');
+      58 |       await page.locator('#adjacent-style-slot button').click();
+        at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-styles.spec.ts:55:79
+
+    Error Context: test-results/upstream-batch04-styles-Q3-7152d-urn-and-disposal-recreation-webkit/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/upstream-batch04-styles-Q3-7152d-urn-and-disposal-recreation-webkit/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/upstream-batch04-styles-Q3-7152d-urn-and-disposal-recreation-webkit/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+  1 failed
+    [webkit] › tests/e2e/upstream-batch04-styles.spec.ts:6:1 › Q3018 preserves module initialized adjacent styles across keepAlive hide return and disposal recreation 

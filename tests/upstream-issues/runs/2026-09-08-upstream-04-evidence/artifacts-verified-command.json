@@ -1,0 +1,14 @@
+{
+  "name": "artifacts-verified",
+  "command": [
+    "bun",
+    "run",
+    "check:artifacts"
+  ],
+  "cwd": "/Users/fanfangbo/workspace/micro-framework",
+  "startedAt": "2026-09-08T11:02:06.503543+00:00",
+  "completedAt": "2026-09-08T11:02:06.887221+00:00",
+  "durationSeconds": 0.383624375,
+  "exitCode": 1,
+  "log": "tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/artifacts-verified.log"
+}

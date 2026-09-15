@@ -1,0 +1,99 @@
+
+Running 6 tests using 1 worker
+
+(node:24670) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/6] [chromium] › tests/e2e/upstream-batch02-runtime-clipboard.spec.ts:19:3 › W298 mediates native clipboard.readText through focused host activation and policy (allowed=false)
+  1) [chromium] › tests/e2e/upstream-batch02-runtime-clipboard.spec.ts:19:3 › W298 mediates native clipboard.readText through focused host activation and policy (allowed=false) 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 8
+
+    - Array []
+    + Array [
+    +   Object {
+    +     "active": true,
+    +     "focused": false,
+    +     "host": false,
+    +     "receiver": true,
+    +   },
+    + ]
+
+      74 |       // An automatic effect has no activation, even when the capability is allowlisted.
+      75 |       await expect(output).toContainText("NotAllowedError");
+    > 76 |       expect(await page.evaluate(() => window.__clipboardCase__!.calls)).toEqual([]);
+         |                                                                          ^
+      77 |       await page.getByRole("button", { name: "Read controlled clipboard" }).click();
+      78 |       if (allowed) {
+      79 |         await expect(output).toHaveText("Controlled clipboard text");
+        at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-clipboard.spec.ts:76:74
+
+    Error Context: test-results/upstream-batch02-runtime-c-e49e2-n-and-policy-allowed-false--chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/upstream-batch02-runtime-c-e49e2-n-and-policy-allowed-false--chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/upstream-batch02-runtime-c-e49e2-n-and-policy-allowed-false--chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+(node:24685) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[2/6] [chromium] › tests/e2e/upstream-batch02-runtime-clipboard.spec.ts:19:3 › W298 mediates native clipboard.readText through focused host activation and policy (allowed=true)
+  2) [chromium] › tests/e2e/upstream-batch02-runtime-clipboard.spec.ts:19:3 › W298 mediates native clipboard.readText through focused host activation and policy (allowed=true) 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 8
+
+    - Array []
+    + Array [
+    +   Object {
+    +     "active": true,
+    +     "focused": false,
+    +     "host": false,
+    +     "receiver": true,
+    +   },
+    + ]
+
+      74 |       // An automatic effect has no activation, even when the capability is allowlisted.
+      75 |       await expect(output).toContainText("NotAllowedError");
+    > 76 |       expect(await page.evaluate(() => window.__clipboardCase__!.calls)).toEqual([]);
+         |                                                                          ^
+      77 |       await page.getByRole("button", { name: "Read controlled clipboard" }).click();
+      78 |       if (allowed) {
+      79 |         await expect(output).toHaveText("Controlled clipboard text");
+        at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-clipboard.spec.ts:76:74
+
+    Error Context: test-results/upstream-batch02-runtime-c-48078-on-and-policy-allowed-true--chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/upstream-batch02-runtime-c-48078-on-and-policy-allowed-true--chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/upstream-batch02-runtime-c-48078-on-and-policy-allowed-true--chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+(node:24690) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[3/6] [chromium] › tests/e2e/upstream-batch02-runtime-loading.spec.ts:37:3 › Q1990 retries the identical HTML entry after offline recovery and sends a fresh HTTP request
+[4/6] [chromium] › tests/e2e/upstream-batch02-runtime-loading.spec.ts:37:3 › Q1885 retries the identical HTML entry after server-stopped recovery and sends a fresh HTTP request
+[5/6] [chromium] › tests/e2e/upstream-batch02-runtime-loading.spec.ts:56:1 › Q2166 disposes a cached application and loads a new deployment and failed-chunk recovery at the identical entry URL
+[6/6] [chromium] › tests/e2e/upstream-batch02-runtime-loading.spec.ts:82:1 › W1028 reports a removed deployment chunk to the runtime error subscriber and permits explicit new-entry recovery
+  2 failed
+    [chromium] › tests/e2e/upstream-batch02-runtime-clipboard.spec.ts:19:3 › W298 mediates native clipboard.readText through focused host activation and policy (allowed=false) 
+    [chromium] › tests/e2e/upstream-batch02-runtime-clipboard.spec.ts:19:3 › W298 mediates native clipboard.readText through focused host activation and policy (allowed=true) 
+  4 passed (5.3s)

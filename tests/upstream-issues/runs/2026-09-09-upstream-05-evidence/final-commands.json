@@ -1,0 +1,121 @@
+[
+  {
+    "phase": "architecture",
+    "argv": [
+      "bun",
+      "run",
+      "check:architecture"
+    ],
+    "env": {},
+    "startedAt": "2026-09-09T03:52:00.917725+00:00",
+    "finishedAt": "2026-09-09T03:52:00.972490+00:00",
+    "exitCode": 0,
+    "log": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-architecture.log"
+  },
+  {
+    "phase": "typecheck",
+    "argv": [
+      "bun",
+      "run",
+      "typecheck"
+    ],
+    "env": {},
+    "startedAt": "2026-09-09T03:52:00.972825+00:00",
+    "finishedAt": "2026-09-09T03:52:10.718147+00:00",
+    "exitCode": 0,
+    "log": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-typecheck.log"
+  },
+  {
+    "phase": "build",
+    "argv": [
+      "bun",
+      "run",
+      "build"
+    ],
+    "env": {},
+    "startedAt": "2026-09-09T03:52:10.718568+00:00",
+    "finishedAt": "2026-09-09T03:52:15.811495+00:00",
+    "exitCode": 0,
+    "log": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-build.log"
+  },
+  {
+    "phase": "unit",
+    "argv": [
+      "bun",
+      "run",
+      "test:unit",
+      "--reporter=verbose",
+      "--reporter=json",
+      "--outputFile=/Users/fanfangbo/workspace/micro-framework/tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-unit.json"
+    ],
+    "env": {},
+    "startedAt": "2026-09-09T03:52:15.811827+00:00",
+    "finishedAt": "2026-09-09T03:52:17.040765+00:00",
+    "exitCode": 0,
+    "log": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-unit.log"
+  },
+  {
+    "phase": "browser",
+    "argv": [
+      "bun",
+      "run",
+      "test:browser",
+      "--reporter=verbose",
+      "--reporter=json",
+      "--outputFile=/Users/fanfangbo/workspace/micro-framework/tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-browser.json"
+    ],
+    "env": {},
+    "startedAt": "2026-09-09T03:52:17.041080+00:00",
+    "finishedAt": "2026-09-09T03:52:30.498553+00:00",
+    "exitCode": 0,
+    "log": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-browser.log"
+  },
+  {
+    "phase": "e2e",
+    "argv": [
+      "bunx",
+      "playwright",
+      "test",
+      "--max-failures=1",
+      "--reporter=line,json"
+    ],
+    "env": {
+      "PLAYWRIGHT_JSON_OUTPUT_NAME": "/Users/fanfangbo/workspace/micro-framework/tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-e2e.json"
+    },
+    "startedAt": "2026-09-09T03:52:30.499060+00:00",
+    "finishedAt": "2026-09-09T03:59:26.262502+00:00",
+    "exitCode": 0,
+    "log": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-e2e.log"
+  },
+  {
+    "phase": "production",
+    "argv": [
+      "bunx",
+      "playwright",
+      "test",
+      "--config",
+      "playwright.production.config.ts",
+      "--reporter=line,json"
+    ],
+    "env": {
+      "PLAYWRIGHT_JSON_OUTPUT_NAME": "/Users/fanfangbo/workspace/micro-framework/tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-production.json"
+    },
+    "startedAt": "2026-09-09T03:59:26.263585+00:00",
+    "finishedAt": "2026-09-09T03:59:46.395527+00:00",
+    "exitCode": 0,
+    "log": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-production.log"
+  },
+  {
+    "phase": "artifacts",
+    "argv": [
+      "bun",
+      "run",
+      "check:artifacts"
+    ],
+    "env": {},
+    "startedAt": "2026-09-09T03:59:46.395882+00:00",
+    "finishedAt": "2026-09-09T03:59:46.715444+00:00",
+    "exitCode": 1,
+    "log": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-artifacts.log"
+  }
+]

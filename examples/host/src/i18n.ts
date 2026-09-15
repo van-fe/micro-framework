@@ -1,0 +1,158 @@
+export type Locale = "zh-CN" | "en-US";
+export type WorkspaceView = "overview" | "fulfillment" | "customers" | "runtime";
+
+interface WorkspaceMessage {
+  eyebrow: string;
+  title: string;
+  description: string;
+}
+
+const messages: Record<Locale, Record<string, string>> = {
+  "zh-CN": {
+    "nav.overview": "总览",
+    "nav.fulfillment": "履约",
+    "nav.customers": "客户",
+    "nav.runtime": "运行时",
+    "workspace.label": "工作区",
+    "workspace.region": "北美地区",
+    "workspace.mirror": "生产镜像",
+    "workspace.operators": "4 位运营人员在线",
+    "operator.local": "本地工作区",
+    "operator.session": "开发会话",
+    "top.operations": "运营中心",
+    "top.fulfillment": "履约驾驶舱",
+    "top.health": "所有系统运行正常",
+    "top.refresh": "刷新数据",
+    "heading.live": "实时商业运营",
+    "heading.liveBadge": "实时",
+    "filters.market": "市场",
+    "filters.locale": "语言",
+    "market.na": "北美",
+    "market.eu": "欧洲",
+    "market.apac": "亚太",
+    "period.live": "实时",
+    "period.7d": "7 天",
+    "period.30d": "30 天",
+    "kpi.gmv": "商品交易总额",
+    "kpi.gmvSub": "较前 24 小时",
+    "kpi.orders": "履约中订单",
+    "kpi.ordersSub": "94.8% 在 SLA 内",
+    "kpi.risk": "风险运输单",
+    "kpi.riskTrend": "今日减少 18",
+    "kpi.riskSub": "32 单需要人工复核",
+    "kpi.automation": "自动化覆盖率",
+    "kpi.target": "目标 90%",
+    "panel.fulfillmentOwner": "履约团队",
+    "panel.fulfillment": "优先订单队列",
+    "panel.intelligenceOwner": "商业智能",
+    "panel.intelligence": "营收与履约信号",
+    "panel.customerOwner": "客户成功",
+    "panel.customer": "客户风险工作台",
+    "panel.legacyOwner": "传统业务系统",
+    "panel.legacy": "Vue 2 客户运营台",
+    "runtime.title": "运行时隔离",
+    "runtime.description": "每个应用都拥有独立的 iframe Realm 与 ShadowRoot。",
+    "runtime.hostGlobal": "宿主全局",
+    "runtime.lastSync": "最近同步",
+    "sync.justNow": "刚刚",
+  },
+  "en-US": {
+    "nav.overview": "Overview",
+    "nav.fulfillment": "Fulfillment",
+    "nav.customers": "Customers",
+    "nav.runtime": "Runtime",
+    "workspace.label": "Workspace",
+    "workspace.region": "North America",
+    "workspace.mirror": "Production mirror",
+    "workspace.operators": "4 operators online",
+    "operator.local": "Local workspace",
+    "operator.session": "Development session",
+    "top.operations": "Operations",
+    "top.fulfillment": "Fulfillment center",
+    "top.health": "All systems operational",
+    "top.refresh": "Refresh data",
+    "heading.live": "Live commerce operations",
+    "heading.liveBadge": "Live",
+    "filters.market": "Market",
+    "filters.locale": "Language",
+    "market.na": "North America",
+    "market.eu": "Europe",
+    "market.apac": "Asia Pacific",
+    "period.live": "Live",
+    "period.7d": "7 days",
+    "period.30d": "30 days",
+    "kpi.gmv": "Gross merchandise value",
+    "kpi.gmvSub": "vs. previous 24 hours",
+    "kpi.orders": "Orders in flight",
+    "kpi.ordersSub": "94.8% within SLA",
+    "kpi.risk": "At-risk shipments",
+    "kpi.riskTrend": "↓ 18 today",
+    "kpi.riskSub": "32 need operator review",
+    "kpi.automation": "Automation coverage",
+    "kpi.target": "Target 90%",
+    "panel.fulfillmentOwner": "Fulfillment team",
+    "panel.fulfillment": "Priority order queue",
+    "panel.intelligenceOwner": "Commerce intelligence",
+    "panel.intelligence": "Revenue & fulfillment signals",
+    "panel.customerOwner": "Customer success",
+    "panel.customer": "Customer risk desk",
+    "panel.legacyOwner": "Legacy operations",
+    "panel.legacy": "Vue 2 customer console",
+    "runtime.title": "Runtime isolation",
+    "runtime.description": "Every application owns an iframe Realm and ShadowRoot.",
+    "runtime.hostGlobal": "Host global",
+    "runtime.lastSync": "Last synchronized",
+    "sync.justNow": "just now",
+  },
+};
+
+export const workspaceMessages: Record<Locale, Record<WorkspaceView, WorkspaceMessage>> = {
+  "zh-CN": {
+    overview: {
+      eyebrow: "实时商业运营",
+      title: "履约运营驾驶舱",
+      description: "订单、营收信号与客户风险，由四个独立团队维护的微应用共同组成。",
+    },
+    fulfillment: {
+      eyebrow: "履约工作区",
+      title: "订单履约运营",
+      description: "优先处理高风险订单，并将运营决策与实时营收信号关联起来。",
+    },
+    customers: {
+      eyebrow: "客户成功工作区",
+      title: "客户风险工作台",
+      description: "同时对比 Vue 3 与 Vue 2 业务应用中的账户健康度、续约风险和下一步行动。",
+    },
+    runtime: {
+      eyebrow: "平台工作区",
+      title: "运行时健康与隔离",
+      description: "检查应用挂载状态、宿主边界以及当前组合页面的同步情况。",
+    },
+  },
+  "en-US": {
+    overview: {
+      eyebrow: "Live commerce operations",
+      title: "Fulfillment command center",
+      description: "Orders, revenue signals, and customer risk—composed from four independently owned applications.",
+    },
+    fulfillment: {
+      eyebrow: "Fulfillment workspace",
+      title: "Order operations",
+      description: "Prioritize at-risk orders and connect operational decisions to real-time revenue signals.",
+    },
+    customers: {
+      eyebrow: "Customer success workspace",
+      title: "Customer risk desk",
+      description: "Compare account health, renewal exposure, and next actions across Vue 3 and Vue 2 applications.",
+    },
+    runtime: {
+      eyebrow: "Platform workspace",
+      title: "Runtime health & isolation",
+      description: "Inspect application mount status, host boundaries, and the synchronization state of this composition.",
+    },
+  },
+};
+
+export function translate(locale: Locale, key: string): string {
+  return messages[locale][key] ?? key;
+}

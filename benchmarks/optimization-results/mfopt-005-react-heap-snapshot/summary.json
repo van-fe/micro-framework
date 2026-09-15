@@ -1,0 +1,329 @@
+{
+  "generatedAt": "2026-09-14T10:13:56.734Z",
+  "runId": "mfopt-005-react-heap-snapshot",
+  "runtime": {
+    "bun": "unknown",
+    "node": "v24.19.0",
+    "platform": "darwin",
+    "architecture": "arm64"
+  },
+  "mode": "release",
+  "status": "failed",
+  "passed": false,
+  "sentryNetworkGuard": [
+    {
+      "browser": "chromium",
+      "allowlistedOrigins": [
+        "http://127.0.0.1:4373",
+        "http://127.0.0.1:4374",
+        "http://127.0.0.1:4375",
+        "http://127.0.0.1:4376",
+        "http://127.0.0.1:4377",
+        "http://127.0.0.1:4378"
+      ],
+      "blockedProbePaths": [
+        "/probe/beacon",
+        "/probe/fetch",
+        "/probe/iframe",
+        "/probe/worker",
+        "/probe/xhr"
+      ],
+      "fakeReceiverDeliveredPaths": [
+        "/guard.html"
+      ],
+      "activeServiceWorkers": 0
+    }
+  ],
+  "resourceOwnership": [],
+  "observerIdentity": [],
+  "cleanupFailures": [],
+  "cleanupRecovery": [],
+  "entryCache": [],
+  "entryCacheComparisons": [],
+  "styleScans": [],
+  "styleCompatibility": [],
+  "componentCompatibility": [],
+  "componentMemory": [
+    {
+      "browser": "chromium",
+      "sessions": [
+        {
+          "session": 1,
+          "warmupIterations": 10,
+          "measuredIterations": 5,
+          "settleMs": 1000,
+          "componentFilter": "react-antd",
+          "explicitGc": true,
+          "rssBytes": null,
+          "rssReason": "Chromium CDP does not expose a stable per-renderer RSS metric; RSS is not inferred from JS heap.",
+          "heapGrowthBytes": 15643904,
+          "samples": [
+            {
+              "label": "after-warmup",
+              "heapUsedBytes": 20878244,
+              "heapTotalBytes": 23134208,
+              "documents": 12,
+              "nodes": 2564,
+              "jsEventListeners": 2906,
+              "domElements": 13,
+              "hosts": 0,
+              "iframes": 0,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              }
+            },
+            {
+              "label": "after-1",
+              "heapUsedBytes": 24024276,
+              "heapTotalBytes": 25231360,
+              "documents": 13,
+              "nodes": 2816,
+              "jsEventListeners": 3195,
+              "domElements": 13,
+              "hosts": 0,
+              "iframes": 0,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              }
+            },
+            {
+              "label": "after-2",
+              "heapUsedBytes": 27113328,
+              "heapTotalBytes": 28639232,
+              "documents": 14,
+              "nodes": 3068,
+              "jsEventListeners": 3484,
+              "domElements": 13,
+              "hosts": 0,
+              "iframes": 0,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              }
+            },
+            {
+              "label": "after-3",
+              "heapUsedBytes": 30233564,
+              "heapTotalBytes": 31784960,
+              "documents": 15,
+              "nodes": 3320,
+              "jsEventListeners": 3773,
+              "domElements": 13,
+              "hosts": 0,
+              "iframes": 0,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              }
+            },
+            {
+              "label": "after-4",
+              "heapUsedBytes": 33351296,
+              "heapTotalBytes": 34406400,
+              "documents": 16,
+              "nodes": 3572,
+              "jsEventListeners": 4062,
+              "domElements": 13,
+              "hosts": 0,
+              "iframes": 0,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              }
+            },
+            {
+              "label": "after-5",
+              "heapUsedBytes": 36522148,
+              "heapTotalBytes": 38076416,
+              "documents": 17,
+              "nodes": 3824,
+              "jsEventListeners": 4351,
+              "domElements": 13,
+              "hosts": 0,
+              "iframes": 0,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              }
+            }
+          ],
+          "iterations": [
+            {
+              "iteration": 1,
+              "component": "react-antd",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 34,
+              "disposeDurationMs": 23.699999928474426,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 2,
+              "component": "react-antd",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 33.799999952316284,
+              "disposeDurationMs": 22.5,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 3,
+              "component": "react-antd",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 35.699999928474426,
+              "disposeDurationMs": 25.09999990463257,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 4,
+              "component": "react-antd",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 35.200000047683716,
+              "disposeDurationMs": 25.699999928474426,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 5,
+              "component": "react-antd",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 35.199999928474426,
+              "disposeDurationMs": 25.699999928474426,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            }
+          ],
+          "cleanup": {
+            "errors": [],
+            "hosts": 0,
+            "iframes": 0
+          }
+        }
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "name": "component-memory-session-1",
+      "browser": "chromium",
+      "samples": 5,
+      "unit": "bytes",
+      "min": 15643904,
+      "p50": 15643904,
+      "p95": 15643904,
+      "max": 15643904,
+      "threshold": 25165824,
+      "passed": false,
+      "details": {
+        "warmDocuments": 12,
+        "finalDocuments": 17,
+        "warmNodes": 2564,
+        "finalNodes": 3824,
+        "mountP50Ms": 35.199999928474426,
+        "mountP95Ms": 35.699999928474426,
+        "disposeP50Ms": 25.09999990463257,
+        "disposeP95Ms": 25.699999928474426,
+        "cleanupErrors": 0,
+        "cleanupErrorPhases": "[]"
+      }
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "useDefineForClassFields": true,
+    "lib": [
+      "ES2022",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "paths": {
+      "@micro-framework/adapter-react": [
+        "./packages/adapter-react/src/index.ts"
+      ],
+      "@micro-framework/adapter-vanilla": [
+        "./packages/adapter-vanilla/src/index.ts"
+      ],
+      "@micro-framework/adapter-vue": [
+        "./packages/adapter-vue/src/index.ts"
+      ],
+      "@micro-framework/adapter-vue2": [
+        "./packages/adapter-vue2/src/index.ts"
+      ],
+      "@micro-framework/capability-broker": [
+        "./packages/capability-broker/src/index.ts"
+      ],
+      "@micro-framework/channel": [
+        "./packages/channel/src/index.ts"
+      ],
+      "@micro-framework/cli": [
+        "./packages/cli/src/index.ts"
+      ],
+      "@micro-framework/compat-api": [
+        "./packages/compat-api/src/index.ts"
+      ],
+      "@micro-framework/contracts": [
+        "./packages/contracts/src/index.ts"
+      ],
+      "@micro-framework/deployment-diagnostics": [
+        "./packages/deployment-diagnostics/src/index.ts"
+      ],
+      "@micro-framework/devtools": [
+        "./packages/devtools/src/index.ts"
+      ],
+      "@micro-framework/dom-bridge": [
+        "./packages/dom-bridge/src/index.ts"
+      ],
+      "@micro-framework/dom-guard": [
+        "./packages/dom-guard/src/index.ts"
+      ],
+      "@micro-framework/dom-surface": [
+        "./packages/dom-surface/src/index.ts"
+      ],
+      "@micro-framework/entry-resolver": [
+        "./packages/entry-resolver/src/index.ts"
+      ],
+      "@micro-framework/migration-tools": [
+        "./packages/migration-tools/src/index.ts"
+      ],
+      "@micro-framework/offline-cache": [
+        "./packages/offline-cache/src/index.ts"
+      ],
+      "@micro-framework/realm-host": [
+        "./packages/realm-host/src/index.ts"
+      ],
+      "@micro-framework/runtime": [
+        "./packages/runtime/src/index.ts"
+      ],
+      "@micro-framework/runtime-core": [
+        "./packages/runtime-core/src/index.ts"
+      ],
+      "@micro-framework/shared-resolver": [
+        "./packages/shared-resolver/src/index.ts"
+      ],
+      "@micro-framework/server-registry": [
+        "./packages/server-registry/src/index.ts"
+      ],
+      "@micro-framework/ssr": [
+        "./packages/ssr/src/index.ts"
+      ],
+      "@micro-framework/storage": [
+        "./packages/storage/src/index.ts"
+      ],
+      "@micro-framework/strong-isolation": [
+        "./packages/strong-isolation/src/index.ts"
+      ],
+      "@micro-framework/visual-bridge": [
+        "./packages/visual-bridge/src/index.ts"
+      ],
+      "@micro-framework/vite-plugin": [
+        "./packages/vite-plugin/src/index.ts"
+      ],
+      "@micro-framework/adapter-angular": [
+        "./packages/adapter-angular/src/index.ts"
+      ],
+      "@micro-framework/webpack-plugin": [
+        "./packages/webpack-plugin/src/index.ts"
+      ],
+      "@micro-framework/document-write": [
+        "./packages/document-write/src/index.ts"
+      ]
+    },
+    "moduleDetection": "force",
+    "allowImportingTsExtensions": false,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "skipLibCheck": true
+  }
+}

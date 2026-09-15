@@ -1,0 +1,29 @@
+import { test, expect, isolateBrowserProcess } from './browser-process-fixture';
+isolateBrowserProcess(import.meta.url);
+
+test('Q3018 native stylesheet media control compares repeated shadow roots with CSSOM and reflected activation', async ({page}) => {
+  await page.goto('/benchmark.html');
+  const results = await page.evaluate(async () => {
+    const branches = [];
+    for (const reflected of [false, true]) {
+      const generations = [];
+      for (let generation = 0; generation < 2; generation++) {
+        const host = document.body.appendChild(document.createElement('main'));
+        const root = host.attachShadow({mode:'open'});
+        const style = document.createElement('style'); style.media = 'not all';
+        style.textContent = `.native-media-${reflected} { color: rgb(11,22,33) }`;
+        root.append(style);
+        const before = {media:style.sheet!.media.mediaText,rules:[...style.sheet!.cssRules].map(rule => rule.cssText)};
+        if (reflected) style.media = ''; else if (style.sheet!.media.mediaText !== '') style.sheet!.media.mediaText = '';
+        const node = document.createElement('p'); node.className = `native-media-${reflected}`; node.textContent = 'Native control'; root.append(node);
+        await new Promise<void>(resolve => requestAnimationFrame(() => resolve()));
+        generations.push({before,color:getComputedStyle(node).color,raw:style.getAttribute('media'),sheetMedia:style.sheet!.media.mediaText});
+        host.remove();
+      }
+      branches.push({reflected,generations});
+    }
+    return branches;
+  });
+  console.log('Q3018_NATIVE_MEDIA', JSON.stringify(results));
+  expect(results[1]!.generations.map(item => item.color)).toEqual(['rgb(11, 22, 33)','rgb(11, 22, 33)']);
+});

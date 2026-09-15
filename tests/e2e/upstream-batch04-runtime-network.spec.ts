@@ -1,0 +1,47 @@
+import { isolateBrowserProcess } from './browser-process-fixture';
+import { addSlot, expect, test } from './upstream-batch04-runtime-network-fixture';
+
+isolateBrowserProcess(import.meta.url);
+
+for (const blocked of ['script', 'style'] as const) test(blocked === 'script' ? 'W1057 HTML script timeout cancels transport and recovers at the same URL' : 'W1057 HTML stylesheet timeout-only releases Runtime resources with native transport remaining pending', async ({ page, slowDeployment }, testInfo) => {
+  slowDeployment.blocked = blocked;
+  await addSlot(page, 'html-timeout-slot');
+  await page.evaluate(async url => {
+    const s = window.__upstreamRuntime__!; await s.runtime.destroy();
+    s.runtime = window.__createMicroFrameBenchmarkRuntime__!({ storage: { persistent: false }, timeouts: { load: 2000 } });
+    s.runtime.errors.subscribe(({ name, phase, error }) => s.errors.push({ name, phase, message: String(error) }));
+    s.operations.push(s.runtime.mountApp({ name: 'slow-html', container: s.slots[0]!,
+      entry: { type: 'html', url, globalName: 'batch04Slow' } }).then(handle => { s.handles.push(handle); }, error => {
+      s.calls.failed = 1; s.calls.timeout = String(error).includes('exceeded') ? 1 : 0; s.expectedErrors = [...s.errors];
+    }));
+  }, slowDeployment.url);
+  const resource = blocked === 'script' ? '/slow.js' : '/slow.css';
+  await expect.poll(() => slowDeployment.requests.includes(resource)).toBe(true);
+  await expect.poll(() => page.evaluate(() => window.__upstreamRuntime__!.calls.failed)).toBe(1);
+  expect(await page.evaluate(() => window.__upstreamRuntime__!.calls.timeout)).toBe(1);
+  await expect(page.locator('#html-timeout-slot iframe, #html-timeout-slot micro-app-host')).toHaveCount(0);
+  // Must precede server recovery/cleanup; ending it ourselves is not cancellation evidence.
+  if (blocked === 'script') await expect.poll(() => slowDeployment.aborted).toContain(resource);
+  await testInfo.attach('runtime-transport-observation', { contentType: 'application/json', body: JSON.stringify({
+    browser: testInfo.project.name, blocked, closedBeforeRecovery: slowDeployment.aborted.includes(resource),
+    limitation: blocked === 'style' ? 'Native pending stylesheet transport remains open after link/host removal in all three tested engines; Runtime waiting and owned DOM are cancelled, physical transport cancellation is not claimed.' : null,
+  }) });
+  // Native controls show stylesheet requests survive removal. Recovery failures
+  // are archived; this branch establishes only the timeout/cleanup contract.
+  if (blocked === 'style') return;
+  slowDeployment.slow = false;
+  await page.evaluate(async url => {
+    const s = window.__upstreamRuntime__!;
+    s.handles.push(await s.runtime.mountApp({ name: 'slow-html', container: s.slots[0]!,
+      entry: { type: 'html', url, globalName: 'batch04Slow' } }));
+  }, slowDeployment.url);
+  const button = page.getByRole('button', { name: 'HTML recovered: 0', exact: true });
+  await expect(button).toHaveCSS('color', 'rgb(12, 34, 56)');
+  await button.click();
+  await expect(page.getByRole('button', { name: 'HTML recovered: 1', exact: true })).toBeVisible();
+  expect(slowDeployment.requests.filter(path => path === resource)).toHaveLength(2);
+  await testInfo.attach('recovery-request-evidence', { contentType: 'application/json', body: JSON.stringify({
+    requestUrls: slowDeployment.requestUrls, oldTransportClosed: slowDeployment.aborted.includes(resource),
+    recovery: 'Same HTML entry and script URL',
+  }) });
+});

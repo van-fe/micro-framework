@@ -1,0 +1,6 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": { "paths": {}, "noEmit": false, "outDir": ".compiled", "rootDir": "src", "experimentalDecorators": true, "sourceMap": true, "declaration": false, "types": [] },
+  "angularCompilerOptions": { "compilationMode": "full", "strictTemplates": true },
+  "include": ["src/**/*.ts"]
+}

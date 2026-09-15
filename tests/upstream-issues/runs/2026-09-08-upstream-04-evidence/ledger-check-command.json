@@ -1,0 +1,14 @@
+{
+  "name": "ledger-check",
+  "command": [
+    "bun",
+    "scripts/upstream-issues.mjs",
+    "check"
+  ],
+  "cwd": "/Users/fanfangbo/workspace/micro-framework",
+  "startedAt": "2026-09-08T11:10:55.763330+00:00",
+  "completedAt": "2026-09-08T11:10:55.786682+00:00",
+  "durationSeconds": 0.0233155,
+  "exitCode": 0,
+  "log": "tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/ledger-check.log"
+}

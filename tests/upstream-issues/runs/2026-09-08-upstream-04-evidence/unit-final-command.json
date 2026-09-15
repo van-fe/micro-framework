@@ -1,0 +1,16 @@
+{
+  "name": "unit-final",
+  "command": [
+    "bun",
+    "run",
+    "test:unit",
+    "--reporter=json",
+    "--outputFile=tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/unit-final.json"
+  ],
+  "cwd": "/Users/fanfangbo/workspace/micro-framework",
+  "startedAt": "2026-09-08T10:56:02.798774+00:00",
+  "completedAt": "2026-09-08T10:56:04.525578+00:00",
+  "durationSeconds": 1.7268038749999999,
+  "exitCode": 0,
+  "log": "tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/unit-final.log"
+}

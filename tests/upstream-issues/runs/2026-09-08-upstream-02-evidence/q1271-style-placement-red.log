@@ -1,0 +1,96 @@
+$ vitest run --config vitest.browser.config.ts tests/browser/upstream-readiness-cascade.browser.test.ts -t "Q1271" "--browser.api.port=63317"
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - import "./tests/browser/server/upstream-order-fixture" without a file extension (vitest.browser.config.ts:3:38). Add the file extension
+  - import "./tests/browser/server/upstream-credentials-fixture" without a file extension (vitest.browser.config.ts:4:44). Add the file extension
+  - import "./tests/browser/server/upstream-readiness-fixture" without a file extension (vitest.browser.config.ts:5:42). Add the file extension
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+
+ RUN  v4.1.11 /Users/fanfangbo/workspace/micro-framework
+
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - import "./tests/browser/server/upstream-order-fixture" without a file extension (vitest.browser.config.ts:3:38). Add the file extension
+  - import "./tests/browser/server/upstream-credentials-fixture" without a file extension (vitest.browser.config.ts:4:44). Add the file extension
+  - import "./tests/browser/server/upstream-readiness-fixture" without a file extension (vitest.browser.config.ts:5:42). Add the file extension
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+ ❯ |browser-chromium| tests/browser/upstream-readiness-cascade.browser.test.ts (2 tests | 1 failed | 1 skipped) 132ms
+     × Q1271 retains static body style position when async head styles arrive 132ms
+ ❯ |browser-webkit| tests/browser/upstream-readiness-cascade.browser.test.ts (2 tests | 1 failed | 1 skipped) 114ms
+     × Q1271 retains static body style position when async head styles arrive 113ms
+ ❯ |browser-firefox| tests/browser/upstream-readiness-cascade.browser.test.ts (2 tests | 1 failed | 1 skipped) 128ms
+     × Q1271 retains static body style position when async head styles arrive 128ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 3 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |browser-chromium| tests/browser/upstream-readiness-cascade.browser.test.ts > upstream application readiness and HTML cascade > Q1271 retains static body style position when async head styles arrive
+AssertionError: expected undefined to be 'all' // Object.is equality
+
+Failure screenshot:
+  - tests/browser/__screenshots__/upstream-readiness-cascade.browser.test.ts/upstream-application-readiness-and-HTML-cascade-Q1271-retains-static-body-style-position-when-async-head-styles-arrive-1.png
+
+- Expected:
+"all"
+
++ Received:
+undefined
+
+ ❯ tests/browser/upstream-readiness-cascade.browser.test.ts:22:95
+     20|     const { frame, surface } = await load("/upstream-body-cascade.html…
+     21|     await vi.waitFor(() => expect(Reflect.get(frame, "asyncHeadReady")…
+     22|     expect(surface.body.querySelector("#style-location > #body-sheet")…
+       |                                                                                               ^
+     23|     expect(surface.head.querySelector("#async-head-sheet")).not.toBeNu…
+     24|     expect(getComputedStyle(surface.body.querySelector(".upstream-casc…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/3]⎯
+
+ FAIL  |browser-firefox| tests/browser/upstream-readiness-cascade.browser.test.ts > upstream application readiness and HTML cascade > Q1271 retains static body style position when async head styles arrive
+AssertionError: expected undefined to be 'all' // Object.is equality
+
+Failure screenshot:
+  - tests/browser/__screenshots__/upstream-readiness-cascade.browser.test.ts/upstream-application-readiness-and-HTML-cascade-Q1271-retains-static-body-style-position-when-async-head-styles-arrive-1.png
+
+- Expected:
+"all"
+
++ Received:
+undefined
+
+ ❯ tests/browser/upstream-readiness-cascade.browser.test.ts:22:95
+     20|     const { frame, surface } = await load("/upstream-body-cascade.html…
+     21|     await vi.waitFor(() => expect(Reflect.get(frame, "asyncHeadReady")…
+     22|     expect(surface.body.querySelector("#style-location > #body-sheet")…
+       |                                                                                               ^
+     23|     expect(surface.head.querySelector("#async-head-sheet")).not.toBeNu…
+     24|     expect(getComputedStyle(surface.body.querySelector(".upstream-casc…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/3]⎯
+
+ FAIL  |browser-webkit| tests/browser/upstream-readiness-cascade.browser.test.ts > upstream application readiness and HTML cascade > Q1271 retains static body style position when async head styles arrive
+AssertionError: expected undefined to be 'all' // Object.is equality
+
+Failure screenshot:
+  - tests/browser/__screenshots__/upstream-readiness-cascade.browser.test.ts/upstream-application-readiness-and-HTML-cascade-Q1271-retains-static-body-style-position-when-async-head-styles-arrive-1.png
+
+- Expected:
+"all"
+
++ Received:
+undefined
+
+ ❯ tests/browser/upstream-readiness-cascade.browser.test.ts:22:100
+     20|     const { frame, surface } = await load("/upstream-body-cascade.html…
+     21|     await vi.waitFor(() => expect(Reflect.get(frame, "asyncHeadReady")…
+     22|     expect(surface.body.querySelector("#style-location > #body-sheet")…
+       |                                                                                                    ^
+     23|     expect(surface.head.querySelector("#async-head-sheet")).not.toBeNu…
+     24|     expect(getComputedStyle(surface.body.querySelector(".upstream-casc…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/3]⎯
+
+
+ Test Files  3 failed (3)
+      Tests  3 failed | 3 skipped (6)
+   Start at  12:24:07
+   Duration  1.52s (transform 0ms, setup 0ms, import 250ms, tests 374ms, environment 0ms)
+
+error: script "test:browser" exited with code 1

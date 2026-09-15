@@ -1,0 +1,17 @@
+$ node scripts/check-artifacts.mjs
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: bundledRuntimeGzipBytes: 110132 > 50000
+    at file:///Users/fanfangbo/workspace/micro-framework/scripts/check-artifacts.mjs:62:59 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.19.0
+error: script "check:artifacts" exited with code 1

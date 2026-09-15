@@ -1,0 +1,177 @@
+{
+  "generatedAt": "2026-09-14T07:58:55.007Z",
+  "runId": "mfopt-000-sentry-guard",
+  "baselineSha": "d943bea6f7bab29f9d3ac9e3fb3e7ee4f97778f5",
+  "runtime": {
+    "bun": "unknown",
+    "node": "v24.19.0",
+    "platform": "darwin",
+    "architecture": "arm64"
+  },
+  "mode": "release",
+  "status": "passed",
+  "passed": true,
+  "sentryNetworkGuard": [
+    {
+      "browser": "chromium",
+      "allowlistedOrigins": [
+        "http://127.0.0.1:4373",
+        "http://127.0.0.1:4374",
+        "http://127.0.0.1:4375"
+      ],
+      "blockedProbePaths": [
+        "/probe/beacon",
+        "/probe/fetch",
+        "/probe/iframe",
+        "/probe/worker",
+        "/probe/xhr"
+      ],
+      "fakeReceiverDeliveredPaths": [
+        "/guard.html"
+      ],
+      "activeServiceWorkers": 0
+    },
+    {
+      "browser": "firefox",
+      "allowlistedOrigins": [
+        "http://127.0.0.1:4373",
+        "http://127.0.0.1:4374",
+        "http://127.0.0.1:4375"
+      ],
+      "blockedProbePaths": [
+        "/probe/beacon",
+        "/probe/fetch",
+        "/probe/iframe",
+        "/probe/worker",
+        "/probe/xhr"
+      ],
+      "fakeReceiverDeliveredPaths": [
+        "/guard.html"
+      ],
+      "activeServiceWorkers": 0
+    },
+    {
+      "browser": "webkit",
+      "allowlistedOrigins": [
+        "http://127.0.0.1:4373",
+        "http://127.0.0.1:4374",
+        "http://127.0.0.1:4375"
+      ],
+      "blockedProbePaths": [
+        "/probe/beacon",
+        "/probe/fetch",
+        "/probe/iframe",
+        "/probe/worker",
+        "/probe/xhr"
+      ],
+      "fakeReceiverDeliveredPaths": [
+        "/guard.html"
+      ],
+      "activeServiceWorkers": 0
+    }
+  ],
+  "metrics": [
+    {
+      "name": "cold-realm-mount",
+      "browser": "chromium",
+      "samples": 20,
+      "unit": "ms",
+      "min": 12.800000071525574,
+      "p50": 14,
+      "p95": 16.800000071525574,
+      "max": 17.59999990463257,
+      "threshold": 1000,
+      "passed": true,
+      "values": [
+        14.899999976158142,
+        14.299999952316284,
+        14.200000047683716,
+        16.100000023841858,
+        13,
+        12.800000071525574,
+        13.099999904632568,
+        16.800000071525574,
+        13.199999928474426,
+        13,
+        13.899999976158142,
+        13.899999976158142,
+        13.799999952316284,
+        14.5,
+        14.300000071525574,
+        17.59999990463257,
+        14,
+        13.400000095367432,
+        14.699999928474426,
+        14
+      ]
+    },
+    {
+      "name": "cold-realm-mount",
+      "browser": "firefox",
+      "samples": 20,
+      "unit": "ms",
+      "min": 18,
+      "p50": 20,
+      "p95": 28,
+      "max": 32,
+      "threshold": 1000,
+      "passed": true,
+      "values": [
+        32,
+        22,
+        18,
+        28,
+        18,
+        20,
+        21,
+        27,
+        20,
+        19,
+        19,
+        19,
+        20,
+        19,
+        24,
+        19,
+        22,
+        24,
+        20,
+        19
+      ]
+    },
+    {
+      "name": "cold-realm-mount",
+      "browser": "webkit",
+      "samples": 20,
+      "unit": "ms",
+      "min": 12,
+      "p50": 19,
+      "p95": 31,
+      "max": 31,
+      "threshold": 1000,
+      "passed": true,
+      "values": [
+        19,
+        27,
+        17,
+        21,
+        21,
+        12,
+        28,
+        14,
+        31,
+        14,
+        14,
+        28,
+        14,
+        14,
+        25,
+        14,
+        20,
+        15,
+        31,
+        26
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "build-final",
+  "command": [
+    "bun",
+    "run",
+    "build"
+  ],
+  "cwd": "/Users/fanfangbo/workspace/micro-framework",
+  "startedAt": "2026-09-08T10:55:06.762355+00:00",
+  "completedAt": "2026-09-08T10:55:16.799591+00:00",
+  "durationSeconds": 10.037263832999999,
+  "exitCode": 0,
+  "log": "tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/build-final.log"
+}

@@ -1,0 +1,27 @@
+{
+  "name": "@micro-framework/realm-host",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" },
+    "./realm-bootstrap": "./dist/realm-bootstrap.js"
+  },
+  "scripts": {
+    "build": "vite build && tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@micro-framework/contracts": "workspace:*",
+    "@micro-framework/dom-bridge": "workspace:*",
+    "@micro-framework/dom-guard": "workspace:*",
+    "@micro-framework/dom-surface": "workspace:*",
+    "@micro-framework/entry-resolver": "workspace:*",
+    "@micro-framework/shared-resolver": "workspace:*"
+  },
+  "devDependencies": { "typescript": "6.0.3", "vite": "8.2.2" }
+}

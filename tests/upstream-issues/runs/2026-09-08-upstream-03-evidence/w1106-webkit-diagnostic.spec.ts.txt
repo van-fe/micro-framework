@@ -1,0 +1,46 @@
+import { writeFile } from "node:fs/promises";
+import { test, expect } from "@playwright/test";
+import { mountBatch02, destroyBatch02 } from "./upstream-batch02-components-fixture";
+
+for (const embedded of [true, false]) test(`W1106 diagnostic embedded=${embedded}`, async ({ page }) => {
+  if (embedded) await mountBatch02(page,"ant-select");
+  else await page.goto("http://127.0.0.1:5180/batch02.html?scenario=ant-select");
+  await page.locator('.batch02-ant-select .ant-select-selector').click();
+  const dropdown=page.locator('.ant-select-dropdown:visible');
+  await dropdown.hover();
+  const holder=dropdown.locator('.rc-virtual-list-holder');
+  await page.mouse.wheel(0,120);
+  await expect.poll(()=>holder.evaluate(e=>e.scrollTop)).toBeGreaterThan(20);
+  const before=await holder.evaluate(e=>e.scrollTop);
+  const thumb=dropdown.locator('.rc-virtual-list-scrollbar-thumb');
+  await expect(thumb).toBeVisible();
+  await thumb.evaluate((element,embedded)=>{
+    const node=element as HTMLElement & {__vueParentComponent?:{proxy:any}};
+    const appWindow=embedded?document.querySelector<HTMLIFrameElement>('#batch02-slot micro-app-host iframe')!.contentWindow!:window;
+    const records:any[]=[];
+    let raf=0,lastFrame=0;
+    const tick=(time:number)=>{lastFrame=time;raf=requestAnimationFrame(tick);}; raf=requestAnimationFrame(tick);
+    const record=(where:string,event:Event)=>{
+      const mouse=event as MouseEvent;
+      const proxy=node.__vueParentComponent?.proxy;
+      records.push({where,type:event.type,time:performance.now(),lastFrame,buttons:mouse.buttons,x:mouse.clientX,y:mouse.clientY,pageY:mouse.pageY,
+        target:(event.composedPath()[0] as Element)?.className,rect:node.getBoundingClientRect().toJSON(),
+        scroll:node.parentElement!.previousElementSibling!.scrollTop,dragging:proxy?.state?.dragging,moveRaf:proxy?.moveRaf});
+    };
+    const host=(event:Event)=>record('host-capture',event),app=(event:Event)=>record('app-window',event);
+    for(const type of ['mousedown','mousemove','mouseup']){window.addEventListener(type,host,true);appWindow.addEventListener(type,app);}
+    (window as any).__w1106Diagnostic={records,finish(){cancelAnimationFrame(raf);for(const type of ['mousedown','mousemove','mouseup']){window.removeEventListener(type,host,true);appWindow.removeEventListener(type,app);}}};
+  },embedded);
+  const box=await thumb.boundingBox(); if(!box)throw new Error('thumb absent');
+  await page.mouse.move(box.x+box.width/2,box.y+box.height/2);
+  await page.mouse.down();
+  await page.mouse.move(box.x+box.width/2,box.y+box.height/2+90,{steps:12});
+  await page.mouse.move(20,box.y+box.height/2+90,{steps:3});
+  await page.mouse.up();
+  const immediate=await holder.evaluate(e=>e.scrollTop);
+  await page.evaluate(()=>new Promise<void>(resolve=>requestAnimationFrame(()=>resolve())));
+  const afterFrame=await holder.evaluate(e=>e.scrollTop);
+  const records=await page.evaluate(()=>{const d=(window as any).__w1106Diagnostic;d.finish();return d.records;});
+  await writeFile(`/private/tmp/w1106-diagnostic-${embedded}.json`,JSON.stringify({embedded,before,immediate,afterFrame,box,records},null,2));
+  if(embedded)await destroyBatch02(page);
+});

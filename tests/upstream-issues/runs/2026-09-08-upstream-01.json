@@ -1,0 +1,325 @@
+{
+  "id": "2026-09-08-upstream-01",
+  "completedAt": "2026-09-08T03:43:02.264484+00:00",
+  "scope": "本项目的等价语义回归；未安装或重跑上游旧版本。测试通过仅适用于逐条resolution中明确的条件。",
+  "browsers": [
+    "Chromium",
+    "Firefox",
+    "WebKit"
+  ],
+  "realSafari": "not-run",
+  "gates": [
+    {
+      "command": "bun install --frozen-lockfile",
+      "exitCode": 0
+    },
+    {
+      "command": "bun run check:architecture",
+      "exitCode": 0
+    },
+    {
+      "command": "bun run typecheck",
+      "exitCode": 0
+    },
+    {
+      "command": "bun run build",
+      "exitCode": 0
+    },
+    {
+      "command": "bun run test:unit",
+      "exitCode": 0,
+      "passed": 146,
+      "failed": 0
+    },
+    {
+      "command": "bun run test:browser -- --reporter=json --outputFile=/private/tmp/micro-issue-browser-report.json",
+      "exitCode": 0,
+      "passed": 198,
+      "failed": 0,
+      "skipped": 0
+    },
+    {
+      "command": "PLAYWRIGHT_JSON_OUTPUT_NAME=/private/tmp/micro-issue-e2e-report.json bun run test:e2e -- --reporter=json",
+      "exitCode": 0,
+      "passed": 135,
+      "failed": 0,
+      "skipped": 0,
+      "flaky": 0
+    }
+  ],
+  "initialFailures": [
+    {
+      "issue": "umijs/qiankun#951",
+      "failed": 12,
+      "explanation": "正确surface删除已路由到iframe的script时抛NotFoundError；修复后增加同步自移除，共15项通过。"
+    },
+    {
+      "issue": "umijs/qiankun#187",
+      "failed": 6,
+      "explanation": "link/style顺序断言和真实CSS颜色在三引擎均失败，修复后通过。"
+    },
+    {
+      "issue": "Tencent/wujie#116",
+      "failed": 3,
+      "explanation": "首次完整E2E为132通过、3失败，均因keepAlive失活仍可见；修复hidden样式后重跑完整门禁。"
+    }
+  ],
+  "sourceSha256": {
+    "packages/entry-resolver/src/resolve-entry.ts": "7209fd1da6195b4095e300df944f01067237f0947edd5ca5e4fc84167fffded6",
+    "packages/dom-bridge/src/document-bridge.ts": "c211fa5e559960dda7619c24eff4eb6141516b0beb80bc19bc2bd42b357f8e07",
+    "packages/dom-surface/src/create-dom-surface.ts": "7ed1c017767d3e773f91cddcfc01d88726d443e8b9d4ed3c8bef70dcecd53264"
+  },
+  "newLogicalTests": 22,
+  "newEngineExecutions": 66,
+  "issueStatuses": {
+    "regression-passed": 17,
+    "needs-reproduction": 18,
+    "fixed": 3,
+    "out-of-scope": 1,
+    "unsupported": 1
+  },
+  "tests": [
+    {
+      "path": "tests/browser/surface-activation.browser.test.ts",
+      "title": "hides an inactive surface despite its author display and restores its CSSOM and focus",
+      "engines": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ],
+      "passed": 3,
+      "failed": 0
+    },
+    {
+      "path": "tests/browser/upstream-dom-regressions.browser.test.ts",
+      "title": "W835 delivers custom window events locally and respects listener removal",
+      "engines": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ],
+      "passed": 3,
+      "failed": 0
+    },
+    {
+      "path": "tests/browser/upstream-dom-regressions.browser.test.ts",
+      "title": "W102 Q1449 Q748 preserves global function receivers and constructor prototypes",
+      "engines": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ],
+      "passed": 3,
+      "failed": 0
+    },
+    {
+      "path": "tests/browser/upstream-dom-regressions.browser.test.ts",
+      "title": "W78 permits reinserting the same style node without redefining properties",
+      "engines": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ],
+      "passed": 3,
+      "failed": 0
+    },
+    {
+      "path": "tests/browser/upstream-dom-regressions.browser.test.ts",
+      "title": "W107 preserves empty and fragment links while resolving relative assets",
+      "engines": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ],
+      "passed": 3,
+      "failed": 0
+    },
+    {
+      "path": "tests/browser/upstream-dom-regressions.browser.test.ts",
+      "title": "Q1271 keeps asynchronously appended head styles before body styles in the cascade",
+      "engines": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ],
+      "passed": 3,
+      "failed": 0
+    },
+    {
+      "path": "tests/browser/upstream-dom-regressions.browser.test.ts",
+      "title": "Q3019 Q420 scopes insertBefore styles across Realm churn without patching host prototypes",
+      "engines": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ],
+      "passed": 3,
+      "failed": 0
+    },
+    {
+      "path": "tests/browser/upstream-dom-regressions.browser.test.ts",
+      "title": "W12 updates root CSS tokens after a Vite-style dynamic stylesheet edit",
+      "engines": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ],
+      "passed": 3,
+      "failed": 0
+    },
+    {
+      "path": "tests/browser/upstream-dom-regressions.browser.test.ts",
+      "title": "W882 returns the application root for the root selector",
+      "engines": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ],
+      "passed": 3,
+      "failed": 0
+    },
+    {
+      "path": "tests/browser/upstream-dom-regressions.browser.test.ts",
+      "title": "W485 retains a dynamic stylesheet id and node identity",
+      "engines": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ],
+      "passed": 3,
+      "failed": 0
+    },
+    {
+      "path": "tests/browser/upstream-dom-regressions.browser.test.ts",
+      "title": "W988 dispatches custom document events to the same document listeners",
+      "engines": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ],
+      "passed": 3,
+      "failed": 0
+    },
+    {
+      "path": "tests/browser/upstream-entry-regressions.browser.test.ts",
+      "title": "Q187 preserves interleaved style and link document order",
+      "engines": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ],
+      "passed": 3,
+      "failed": 0
+    },
+    {
+      "path": "tests/browser/upstream-entry-regressions.browser.test.ts",
+      "title": "Q2171 Q777 loads spaced asset URLs and discovers the lifecycle before unrelated final globals",
+      "engines": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ],
+      "passed": 3,
+      "failed": 0
+    },
+    {
+      "path": "tests/browser/upstream-script-regressions.browser.test.ts",
+      "title": "removes a script through its head surface after executing only in its iframe",
+      "engines": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ],
+      "passed": 3,
+      "failed": 0
+    },
+    {
+      "path": "tests/browser/upstream-script-regressions.browser.test.ts",
+      "title": "removes a script through its body surface after executing only in its iframe",
+      "engines": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ],
+      "passed": 3,
+      "failed": 0
+    },
+    {
+      "path": "tests/browser/upstream-script-regressions.browser.test.ts",
+      "title": "keeps removal ownership current when a routed script moves between head and body",
+      "engines": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ],
+      "passed": 3,
+      "failed": 0
+    },
+    {
+      "path": "tests/browser/upstream-script-regressions.browser.test.ts",
+      "title": "rejects removal of unrouted and foreign-Realm scripts",
+      "engines": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ],
+      "passed": 3,
+      "failed": 0
+    },
+    {
+      "path": "tests/browser/upstream-script-regressions.browser.test.ts",
+      "title": "allows an inline script to remove itself before appendChild returns",
+      "engines": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ],
+      "passed": 3,
+      "failed": 0
+    },
+    {
+      "path": "tests/e2e/upstream-lifecycle-regressions.spec.ts",
+      "title": "W116 retains CSSOM-inserted rules when the same keepAlive surface is reactivated",
+      "engines": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ],
+      "passed": 3,
+      "failed": 0
+    },
+    {
+      "path": "tests/e2e/upstream-lifecycle-regressions.spec.ts",
+      "title": "W823 remounts a React application twice with working event handlers and one surface",
+      "engines": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ],
+      "passed": 3,
+      "failed": 0
+    },
+    {
+      "path": "tests/e2e/upstream-lifecycle-regressions.spec.ts",
+      "title": "Q2368 assigns fresh identities when a middle same-app tab is replaced at the same DOM position",
+      "engines": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ],
+      "passed": 3,
+      "failed": 0
+    },
+    {
+      "path": "tests/e2e/upstream-lifecycle-regressions.spec.ts",
+      "title": "Q578 keeps host styles inserted after application unmount in the host document",
+      "engines": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ],
+      "passed": 3,
+      "failed": 0
+    }
+  ]
+}

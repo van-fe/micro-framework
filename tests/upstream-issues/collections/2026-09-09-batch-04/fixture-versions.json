@@ -1,0 +1,117 @@
+{
+  "vue-app": {
+    "element-plus": "2.14.5",
+    "vue": "3.5.42",
+    "vue-i18n": "11.1.12",
+    "vue-router": "4.5.1",
+    "axios": "1.12.2"
+  },
+  "vue2-app": {
+    "element-ui": "2.15.14",
+    "vue": "2.7.16",
+    "vue-router": "3.6.5"
+  },
+  "react-app": {
+    "antd": "6.6.2",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "component-matrix-app": {
+    "@antv/x6": "3.1.8",
+    "ant-design-vue": "4.2.6",
+    "bpmn-js": "3.5.0",
+    "echarts": "6.1.0",
+    "element-plus": "2.14.5",
+    "leaflet": "1.9.4",
+    "maplibre-gl": "6.6.0",
+    "monaco-editor": "0.56.0",
+    "naive-ui": "2.45.3",
+    "quill": "2.0.3",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "react-is": "19.2.8",
+    "recharts": "3.10.1",
+    "sortablejs": "1.15.7",
+    "three": "0.185.1",
+    "vue": "3.5.42",
+    "vue2": "npm:vue@2.7.16"
+  },
+  "toolchain": {
+    "vite": "8.2.2",
+    "vitest": "4.1.11",
+    "@playwright/test": "1.62.1",
+    "typescript": "6.0.3"
+  },
+  "bundledBrowsers": [
+    {
+      "name": "chromium",
+      "revision": "1234",
+      "installByDefault": true,
+      "browserVersion": "151.0.7922.34",
+      "title": "Chrome for Testing"
+    },
+    {
+      "name": "chromium-headless-shell",
+      "revision": "1234",
+      "installByDefault": true,
+      "browserVersion": "151.0.7922.34",
+      "title": "Chrome Headless Shell"
+    },
+    {
+      "name": "chromium-tip-of-tree",
+      "revision": "1433",
+      "installByDefault": false,
+      "browserVersion": "151.0.7893.0",
+      "title": "Chrome Canary for Testing"
+    },
+    {
+      "name": "chromium-tip-of-tree-headless-shell",
+      "revision": "1433",
+      "installByDefault": false,
+      "browserVersion": "151.0.7893.0",
+      "title": "Chrome Canary Headless Shell"
+    },
+    {
+      "name": "firefox",
+      "revision": "1538",
+      "installByDefault": true,
+      "browserVersion": "153.0",
+      "title": "Firefox"
+    },
+    {
+      "name": "firefox-beta",
+      "revision": "1526",
+      "installByDefault": false,
+      "browserVersion": "152.0b1",
+      "title": "Firefox Beta"
+    },
+    {
+      "name": "webkit",
+      "revision": "2336",
+      "installByDefault": true,
+      "revisionOverrides": {
+        "mac14": "2251",
+        "mac14-arm64": "2251",
+        "ubuntu20.04-x64": "2092",
+        "ubuntu20.04-arm64": "2092"
+      },
+      "browserVersion": "26.5",
+      "title": "WebKit"
+    },
+    {
+      "name": "ffmpeg",
+      "revision": "1011",
+      "installByDefault": true
+    },
+    {
+      "name": "winldd",
+      "revision": "1007",
+      "installByDefault": false
+    },
+    {
+      "name": "android",
+      "revision": "1001",
+      "installByDefault": false
+    }
+  ]
+}

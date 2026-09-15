@@ -1,0 +1,769 @@
+{
+  "generatedAt": "2026-09-14T10:05:34.798Z",
+  "runId": "mfopt-005-retention-vue2-element-ui",
+  "runtime": {
+    "bun": "unknown",
+    "node": "v24.19.0",
+    "platform": "darwin",
+    "architecture": "arm64"
+  },
+  "mode": "release",
+  "status": "failed",
+  "passed": false,
+  "sentryNetworkGuard": [
+    {
+      "browser": "chromium",
+      "allowlistedOrigins": [
+        "http://127.0.0.1:4373",
+        "http://127.0.0.1:4374",
+        "http://127.0.0.1:4375",
+        "http://127.0.0.1:4376",
+        "http://127.0.0.1:4377",
+        "http://127.0.0.1:4378"
+      ],
+      "blockedProbePaths": [
+        "/probe/beacon",
+        "/probe/fetch",
+        "/probe/iframe",
+        "/probe/worker",
+        "/probe/xhr"
+      ],
+      "fakeReceiverDeliveredPaths": [
+        "/guard.html"
+      ],
+      "activeServiceWorkers": 0
+    }
+  ],
+  "resourceOwnership": [],
+  "observerIdentity": [],
+  "cleanupFailures": [],
+  "cleanupRecovery": [],
+  "entryCache": [],
+  "entryCacheComparisons": [],
+  "styleScans": [],
+  "styleCompatibility": [],
+  "componentCompatibility": [],
+  "componentMemory": [
+    {
+      "browser": "chromium",
+      "sessions": [
+        {
+          "session": 1,
+          "warmupIterations": 10,
+          "measuredIterations": 25,
+          "settleMs": 1000,
+          "componentFilter": "vue2-element-ui",
+          "explicitGc": true,
+          "rssBytes": null,
+          "rssReason": "Chromium CDP does not expose a stable per-renderer RSS metric; RSS is not inferred from JS heap.",
+          "heapGrowthBytes": 73912732,
+          "samples": [
+            {
+              "label": "after-warmup",
+              "heapUsedBytes": 29269124,
+              "heapTotalBytes": 32145408,
+              "documents": 12,
+              "nodes": 344,
+              "jsEventListeners": 66,
+              "domElements": 13,
+              "hosts": 0,
+              "iframes": 0,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              }
+            },
+            {
+              "label": "after-6",
+              "heapUsedBytes": 45526792,
+              "heapTotalBytes": 48037888,
+              "documents": 18,
+              "nodes": 524,
+              "jsEventListeners": 96,
+              "domElements": 13,
+              "hosts": 0,
+              "iframes": 0,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              }
+            },
+            {
+              "label": "after-12",
+              "heapUsedBytes": 64134476,
+              "heapTotalBytes": 67584000,
+              "documents": 25,
+              "nodes": 734,
+              "jsEventListeners": 131,
+              "domElements": 13,
+              "hosts": 0,
+              "iframes": 0,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              }
+            },
+            {
+              "label": "after-18",
+              "heapUsedBytes": 80422204,
+              "heapTotalBytes": 83214336,
+              "documents": 31,
+              "nodes": 914,
+              "jsEventListeners": 161,
+              "domElements": 13,
+              "hosts": 0,
+              "iframes": 0,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              }
+            },
+            {
+              "label": "after-24",
+              "heapUsedBytes": 98976568,
+              "heapTotalBytes": 101711872,
+              "documents": 38,
+              "nodes": 1124,
+              "jsEventListeners": 196,
+              "domElements": 13,
+              "hosts": 0,
+              "iframes": 0,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              }
+            },
+            {
+              "label": "after-25",
+              "heapUsedBytes": 103181856,
+              "heapTotalBytes": 104841216,
+              "documents": 39,
+              "nodes": 1154,
+              "jsEventListeners": 201,
+              "domElements": 13,
+              "hosts": 0,
+              "iframes": 0,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              }
+            }
+          ],
+          "iterations": [
+            {
+              "iteration": 1,
+              "component": "vue2-element-ui",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 78.59999990463257,
+              "disposeDurationMs": 2.0999999046325684,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 2,
+              "component": "vue2-element-ui",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 49.89999997615814,
+              "disposeDurationMs": 1.5,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 3,
+              "component": "vue2-element-ui",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 48.39999997615814,
+              "disposeDurationMs": 1.5,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 4,
+              "component": "vue2-element-ui",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 45.700000047683716,
+              "disposeDurationMs": 1.3000000715255737,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 5,
+              "component": "vue2-element-ui",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 44.5,
+              "disposeDurationMs": 1.600000023841858,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 6,
+              "component": "vue2-element-ui",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 45.800000071525574,
+              "disposeDurationMs": 1.2000000476837158,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 7,
+              "component": "vue2-element-ui",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 104.89999997615814,
+              "disposeDurationMs": 2.100000023841858,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 8,
+              "component": "vue2-element-ui",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 62,
+              "disposeDurationMs": 1.2999999523162842,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 9,
+              "component": "vue2-element-ui",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 44.300000071525574,
+              "disposeDurationMs": 1.399999976158142,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 10,
+              "component": "vue2-element-ui",
+              "fastSwitch": true,
+              "mounts": 2,
+              "mountDurationMs": 95.29999995231628,
+              "disposeDurationMs": 2.5,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 11,
+              "component": "vue2-element-ui",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 46,
+              "disposeDurationMs": 1.5,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 12,
+              "component": "vue2-element-ui",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 43.200000047683716,
+              "disposeDurationMs": 1.399999976158142,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 13,
+              "component": "vue2-element-ui",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 79.70000004768372,
+              "disposeDurationMs": 1.8000000715255737,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 14,
+              "component": "vue2-element-ui",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 43.10000002384186,
+              "disposeDurationMs": 1.3000000715255737,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 15,
+              "component": "vue2-element-ui",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 42.699999928474426,
+              "disposeDurationMs": 1.3000000715255737,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 16,
+              "component": "vue2-element-ui",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 40.799999952316284,
+              "disposeDurationMs": 1.2999999523162842,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 17,
+              "component": "vue2-element-ui",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 40.39999997615814,
+              "disposeDurationMs": 1.1999999284744263,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 18,
+              "component": "vue2-element-ui",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 39.700000047683716,
+              "disposeDurationMs": 1.2999999523162842,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 19,
+              "component": "vue2-element-ui",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 82.5,
+              "disposeDurationMs": 1.8000000715255737,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 20,
+              "component": "vue2-element-ui",
+              "fastSwitch": true,
+              "mounts": 2,
+              "mountDurationMs": 96.39999997615814,
+              "disposeDurationMs": 2.5,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 21,
+              "component": "vue2-element-ui",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 43.90000009536743,
+              "disposeDurationMs": 1.2999999523162842,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 22,
+              "component": "vue2-element-ui",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 48.200000047683716,
+              "disposeDurationMs": 1.399999976158142,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 23,
+              "component": "vue2-element-ui",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 46,
+              "disposeDurationMs": 1.399999976158142,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 24,
+              "component": "vue2-element-ui",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 49,
+              "disposeDurationMs": 1.3000000715255737,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 25,
+              "component": "vue2-element-ui",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 80.29999995231628,
+              "disposeDurationMs": 1.600000023841858,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            }
+          ],
+          "cleanup": {
+            "errors": [],
+            "hosts": 0,
+            "iframes": 0
+          }
+        }
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "name": "component-memory-session-1",
+      "browser": "chromium",
+      "samples": 25,
+      "unit": "bytes",
+      "min": 73912732,
+      "p50": 73912732,
+      "p95": 73912732,
+      "max": 73912732,
+      "threshold": 25165824,
+      "passed": false,
+      "details": {
+        "warmDocuments": 12,
+        "finalDocuments": 39,
+        "warmNodes": 344,
+        "finalNodes": 1154,
+        "mountP50Ms": 46,
+        "mountP95Ms": 96.39999997615814,
+        "disposeP50Ms": 1.399999976158142,
+        "disposeP95Ms": 2.5,
+        "cleanupErrors": 0,
+        "cleanupErrorPhases": "[]"
+      }
+    }
+  ]
+}

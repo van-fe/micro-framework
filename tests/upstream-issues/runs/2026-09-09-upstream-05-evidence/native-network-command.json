@@ -1,0 +1,7 @@
+{
+  "command": "PLAYWRIGHT_JSON_OUTPUT_NAME=tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/native-network.json bunx playwright test tests/e2e/upstream-batch04-native-network.spec.ts --reporter=json,line",
+  "exitCode": 0,
+  "toolSessionId": 79356,
+  "report": "native-network.json",
+  "log": "native-network.log"
+}

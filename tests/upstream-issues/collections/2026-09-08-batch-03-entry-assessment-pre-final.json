@@ -1,0 +1,241 @@
+{
+  "collectionBatch": "2026-09-08-batch-03",
+  "executionStatus": "first-run-failures-recorded-fixes-await-rerun",
+  "issues": [
+    {
+      "id": "umijs/qiankun#3125",
+      "scenario": "Vite产物动态import使window及生命周期逃逸宿主",
+      "expectedBehavior": "真实Vite 8.2.2/Vue 3.5.42/Vue Router 4.5.1产物由iframe执行、mount/unmount成功且兄弟互不污染",
+      "suggestedLayer": "realm-host / entry-resolver",
+      "testIdea": "真实Vite 8.2.2/Vue 3.5.42/Vue Router 4.5.1产物由iframe执行、mount/unmount成功且兄弟互不污染；三浏览器统一执行并核对请求/Realm身份/销毁。",
+      "status": "verification-in-progress",
+      "statusReason": "已写针对性测试，尚未由主任务统一执行。",
+      "nextAction": "读取本轮实际Browser Mode报告，按引擎核对并修复失败；保留原始条件覆盖限制。",
+      "tests": [],
+      "plannedTests": [
+        {
+          "path": "tests/browser/upstream-batch03-entry.browser.test.ts",
+          "title": "batch03 native entry execution Q3125 Q2971 isolates real Vite production lifecycle and absolute URL dynamic imports in sibling Realms"
+        },
+        {
+          "path": "tests/e2e/upstream-batch03-entry.spec.ts",
+          "title": "W1049 Q3125 Q2971 loads Vite production routes once with isolated URL imports and clean Runtime destruction"
+        }
+      ],
+      "coverageLimitations": [
+        "未使用上游vite-plugin-qiankun生成的with/proxy包装；本项目以原生ESM入口代替该框架专用包装"
+      ],
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-03-qiankun-sources.json"
+    },
+    {
+      "id": "umijs/qiankun#3059",
+      "scenario": "Webpack automatic publicPath偶发失败且缓存清理后恢复",
+      "expectedBehavior": "真实Webpack 5.110.3 auto publicPath首轮及重复加载懒块从应用源获取",
+      "suggestedLayer": "realm-host / entry-resolver",
+      "testIdea": "真实Webpack 5.110.3 auto publicPath首轮及重复加载懒块从应用源获取；三浏览器统一执行并核对请求/Realm身份/销毁。",
+      "status": "verification-in-progress",
+      "statusReason": "已写针对性测试，尚未由主任务统一执行。",
+      "nextAction": "读取本轮实际Browser Mode报告，按引擎核对并修复失败；保留原始条件覆盖限制。",
+      "tests": [],
+      "plannedTests": [
+        {
+          "path": "tests/browser/upstream-batch03-entry.browser.test.ts",
+          "title": "batch03 native entry execution Q3059 resolves real webpack automatic publicPath on cold and repeated application loads"
+        }
+      ],
+      "coverageLimitations": [
+        "上游无最小仓库、失败缓存条目或Webpack版本，代表性no-store重复加载不证明Chrome135历史缓存损坏现场"
+      ],
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-03-qiankun-sources.json"
+    },
+    {
+      "id": "umijs/qiankun#3053",
+      "scenario": "publicPath public下懒块被错误请求至应用根",
+      "expectedBehavior": "Webpack 5.110.3 relative public/保持应用HTML base并实际请求子目录",
+      "suggestedLayer": "realm-host / entry-resolver",
+      "testIdea": "Webpack 5.110.3 relative public/保持应用HTML base并实际请求子目录；三浏览器统一执行并核对请求/Realm身份/销毁。",
+      "status": "verification-in-progress",
+      "statusReason": "已写针对性测试，尚未由主任务统一执行。",
+      "nextAction": "读取本轮实际Browser Mode报告，按引擎核对并修复失败；保留原始条件覆盖限制。",
+      "tests": [],
+      "plannedTests": [
+        {
+          "path": "tests/browser/upstream-batch03-entry.browser.test.ts",
+          "title": "batch03 native entry execution Q3053 preserves explicit relative publicPath for real webpack lazy chunks on the application origin"
+        }
+      ],
+      "coverageLimitations": [
+        "采用Webpack最小实际产物；未运行Umi开发client/热更新路径"
+      ],
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-03-qiankun-sources.json",
+      "localFailure": "first-browser-executed.json三引擎真实Webpack relative publicPath懒块ChunkLoadError；原生createElement(script)缺resourceBase导致相对src预先按bootstrap文档定位。",
+      "relatedChanges": [
+        "packages/dom-bridge/src/document-bridge.ts"
+      ]
+    },
+    {
+      "id": "umijs/qiankun#2993",
+      "scenario": "模块联邦共享函数在子应用执行却获得宿主window",
+      "expectedBehavior": "原生Module Federation remote容器和工厂在每个消费iframe独立求值",
+      "suggestedLayer": "realm-host / entry-resolver",
+      "testIdea": "原生Module Federation remote容器和工厂在每个消费iframe独立求值；三浏览器统一执行并核对请求/Realm身份/销毁。",
+      "status": "verification-in-progress",
+      "statusReason": "已写针对性测试，尚未由主任务统一执行。",
+      "nextAction": "读取本轮实际Browser Mode报告，按引擎核对并修复失败；保留原始条件覆盖限制。",
+      "tests": [],
+      "plannedTests": [
+        {
+          "path": "tests/browser/upstream-batch03-entry.browser.test.ts",
+          "title": "batch03 native entry execution Q2993 evaluates real Module Federation remote factories independently for sibling iframe consumers"
+        }
+      ],
+      "coverageLimitations": [
+        "iframe内原生加载remote factories；已在宿主求值后直接传入的函数会依JS词法Realm保留宿主window，未将该函数自动重定位"
+      ],
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-03-qiankun-sources.json"
+    },
+    {
+      "id": "umijs/qiankun#2971",
+      "scenario": "URL dynamic import模块获得真实宿主window",
+      "expectedBehavior": "真实Vite产物通过绝对跨源URL dynamic import获得iframe window",
+      "suggestedLayer": "realm-host / entry-resolver",
+      "testIdea": "真实Vite产物通过绝对跨源URL dynamic import获得iframe window；三浏览器统一执行并核对请求/Realm身份/销毁。",
+      "status": "verification-in-progress",
+      "statusReason": "已写针对性测试，尚未由主任务统一执行。",
+      "nextAction": "读取本轮实际Browser Mode报告，按引擎核对并修复失败；保留原始条件覆盖限制。",
+      "tests": [],
+      "plannedTests": [
+        {
+          "path": "tests/browser/upstream-batch03-entry.browser.test.ts",
+          "title": "batch03 native entry execution Q3125 Q2971 isolates real Vite production lifecycle and absolute URL dynamic imports in sibling Realms"
+        },
+        {
+          "path": "tests/e2e/upstream-batch03-entry.spec.ts",
+          "title": "W1049 Q3125 Q2971 loads Vite production routes once with isolated URL imports and clean Runtime destruction"
+        }
+      ],
+      "coverageLimitations": [
+        "使用有效CORS URL，未模拟失效/无CORS上游地址"
+      ],
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-03-qiankun-sources.json"
+    },
+    {
+      "id": "Tencent/wujie#1049",
+      "scenario": "Vite modulepreload vendor与Vue Router懒路由js加载两次",
+      "expectedBehavior": "实际Vite产物含vendor modulepreload，Home/About/Home交互每URL最多1次真实服务器请求且每模块求值1次",
+      "suggestedLayer": "realm-host / entry-resolver",
+      "testIdea": "实际Vite产物含vendor modulepreload，Home/About/Home交互每URL最多1次真实服务器请求且每模块求值1次；三浏览器统一执行并核对请求/Realm身份/销毁。",
+      "status": "verification-in-progress",
+      "statusReason": "已写针对性测试，尚未由主任务统一执行。",
+      "nextAction": "读取本轮实际Browser Mode报告，按引擎核对并修复失败；保留原始条件覆盖限制。",
+      "tests": [],
+      "plannedTests": [
+        {
+          "path": "tests/browser/upstream-batch03-entry.browser.test.ts",
+          "title": "batch03 native entry execution W1049 requests each real Vite modulepreload and Vue Router lazy chunk once during route changes"
+        },
+        {
+          "path": "tests/e2e/upstream-batch03-entry.spec.ts",
+          "title": "W1049 Q3125 Q2971 loads Vite production routes once with isolated URL imports and clean Runtime destruction"
+        }
+      ],
+      "coverageLimitations": [
+        "真实Vue Router使用memory history将资源问题和外部路由隔离；未使用Element Plus单独chunk，vendor为Vue/Vue Router"
+      ],
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-03-wujie-sources.json",
+      "firstRunFinding": "首次WebKit请求断言失败，尚需复验独立资产URL排除本进程此前Vite场景的响应字节缓存；保持逐URL恰好1次真实请求及路由交互断言。"
+    },
+    {
+      "id": "Tencent/wujie#1025",
+      "scenario": "相邻inline script微任务先于后续同步脚本",
+      "expectedBehavior": "使用同HTML原生parser iframe对照观测原生检查点，再与本地entry loader顺序精确比较",
+      "suggestedLayer": "realm-host / entry-resolver",
+      "testIdea": "使用同HTML原生parser iframe对照观测原生检查点，再与本地entry loader顺序精确比较；三浏览器统一执行并核对请求/Realm身份/销毁。",
+      "status": "verification-in-progress",
+      "statusReason": "已写针对性测试，尚未由主任务统一执行。",
+      "nextAction": "读取本轮实际Browser Mode报告，按引擎核对并修复失败；保留原始条件覆盖限制。",
+      "tests": [],
+      "plannedTests": [
+        {
+          "path": "tests/browser/upstream-batch03-entry.browser.test.ts",
+          "title": "batch03 native entry execution W1025 matches native parser microtask checkpoints between adjacent inline classic scripts"
+        }
+      ],
+      "coverageLimitations": [
+        "不将上游预期1,2当作规范事实；实际native对照决定顺序，本测试不覆盖fiber专用API"
+      ],
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-03-wujie-sources.json"
+    },
+    {
+      "id": "Tencent/wujie#1015",
+      "scenario": "Webpack DLL全局var未进入执行环境导致ReferenceError",
+      "expectedBehavior": "Webpack DllPlugin和DllReferencePlugin实际产物可跨脚本读取_dll_vendors且宿主/兄弟隔离",
+      "suggestedLayer": "realm-host / entry-resolver",
+      "testIdea": "Webpack DllPlugin和DllReferencePlugin实际产物可跨脚本读取_dll_vendors且宿主/兄弟隔离；三浏览器统一执行并核对请求/Realm身份/销毁。",
+      "status": "verification-in-progress",
+      "statusReason": "已写针对性测试，尚未由主任务统一执行。",
+      "nextAction": "读取本轮实际Browser Mode报告，按引擎核对并修复失败；保留原始条件覆盖限制。",
+      "tests": [],
+      "plannedTests": [
+        {
+          "path": "tests/browser/upstream-batch03-entry.browser.test.ts",
+          "title": "batch03 native entry execution W1015 links real webpack DLL globals in their owning iframe without host or sibling leakage"
+        }
+      ],
+      "coverageLimitations": [
+        "Webpack5.110.3代替上游未提供版本的开发eval产物；不使用eval或源码重写"
+      ],
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-03-wujie-sources.json"
+    },
+    {
+      "id": "Tencent/wujie#970",
+      "scenario": "HTML type=importmap未进入iframe导致bare import失败",
+      "expectedBehavior": "应用HTML authored map应在模块执行前进入原生iframe并按应用base解析",
+      "suggestedLayer": "realm-host / entry-resolver",
+      "testIdea": "应用HTML authored map应在模块执行前进入原生iframe并按应用base解析；三浏览器统一执行并核对请求/Realm身份/销毁。",
+      "status": "verification-in-progress",
+      "statusReason": "已写针对性测试，尚未由主任务统一执行。",
+      "nextAction": "读取本轮实际Browser Mode报告，按引擎核对并修复失败；保留原始条件覆盖限制。",
+      "tests": [],
+      "plannedTests": [
+        {
+          "path": "tests/browser/upstream-batch03-entry.browser.test.ts",
+          "title": "batch03 native entry execution W970 installs authored HTML import maps before native iframe module imports"
+        },
+        {
+          "path": "tests/browser/upstream-batch03-entry.browser.test.ts",
+          "title": "batch03 native entry execution W970 resolves host-configured shared dependency URLs inside each consuming iframe"
+        },
+        {
+          "path": "tests/browser/upstream-batch03-entry.browser.test.ts",
+          "title": "batch03 native entry execution W970 resolves authored import-map scopes and prefixes against the HTML base URL"
+        }
+      ],
+      "coverageLimitations": [
+        "宿主DOM原生map不自动复制到子iframe；显式Runtime sharedDependencies已写独立测试验证，同URL依赖仍在每个iframe求值。支持应用HTML imports/scopes/prefix/base归一；当前未覆盖import-map integrity扩展。",
+        "不同CSP nonce（含有nonce与无nonce）多map当前明确拒绝合并，避免借用其他map授权；未覆盖合法多nonce配置与真实CSP授权交互。",
+        "非法JSON或非object root/imports/scopes明确在入口执行前拒绝；不同于浏览器原生忽略无效分区。模块执行后的后置importmap、integrity扩展不在本轮已验证范围。"
+      ],
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-03-wujie-sources.json",
+      "localFailure": "first-browser-executed.json三引擎应用authored importmap bare specifier解析失败；entry-resolver此前跳过importmap script。",
+      "relatedChanges": [
+        "packages/entry-resolver/src/html-import-map.ts",
+        "packages/entry-resolver/src/types.ts",
+        "packages/entry-resolver/src/resolve-entry.ts",
+        "packages/realm-host/src/realm-loading-plan.ts"
+      ],
+      "additionalUnitTests": [
+        "packages/entry-resolver/src/html-import-map.test.ts",
+        "packages/realm-host/src/html-import-map-plan.test.ts"
+      ]
+    }
+  ],
+  "localUnitExecution": {
+    "command": "bun run test:unit packages/entry-resolver/src/html-import-map.test.ts packages/realm-host/src/html-import-map-plan.test.ts",
+    "exitCode": 0,
+    "passedFiles": 2,
+    "passedTests": 6,
+    "startedLocalTime": "2026-09-08 18:49:39 Asia/Shanghai",
+    "note": "执行工具实际返回；最终台账仍需绑定主任务统一原始报告。"
+  }
+}

@@ -1,0 +1,50 @@
+$ vitest run --config vitest.browser.config.ts "tests/browser/upstream-batch03-entry.browser.test.ts" "--reporter=verbose"
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - import "../../support/webpack-compiler" without a file extension (tests/browser/server/upstream-batch02-entry-fixture.ts:7:39). Add the file extension
+  - import "./upstream-batch03-entry-builds" without a file extension (tests/browser/server/upstream-batch03-entry-fixture.ts:4:36). Add the file extension
+  - import "../../support/webpack-compiler" without a file extension (tests/browser/server/upstream-batch03-entry-builds.ts:8:39). Add the file extension
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+
+ RUN  v4.1.11 /Users/fanfangbo/workspace/micro-framework
+
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - import "./upstream-batch03-entry-builds" without a file extension (tests/browser/server/upstream-batch03-entry-fixture.ts:4:36). Add the file extension
+  - import "../../support/webpack-compiler" without a file extension (tests/browser/server/upstream-batch02-entry-fixture.ts:7:39). Add the file extension
+  - import "../../support/webpack-compiler" without a file extension (tests/browser/server/upstream-batch03-entry-builds.ts:8:39). Add the file extension
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+ ✓ |browser-chromium| tests/browser/upstream-batch03-entry.browser.test.ts > batch03 native entry execution > Q3059 resolves real webpack automatic publicPath on cold and repeated application loads 77ms
+ ✓ |browser-chromium| tests/browser/upstream-batch03-entry.browser.test.ts > batch03 native entry execution > Q3053 preserves explicit relative publicPath for real webpack lazy chunks on the application origin 20ms
+ ✓ |browser-webkit| tests/browser/upstream-batch03-entry.browser.test.ts > batch03 native entry execution > Q3059 resolves real webpack automatic publicPath on cold and repeated application loads 78ms
+ ✓ |browser-chromium| tests/browser/upstream-batch03-entry.browser.test.ts > batch03 native entry execution > W1015 links real webpack DLL globals in their owning iframe without host or sibling leakage 29ms
+ ✓ |browser-chromium| tests/browser/upstream-batch03-entry.browser.test.ts > batch03 native entry execution > Q2993 evaluates real Module Federation remote factories independently for sibling iframe consumers 21ms
+ ✓ |browser-chromium| tests/browser/upstream-batch03-entry.browser.test.ts > batch03 native entry execution > Q3125 Q2971 isolates real Vite production lifecycle and absolute URL dynamic imports in sibling Realms 36ms
+ ✓ |browser-chromium| tests/browser/upstream-batch03-entry.browser.test.ts > batch03 native entry execution > W1049 requests each real Vite modulepreload and Vue Router lazy chunk once during route changes 132ms
+ ✓ |browser-webkit| tests/browser/upstream-batch03-entry.browser.test.ts > batch03 native entry execution > Q3053 preserves explicit relative publicPath for real webpack lazy chunks on the application origin 25ms
+ ✓ |browser-webkit| tests/browser/upstream-batch03-entry.browser.test.ts > batch03 native entry execution > W1015 links real webpack DLL globals in their owning iframe without host or sibling leakage 34ms
+ ✓ |browser-webkit| tests/browser/upstream-batch03-entry.browser.test.ts > batch03 native entry execution > Q2993 evaluates real Module Federation remote factories independently for sibling iframe consumers 27ms
+ ✓ |browser-chromium| tests/browser/upstream-batch03-entry.browser.test.ts > batch03 native entry execution > W1025 matches native parser microtask checkpoints between adjacent inline classic scripts 15ms
+ ✓ |browser-chromium| tests/browser/upstream-batch03-entry.browser.test.ts > batch03 native entry execution > W970 installs authored HTML import maps before native iframe module imports 12ms
+ ✓ |browser-chromium| tests/browser/upstream-batch03-entry.browser.test.ts > batch03 native entry execution > W970 resolves host-configured shared dependency URLs inside each consuming iframe 20ms
+ ✓ |browser-chromium| tests/browser/upstream-batch03-entry.browser.test.ts > batch03 native entry execution > W970 resolves authored import-map scopes and prefixes against the HTML base URL 14ms
+ ✓ |browser-webkit| tests/browser/upstream-batch03-entry.browser.test.ts > batch03 native entry execution > Q3125 Q2971 isolates real Vite production lifecycle and absolute URL dynamic imports in sibling Realms 56ms
+ ✓ |browser-webkit| tests/browser/upstream-batch03-entry.browser.test.ts > batch03 native entry execution > W1049 requests each real Vite modulepreload and Vue Router lazy chunk once during route changes 135ms
+ ✓ |browser-webkit| tests/browser/upstream-batch03-entry.browser.test.ts > batch03 native entry execution > W1025 matches native parser microtask checkpoints between adjacent inline classic scripts 15ms
+ ✓ |browser-webkit| tests/browser/upstream-batch03-entry.browser.test.ts > batch03 native entry execution > W970 installs authored HTML import maps before native iframe module imports 13ms
+ ✓ |browser-webkit| tests/browser/upstream-batch03-entry.browser.test.ts > batch03 native entry execution > W970 resolves host-configured shared dependency URLs inside each consuming iframe 44ms
+ ✓ |browser-webkit| tests/browser/upstream-batch03-entry.browser.test.ts > batch03 native entry execution > W970 resolves authored import-map scopes and prefixes against the HTML base URL 12ms
+ ✓ |browser-firefox| tests/browser/upstream-batch03-entry.browser.test.ts > batch03 native entry execution > Q3059 resolves real webpack automatic publicPath on cold and repeated application loads 33ms
+ ✓ |browser-firefox| tests/browser/upstream-batch03-entry.browser.test.ts > batch03 native entry execution > Q3053 preserves explicit relative publicPath for real webpack lazy chunks on the application origin 13ms
+ ✓ |browser-firefox| tests/browser/upstream-batch03-entry.browser.test.ts > batch03 native entry execution > W1015 links real webpack DLL globals in their owning iframe without host or sibling leakage 20ms
+ ✓ |browser-firefox| tests/browser/upstream-batch03-entry.browser.test.ts > batch03 native entry execution > Q2993 evaluates real Module Federation remote factories independently for sibling iframe consumers 20ms
+ ✓ |browser-firefox| tests/browser/upstream-batch03-entry.browser.test.ts > batch03 native entry execution > Q3125 Q2971 isolates real Vite production lifecycle and absolute URL dynamic imports in sibling Realms 50ms
+ ✓ |browser-firefox| tests/browser/upstream-batch03-entry.browser.test.ts > batch03 native entry execution > W1049 requests each real Vite modulepreload and Vue Router lazy chunk once during route changes 137ms
+ ✓ |browser-firefox| tests/browser/upstream-batch03-entry.browser.test.ts > batch03 native entry execution > W1025 matches native parser microtask checkpoints between adjacent inline classic scripts 21ms
+ ✓ |browser-firefox| tests/browser/upstream-batch03-entry.browser.test.ts > batch03 native entry execution > W970 installs authored HTML import maps before native iframe module imports 12ms
+ ✓ |browser-firefox| tests/browser/upstream-batch03-entry.browser.test.ts > batch03 native entry execution > W970 resolves host-configured shared dependency URLs inside each consuming iframe 27ms
+ ✓ |browser-firefox| tests/browser/upstream-batch03-entry.browser.test.ts > batch03 native entry execution > W970 resolves authored import-map scopes and prefixes against the HTML base URL 14ms
+
+ Test Files  3 passed (3)
+      Tests  30 passed (30)
+   Start at  11:51:23
+   Duration  2.52s (transform 0ms, setup 0ms, import 317ms, tests 1.16s, environment 0ms)
+

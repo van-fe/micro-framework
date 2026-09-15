@@ -1,0 +1,11 @@
+PASS new-only: Imported 1; skipped 0 existing issues.
+PASS mixed case-insensitive duplicate and new: Imported 1; skipped 1 existing issues.
+PASS duplicate-only preserves bytes/mtime/inode: Imported 0; skipped 1 existing issues. Catalog unchanged.
+PASS invalid mixed import rejects atomically: id must match repository and number: umijs/qiankun#2000000
++ actual - expected
+
++ 'umijs/qiankun#2000000'
+- 'umijs/qiankun#2000001'
+                       ^
+PASS input duplicate identity rejects atomically: duplicate issue: UMIJS/QIANKUN#2000000
+Original catalog bytes and mtime unchanged; temporary verification data removed.

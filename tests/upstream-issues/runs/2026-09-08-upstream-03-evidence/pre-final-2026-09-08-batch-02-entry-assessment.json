@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "collectionBatch": "2026-09-08-batch-02",
+  "phase": "verification-in-progress",
+  "issues": [
+    {
+      "id": "umijs/qiankun#2378",
+      "scope": "HTML实体仅解码一次，实际请求保留百分号编码；未安装AdGuard产品。",
+      "phase": "browser-passed",
+      "tests": [
+        "Q2378 decodes HTML entities in injected query scripts exactly once"
+      ],
+      "recommendedStatus": "regression-passed"
+    },
+    {
+      "id": "umijs/qiankun#2694",
+      "scope": "内联脚本原字节保留、不追加sourceURL；外部原生Error.stack含真实脚本URL，未操作DevTools界面。",
+      "phase": "browser-passed",
+      "tests": [
+        "Q2694 preserves authored inline script bytes and native external error stack URLs"
+      ],
+      "recommendedStatus": "regression-passed"
+    },
+    {
+      "id": "umijs/qiankun#2727",
+      "scope": "真实Webpack5.110.3同URL双实例及ESM lazy chunk独立执行；宿主head原型不变；新增beforeExecute在DOM就绪后、脚本前异步修改body内app-config并可取消，原beforeLoad时机不变。未运行qiankun2/3完整共存。",
+      "phase": "browser-passed",
+      "tests": [
+        "Q2727 executes real webpack lazy chunks in separate Realms after asynchronous DOM configuration hooks",
+        "Q2727 cancels a pending beforeExecute hook without executing entry code after its late resolution"
+      ],
+      "recommendedStatus": "regression-passed"
+    },
+    {
+      "id": "Tencent/wujie#965",
+      "scope": "跨端口HTML静态元素/body inline background URL和真实请求归属应用，html/body主题与样式属性保留，宿主主题不变。",
+      "phase": "browser-passed",
+      "tests": [
+        "W965 resolves HTML and body inline background URLs from a different application origin"
+      ],
+      "recommendedStatus": "regression-passed"
+    },
+    {
+      "id": "Tencent/wujie#779",
+      "scope": "可见节点src/setAttribute/CSS URL首次请求前按应用baseURL解析；Chromium背景属性own data descriptor首轮失败，补齐后Browser三引擎通过，真实Vue3.5.42四至六图片+混合背景三引擎通过。",
+      "phase": "browser-and-e2e-three-engines-passed",
+      "tests": [
+        "W779 normalizes imperative image and CSS URLs before their first application request",
+        "W779 loads four then five and six real Vue images and mixed backgrounds from the application origin"
+      ],
+      "recommendedStatus": "fixed",
+      "redEvidenceDescription": "首轮真实Chromium中CSS URL own data descriptor没有经过原有prototype setter包装，背景首次请求未使用应用base。针对实际descriptor路径修正后Browser三引擎及Vue3真实图片/背景E2E通过；原失败报告保留于entry-evidence/batch02-root-entry-first.json。",
+      "redEvidence": "tests/upstream-issues/collections/2026-09-08-batch-02-entry-evidence/batch02-root-entry-first.json"
+    },
+    {
+      "id": "umijs/qiankun#1212",
+      "scope": "原生Window.name、自定义get/set与receiver、兄弟及宿主隔离三引擎通过。",
+      "phase": "browser-passed",
+      "tests": [
+        "Q1212 preserves window name and writable native accessor receivers without leaking to siblings"
+      ],
+      "recommendedStatus": "regression-passed"
+    },
+    {
+      "id": "umijs/qiankun#1174",
+      "scope": "共享函数call/receiver契约三引擎通过；原error-case锁定的真实jsPlumb2.11.2双实例连线、重连、拖动与清理三引擎通过。未运行完整React16/CRA仓库。",
+      "phase": "browser-and-e2e-three-engines-passed",
+      "tests": [
+        "Q1174 preserves receiver identity when the same function is shared across native window and objects",
+        "Q1174 jsPlumb 2.11.2 creates reconnects and drags real connectors in independent native Realms"
+      ],
+      "recommendedStatus": "regression-passed"
+    },
+    {
+      "id": "umijs/qiankun#2951",
+      "scope": "原生Window监听器receiver、回调this/currentTarget、once/capture、移除及兄弟宿主隔离三引擎通过；未运行完整qiankun3 next React16示例。",
+      "phase": "browser-passed",
+      "tests": [
+        "Q2951 invokes native window listener methods with their original receiver and removal options"
+      ],
+      "recommendedStatus": "regression-passed"
+    }
+  ],
+  "evidence": {
+    "browser": "tests/upstream-issues/collections/2026-09-08-batch-02-dom-root-combined.json",
+    "initial": "tests/upstream-issues/collections/2026-09-08-batch-02-entry-evidence/batch02-root-entry-first.json",
+    "chromium": "tests/upstream-issues/collections/2026-09-08-batch-02-entry-evidence/batch02-root-csp-jsplumb-first.json",
+    "fullBrowserFirst": "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/browser-first.json",
+    "fullBatchE2EFirst": "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/batch02-e2e-first.json"
+  },
+  "evidenceLimits": [
+    "首轮Q2727失败来自CJS namespace测试预期、cleanup顺序、取消后的handle返回值预期，不作为生产bug证据。",
+    "首个CSP/location报告未进入应用（测试host import多一层../），不作为生产bug。第二次CSP route.fulfill触发Chromium Local Network Access，后改为真实HTTP CSP响应。",
+    "阶段记录不是最终完成状态。"
+  ],
+  "additionalContracts": [
+    {
+      "id": "umijs/qiankun#2408",
+      "phase": "browser-and-e2e-three-engines-passed",
+      "testPath": "tests/browser/upstream-batch02-fixed-position.browser.test.ts",
+      "testTitle": "Q2408 fixed offset coordinates use the native Realm document root and preserve transformed local containers",
+      "scope": "真实Realm HTML根作为fixed坐标参照，documentElement.client尺寸对应host视口；元素自身display:none且祖先均非display:none、无局部固定包含块时支持预定位。局部native offsetParent、祖先display:none、断开节点、应用自有accessor与销毁恢复均有独立断言；Element UI两种挂载模式真实几何和选择三引擎通过。"
+    }
+  ]
+}

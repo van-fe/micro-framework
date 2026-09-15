@@ -1,0 +1,65 @@
+{
+  "name": "@micro-framework/workspace",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "packageManager": "bun@1.4.0",
+  "workspaces": [
+    "packages/*",
+    "examples/*"
+  ],
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "scripts": {
+    "build": "bun run --workspaces --if-present build",
+    "build:framework": "bun run --filter './packages/*' --filter '!@micro-framework/docs' build",
+    "dev": "bun run --parallel --filter '@micro-framework/example-*' --filter '@micro-framework/docs' dev",
+    "dev:demo": "bun run dev",
+    "docs:dev": "bun run --filter @micro-framework/docs dev",
+    "docs:build": "bun run --filter @micro-framework/docs build",
+    "docs:preview": "bun run --filter @micro-framework/docs preview",
+    "typecheck": "bun run --workspaces --if-present typecheck && bun run typecheck:tests",
+    "typecheck:tests": "tsc -p tsconfig.tests.json --noEmit",
+    "test": "bun run test:unit && bun run test:browser && bun run test:e2e && bun run test:mobile && bun run test:production",
+    "test:unit": "vitest run",
+    "test:browser": "vitest run --config vitest.browser.config.ts",
+    "test:browser:watch": "vitest --config vitest.browser.config.ts --browser.headless=false --project browser-chromium",
+    "test:safari": "bun run build:framework && vitest run --config vitest.safari.config.ts tests/browser && vitest run --config vitest.safari.config.ts tests/safari",
+    "test:safari:contracts": "vitest run --config vitest.safari.config.ts tests/browser",
+    "test:safari:components": "bun run build:framework && vitest run --config vitest.safari.config.ts tests/safari",
+    "test:e2e": "bun run build:framework && playwright test",
+    "test:e2e:ui": "bun run build:framework && playwright test --ui",
+    "test:mobile": "bun run build:framework && playwright test --config playwright.mobile.config.ts",
+    "test:production": "bun run build:framework && bun run --filter @micro-framework/example-host build && bun run --filter @micro-framework/example-vanilla build && bun run --filter @micro-framework/example-ssr-host build && playwright test --config playwright.production.config.ts",
+    "benchmark": "bun run build:framework && bun run --filter @micro-framework/example-host build && bun run --filter @micro-framework/example-vanilla build && bun run --filter @micro-framework/example-react build && bun run --filter @micro-framework/example-vue build && bun run --filter @micro-framework/example-vue2 build && playwright test --config playwright.benchmark.config.ts",
+    "benchmark:soak": "MICRO_FRAME_SOAK_MINUTES=60 bun run benchmark",
+    "check:architecture": "bun run .agents/skills/micro-framework-engineering/scripts/check-architecture.ts",
+    "check:artifacts": "node scripts/check-artifacts.mjs",
+    "release:prepare": "bun run build:framework && bun run check:artifacts && node scripts/prepare-release.mjs",
+    "test:templates": "bun run release:prepare && node scripts/prepare-template-tests.mjs && playwright test --config playwright.templates.config.ts",
+    "verify": "bun run check:architecture && bun run test:release && bun run typecheck && bun run build && bun run check:artifacts && bun run test && bun run test:templates && bun run test:integrations",
+    "test:integrations": "bun run build:framework && bun run --filter @micro-framework/example-angular build && bun run --filter @micro-framework/example-angular build:webpack && playwright test --config playwright.integrations.config.ts",
+    "test:extension": "node scripts/test-devtools-extension.mjs",
+    "release:prepare:npm": "bun run build:framework && bun run check:artifacts && node scripts/prepare-release.mjs --publishable",
+    "test:release": "node --test scripts/release-plan.test.mjs scripts/publish-npm.test.mjs"
+  },
+  "devDependencies": {
+    "@emotion/css": "11.13.5",
+    "@playwright/test": "1.62.1",
+    "@types/node": "24.3.0",
+    "@vitest/browser-playwright": "4.1.11",
+    "@vitest/browser-webdriverio": "4.1.11",
+    "dompurify": "2.3.0",
+    "eruda": "2.4.1",
+    "jsplumb": "2.11.2",
+    "typescript": "6.0.3",
+    "vite": "8.2.2",
+    "vitest": "4.1.11",
+    "webpack": "5.110.3"
+  },
+  "overrides": {
+    "typescript": "6.0.3"
+  }
+}

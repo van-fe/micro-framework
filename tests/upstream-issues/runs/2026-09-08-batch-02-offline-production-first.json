@@ -1,0 +1,389 @@
+{
+  "config": {
+    "argv": [
+      "/Users/fanfangbo/.local/share/fnm/node-versions/v24.19.0/installation/bin/node",
+      "/Users/fanfangbo/workspace/micro-framework/node_modules/.bin/playwright",
+      "test",
+      "tests/production/offline-cache.spec.ts",
+      "--config=playwright.production.config.ts",
+      "--reporter=line,json"
+    ],
+    "configFile": "/Users/fanfangbo/workspace/micro-framework/playwright.production.config.ts",
+    "rootDir": "/Users/fanfangbo/workspace/micro-framework/tests/production",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results/production",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/production",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results/production",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/production",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results/production",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/production",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "line"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "offline-cache.spec.ts",
+      "file": "offline-cache.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "atomically activates a host-owned application cache and serves it offline",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 210,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:06:54.954Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f29b0940184423fd3b92-69bd500351bc319db2ef",
+          "file": "offline-cache.spec.ts",
+          "line": 46,
+          "column": 1
+        },
+        {
+          "title": "creates a new native Realm and mounts the complete cached module graph while offline",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 131,
+                  "error": {
+                    "message": "Error: page.evaluate: AggregateError: All application entries failed for offline-native-app (attempt 1: Unable to load Realm bootstrap: http://127.0.0.1:4273/assets/realm-bootstrap.js?micro-frame-request=module-1).\n    at #k (http://127.0.0.1:4273/assets/dist-FTVJa4nq.js:24:79112)\n    at async #C (http://127.0.0.1:4273/assets/dist-FTVJa4nq.js:24:73649)\n    at async Yc.mount (http://127.0.0.1:4273/assets/dist-FTVJa4nq.js:24:73568)\n    at async ul.mountApp (http://127.0.0.1:4273/assets/dist-FTVJa4nq.js:24:92788)\n    at async eval (eval at evaluate (:311:30), <anonymous>:10:7)\n    at async <anonymous>:337:30",
+                    "stack": "Error: page.evaluate: AggregateError: All application entries failed for offline-native-app (attempt 1: Unable to load Realm bootstrap: http://127.0.0.1:4273/assets/realm-bootstrap.js?micro-frame-request=module-1).\n    at #k (http://127.0.0.1:4273/assets/dist-FTVJa4nq.js:24:79112)\n    at async #C (http://127.0.0.1:4273/assets/dist-FTVJa4nq.js:24:73649)\n    at async Yc.mount (http://127.0.0.1:4273/assets/dist-FTVJa4nq.js:24:73568)\n    at async ul.mountApp (http://127.0.0.1:4273/assets/dist-FTVJa4nq.js:24:92788)\n    at async eval (eval at evaluate (:311:30), <anonymous>:10:7)\n    at async <anonymous>:337:30\n    at #k (http://127.0.0.1:4273/assets/dist-FTVJa4nq.js:24:79112)\n    at async #C (http://127.0.0.1:4273/assets/dist-FTVJa4nq.js:24:73649)\n    at async Yc.mount (http://127.0.0.1:4273/assets/dist-FTVJa4nq.js:24:73568)\n    at async ul.mountApp (http://127.0.0.1:4273/assets/dist-FTVJa4nq.js:24:92788)\n    at async eval (eval at evaluate (:311:30), <anonymous>:10:7)\n    at async <anonymous>:337:30\n    at /Users/fanfangbo/workspace/micro-framework/tests/production/offline-cache.spec.ts:121:34",
+                    "location": {
+                      "file": "http://127.0.0.1:4273/assets/dist-FTVJa4nq.js",
+                      "column": 79112,
+                      "line": 24
+                    }
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "http://127.0.0.1:4273/assets/dist-FTVJa4nq.js",
+                        "column": 79112,
+                        "line": 24
+                      },
+                      "message": "Error: page.evaluate: AggregateError: All application entries failed for offline-native-app (attempt 1: Unable to load Realm bootstrap: http://127.0.0.1:4273/assets/realm-bootstrap.js?micro-frame-request=module-1).\n    at #k (http://127.0.0.1:4273/assets/dist-FTVJa4nq.js:24:79112)\n    at async #C (http://127.0.0.1:4273/assets/dist-FTVJa4nq.js:24:73649)\n    at async Yc.mount (http://127.0.0.1:4273/assets/dist-FTVJa4nq.js:24:73568)\n    at async ul.mountApp (http://127.0.0.1:4273/assets/dist-FTVJa4nq.js:24:92788)\n    at async eval (eval at evaluate (:311:30), <anonymous>:10:7)\n    at async <anonymous>:337:30\n    at #k (http://127.0.0.1:4273/assets/dist-FTVJa4nq.js:24:79112)\n    at async #C (http://127.0.0.1:4273/assets/dist-FTVJa4nq.js:24:73649)\n    at async Yc.mount (http://127.0.0.1:4273/assets/dist-FTVJa4nq.js:24:73568)\n    at async ul.mountApp (http://127.0.0.1:4273/assets/dist-FTVJa4nq.js:24:92788)\n    at async eval (eval at evaluate (:311:30), <anonymous>:10:7)\n    at async <anonymous>:337:30\n    at /Users/fanfangbo/workspace/micro-framework/tests/production/offline-cache.spec.ts:121:34"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:06:55.321Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/production/offline-cache-creates-a-ne-b7101--module-graph-while-offline-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/production/offline-cache-creates-a-ne-b7101--module-graph-while-offline-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "http://127.0.0.1:4273/assets/dist-FTVJa4nq.js",
+                    "column": 79112,
+                    "line": 24
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "f29b0940184423fd3b92-35ddd485f48bb7613361",
+          "file": "offline-cache.spec.ts",
+          "line": 95,
+          "column": 1
+        },
+        {
+          "title": "atomically activates a host-owned application cache and serves it offline",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 729,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:06:55.642Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f29b0940184423fd3b92-c4cb5bb6fd5b1ce348b3",
+          "file": "offline-cache.spec.ts",
+          "line": 46,
+          "column": 1
+        },
+        {
+          "title": "creates a new native Realm and mounts the complete cached module graph while offline",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 275,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:06:56.772Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f29b0940184423fd3b92-788b4ebbbfd1b4b71ba1",
+          "file": "offline-cache.spec.ts",
+          "line": 95,
+          "column": 1
+        },
+        {
+          "title": "atomically activates a host-owned application cache and serves it offline",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 506,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:06:57.374Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f29b0940184423fd3b92-b1631b787ad7c9b53c2c",
+          "file": "offline-cache.spec.ts",
+          "line": 46,
+          "column": 1
+        },
+        {
+          "title": "creates a new native Realm and mounts the complete cached module graph while offline",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 15236,
+                  "error": {
+                    "message": "Error: page.evaluate: AggregateError: All application entries failed for offline-native-app (attempt 1: offline-native-app.load exceeded 15000ms.).",
+                    "stack": "Error: page.evaluate: AggregateError: All application entries failed for offline-native-app (attempt 1: offline-native-app.load exceeded 15000ms.).\n    at /Users/fanfangbo/workspace/micro-framework/tests/production/offline-cache.spec.ts:121:34",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/production/offline-cache.spec.ts",
+                      "column": 34,
+                      "line": 121
+                    },
+                    "snippet": "  119 |   await context.setOffline(true);\n  120 |   try {\n> 121 |     const remounted = await page.evaluate(async (entry) => {\n      |                                  ^\n  122 |       const state = window.__offlineRemountForTest__!;\n  123 |       const runtime = window.__createMicroFrameBenchmarkRuntime__!({ bootstrapUrl: state.bootstrapUrl, storage: { persistent: false } });\n  124 |       state.runtime = runtime;"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/production/offline-cache.spec.ts",
+                        "column": 34,
+                        "line": 121
+                      },
+                      "message": "Error: page.evaluate: AggregateError: All application entries failed for offline-native-app (attempt 1: offline-native-app.load exceeded 15000ms.).\n\n  119 |   await context.setOffline(true);\n  120 |   try {\n> 121 |     const remounted = await page.evaluate(async (entry) => {\n      |                                  ^\n  122 |       const state = window.__offlineRemountForTest__!;\n  123 |       const runtime = window.__createMicroFrameBenchmarkRuntime__!({ bootstrapUrl: state.bootstrapUrl, storage: { persistent: false } });\n  124 |       state.runtime = runtime;\n    at /Users/fanfangbo/workspace/micro-framework/tests/production/offline-cache.spec.ts:121:34"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T07:06:58.040Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/production/offline-cache-creates-a-ne-b7101--module-graph-while-offline-webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/production/offline-cache-creates-a-ne-b7101--module-graph-while-offline-webkit/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/production/offline-cache.spec.ts",
+                    "column": 34,
+                    "line": 121
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "f29b0940184423fd3b92-06c577f01501b2cfbd34",
+          "file": "offline-cache.spec.ts",
+          "line": 95,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-08T07:06:53.815Z",
+    "duration": 19502.046,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

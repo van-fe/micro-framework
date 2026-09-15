@@ -1,0 +1,51 @@
+$ vitest run --config vitest.browser.config.ts "tests/browser/upstream-batch04-dom.browser.test.ts" "tests/browser/upstream-batch03-dom.browser.test.ts" "--reporter=verbose" "--reporter=json" "--outputFile=tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/target-browser-permitted.json"
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - import "./upstream-batch03-entry-builds" without a file extension (tests/browser/server/upstream-batch03-entry-fixture.ts:4:36). Add the file extension
+  - import "../../support/webpack-compiler" without a file extension (tests/browser/server/upstream-batch02-entry-fixture.ts:7:39). Add the file extension
+  - import "../../support/webpack-compiler" without a file extension (tests/browser/server/upstream-batch03-entry-builds.ts:8:39). Add the file extension
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+
+ RUN  v4.1.11 /Users/fanfangbo/workspace/micro-framework
+
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - import "../../support/webpack-compiler" without a file extension (tests/browser/server/upstream-batch02-entry-fixture.ts:7:39). Add the file extension
+  - import "./upstream-batch03-entry-builds" without a file extension (tests/browser/server/upstream-batch03-entry-fixture.ts:4:36). Add the file extension
+  - import "../../support/webpack-compiler" without a file extension (tests/browser/server/upstream-batch03-entry-builds.ts:8:39). Add the file extension
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+ ✓ |browser-chromium| tests/browser/upstream-batch03-dom.browser.test.ts > batch03 DOM upstream contracts > Q3151 prepares head styles before the adjacent inline script runs and preserves relative links on reload 41ms
+ ✓ |browser-chromium| tests/browser/upstream-batch03-dom.browser.test.ts > batch03 DOM upstream contracts > Q2983 Q2984 preserves body substrings in attribute selectors and following rules 7ms
+ ✓ |browser-chromium| tests/browser/upstream-batch03-dom.browser.test.ts > batch03 DOM upstream contracts > Q3061 Q2968 Q2969 W1001 renders actual Vite Vue scoped imports and CSS module assets within the application 21ms
+ ✓ |browser-chromium| tests/browser/upstream-batch03-dom.browser.test.ts > batch03 DOM upstream contracts > Q3061 Q2968 Q2969 W1001 preserves Vite dev injected global scoped and CSS module styles 44ms
+ ✓ |browser-chromium| tests/browser/upstream-batch03-dom.browser.test.ts > batch03 DOM upstream contracts > W1040 loads grandchild icon fonts without copying fonts to its parent and cleans up isolated families 30ms
+ ✓ |browser-chromium| tests/browser/upstream-batch03-dom.browser.test.ts > batch03 DOM upstream contracts > native registry control upgrades an adopted undefined element without changing its identity 6ms
+ ✓ |browser-chromium| tests/browser/upstream-batch03-dom.browser.test.ts > batch03 DOM upstream contracts > W1046 W1047 W1048 W1061 upgrades React effect loaded web components and retains nested composed event paths 104ms
+ ✓ |browser-chromium| tests/browser/upstream-batch04-dom.browser.test.ts > batch04 DOM upstream contracts > Q3067 isolates String prototype extensions and application window and document listeners 9ms
+ ✓ |browser-chromium| tests/browser/upstream-batch04-dom.browser.test.ts > batch04 DOM upstream contracts > Q3042 preserves a readonly nonconfigurable document createElement value and creates scoped nodes 8ms
+ ✓ |browser-chromium| tests/browser/upstream-batch04-dom.browser.test.ts > batch04 DOM upstream contracts > Q3018 retains adjacent dynamically inserted styles across fresh application teardown and reload 11ms
+ ✓ |browser-webkit| tests/browser/upstream-batch03-dom.browser.test.ts > batch03 DOM upstream contracts > Q3151 prepares head styles before the adjacent inline script runs and preserves relative links on reload 67ms
+ ✓ |browser-webkit| tests/browser/upstream-batch03-dom.browser.test.ts > batch03 DOM upstream contracts > Q2983 Q2984 preserves body substrings in attribute selectors and following rules 10ms
+ ✓ |browser-webkit| tests/browser/upstream-batch03-dom.browser.test.ts > batch03 DOM upstream contracts > Q3061 Q2968 Q2969 W1001 renders actual Vite Vue scoped imports and CSS module assets within the application 35ms
+ ✓ |browser-webkit| tests/browser/upstream-batch03-dom.browser.test.ts > batch03 DOM upstream contracts > Q3061 Q2968 Q2969 W1001 preserves Vite dev injected global scoped and CSS module styles 32ms
+ ✓ |browser-webkit| tests/browser/upstream-batch03-dom.browser.test.ts > batch03 DOM upstream contracts > W1040 loads grandchild icon fonts without copying fonts to its parent and cleans up isolated families 41ms
+ ✓ |browser-webkit| tests/browser/upstream-batch03-dom.browser.test.ts > batch03 DOM upstream contracts > native registry control upgrades an adopted undefined element without changing its identity 6ms
+ ✓ |browser-webkit| tests/browser/upstream-batch03-dom.browser.test.ts > batch03 DOM upstream contracts > W1046 W1047 W1048 W1061 upgrades React effect loaded web components and retains nested composed event paths 111ms
+ ✓ |browser-webkit| tests/browser/upstream-batch04-dom.browser.test.ts > batch04 DOM upstream contracts > Q3067 isolates String prototype extensions and application window and document listeners 13ms
+ ✓ |browser-webkit| tests/browser/upstream-batch04-dom.browser.test.ts > batch04 DOM upstream contracts > Q3042 preserves a readonly nonconfigurable document createElement value and creates scoped nodes 12ms
+ ✓ |browser-webkit| tests/browser/upstream-batch04-dom.browser.test.ts > batch04 DOM upstream contracts > Q3018 retains adjacent dynamically inserted styles across fresh application teardown and reload 19ms
+ ✓ |browser-firefox| tests/browser/upstream-batch03-dom.browser.test.ts > batch03 DOM upstream contracts > Q3151 prepares head styles before the adjacent inline script runs and preserves relative links on reload 44ms
+ ✓ |browser-firefox| tests/browser/upstream-batch03-dom.browser.test.ts > batch03 DOM upstream contracts > Q2983 Q2984 preserves body substrings in attribute selectors and following rules 8ms
+ ✓ |browser-firefox| tests/browser/upstream-batch03-dom.browser.test.ts > batch03 DOM upstream contracts > Q3061 Q2968 Q2969 W1001 renders actual Vite Vue scoped imports and CSS module assets within the application 29ms
+ ✓ |browser-firefox| tests/browser/upstream-batch03-dom.browser.test.ts > batch03 DOM upstream contracts > Q3061 Q2968 Q2969 W1001 preserves Vite dev injected global scoped and CSS module styles 34ms
+ ✓ |browser-firefox| tests/browser/upstream-batch03-dom.browser.test.ts > batch03 DOM upstream contracts > W1040 loads grandchild icon fonts without copying fonts to its parent and cleans up isolated families 39ms
+ ✓ |browser-firefox| tests/browser/upstream-batch03-dom.browser.test.ts > batch03 DOM upstream contracts > native registry control upgrades an adopted undefined element without changing its identity 12ms
+ ✓ |browser-firefox| tests/browser/upstream-batch03-dom.browser.test.ts > batch03 DOM upstream contracts > W1046 W1047 W1048 W1061 upgrades React effect loaded web components and retains nested composed event paths 143ms
+ ✓ |browser-firefox| tests/browser/upstream-batch04-dom.browser.test.ts > batch04 DOM upstream contracts > Q3067 isolates String prototype extensions and application window and document listeners 13ms
+ ✓ |browser-firefox| tests/browser/upstream-batch04-dom.browser.test.ts > batch04 DOM upstream contracts > Q3042 preserves a readonly nonconfigurable document createElement value and creates scoped nodes 14ms
+ ✓ |browser-firefox| tests/browser/upstream-batch04-dom.browser.test.ts > batch04 DOM upstream contracts > Q3018 retains adjacent dynamically inserted styles across fresh application teardown and reload 33ms
+
+ Test Files  6 passed (6)
+      Tests  30 passed (30)
+   Start at  11:15:22
+   Duration  2.97s (transform 0ms, setup 0ms, import 282ms, tests 998ms, environment 0ms)
+
+JSON report written to /Users/fanfangbo/workspace/micro-framework/tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/target-browser-permitted.json

@@ -1,0 +1,58 @@
+$ vitest run --config vitest.browser.config.ts tests/browser/document-write.browser.test.ts tests/browser/document-write-handler.browser.test.ts tests/browser/document-write-assets.browser.test.ts tests/browser/html-entry.browser.test.ts tests/browser/realm-dom.browser.test.ts --browser.api.port "63318"
+
+ RUN  v4.1.11 /Users/fanfangbo/workspace/micro-framework
+
+ ❯ |browser-webkit| tests/browser/document-write-handler.browser.test.ts (4 tests | 2 failed) 840ms
+     × retains the visible HTML and SVG element scope and the iframe global Realm 48ms
+     × ignores writes from canceled external scripts after a replacement document opens 787ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |browser-webkit| tests/browser/document-write-handler.browser.test.ts > written document mutations and native handler scope > retains the visible HTML and SVG element scope and the iframe global Realm
+AssertionError: expected 'svg before' to be 'svg changed' // Object.is equality
+
+Failure screenshot:
+  - tests/browser/__screenshots__/document-write-handler.browser.test.ts/written-document-mutations-and-native-handler-scope-retains-the-visible-HTML-and-SVG-element-scope-and-the-iframe-global-Realm-1.png
+
+Expected: "svg changed"
+Received: "svg before"
+
+ ❯ tests/browser/document-write-handler.browser.test.ts:39:34
+     37|
+     38|     expect(button.textContent).toBe("changed");
+     39|     expect(text.textContent).toBe("svg changed");
+       |                                  ^
+     40|     expect(button.ownerDocument).toBe(document);
+     41|     expect(text.ownerDocument).toBe(document);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  |browser-webkit| tests/browser/document-write-handler.browser.test.ts > written document mutations and native handler scope > ignores writes from canceled external scripts after a replacement document opens
+AssertionError: expected undefined to be 'replacement' // Object.is equality
+
+Failure screenshot:
+  - tests/browser/__screenshots__/document-write-handler.browser.test.ts/written-document-mutations-and-native-handler-scope-ignores-writes-from-canceled-external-scripts-after-a-replacement-document-opens-1.png
+
+- Expected:
+"replacement"
+
++ Received:
+undefined
+
+ ❯ tests/browser/document-write-handler.browser.test.ts:102:80
+    100|     // The fixture responds after 600 ms; removed native scripts may s…
+    101|     await new Promise<void>((resolve) => setTimeout(resolve, 750));
+    102|     expect(surface.body.querySelector("#write-new-document")?.textCont…
+       |                                                                                ^
+    103|     expect(surface.body.querySelector("#write-stale-reset")).toBeNull(…
+    104|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  1 failed | 14 passed (15)
+      Tests  2 failed | 109 passed (111)
+   Start at  12:33:41
+   Duration  3.25s (transform 0ms, setup 0ms, import 401ms, tests 5.98s, environment 0ms)
+
+error: script "test:browser" exited with code 1

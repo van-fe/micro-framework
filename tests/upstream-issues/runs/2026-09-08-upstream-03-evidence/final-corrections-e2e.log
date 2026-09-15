@@ -1,0 +1,169 @@
+
+Running 24 tests using 1 worker
+
+(node:57862) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/24] [chromium] › tests/e2e/upstream-batch02-assets-csp.spec.ts:46:1 › W727 mounts and styles an HTML application under style-src without unsafe-inline and emits no style CSP violations
+  1) [chromium] › tests/e2e/upstream-batch02-assets-csp.spec.ts:46:1 › W727 mounts and styles an HTML application under style-src without unsafe-inline and emits no style CSP violations 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  -  1
+    + Received  + 10
+
+    - Array []
+    + Array [
+    +   Object {
+    +     "blocked": "inline",
+    +     "directive": "style-src-elem",
+    +   },
+    +   Object {
+    +     "blocked": "inline",
+    +     "directive": "style-src-elem",
+    +   },
+    + ]
+
+      65 |   expect(await page.locator("micro-app-host").evaluate(node => getComputedStyle(node).display)).toBe("block");
+      66 |   expect(await page.locator("micro-app-body").evaluate(node => getComputedStyle(node).display)).toBe("block");
+    > 67 |   expect(await page.evaluate(() => window.__batch02CspViolations!.filter(event => event.directive.startsWith("style-src")))).toEqual([]);
+         |                                                                                                                              ^
+      68 |   expect(errors).toEqual([]);
+      69 | });
+      70 |
+        at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-assets-csp.spec.ts:67:126
+
+    Error Context: test-results/upstream-batch02-assets-cs-8b131-its-no-style-CSP-violations-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/upstream-batch02-assets-cs-8b131-its-no-style-CSP-violations-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/upstream-batch02-assets-cs-8b131-its-no-style-CSP-violations-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+(node:57876) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[2/24] [chromium] › tests/e2e/upstream-batch02-assets-csp.spec.ts:71:38 › W727 respects author inline-style nonce authorization without restoring blocked CSS (nonce=true)
+  2) [chromium] › tests/e2e/upstream-batch02-assets-csp.spec.ts:71:38 › W727 respects author inline-style nonce authorization without restoring blocked CSS (nonce=true) 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  -  1
+    + Received  + 14
+
+    - Array []
+    + Array [
+    +   Object {
+    +     "blocked": "inline",
+    +     "directive": "style-src-elem",
+    +   },
+    +   Object {
+    +     "blocked": "inline",
+    +     "directive": "style-src-elem",
+    +   },
+    +   Object {
+    +     "blocked": "inline",
+    +     "directive": "style-src-elem",
+    +   },
+    + ]
+
+      87 |     await expect(probe).toHaveCSS("color","rgb(70, 90, 110)"); await expect(probe).toHaveCSS("width","37px");
+      88 |     expect(await token()).toBe("rgb(70, 90, 110)");
+    > 89 |     expect(await page.evaluate(() => window.__batch02CspViolations!.filter(event => event.directive.startsWith("style-src")))).toEqual([]);
+         |                                                                                                                                ^
+      90 |   } else {
+      91 |     await expect.poll(() => page.evaluate(() => window.__batch02CspViolations!.filter(event => event.directive.startsWith("style-src") && event.blocked === "inline").length)).toBeGreaterThan(0);
+      92 |     expect(await token()).toBe(""); await expect(probe).not.toHaveCSS("color","rgb(70, 90, 110)");
+        at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-assets-csp.spec.ts:89:128
+
+    Error Context: test-results/upstream-batch02-assets-cs-4e1ce-ing-blocked-CSS-nonce-true--chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/upstream-batch02-assets-cs-4e1ce-ing-blocked-CSS-nonce-true--chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/upstream-batch02-assets-cs-4e1ce-ing-blocked-CSS-nonce-true--chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+(node:57886) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[3/24] [chromium] › tests/e2e/upstream-batch02-assets-csp.spec.ts:71:38 › W727 respects author inline-style nonce authorization without restoring blocked CSS (nonce=false)
+(node:57894) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[4/24] [chromium] › tests/e2e/upstream-batch02-components-overlays.spec.ts:61:3 › Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=true)
+[5/24] [chromium] › tests/e2e/upstream-batch02-components-overlays.spec.ts:61:3 › Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=false)
+(node:57912) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[6/24] [chromium] › tests/e2e/upstream-batch02-dom-libraries.spec.ts:38:1 › Q2137 eruda 2.4.1 initializes and destroys its dynamic styles in a nested application
+(node:57929) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[7/24] [chromium] › tests/e2e/upstream-batch02-runtime-location.spec.ts:6:1 › Q1502 native window.location assignment navigates only the child and disposes after crossing origin
+[8/24] [chromium] › tests/e2e/upstream-batch02-runtime-location.spec.ts:41:1 › Q1502 native navigation during a pending module import leaves an unmounted handle that can be explicitly disposed
+(node:57935) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[9/24] [firefox] › tests/e2e/upstream-batch02-assets-csp.spec.ts:46:1 › W727 mounts and styles an HTML application under style-src without unsafe-inline and emits no style CSP violations
+[10/24] [firefox] › tests/e2e/upstream-batch02-assets-csp.spec.ts:71:38 › W727 respects author inline-style nonce authorization without restoring blocked CSS (nonce=true)
+[11/24] [firefox] › tests/e2e/upstream-batch02-assets-csp.spec.ts:71:38 › W727 respects author inline-style nonce authorization without restoring blocked CSS (nonce=false)
+(node:57947) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[12/24] [firefox] › tests/e2e/upstream-batch02-components-overlays.spec.ts:61:3 › Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=true)
+[13/24] [firefox] › tests/e2e/upstream-batch02-components-overlays.spec.ts:61:3 › Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=false)
+(node:57956) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[14/24] [firefox] › tests/e2e/upstream-batch02-dom-libraries.spec.ts:38:1 › Q2137 eruda 2.4.1 initializes and destroys its dynamic styles in a nested application
+(node:57964) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[15/24] [firefox] › tests/e2e/upstream-batch02-runtime-location.spec.ts:6:1 › Q1502 native window.location assignment navigates only the child and disposes after crossing origin
+[16/24] [firefox] › tests/e2e/upstream-batch02-runtime-location.spec.ts:41:1 › Q1502 native navigation during a pending module import leaves an unmounted handle that can be explicitly disposed
+(node:57975) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[17/24] [webkit] › tests/e2e/upstream-batch02-assets-csp.spec.ts:46:1 › W727 mounts and styles an HTML application under style-src without unsafe-inline and emits no style CSP violations
+[18/24] [webkit] › tests/e2e/upstream-batch02-assets-csp.spec.ts:71:38 › W727 respects author inline-style nonce authorization without restoring blocked CSS (nonce=true)
+[19/24] [webkit] › tests/e2e/upstream-batch02-assets-csp.spec.ts:71:38 › W727 respects author inline-style nonce authorization without restoring blocked CSS (nonce=false)
+(node:57990) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[20/24] [webkit] › tests/e2e/upstream-batch02-components-overlays.spec.ts:61:3 › Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=true)
+[21/24] [webkit] › tests/e2e/upstream-batch02-components-overlays.spec.ts:61:3 › Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=false)
+(node:58008) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[22/24] [webkit] › tests/e2e/upstream-batch02-dom-libraries.spec.ts:38:1 › Q2137 eruda 2.4.1 initializes and destroys its dynamic styles in a nested application
+(node:58027) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[23/24] [webkit] › tests/e2e/upstream-batch02-runtime-location.spec.ts:6:1 › Q1502 native window.location assignment navigates only the child and disposes after crossing origin
+[24/24] [webkit] › tests/e2e/upstream-batch02-runtime-location.spec.ts:41:1 › Q1502 native navigation during a pending module import leaves an unmounted handle that can be explicitly disposed
+  2 failed
+    [chromium] › tests/e2e/upstream-batch02-assets-csp.spec.ts:46:1 › W727 mounts and styles an HTML application under style-src without unsafe-inline and emits no style CSP violations 
+    [chromium] › tests/e2e/upstream-batch02-assets-csp.spec.ts:71:38 › W727 respects author inline-style nonce authorization without restoring blocked CSS (nonce=true) 
+  22 passed (27.8s)

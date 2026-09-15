@@ -1,0 +1,3 @@
+$ vitest run "--reporter=json" "--outputFile=tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/unit.json"
+JSON report written to /Users/fanfangbo/workspace/micro-framework/tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/unit.json
+error: script "test:unit" exited with code 1

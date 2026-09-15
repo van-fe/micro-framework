@@ -1,0 +1,434 @@
+{
+  "id": "2026-09-09-upstream-05",
+  "collectionBatch": "2026-09-09-batch-04",
+  "completedAt": "2026-09-09T04:00:06.531526+00:00",
+  "newIssues": 20,
+  "repositories": {
+    "umijs/qiankun": 10,
+    "Tencent/wujie": 10
+  },
+  "cumulativeIssues": 140,
+  "statusCounts": {
+    "partial-coverage": 10,
+    "regression-passed": 8,
+    "fixed": 2
+  },
+  "cumulativeStatusCounts": {
+    "regression-passed": 83,
+    "fixed": 34,
+    "out-of-scope": 2,
+    "partial-coverage": 21
+  },
+  "browsers": [
+    "Chromium",
+    "Firefox",
+    "WebKit"
+  ],
+  "realSafari": "not-run",
+  "testCounts": {
+    "unit": 174,
+    "browser": 483,
+    "e2e": 423,
+    "production": 18
+  },
+  "gates": [
+    {
+      "phase": "architecture",
+      "argv": [
+        "bun",
+        "run",
+        "check:architecture"
+      ],
+      "env": {},
+      "startedAt": "2026-09-09T03:52:00.917725+00:00",
+      "finishedAt": "2026-09-09T03:52:00.972490+00:00",
+      "exitCode": 0,
+      "log": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-architecture.log",
+      "logSha256": "1a9ca4a890c2dd9cbe19c3da8d7804cf3baf9d3559aa7ad5af620303bc6f3669"
+    },
+    {
+      "phase": "typecheck",
+      "argv": [
+        "bun",
+        "run",
+        "typecheck"
+      ],
+      "env": {},
+      "startedAt": "2026-09-09T03:52:00.972825+00:00",
+      "finishedAt": "2026-09-09T03:52:10.718147+00:00",
+      "exitCode": 0,
+      "log": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-typecheck.log",
+      "logSha256": "f2453507e6ff9d97b2c573b3da8d34aff8ecde22a8aae12858f125850c64297f"
+    },
+    {
+      "phase": "build",
+      "argv": [
+        "bun",
+        "run",
+        "build"
+      ],
+      "env": {},
+      "startedAt": "2026-09-09T03:52:10.718568+00:00",
+      "finishedAt": "2026-09-09T03:52:15.811495+00:00",
+      "exitCode": 0,
+      "log": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-build.log",
+      "logSha256": "d3d1cd3072e0bff4c95d790f10177d2e1ef18ffcd523308709207682fe26a6f7"
+    },
+    {
+      "phase": "unit",
+      "argv": [
+        "bun",
+        "run",
+        "test:unit",
+        "--reporter=verbose",
+        "--reporter=json",
+        "--outputFile=/Users/fanfangbo/workspace/micro-framework/tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-unit.json"
+      ],
+      "env": {},
+      "startedAt": "2026-09-09T03:52:15.811827+00:00",
+      "finishedAt": "2026-09-09T03:52:17.040765+00:00",
+      "exitCode": 0,
+      "log": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-unit.log",
+      "logSha256": "2cd90cadc5a2be73a26fe53b9fd25f94d6dbefa3f689a32483b761d589765511"
+    },
+    {
+      "phase": "browser",
+      "argv": [
+        "bun",
+        "run",
+        "test:browser",
+        "--reporter=verbose",
+        "--reporter=json",
+        "--outputFile=/Users/fanfangbo/workspace/micro-framework/tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-browser.json"
+      ],
+      "env": {},
+      "startedAt": "2026-09-09T03:52:17.041080+00:00",
+      "finishedAt": "2026-09-09T03:52:30.498553+00:00",
+      "exitCode": 0,
+      "log": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-browser.log",
+      "logSha256": "07b25baa09141917a21db01456ffd3d177919cad27096ad2011f2d81bec1d213"
+    },
+    {
+      "phase": "e2e",
+      "argv": [
+        "bunx",
+        "playwright",
+        "test",
+        "--max-failures=1",
+        "--reporter=line,json"
+      ],
+      "env": {
+        "PLAYWRIGHT_JSON_OUTPUT_NAME": "/Users/fanfangbo/workspace/micro-framework/tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-e2e.json"
+      },
+      "startedAt": "2026-09-09T03:52:30.499060+00:00",
+      "finishedAt": "2026-09-09T03:59:26.262502+00:00",
+      "exitCode": 0,
+      "log": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-e2e.log",
+      "logSha256": "5cc75da2d38751b933dbda34aa454c5c17198fd570a701364ce49171f76bf18d"
+    },
+    {
+      "phase": "production",
+      "argv": [
+        "bunx",
+        "playwright",
+        "test",
+        "--config",
+        "playwright.production.config.ts",
+        "--reporter=line,json"
+      ],
+      "env": {
+        "PLAYWRIGHT_JSON_OUTPUT_NAME": "/Users/fanfangbo/workspace/micro-framework/tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-production.json"
+      },
+      "startedAt": "2026-09-09T03:59:26.263585+00:00",
+      "finishedAt": "2026-09-09T03:59:46.395527+00:00",
+      "exitCode": 0,
+      "log": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-production.log",
+      "logSha256": "0de9f08cc1ca1d2803228135a46ce73057247ada1047cf601ee57af89488907b"
+    },
+    {
+      "phase": "artifacts",
+      "argv": [
+        "bun",
+        "run",
+        "check:artifacts"
+      ],
+      "env": {},
+      "startedAt": "2026-09-09T03:59:46.395882+00:00",
+      "finishedAt": "2026-09-09T03:59:46.715444+00:00",
+      "exitCode": 1,
+      "log": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-artifacts.log",
+      "logSha256": "f63712c1da7d5762088bb2b31278f5785c66a7d2b24672a99226261329516d66"
+    }
+  ],
+  "releaseReady": false,
+  "artifactBudget": {
+    "runtimeGzipBytes": 110138,
+    "budgetBytes": 50000,
+    "exitCode": 1,
+    "thresholdChanged": false
+  },
+  "sourceAudit": "tests/upstream-issues/collections/2026-09-09-batch-04/source-audit.json",
+  "fixtureVersions": {
+    "vue-app": {
+      "element-plus": "2.14.5",
+      "vue": "3.5.42",
+      "vue-i18n": "11.1.12",
+      "vue-router": "4.5.1",
+      "axios": "1.12.2"
+    },
+    "vue2-app": {
+      "element-ui": "2.15.14",
+      "vue": "2.7.16",
+      "vue-router": "3.6.5"
+    },
+    "react-app": {
+      "antd": "6.6.2",
+      "react": "19.2.8",
+      "react-dom": "19.2.8"
+    },
+    "component-matrix-app": {
+      "@antv/x6": "3.1.8",
+      "ant-design-vue": "4.2.6",
+      "bpmn-js": "3.5.0",
+      "echarts": "6.1.0",
+      "element-plus": "2.14.5",
+      "leaflet": "1.9.4",
+      "maplibre-gl": "6.6.0",
+      "monaco-editor": "0.56.0",
+      "naive-ui": "2.45.3",
+      "quill": "2.0.3",
+      "react": "19.2.8",
+      "react-dom": "19.2.8",
+      "react-is": "19.2.8",
+      "recharts": "3.10.1",
+      "sortablejs": "1.15.7",
+      "three": "0.185.1",
+      "vue": "3.5.42",
+      "vue2": "npm:vue@2.7.16"
+    },
+    "toolchain": {
+      "vite": "8.2.2",
+      "vitest": "4.1.11",
+      "@playwright/test": "1.62.1",
+      "typescript": "6.0.3"
+    },
+    "bundledBrowsers": [
+      {
+        "name": "chromium",
+        "revision": "1234",
+        "installByDefault": true,
+        "browserVersion": "151.0.7922.34",
+        "title": "Chrome for Testing"
+      },
+      {
+        "name": "chromium-headless-shell",
+        "revision": "1234",
+        "installByDefault": true,
+        "browserVersion": "151.0.7922.34",
+        "title": "Chrome Headless Shell"
+      },
+      {
+        "name": "chromium-tip-of-tree",
+        "revision": "1433",
+        "installByDefault": false,
+        "browserVersion": "151.0.7893.0",
+        "title": "Chrome Canary for Testing"
+      },
+      {
+        "name": "chromium-tip-of-tree-headless-shell",
+        "revision": "1433",
+        "installByDefault": false,
+        "browserVersion": "151.0.7893.0",
+        "title": "Chrome Canary Headless Shell"
+      },
+      {
+        "name": "firefox",
+        "revision": "1538",
+        "installByDefault": true,
+        "browserVersion": "153.0",
+        "title": "Firefox"
+      },
+      {
+        "name": "firefox-beta",
+        "revision": "1526",
+        "installByDefault": false,
+        "browserVersion": "152.0b1",
+        "title": "Firefox Beta"
+      },
+      {
+        "name": "webkit",
+        "revision": "2336",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac14": "2251",
+          "mac14-arm64": "2251",
+          "ubuntu20.04-x64": "2092",
+          "ubuntu20.04-arm64": "2092"
+        },
+        "browserVersion": "26.5",
+        "title": "WebKit"
+      },
+      {
+        "name": "ffmpeg",
+        "revision": "1011",
+        "installByDefault": true
+      },
+      {
+        "name": "winldd",
+        "revision": "1007",
+        "installByDefault": false
+      },
+      {
+        "name": "android",
+        "revision": "1001",
+        "installByDefault": false
+      }
+    ]
+  },
+  "old120IssuesAnd6SourcesPreserved": true,
+  "sourceFreeze": {
+    "code": "final-source.json",
+    "assets": "final-assets.json",
+    "lockSha256": "28935123ed6ce08f4b2e0fdbe9b333f32b0e43d45d7a1645aaff73d671d39040"
+  },
+  "history": {
+    "initial": "execution-progress.json",
+    "interruptedWorkerRegression": "first-final/final-commands.json",
+    "sharedFixtureCountFailure": "second-final/final-commands.json",
+    "nativeCssObservations": "native-network-command.json",
+    "cssRecoveryFailures": [
+      "runtime-network-final.json",
+      "runtime-network-verified.json"
+    ],
+    "styles": "styles-commands.json"
+  },
+  "limitations": [
+    "20条均为无标签补充故障报告；精确bug标签新增0，各仓库缺口10。精确标签open/closed枚举完整；近期补充搜索各返回100条，非全量。",
+    "2条fixed仅指对应本地缺陷；10条partial-coverage缺失条件见逐条台账，不计作原场景完全兼容。",
+    "CSS原生传输未取消及恢复失败的原始证据保留；timeout-only清理通过不代表CSS恢复通过。",
+    "真实Safari及企业微信、原32位Windows Chrome堆内存行为未验证。",
+    "完整Runtime体积门禁失败，未提高预算。"
+  ],
+  "evidenceSha256": {
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/architecture.log": "1a9ca4a890c2dd9cbe19c3da8d7804cf3baf9d3559aa7ad5af620303bc6f3669",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/artifacts.log": "14456de75a5b854fbe4a41edb4a318b12dae3f241965e70e59cde70b806af7a1",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/build-after-fixes.log": "fe27f632fc26fea834147c0b7044491aa849f03a82df5c9667036ddfe5a5cadf",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/build.log": "c5e737d8402e66b7cc20e01c2af38febc5cada31aca0e2f391530a79c7c48c3c",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/execution-progress.json": "86c338887f871add0ad5b19f4151931a8c6857cab677a0d0c9ab18a4159e06bd",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-architecture.log": "1a9ca4a890c2dd9cbe19c3da8d7804cf3baf9d3559aa7ad5af620303bc6f3669",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-artifacts.log": "f63712c1da7d5762088bb2b31278f5785c66a7d2b24672a99226261329516d66",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-assets.json": "8c94df3d67ab9efc8b7ead8df5580fcbac9f3dbc125501862a82b1a94bf8a4fc",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-browser.json": "85f673f48971494a9dbfd60fde478d4f1fbbaadc3dfbe419de41fc2aa697f5ee",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-browser.log": "07b25baa09141917a21db01456ffd3d177919cad27096ad2011f2d81bec1d213",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-build.log": "d3d1cd3072e0bff4c95d790f10177d2e1ef18ffcd523308709207682fe26a6f7",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-commands.json": "579317fbaa4af8a41e601f02f9adc8861736fb046f13a3eb19efc1d3bc38e1bd",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-e2e.json": "53f5a566676cb23f250a1b00f00b69870f40af3661233c1f631fb9341eb83d15",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-e2e.log": "5cc75da2d38751b933dbda34aa454c5c17198fd570a701364ce49171f76bf18d",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-production.json": "9e756d6353fbd17807db678ac76cd4a793853c80cee68d2c20e342a957649606",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-production.log": "0de9f08cc1ca1d2803228135a46ce73057247ada1047cf601ee57af89488907b",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-source.json": "42e309994cb109cd7cf5fad21418c2a5493aa601b8a7aa4744e17f24c7ddcb58",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-typecheck.log": "f2453507e6ff9d97b2c573b3da8d34aff8ecde22a8aae12858f125850c64297f",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-unit.json": "94a66b24a88a15fefd4512e8d295993b195cc30d1f3d3643370448f19598ea1c",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-unit.log": "2cd90cadc5a2be73a26fe53b9fd25f94d6dbefa3f689a32483b761d589765511",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/finalize-upstream04.py.txt": "a477066df2abc25002d87e30e9f3405fcc3c955c7b2ef8cc75e55598425b8dae",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/first-e2e-artifacts/.last-run.json": "313d0660fdb1d35c9470f710f51255db982b76f936693277551b846918c4076c",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/first-e2e-artifacts/upstream-batch04-canvas-ba-4df3a-sh-isolated-browser-context-chromium/error-context.md": "9283a61db213774d3dcd19eb1a01dbfd0d7410086dcf59db577fc45d549d5dc5",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/first-e2e-artifacts/upstream-batch04-canvas-ba-4df3a-sh-isolated-browser-context-firefox/error-context.md": "9283a61db213774d3dcd19eb1a01dbfd0d7410086dcf59db577fc45d549d5dc5",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/first-e2e-artifacts/upstream-batch04-canvas-ba-4df3a-sh-isolated-browser-context-webkit/error-context.md": "9283a61db213774d3dcd19eb1a01dbfd0d7410086dcf59db577fc45d549d5dc5",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/first-e2e-artifacts/upstream-batch04-component-3f835-nlargement-with-local-false-chromium/error-context.md": "7f29f689f22ed950c0166e2e8629d171bf945eeb393715073f998da5dd1a44bd",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/first-e2e-artifacts/upstream-batch04-component-3f835-nlargement-with-local-false-firefox/error-context.md": "7f29f689f22ed950c0166e2e8629d171bf945eeb393715073f998da5dd1a44bd",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/first-e2e-artifacts/upstream-batch04-component-3f835-nlargement-with-local-false-webkit/error-context.md": "7f29f689f22ed950c0166e2e8629d171bf945eeb393715073f998da5dd1a44bd",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/first-e2e-artifacts/upstream-batch04-component-dff4a-enlargement-with-local-true-chromium/error-context.md": "5b6e6cc1d508d7d73b137b117549ae2b5b7d3c0427956b7a48d2b728030b4970",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/first-e2e-artifacts/upstream-batch04-component-dff4a-enlargement-with-local-true-firefox/error-context.md": "5b6e6cc1d508d7d73b137b117549ae2b5b7d3c0427956b7a48d2b728030b4970",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/first-e2e-artifacts/upstream-batch04-component-dff4a-enlargement-with-local-true-webkit/error-context.md": "5b6e6cc1d508d7d73b137b117549ae2b5b7d3c0427956b7a48d2b728030b4970",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/first-e2e-artifacts/upstream-batch04-routing-Q-69c0b--without-recursive-encoding-chromium/error-context.md": "ade15f0b4a7ae9ce6df7561446d1a0de20fe88efa767cdb05bef45681a116f04",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/first-e2e-artifacts/upstream-batch04-routing-Q-69c0b--without-recursive-encoding-firefox/error-context.md": "ae0283622b26516da7179aff952c44bcec0294ebc6f4b69e4da745e919d567bb",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/first-e2e-artifacts/upstream-batch04-routing-Q-69c0b--without-recursive-encoding-webkit/error-context.md": "a3a66a888cc408692bc54330bfd3b91a6e5f88c5c8fbe8027d95da224d93a6cc",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/first-e2e-artifacts/upstream-batch04-runtime-l-5ce47-e-lifecycle-loading-settles-chromium/error-context.md": "7c66dde6685e035265f522d4c0ff32b49018193f8408a02c79aff13f137371b7",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/first-e2e-artifacts/upstream-batch04-runtime-l-5ce47-e-lifecycle-loading-settles-firefox/error-context.md": "7c66dde6685e035265f522d4c0ff32b49018193f8408a02c79aff13f137371b7",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/first-e2e-artifacts/upstream-batch04-runtime-l-5ce47-e-lifecycle-loading-settles-webkit/error-context.md": "7c66dde6685e035265f522d4c0ff32b49018193f8408a02c79aff13f137371b7",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/first-e2e-artifacts/upstream-batch04-runtime-l-7de00--retaining-connected-Realms-chromium/error-context.md": "ac84d3116d35d407f9d11771974c56eca13da37674e8449fbe66391dfb68a3ce",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/first-e2e-artifacts/upstream-batch04-runtime-l-7de00--retaining-connected-Realms-firefox/error-context.md": "ac84d3116d35d407f9d11771974c56eca13da37674e8449fbe66391dfb68a3ce",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/first-e2e-artifacts/upstream-batch04-runtime-l-7de00--retaining-connected-Realms-webkit/error-context.md": "ac84d3116d35d407f9d11771974c56eca13da37674e8449fbe66391dfb68a3ce",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/first-final/README.md": "4fb6ad51f7855ff48cb386df32365938b9430d51a6d744ea551198561d0606f5",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/first-final/artifacts/.last-run.json": "5f3469aadf4cd2c6760c66fc50135e62e55355caa681620a1d6dcecd594bdf97",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/first-final/artifacts/component-matrix-runs-heav-dbf33-input-in-one-isolated-Realm-chromium/error-context.md": "b0a43dbefec24ede8f6e3db47fcd653e3c6f69f5ac63a30b6a2c965b3059b228",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/first-final/artifacts/component-matrix-runs-heav-dbf33-input-in-one-isolated-Realm-firefox/error-context.md": "4b9c2e1da246b3f76f7b14525b7f5272aee0c1c0d7eb19f88c45beb883afc2b5",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/first-final/artifacts/component-matrix-runs-heav-dbf33-input-in-one-isolated-Realm-webkit/error-context.md": "f3e536ea03f10365b621449d3443a82abe288dd5d38c618f3c1d392dd4353c2f",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/first-final/artifacts/isolation-cancels-a-stale-mount-during-a-rapid-route-change-webkit/error-context.md": "50dc81e685d2f0c6fe14c790b0e88289160ccda42f7b48db37e3a4f3dd274b45",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/first-final/final-architecture.log": "1a9ca4a890c2dd9cbe19c3da8d7804cf3baf9d3559aa7ad5af620303bc6f3669",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/first-final/final-assets.json": "8c94df3d67ab9efc8b7ead8df5580fcbac9f3dbc125501862a82b1a94bf8a4fc",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/first-final/final-browser.json": "d157f0a17a8ebd484b75d1f0c2d349d6f3165aa4a55c1daa792ae747d2aa6113",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/first-final/final-browser.log": "0fffaf0b72f8d6987425fa625dce33a80030dba84b7dd25e9861e5416fad8bf1",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/first-final/final-build.log": "b6a4fc36fd20a407e3a67a0788907b25786f6a2725637c03081a850da41466d6",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/first-final/final-commands.json": "958a08a2db8e1a9b0daa669e8036b61782fcb1d2633afbc50f02f390b7ab04c8",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/first-final/final-e2e.json": "fb36d5ad36e5aad96b177780d38b64272c53ae91444d542b710b56c2d75c6b36",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/first-final/final-e2e.log": "a89972e03b72734a30e5217270362196285277c2853f839945a68315beb32092",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/first-final/final-source.json": "6257ea08392d093b2c5f15b757e430971c7b2576785152f6bfd5ff8211566d9d",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/first-final/final-typecheck.log": "7478246f1a2ed9c0ff4567f007856d9a464866eeb6c39bbb5709755bfd8198ad",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/first-final/final-unit.json": "5deb1de5ada52565eebe64ed1cb095a47204cc003fa8f88481b2e082e72daa99",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/first-final/final-unit.log": "7bc6be5e569f090b62c9af93cf3245654107168ccdfe51a658acfc6d2ec422ef",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/fixed-browser.json": "fcefd464aa6b6d657a93c000ded73d81bd4bf968b6bd1fc4a3566cad3d7a135e",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/fixed-browser.log": "d28c79d63ba8d936e17f010ded2570275e34c1a9d346d6eac0d43aa4152a2a10",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/fixed-e2e.json": "8b2cd8c76856376feb55b73737c9d79f79cfb39f09f85ce8585211479df8dc94",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/fixed-e2e.log": "6263b97fcfce34adc7afa6d98e6354856d1cb1a11277cbc9a95418165cd1ba25",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/install.log": "e1eb31064cc0ecb23b16da8db3b8b61ba49663419afbe8211f6d8a23b6a22f50",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/ledger-final-checks.json": "1298fc9df794e6fe6d96659208ca4ba5d2903de469c305c7098a3d3e65f8db17",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/native-network-command.json": "9015e4b99de1955da4262e2dc0ce5d16c17ca149b4b98e5a1dc809a9978cc1f9",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/native-network.json": "78c30f8f39f1e41b48e00bebcdda5ef69aa117b3716d8e3411872d3fa2e0de36",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/native-network.log": "6e11785dbe3a07a2b7e6dd786a661cf12b67956264bd248820dfbddfc621392c",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/report-upstream04.py.txt": "4e7882565109700990230600b513d6b2eb2bd3685fafa92f3b537dae977b7141",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/runtime-network-final-command.json": "3e04d8cc38509872470ab0d314b878a03804c392b679ba5bf00732815fc72f87",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/runtime-network-final.json": "0062cba386dc85b54c92afdbc7c774bc3928fe606ac625d41c19a60d0adaae7d",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/runtime-network-final.log": "eae94c8bc1ef71db71463d35eae1c2adeb374947c3ea4f23d1216eceebb4a55f",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/runtime-network-verified-command.json": "ec3acad2471cb00132dd22d80b958c75a5e5b269daedecba60ff8c338cd298c5",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/runtime-network-verified.json": "e993a5f4a4ccd0d5e33e212ec907dfc37843ee8b3658faf82026d81e0e9f1341",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/runtime-network-verified.log": "d2f5eab5388e1df1473c03a3867c72a46e680f4a0c9f7137f313f257f90c6971",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/second-e2e-artifacts/.last-run.json": "1ca230035ca77a2335ba89683ee2d7bbef2fc901be1dd2c96f7bfbb3d1141dda",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/second-e2e-artifacts/upstream-batch04-runtime-n-2850e-nd-recovers-at-the-same-URL-chromium/error-context.md": "d3ea4f7f851fd7391135cd99596d986851d0cd7ddfbf5a85bebdd43deca3c5f1",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/second-e2e-artifacts/upstream-batch04-runtime-n-2850e-nd-recovers-at-the-same-URL-firefox/error-context.md": "d3ea4f7f851fd7391135cd99596d986851d0cd7ddfbf5a85bebdd43deca3c5f1",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/second-e2e-artifacts/upstream-batch04-runtime-n-2850e-nd-recovers-at-the-same-URL-webkit/error-context.md": "d3ea4f7f851fd7391135cd99596d986851d0cd7ddfbf5a85bebdd43deca3c5f1",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/second-e2e-artifacts/upstream-batch04-styles-Q3-7152d-urn-and-disposal-recreation-webkit/error-context.md": "94ce8c8dcfb0597ba5cc65143918d6a4c28554516626d438cc8cfcdc93117d6b",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/second-final/README.md": "df0020d60318ea12031675f74444752b2e683b1918ced4f380ff48bbe51468f7",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/second-final/entry-recheck.log": "744a5c3031c213a027327cd5229e523c82ac25aae8491d3aebb27f92548fd83c",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/second-final/final-architecture.log": "1a9ca4a890c2dd9cbe19c3da8d7804cf3baf9d3559aa7ad5af620303bc6f3669",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/second-final/final-browser.json": "3f04332f55b1ebcd4e7b7693692bc3563c5b9ab1fd904ecb7e7535600e8bf83e",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/second-final/final-browser.log": "0fa47141df8ccb1f07d55be9216d9cc6c4f54b86d7da9b59d6ea939052648ba9",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/second-final/final-build.log": "815ab6c2ceda40d5dbe109ea6c2314a522e647cdde9d48d31063f4c345b5c6e6",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/second-final/final-commands.json": "821b2795b44acea9f43086ce2306fe904b67e47798c1948986328149154b0b7c",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/second-final/final-source.json": "866ecc12a955de848995f693ccfb2857e56a209059dd36dade152c86b4fb0db8",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/second-final/final-typecheck.log": "1ef9983a827cdfd6f066f39ec437b0a0249213fe71e1c196981f7efce83e2c50",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/second-final/final-unit.json": "70c311e0f0044a803ea90a8fb2f4d5d06aba2d824fec6f8b7a6b7791a346b41b",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/second-final/final-unit.log": "0647a7a7d55329ec5cf0232f2df8edcc1bc774e074ec7fe95d3b71d487fc64bd",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/styles-activate.json": "8167c699df6d36924d76be897554abfe460bc1d8ab4ed5f90df3c62bb6060157",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/styles-activate.log": "fdde1336c7b911f7fb5babeab1f481c74b053f2ab919752f03844481349e63af",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/styles-build.log": "1f6a61c33f6d835d73fc1cd1a36b6250010abe13bba69f8a49f65b6af5691693",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/styles-commands.json": "877eb771e591178b493f8baf4f796a5f15dd3e4729e6cbb9174b4b2600449343",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/styles-diagnostic.json": "3f335d05f4ad0fa0911407ffc79e15a26dde26f76ee3a1621d0e62901c1190bc",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/styles-diagnostic.log": "228020e9d15d8f0018b64c96546c7da687caeffdfdcfd0c9eee795fc38eec098",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/styles-final.json": "182709bcdc2ad6220f8686143818d53aae40ac85db738cf7e8551c03be86dee7",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/styles-final.log": "d56d0a2eb3df51b54373f7e2882b68493125202a5ba42d9b4136cda5166babdd",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/styles-native-cssom.json": "5a392e1f24b624f1baab27deb6b6c6c8c38db8bb32d006c2ee9972ca4285dee9",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/styles-native-cssom.log": "c1eee74aa1c455354927b29c8ff05eb52e25bdb63297b7a5ff7c295a65f16399",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/styles-native-guard.json": "b33ad714f01b106409fbae6e7caea1f7832d3e325d2b0fde6a0cf6700982aa5a",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/styles-native-guard.log": "786bce374e9803301bb7f21e79a6095fdbbf14b68ad76bd7c1cc79e2a134cb9c",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/styles-native.json": "493a5556aee2ce0efc5f8762395aeebd4bdd92875829ec749a3f6e83cafcd79d",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/styles-native.log": "ce45f808b9dfa198ca13cffdd728dc4d3d4b0ee1f47a0856856c176a51424502",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/styles-typecheck.log": "ab97f81ccf7a1fff13b16fe83621382a8e26dbb29444dfd9d47bb0f36861b764",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/target-browser-permitted.json": "40030f7d2d963d2dc153c8efa9ecea1a01f6cd4161036719595c5371a9861b08",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/target-browser-permitted.log": "41db70a8b1e98f56f9f4fefc55ad29a30da68fdd5292da2db538171773981339",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/target-browser.log": "210bab0e8a9544d77e637d5835823712ae5177a73a780848eac2bfb1606b7f4d",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/target-e2e.json": "9072dd1253f49a733e3d104e8bf5d8500f12a11d4d7c71df02b541b64c1f489c",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/target-e2e.log": "6b8eb512e1f7a3ae4ccc43510485d96f45f204fa5e17539f20cab8bbc64a4631",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/typecheck-after-fixes.log": "e689828cdc744f302b87aba70bc78596298496b0f86b15c78515b8ce94e5bdeb",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/typecheck.log": "a574e53d509b28157ebf2a232257e54613fb24363f5b8958431f9d7851f78980",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/unit-permitted.json": "ad673b1d7d1dd66d4a272c58a52b0d916c02f813df95ca26001986872b6cc6bb",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/unit-permitted.log": "a5fea20df46dd07ea849f4ff1302430b92da08bccc8b467f72ebaffd5a9c1c21",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/unit.json": "73addb2150b03b81bc0748cd5d531c39f24b0f6437cbf02aeeb07750219fc937",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/unit.log": "2a528e3e25034eb7ff19fcee73e186b9aae8410e3393305e799114fc6e432e5d",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/upstream04-final-gates.py.txt": "9e845cbd605b9c2a73162e90cc46b60b7ce12646dbf0d7342b5a894e03198c94",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/worker-origin-browser.json": "5b6031e9f15149e3ec8d684d07b07e8a2eed613f4618763d75fa3dfb9a96b79b",
+    "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/worker-origin-browser.log": "8e619a0ad5e3b857fab08e1350136cd91ad14aa31900db41783f0bc0f652ef71"
+  },
+  "ledgerVerification": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/ledger-final-checks.json"
+}

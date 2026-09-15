@@ -1,0 +1,2189 @@
+{
+  "config": {
+    "argv": [
+      "/Users/fanfangbo/.local/share/fnm/node-versions/v24.19.0/installation/bin/node",
+      "/Users/fanfangbo/workspace/micro-framework/node_modules/.bin/playwright",
+      "test",
+      "tests/e2e/upstream-batch04-",
+      "--reporter=line,json"
+    ],
+    "configFile": "/Users/fanfangbo/workspace/micro-framework/playwright.config.ts",
+    "rootDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "line"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "upstream-batch04-canvas-base.spec.ts",
+      "file": "upstream-batch04-canvas-base.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "W992 retains painted canvas pixels and native node identity over keepAlive hide and return",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 526,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:15:49.445Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dec6b74121be1aaa1c9e-42b15e4b1bdbc6c29c8d",
+          "file": "upstream-batch04-canvas-base.spec.ts",
+          "line": 5,
+          "column": 1
+        },
+        {
+          "title": "W1044 resolves relative HTML resources from the child base in a fresh isolated browser context",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5192,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.base-probe')\nExpected pattern: \u001b[32m/\\/batch04-base\\/child\\/assets\\/$/\u001b[39m\nReceived string:  \u001b[31m\"http://127.0.0.1:5173/__micro_frame__/realm.html\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.base-probe')\u001b[22m\n\u001b[2m    14 × locator resolved to <p class=\"base-probe\" data-url=\"http://127.0.0.1:5173/__micro_frame__/realm.html\">Base resource</p>\u001b[22m\n\u001b[2m       - unexpected value \"http://127.0.0.1:5173/__micro_frame__/realm.html\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.base-probe')\nExpected pattern: \u001b[32m/\\/batch04-base\\/child\\/assets\\/$/\u001b[39m\nReceived string:  \u001b[31m\"http://127.0.0.1:5173/__micro_frame__/realm.html\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.base-probe')\u001b[22m\n\u001b[2m    14 × locator resolved to <p class=\"base-probe\" data-url=\"http://127.0.0.1:5173/__micro_frame__/realm.html\">Base resource</p>\u001b[22m\n\u001b[2m       - unexpected value \"http://127.0.0.1:5173/__micro_frame__/realm.html\"\u001b[22m\n\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-canvas-base.spec.ts:43:45",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-canvas-base.spec.ts",
+                      "column": 45,
+                      "line": 43
+                    },
+                    "snippet": "  41 |   });\n  42 |   await expect(page.locator('.base-probe')).toHaveCSS('color','rgb(12, 34, 56)');\n> 43 |   await expect(page.locator('.base-probe')).toHaveAttribute('data-url',/\\/batch04-base\\/child\\/assets\\/$/);\n     |                                             ^\n  44 |   expect(requests).toContain('/batch04-base/child/assets/entry.js');\n  45 |   expect(requests).toContain('/batch04-base/child/assets/style.css');\n  46 |   expect(requests.every(path=>path.startsWith('/batch04-base/child/'))).toBe(true);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-canvas-base.spec.ts",
+                        "column": 45,
+                        "line": 43
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.base-probe')\nExpected pattern: \u001b[32m/\\/batch04-base\\/child\\/assets\\/$/\u001b[39m\nReceived string:  \u001b[31m\"http://127.0.0.1:5173/__micro_frame__/realm.html\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.base-probe')\u001b[22m\n\u001b[2m    14 × locator resolved to <p class=\"base-probe\" data-url=\"http://127.0.0.1:5173/__micro_frame__/realm.html\">Base resource</p>\u001b[22m\n\u001b[2m       - unexpected value \"http://127.0.0.1:5173/__micro_frame__/realm.html\"\u001b[22m\n\n\n  41 |   });\n  42 |   await expect(page.locator('.base-probe')).toHaveCSS('color','rgb(12, 34, 56)');\n> 43 |   await expect(page.locator('.base-probe')).toHaveAttribute('data-url',/\\/batch04-base\\/child\\/assets\\/$/);\n     |                                             ^\n  44 |   expect(requests).toContain('/batch04-base/child/assets/entry.js');\n  45 |   expect(requests).toContain('/batch04-base/child/assets/style.css');\n  46 |   expect(requests.every(path=>path.startsWith('/batch04-base/child/'))).toBe(true);\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-canvas-base.spec.ts:43:45"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:15:50.197Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-canvas-ba-4df3a-sh-isolated-browser-context-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-canvas-ba-4df3a-sh-isolated-browser-context-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-canvas-base.spec.ts",
+                    "column": 45,
+                    "line": 43
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "dec6b74121be1aaa1c9e-7675cf370d4c49a5b516",
+          "file": "upstream-batch04-canvas-base.spec.ts",
+          "line": 27,
+          "column": 1
+        },
+        {
+          "title": "W992 retains painted canvas pixels and native node identity over keepAlive hide and return",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 679,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:16:44.878Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dec6b74121be1aaa1c9e-f2a6e2e2f00132b89370",
+          "file": "upstream-batch04-canvas-base.spec.ts",
+          "line": 5,
+          "column": 1
+        },
+        {
+          "title": "W1044 resolves relative HTML resources from the child base in a fresh isolated browser context",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5238,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.base-probe')\nExpected pattern: \u001b[32m/\\/batch04-base\\/child\\/assets\\/$/\u001b[39m\nReceived string:  \u001b[31m\"http://127.0.0.1:5173/__micro_frame__/realm.html\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.base-probe')\u001b[22m\n\u001b[2m    14 × locator resolved to <p class=\"base-probe\" data-url=\"http://127.0.0.1:5173/__micro_frame__/realm.html\">Base resource</p>\u001b[22m\n\u001b[2m       - unexpected value \"http://127.0.0.1:5173/__micro_frame__/realm.html\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.base-probe')\nExpected pattern: \u001b[32m/\\/batch04-base\\/child\\/assets\\/$/\u001b[39m\nReceived string:  \u001b[31m\"http://127.0.0.1:5173/__micro_frame__/realm.html\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.base-probe')\u001b[22m\n\u001b[2m    14 × locator resolved to <p class=\"base-probe\" data-url=\"http://127.0.0.1:5173/__micro_frame__/realm.html\">Base resource</p>\u001b[22m\n\u001b[2m       - unexpected value \"http://127.0.0.1:5173/__micro_frame__/realm.html\"\u001b[22m\n\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-canvas-base.spec.ts:43:45",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-canvas-base.spec.ts",
+                      "column": 45,
+                      "line": 43
+                    },
+                    "snippet": "  41 |   });\n  42 |   await expect(page.locator('.base-probe')).toHaveCSS('color','rgb(12, 34, 56)');\n> 43 |   await expect(page.locator('.base-probe')).toHaveAttribute('data-url',/\\/batch04-base\\/child\\/assets\\/$/);\n     |                                             ^\n  44 |   expect(requests).toContain('/batch04-base/child/assets/entry.js');\n  45 |   expect(requests).toContain('/batch04-base/child/assets/style.css');\n  46 |   expect(requests.every(path=>path.startsWith('/batch04-base/child/'))).toBe(true);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-canvas-base.spec.ts",
+                        "column": 45,
+                        "line": 43
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.base-probe')\nExpected pattern: \u001b[32m/\\/batch04-base\\/child\\/assets\\/$/\u001b[39m\nReceived string:  \u001b[31m\"http://127.0.0.1:5173/__micro_frame__/realm.html\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.base-probe')\u001b[22m\n\u001b[2m    14 × locator resolved to <p class=\"base-probe\" data-url=\"http://127.0.0.1:5173/__micro_frame__/realm.html\">Base resource</p>\u001b[22m\n\u001b[2m       - unexpected value \"http://127.0.0.1:5173/__micro_frame__/realm.html\"\u001b[22m\n\n\n  41 |   });\n  42 |   await expect(page.locator('.base-probe')).toHaveCSS('color','rgb(12, 34, 56)');\n> 43 |   await expect(page.locator('.base-probe')).toHaveAttribute('data-url',/\\/batch04-base\\/child\\/assets\\/$/);\n     |                                             ^\n  44 |   expect(requests).toContain('/batch04-base/child/assets/entry.js');\n  45 |   expect(requests).toContain('/batch04-base/child/assets/style.css');\n  46 |   expect(requests.every(path=>path.startsWith('/batch04-base/child/'))).toBe(true);\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-canvas-base.spec.ts:43:45"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:16:45.965Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-canvas-ba-4df3a-sh-isolated-browser-context-firefox/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-canvas-ba-4df3a-sh-isolated-browser-context-firefox/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-canvas-base.spec.ts",
+                    "column": 45,
+                    "line": 43
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "dec6b74121be1aaa1c9e-0f0c5bd53e5d8f83ae49",
+          "file": "upstream-batch04-canvas-base.spec.ts",
+          "line": 27,
+          "column": 1
+        },
+        {
+          "title": "W992 retains painted canvas pixels and native node identity over keepAlive hide and return",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 18,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 589,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:17:48.328Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dec6b74121be1aaa1c9e-53c2e26e55d15aa5d6be",
+          "file": "upstream-batch04-canvas-base.spec.ts",
+          "line": 5,
+          "column": 1
+        },
+        {
+          "title": "W1044 resolves relative HTML resources from the child base in a fresh isolated browser context",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 18,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5257,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.base-probe')\nExpected pattern: \u001b[32m/\\/batch04-base\\/child\\/assets\\/$/\u001b[39m\nReceived string:  \u001b[31m\"http://127.0.0.1:5173/__micro_frame__/realm.html\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.base-probe')\u001b[22m\n\u001b[2m    14 × locator resolved to <p class=\"base-probe\" data-url=\"http://127.0.0.1:5173/__micro_frame__/realm.html\">Base resource</p>\u001b[22m\n\u001b[2m       - unexpected value \"http://127.0.0.1:5173/__micro_frame__/realm.html\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.base-probe')\nExpected pattern: \u001b[32m/\\/batch04-base\\/child\\/assets\\/$/\u001b[39m\nReceived string:  \u001b[31m\"http://127.0.0.1:5173/__micro_frame__/realm.html\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.base-probe')\u001b[22m\n\u001b[2m    14 × locator resolved to <p class=\"base-probe\" data-url=\"http://127.0.0.1:5173/__micro_frame__/realm.html\">Base resource</p>\u001b[22m\n\u001b[2m       - unexpected value \"http://127.0.0.1:5173/__micro_frame__/realm.html\"\u001b[22m\n\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-canvas-base.spec.ts:43:45",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-canvas-base.spec.ts",
+                      "column": 45,
+                      "line": 43
+                    },
+                    "snippet": "  41 |   });\n  42 |   await expect(page.locator('.base-probe')).toHaveCSS('color','rgb(12, 34, 56)');\n> 43 |   await expect(page.locator('.base-probe')).toHaveAttribute('data-url',/\\/batch04-base\\/child\\/assets\\/$/);\n     |                                             ^\n  44 |   expect(requests).toContain('/batch04-base/child/assets/entry.js');\n  45 |   expect(requests).toContain('/batch04-base/child/assets/style.css');\n  46 |   expect(requests.every(path=>path.startsWith('/batch04-base/child/'))).toBe(true);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-canvas-base.spec.ts",
+                        "column": 45,
+                        "line": 43
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.base-probe')\nExpected pattern: \u001b[32m/\\/batch04-base\\/child\\/assets\\/$/\u001b[39m\nReceived string:  \u001b[31m\"http://127.0.0.1:5173/__micro_frame__/realm.html\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.base-probe')\u001b[22m\n\u001b[2m    14 × locator resolved to <p class=\"base-probe\" data-url=\"http://127.0.0.1:5173/__micro_frame__/realm.html\">Base resource</p>\u001b[22m\n\u001b[2m       - unexpected value \"http://127.0.0.1:5173/__micro_frame__/realm.html\"\u001b[22m\n\n\n  41 |   });\n  42 |   await expect(page.locator('.base-probe')).toHaveCSS('color','rgb(12, 34, 56)');\n> 43 |   await expect(page.locator('.base-probe')).toHaveAttribute('data-url',/\\/batch04-base\\/child\\/assets\\/$/);\n     |                                             ^\n  44 |   expect(requests).toContain('/batch04-base/child/assets/entry.js');\n  45 |   expect(requests).toContain('/batch04-base/child/assets/style.css');\n  46 |   expect(requests.every(path=>path.startsWith('/batch04-base/child/'))).toBe(true);\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-canvas-base.spec.ts:43:45"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:17:49.086Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-canvas-ba-4df3a-sh-isolated-browser-context-webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-canvas-ba-4df3a-sh-isolated-browser-context-webkit/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-canvas-base.spec.ts",
+                    "column": 45,
+                    "line": 43
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "dec6b74121be1aaa1c9e-72cff5f75328781ad539",
+          "file": "upstream-batch04-canvas-base.spec.ts",
+          "line": 27,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "upstream-batch04-components.spec.ts",
+      "file": "upstream-batch04-components.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "W1012 renders real bpmn-js SVG transforms and flow geometry in the application Realm",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 239,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:15:55.586Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "da451b94eff427bbfe87-7dc98898213cf564d132",
+          "file": "upstream-batch04-components.spec.ts",
+          "line": 10,
+          "column": 1
+        },
+        {
+          "title": "W1038 reanchors Element UI Select after viewport enlargement with local=false",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5825,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-components.spec.ts:38:6",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-components.spec.ts",
+                      "column": 6,
+                      "line": 38
+                    },
+                    "snippet": "  36 |     const a=await input.boundingBox();const b=await menu.boundingBox();\n  37 |     return Boolean(a&&b&&Math.abs(a.x-b.x)<5&&Math.min(Math.abs(b.y-a.y-a.height),Math.abs(b.y+b.height-a.y))<16);\n> 38 |   }).toBe(true);\n     |      ^\n  39 |   if(local) expect(await menu.evaluate(node=>Boolean(node.closest('.el-select')))).toBe(true);\n  40 |   await menu.getByText('South',{exact:true}).click();\n  41 |   await expect(page.locator('.batch02-vue2-drawer')).toHaveAttribute('data-selected','South');"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-components.spec.ts",
+                        "column": 6,
+                        "line": 38
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n\n  36 |     const a=await input.boundingBox();const b=await menu.boundingBox();\n  37 |     return Boolean(a&&b&&Math.abs(a.x-b.x)<5&&Math.min(Math.abs(b.y-a.y-a.height),Math.abs(b.y+b.height-a.y))<16);\n> 38 |   }).toBe(true);\n     |      ^\n  39 |   if(local) expect(await menu.evaluate(node=>Boolean(node.closest('.el-select')))).toBe(true);\n  40 |   await menu.getByText('South',{exact:true}).click();\n  41 |   await expect(page.locator('.batch02-vue2-drawer')).toHaveAttribute('data-selected','South');\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-components.spec.ts:38:6"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:15:55.910Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-component-3f835-nlargement-with-local-false-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-component-3f835-nlargement-with-local-false-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-components.spec.ts",
+                    "column": 6,
+                    "line": 38
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "da451b94eff427bbfe87-bb1144922d8a0921b8ad",
+          "file": "upstream-batch04-components.spec.ts",
+          "line": 26,
+          "column": 34
+        },
+        {
+          "title": "W1038 reanchors Element UI Select after viewport enlargement with local=true",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6295,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-components.spec.ts:38:6",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-components.spec.ts",
+                      "column": 6,
+                      "line": 38
+                    },
+                    "snippet": "  36 |     const a=await input.boundingBox();const b=await menu.boundingBox();\n  37 |     return Boolean(a&&b&&Math.abs(a.x-b.x)<5&&Math.min(Math.abs(b.y-a.y-a.height),Math.abs(b.y+b.height-a.y))<16);\n> 38 |   }).toBe(true);\n     |      ^\n  39 |   if(local) expect(await menu.evaluate(node=>Boolean(node.closest('.el-select')))).toBe(true);\n  40 |   await menu.getByText('South',{exact:true}).click();\n  41 |   await expect(page.locator('.batch02-vue2-drawer')).toHaveAttribute('data-selected','South');"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-components.spec.ts",
+                        "column": 6,
+                        "line": 38
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n\n  36 |     const a=await input.boundingBox();const b=await menu.boundingBox();\n  37 |     return Boolean(a&&b&&Math.abs(a.x-b.x)<5&&Math.min(Math.abs(b.y-a.y-a.height),Math.abs(b.y+b.height-a.y))<16);\n> 38 |   }).toBe(true);\n     |      ^\n  39 |   if(local) expect(await menu.evaluate(node=>Boolean(node.closest('.el-select')))).toBe(true);\n  40 |   await menu.getByText('South',{exact:true}).click();\n  41 |   await expect(page.locator('.batch02-vue2-drawer')).toHaveAttribute('data-selected','South');\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-components.spec.ts:38:6"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:16:01.955Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-component-dff4a-enlargement-with-local-true-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-component-dff4a-enlargement-with-local-true-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-components.spec.ts",
+                    "column": 6,
+                    "line": 38
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "da451b94eff427bbfe87-cf2b181bc7b30d4106b2",
+          "file": "upstream-batch04-components.spec.ts",
+          "line": 26,
+          "column": 34
+        },
+        {
+          "title": "W1012 renders real bpmn-js SVG transforms and flow geometry in the application Realm",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 10,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 978,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:16:51.533Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "da451b94eff427bbfe87-4084572b802dc3d7f17d",
+          "file": "upstream-batch04-components.spec.ts",
+          "line": 10,
+          "column": 1
+        },
+        {
+          "title": "W1038 reanchors Element UI Select after viewport enlargement with local=false",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 10,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 4922,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-components.spec.ts:38:6",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-components.spec.ts",
+                      "column": 6,
+                      "line": 38
+                    },
+                    "snippet": "  36 |     const a=await input.boundingBox();const b=await menu.boundingBox();\n  37 |     return Boolean(a&&b&&Math.abs(a.x-b.x)<5&&Math.min(Math.abs(b.y-a.y-a.height),Math.abs(b.y+b.height-a.y))<16);\n> 38 |   }).toBe(true);\n     |      ^\n  39 |   if(local) expect(await menu.evaluate(node=>Boolean(node.closest('.el-select')))).toBe(true);\n  40 |   await menu.getByText('South',{exact:true}).click();\n  41 |   await expect(page.locator('.batch02-vue2-drawer')).toHaveAttribute('data-selected','South');"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-components.spec.ts",
+                        "column": 6,
+                        "line": 38
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n\n  36 |     const a=await input.boundingBox();const b=await menu.boundingBox();\n  37 |     return Boolean(a&&b&&Math.abs(a.x-b.x)<5&&Math.min(Math.abs(b.y-a.y-a.height),Math.abs(b.y+b.height-a.y))<16);\n> 38 |   }).toBe(true);\n     |      ^\n  39 |   if(local) expect(await menu.evaluate(node=>Boolean(node.closest('.el-select')))).toBe(true);\n  40 |   await menu.getByText('South',{exact:true}).click();\n  41 |   await expect(page.locator('.batch02-vue2-drawer')).toHaveAttribute('data-selected','South');\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-components.spec.ts:38:6"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:16:52.858Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-component-3f835-nlargement-with-local-false-firefox/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-component-3f835-nlargement-with-local-false-firefox/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-components.spec.ts",
+                    "column": 6,
+                    "line": 38
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "da451b94eff427bbfe87-842372cb96f1b3c1016d",
+          "file": "upstream-batch04-components.spec.ts",
+          "line": 26,
+          "column": 34
+        },
+        {
+          "title": "W1038 reanchors Element UI Select after viewport enlargement with local=true",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 11,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6297,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-components.spec.ts:38:6",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-components.spec.ts",
+                      "column": 6,
+                      "line": 38
+                    },
+                    "snippet": "  36 |     const a=await input.boundingBox();const b=await menu.boundingBox();\n  37 |     return Boolean(a&&b&&Math.abs(a.x-b.x)<5&&Math.min(Math.abs(b.y-a.y-a.height),Math.abs(b.y+b.height-a.y))<16);\n> 38 |   }).toBe(true);\n     |      ^\n  39 |   if(local) expect(await menu.evaluate(node=>Boolean(node.closest('.el-select')))).toBe(true);\n  40 |   await menu.getByText('South',{exact:true}).click();\n  41 |   await expect(page.locator('.batch02-vue2-drawer')).toHaveAttribute('data-selected','South');"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-components.spec.ts",
+                        "column": 6,
+                        "line": 38
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n\n  36 |     const a=await input.boundingBox();const b=await menu.boundingBox();\n  37 |     return Boolean(a&&b&&Math.abs(a.x-b.x)<5&&Math.min(Math.abs(b.y-a.y-a.height),Math.abs(b.y+b.height-a.y))<16);\n> 38 |   }).toBe(true);\n     |      ^\n  39 |   if(local) expect(await menu.evaluate(node=>Boolean(node.closest('.el-select')))).toBe(true);\n  40 |   await menu.getByText('South',{exact:true}).click();\n  41 |   await expect(page.locator('.batch02-vue2-drawer')).toHaveAttribute('data-selected','South');\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-components.spec.ts:38:6"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:16:58.182Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-component-dff4a-enlargement-with-local-true-firefox/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-component-dff4a-enlargement-with-local-true-firefox/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-components.spec.ts",
+                    "column": 6,
+                    "line": 38
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "da451b94eff427bbfe87-013c4e8d55a1755977bd",
+          "file": "upstream-batch04-components.spec.ts",
+          "line": 26,
+          "column": 34
+        },
+        {
+          "title": "W1012 renders real bpmn-js SVG transforms and flow geometry in the application Realm",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 19,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 500,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:17:54.551Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "da451b94eff427bbfe87-ae0274d013f3d03b4bd0",
+          "file": "upstream-batch04-components.spec.ts",
+          "line": 10,
+          "column": 1
+        },
+        {
+          "title": "W1038 reanchors Element UI Select after viewport enlargement with local=false",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 19,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5906,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-components.spec.ts:38:6",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-components.spec.ts",
+                      "column": 6,
+                      "line": 38
+                    },
+                    "snippet": "  36 |     const a=await input.boundingBox();const b=await menu.boundingBox();\n  37 |     return Boolean(a&&b&&Math.abs(a.x-b.x)<5&&Math.min(Math.abs(b.y-a.y-a.height),Math.abs(b.y+b.height-a.y))<16);\n> 38 |   }).toBe(true);\n     |      ^\n  39 |   if(local) expect(await menu.evaluate(node=>Boolean(node.closest('.el-select')))).toBe(true);\n  40 |   await menu.getByText('South',{exact:true}).click();\n  41 |   await expect(page.locator('.batch02-vue2-drawer')).toHaveAttribute('data-selected','South');"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-components.spec.ts",
+                        "column": 6,
+                        "line": 38
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n\n  36 |     const a=await input.boundingBox();const b=await menu.boundingBox();\n  37 |     return Boolean(a&&b&&Math.abs(a.x-b.x)<5&&Math.min(Math.abs(b.y-a.y-a.height),Math.abs(b.y+b.height-a.y))<16);\n> 38 |   }).toBe(true);\n     |      ^\n  39 |   if(local) expect(await menu.evaluate(node=>Boolean(node.closest('.el-select')))).toBe(true);\n  40 |   await menu.getByText('South',{exact:true}).click();\n  41 |   await expect(page.locator('.batch02-vue2-drawer')).toHaveAttribute('data-selected','South');\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-components.spec.ts:38:6"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:17:55.193Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-component-3f835-nlargement-with-local-false-webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-component-3f835-nlargement-with-local-false-webkit/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-components.spec.ts",
+                    "column": 6,
+                    "line": 38
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "da451b94eff427bbfe87-d5457fd5c5e50cc1b074",
+          "file": "upstream-batch04-components.spec.ts",
+          "line": 26,
+          "column": 34
+        },
+        {
+          "title": "W1038 reanchors Element UI Select after viewport enlargement with local=true",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 20,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5011,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-components.spec.ts:38:6",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-components.spec.ts",
+                      "column": 6,
+                      "line": 38
+                    },
+                    "snippet": "  36 |     const a=await input.boundingBox();const b=await menu.boundingBox();\n  37 |     return Boolean(a&&b&&Math.abs(a.x-b.x)<5&&Math.min(Math.abs(b.y-a.y-a.height),Math.abs(b.y+b.height-a.y))<16);\n> 38 |   }).toBe(true);\n     |      ^\n  39 |   if(local) expect(await menu.evaluate(node=>Boolean(node.closest('.el-select')))).toBe(true);\n  40 |   await menu.getByText('South',{exact:true}).click();\n  41 |   await expect(page.locator('.batch02-vue2-drawer')).toHaveAttribute('data-selected','South');"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-components.spec.ts",
+                        "column": 6,
+                        "line": 38
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n\n  36 |     const a=await input.boundingBox();const b=await menu.boundingBox();\n  37 |     return Boolean(a&&b&&Math.abs(a.x-b.x)<5&&Math.min(Math.abs(b.y-a.y-a.height),Math.abs(b.y+b.height-a.y))<16);\n> 38 |   }).toBe(true);\n     |      ^\n  39 |   if(local) expect(await menu.evaluate(node=>Boolean(node.closest('.el-select')))).toBe(true);\n  40 |   await menu.getByText('South',{exact:true}).click();\n  41 |   await expect(page.locator('.batch02-vue2-drawer')).toHaveAttribute('data-selected','South');\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-components.spec.ts:38:6"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:18:01.314Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-component-dff4a-enlargement-with-local-true-webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-component-dff4a-enlargement-with-local-true-webkit/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-components.spec.ts",
+                    "column": 6,
+                    "line": 38
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "da451b94eff427bbfe87-ff8a60cfd702abdcad0d",
+          "file": "upstream-batch04-components.spec.ts",
+          "line": 26,
+          "column": 34
+        }
+      ]
+    },
+    {
+      "title": "upstream-batch04-csp.spec.ts",
+      "file": "upstream-batch04-csp.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Q3129 mounts external modules without unsafe inline scripts or eval under same origin CSP",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 193,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:16:08.553Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fee3dddefacbb96d9e90-e1f2fab7630b3b12e9d5",
+          "file": "upstream-batch04-csp.spec.ts",
+          "line": 5,
+          "column": 1
+        },
+        {
+          "title": "Q3129 mounts external modules without unsafe inline scripts or eval under same origin CSP",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1316,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:17:05.228Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fee3dddefacbb96d9e90-d47a0526fe1adf8aaaf7",
+          "file": "upstream-batch04-csp.spec.ts",
+          "line": 5,
+          "column": 1
+        },
+        {
+          "title": "Q3129 mounts external modules without unsafe inline scripts or eval under same origin CSP",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 21,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 448,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:18:06.662Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fee3dddefacbb96d9e90-9f93dcde75103145360d",
+          "file": "upstream-batch04-csp.spec.ts",
+          "line": 5,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "upstream-batch04-routing.spec.ts",
+      "file": "upstream-batch04-routing.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Q2990 performs Vue hash router push in mounted under a history host without changing its URL",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 250,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:16:09.008Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c282c3453068be647f17-3e31f290c5368a96d640",
+          "file": "upstream-batch04-routing.spec.ts",
+          "line": 41,
+          "column": 1
+        },
+        {
+          "title": "Q2976 W1007 W1045 keeps an explicit child route through repeated reloads and subsequent navigation without recursive encoding",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 30048,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-routing.spec.ts",
+                        "column": 14,
+                        "line": 66
+                      },
+                      "message": "Error: page.goBack: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for navigation until \"load\"\u001b[22m\n\n\n  64 |   await page.getByRole('button',{name:'Host third',exact:true}).click();\n  65 |   await expect(page.locator('[data-batch04-route]')).toHaveText('/third');\n> 66 |   await page.goBack();\n     |              ^\n  67 |   await expect(page.locator('[data-batch04-route]')).toHaveText('/details?filter=open');\n  68 |   expect(page.url()).toBe(expectedURL);\n  69 | });\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-routing.spec.ts:66:14"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:16:09.339Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-routing-Q-69c0b--without-recursive-encoding-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-routing-Q-69c0b--without-recursive-encoding-chromium/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c282c3453068be647f17-59e134a78a8ce332e573",
+          "file": "upstream-batch04-routing.spec.ts",
+          "line": 50,
+          "column": 1
+        },
+        {
+          "title": "Q2990 performs Vue hash router push in mounted under a history host without changing its URL",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 813,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:17:07.350Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c282c3453068be647f17-7e28e4c1901470ea7865",
+          "file": "upstream-batch04-routing.spec.ts",
+          "line": 41,
+          "column": 1
+        },
+        {
+          "title": "Q2976 W1007 W1045 keeps an explicit child route through repeated reloads and subsequent navigation without recursive encoding",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 30093,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-routing.spec.ts",
+                        "column": 54,
+                        "line": 67
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('[data-batch04-route]')\nExpected: \u001b[32m\"/details?filter=open\"\u001b[39m\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-batch04-route]')\u001b[22m\n\u001b[2m  - Test timeout of 30000ms exceeded.\u001b[22m\n\n\n  65 |   await expect(page.locator('[data-batch04-route]')).toHaveText('/third');\n  66 |   await page.goBack();\n> 67 |   await expect(page.locator('[data-batch04-route]')).toHaveText('/details?filter=open');\n     |                                                      ^\n  68 |   expect(page.url()).toBe(expectedURL);\n  69 | });\n  70 |\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-routing.spec.ts:67:54"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:17:08.527Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-routing-Q-69c0b--without-recursive-encoding-firefox/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-routing-Q-69c0b--without-recursive-encoding-firefox/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c282c3453068be647f17-5312e161c3d07762467c",
+          "file": "upstream-batch04-routing.spec.ts",
+          "line": 50,
+          "column": 1
+        },
+        {
+          "title": "Q2990 performs Vue hash router push in mounted under a history host without changing its URL",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 22,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 434,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:18:07.420Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c282c3453068be647f17-6f4b973dfd9aedda6d80",
+          "file": "upstream-batch04-routing.spec.ts",
+          "line": 41,
+          "column": 1
+        },
+        {
+          "title": "Q2976 W1007 W1045 keeps an explicit child route through repeated reloads and subsequent navigation without recursive encoding",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 22,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 30036,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-routing.spec.ts",
+                        "column": 14,
+                        "line": 66
+                      },
+                      "message": "Error: page.goBack: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for navigation until \"load\"\u001b[22m\n\n\n  64 |   await page.getByRole('button',{name:'Host third',exact:true}).click();\n  65 |   await expect(page.locator('[data-batch04-route]')).toHaveText('/third');\n> 66 |   await page.goBack();\n     |              ^\n  67 |   await expect(page.locator('[data-batch04-route]')).toHaveText('/details?filter=open');\n  68 |   expect(page.url()).toBe(expectedURL);\n  69 | });\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-routing.spec.ts:66:14"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:18:07.992Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-routing-Q-69c0b--without-recursive-encoding-webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-routing-Q-69c0b--without-recursive-encoding-webkit/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c282c3453068be647f17-4447f0d08bed0b61d572",
+          "file": "upstream-batch04-routing.spec.ts",
+          "line": 50,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "upstream-batch04-runtime-lifecycle.spec.ts",
+      "file": "upstream-batch04-runtime-lifecycle.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Q2991 repeatedly destroys real Vue 2 instances and subscriptions without retaining connected Realms",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 219,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"connected\": false,\u001b[22m\n\u001b[32m-   \"destroyed\": 1,\u001b[39m\n\u001b[31m+   \"destroyed\": undefined,\u001b[39m\n\u001b[2m    \"replies\": 1,\u001b[22m\n\u001b[2m  }\u001b[22m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"connected\": false,\u001b[22m\n\u001b[32m-   \"destroyed\": 1,\u001b[39m\n\u001b[31m+   \"destroyed\": undefined,\u001b[39m\n\u001b[2m    \"replies\": 1,\u001b[22m\n\u001b[2m  }\u001b[22m\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-lifecycle.spec.ts:29:9",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-lifecycle.spec.ts",
+                      "column": 9,
+                      "line": 29
+                    },
+                    "snippet": "  27 |       const s = window.__upstreamRuntime__!; s.runtime.events.emit('vue2-probe', {});\n  28 |       return { connected: s.originalFrame!.isConnected, destroyed: s.calls.destroyed, replies: s.calls.replies };\n> 29 |     })).toEqual({ connected: false, destroyed: round + 1, replies: round + 1 });\n     |         ^\n  30 |   }\n  31 | });\n  32 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-lifecycle.spec.ts",
+                        "column": 9,
+                        "line": 29
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"connected\": false,\u001b[22m\n\u001b[32m-   \"destroyed\": 1,\u001b[39m\n\u001b[31m+   \"destroyed\": undefined,\u001b[39m\n\u001b[2m    \"replies\": 1,\u001b[22m\n\u001b[2m  }\u001b[22m\n\n  27 |       const s = window.__upstreamRuntime__!; s.runtime.events.emit('vue2-probe', {});\n  28 |       return { connected: s.originalFrame!.isConnected, destroyed: s.calls.destroyed, replies: s.calls.replies };\n> 29 |     })).toEqual({ connected: false, destroyed: round + 1, replies: round + 1 });\n     |         ^\n  30 |   }\n  31 | });\n  32 |\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-lifecycle.spec.ts:29:9"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:16:39.583Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-runtime-l-7de00--retaining-connected-Realms-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-runtime-l-7de00--retaining-connected-Realms-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-lifecycle.spec.ts",
+                    "column": 9,
+                    "line": 29
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "ac54c03ddcb5f006e26f-93c7588c83e43dbbb6c4",
+          "file": "upstream-batch04-runtime-lifecycle.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "W1039 reopens a real host dialog with an alive Vue router after repeated child navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 389,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:16:40.059Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ac54c03ddcb5f006e26f-73e0f454c86e2fd0d462",
+          "file": "upstream-batch04-runtime-lifecycle.spec.ts",
+          "line": 33,
+          "column": 1
+        },
+        {
+          "title": "Q2991 repeatedly destroys real Vue 2 instances and subscriptions without retaining connected Realms",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 14,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 716,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"connected\": false,\u001b[22m\n\u001b[32m-   \"destroyed\": 1,\u001b[39m\n\u001b[31m+   \"destroyed\": undefined,\u001b[39m\n\u001b[2m    \"replies\": 1,\u001b[22m\n\u001b[2m  }\u001b[22m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"connected\": false,\u001b[22m\n\u001b[32m-   \"destroyed\": 1,\u001b[39m\n\u001b[31m+   \"destroyed\": undefined,\u001b[39m\n\u001b[2m    \"replies\": 1,\u001b[22m\n\u001b[2m  }\u001b[22m\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-lifecycle.spec.ts:29:9",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-lifecycle.spec.ts",
+                      "column": 9,
+                      "line": 29
+                    },
+                    "snippet": "  27 |       const s = window.__upstreamRuntime__!; s.runtime.events.emit('vue2-probe', {});\n  28 |       return { connected: s.originalFrame!.isConnected, destroyed: s.calls.destroyed, replies: s.calls.replies };\n> 29 |     })).toEqual({ connected: false, destroyed: round + 1, replies: round + 1 });\n     |         ^\n  30 |   }\n  31 | });\n  32 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-lifecycle.spec.ts",
+                        "column": 9,
+                        "line": 29
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"connected\": false,\u001b[22m\n\u001b[32m-   \"destroyed\": 1,\u001b[39m\n\u001b[31m+   \"destroyed\": undefined,\u001b[39m\n\u001b[2m    \"replies\": 1,\u001b[22m\n\u001b[2m  }\u001b[22m\n\n  27 |       const s = window.__upstreamRuntime__!; s.runtime.events.emit('vue2-probe', {});\n  28 |       return { connected: s.originalFrame!.isConnected, destroyed: s.calls.destroyed, replies: s.calls.replies };\n> 29 |     })).toEqual({ connected: false, destroyed: round + 1, replies: round + 1 });\n     |         ^\n  30 |   }\n  31 | });\n  32 |\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-lifecycle.spec.ts:29:9"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:17:38.981Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-runtime-l-7de00--retaining-connected-Realms-firefox/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-runtime-l-7de00--retaining-connected-Realms-firefox/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-lifecycle.spec.ts",
+                    "column": 9,
+                    "line": 29
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "ac54c03ddcb5f006e26f-c5edb9c76b595528a3bd",
+          "file": "upstream-batch04-runtime-lifecycle.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "W1039 reopens a real host dialog with an alive Vue router after repeated child navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 15,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1006,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:17:40.423Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ac54c03ddcb5f006e26f-7d9909fd72fd9531713d",
+          "file": "upstream-batch04-runtime-lifecycle.spec.ts",
+          "line": 33,
+          "column": 1
+        },
+        {
+          "title": "Q2991 repeatedly destroys real Vue 2 instances and subscriptions without retaining connected Realms",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 23,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 450,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"connected\": false,\u001b[22m\n\u001b[32m-   \"destroyed\": 1,\u001b[39m\n\u001b[31m+   \"destroyed\": undefined,\u001b[39m\n\u001b[2m    \"replies\": 1,\u001b[22m\n\u001b[2m  }\u001b[22m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"connected\": false,\u001b[22m\n\u001b[32m-   \"destroyed\": 1,\u001b[39m\n\u001b[31m+   \"destroyed\": undefined,\u001b[39m\n\u001b[2m    \"replies\": 1,\u001b[22m\n\u001b[2m  }\u001b[22m\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-lifecycle.spec.ts:29:9",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-lifecycle.spec.ts",
+                      "column": 9,
+                      "line": 29
+                    },
+                    "snippet": "  27 |       const s = window.__upstreamRuntime__!; s.runtime.events.emit('vue2-probe', {});\n  28 |       return { connected: s.originalFrame!.isConnected, destroyed: s.calls.destroyed, replies: s.calls.replies };\n> 29 |     })).toEqual({ connected: false, destroyed: round + 1, replies: round + 1 });\n     |         ^\n  30 |   }\n  31 | });\n  32 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-lifecycle.spec.ts",
+                        "column": 9,
+                        "line": 29
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"connected\": false,\u001b[22m\n\u001b[32m-   \"destroyed\": 1,\u001b[39m\n\u001b[31m+   \"destroyed\": undefined,\u001b[39m\n\u001b[2m    \"replies\": 1,\u001b[22m\n\u001b[2m  }\u001b[22m\n\n  27 |       const s = window.__upstreamRuntime__!; s.runtime.events.emit('vue2-probe', {});\n  28 |       return { connected: s.originalFrame!.isConnected, destroyed: s.calls.destroyed, replies: s.calls.replies };\n> 29 |     })).toEqual({ connected: false, destroyed: round + 1, replies: round + 1 });\n     |         ^\n  30 |   }\n  31 | });\n  32 |\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-lifecycle.spec.ts:29:9"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:18:38.233Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-runtime-l-7de00--retaining-connected-Realms-webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-runtime-l-7de00--retaining-connected-Realms-webkit/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-lifecycle.spec.ts",
+                    "column": 9,
+                    "line": 29
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "ac54c03ddcb5f006e26f-203516832e024e22a904",
+          "file": "upstream-batch04-runtime-lifecycle.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "W1039 reopens a real host dialog with an alive Vue router after repeated child navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 24,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 776,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:18:38.981Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ac54c03ddcb5f006e26f-c7b8822fa5d4987f4a2a",
+          "file": "upstream-batch04-runtime-lifecycle.spec.ts",
+          "line": 33,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "upstream-batch04-runtime-loading.spec.ts",
+      "file": "upstream-batch04-runtime-loading.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Q3001 Q3093 manual load failure preserves host and sibling while lifecycle loading settles",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 231,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[33m@@ -1,7 +1,7 @@\u001b[39m\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"failedStatus\": \"error\",\u001b[39m\n\u001b[31m+   \"failedStatus\": \"disposed\",\u001b[39m\n\u001b[2m    \"host\": \"Host: 1\",\u001b[22m\n\u001b[2m    \"hostConnected\": true,\u001b[22m\n\u001b[2m    \"mounts\": 0,\u001b[22m\n\u001b[2m    \"sameFrame\": true,\u001b[22m\n\u001b[2m    \"successStatus\": \"mounted\",\u001b[22m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[33m@@ -1,7 +1,7 @@\u001b[39m\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"failedStatus\": \"error\",\u001b[39m\n\u001b[31m+   \"failedStatus\": \"disposed\",\u001b[39m\n\u001b[2m    \"host\": \"Host: 1\",\u001b[22m\n\u001b[2m    \"hostConnected\": true,\u001b[22m\n\u001b[2m    \"mounts\": 0,\u001b[22m\n\u001b[2m    \"sameFrame\": true,\u001b[22m\n\u001b[2m    \"successStatus\": \"mounted\",\u001b[22m\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-loading.spec.ts:41:7",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-loading.spec.ts",
+                      "column": 7,
+                      "line": 41
+                    },
+                    "snippet": "  39 |       successStatus: s.lifecycle.filter(e => e.name === 'sibling').at(-1)?.status,\n  40 |       failedStatus: s.lifecycle.filter(e => e.name === 'failed').at(-1)?.status };\n> 41 |   })).toEqual({ sameFrame: true, host: 'Host: 1', hostConnected: true, mounts: 0, unmounts: 0,\n     |       ^\n  42 |     successStatus: 'mounted', failedStatus: 'error' });\n  43 | });\n  44 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-loading.spec.ts",
+                        "column": 7,
+                        "line": 41
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[33m@@ -1,7 +1,7 @@\u001b[39m\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"failedStatus\": \"error\",\u001b[39m\n\u001b[31m+   \"failedStatus\": \"disposed\",\u001b[39m\n\u001b[2m    \"host\": \"Host: 1\",\u001b[22m\n\u001b[2m    \"hostConnected\": true,\u001b[22m\n\u001b[2m    \"mounts\": 0,\u001b[22m\n\u001b[2m    \"sameFrame\": true,\u001b[22m\n\u001b[2m    \"successStatus\": \"mounted\",\u001b[22m\n\n  39 |       successStatus: s.lifecycle.filter(e => e.name === 'sibling').at(-1)?.status,\n  40 |       failedStatus: s.lifecycle.filter(e => e.name === 'failed').at(-1)?.status };\n> 41 |   })).toEqual({ sameFrame: true, host: 'Host: 1', hostConnected: true, mounts: 0, unmounts: 0,\n     |       ^\n  42 |     successStatus: 'mounted', failedStatus: 'error' });\n  43 | });\n  44 |\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-loading.spec.ts:41:7"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:16:40.708Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-runtime-l-5ce47-e-lifecycle-loading-settles-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-runtime-l-5ce47-e-lifecycle-loading-settles-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-loading.spec.ts",
+                    "column": 7,
+                    "line": 41
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e8ff1b8fe7a1d006b1f7-d5fe57a47fc8ff046438",
+          "file": "upstream-batch04-runtime-loading.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "W1057 configured load timeout removes a delayed entry Realm and permits recovery at the same URL",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2196,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:16:41.191Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8ff1b8fe7a1d006b1f7-4a474193200a2bf96da0",
+          "file": "upstream-batch04-runtime-loading.spec.ts",
+          "line": 45,
+          "column": 1
+        },
+        {
+          "title": "W976 W1017 delayed resource A-B-A switching retains one interactive application (keepAlive=false)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 653,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:16:43.474Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8ff1b8fe7a1d006b1f7-244f1d37cf85f4514cb1",
+          "file": "upstream-batch04-runtime-loading.spec.ts",
+          "line": 78,
+          "column": 40
+        },
+        {
+          "title": "W976 W1017 delayed resource A-B-A switching retains one interactive application (keepAlive=true)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 553,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:16:44.131Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8ff1b8fe7a1d006b1f7-20b9c41ac6513a9f3742",
+          "file": "upstream-batch04-runtime-loading.spec.ts",
+          "line": 78,
+          "column": 40
+        },
+        {
+          "title": "Q3001 Q3093 manual load failure preserves host and sibling while lifecycle loading settles",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 16,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 749,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[33m@@ -1,7 +1,7 @@\u001b[39m\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"failedStatus\": \"error\",\u001b[39m\n\u001b[31m+   \"failedStatus\": \"disposed\",\u001b[39m\n\u001b[2m    \"host\": \"Host: 1\",\u001b[22m\n\u001b[2m    \"hostConnected\": true,\u001b[22m\n\u001b[2m    \"mounts\": 0,\u001b[22m\n\u001b[2m    \"sameFrame\": true,\u001b[22m\n\u001b[2m    \"successStatus\": \"mounted\",\u001b[22m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[33m@@ -1,7 +1,7 @@\u001b[39m\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"failedStatus\": \"error\",\u001b[39m\n\u001b[31m+   \"failedStatus\": \"disposed\",\u001b[39m\n\u001b[2m    \"host\": \"Host: 1\",\u001b[22m\n\u001b[2m    \"hostConnected\": true,\u001b[22m\n\u001b[2m    \"mounts\": 0,\u001b[22m\n\u001b[2m    \"sameFrame\": true,\u001b[22m\n\u001b[2m    \"successStatus\": \"mounted\",\u001b[22m\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-loading.spec.ts:41:7",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-loading.spec.ts",
+                      "column": 7,
+                      "line": 41
+                    },
+                    "snippet": "  39 |       successStatus: s.lifecycle.filter(e => e.name === 'sibling').at(-1)?.status,\n  40 |       failedStatus: s.lifecycle.filter(e => e.name === 'failed').at(-1)?.status };\n> 41 |   })).toEqual({ sameFrame: true, host: 'Host: 1', hostConnected: true, mounts: 0, unmounts: 0,\n     |       ^\n  42 |     successStatus: 'mounted', failedStatus: 'error' });\n  43 | });\n  44 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-loading.spec.ts",
+                        "column": 7,
+                        "line": 41
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[33m@@ -1,7 +1,7 @@\u001b[39m\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"failedStatus\": \"error\",\u001b[39m\n\u001b[31m+   \"failedStatus\": \"disposed\",\u001b[39m\n\u001b[2m    \"host\": \"Host: 1\",\u001b[22m\n\u001b[2m    \"hostConnected\": true,\u001b[22m\n\u001b[2m    \"mounts\": 0,\u001b[22m\n\u001b[2m    \"sameFrame\": true,\u001b[22m\n\u001b[2m    \"successStatus\": \"mounted\",\u001b[22m\n\n  39 |       successStatus: s.lifecycle.filter(e => e.name === 'sibling').at(-1)?.status,\n  40 |       failedStatus: s.lifecycle.filter(e => e.name === 'failed').at(-1)?.status };\n> 41 |   })).toEqual({ sameFrame: true, host: 'Host: 1', hostConnected: true, mounts: 0, unmounts: 0,\n     |       ^\n  42 |     successStatus: 'mounted', failedStatus: 'error' });\n  43 | });\n  44 |\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-loading.spec.ts:41:7"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:17:42.123Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-runtime-l-5ce47-e-lifecycle-loading-settles-firefox/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-runtime-l-5ce47-e-lifecycle-loading-settles-firefox/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-loading.spec.ts",
+                    "column": 7,
+                    "line": 41
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e8ff1b8fe7a1d006b1f7-6270464210d08228f8e2",
+          "file": "upstream-batch04-runtime-loading.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "W1057 configured load timeout removes a delayed entry Realm and permits recovery at the same URL",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 17,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2669,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:17:43.536Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8ff1b8fe7a1d006b1f7-c26cd95d5c510d3e1f3a",
+          "file": "upstream-batch04-runtime-loading.spec.ts",
+          "line": 45,
+          "column": 1
+        },
+        {
+          "title": "W976 W1017 delayed resource A-B-A switching retains one interactive application (keepAlive=false)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 17,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 840,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:17:46.555Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8ff1b8fe7a1d006b1f7-b571cf175c8942a9954c",
+          "file": "upstream-batch04-runtime-loading.spec.ts",
+          "line": 78,
+          "column": 40
+        },
+        {
+          "title": "W976 W1017 delayed resource A-B-A switching retains one interactive application (keepAlive=true)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 17,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 615,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:17:47.399Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8ff1b8fe7a1d006b1f7-587cd91a9e3bffa16d22",
+          "file": "upstream-batch04-runtime-loading.spec.ts",
+          "line": 78,
+          "column": 40
+        },
+        {
+          "title": "Q3001 Q3093 manual load failure preserves host and sibling while lifecycle loading settles",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 25,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 544,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[33m@@ -1,7 +1,7 @@\u001b[39m\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"failedStatus\": \"error\",\u001b[39m\n\u001b[31m+   \"failedStatus\": \"disposed\",\u001b[39m\n\u001b[2m    \"host\": \"Host: 1\",\u001b[22m\n\u001b[2m    \"hostConnected\": true,\u001b[22m\n\u001b[2m    \"mounts\": 0,\u001b[22m\n\u001b[2m    \"sameFrame\": true,\u001b[22m\n\u001b[2m    \"successStatus\": \"mounted\",\u001b[22m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[33m@@ -1,7 +1,7 @@\u001b[39m\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"failedStatus\": \"error\",\u001b[39m\n\u001b[31m+   \"failedStatus\": \"disposed\",\u001b[39m\n\u001b[2m    \"host\": \"Host: 1\",\u001b[22m\n\u001b[2m    \"hostConnected\": true,\u001b[22m\n\u001b[2m    \"mounts\": 0,\u001b[22m\n\u001b[2m    \"sameFrame\": true,\u001b[22m\n\u001b[2m    \"successStatus\": \"mounted\",\u001b[22m\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-loading.spec.ts:41:7",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-loading.spec.ts",
+                      "column": 7,
+                      "line": 41
+                    },
+                    "snippet": "  39 |       successStatus: s.lifecycle.filter(e => e.name === 'sibling').at(-1)?.status,\n  40 |       failedStatus: s.lifecycle.filter(e => e.name === 'failed').at(-1)?.status };\n> 41 |   })).toEqual({ sameFrame: true, host: 'Host: 1', hostConnected: true, mounts: 0, unmounts: 0,\n     |       ^\n  42 |     successStatus: 'mounted', failedStatus: 'error' });\n  43 | });\n  44 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-loading.spec.ts",
+                        "column": 7,
+                        "line": 41
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[33m@@ -1,7 +1,7 @@\u001b[39m\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"failedStatus\": \"error\",\u001b[39m\n\u001b[31m+   \"failedStatus\": \"disposed\",\u001b[39m\n\u001b[2m    \"host\": \"Host: 1\",\u001b[22m\n\u001b[2m    \"hostConnected\": true,\u001b[22m\n\u001b[2m    \"mounts\": 0,\u001b[22m\n\u001b[2m    \"sameFrame\": true,\u001b[22m\n\u001b[2m    \"successStatus\": \"mounted\",\u001b[22m\n\n  39 |       successStatus: s.lifecycle.filter(e => e.name === 'sibling').at(-1)?.status,\n  40 |       failedStatus: s.lifecycle.filter(e => e.name === 'failed').at(-1)?.status };\n> 41 |   })).toEqual({ sameFrame: true, host: 'Host: 1', hostConnected: true, mounts: 0, unmounts: 0,\n     |       ^\n  42 |     successStatus: 'mounted', failedStatus: 'error' });\n  43 | });\n  44 |\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-loading.spec.ts:41:7"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:18:40.078Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-runtime-l-5ce47-e-lifecycle-loading-settles-webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-runtime-l-5ce47-e-lifecycle-loading-settles-webkit/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-loading.spec.ts",
+                    "column": 7,
+                    "line": 41
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e8ff1b8fe7a1d006b1f7-7e38e94dc3ed46c4271d",
+          "file": "upstream-batch04-runtime-loading.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "W1057 configured load timeout removes a delayed entry Realm and permits recovery at the same URL",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 26,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2457,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:18:40.935Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8ff1b8fe7a1d006b1f7-d36f55ddef6633e2fe66",
+          "file": "upstream-batch04-runtime-loading.spec.ts",
+          "line": 45,
+          "column": 1
+        },
+        {
+          "title": "W976 W1017 delayed resource A-B-A switching retains one interactive application (keepAlive=false)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 26,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 944,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:18:43.521Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8ff1b8fe7a1d006b1f7-399530731643b6d00395",
+          "file": "upstream-batch04-runtime-loading.spec.ts",
+          "line": 78,
+          "column": 40
+        },
+        {
+          "title": "W976 W1017 delayed resource A-B-A switching retains one interactive application (keepAlive=true)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 26,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 681,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:18:44.470Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8ff1b8fe7a1d006b1f7-f0a0164576247d868b93",
+          "file": "upstream-batch04-runtime-loading.spec.ts",
+          "line": 78,
+          "column": 40
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-09T03:15:46.112Z",
+    "duration": 179081.638,
+    "expected": 24,
+    "skipped": 0,
+    "unexpected": 18,
+    "flaky": 0
+  }
+}

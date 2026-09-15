@@ -1,0 +1,177 @@
+{
+  "collectionBatch": "2026-09-08-batch-03",
+  "executionStatus": "root-verified-with-explicit-coverage-limits",
+  "issues": [
+    {
+      "id": "umijs/qiankun#3090",
+      "scenario": "manual loadMicroApp动态script未继承自定义fetch credentials，而注册式可以。",
+      "expectedBehavior": "contracts AppEntry.credentials；两种入口共用Runtime及原生script请求。",
+      "testIdea": "分别manual/register加载跨源HTML，再动态插入classic script，服务器检查entry及动态script的真实cookie；宿主global不污染。",
+      "suggestedLayer": "realm-host / entry-resolver / dom-bridge / runtime-core",
+      "testLevel": "e2e",
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-batch03-resources.spec.ts",
+          "title": "Q3090 applies declarative include credentials to entry and dynamic script (registered=false)",
+          "runId": "2026-09-08-upstream-04"
+        },
+        {
+          "path": "tests/e2e/upstream-batch03-resources.spec.ts",
+          "title": "Q3090 applies declarative include credentials to entry and dynamic script (registered=true)",
+          "runId": "2026-09-08-upstream-04"
+        }
+      ],
+      "scope": "自定义fetch本身是已明确不映射的接口（migration-tools/qiankun.ts）；测试验证include凭据的声明式迁移，非原回调调用次数。",
+      "statusAfterPassing": "partial-coverage",
+      "statusReason": "自定义fetch本身是已明确不映射的接口（migration-tools/qiankun.ts）；测试验证include凭据的声明式迁移，非原回调调用次数。",
+      "nextAction": "补齐所列原始条件，或明确采用已验证的显式Runtime适配契约；不把适配自动等同于原上游API行为。",
+      "status": "partial-coverage",
+      "resolution": "contracts AppEntry.credentials；两种入口共用Runtime及原生script请求。；分别manual/register加载跨源HTML，再动态插入classic script，服务器检查entry及动态script的真实cookie；宿主global不污染。 已在Chromium、Firefox、WebKit执行通过；真实Safari未运行。 限制：自定义fetch本身是已明确不映射的接口（migration-tools/qiankun.ts）；测试验证include凭据的声明式迁移，非原回调调用次数。",
+      "coverageLimitations": [
+        "自定义fetch本身是已明确不映射的接口（migration-tools/qiankun.ts）；测试验证include凭据的声明式迁移，非原回调调用次数。"
+      ]
+    },
+    {
+      "id": "umijs/qiankun#3056",
+      "scenario": "子应用相对API请求落到宿主，必须将proxy搬入宿主。",
+      "expectedBehavior": "原生fetch不改写用户参数；显式import.meta.url为应用API基址。",
+      "testIdea": "点击子应用API按钮，服务器验证/app/api/data；同时真实Vue Router beforeEach用宿主Axios固定baseURL。",
+      "suggestedLayer": "realm-host / entry-resolver / dom-bridge / runtime-core",
+      "testLevel": "e2e",
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-batch03-resources.spec.ts",
+          "title": "Q3056 W995 keep explicit child API origin and host Axios baseURL during Vue Router guards",
+          "runId": "2026-09-08-upstream-04"
+        }
+      ],
+      "scope": "已覆盖显式应用API基址；本地同源iframe Location不能冒充远端origin，未将任意fetch相对字符串自动变成应用远端地址。",
+      "statusAfterPassing": "partial-coverage",
+      "statusReason": "已覆盖显式应用API基址；本地同源iframe Location不能冒充远端origin，未将任意fetch相对字符串自动变成应用远端地址。",
+      "nextAction": "补齐所列原始条件，或明确采用已验证的显式Runtime适配契约；不把适配自动等同于原上游API行为。",
+      "status": "partial-coverage",
+      "resolution": "原生fetch不改写用户参数；显式import.meta.url为应用API基址。；点击子应用API按钮，服务器验证/app/api/data；同时真实Vue Router beforeEach用宿主Axios固定baseURL。 已在Chromium、Firefox、WebKit执行通过；真实Safari未运行。 限制：已覆盖显式应用API基址；本地同源iframe Location不能冒充远端origin，未将任意fetch相对字符串自动变成应用远端地址。",
+      "coverageLimitations": [
+        "已覆盖显式应用API基址；本地同源iframe Location不能冒充远端origin，未将任意fetch相对字符串自动变成应用远端地址。"
+      ]
+    },
+    {
+      "id": "umijs/qiankun#3035",
+      "scenario": "CRA React18子应用的图片、AntD/CSS资源指向同名宿主资源。",
+      "expectedBehavior": "静态HTML与动态资源赋值在第一请求前使用entry baseURL。",
+      "testIdea": "两个同名资源域名环境，检查img解码尺寸和SVG图像几何、实际URL/请求、动态script及清理。",
+      "suggestedLayer": "realm-host / entry-resolver / dom-bridge / runtime-core",
+      "testLevel": "e2e",
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-batch03-resources.spec.ts",
+          "title": "Q3035 W1005 resolve static and dynamic image and SVG href before requests with host same-name decoys",
+          "runId": "2026-09-08-upstream-04"
+        }
+      ],
+      "scope": "原CRA React18+AntD完整工程未提供；本次HTML/原生动态图片覆盖地址机制，未等价覆盖其AntD组件样式。",
+      "statusAfterPassing": "partial-coverage",
+      "statusReason": "原CRA React18+AntD完整工程未提供；本次HTML/原生动态图片覆盖地址机制，未等价覆盖其AntD组件样式。",
+      "nextAction": "补齐所列原始条件，或明确采用已验证的显式Runtime适配契约；不把适配自动等同于原上游API行为。",
+      "status": "partial-coverage",
+      "resolution": "静态HTML与动态资源赋值在第一请求前使用entry baseURL。；两个同名资源域名环境，检查img解码尺寸和SVG图像几何、实际URL/请求、动态script及清理。 已在Chromium、Firefox、WebKit执行通过；真实Safari未运行。 限制：原CRA React18+AntD完整工程未提供；本次HTML/原生动态图片覆盖地址机制，未等价覆盖其AntD组件样式。",
+      "coverageLimitations": [
+        "原CRA React18+AntD完整工程未提供；本次HTML/原生动态图片覆盖地址机制，未等价覆盖其AntD组件样式。"
+      ]
+    },
+    {
+      "id": "Tencent/wujie#1005",
+      "scenario": "SVG image href未像img一样解析到子应用地址。",
+      "expectedBehavior": "dom-bridge/entry-resolver保留SVG namespace并解析href/xlink:href。",
+      "testIdea": "静态SVG href与createElementNS+setAttributeNS动态xlink:href；检查实际请求和可见几何。",
+      "suggestedLayer": "realm-host / entry-resolver / dom-bridge / runtime-core",
+      "testLevel": "e2e",
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-batch03-resources.spec.ts",
+          "title": "Q3035 W1005 resolve static and dynamic image and SVG href before requests with host same-name decoys",
+          "runId": "2026-09-08-upstream-04"
+        }
+      ],
+      "scope": "原报告仅截图，覆盖href及namespaced xlink:href；不宣称所有SVG动画赋值形式。",
+      "statusAfterPassing": "regression-passed",
+      "status": "regression-passed",
+      "resolution": "dom-bridge/entry-resolver保留SVG namespace并解析href/xlink:href。；静态SVG href与createElementNS+setAttributeNS动态xlink:href；检查实际请求和可见几何。 已在Chromium、Firefox、WebKit执行通过；真实Safari未运行。 限制：原报告仅截图，覆盖href及namespaced xlink:href；不宣称所有SVG动画赋值形式。",
+      "coverageLimitations": [
+        "原报告仅截图，覆盖href及namespaced xlink:href；不宣称所有SVG动画赋值形式。"
+      ]
+    },
+    {
+      "id": "Tencent/wujie#995",
+      "scenario": "宿主Vue Router beforeEach中固定Axios baseURL偶尔被拼接子应用资源域名。",
+      "expectedBehavior": "宿主fetch/XHR及原型保持原生，应用动态资源转换只属于应用实例。",
+      "testIdea": "实际Axios1.12.2 + Vue Router4.5.1 beforeEach，跨源应用挂载/销毁两轮，同时发起宿主与应用请求，核对服务端完整path。",
+      "suggestedLayer": "realm-host / entry-resolver / dom-bridge / runtime-core",
+      "testLevel": "e2e",
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-batch03-resources.spec.ts",
+          "title": "Q3056 W995 keep explicit child API origin and host Axios baseURL during Vue Router guards",
+          "runId": "2026-09-08-upstream-04"
+        }
+      ],
+      "scope": "原项目/版本和概率条件未提供；验证具名触发路径与固定baseURL，不宣称覆盖未知业务拦截器。",
+      "statusAfterPassing": "regression-passed",
+      "status": "regression-passed",
+      "resolution": "宿主fetch/XHR及原型保持原生，应用动态资源转换只属于应用实例。；实际Axios1.12.2 + Vue Router4.5.1 beforeEach，跨源应用挂载/销毁两轮，同时发起宿主与应用请求，核对服务端完整path。 已在Chromium、Firefox、WebKit执行通过；真实Safari未运行。 限制：原项目/版本和概率条件未提供；验证具名触发路径与固定baseURL，不宣称覆盖未知业务拦截器。",
+      "coverageLimitations": [
+        "原项目/版本和概率条件未提供；验证具名触发路径与固定baseURL，不宣称覆盖未知业务拦截器。"
+      ]
+    },
+    {
+      "id": "umijs/qiankun#2982",
+      "scenario": "未显式声明favicon时子目录部署请求/favicon.ico 404。",
+      "expectedBehavior": "浏览器宿主默认favicon归宿主；应用显式icon/manifest URL按应用目录解析并保持宿主元数据。",
+      "testIdea": "在/app/entry.html声明相对icon/manifest，检查应用URL和宿主head未变。",
+      "suggestedLayer": "realm-host / entry-resolver / dom-bridge / runtime-core",
+      "testLevel": "e2e",
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-batch03-resources.spec.ts",
+          "title": "Q2982 keeps explicit favicon and manifest paths in application subdirectory without replacing host metadata",
+          "runId": "2026-09-08-upstream-04"
+        }
+      ],
+      "scope": "测试是显式链接适配，不覆盖未声明时浏览器隐式/favicon.ico或浏览器标签图标；不能据此称原问题修复。",
+      "statusAfterPassing": "partial-coverage",
+      "statusReason": "测试是显式链接适配，不覆盖未声明时浏览器隐式/favicon.ico或浏览器标签图标；不能据此称原问题修复。；显式icon/manifest原先在HTML head提取时被丢弃，现保留在应用ShadowRoot；此附带缺陷已保存失败和修复证据。元数据可查询不表示宿主标签图标、PWA、CSP/refresh生效。",
+      "nextAction": "以真实浏览器顶层子目录部署对照隐式/favicon.ico请求；应用ShadowRoot元数据不替代宿主Document策略。",
+      "status": "partial-coverage",
+      "resolution": "浏览器宿主默认favicon归宿主；应用显式icon/manifest URL按应用目录解析并保持宿主元数据。；在/app/entry.html声明相对icon/manifest，检查应用URL和宿主head未变。 已在Chromium、Firefox、WebKit执行通过；真实Safari未运行。 限制：测试是显式链接适配，不覆盖未声明时浏览器隐式/favicon.ico或浏览器标签图标；不能据此称原问题修复。；显式icon/manifest原先在HTML head提取时被丢弃，现保留在应用ShadowRoot；此附带缺陷已保存失败和修复证据。元数据可查询不表示宿主标签图标、PWA、CSP/refresh生效。",
+      "coverageLimitations": [
+        "测试是显式链接适配，不覆盖未声明时浏览器隐式/favicon.ico或浏览器标签图标；不能据此称原问题修复。",
+        "显式icon/manifest原先在HTML head提取时被丢弃，现保留在应用ShadowRoot；此附带缺陷已保存失败和修复证据。元数据可查询不表示宿主标签图标、PWA、CSP/refresh生效。"
+      ]
+    },
+    {
+      "id": "umijs/qiankun#3021",
+      "scenario": "嵌套微应用进入最内层时JavaScript异常，正文未给异常栈。",
+      "expectedBehavior": "嵌套Runtime使用独立iframe Realm与应用ShadowRoot；父级销毁递归释放。",
+      "testIdea": "加载真实nested Runtime + SortableJS孙应用，验证三Realm身份、真实拖拽结果及完整销毁。",
+      "suggestedLayer": "realm-host / entry-resolver / dom-bridge / runtime-core",
+      "testLevel": "e2e",
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-batch03-resources.spec.ts",
+          "title": "Q3021 mounts a nested runtime grandchild with distinct executing Realms and destroys the full tree",
+          "runId": "2026-09-08-upstream-04"
+        }
+      ],
+      "scope": "未给原异常栈、版本、复现工程；代表性嵌套运行契约通过不能证明原未知异常完全覆盖。",
+      "statusAfterPassing": "partial-coverage",
+      "statusReason": "未给原异常栈、版本、复现工程；代表性嵌套运行契约通过不能证明原未知异常完全覆盖。",
+      "nextAction": "取得原嵌套项目、版本和异常栈，再针对原失败点验证。",
+      "status": "partial-coverage",
+      "resolution": "嵌套Runtime使用独立iframe Realm与应用ShadowRoot；父级销毁递归释放。；加载真实nested Runtime + SortableJS孙应用，验证三Realm身份、真实拖拽结果及完整销毁。 已在Chromium、Firefox、WebKit执行通过；真实Safari未运行。 限制：未给原异常栈、版本、复现工程；代表性嵌套运行契约通过不能证明原未知异常完全覆盖。",
+      "coverageLimitations": [
+        "未给原异常栈、版本、复现工程；代表性嵌套运行契约通过不能证明原未知异常完全覆盖。"
+      ]
+    }
+  ],
+  "rootVerificationRun": "2026-09-08-upstream-04"
+}

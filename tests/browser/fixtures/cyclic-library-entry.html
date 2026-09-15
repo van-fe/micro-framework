@@ -1,0 +1,17 @@
+<!doctype html>
+<html><body><script>
+window.cyclicLibrary = function cyclicLibrary() {};
+window.cyclicLibrary.default = window.cyclicLibrary;
+window.cyclicPair = { default: {} };
+window.cyclicPair.default.default = window.cyclicPair;
+window.application = {
+  mount() {
+    const node = document.createElement("div");
+    node.id = "cyclic-library-mounted";
+    node.textContent = "mounted";
+    document.body.append(node);
+  },
+  unmount() { document.getElementById("cyclic-library-mounted").remove(); }
+};
+window.applicationWrapper = { default: { default: window.application } };
+</script></body></html>

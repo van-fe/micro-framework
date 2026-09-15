@@ -1,0 +1,192 @@
+{
+  "config": {
+    "argv": [
+      "/Users/fanfangbo/.local/share/fnm/node-versions/v24.19.0/installation/bin/node",
+      "/Users/fanfangbo/workspace/micro-framework/node_modules/.bin/playwright",
+      "test",
+      "tests/e2e/upstream-batch04-styles.spec.ts",
+      "--project=webkit",
+      "--reporter=line,json"
+    ],
+    "configFile": "/Users/fanfangbo/workspace/micro-framework/playwright.config.ts",
+    "rootDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "line"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "upstream-batch04-styles.spec.ts",
+      "file": "upstream-batch04-styles.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Q3018 preserves module initialized adjacent styles across keepAlive hide return and disposal recreation",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6054,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCSS\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#adjacent-style-slot .batch04-style-first')\nExpected: \u001b[32m\"rgb(\u001b[7m11, 22, 33\u001b[27m)\"\u001b[39m\nReceived: \u001b[31m\"rgb(\u001b[7m0, 0, 0\u001b[27m)\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCSS\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#adjacent-style-slot .batch04-style-first')\u001b[22m\n\u001b[2m    14 × locator resolved to <p class=\"batch04-style-first\">First style</p>\u001b[22m\n\u001b[2m       - unexpected value \"rgb(0, 0, 0)\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCSS\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#adjacent-style-slot .batch04-style-first')\nExpected: \u001b[32m\"rgb(\u001b[7m11, 22, 33\u001b[27m)\"\u001b[39m\nReceived: \u001b[31m\"rgb(\u001b[7m0, 0, 0\u001b[27m)\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCSS\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#adjacent-style-slot .batch04-style-first')\u001b[22m\n\u001b[2m    14 × locator resolved to <p class=\"batch04-style-first\">First style</p>\u001b[22m\n\u001b[2m       - unexpected value \"rgb(0, 0, 0)\"\u001b[22m\n\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-styles.spec.ts:55:79",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-styles.spec.ts",
+                      "column": 79,
+                      "line": 55
+                    },
+                    "snippet": "  53 |     }));\n  54 |     for (let cycle = 0; cycle < 3; cycle++) {\n> 55 |       await expect(page.locator('#adjacent-style-slot .batch04-style-first')).toHaveCSS('color', 'rgb(11, 22, 33)');\n     |                                                                               ^\n  56 |       await expect(page.locator('#adjacent-style-slot .batch04-style-second')).toHaveCSS('color', 'rgb(44, 55, 66)');\n  57 |       await expect(page.locator('#adjacent-style-slot .batch04-style-second')).toHaveCSS('width', '84px');\n  58 |       await page.locator('#adjacent-style-slot button').click();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-styles.spec.ts",
+                        "column": 79,
+                        "line": 55
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCSS\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#adjacent-style-slot .batch04-style-first')\nExpected: \u001b[32m\"rgb(\u001b[7m11, 22, 33\u001b[27m)\"\u001b[39m\nReceived: \u001b[31m\"rgb(\u001b[7m0, 0, 0\u001b[27m)\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCSS\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#adjacent-style-slot .batch04-style-first')\u001b[22m\n\u001b[2m    14 × locator resolved to <p class=\"batch04-style-first\">First style</p>\u001b[22m\n\u001b[2m       - unexpected value \"rgb(0, 0, 0)\"\u001b[22m\n\n\n  53 |     }));\n  54 |     for (let cycle = 0; cycle < 3; cycle++) {\n> 55 |       await expect(page.locator('#adjacent-style-slot .batch04-style-first')).toHaveCSS('color', 'rgb(11, 22, 33)');\n     |                                                                               ^\n  56 |       await expect(page.locator('#adjacent-style-slot .batch04-style-second')).toHaveCSS('color', 'rgb(44, 55, 66)');\n  57 |       await expect(page.locator('#adjacent-style-slot .batch04-style-second')).toHaveCSS('width', '84px');\n  58 |       await page.locator('#adjacent-style-slot button').click();\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-styles.spec.ts:55:79"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "Q3018_DIAGNOSTIC \u001b[33m0\u001b[39m [\n  {\n    text: \u001b[32m'.batch04-style-first { color: rgb(11,22,33) }'\u001b[39m,\n    media: \u001b[32m''\u001b[39m,\n    rawMedia: \u001b[32m'not all'\u001b[39m,\n    sheetMedia: \u001b[32m''\u001b[39m,\n    disabled: \u001b[33mfalse\u001b[39m,\n    rules: [ \u001b[32m'.batch04-style-first { color: rgb(11, 22, 33); }'\u001b[39m ],\n    connected: \u001b[33mtrue\u001b[39m,\n    owner: \u001b[33mtrue\u001b[39m\n  },\n  {\n    text: \u001b[32m'.batch04-style-second { color: rgb(44,55,66); width: 84px }'\u001b[39m,\n    media: \u001b[32m''\u001b[39m,\n    rawMedia: \u001b[32m'not all'\u001b[39m,\n    sheetMedia: \u001b[32m''\u001b[39m,\n    disabled: \u001b[33mfalse\u001b[39m,\n    rules: [\n      \u001b[32m'.batch04-style-second { color: rgb(44, 55, 66); width: 84px; }'\u001b[39m\n    ],\n    connected: \u001b[33mtrue\u001b[39m,\n    owner: \u001b[33mtrue\u001b[39m\n  }\n]\n"
+                    },
+                    {
+                      "text": "Q3018_DIAGNOSTIC \u001b[33m1\u001b[39m [\n  {\n    text: \u001b[32m'.batch04-style-first { color: rgb(11,22,33) }'\u001b[39m,\n    media: \u001b[32m''\u001b[39m,\n    rawMedia: \u001b[32m'not all'\u001b[39m,\n    sheetMedia: \u001b[32m''\u001b[39m,\n    disabled: \u001b[33mfalse\u001b[39m,\n    rules: [ \u001b[32m'.batch04-style-first { color: rgb(11, 22, 33); }'\u001b[39m ],\n    connected: \u001b[33mtrue\u001b[39m,\n    owner: \u001b[33mtrue\u001b[39m\n  },\n  {\n    text: \u001b[32m'.batch04-style-second { color: rgb(44,55,66); width: 84px }'\u001b[39m,\n    media: \u001b[32m''\u001b[39m,\n    rawMedia: \u001b[32m'not all'\u001b[39m,\n    sheetMedia: \u001b[32m''\u001b[39m,\n    disabled: \u001b[33mfalse\u001b[39m,\n    rules: [\n      \u001b[32m'.batch04-style-second { color: rgb(44, 55, 66); width: 84px; }'\u001b[39m\n    ],\n    connected: \u001b[33mtrue\u001b[39m,\n    owner: \u001b[33mtrue\u001b[39m\n  }\n]\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:36:25.464Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-styles-Q3-7152d-urn-and-disposal-recreation-webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch04-styles-Q3-7152d-urn-and-disposal-recreation-webkit/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-styles.spec.ts",
+                    "column": 79,
+                    "line": 55
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b6366a0961a77a89eeb9-8a5547afb7515ae74065",
+          "file": "upstream-batch04-styles.spec.ts",
+          "line": 6,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-09T03:36:21.220Z",
+    "duration": 10573.259,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

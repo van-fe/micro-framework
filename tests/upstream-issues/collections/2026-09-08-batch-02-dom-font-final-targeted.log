@@ -1,0 +1,44 @@
+
+ RUN  v4.1.11 /Users/fanfangbo/workspace/micro-framework
+
+ ✓ |browser-chromium| tests/browser/upstream-batch02-dom-font-messages.browser.test.ts (6 tests) 374ms
+ ✓ |browser-webkit| tests/browser/upstream-batch02-dom-font-messages.browser.test.ts (6 tests) 332ms
+ ❯ |browser-firefox| tests/browser/upstream-batch02-dom-font-messages.browser.test.ts (6 tests | 1 failed) 390ms
+     ✓ W1106 routes window drag listeners to their application with once, abort and destroy cleanup 26ms
+     ✓ W845 W1059 loads a font from the third insertAdjacentElement style in nested shadows with application family isolation 43ms
+     ✓ W845 normalizes a native external stylesheet before activating its font family 66ms
+     × W845 resolves font variables introduced by later CSSOM rules and inline declarations 71ms
+     ✓ W421 preserves fill-available height through an application document root and flex parent 59ms
+     ✓ W790 delivers native nested iframe replies only to its owning application and stops bridging on destroy 125ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |browser-firefox| tests/browser/upstream-batch02-dom-font-messages.browser.test.ts > batch02 nested application browser contracts > W845 resolves font variables introduced by later CSSOM rules and inline declarations
+AssertionError: expected 13 to be 20 // Object.is equality
+
+Failure screenshot:
+  - tests/browser/__screenshots__/upstream-batch02-dom-font-messages.browser.test.ts/batch02-nested-application-browser-contracts-W845-resolves-font-variables-introduced-by-later-CSSOM-rules-and-inline-declarations-1.png
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- 20[39m
+[31m+ 13[39m
+
+ ❯ tests/browser/upstream-batch02-dom-font-messages.browser.test.ts:100:50
+     98|     app.frame.document.body.append(cssNode);
+     99|     style.sheet!.insertRule('.late-sheet-font{font-family:var(--late-s…
+    100|     expect(cssNode.getBoundingClientRect().width).toBe(20);
+       |                                                  ^
+    101|     const inlineNode = app.frame.document.createElement("span");inline…
+    102|     inlineNode.style.cssText="font-size:20px;font-family:var(--late-in…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 2 passed (3)
+      Tests  1 failed | 17 passed (18)
+   Start at  15:36:58
+   Duration  2.05s (transform 0ms, setup 0ms, import 141ms, tests 1.10s, environment 0ms)
+
+JSON report written to /Users/fanfangbo/workspace/micro-framework/tests/upstream-issues/collections/2026-09-08-batch-02-dom-font-final-targeted.json

@@ -1,0 +1,8 @@
+.upstream-component { box-sizing: border-box; padding: 20px; font-family: Arial, sans-serif; color: #243244; background: white; }
+.upstream-component h2 { margin: 0 0 20px; font-size: 20px; }
+.upstream-component button { cursor: pointer; }
+.upstream-x6-canvas, .upstream-bpmn-canvas { width: 680px; height: 360px; border: 1px solid #8b9aad; }
+.upstream-x6-palette { padding: 10px 20px; margin-bottom: 20px; }
+.upstream-naive { min-height: 320px; }
+.upstream-naive-select { width: 280px; }
+.upstream-monaco-editor { width: 680px; height: 320px; border: 1px solid #8b9aad; }

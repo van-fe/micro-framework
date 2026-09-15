@@ -1,0 +1,50 @@
+$ vitest run
+
+ RUN  v4.1.11 /Users/fanfangbo/workspace/micro-framework
+
+ ❯ packages/cli/src/dev-registry-server.test.ts (2 tests | 1 failed) 5009ms
+     × serves a registry and proxies only configured asset prefixes with local CORS 5006ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  packages/cli/src/dev-registry-server.test.ts > local development registry and CORS proxy > serves a registry and proxies only configured asset prefixes with local CORS
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ packages/cli/src/dev-registry-server.test.ts:35:3
+     33|
+     34| describe("local development registry and CORS proxy", () => {
+     35|   it("serves a registry and proxies only configured asset prefixes wit…
+       |   ^
+     36|     const target = await upstream();
+     37|     closeCallbacks.add(target.close);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+⎯⎯⎯⎯⎯⎯ Unhandled Errors ⎯⎯⎯⎯⎯⎯
+
+Vitest caught 1 unhandled error during the test run.
+This might cause false positive tests. Resolve unhandled errors to make sure your tests are not affected.
+
+⎯⎯⎯⎯⎯ Uncaught Exception ⎯⎯⎯⎯⎯
+Error: listen EPERM: operation not permitted 127.0.0.1
+ ❯ Server.setupListenHandle [as _listen2] node:net:2145:21
+ ❯ listenInCluster node:net:2224:12
+ ❯ node:net:2448:7
+ ❯ processTicksAndRejections node:internal/process/task_queues:90:21
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { code: 'EPERM', errno: -1, syscall: 'listen', address: '127.0.0.1' }
+This error originated in "packages/cli/src/dev-registry-server.test.ts" test file. It doesn't mean the error was thrown inside the file itself, but while it was running.
+The latest test that might've caused the error is "serves a registry and proxies only configured asset prefixes with local CORS". It might mean one of the following:
+- The error was thrown, while Vitest was running this test.
+- If the error occurred after the test had been completed, this was the last documented test before it was thrown.
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+
+
+ Test Files  1 failed | 46 passed (47)
+      Tests  1 failed | 167 passed (168)
+     Errors  1 error
+   Start at  18:47:41
+   Duration  5.25s (transform 1.91s, setup 0ms, import 3.28s, tests 7.07s, environment 2ms)
+
+error: script "test:unit" exited with code 1

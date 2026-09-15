@@ -1,0 +1,51 @@
+
+Running 1 test using 1 worker
+
+(node:13067) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/1] [chromium] › tests/e2e/upstream-runtime-eviction.spec.ts:81:1 › Q1089 rejects a reentrant mount during keepAlive disposal and completes lifecycle cleanup once
+  1) [chromium] › tests/e2e/upstream-runtime-eviction.spec.ts:81:1 › Q1089 rejects a reentrant mount during keepAlive disposal and completes lifecycle cleanup once 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 3
+
+      Object {
+    -   "disposeCalls": 1,
+    +   "disposeCalls": 0,
+        "errors": Array [],
+        "remaining": 0,
+        "requests": Array [
+    -     "rejected",
+    +     "resolved",
+        ],
+        "status": "disposed",
+    -   "unmountCalls": 1,
+    +   "unmountCalls": 0,
+      }
+
+      128 |     }
+      129 |   });
+    > 130 |   expect(result).toEqual({ status: "disposed", requests: ["rejected"], unmountCalls: 1, disposeCalls: 1, remaining: 0, errors: [] });
+          |                  ^
+      131 |   expect(pageErrors).toEqual([]);
+      132 | });
+      133 |
+        at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-runtime-eviction.spec.ts:130:18
+
+    Error Context: test-results/upstream-runtime-eviction--a8c6e-etes-lifecycle-cleanup-once-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/upstream-runtime-eviction--a8c6e-etes-lifecycle-cleanup-once-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/upstream-runtime-eviction--a8c6e-etes-lifecycle-cleanup-once-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+  1 failed
+    [chromium] › tests/e2e/upstream-runtime-eviction.spec.ts:81:1 › Q1089 rejects a reentrant mount during keepAlive disposal and completes lifecycle cleanup once 

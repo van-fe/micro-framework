@@ -1,0 +1,173 @@
+{
+  "browsers": [
+    "chromium",
+    "firefox",
+    "webkit"
+  ],
+  "realSafariRun": false,
+  "newScenarios": 21,
+  "newEngineExecutionsPassed": 63,
+  "cases": {
+    "umijs/qiankun#2735": {
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-runtime-routes.spec.ts",
+          "title": "Q2735 completes native hash A-B-A navigation with live DOM and isolated Realms (keepAlive=false)"
+        },
+        {
+          "path": "tests/e2e/upstream-runtime-routes.spec.ts",
+          "title": "Q2735 completes native hash A-B-A navigation with live DOM and isolated Realms (keepAlive=true)"
+        }
+      ],
+      "resolution": "原生hash链接点击A、B后使用真实page.goBack回A；保活开启/关闭，每步state/可见DOM/实际点击、frame身份、隔离及cleanup。"
+    },
+    "umijs/qiankun#2854": {
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-runtime-routes.spec.ts",
+          "title": "Q2854 requests a new entry after a 404 with the same name and container"
+        }
+      ],
+      "resolution": "HTML入口真实404，核实error与surface清理；同name、同container unregister后register新健康HTML entry，网络请求新URL、mounted、实际点击。"
+    },
+    "umijs/qiankun#886": {
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-runtime-routes.spec.ts",
+          "title": "Q886 isolates an application entry ReferenceError and navigates to a working application"
+        },
+        {
+          "path": "tests/e2e/upstream-runtime-routes.spec.ts",
+          "title": "Q886 isolates an application bootstrap ReferenceError and navigates to a working application"
+        }
+      ],
+      "resolution": "真实ESM顶层ReferenceError与bootstrap ReferenceError分别验证错误归属、失败DOM/iframe清理、原生hash路由切换健康app并实际点击。"
+    },
+    "umijs/qiankun#578": {
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-runtime-routes.spec.ts",
+          "title": "Q578 loads a host route stylesheet after native navigation away from a child application"
+        }
+      ],
+      "resolution": "真实hash链接从子应用转到宿主路由，由宿主路由handler插入外部link CSS，经真实网络加载后计算样式正确、宿主head归属与子应用清理。"
+    },
+    "umijs/qiankun#1089": {
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-runtime-races.spec.ts",
+          "title": "Q1089 serializes remount behind an unfinished unmount (keepAlive=false)"
+        },
+        {
+          "path": "tests/e2e/upstream-runtime-races.spec.ts",
+          "title": "Q1089 serializes remount behind an unfinished unmount (keepAlive=true)"
+        },
+        {
+          "path": "tests/e2e/upstream-runtime-races.spec.ts",
+          "title": "Q1089 cancels an unfinished first mount before honoring the newest mount request"
+        },
+        {
+          "path": "tests/e2e/upstream-runtime-races.spec.ts",
+          "title": "Q1089 lets a newer unmount supersede a mount waiting behind asynchronous teardown"
+        },
+        {
+          "path": "tests/e2e/upstream-runtime-races.spec.ts",
+          "title": "Q1089 serializes a reentrant mount requested by an unmounting lifecycle listener"
+        },
+        {
+          "path": "tests/e2e/upstream-runtime-eviction.spec.ts",
+          "title": "Q1089 completes keepAlive eviction without waiting on its own unmount (maxInstances=0, remount=false)"
+        },
+        {
+          "path": "tests/e2e/upstream-runtime-eviction.spec.ts",
+          "title": "Q1089 completes keepAlive eviction without waiting on its own unmount (maxInstances=0, remount=true)"
+        },
+        {
+          "path": "tests/e2e/upstream-runtime-eviction.spec.ts",
+          "title": "Q1089 rejects a reentrant mount during keepAlive disposal and completes lifecycle cleanup once"
+        }
+      ],
+      "resolution": "deferred beforeUnmount精确停住旧卸载，再次mount必须等待；重复mount、重复unmount、最新卸载胜出、首个未完成mount取消后再次mount、lifecycle同步重入；验证最终状态/计数器实际点击/旧frame断连或保留/单一surface。修复AppController串行卸载与最新请求处理。 补充maxInstances=0直接卸载与立即remount，避免self.dispose等待其发起的淘汰循环；同步dispose lifecycle监听器的mount请求被拒绝，unmount/dispose各调用1次。"
+    },
+    "Tencent/wujie#823": {
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-runtime-races.spec.ts",
+          "title": "W823 awaits asynchronous React beforeUnmount before remounting with working events (keepAlive=false)"
+        },
+        {
+          "path": "tests/e2e/upstream-runtime-races.spec.ts",
+          "title": "W823 awaits asynchronous React unmount before remounting with working events (keepAlive=false)"
+        },
+        {
+          "path": "tests/e2e/upstream-runtime-races.spec.ts",
+          "title": "W823 awaits asynchronous React beforeUnmount before reactivating with working events (keepAlive=true)"
+        },
+        {
+          "path": "tests/e2e/upstream-runtime-races.spec.ts",
+          "title": "W823 awaits asynchronous React deactivate before reactivating with working events (keepAlive=true)"
+        }
+      ],
+      "resolution": "真实React19.2.8 createRoot四组：keepAlive=false分别暂停beforeUnmount hook和应用unmount，结束后新frame/root且按钮状态重置；keepAlive=true分别暂停beforeUnmount hook和应用deactivate，结束后同frame/root、计数状态保留且按钮继续可交互。均在旧异步阶段未释放时请求mount并断言unmounting未提前结束；每例最终Runtime.destroy清理。公开契约明确keepAlive=true的隐藏执行deactivate，不声称其调用unmount。"
+    },
+    "umijs/qiankun#222": {
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-runtime-races.spec.ts",
+          "title": "Q222 switches applications from real AntD confirm.onOk without an event teardown error"
+        }
+      ],
+      "resolution": "真实React19.2.8+AntD6.6.2静态Modal.confirm，真实点击onOk直接设置parent.location.hash切应用；目标mounted并可点击、旧iframe销毁、无残留confirm及pageerror。未模拟旧版Proxy沙箱内部实现。"
+    },
+    "Tencent/wujie#107": {
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-runtime-navigation.spec.ts",
+          "title": "W107 keeps empty and fragment anchor clicks inside the application without navigating the host"
+        }
+      ],
+      "resolution": "跨origin HTML入口中的#fragment和空href真实左击；原生iframe hashchange触发两次、宿主URL不变且无document导航、应用DOM/计数状态保留、应用document click preventDefault被尊重。修复默认empty/hash应用局部导航。显式target、下载、修饰键保持浏览器默认；本回归不声明iframe URL与跨origin entry URL相等。"
+    },
+    "Tencent/wujie#12": {
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-runtime-navigation.spec.ts",
+          "title": "W12 applies a real Vite WebSocket CSS HMR update to root variables without replacing the Realm"
+        }
+      ],
+      "resolution": "真实Vite8.2.2 WebSocket update与磁盘CSS fixture变化，iframe引入CSS模块更新Shadow :root token、padding/color；保持frame和计数状态、宿主及兄弟token隔离，finally恢复原始CSS并等待恢复生效。"
+    }
+  },
+  "redEvidence": {
+    "Q1089": "旧实现Chromium keepAlive=false与true两种均失败：beforeUnmount仍pending时再次mount令状态分别错误变成unmounted、mounted；修复后所有交错场景通过。",
+    "W107": "旧实现Chromium真实fragment点击将宿主#host-stable改成#app-section；修复后真实fragment/empty/preventDefault三引擎通过。",
+    "Q1089 zero cache": "maxInstances=0直接卸载及立即remount均1.5秒后仍pending/unmounted；原始日志 /tmp/upstream-runtime-eviction-red.log；trace /tmp/upstream-runtime-eviction-red-traces/。",
+    "Q1089 disposal reentrancy": "keepAlive dispose的unmounting listener内mount错误resolved，且应用unmount/dispose各调用0次；原始日志 /tmp/upstream-runtime-dispose-red.log；trace /tmp/upstream-runtime-dispose-red-traces/。"
+  },
+  "checks": [
+    "typecheck:tests passed",
+    "runtime-core typecheck/build passed",
+    "dom-bridge typecheck/build passed",
+    "example-react typecheck passed",
+    "example-vanilla typecheck passed",
+    "architecture passed (existing large-file warnings)"
+  ],
+  "extraPriorCoverage": "既有lifecycle-failures与cancellation-boundaries共16场景、三引擎48项通过；最终完整门禁由root统一运行。",
+  "initialRedArtifactRetention": "初始Q1089交错卸载与W107 anchor导航红测未单独重定向log；本会话工具结果保留，原test-results trace被随后Playwright运行覆盖。不得把重建摘要称为原始日志。",
+  "finalRuntimeMatrix": {
+    "passed": 81,
+    "log": "/tmp/upstream-runtime-frozen-green.log",
+    "files": [
+      "tests/e2e/upstream-runtime-eviction.spec.ts",
+      "tests/e2e/upstream-runtime-races.spec.ts",
+      "tests/e2e/lifecycle-failures.spec.ts",
+      "tests/e2e/cancellation-boundaries.spec.ts"
+    ]
+  },
+  "frozen": true,
+  "lastW823Matrix": {
+    "passed": 12,
+    "log": "/tmp/upstream-w823-all-lifecycles.log",
+    "productionCodeChanged": false
+  }
+}

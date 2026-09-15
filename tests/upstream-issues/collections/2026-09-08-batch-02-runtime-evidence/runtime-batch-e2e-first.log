@@ -1,0 +1,679 @@
+
+Running 90 tests using 1 worker
+
+(node:49372) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/90] [chromium] › tests/e2e/upstream-batch02-assets-csp.spec.ts:17:1 › W779 loads four then five and six real Vue images and mixed backgrounds from the application origin
+[2/90] [chromium] › tests/e2e/upstream-batch02-assets-csp.spec.ts:46:1 › W727 mounts and styles an HTML application under style-src without unsafe-inline and emits no style CSP violations
+  1) [chromium] › tests/e2e/upstream-batch02-assets-csp.spec.ts:46:1 › W727 mounts and styles an HTML application under style-src without unsafe-inline and emits no style CSP violations 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  -  1
+    + Received  + 10
+
+    - Array []
+    + Array [
+    +   Object {
+    +     "blocked": "inline",
+    +     "directive": "style-src-elem",
+    +   },
+    +   Object {
+    +     "blocked": "inline",
+    +     "directive": "style-src-elem",
+    +   },
+    + ]
+
+      65 |   expect(await page.locator("micro-app-host").evaluate(node => getComputedStyle(node).display)).toBe("block");
+      66 |   expect(await page.locator("micro-app-body").evaluate(node => getComputedStyle(node).display)).toBe("block");
+    > 67 |   expect(await page.evaluate(() => window.__batch02CspViolations!.filter(event => event.directive.startsWith("style-src")))).toEqual([]);
+         |                                                                                                                              ^
+      68 |   expect(errors).toEqual([]);
+      69 | });
+      70 |
+        at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-assets-csp.spec.ts:67:126
+
+    Error Context: test-results/upstream-batch02-assets-cs-8b131-its-no-style-CSP-violations-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/upstream-batch02-assets-cs-8b131-its-no-style-CSP-violations-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/upstream-batch02-assets-cs-8b131-its-no-style-CSP-violations-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+(node:49378) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[3/90] [chromium] › tests/e2e/upstream-batch02-assets-csp.spec.ts:71:38 › W727 respects author inline-style nonce authorization without restoring blocked CSS (nonce=true)
+  2) [chromium] › tests/e2e/upstream-batch02-assets-csp.spec.ts:71:38 › W727 respects author inline-style nonce authorization without restoring blocked CSS (nonce=true) 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  -  1
+    + Received  + 14
+
+    - Array []
+    + Array [
+    +   Object {
+    +     "blocked": "inline",
+    +     "directive": "style-src-elem",
+    +   },
+    +   Object {
+    +     "blocked": "inline",
+    +     "directive": "style-src-elem",
+    +   },
+    +   Object {
+    +     "blocked": "inline",
+    +     "directive": "style-src-elem",
+    +   },
+    + ]
+
+      87 |     await expect(probe).toHaveCSS("color","rgb(70, 90, 110)"); await expect(probe).toHaveCSS("width","37px");
+      88 |     expect(await token()).toBe("rgb(70, 90, 110)");
+    > 89 |     expect(await page.evaluate(() => window.__batch02CspViolations!.filter(event => event.directive.startsWith("style-src")))).toEqual([]);
+         |                                                                                                                                ^
+      90 |   } else {
+      91 |     await expect.poll(() => page.evaluate(() => window.__batch02CspViolations!.filter(event => event.directive.startsWith("style-src") && event.blocked === "inline").length)).toBeGreaterThan(0);
+      92 |     expect(await token()).toBe(""); await expect(probe).not.toHaveCSS("color","rgb(70, 90, 110)");
+        at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-assets-csp.spec.ts:89:128
+
+    Error Context: test-results/upstream-batch02-assets-cs-4e1ce-ing-blocked-CSS-nonce-true--chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/upstream-batch02-assets-cs-4e1ce-ing-blocked-CSS-nonce-true--chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/upstream-batch02-assets-cs-4e1ce-ing-blocked-CSS-nonce-true--chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+(node:49383) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[4/90] [chromium] › tests/e2e/upstream-batch02-assets-csp.spec.ts:71:38 › W727 respects author inline-style nonce authorization without restoring blocked CSS (nonce=false)
+(node:49390) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[5/90] [chromium] › tests/e2e/upstream-batch02-components-nested.spec.ts:9:1 › W697 SortableJS sorts a grandchild application's list using a real mouse drag
+[6/90] [chromium] › tests/e2e/upstream-batch02-components-nested.spec.ts:21:1 › Q1116 Monaco places the caret after parent and editor scrolling in a nested application
+(node:49548) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[7/90] [chromium] › tests/e2e/upstream-batch02-components-overlays.spec.ts:9:1 › W1106 Ant Design Vue default virtual Select scrolls by dragging its real scrollbar thumb
+[8/90] [chromium] › tests/e2e/upstream-batch02-components-overlays.spec.ts:40:1 › W300 Element Plus validates trusted mouse and focus events without cross-Realm Vue warnings
+[9/90] [chromium] › tests/e2e/upstream-batch02-components-overlays.spec.ts:61:3 › Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=true)
+  3) [chromium] › tests/e2e/upstream-batch02-components-overlays.spec.ts:61:3 › Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=true) 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+      Object {
+        "adjacentY": true,
+    -   "alignedX": true,
+    +   "alignedX": false,
+      }
+
+    Call Log:
+    - Timeout 5000ms exceeded while waiting on the predicate
+
+      75 |         adjacentY: Math.min(Math.abs(floating.y - (anchor.y + anchor.height)), Math.abs(floating.y + floating.height - anchor.y)) < 16,
+      76 |       };
+    > 77 |     }).toEqual({ alignedX: true, adjacentY: true });
+         |        ^
+      78 |     if (local) expect(await menu.evaluate((element) => Boolean(element.closest(".el-select")))).toBe(true);
+      79 |     await menu.getByText("South", { exact: true }).click();
+      80 |     await expect(page.locator(".batch02-vue2-drawer")).toHaveAttribute("data-selected", "South");
+        at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts:77:8
+
+    Error Context: test-results/upstream-batch02-component-e35c0-or-popperAppendToBody-true--chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/upstream-batch02-component-e35c0-or-popperAppendToBody-true--chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/upstream-batch02-component-e35c0-or-popperAppendToBody-true--chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+(node:49576) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[10/90] [chromium] › tests/e2e/upstream-batch02-components-overlays.spec.ts:61:3 › Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=false)
+  4) [chromium] › tests/e2e/upstream-batch02-components-overlays.spec.ts:61:3 › Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=false) 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator:  locator('.batch02-vue2-drawer')
+    Expected: "[]"
+    Received: "[\"Error in event handler for \\\"updatePopper\\\": \\\"TypeError: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'.\\\"\"]"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveAttribute" with timeout 5000ms
+      - waiting for locator('.batch02-vue2-drawer')
+        14 × locator resolved to <section data-ready="true" data-selected="South" class="batch02-vue2-drawer" data-warnings="["Error in event handler for \"updatePopper\": \"TypeError: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'.\""]">…</section>
+           - unexpected value "["Error in event handler for \"updatePopper\": \"TypeError: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'.\""]"
+
+
+      79 |     await menu.getByText("South", { exact: true }).click();
+      80 |     await expect(page.locator(".batch02-vue2-drawer")).toHaveAttribute("data-selected", "South");
+    > 81 |     await expect(page.locator(".batch02-vue2-drawer")).toHaveAttribute("data-warnings", "[]");
+         |                                                        ^
+      82 |   });
+      83 | }
+      84 |
+        at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts:81:56
+
+    Error Context: test-results/upstream-batch02-component-65456-r-popperAppendToBody-false--chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/upstream-batch02-component-65456-r-popperAppendToBody-false--chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/upstream-batch02-component-65456-r-popperAppendToBody-false--chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+(node:49585) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[11/90] [chromium] › tests/e2e/upstream-batch02-components-overlays.spec.ts:85:1 › W1104 the Vue 2 lifecycle adapter does not declare an implicit reserved style prop
+(node:49590) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[12/90] [chromium] › tests/e2e/upstream-batch02-components-webpack.spec.ts:6:1 › Q2298 a real Webpack React lazy chunk keeps a pre-existing global accessor writable
+(node:49595) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[13/90] [chromium] › tests/e2e/upstream-batch02-dom-libraries.spec.ts:19:1 › W262 DOMPurify 2.3.0 sanitizes parsed documents inside its native application Realm
+[14/90] [chromium] › tests/e2e/upstream-batch02-dom-libraries.spec.ts:38:1 › Q2137 eruda 2.4.1 initializes and destroys its dynamic styles in a nested application
+[15/90] [chromium] › tests/e2e/upstream-batch02-dom-libraries.spec.ts:62:39 › Q2141 Emotion 11 keeps generated CSS correct over A to B to A (keepAlive=true)
+[16/90] [chromium] › tests/e2e/upstream-batch02-dom-libraries.spec.ts:62:39 › Q2141 Emotion 11 keeps generated CSS correct over A to B to A (keepAlive=false)
+[17/90] [chromium] › tests/e2e/upstream-batch02-dom-libraries.spec.ts:85:1 › W1065 a root-relative target blank link opens the application origin in a native popup
+(node:49605) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[18/90] [chromium] › tests/e2e/upstream-batch02-jsplumb.spec.ts:6:1 › Q1174 jsPlumb 2.11.2 creates reconnects and drags real connectors in independent native Realms
+(node:49610) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[19/90] [chromium] › tests/e2e/upstream-batch02-runtime-clipboard.spec.ts:19:3 › W298 forwards clipboard.readText via controlled clipboard ports with real host focus and activation (allowed=false)
+[20/90] [chromium] › tests/e2e/upstream-batch02-runtime-clipboard.spec.ts:19:3 › W298 forwards clipboard.readText via controlled clipboard ports with real host focus and activation (allowed=true)
+(node:49672) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[21/90] [chromium] › tests/e2e/upstream-batch02-runtime-loading.spec.ts:37:3 › Q1990 retries the identical HTML entry after offline recovery and sends a fresh HTTP request
+[22/90] [chromium] › tests/e2e/upstream-batch02-runtime-loading.spec.ts:37:3 › Q1885 retries the identical HTML entry after server-stopped recovery and sends a fresh HTTP request
+[23/90] [chromium] › tests/e2e/upstream-batch02-runtime-loading.spec.ts:56:1 › Q2166 disposes a cached application and loads a new deployment and failed-chunk recovery at the identical entry URL
+[24/90] [chromium] › tests/e2e/upstream-batch02-runtime-loading.spec.ts:82:1 › W1028 reports a removed deployment chunk to the runtime error subscriber and permits explicit new-entry recovery
+(node:49680) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[25/90] [chromium] › tests/e2e/upstream-batch02-runtime-location.spec.ts:6:1 › Q1502 native window.location assignment navigates only the child and disposes after crossing origin
+[26/90] [chromium] › tests/e2e/upstream-batch02-runtime-location.spec.ts:41:1 › Q1502 native navigation during a pending module import aborts and releases the departing Realm
+  5) [chromium] › tests/e2e/upstream-batch02-runtime-location.spec.ts:41:1 › Q1502 native navigation during a pending module import aborts and releases the departing Realm 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+      Object {
+        "errors": Array [],
+        "remaining": 0,
+    -   "status": "disposed",
+    +   "status": "unmounted",
+      }
+
+      57 |     return { status: handle.getStatus(), remaining: state.slots[0]!.childElementCount, errors: state.errors };
+      58 |   });
+    > 59 |   expect(result).toEqual({ status: "disposed", remaining: 0, errors: [] });
+         |                  ^
+      60 |   expect(page.url()).toBe(hostURL);
+      61 |   expect(deployment.requests).toContain("/navigation-target.html");
+      62 | });
+        at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-location.spec.ts:59:18
+
+    Error Context: test-results/upstream-batch02-runtime-l-b11e3-eleases-the-departing-Realm-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/upstream-batch02-runtime-l-b11e3-eleases-the-departing-Realm-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/upstream-batch02-runtime-l-b11e3-eleases-the-departing-Realm-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+(node:49686) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[27/90] [chromium] › tests/e2e/upstream-batch02-runtime-routing.spec.ts:6:1 › Q1245 cold Vue Router hash-home to history-home to hash-about loads the first lazy route in its own Realm
+[chromium] › tests/e2e/upstream-batch02-runtime-routing.spec.ts:6:1 › Q1245 cold Vue Router hash-home to history-home to hash-about loads the first lazy route in its own Realm
+Q1245 history Realm {"location":"http://127.0.0.1:5173/home","documentURL":"http://127.0.0.1:5173/home","entryRealmSurvived":true}
+
+[28/90] [chromium] › tests/e2e/upstream-batch02-runtime-routing.spec.ts:55:1 › Q1245 Realm document initialization rejects a foreign origin and cancels a pending same-origin navigation
+(node:49692) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[29/90] [chromium] › tests/e2e/upstream-batch02-runtime-switching.spec.ts:7:3 › Q2346 rapid native tab switching leaves hidden Realms unable to intercept host or application clicks (keepAlive=false)
+[30/90] [chromium] › tests/e2e/upstream-batch02-runtime-switching.spec.ts:7:3 › Q2346 rapid native tab switching leaves hidden Realms unable to intercept host or application clicks (keepAlive=true)
+(node:49703) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[31/90] [firefox] › tests/e2e/upstream-batch02-assets-csp.spec.ts:17:1 › W779 loads four then five and six real Vue images and mixed backgrounds from the application origin
+[32/90] [firefox] › tests/e2e/upstream-batch02-assets-csp.spec.ts:46:1 › W727 mounts and styles an HTML application under style-src without unsafe-inline and emits no style CSP violations
+[33/90] [firefox] › tests/e2e/upstream-batch02-assets-csp.spec.ts:71:38 › W727 respects author inline-style nonce authorization without restoring blocked CSS (nonce=true)
+[34/90] [firefox] › tests/e2e/upstream-batch02-assets-csp.spec.ts:71:38 › W727 respects author inline-style nonce authorization without restoring blocked CSS (nonce=false)
+(node:49715) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[35/90] [firefox] › tests/e2e/upstream-batch02-components-nested.spec.ts:9:1 › W697 SortableJS sorts a grandchild application's list using a real mouse drag
+[36/90] [firefox] › tests/e2e/upstream-batch02-components-nested.spec.ts:21:1 › Q1116 Monaco places the caret after parent and editor scrolling in a nested application
+(node:49724) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[37/90] [firefox] › tests/e2e/upstream-batch02-components-overlays.spec.ts:9:1 › W1106 Ant Design Vue default virtual Select scrolls by dragging its real scrollbar thumb
+[38/90] [firefox] › tests/e2e/upstream-batch02-components-overlays.spec.ts:40:1 › W300 Element Plus validates trusted mouse and focus events without cross-Realm Vue warnings
+[39/90] [firefox] › tests/e2e/upstream-batch02-components-overlays.spec.ts:61:3 › Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=true)
+  6) [firefox] › tests/e2e/upstream-batch02-components-overlays.spec.ts:61:3 › Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=true) 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+      Object {
+        "adjacentY": true,
+    -   "alignedX": true,
+    +   "alignedX": false,
+      }
+
+    Call Log:
+    - Timeout 5000ms exceeded while waiting on the predicate
+
+      75 |         adjacentY: Math.min(Math.abs(floating.y - (anchor.y + anchor.height)), Math.abs(floating.y + floating.height - anchor.y)) < 16,
+      76 |       };
+    > 77 |     }).toEqual({ alignedX: true, adjacentY: true });
+         |        ^
+      78 |     if (local) expect(await menu.evaluate((element) => Boolean(element.closest(".el-select")))).toBe(true);
+      79 |     await menu.getByText("South", { exact: true }).click();
+      80 |     await expect(page.locator(".batch02-vue2-drawer")).toHaveAttribute("data-selected", "South");
+        at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts:77:8
+
+    Error Context: test-results/upstream-batch02-component-e35c0-or-popperAppendToBody-true--firefox/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/upstream-batch02-component-e35c0-or-popperAppendToBody-true--firefox/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/upstream-batch02-component-e35c0-or-popperAppendToBody-true--firefox/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+(node:49739) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[40/90] [firefox] › tests/e2e/upstream-batch02-components-overlays.spec.ts:61:3 › Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=false)
+  7) [firefox] › tests/e2e/upstream-batch02-components-overlays.spec.ts:61:3 › Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=false) 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator:  locator('.batch02-vue2-drawer')
+    Expected: "[]"
+    Received: "[\"Error in event handler for \\\"updatePopper\\\": \\\"TypeError: Window.getComputedStyle: Argument 1 does not implement interface Element.\\\"\"]"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveAttribute" with timeout 5000ms
+      - waiting for locator('.batch02-vue2-drawer')
+        14 × locator resolved to <section data-ready="true" data-selected="South" class="batch02-vue2-drawer" data-warnings="["Error in event handler for \"updatePopper\": \"TypeError: Window.getComputedStyle: Argument 1 does not implement interface Element.\""]">…</section>
+           - unexpected value "["Error in event handler for \"updatePopper\": \"TypeError: Window.getComputedStyle: Argument 1 does not implement interface Element.\""]"
+
+
+      79 |     await menu.getByText("South", { exact: true }).click();
+      80 |     await expect(page.locator(".batch02-vue2-drawer")).toHaveAttribute("data-selected", "South");
+    > 81 |     await expect(page.locator(".batch02-vue2-drawer")).toHaveAttribute("data-warnings", "[]");
+         |                                                        ^
+      82 |   });
+      83 | }
+      84 |
+        at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts:81:56
+
+    Error Context: test-results/upstream-batch02-component-65456-r-popperAppendToBody-false--firefox/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/upstream-batch02-component-65456-r-popperAppendToBody-false--firefox/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/upstream-batch02-component-65456-r-popperAppendToBody-false--firefox/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+(node:49750) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[41/90] [firefox] › tests/e2e/upstream-batch02-components-overlays.spec.ts:85:1 › W1104 the Vue 2 lifecycle adapter does not declare an implicit reserved style prop
+(node:49758) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[42/90] [firefox] › tests/e2e/upstream-batch02-components-webpack.spec.ts:6:1 › Q2298 a real Webpack React lazy chunk keeps a pre-existing global accessor writable
+(node:49766) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[43/90] [firefox] › tests/e2e/upstream-batch02-dom-libraries.spec.ts:19:1 › W262 DOMPurify 2.3.0 sanitizes parsed documents inside its native application Realm
+[44/90] [firefox] › tests/e2e/upstream-batch02-dom-libraries.spec.ts:38:1 › Q2137 eruda 2.4.1 initializes and destroys its dynamic styles in a nested application
+[45/90] [firefox] › tests/e2e/upstream-batch02-dom-libraries.spec.ts:62:39 › Q2141 Emotion 11 keeps generated CSS correct over A to B to A (keepAlive=true)
+[46/90] [firefox] › tests/e2e/upstream-batch02-dom-libraries.spec.ts:62:39 › Q2141 Emotion 11 keeps generated CSS correct over A to B to A (keepAlive=false)
+[47/90] [firefox] › tests/e2e/upstream-batch02-dom-libraries.spec.ts:85:1 › W1065 a root-relative target blank link opens the application origin in a native popup
+(node:49783) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[48/90] [firefox] › tests/e2e/upstream-batch02-jsplumb.spec.ts:6:1 › Q1174 jsPlumb 2.11.2 creates reconnects and drags real connectors in independent native Realms
+(node:49793) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[49/90] [firefox] › tests/e2e/upstream-batch02-runtime-clipboard.spec.ts:19:3 › W298 forwards clipboard.readText via controlled clipboard ports with real host focus and activation (allowed=false)
+[50/90] [firefox] › tests/e2e/upstream-batch02-runtime-clipboard.spec.ts:19:3 › W298 forwards clipboard.readText via controlled clipboard ports with real host focus and activation (allowed=true)
+(node:50015) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[51/90] [firefox] › tests/e2e/upstream-batch02-runtime-loading.spec.ts:37:3 › Q1990 retries the identical HTML entry after offline recovery and sends a fresh HTTP request
+[52/90] [firefox] › tests/e2e/upstream-batch02-runtime-loading.spec.ts:37:3 › Q1885 retries the identical HTML entry after server-stopped recovery and sends a fresh HTTP request
+[53/90] [firefox] › tests/e2e/upstream-batch02-runtime-loading.spec.ts:56:1 › Q2166 disposes a cached application and loads a new deployment and failed-chunk recovery at the identical entry URL
+[54/90] [firefox] › tests/e2e/upstream-batch02-runtime-loading.spec.ts:82:1 › W1028 reports a removed deployment chunk to the runtime error subscriber and permits explicit new-entry recovery
+(node:50026) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[55/90] [firefox] › tests/e2e/upstream-batch02-runtime-location.spec.ts:6:1 › Q1502 native window.location assignment navigates only the child and disposes after crossing origin
+[56/90] [firefox] › tests/e2e/upstream-batch02-runtime-location.spec.ts:41:1 › Q1502 native navigation during a pending module import aborts and releases the departing Realm
+  8) [firefox] › tests/e2e/upstream-batch02-runtime-location.spec.ts:41:1 › Q1502 native navigation during a pending module import aborts and releases the departing Realm 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+      Object {
+        "errors": Array [],
+        "remaining": 0,
+    -   "status": "disposed",
+    +   "status": "unmounted",
+      }
+
+      57 |     return { status: handle.getStatus(), remaining: state.slots[0]!.childElementCount, errors: state.errors };
+      58 |   });
+    > 59 |   expect(result).toEqual({ status: "disposed", remaining: 0, errors: [] });
+         |                  ^
+      60 |   expect(page.url()).toBe(hostURL);
+      61 |   expect(deployment.requests).toContain("/navigation-target.html");
+      62 | });
+        at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-location.spec.ts:59:18
+
+    Error Context: test-results/upstream-batch02-runtime-l-b11e3-eleases-the-departing-Realm-firefox/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/upstream-batch02-runtime-l-b11e3-eleases-the-departing-Realm-firefox/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/upstream-batch02-runtime-l-b11e3-eleases-the-departing-Realm-firefox/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+(node:50035) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[57/90] [firefox] › tests/e2e/upstream-batch02-runtime-routing.spec.ts:6:1 › Q1245 cold Vue Router hash-home to history-home to hash-about loads the first lazy route in its own Realm
+[firefox] › tests/e2e/upstream-batch02-runtime-routing.spec.ts:6:1 › Q1245 cold Vue Router hash-home to history-home to hash-about loads the first lazy route in its own Realm
+Q1245 history Realm {"location":"http://127.0.0.1:5173/home","documentURL":"http://127.0.0.1:5173/home","entryRealmSurvived":true}
+
+[58/90] [firefox] › tests/e2e/upstream-batch02-runtime-routing.spec.ts:55:1 › Q1245 Realm document initialization rejects a foreign origin and cancels a pending same-origin navigation
+(node:50044) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[59/90] [firefox] › tests/e2e/upstream-batch02-runtime-switching.spec.ts:7:3 › Q2346 rapid native tab switching leaves hidden Realms unable to intercept host or application clicks (keepAlive=false)
+[60/90] [firefox] › tests/e2e/upstream-batch02-runtime-switching.spec.ts:7:3 › Q2346 rapid native tab switching leaves hidden Realms unable to intercept host or application clicks (keepAlive=true)
+(node:50058) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[61/90] [webkit] › tests/e2e/upstream-batch02-assets-csp.spec.ts:17:1 › W779 loads four then five and six real Vue images and mixed backgrounds from the application origin
+[62/90] [webkit] › tests/e2e/upstream-batch02-assets-csp.spec.ts:46:1 › W727 mounts and styles an HTML application under style-src without unsafe-inline and emits no style CSP violations
+[63/90] [webkit] › tests/e2e/upstream-batch02-assets-csp.spec.ts:71:38 › W727 respects author inline-style nonce authorization without restoring blocked CSS (nonce=true)
+[64/90] [webkit] › tests/e2e/upstream-batch02-assets-csp.spec.ts:71:38 › W727 respects author inline-style nonce authorization without restoring blocked CSS (nonce=false)
+(node:50084) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[65/90] [webkit] › tests/e2e/upstream-batch02-components-nested.spec.ts:9:1 › W697 SortableJS sorts a grandchild application's list using a real mouse drag
+[66/90] [webkit] › tests/e2e/upstream-batch02-components-nested.spec.ts:21:1 › Q1116 Monaco places the caret after parent and editor scrolling in a nested application
+(node:50103) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[67/90] [webkit] › tests/e2e/upstream-batch02-components-overlays.spec.ts:9:1 › W1106 Ant Design Vue default virtual Select scrolls by dragging its real scrollbar thumb
+[68/90] [webkit] › tests/e2e/upstream-batch02-components-overlays.spec.ts:40:1 › W300 Element Plus validates trusted mouse and focus events without cross-Realm Vue warnings
+[69/90] [webkit] › tests/e2e/upstream-batch02-components-overlays.spec.ts:61:3 › Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=true)
+  9) [webkit] › tests/e2e/upstream-batch02-components-overlays.spec.ts:61:3 › Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=true) 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+      Object {
+        "adjacentY": true,
+    -   "alignedX": true,
+    +   "alignedX": false,
+      }
+
+    Call Log:
+    - Timeout 5000ms exceeded while waiting on the predicate
+
+      75 |         adjacentY: Math.min(Math.abs(floating.y - (anchor.y + anchor.height)), Math.abs(floating.y + floating.height - anchor.y)) < 16,
+      76 |       };
+    > 77 |     }).toEqual({ alignedX: true, adjacentY: true });
+         |        ^
+      78 |     if (local) expect(await menu.evaluate((element) => Boolean(element.closest(".el-select")))).toBe(true);
+      79 |     await menu.getByText("South", { exact: true }).click();
+      80 |     await expect(page.locator(".batch02-vue2-drawer")).toHaveAttribute("data-selected", "South");
+        at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts:77:8
+
+    Error Context: test-results/upstream-batch02-component-e35c0-or-popperAppendToBody-true--webkit/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/upstream-batch02-component-e35c0-or-popperAppendToBody-true--webkit/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/upstream-batch02-component-e35c0-or-popperAppendToBody-true--webkit/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+(node:50124) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[70/90] [webkit] › tests/e2e/upstream-batch02-components-overlays.spec.ts:61:3 › Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=false)
+  10) [webkit] › tests/e2e/upstream-batch02-components-overlays.spec.ts:61:3 › Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=false) 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator:  locator('.batch02-vue2-drawer')
+    Expected: "[]"
+    Received: "[\"Error in event handler for \\\"updatePopper\\\": \\\"TypeError: Argument 1 ('element') to Window.getComputedStyle must be an instance of Element\\\"\"]"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveAttribute" with timeout 5000ms
+      - waiting for locator('.batch02-vue2-drawer')
+        14 × locator resolved to <section data-ready="true" data-selected="South" class="batch02-vue2-drawer" data-warnings="["Error in event handler for \"updatePopper\": \"TypeError: Argument 1 ('element') to Window.getComputedStyle must be an instance of Element\""]">…</section>
+           - unexpected value "["Error in event handler for \"updatePopper\": \"TypeError: Argument 1 ('element') to Window.getComputedStyle must be an instance of Element\""]"
+
+
+      79 |     await menu.getByText("South", { exact: true }).click();
+      80 |     await expect(page.locator(".batch02-vue2-drawer")).toHaveAttribute("data-selected", "South");
+    > 81 |     await expect(page.locator(".batch02-vue2-drawer")).toHaveAttribute("data-warnings", "[]");
+         |                                                        ^
+      82 |   });
+      83 | }
+      84 |
+        at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts:81:56
+
+    Error Context: test-results/upstream-batch02-component-65456-r-popperAppendToBody-false--webkit/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/upstream-batch02-component-65456-r-popperAppendToBody-false--webkit/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/upstream-batch02-component-65456-r-popperAppendToBody-false--webkit/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+(node:50152) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[71/90] [webkit] › tests/e2e/upstream-batch02-components-overlays.spec.ts:85:1 › W1104 the Vue 2 lifecycle adapter does not declare an implicit reserved style prop
+(node:50165) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[72/90] [webkit] › tests/e2e/upstream-batch02-components-webpack.spec.ts:6:1 › Q2298 a real Webpack React lazy chunk keeps a pre-existing global accessor writable
+(node:50179) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[73/90] [webkit] › tests/e2e/upstream-batch02-dom-libraries.spec.ts:19:1 › W262 DOMPurify 2.3.0 sanitizes parsed documents inside its native application Realm
+[74/90] [webkit] › tests/e2e/upstream-batch02-dom-libraries.spec.ts:38:1 › Q2137 eruda 2.4.1 initializes and destroys its dynamic styles in a nested application
+[75/90] [webkit] › tests/e2e/upstream-batch02-dom-libraries.spec.ts:62:39 › Q2141 Emotion 11 keeps generated CSS correct over A to B to A (keepAlive=true)
+[76/90] [webkit] › tests/e2e/upstream-batch02-dom-libraries.spec.ts:62:39 › Q2141 Emotion 11 keeps generated CSS correct over A to B to A (keepAlive=false)
+[77/90] [webkit] › tests/e2e/upstream-batch02-dom-libraries.spec.ts:85:1 › W1065 a root-relative target blank link opens the application origin in a native popup
+(node:50212) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[78/90] [webkit] › tests/e2e/upstream-batch02-jsplumb.spec.ts:6:1 › Q1174 jsPlumb 2.11.2 creates reconnects and drags real connectors in independent native Realms
+(node:50224) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[79/90] [webkit] › tests/e2e/upstream-batch02-runtime-clipboard.spec.ts:19:3 › W298 forwards clipboard.readText via controlled clipboard ports with real host focus and activation (allowed=false)
+[80/90] [webkit] › tests/e2e/upstream-batch02-runtime-clipboard.spec.ts:19:3 › W298 forwards clipboard.readText via controlled clipboard ports with real host focus and activation (allowed=true)
+(node:50245) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[81/90] [webkit] › tests/e2e/upstream-batch02-runtime-loading.spec.ts:37:3 › Q1990 retries the identical HTML entry after offline recovery and sends a fresh HTTP request
+[82/90] [webkit] › tests/e2e/upstream-batch02-runtime-loading.spec.ts:37:3 › Q1885 retries the identical HTML entry after server-stopped recovery and sends a fresh HTTP request
+[83/90] [webkit] › tests/e2e/upstream-batch02-runtime-loading.spec.ts:56:1 › Q2166 disposes a cached application and loads a new deployment and failed-chunk recovery at the identical entry URL
+[84/90] [webkit] › tests/e2e/upstream-batch02-runtime-loading.spec.ts:82:1 › W1028 reports a removed deployment chunk to the runtime error subscriber and permits explicit new-entry recovery
+(node:50349) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[85/90] [webkit] › tests/e2e/upstream-batch02-runtime-location.spec.ts:6:1 › Q1502 native window.location assignment navigates only the child and disposes after crossing origin
+[86/90] [webkit] › tests/e2e/upstream-batch02-runtime-location.spec.ts:41:1 › Q1502 native navigation during a pending module import aborts and releases the departing Realm
+  11) [webkit] › tests/e2e/upstream-batch02-runtime-location.spec.ts:41:1 › Q1502 native navigation during a pending module import aborts and releases the departing Realm 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+      Object {
+        "errors": Array [],
+        "remaining": 0,
+    -   "status": "disposed",
+    +   "status": "unmounted",
+      }
+
+      57 |     return { status: handle.getStatus(), remaining: state.slots[0]!.childElementCount, errors: state.errors };
+      58 |   });
+    > 59 |   expect(result).toEqual({ status: "disposed", remaining: 0, errors: [] });
+         |                  ^
+      60 |   expect(page.url()).toBe(hostURL);
+      61 |   expect(deployment.requests).toContain("/navigation-target.html");
+      62 | });
+        at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-location.spec.ts:59:18
+
+    Error Context: test-results/upstream-batch02-runtime-l-b11e3-eleases-the-departing-Realm-webkit/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/upstream-batch02-runtime-l-b11e3-eleases-the-departing-Realm-webkit/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/upstream-batch02-runtime-l-b11e3-eleases-the-departing-Realm-webkit/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+(node:50363) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[87/90] [webkit] › tests/e2e/upstream-batch02-runtime-routing.spec.ts:6:1 › Q1245 cold Vue Router hash-home to history-home to hash-about loads the first lazy route in its own Realm
+[webkit] › tests/e2e/upstream-batch02-runtime-routing.spec.ts:6:1 › Q1245 cold Vue Router hash-home to history-home to hash-about loads the first lazy route in its own Realm
+Q1245 history Realm {"location":"http://127.0.0.1:5173/home","documentURL":"http://127.0.0.1:5173/home","entryRealmSurvived":true}
+
+[88/90] [webkit] › tests/e2e/upstream-batch02-runtime-routing.spec.ts:55:1 › Q1245 Realm document initialization rejects a foreign origin and cancels a pending same-origin navigation
+(node:50377) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[89/90] [webkit] › tests/e2e/upstream-batch02-runtime-switching.spec.ts:7:3 › Q2346 rapid native tab switching leaves hidden Realms unable to intercept host or application clicks (keepAlive=false)
+[90/90] [webkit] › tests/e2e/upstream-batch02-runtime-switching.spec.ts:7:3 › Q2346 rapid native tab switching leaves hidden Realms unable to intercept host or application clicks (keepAlive=true)
+  11 failed
+    [chromium] › tests/e2e/upstream-batch02-assets-csp.spec.ts:46:1 › W727 mounts and styles an HTML application under style-src without unsafe-inline and emits no style CSP violations 
+    [chromium] › tests/e2e/upstream-batch02-assets-csp.spec.ts:71:38 › W727 respects author inline-style nonce authorization without restoring blocked CSS (nonce=true) 
+    [chromium] › tests/e2e/upstream-batch02-components-overlays.spec.ts:61:3 › Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=true) 
+    [chromium] › tests/e2e/upstream-batch02-components-overlays.spec.ts:61:3 › Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=false) 
+    [chromium] › tests/e2e/upstream-batch02-runtime-location.spec.ts:41:1 › Q1502 native navigation during a pending module import aborts and releases the departing Realm 
+    [firefox] › tests/e2e/upstream-batch02-components-overlays.spec.ts:61:3 › Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=true) 
+    [firefox] › tests/e2e/upstream-batch02-components-overlays.spec.ts:61:3 › Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=false) 
+    [firefox] › tests/e2e/upstream-batch02-runtime-location.spec.ts:41:1 › Q1502 native navigation during a pending module import aborts and releases the departing Realm 
+    [webkit] › tests/e2e/upstream-batch02-components-overlays.spec.ts:61:3 › Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=true) 
+    [webkit] › tests/e2e/upstream-batch02-components-overlays.spec.ts:61:3 › Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=false) 
+    [webkit] › tests/e2e/upstream-batch02-runtime-location.spec.ts:41:1 › Q1502 native navigation during a pending module import aborts and releases the departing Realm 
+  79 passed (2.0m)

@@ -1,0 +1,14 @@
+{
+  "name": "typecheck-final",
+  "command": [
+    "bun",
+    "run",
+    "typecheck"
+  ],
+  "cwd": "/Users/fanfangbo/workspace/micro-framework",
+  "startedAt": "2026-09-08T10:55:06.751380+00:00",
+  "completedAt": "2026-09-08T10:55:22.288033+00:00",
+  "durationSeconds": 15.536510625,
+  "exitCode": 0,
+  "log": "tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/typecheck-final.log"
+}

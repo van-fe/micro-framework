@@ -1,0 +1,25 @@
+{
+  "os": "26.6.2",
+  "osBuild": "25G83",
+  "architecture": "arm64",
+  "node": "24.19.0",
+  "bun": "1.4.0",
+  "playwright": "1.62.1",
+  "vitest": "4.1.11",
+  "vite": "8.2.2",
+  "browserBuildsFromInstalledPlaywrightManifest": {
+    "chromium": {
+      "revision": "1234",
+      "version": "151.0.7922.34"
+    },
+    "firefox": {
+      "revision": "1538",
+      "version": "153.0"
+    },
+    "webkit": {
+      "revision": "2336",
+      "version": "26.5"
+    }
+  },
+  "realSafari": "not-run-this-batch"
+}

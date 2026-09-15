@@ -1,0 +1,28 @@
+{
+  "completedAt": "2026-09-09T04:00:43.812671+00:00",
+  "commands": [
+    {
+      "argv": [
+        "bun",
+        "scripts/upstream-issues.mjs",
+        "check"
+      ],
+      "exitCode": 0,
+      "toolChunk": "7d9801",
+      "output": "Valid catalog: 140 unique issues."
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-upstream-issues.mjs"
+      ],
+      "exitCode": 0,
+      "toolChunk": "fe8bc2",
+      "result": "New-only, mixed case-insensitive duplicate/new, duplicate-only byte/mtime/inode preservation, invalid mixed atomic rejection, input duplicate rejection all PASS; original bytes/mtime unchanged."
+    }
+  ],
+  "old120IssuesAnd6SourcesUnchanged": true,
+  "finalSourceAndAssetHashesMatch": true,
+  "uniqueIdentities": 140,
+  "catalogSha256": "c58f276212509bdd994a9a52ed1f9fcc6e18ec9271eb24e87f67d1ade197cd66"
+}

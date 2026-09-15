@@ -1,0 +1,827 @@
+
+Running 312 tests using 1 worker
+
+(node:60947) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/312] [chromium] › tests/e2e/cancellation-boundaries.spec.ts:6:3 › bounds pending hook work and completes cleanup
+[2/312] [chromium] › tests/e2e/cancellation-boundaries.spec.ts:6:3 › bounds pending html work and completes cleanup
+[3/312] [chromium] › tests/e2e/cancellation-boundaries.spec.ts:6:3 › bounds pending manifest work and completes cleanup
+[4/312] [chromium] › tests/e2e/cancellation-boundaries.spec.ts:6:3 › bounds pending script work and completes cleanup
+[5/312] [chromium] › tests/e2e/cancellation-boundaries.spec.ts:6:3 › bounds pending resource work and completes cleanup
+[6/312] [chromium] › tests/e2e/cancellation-boundaries.spec.ts:43:1 › destroy aborts HTML fetch even with load timeout disabled
+(node:60974) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[7/312] [chromium] › tests/e2e/compatibility.spec.ts:5:1 › uses the familiar registration API without changing the isolation model
+(node:60997) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[8/312] [chromium] › tests/e2e/component-matrix.spec.ts:25:1 › runs heavy editors, maps, Workers, WebGL, and multilingual input in one isolated Realm
+[chromium] › tests/e2e/component-matrix.spec.ts:25:1 › runs heavy editors, maps, Workers, WebGL, and multilingual input in one isolated Realm
+[browser:warning] [.WebGL-0x134004f9a00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+
+[browser:warning] [.WebGL-0x1340b950c00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+
+[browser:warning] [.WebGL-0x1340b950c00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+
+[browser:warning] [.WebGL-0x134004f9a00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)
+
+(node:61002) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[9/312] [chromium] › tests/e2e/cross-tab.spec.ts:70:1 › namespaces BroadcastChannel by application while allowing same-app cross-tab traffic
+(node:61008) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[10/312] [chromium] › tests/e2e/isolation.spec.ts:16:1 › executes the application in an isolated iframe Realm and renders into Shadow DOM
+[11/312] [chromium] › tests/e2e/isolation.spec.ts:191:1 › supports document.write in every adapter while retaining application and host isolation
+[12/312] [chromium] › tests/e2e/isolation.spec.ts:240:1 › keeps the React chart endpoint circular in a stretched plot
+[13/312] [chromium] › tests/e2e/isolation.spec.ts:262:1 › covers the host viewport by default while keeping overlay DOM application-owned
+[14/312] [chromium] › tests/e2e/isolation.spec.ts:364:1 › keeps component-library tooltips and menus local, interactive, and disposable
+[15/312] [chromium] › tests/e2e/isolation.spec.ts:496:1 › bridges component-library motion and restores host interaction after close
+[16/312] [chromium] › tests/e2e/isolation.spec.ts:742:1 › keeps viewport alignment stable during Vue 2 dialog enter motion
+[17/312] [chromium] › tests/e2e/isolation.spec.ts:774:1 › schedules animation work through the visible host Window
+[18/312] [chromium] › tests/e2e/isolation.spec.ts:794:1 › coordinates business filters while each micro application keeps local interaction state
+[19/312] [chromium] › tests/e2e/isolation.spec.ts:848:1 › gives two instances of the same module independent globals and module state
+[20/312] [chromium] › tests/e2e/isolation.spec.ts:901:1 › persists application storage across Realm destruction and controller replacement
+[21/312] [chromium] › tests/e2e/isolation.spec.ts:927:1 › installs the default same-origin resource namespace inside each Runtime Realm
+[22/312] [chromium] › tests/e2e/isolation.spec.ts:970:1 › updates every adapter and explicitly remounts an application handle
+[23/312] [chromium] › tests/e2e/isolation.spec.ts:1006:1 › leaves no manual Realm or surface after repeated create and destroy cycles
+[24/312] [chromium] › tests/e2e/isolation.spec.ts:1042:1 › keeps inactive Realms warm and evicts the least-recently-used cache entry
+[25/312] [chromium] › tests/e2e/isolation.spec.ts:1119:1 › prewarms inactive Realms off the critical path and reuses the pooled instance
+[26/312] [chromium] › tests/e2e/isolation.spec.ts:1186:1 › prewarms a manual application and mounts through the returned handle
+[27/312] [chromium] › tests/e2e/isolation.spec.ts:1249:1 › rolls back to an ordered fallback Entry and cleans the failed Realm
+[chromium] › tests/e2e/isolation.spec.ts:1249:1 › rolls back to an ordered fallback Entry and cleans the failed Realm
+[browser:error] Failed to load resource: the server responded with a status of 404 (Not Found)
+
+[browser:error] ApplicationEntryAttemptError: Application fallback-contract entry attempt 1 failed: http://127.0.0.1:5174/missing-primary-entry.js
+    at #k (http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:390:13)
+    at async #C (http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:191:28)
+    at async S.mount (http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:184:4)
+    at async L.mountApp (http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js:991:11)
+    at async eval (eval at evaluate (:311:30), <anonymous>:7:20)
+    at async <anonymous>:337:30
+
+[28/312] [chromium] › tests/e2e/isolation.spec.ts:1299:1 › cancels a stale mount during a rapid route change
+[29/312] [chromium] › tests/e2e/isolation.spec.ts:1337:1 › destroys the iframe Realm and Shadow surface
+(node:61088) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[30/312] [chromium] › tests/e2e/lifecycle-failures.spec.ts:19:3 › cleans every application after a throwing unmount hook (keepAlive=false)
+[31/312] [chromium] › tests/e2e/lifecycle-failures.spec.ts:19:3 › cleans every application after a throwing unmount hook (keepAlive=true)
+[32/312] [chromium] › tests/e2e/lifecycle-failures.spec.ts:61:3 › cancels pending props during destruction (prewarm=false, crossOrigin=false)
+[33/312] [chromium] › tests/e2e/lifecycle-failures.spec.ts:61:3 › cancels pending props during destruction (prewarm=true, crossOrigin=false)
+[34/312] [chromium] › tests/e2e/lifecycle-failures.spec.ts:61:3 › cancels pending props during destruction (prewarm=false, crossOrigin=true)
+[35/312] [chromium] › tests/e2e/lifecycle-failures.spec.ts:61:3 › cancels pending props during destruction (prewarm=true, crossOrigin=true)
+[36/312] [chromium] › tests/e2e/lifecycle-failures.spec.ts:87:1 › times out a props supplier and removes its surface
+[37/312] [chromium] › tests/e2e/lifecycle-failures.spec.ts:107:3 › reports failed updates and permits a clean remount (throw)
+[38/312] [chromium] › tests/e2e/lifecycle-failures.spec.ts:107:3 › reports failed updates and permits a clean remount (timeout)
+[39/312] [chromium] › tests/e2e/lifecycle-failures.spec.ts:142:1 › finishes destruction while an update is pending
+(node:61102) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[40/312] [chromium] › tests/e2e/realm-errors.spec.ts:5:1 › forwards asynchronous Realm errors with instance attribution and stops on disposal
+[41/312] [chromium] › tests/e2e/realm-errors.spec.ts:34:1 › forwards asynchronous cross-origin guest errors through its private channel
+(node:61108) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[42/312] [chromium] › tests/e2e/strong-isolation.spec.ts:16:1 › runs a structured lifecycle inside a visible cross-origin sandbox iframe
+(node:61113) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[43/312] [chromium] › tests/e2e/upstream-batch02-assets-csp.spec.ts:17:1 › W779 loads four then five and six real Vue images and mixed backgrounds from the application origin
+[44/312] [chromium] › tests/e2e/upstream-batch02-assets-csp.spec.ts:46:1 › W727 mounts and styles an HTML application under style-src without unsafe-inline and emits no style CSP violations
+[45/312] [chromium] › tests/e2e/upstream-batch02-assets-csp.spec.ts:71:38 › W727 respects author inline-style nonce authorization without restoring blocked CSS (nonce=true)
+[46/312] [chromium] › tests/e2e/upstream-batch02-assets-csp.spec.ts:71:38 › W727 respects author inline-style nonce authorization without restoring blocked CSS (nonce=false)
+(node:61121) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[47/312] [chromium] › tests/e2e/upstream-batch02-components-nested.spec.ts:9:1 › W697 SortableJS sorts a grandchild application's list using a real mouse drag
+[48/312] [chromium] › tests/e2e/upstream-batch02-components-nested.spec.ts:21:1 › Q1116 Monaco places the caret after parent and editor scrolling in a nested application
+(node:61129) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[49/312] [chromium] › tests/e2e/upstream-batch02-components-overlays.spec.ts:9:1 › W1106 Ant Design Vue default virtual Select scrolls by dragging its real scrollbar thumb
+[50/312] [chromium] › tests/e2e/upstream-batch02-components-overlays.spec.ts:40:1 › W300 Element Plus validates trusted mouse and focus events without cross-Realm Vue warnings
+[51/312] [chromium] › tests/e2e/upstream-batch02-components-overlays.spec.ts:61:3 › Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=true)
+[52/312] [chromium] › tests/e2e/upstream-batch02-components-overlays.spec.ts:61:3 › Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=false)
+[53/312] [chromium] › tests/e2e/upstream-batch02-components-overlays.spec.ts:85:1 › W1104 the Vue 2 lifecycle adapter does not declare an implicit reserved style prop
+(node:61147) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[54/312] [chromium] › tests/e2e/upstream-batch02-components-webpack.spec.ts:6:1 › Q2298 a real Webpack React lazy chunk keeps a pre-existing global accessor writable
+(node:61161) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[55/312] [chromium] › tests/e2e/upstream-batch02-dom-libraries.spec.ts:19:1 › W262 DOMPurify 2.3.0 sanitizes parsed documents inside its native application Realm
+[56/312] [chromium] › tests/e2e/upstream-batch02-dom-libraries.spec.ts:38:1 › Q2137 eruda 2.4.1 initializes and destroys its dynamic styles in a nested application
+[57/312] [chromium] › tests/e2e/upstream-batch02-dom-libraries.spec.ts:73:39 › Q2141 Emotion 11 keeps generated CSS correct over A to B to A (keepAlive=true)
+[58/312] [chromium] › tests/e2e/upstream-batch02-dom-libraries.spec.ts:73:39 › Q2141 Emotion 11 keeps generated CSS correct over A to B to A (keepAlive=false)
+[59/312] [chromium] › tests/e2e/upstream-batch02-dom-libraries.spec.ts:96:1 › W1065 a root-relative target blank link opens the application origin in a native popup
+(node:61174) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[60/312] [chromium] › tests/e2e/upstream-batch02-jsplumb.spec.ts:6:1 › Q1174 jsPlumb 2.11.2 creates reconnects and drags real connectors in independent native Realms
+(node:61179) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[61/312] [chromium] › tests/e2e/upstream-batch02-runtime-clipboard.spec.ts:19:3 › W298 forwards clipboard.readText via controlled clipboard ports with real host focus and activation (allowed=false)
+[62/312] [chromium] › tests/e2e/upstream-batch02-runtime-clipboard.spec.ts:19:3 › W298 forwards clipboard.readText via controlled clipboard ports with real host focus and activation (allowed=true)
+(node:61206) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[63/312] [chromium] › tests/e2e/upstream-batch02-runtime-loading.spec.ts:37:3 › Q1990 retries the identical HTML entry after offline recovery and sends a fresh HTTP request
+[64/312] [chromium] › tests/e2e/upstream-batch02-runtime-loading.spec.ts:37:3 › Q1885 retries the identical HTML entry after server-stopped recovery and sends a fresh HTTP request
+[65/312] [chromium] › tests/e2e/upstream-batch02-runtime-loading.spec.ts:56:1 › Q2166 disposes a cached application and loads a new deployment and failed-chunk recovery at the identical entry URL
+[66/312] [chromium] › tests/e2e/upstream-batch02-runtime-loading.spec.ts:82:1 › W1028 reports a removed deployment chunk to the runtime error subscriber and permits explicit new-entry recovery
+(node:61214) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[67/312] [chromium] › tests/e2e/upstream-batch02-runtime-location.spec.ts:6:1 › Q1502 native window.location assignment navigates only the child and disposes after crossing origin
+[68/312] [chromium] › tests/e2e/upstream-batch02-runtime-location.spec.ts:41:1 › Q1502 native navigation during a pending module import leaves an unmounted handle that can be explicitly disposed
+(node:61220) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[69/312] [chromium] › tests/e2e/upstream-batch02-runtime-routing.spec.ts:6:1 › Q1245 cold Vue Router hash-home to history-home to hash-about loads the first lazy route in its own Realm
+[chromium] › tests/e2e/upstream-batch02-runtime-routing.spec.ts:6:1 › Q1245 cold Vue Router hash-home to history-home to hash-about loads the first lazy route in its own Realm
+Q1245 history Realm {"location":"http://127.0.0.1:5173/home","documentURL":"http://127.0.0.1:5173/home","entryRealmSurvived":true}
+
+[70/312] [chromium] › tests/e2e/upstream-batch02-runtime-routing.spec.ts:55:1 › Q1245 Realm document initialization rejects a foreign origin and cancels a pending same-origin navigation
+(node:61226) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[71/312] [chromium] › tests/e2e/upstream-batch02-runtime-switching.spec.ts:7:3 › Q2346 rapid native tab switching leaves hidden Realms unable to intercept host or application clicks (keepAlive=false)
+[72/312] [chromium] › tests/e2e/upstream-batch02-runtime-switching.spec.ts:7:3 › Q2346 rapid native tab switching leaves hidden Realms unable to intercept host or application clicks (keepAlive=true)
+(node:61232) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[73/312] [chromium] › tests/e2e/upstream-components-diagrams.spec.ts:13:1 › W67 X6 Dnd follows the pointer in an offset scrolled and scaled host
+[74/312] [chromium] › tests/e2e/upstream-components-diagrams.spec.ts:47:1 › W832 Vue2 host and child insert bpmn-js flow nodes in the visible ShadowRoot
+[75/312] [chromium] › tests/e2e/upstream-components-diagrams.spec.ts:66:1 › W288 Monaco places a caret by mouse in existing middle code before inserting text
+(node:61239) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[76/312] [chromium] › tests/e2e/upstream-components-overlays.spec.ts:14:3 › W830 Naive UI select uses current trigger geometry after A-B-A switching (keepAlive=false)
+[77/312] [chromium] › tests/e2e/upstream-components-overlays.spec.ts:14:3 › W830 Naive UI select uses current trigger geometry after A-B-A switching (keepAlive=true)
+[78/312] [chromium] › tests/e2e/upstream-components-overlays.spec.ts:48:1 › W829 Recharts hits the lower chart area after the host page scrolls
+[79/312] [chromium] › tests/e2e/upstream-components-overlays.spec.ts:70:1 › W896 Element Plus draggable dialog reaches the host viewport right and bottom boundaries
+(node:61319) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[80/312] [chromium] › tests/e2e/upstream-lifecycle-regressions.spec.ts:73:1 › W116 retains CSSOM-inserted rules when the same keepAlive surface is reactivated
+[81/312] [chromium] › tests/e2e/upstream-lifecycle-regressions.spec.ts:134:1 › W823 remounts a React application twice with working event handlers and one surface
+[82/312] [chromium] › tests/e2e/upstream-lifecycle-regressions.spec.ts:167:1 › Q2368 assigns fresh identities when a middle same-app tab is replaced at the same DOM position
+[83/312] [chromium] › tests/e2e/upstream-lifecycle-regressions.spec.ts:224:1 › Q578 keeps host styles inserted after application unmount in the host document
+(node:61328) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[84/312] [chromium] › tests/e2e/upstream-runtime-eviction.spec.ts:15:3 › Q1089 completes keepAlive eviction without waiting on its own unmount (maxInstances=0, remount=false)
+[85/312] [chromium] › tests/e2e/upstream-runtime-eviction.spec.ts:15:3 › Q1089 completes keepAlive eviction without waiting on its own unmount (maxInstances=0, remount=true)
+[86/312] [chromium] › tests/e2e/upstream-runtime-eviction.spec.ts:83:1 › Q1089 rejects a reentrant mount during keepAlive disposal and completes lifecycle cleanup once
+(node:61335) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[87/312] [chromium] › tests/e2e/upstream-runtime-navigation.spec.ts:9:1 › W12 applies a real Vite WebSocket CSS HMR update to root variables without replacing the Realm
+[88/312] [chromium] › tests/e2e/upstream-runtime-navigation.spec.ts:85:1 › W107 keeps empty and fragment anchor clicks inside the application without navigating the host
+  1) [chromium] › tests/e2e/upstream-runtime-navigation.spec.ts:85:1 › W107 keeps empty and fragment anchor clicks inside the application without navigating the host 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+      Object {
+        "emptyHref": "",
+    -   "frameProtocol": "about:",
+    +   "frameProtocol": "http:",
+        "sameFrame": true,
+        "sameHost": true,
+        "status": "mounted",
+      }
+
+      158 |       emptyHref: state.originalHost!.shadowRoot!.querySelector("a")!.getAttribute("href"),
+      159 |     };
+    > 160 |   })).toEqual({ status: "mounted", sameFrame: true, sameHost: true, frameProtocol: "about:", emptyHref: "" });
+          |       ^
+      161 |   expect(documentNavigations).toEqual([]);
+      162 | });
+      163 |
+        at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-runtime-navigation.spec.ts:160:7
+
+    Error Context: test-results/upstream-runtime-navigatio-54c88-without-navigating-the-host-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/upstream-runtime-navigatio-54c88-without-navigating-the-host-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/upstream-runtime-navigatio-54c88-without-navigating-the-host-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+(node:61343) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[89/312] [chromium] › tests/e2e/upstream-runtime-races.spec.ts:9:3 › Q1089 serializes remount behind an unfinished unmount (keepAlive=false)
+[90/312] [chromium] › tests/e2e/upstream-runtime-races.spec.ts:9:3 › Q1089 serializes remount behind an unfinished unmount (keepAlive=true)
+[91/312] [chromium] › tests/e2e/upstream-runtime-races.spec.ts:63:1 › Q1089 cancels an unfinished first mount before honoring the newest mount request
+[92/312] [chromium] › tests/e2e/upstream-runtime-races.spec.ts:101:1 › Q1089 lets a newer unmount supersede a mount waiting behind asynchronous teardown
+[93/312] [chromium] › tests/e2e/upstream-runtime-races.spec.ts:133:1 › Q1089 serializes a reentrant mount requested by an unmounting lifecycle listener
+[94/312] [chromium] › tests/e2e/upstream-runtime-races.spec.ts:171:3 › W823 awaits asynchronous React beforeUnmount before remounting with working events (keepAlive=false)
+[95/312] [chromium] › tests/e2e/upstream-runtime-races.spec.ts:171:3 › W823 awaits asynchronous React unmount before remounting with working events (keepAlive=false)
+[96/312] [chromium] › tests/e2e/upstream-runtime-races.spec.ts:171:3 › W823 awaits asynchronous React beforeUnmount before reactivating with working events (keepAlive=true)
+[97/312] [chromium] › tests/e2e/upstream-runtime-races.spec.ts:171:3 › W823 awaits asynchronous React deactivate before reactivating with working events (keepAlive=true)
+[98/312] [chromium] › tests/e2e/upstream-runtime-races.spec.ts:226:1 › Q222 switches applications from real AntD confirm.onOk without an event teardown error
+(node:61361) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[99/312] [chromium] › tests/e2e/upstream-runtime-routes.spec.ts:7:3 › Q2735 completes native hash A-B-A navigation with live DOM and isolated Realms (keepAlive=false)
+[100/312] [chromium] › tests/e2e/upstream-runtime-routes.spec.ts:7:3 › Q2735 completes native hash A-B-A navigation with live DOM and isolated Realms (keepAlive=true)
+[101/312] [chromium] › tests/e2e/upstream-runtime-routes.spec.ts:67:1 › Q2854 requests a new entry after a 404 with the same name and container
+[102/312] [chromium] › tests/e2e/upstream-runtime-routes.spec.ts:119:3 › Q886 isolates an application entry ReferenceError and navigates to a working application
+[103/312] [chromium] › tests/e2e/upstream-runtime-routes.spec.ts:119:3 › Q886 isolates an application bootstrap ReferenceError and navigates to a working application
+[104/312] [chromium] › tests/e2e/upstream-runtime-routes.spec.ts:155:1 › Q578 loads a host route stylesheet after native navigation away from a child application
+(node:61373) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[105/312] [firefox] › tests/e2e/cancellation-boundaries.spec.ts:6:3 › bounds pending hook work and completes cleanup
+[106/312] [firefox] › tests/e2e/cancellation-boundaries.spec.ts:6:3 › bounds pending html work and completes cleanup
+[107/312] [firefox] › tests/e2e/cancellation-boundaries.spec.ts:6:3 › bounds pending manifest work and completes cleanup
+[108/312] [firefox] › tests/e2e/cancellation-boundaries.spec.ts:6:3 › bounds pending script work and completes cleanup
+[109/312] [firefox] › tests/e2e/cancellation-boundaries.spec.ts:6:3 › bounds pending resource work and completes cleanup
+[110/312] [firefox] › tests/e2e/cancellation-boundaries.spec.ts:43:1 › destroy aborts HTML fetch even with load timeout disabled
+(node:61479) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[111/312] [firefox] › tests/e2e/compatibility.spec.ts:5:1 › uses the familiar registration API without changing the isolation model
+(node:61497) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[112/312] [firefox] › tests/e2e/component-matrix.spec.ts:25:1 › runs heavy editors, maps, Workers, WebGL, and multilingual input in one isolated Realm
+[firefox] › tests/e2e/component-matrix.spec.ts:25:1 › runs heavy editors, maps, Workers, WebGL, and multilingual input in one isolated Realm
+[browser:warning] [JavaScript Warning: "WebGL context was lost." {file: "http://127.0.0.1:5180/src/lifecycle.ts" line: 297}]
+
+[browser:warning] [JavaScript Warning: "WebGL context was lost." {file: "http://127.0.0.1:5180/node_modules/.vite/deps/maplibre-gl.js?v=316e3457" line: 33197}]
+
+[browser:warning] [JavaScript Warning: "WebGL context was lost." {file: "http://127.0.0.1:5180/node_modules/.vite/deps/three.js?v=316e3457" line: 50919}]
+
+(node:61601) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[113/312] [firefox] › tests/e2e/cross-tab.spec.ts:70:1 › namespaces BroadcastChannel by application while allowing same-app cross-tab traffic
+(node:61615) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[114/312] [firefox] › tests/e2e/isolation.spec.ts:16:1 › executes the application in an isolated iframe Realm and renders into Shadow DOM
+[115/312] [firefox] › tests/e2e/isolation.spec.ts:191:1 › supports document.write in every adapter while retaining application and host isolation
+[116/312] [firefox] › tests/e2e/isolation.spec.ts:240:1 › keeps the React chart endpoint circular in a stretched plot
+[117/312] [firefox] › tests/e2e/isolation.spec.ts:262:1 › covers the host viewport by default while keeping overlay DOM application-owned
+[118/312] [firefox] › tests/e2e/isolation.spec.ts:364:1 › keeps component-library tooltips and menus local, interactive, and disposable
+[119/312] [firefox] › tests/e2e/isolation.spec.ts:496:1 › bridges component-library motion and restores host interaction after close
+[120/312] [firefox] › tests/e2e/isolation.spec.ts:742:1 › keeps viewport alignment stable during Vue 2 dialog enter motion
+[121/312] [firefox] › tests/e2e/isolation.spec.ts:774:1 › schedules animation work through the visible host Window
+[122/312] [firefox] › tests/e2e/isolation.spec.ts:794:1 › coordinates business filters while each micro application keeps local interaction state
+[123/312] [firefox] › tests/e2e/isolation.spec.ts:848:1 › gives two instances of the same module independent globals and module state
+[124/312] [firefox] › tests/e2e/isolation.spec.ts:901:1 › persists application storage across Realm destruction and controller replacement
+[125/312] [firefox] › tests/e2e/isolation.spec.ts:927:1 › installs the default same-origin resource namespace inside each Runtime Realm
+[126/312] [firefox] › tests/e2e/isolation.spec.ts:970:1 › updates every adapter and explicitly remounts an application handle
+[127/312] [firefox] › tests/e2e/isolation.spec.ts:1006:1 › leaves no manual Realm or surface after repeated create and destroy cycles
+[128/312] [firefox] › tests/e2e/isolation.spec.ts:1042:1 › keeps inactive Realms warm and evicts the least-recently-used cache entry
+[129/312] [firefox] › tests/e2e/isolation.spec.ts:1119:1 › prewarms inactive Realms off the critical path and reuses the pooled instance
+[130/312] [firefox] › tests/e2e/isolation.spec.ts:1186:1 › prewarms a manual application and mounts through the returned handle
+[131/312] [firefox] › tests/e2e/isolation.spec.ts:1249:1 › rolls back to an ordered fallback Entry and cleans the failed Realm
+[firefox] › tests/e2e/isolation.spec.ts:1249:1 › rolls back to an ordered fallback Entry and cleans the failed Realm
+[browser:error] [JavaScript Error: "Loading module from “http://127.0.0.1:5174/missing-primary-entry.js” was blocked because of a disallowed MIME type (“”)." {file: "http://127.0.0.1:5173/__micro_frame__/realm.html" line: 0}]
+
+[browser:error] Error
+
+[132/312] [firefox] › tests/e2e/isolation.spec.ts:1299:1 › cancels a stale mount during a rapid route change
+[133/312] [firefox] › tests/e2e/isolation.spec.ts:1337:1 › destroys the iframe Realm and Shadow surface
+(node:61726) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[134/312] [firefox] › tests/e2e/lifecycle-failures.spec.ts:19:3 › cleans every application after a throwing unmount hook (keepAlive=false)
+[135/312] [firefox] › tests/e2e/lifecycle-failures.spec.ts:19:3 › cleans every application after a throwing unmount hook (keepAlive=true)
+[136/312] [firefox] › tests/e2e/lifecycle-failures.spec.ts:61:3 › cancels pending props during destruction (prewarm=false, crossOrigin=false)
+[137/312] [firefox] › tests/e2e/lifecycle-failures.spec.ts:61:3 › cancels pending props during destruction (prewarm=true, crossOrigin=false)
+[138/312] [firefox] › tests/e2e/lifecycle-failures.spec.ts:61:3 › cancels pending props during destruction (prewarm=false, crossOrigin=true)
+[139/312] [firefox] › tests/e2e/lifecycle-failures.spec.ts:61:3 › cancels pending props during destruction (prewarm=true, crossOrigin=true)
+[140/312] [firefox] › tests/e2e/lifecycle-failures.spec.ts:87:1 › times out a props supplier and removes its surface
+[141/312] [firefox] › tests/e2e/lifecycle-failures.spec.ts:107:3 › reports failed updates and permits a clean remount (throw)
+[142/312] [firefox] › tests/e2e/lifecycle-failures.spec.ts:107:3 › reports failed updates and permits a clean remount (timeout)
+[143/312] [firefox] › tests/e2e/lifecycle-failures.spec.ts:142:1 › finishes destruction while an update is pending
+(node:61801) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[144/312] [firefox] › tests/e2e/realm-errors.spec.ts:5:1 › forwards asynchronous Realm errors with instance attribution and stops on disposal
+[145/312] [firefox] › tests/e2e/realm-errors.spec.ts:34:1 › forwards asynchronous cross-origin guest errors through its private channel
+(node:61811) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[146/312] [firefox] › tests/e2e/strong-isolation.spec.ts:16:1 › runs a structured lifecycle inside a visible cross-origin sandbox iframe
+(node:61822) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[147/312] [firefox] › tests/e2e/upstream-batch02-assets-csp.spec.ts:17:1 › W779 loads four then five and six real Vue images and mixed backgrounds from the application origin
+[148/312] [firefox] › tests/e2e/upstream-batch02-assets-csp.spec.ts:46:1 › W727 mounts and styles an HTML application under style-src without unsafe-inline and emits no style CSP violations
+[149/312] [firefox] › tests/e2e/upstream-batch02-assets-csp.spec.ts:71:38 › W727 respects author inline-style nonce authorization without restoring blocked CSS (nonce=true)
+[150/312] [firefox] › tests/e2e/upstream-batch02-assets-csp.spec.ts:71:38 › W727 respects author inline-style nonce authorization without restoring blocked CSS (nonce=false)
+(node:61833) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[151/312] [firefox] › tests/e2e/upstream-batch02-components-nested.spec.ts:9:1 › W697 SortableJS sorts a grandchild application's list using a real mouse drag
+[152/312] [firefox] › tests/e2e/upstream-batch02-components-nested.spec.ts:21:1 › Q1116 Monaco places the caret after parent and editor scrolling in a nested application
+(node:61843) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[153/312] [firefox] › tests/e2e/upstream-batch02-components-overlays.spec.ts:9:1 › W1106 Ant Design Vue default virtual Select scrolls by dragging its real scrollbar thumb
+[154/312] [firefox] › tests/e2e/upstream-batch02-components-overlays.spec.ts:40:1 › W300 Element Plus validates trusted mouse and focus events without cross-Realm Vue warnings
+[155/312] [firefox] › tests/e2e/upstream-batch02-components-overlays.spec.ts:61:3 › Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=true)
+[156/312] [firefox] › tests/e2e/upstream-batch02-components-overlays.spec.ts:61:3 › Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=false)
+[157/312] [firefox] › tests/e2e/upstream-batch02-components-overlays.spec.ts:85:1 › W1104 the Vue 2 lifecycle adapter does not declare an implicit reserved style prop
+(node:61939) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[158/312] [firefox] › tests/e2e/upstream-batch02-components-webpack.spec.ts:6:1 › Q2298 a real Webpack React lazy chunk keeps a pre-existing global accessor writable
+(node:61956) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[159/312] [firefox] › tests/e2e/upstream-batch02-dom-libraries.spec.ts:19:1 › W262 DOMPurify 2.3.0 sanitizes parsed documents inside its native application Realm
+[160/312] [firefox] › tests/e2e/upstream-batch02-dom-libraries.spec.ts:38:1 › Q2137 eruda 2.4.1 initializes and destroys its dynamic styles in a nested application
+[161/312] [firefox] › tests/e2e/upstream-batch02-dom-libraries.spec.ts:73:39 › Q2141 Emotion 11 keeps generated CSS correct over A to B to A (keepAlive=true)
+[162/312] [firefox] › tests/e2e/upstream-batch02-dom-libraries.spec.ts:73:39 › Q2141 Emotion 11 keeps generated CSS correct over A to B to A (keepAlive=false)
+[163/312] [firefox] › tests/e2e/upstream-batch02-dom-libraries.spec.ts:96:1 › W1065 a root-relative target blank link opens the application origin in a native popup
+(node:61979) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[164/312] [firefox] › tests/e2e/upstream-batch02-jsplumb.spec.ts:6:1 › Q1174 jsPlumb 2.11.2 creates reconnects and drags real connectors in independent native Realms
+(node:61993) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[165/312] [firefox] › tests/e2e/upstream-batch02-runtime-clipboard.spec.ts:19:3 › W298 forwards clipboard.readText via controlled clipboard ports with real host focus and activation (allowed=false)
+[166/312] [firefox] › tests/e2e/upstream-batch02-runtime-clipboard.spec.ts:19:3 › W298 forwards clipboard.readText via controlled clipboard ports with real host focus and activation (allowed=true)
+(node:62020) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[167/312] [firefox] › tests/e2e/upstream-batch02-runtime-loading.spec.ts:37:3 › Q1990 retries the identical HTML entry after offline recovery and sends a fresh HTTP request
+[168/312] [firefox] › tests/e2e/upstream-batch02-runtime-loading.spec.ts:37:3 › Q1885 retries the identical HTML entry after server-stopped recovery and sends a fresh HTTP request
+[169/312] [firefox] › tests/e2e/upstream-batch02-runtime-loading.spec.ts:56:1 › Q2166 disposes a cached application and loads a new deployment and failed-chunk recovery at the identical entry URL
+[170/312] [firefox] › tests/e2e/upstream-batch02-runtime-loading.spec.ts:82:1 › W1028 reports a removed deployment chunk to the runtime error subscriber and permits explicit new-entry recovery
+(node:62038) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[171/312] [firefox] › tests/e2e/upstream-batch02-runtime-location.spec.ts:6:1 › Q1502 native window.location assignment navigates only the child and disposes after crossing origin
+[172/312] [firefox] › tests/e2e/upstream-batch02-runtime-location.spec.ts:41:1 › Q1502 native navigation during a pending module import leaves an unmounted handle that can be explicitly disposed
+(node:62049) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[173/312] [firefox] › tests/e2e/upstream-batch02-runtime-routing.spec.ts:6:1 › Q1245 cold Vue Router hash-home to history-home to hash-about loads the first lazy route in its own Realm
+[firefox] › tests/e2e/upstream-batch02-runtime-routing.spec.ts:6:1 › Q1245 cold Vue Router hash-home to history-home to hash-about loads the first lazy route in its own Realm
+Q1245 history Realm {"location":"http://127.0.0.1:5173/home","documentURL":"http://127.0.0.1:5173/home","entryRealmSurvived":true}
+
+[174/312] [firefox] › tests/e2e/upstream-batch02-runtime-routing.spec.ts:55:1 › Q1245 Realm document initialization rejects a foreign origin and cancels a pending same-origin navigation
+(node:62058) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[175/312] [firefox] › tests/e2e/upstream-batch02-runtime-switching.spec.ts:7:3 › Q2346 rapid native tab switching leaves hidden Realms unable to intercept host or application clicks (keepAlive=false)
+[176/312] [firefox] › tests/e2e/upstream-batch02-runtime-switching.spec.ts:7:3 › Q2346 rapid native tab switching leaves hidden Realms unable to intercept host or application clicks (keepAlive=true)
+(node:62070) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[177/312] [firefox] › tests/e2e/upstream-components-diagrams.spec.ts:13:1 › W67 X6 Dnd follows the pointer in an offset scrolled and scaled host
+[178/312] [firefox] › tests/e2e/upstream-components-diagrams.spec.ts:47:1 › W832 Vue2 host and child insert bpmn-js flow nodes in the visible ShadowRoot
+[179/312] [firefox] › tests/e2e/upstream-components-diagrams.spec.ts:66:1 › W288 Monaco places a caret by mouse in existing middle code before inserting text
+(node:62081) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[180/312] [firefox] › tests/e2e/upstream-components-overlays.spec.ts:14:3 › W830 Naive UI select uses current trigger geometry after A-B-A switching (keepAlive=false)
+[181/312] [firefox] › tests/e2e/upstream-components-overlays.spec.ts:14:3 › W830 Naive UI select uses current trigger geometry after A-B-A switching (keepAlive=true)
+[182/312] [firefox] › tests/e2e/upstream-components-overlays.spec.ts:48:1 › W829 Recharts hits the lower chart area after the host page scrolls
+[183/312] [firefox] › tests/e2e/upstream-components-overlays.spec.ts:70:1 › W896 Element Plus draggable dialog reaches the host viewport right and bottom boundaries
+(node:62092) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[184/312] [firefox] › tests/e2e/upstream-lifecycle-regressions.spec.ts:73:1 › W116 retains CSSOM-inserted rules when the same keepAlive surface is reactivated
+[185/312] [firefox] › tests/e2e/upstream-lifecycle-regressions.spec.ts:134:1 › W823 remounts a React application twice with working event handlers and one surface
+[186/312] [firefox] › tests/e2e/upstream-lifecycle-regressions.spec.ts:167:1 › Q2368 assigns fresh identities when a middle same-app tab is replaced at the same DOM position
+[187/312] [firefox] › tests/e2e/upstream-lifecycle-regressions.spec.ts:224:1 › Q578 keeps host styles inserted after application unmount in the host document
+(node:62105) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[188/312] [firefox] › tests/e2e/upstream-runtime-eviction.spec.ts:15:3 › Q1089 completes keepAlive eviction without waiting on its own unmount (maxInstances=0, remount=false)
+[189/312] [firefox] › tests/e2e/upstream-runtime-eviction.spec.ts:15:3 › Q1089 completes keepAlive eviction without waiting on its own unmount (maxInstances=0, remount=true)
+[190/312] [firefox] › tests/e2e/upstream-runtime-eviction.spec.ts:83:1 › Q1089 rejects a reentrant mount during keepAlive disposal and completes lifecycle cleanup once
+(node:62127) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[191/312] [firefox] › tests/e2e/upstream-runtime-navigation.spec.ts:9:1 › W12 applies a real Vite WebSocket CSS HMR update to root variables without replacing the Realm
+[192/312] [firefox] › tests/e2e/upstream-runtime-navigation.spec.ts:85:1 › W107 keeps empty and fragment anchor clicks inside the application without navigating the host
+  2) [firefox] › tests/e2e/upstream-runtime-navigation.spec.ts:85:1 › W107 keeps empty and fragment anchor clicks inside the application without navigating the host 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+      Object {
+        "emptyHref": "",
+    -   "frameProtocol": "about:",
+    +   "frameProtocol": "http:",
+        "sameFrame": true,
+        "sameHost": true,
+        "status": "mounted",
+      }
+
+      158 |       emptyHref: state.originalHost!.shadowRoot!.querySelector("a")!.getAttribute("href"),
+      159 |     };
+    > 160 |   })).toEqual({ status: "mounted", sameFrame: true, sameHost: true, frameProtocol: "about:", emptyHref: "" });
+          |       ^
+      161 |   expect(documentNavigations).toEqual([]);
+      162 | });
+      163 |
+        at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-runtime-navigation.spec.ts:160:7
+
+    Error Context: test-results/upstream-runtime-navigatio-54c88-without-navigating-the-host-firefox/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/upstream-runtime-navigatio-54c88-without-navigating-the-host-firefox/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/upstream-runtime-navigatio-54c88-without-navigating-the-host-firefox/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+(node:62136) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[193/312] [firefox] › tests/e2e/upstream-runtime-races.spec.ts:9:3 › Q1089 serializes remount behind an unfinished unmount (keepAlive=false)
+[194/312] [firefox] › tests/e2e/upstream-runtime-races.spec.ts:9:3 › Q1089 serializes remount behind an unfinished unmount (keepAlive=true)
+[195/312] [firefox] › tests/e2e/upstream-runtime-races.spec.ts:63:1 › Q1089 cancels an unfinished first mount before honoring the newest mount request
+[196/312] [firefox] › tests/e2e/upstream-runtime-races.spec.ts:101:1 › Q1089 lets a newer unmount supersede a mount waiting behind asynchronous teardown
+[197/312] [firefox] › tests/e2e/upstream-runtime-races.spec.ts:133:1 › Q1089 serializes a reentrant mount requested by an unmounting lifecycle listener
+[198/312] [firefox] › tests/e2e/upstream-runtime-races.spec.ts:171:3 › W823 awaits asynchronous React beforeUnmount before remounting with working events (keepAlive=false)
+[199/312] [firefox] › tests/e2e/upstream-runtime-races.spec.ts:171:3 › W823 awaits asynchronous React unmount before remounting with working events (keepAlive=false)
+[200/312] [firefox] › tests/e2e/upstream-runtime-races.spec.ts:171:3 › W823 awaits asynchronous React beforeUnmount before reactivating with working events (keepAlive=true)
+[201/312] [firefox] › tests/e2e/upstream-runtime-races.spec.ts:171:3 › W823 awaits asynchronous React deactivate before reactivating with working events (keepAlive=true)
+[202/312] [firefox] › tests/e2e/upstream-runtime-races.spec.ts:226:1 › Q222 switches applications from real AntD confirm.onOk without an event teardown error
+(node:62156) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[203/312] [firefox] › tests/e2e/upstream-runtime-routes.spec.ts:7:3 › Q2735 completes native hash A-B-A navigation with live DOM and isolated Realms (keepAlive=false)
+[204/312] [firefox] › tests/e2e/upstream-runtime-routes.spec.ts:7:3 › Q2735 completes native hash A-B-A navigation with live DOM and isolated Realms (keepAlive=true)
+[205/312] [firefox] › tests/e2e/upstream-runtime-routes.spec.ts:67:1 › Q2854 requests a new entry after a 404 with the same name and container
+[206/312] [firefox] › tests/e2e/upstream-runtime-routes.spec.ts:119:3 › Q886 isolates an application entry ReferenceError and navigates to a working application
+[207/312] [firefox] › tests/e2e/upstream-runtime-routes.spec.ts:119:3 › Q886 isolates an application bootstrap ReferenceError and navigates to a working application
+[208/312] [firefox] › tests/e2e/upstream-runtime-routes.spec.ts:155:1 › Q578 loads a host route stylesheet after native navigation away from a child application
+(node:62171) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[209/312] [webkit] › tests/e2e/cancellation-boundaries.spec.ts:6:3 › bounds pending hook work and completes cleanup
+[210/312] [webkit] › tests/e2e/cancellation-boundaries.spec.ts:6:3 › bounds pending html work and completes cleanup
+[211/312] [webkit] › tests/e2e/cancellation-boundaries.spec.ts:6:3 › bounds pending manifest work and completes cleanup
+[212/312] [webkit] › tests/e2e/cancellation-boundaries.spec.ts:6:3 › bounds pending script work and completes cleanup
+[213/312] [webkit] › tests/e2e/cancellation-boundaries.spec.ts:6:3 › bounds pending resource work and completes cleanup
+[214/312] [webkit] › tests/e2e/cancellation-boundaries.spec.ts:43:1 › destroy aborts HTML fetch even with load timeout disabled
+(node:62191) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[215/312] [webkit] › tests/e2e/compatibility.spec.ts:5:1 › uses the familiar registration API without changing the isolation model
+(node:62203) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[216/312] [webkit] › tests/e2e/component-matrix.spec.ts:25:1 › runs heavy editors, maps, Workers, WebGL, and multilingual input in one isolated Realm
+(node:62339) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[217/312] [webkit] › tests/e2e/cross-tab.spec.ts:70:1 › namespaces BroadcastChannel by application while allowing same-app cross-tab traffic
+(node:62353) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[218/312] [webkit] › tests/e2e/isolation.spec.ts:16:1 › executes the application in an isolated iframe Realm and renders into Shadow DOM
+[219/312] [webkit] › tests/e2e/isolation.spec.ts:191:1 › supports document.write in every adapter while retaining application and host isolation
+[220/312] [webkit] › tests/e2e/isolation.spec.ts:240:1 › keeps the React chart endpoint circular in a stretched plot
+[221/312] [webkit] › tests/e2e/isolation.spec.ts:262:1 › covers the host viewport by default while keeping overlay DOM application-owned
+[222/312] [webkit] › tests/e2e/isolation.spec.ts:364:1 › keeps component-library tooltips and menus local, interactive, and disposable
+[webkit] › tests/e2e/isolation.spec.ts:364:1 › keeps component-library tooltips and menus local, interactive, and disposable
+[browser:warning] The resource http://127.0.0.1:5174/src/shared-marker.ts was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing.
+
+[223/312] [webkit] › tests/e2e/isolation.spec.ts:496:1 › bridges component-library motion and restores host interaction after close
+[webkit] › tests/e2e/isolation.spec.ts:496:1 › bridges component-library motion and restores host interaction after close
+[browser:warning] The resource http://127.0.0.1:5174/src/shared-marker.ts was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it wasn't preloaded for nothing.
+
+[224/312] [webkit] › tests/e2e/isolation.spec.ts:742:1 › keeps viewport alignment stable during Vue 2 dialog enter motion
+[225/312] [webkit] › tests/e2e/isolation.spec.ts:774:1 › schedules animation work through the visible host Window
+[226/312] [webkit] › tests/e2e/isolation.spec.ts:794:1 › coordinates business filters while each micro application keeps local interaction state
+[227/312] [webkit] › tests/e2e/isolation.spec.ts:848:1 › gives two instances of the same module independent globals and module state
+[228/312] [webkit] › tests/e2e/isolation.spec.ts:901:1 › persists application storage across Realm destruction and controller replacement
+[229/312] [webkit] › tests/e2e/isolation.spec.ts:927:1 › installs the default same-origin resource namespace inside each Runtime Realm
+[230/312] [webkit] › tests/e2e/isolation.spec.ts:970:1 › updates every adapter and explicitly remounts an application handle
+[231/312] [webkit] › tests/e2e/isolation.spec.ts:1006:1 › leaves no manual Realm or surface after repeated create and destroy cycles
+[232/312] [webkit] › tests/e2e/isolation.spec.ts:1042:1 › keeps inactive Realms warm and evicts the least-recently-used cache entry
+[233/312] [webkit] › tests/e2e/isolation.spec.ts:1119:1 › prewarms inactive Realms off the critical path and reuses the pooled instance
+[234/312] [webkit] › tests/e2e/isolation.spec.ts:1186:1 › prewarms a manual application and mounts through the returned handle
+[235/312] [webkit] › tests/e2e/isolation.spec.ts:1249:1 › rolls back to an ordered fallback Entry and cleans the failed Realm
+[webkit] › tests/e2e/isolation.spec.ts:1249:1 › rolls back to an ordered fallback Entry and cleans the failed Realm
+[browser:error] Failed to load resource: the server responded with a status of 404 (Not Found)
+
+[browser:error] ApplicationEntryAttemptError: Application fallback-contract entry attempt 1 failed: http://127.0.0.1:5174/missing-primary-entry.js
+
+[236/312] [webkit] › tests/e2e/isolation.spec.ts:1299:1 › cancels a stale mount during a rapid route change
+[237/312] [webkit] › tests/e2e/isolation.spec.ts:1337:1 › destroys the iframe Realm and Shadow surface
+(node:62630) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[238/312] [webkit] › tests/e2e/lifecycle-failures.spec.ts:19:3 › cleans every application after a throwing unmount hook (keepAlive=false)
+[239/312] [webkit] › tests/e2e/lifecycle-failures.spec.ts:19:3 › cleans every application after a throwing unmount hook (keepAlive=true)
+[240/312] [webkit] › tests/e2e/lifecycle-failures.spec.ts:61:3 › cancels pending props during destruction (prewarm=false, crossOrigin=false)
+[241/312] [webkit] › tests/e2e/lifecycle-failures.spec.ts:61:3 › cancels pending props during destruction (prewarm=true, crossOrigin=false)
+[242/312] [webkit] › tests/e2e/lifecycle-failures.spec.ts:61:3 › cancels pending props during destruction (prewarm=false, crossOrigin=true)
+[243/312] [webkit] › tests/e2e/lifecycle-failures.spec.ts:61:3 › cancels pending props during destruction (prewarm=true, crossOrigin=true)
+[244/312] [webkit] › tests/e2e/lifecycle-failures.spec.ts:87:1 › times out a props supplier and removes its surface
+[245/312] [webkit] › tests/e2e/lifecycle-failures.spec.ts:107:3 › reports failed updates and permits a clean remount (throw)
+[246/312] [webkit] › tests/e2e/lifecycle-failures.spec.ts:107:3 › reports failed updates and permits a clean remount (timeout)
+[247/312] [webkit] › tests/e2e/lifecycle-failures.spec.ts:142:1 › finishes destruction while an update is pending
+(node:62667) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[248/312] [webkit] › tests/e2e/realm-errors.spec.ts:5:1 › forwards asynchronous Realm errors with instance attribution and stops on disposal
+[249/312] [webkit] › tests/e2e/realm-errors.spec.ts:34:1 › forwards asynchronous cross-origin guest errors through its private channel
+(node:62681) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[250/312] [webkit] › tests/e2e/strong-isolation.spec.ts:16:1 › runs a structured lifecycle inside a visible cross-origin sandbox iframe
+(node:62693) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[251/312] [webkit] › tests/e2e/upstream-batch02-assets-csp.spec.ts:17:1 › W779 loads four then five and six real Vue images and mixed backgrounds from the application origin
+[252/312] [webkit] › tests/e2e/upstream-batch02-assets-csp.spec.ts:46:1 › W727 mounts and styles an HTML application under style-src without unsafe-inline and emits no style CSP violations
+[253/312] [webkit] › tests/e2e/upstream-batch02-assets-csp.spec.ts:71:38 › W727 respects author inline-style nonce authorization without restoring blocked CSS (nonce=true)
+[254/312] [webkit] › tests/e2e/upstream-batch02-assets-csp.spec.ts:71:38 › W727 respects author inline-style nonce authorization without restoring blocked CSS (nonce=false)
+(node:62715) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[255/312] [webkit] › tests/e2e/upstream-batch02-components-nested.spec.ts:9:1 › W697 SortableJS sorts a grandchild application's list using a real mouse drag
+[256/312] [webkit] › tests/e2e/upstream-batch02-components-nested.spec.ts:21:1 › Q1116 Monaco places the caret after parent and editor scrolling in a nested application
+(node:62729) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[257/312] [webkit] › tests/e2e/upstream-batch02-components-overlays.spec.ts:9:1 › W1106 Ant Design Vue default virtual Select scrolls by dragging its real scrollbar thumb
+  3) [webkit] › tests/e2e/upstream-batch02-components-overlays.spec.ts:9:1 › W1106 Ant Design Vue default virtual Select scrolls by dragging its real scrollbar thumb 
+
+    Error: expect(received).toBeGreaterThan(expected)
+
+    Expected: > 620
+    Received:   120
+
+    Call Log:
+    - Timeout 5000ms exceeded while waiting on the predicate
+
+      29 |   await page.mouse.move(20, box.y + box.height / 2 + 90, { steps: 3 });
+      30 |   await page.mouse.up();
+    > 31 |   await expect.poll(() => holder.evaluate((element) => element.scrollTop)).toBeGreaterThan(before + 500);
+         |                                                                            ^
+      32 |   await expect(thumb).not.toHaveClass(/moving/);
+      33 |   const option = dropdown.locator(".ant-select-item-option").nth(2);
+      34 |   const label = (await option.innerText()).trim();
+        at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts:31:76
+
+    Error Context: test-results/upstream-batch02-component-e1a07-ng-its-real-scrollbar-thumb-webkit/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/upstream-batch02-component-e1a07-ng-its-real-scrollbar-thumb-webkit/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/upstream-batch02-component-e1a07-ng-its-real-scrollbar-thumb-webkit/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+(node:62741) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[258/312] [webkit] › tests/e2e/upstream-batch02-components-overlays.spec.ts:40:1 › W300 Element Plus validates trusted mouse and focus events without cross-Realm Vue warnings
+[259/312] [webkit] › tests/e2e/upstream-batch02-components-overlays.spec.ts:61:3 › Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=true)
+[260/312] [webkit] › tests/e2e/upstream-batch02-components-overlays.spec.ts:61:3 › Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=false)
+[261/312] [webkit] › tests/e2e/upstream-batch02-components-overlays.spec.ts:85:1 › W1104 the Vue 2 lifecycle adapter does not declare an implicit reserved style prop
+(node:62760) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[262/312] [webkit] › tests/e2e/upstream-batch02-components-webpack.spec.ts:6:1 › Q2298 a real Webpack React lazy chunk keeps a pre-existing global accessor writable
+(node:62772) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[263/312] [webkit] › tests/e2e/upstream-batch02-dom-libraries.spec.ts:19:1 › W262 DOMPurify 2.3.0 sanitizes parsed documents inside its native application Realm
+[264/312] [webkit] › tests/e2e/upstream-batch02-dom-libraries.spec.ts:38:1 › Q2137 eruda 2.4.1 initializes and destroys its dynamic styles in a nested application
+[265/312] [webkit] › tests/e2e/upstream-batch02-dom-libraries.spec.ts:73:39 › Q2141 Emotion 11 keeps generated CSS correct over A to B to A (keepAlive=true)
+[266/312] [webkit] › tests/e2e/upstream-batch02-dom-libraries.spec.ts:73:39 › Q2141 Emotion 11 keeps generated CSS correct over A to B to A (keepAlive=false)
+[267/312] [webkit] › tests/e2e/upstream-batch02-dom-libraries.spec.ts:96:1 › W1065 a root-relative target blank link opens the application origin in a native popup
+(node:62822) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[268/312] [webkit] › tests/e2e/upstream-batch02-jsplumb.spec.ts:6:1 › Q1174 jsPlumb 2.11.2 creates reconnects and drags real connectors in independent native Realms
+(node:62834) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[269/312] [webkit] › tests/e2e/upstream-batch02-runtime-clipboard.spec.ts:19:3 › W298 forwards clipboard.readText via controlled clipboard ports with real host focus and activation (allowed=false)
+[270/312] [webkit] › tests/e2e/upstream-batch02-runtime-clipboard.spec.ts:19:3 › W298 forwards clipboard.readText via controlled clipboard ports with real host focus and activation (allowed=true)
+(node:62851) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[271/312] [webkit] › tests/e2e/upstream-batch02-runtime-loading.spec.ts:37:3 › Q1990 retries the identical HTML entry after offline recovery and sends a fresh HTTP request
+[272/312] [webkit] › tests/e2e/upstream-batch02-runtime-loading.spec.ts:37:3 › Q1885 retries the identical HTML entry after server-stopped recovery and sends a fresh HTTP request
+[273/312] [webkit] › tests/e2e/upstream-batch02-runtime-loading.spec.ts:56:1 › Q2166 disposes a cached application and loads a new deployment and failed-chunk recovery at the identical entry URL
+[274/312] [webkit] › tests/e2e/upstream-batch02-runtime-loading.spec.ts:82:1 › W1028 reports a removed deployment chunk to the runtime error subscriber and permits explicit new-entry recovery
+(node:62869) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[275/312] [webkit] › tests/e2e/upstream-batch02-runtime-location.spec.ts:6:1 › Q1502 native window.location assignment navigates only the child and disposes after crossing origin
+[276/312] [webkit] › tests/e2e/upstream-batch02-runtime-location.spec.ts:41:1 › Q1502 native navigation during a pending module import leaves an unmounted handle that can be explicitly disposed
+(node:62883) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[277/312] [webkit] › tests/e2e/upstream-batch02-runtime-routing.spec.ts:6:1 › Q1245 cold Vue Router hash-home to history-home to hash-about loads the first lazy route in its own Realm
+[webkit] › tests/e2e/upstream-batch02-runtime-routing.spec.ts:6:1 › Q1245 cold Vue Router hash-home to history-home to hash-about loads the first lazy route in its own Realm
+Q1245 history Realm {"location":"http://127.0.0.1:5173/home","documentURL":"http://127.0.0.1:5173/home","entryRealmSurvived":true}
+
+[278/312] [webkit] › tests/e2e/upstream-batch02-runtime-routing.spec.ts:55:1 › Q1245 Realm document initialization rejects a foreign origin and cancels a pending same-origin navigation
+(node:62897) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[279/312] [webkit] › tests/e2e/upstream-batch02-runtime-switching.spec.ts:7:3 › Q2346 rapid native tab switching leaves hidden Realms unable to intercept host or application clicks (keepAlive=false)
+[280/312] [webkit] › tests/e2e/upstream-batch02-runtime-switching.spec.ts:7:3 › Q2346 rapid native tab switching leaves hidden Realms unable to intercept host or application clicks (keepAlive=true)
+(node:62911) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[281/312] [webkit] › tests/e2e/upstream-components-diagrams.spec.ts:13:1 › W67 X6 Dnd follows the pointer in an offset scrolled and scaled host
+[282/312] [webkit] › tests/e2e/upstream-components-diagrams.spec.ts:47:1 › W832 Vue2 host and child insert bpmn-js flow nodes in the visible ShadowRoot
+[283/312] [webkit] › tests/e2e/upstream-components-diagrams.spec.ts:66:1 › W288 Monaco places a caret by mouse in existing middle code before inserting text
+(node:62926) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[284/312] [webkit] › tests/e2e/upstream-components-overlays.spec.ts:14:3 › W830 Naive UI select uses current trigger geometry after A-B-A switching (keepAlive=false)
+[285/312] [webkit] › tests/e2e/upstream-components-overlays.spec.ts:14:3 › W830 Naive UI select uses current trigger geometry after A-B-A switching (keepAlive=true)
+[286/312] [webkit] › tests/e2e/upstream-components-overlays.spec.ts:48:1 › W829 Recharts hits the lower chart area after the host page scrolls
+[287/312] [webkit] › tests/e2e/upstream-components-overlays.spec.ts:70:1 › W896 Element Plus draggable dialog reaches the host viewport right and bottom boundaries
+(node:62988) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[288/312] [webkit] › tests/e2e/upstream-lifecycle-regressions.spec.ts:73:1 › W116 retains CSSOM-inserted rules when the same keepAlive surface is reactivated
+[289/312] [webkit] › tests/e2e/upstream-lifecycle-regressions.spec.ts:134:1 › W823 remounts a React application twice with working event handlers and one surface
+[290/312] [webkit] › tests/e2e/upstream-lifecycle-regressions.spec.ts:167:1 › Q2368 assigns fresh identities when a middle same-app tab is replaced at the same DOM position
+[291/312] [webkit] › tests/e2e/upstream-lifecycle-regressions.spec.ts:224:1 › Q578 keeps host styles inserted after application unmount in the host document
+(node:63005) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[292/312] [webkit] › tests/e2e/upstream-runtime-eviction.spec.ts:15:3 › Q1089 completes keepAlive eviction without waiting on its own unmount (maxInstances=0, remount=false)
+[293/312] [webkit] › tests/e2e/upstream-runtime-eviction.spec.ts:15:3 › Q1089 completes keepAlive eviction without waiting on its own unmount (maxInstances=0, remount=true)
+[294/312] [webkit] › tests/e2e/upstream-runtime-eviction.spec.ts:83:1 › Q1089 rejects a reentrant mount during keepAlive disposal and completes lifecycle cleanup once
+(node:63026) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[295/312] [webkit] › tests/e2e/upstream-runtime-navigation.spec.ts:9:1 › W12 applies a real Vite WebSocket CSS HMR update to root variables without replacing the Realm
+[296/312] [webkit] › tests/e2e/upstream-runtime-navigation.spec.ts:85:1 › W107 keeps empty and fragment anchor clicks inside the application without navigating the host
+  4) [webkit] › tests/e2e/upstream-runtime-navigation.spec.ts:85:1 › W107 keeps empty and fragment anchor clicks inside the application without navigating the host 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+      Object {
+        "emptyHref": "",
+    -   "frameProtocol": "about:",
+    +   "frameProtocol": "http:",
+        "sameFrame": true,
+        "sameHost": true,
+        "status": "mounted",
+      }
+
+      158 |       emptyHref: state.originalHost!.shadowRoot!.querySelector("a")!.getAttribute("href"),
+      159 |     };
+    > 160 |   })).toEqual({ status: "mounted", sameFrame: true, sameHost: true, frameProtocol: "about:", emptyHref: "" });
+          |       ^
+      161 |   expect(documentNavigations).toEqual([]);
+      162 | });
+      163 |
+        at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-runtime-navigation.spec.ts:160:7
+
+    Error Context: test-results/upstream-runtime-navigatio-54c88-without-navigating-the-host-webkit/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/upstream-runtime-navigatio-54c88-without-navigating-the-host-webkit/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/upstream-runtime-navigatio-54c88-without-navigating-the-host-webkit/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+(node:63057) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[297/312] [webkit] › tests/e2e/upstream-runtime-races.spec.ts:9:3 › Q1089 serializes remount behind an unfinished unmount (keepAlive=false)
+[298/312] [webkit] › tests/e2e/upstream-runtime-races.spec.ts:9:3 › Q1089 serializes remount behind an unfinished unmount (keepAlive=true)
+[299/312] [webkit] › tests/e2e/upstream-runtime-races.spec.ts:63:1 › Q1089 cancels an unfinished first mount before honoring the newest mount request
+[300/312] [webkit] › tests/e2e/upstream-runtime-races.spec.ts:101:1 › Q1089 lets a newer unmount supersede a mount waiting behind asynchronous teardown
+[301/312] [webkit] › tests/e2e/upstream-runtime-races.spec.ts:133:1 › Q1089 serializes a reentrant mount requested by an unmounting lifecycle listener
+[302/312] [webkit] › tests/e2e/upstream-runtime-races.spec.ts:171:3 › W823 awaits asynchronous React beforeUnmount before remounting with working events (keepAlive=false)
+[303/312] [webkit] › tests/e2e/upstream-runtime-races.spec.ts:171:3 › W823 awaits asynchronous React unmount before remounting with working events (keepAlive=false)
+[304/312] [webkit] › tests/e2e/upstream-runtime-races.spec.ts:171:3 › W823 awaits asynchronous React beforeUnmount before reactivating with working events (keepAlive=true)
+[305/312] [webkit] › tests/e2e/upstream-runtime-races.spec.ts:171:3 › W823 awaits asynchronous React deactivate before reactivating with working events (keepAlive=true)
+[306/312] [webkit] › tests/e2e/upstream-runtime-races.spec.ts:226:1 › Q222 switches applications from real AntD confirm.onOk without an event teardown error
+(node:63083) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[307/312] [webkit] › tests/e2e/upstream-runtime-routes.spec.ts:7:3 › Q2735 completes native hash A-B-A navigation with live DOM and isolated Realms (keepAlive=false)
+[308/312] [webkit] › tests/e2e/upstream-runtime-routes.spec.ts:7:3 › Q2735 completes native hash A-B-A navigation with live DOM and isolated Realms (keepAlive=true)
+[309/312] [webkit] › tests/e2e/upstream-runtime-routes.spec.ts:67:1 › Q2854 requests a new entry after a 404 with the same name and container
+[310/312] [webkit] › tests/e2e/upstream-runtime-routes.spec.ts:119:3 › Q886 isolates an application entry ReferenceError and navigates to a working application
+[311/312] [webkit] › tests/e2e/upstream-runtime-routes.spec.ts:119:3 › Q886 isolates an application bootstrap ReferenceError and navigates to a working application
+[312/312] [webkit] › tests/e2e/upstream-runtime-routes.spec.ts:155:1 › Q578 loads a host route stylesheet after native navigation away from a child application
+  4 failed
+    [chromium] › tests/e2e/upstream-runtime-navigation.spec.ts:85:1 › W107 keeps empty and fragment anchor clicks inside the application without navigating the host 
+    [firefox] › tests/e2e/upstream-runtime-navigation.spec.ts:85:1 › W107 keeps empty and fragment anchor clicks inside the application without navigating the host 
+    [webkit] › tests/e2e/upstream-batch02-components-overlays.spec.ts:9:1 › W1106 Ant Design Vue default virtual Select scrolls by dragging its real scrollbar thumb 
+    [webkit] › tests/e2e/upstream-runtime-navigation.spec.ts:85:1 › W107 keeps empty and fragment anchor clicks inside the application without navigating the host 
+  308 passed (5.5m)

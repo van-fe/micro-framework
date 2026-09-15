@@ -1,0 +1,72 @@
+{
+  "generatedAt": "2026-09-14T10:00:22.364Z",
+  "runId": "mfopt-005-component-memory-settled",
+  "runtime": {
+    "bun": "unknown",
+    "node": "v24.19.0",
+    "platform": "darwin",
+    "architecture": "arm64"
+  },
+  "mode": "release",
+  "status": "failed",
+  "passed": false,
+  "sentryNetworkGuard": [
+    {
+      "browser": "chromium",
+      "allowlistedOrigins": [
+        "http://127.0.0.1:4373",
+        "http://127.0.0.1:4374",
+        "http://127.0.0.1:4375",
+        "http://127.0.0.1:4376",
+        "http://127.0.0.1:4377",
+        "http://127.0.0.1:4378"
+      ],
+      "blockedProbePaths": [
+        "/probe/beacon",
+        "/probe/fetch",
+        "/probe/iframe",
+        "/probe/worker",
+        "/probe/xhr"
+      ],
+      "fakeReceiverDeliveredPaths": [
+        "/guard.html"
+      ],
+      "activeServiceWorkers": 0
+    }
+  ],
+  "resourceOwnership": [],
+  "observerIdentity": [],
+  "cleanupFailures": [],
+  "cleanupRecovery": [],
+  "entryCache": [],
+  "entryCacheComparisons": [],
+  "styleScans": [],
+  "styleCompatibility": [],
+  "componentCompatibility": [],
+  "componentMemory": [],
+  "metrics": [
+    {
+      "name": "component-memory-session-1",
+      "browser": "chromium",
+      "samples": 100,
+      "unit": "bytes",
+      "min": 146997764,
+      "p50": 146997764,
+      "p95": 146997764,
+      "max": 146997764,
+      "threshold": 25165824,
+      "passed": false,
+      "details": {
+        "warmDocuments": 7,
+        "finalDocuments": 63,
+        "warmNodes": 928,
+        "finalNodes": 9356,
+        "mountP50Ms": 35.5,
+        "mountP95Ms": 86,
+        "disposeP50Ms": 8.5,
+        "disposeP95Ms": 25.399999976158142,
+        "cleanupErrors": 8
+      }
+    }
+  ]
+}

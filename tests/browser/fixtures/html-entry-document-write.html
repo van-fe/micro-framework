@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <body>
+    <main id="document-write-entry">
+      <p id="entry-before">before</p>
+      <script>
+        window.__documentWriteOrder = ["entry-writer"];
+        document.write('<section id="entry-written"><span>sp');
+        document.write('lit</span>');
+        document.write('<script src="./document-write/entry-dependency.js"><\/script>');
+        document.write('<script>window.__documentWriteOrder.push("written-dependent:" + window.__documentWriteValue); document.write("<b id=entry-nested>nested</b>");<\/script>');
+        document.write('<a id="entry-relative" href="./document-write/next.html">following dependency</a></section>');
+      </script>
+      <p id="entry-following">following</p>
+      <script>
+        window.__documentWriteOrder.push("entry-following:" + window.__documentWriteValue);
+        window.DocumentWriteEntryLifecycle = {
+          mount() {
+            const node = document.createElement("p");
+            node.id = "entry-mounted";
+            node.textContent = "written lifecycle mounted";
+            document.body.append(node);
+          },
+          unmount() { document.getElementById("entry-mounted")?.remove(); },
+        };
+      </script>
+    </main>
+  </body>
+</html>

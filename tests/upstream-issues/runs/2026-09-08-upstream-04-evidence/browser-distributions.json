@@ -1,0 +1,40 @@
+{
+  "source": "/Users/fanfangbo/workspace/micro-framework/node_modules/.bun/playwright-core@1.62.1/node_modules/playwright-core/browsers.json",
+  "playwright": "1.62.1",
+  "browsers": [
+    {
+      "name": "chromium",
+      "revision": "1234",
+      "installByDefault": true,
+      "browserVersion": "151.0.7922.34",
+      "title": "Chrome for Testing"
+    },
+    {
+      "name": "chromium-headless-shell",
+      "revision": "1234",
+      "installByDefault": true,
+      "browserVersion": "151.0.7922.34",
+      "title": "Chrome Headless Shell"
+    },
+    {
+      "name": "firefox",
+      "revision": "1538",
+      "installByDefault": true,
+      "browserVersion": "153.0",
+      "title": "Firefox"
+    },
+    {
+      "name": "webkit",
+      "revision": "2336",
+      "installByDefault": true,
+      "revisionOverrides": {
+        "mac14": "2251",
+        "mac14-arm64": "2251",
+        "ubuntu20.04-x64": "2092",
+        "ubuntu20.04-arm64": "2092"
+      },
+      "browserVersion": "26.5",
+      "title": "WebKit"
+    }
+  ]
+}

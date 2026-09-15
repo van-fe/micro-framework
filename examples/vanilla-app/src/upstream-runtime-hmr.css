@@ -1,0 +1,8 @@
+:root {
+  --upstream-hmr-color: rgb(27, 84, 147);
+  --upstream-hmr-padding: 11px;
+}
+[data-upstream-hmr-token] {
+  color: var(--upstream-hmr-color);
+  padding-left: var(--upstream-hmr-padding);
+}

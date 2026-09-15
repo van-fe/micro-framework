@@ -1,0 +1,84 @@
+
+Running 2 tests using 1 worker
+
+(node:12192) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/2] [chromium] › tests/e2e/upstream-runtime-eviction.spec.ts:13:3 › Q1089 completes keepAlive eviction without waiting on its own unmount (maxInstances=0, remount=false)
+  1) [chromium] › tests/e2e/upstream-runtime-eviction.spec.ts:13:3 › Q1089 completes keepAlive eviction without waiting on its own unmount (maxInstances=0, remount=false) 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 2
+
+      Object {
+    -   "finished": true,
+    -   "status": "disposed",
+    +   "finished": false,
+    +   "status": "unmounted",
+      }
+
+      49 |       }, remount);
+      50 |       finished = result.finished;
+    > 51 |       expect(result).toEqual({ finished: true, status: remount ? "mounted" : "disposed" });
+         |                      ^
+      52 |       if (remount) {
+      53 |         await expect(button).toHaveText("Zero cache: 1");
+      54 |         await button.click();
+        at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-runtime-eviction.spec.ts:51:22
+
+    Error Context: test-results/upstream-runtime-eviction--b6fa3-xInstances-0-remount-false--chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/upstream-runtime-eviction--b6fa3-xInstances-0-remount-false--chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/upstream-runtime-eviction--b6fa3-xInstances-0-remount-false--chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+(node:12197) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[2/2] [chromium] › tests/e2e/upstream-runtime-eviction.spec.ts:13:3 › Q1089 completes keepAlive eviction without waiting on its own unmount (maxInstances=0, remount=true)
+  2) [chromium] › tests/e2e/upstream-runtime-eviction.spec.ts:13:3 › Q1089 completes keepAlive eviction without waiting on its own unmount (maxInstances=0, remount=true) 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 2
+
+      Object {
+    -   "finished": true,
+    -   "status": "mounted",
+    +   "finished": false,
+    +   "status": "unmounted",
+      }
+
+      49 |       }, remount);
+      50 |       finished = result.finished;
+    > 51 |       expect(result).toEqual({ finished: true, status: remount ? "mounted" : "disposed" });
+         |                      ^
+      52 |       if (remount) {
+      53 |         await expect(button).toHaveText("Zero cache: 1");
+      54 |         await button.click();
+        at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-runtime-eviction.spec.ts:51:22
+
+    Error Context: test-results/upstream-runtime-eviction--e51f8-axInstances-0-remount-true--chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/upstream-runtime-eviction--e51f8-axInstances-0-remount-true--chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/upstream-runtime-eviction--e51f8-axInstances-0-remount-true--chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+  2 failed
+    [chromium] › tests/e2e/upstream-runtime-eviction.spec.ts:13:3 › Q1089 completes keepAlive eviction without waiting on its own unmount (maxInstances=0, remount=false) 
+    [chromium] › tests/e2e/upstream-runtime-eviction.spec.ts:13:3 › Q1089 completes keepAlive eviction without waiting on its own unmount (maxInstances=0, remount=true) 

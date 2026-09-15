@@ -1,0 +1,769 @@
+{
+  "generatedAt": "2026-09-14T10:11:29.107Z",
+  "runId": "mfopt-005-retention-react-owned-listeners",
+  "runtime": {
+    "bun": "unknown",
+    "node": "v24.19.0",
+    "platform": "darwin",
+    "architecture": "arm64"
+  },
+  "mode": "release",
+  "status": "failed",
+  "passed": false,
+  "sentryNetworkGuard": [
+    {
+      "browser": "chromium",
+      "allowlistedOrigins": [
+        "http://127.0.0.1:4373",
+        "http://127.0.0.1:4374",
+        "http://127.0.0.1:4375",
+        "http://127.0.0.1:4376",
+        "http://127.0.0.1:4377",
+        "http://127.0.0.1:4378"
+      ],
+      "blockedProbePaths": [
+        "/probe/beacon",
+        "/probe/fetch",
+        "/probe/iframe",
+        "/probe/worker",
+        "/probe/xhr"
+      ],
+      "fakeReceiverDeliveredPaths": [
+        "/guard.html"
+      ],
+      "activeServiceWorkers": 0
+    }
+  ],
+  "resourceOwnership": [],
+  "observerIdentity": [],
+  "cleanupFailures": [],
+  "cleanupRecovery": [],
+  "entryCache": [],
+  "entryCacheComparisons": [],
+  "styleScans": [],
+  "styleCompatibility": [],
+  "componentCompatibility": [],
+  "componentMemory": [
+    {
+      "browser": "chromium",
+      "sessions": [
+        {
+          "session": 1,
+          "warmupIterations": 10,
+          "measuredIterations": 25,
+          "settleMs": 1000,
+          "componentFilter": "react-antd",
+          "explicitGc": true,
+          "rssBytes": null,
+          "rssReason": "Chromium CDP does not expose a stable per-renderer RSS metric; RSS is not inferred from JS heap.",
+          "heapGrowthBytes": 56833820,
+          "samples": [
+            {
+              "label": "after-warmup",
+              "heapUsedBytes": 23277448,
+              "heapTotalBytes": 25231360,
+              "documents": 12,
+              "nodes": 3214,
+              "jsEventListeners": 146,
+              "domElements": 13,
+              "hosts": 0,
+              "iframes": 0,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              }
+            },
+            {
+              "label": "after-6",
+              "heapUsedBytes": 35728300,
+              "heapTotalBytes": 38338560,
+              "documents": 18,
+              "nodes": 5116,
+              "jsEventListeners": 224,
+              "domElements": 13,
+              "hosts": 0,
+              "iframes": 0,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              }
+            },
+            {
+              "label": "after-12",
+              "heapUsedBytes": 50023316,
+              "heapTotalBytes": 52494336,
+              "documents": 25,
+              "nodes": 7336,
+              "jsEventListeners": 318,
+              "domElements": 13,
+              "hosts": 0,
+              "iframes": 0,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              }
+            },
+            {
+              "label": "after-18",
+              "heapUsedBytes": 62470004,
+              "heapTotalBytes": 65486848,
+              "documents": 31,
+              "nodes": 9238,
+              "jsEventListeners": 396,
+              "domElements": 13,
+              "hosts": 0,
+              "iframes": 0,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              }
+            },
+            {
+              "label": "after-24",
+              "heapUsedBytes": 76729960,
+              "heapTotalBytes": 79642624,
+              "documents": 38,
+              "nodes": 11458,
+              "jsEventListeners": 490,
+              "domElements": 13,
+              "hosts": 0,
+              "iframes": 0,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              }
+            },
+            {
+              "label": "after-25",
+              "heapUsedBytes": 80111268,
+              "heapTotalBytes": 81215488,
+              "documents": 39,
+              "nodes": 11775,
+              "jsEventListeners": 503,
+              "domElements": 13,
+              "hosts": 0,
+              "iframes": 0,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              }
+            }
+          ],
+          "iterations": [
+            {
+              "iteration": 1,
+              "component": "react-antd",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 36.799999952316284,
+              "disposeDurationMs": 25.899999976158142,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 2,
+              "component": "react-antd",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 25.5,
+              "disposeDurationMs": 23.800000071525574,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 3,
+              "component": "react-antd",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 21.600000023841858,
+              "disposeDurationMs": 26.200000047683716,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 4,
+              "component": "react-antd",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 16.899999976158142,
+              "disposeDurationMs": 27.699999928474426,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 5,
+              "component": "react-antd",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 18.800000071525574,
+              "disposeDurationMs": 24.399999976158142,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 6,
+              "component": "react-antd",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 14.200000047683716,
+              "disposeDurationMs": 21.800000071525574,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 7,
+              "component": "react-antd",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 37.89999997615814,
+              "disposeDurationMs": 23.299999952316284,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 8,
+              "component": "react-antd",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 22.799999952316284,
+              "disposeDurationMs": 23.399999976158142,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 9,
+              "component": "react-antd",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 14.300000071525574,
+              "disposeDurationMs": 21.899999976158142,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 10,
+              "component": "react-antd",
+              "fastSwitch": true,
+              "mounts": 2,
+              "mountDurationMs": 32.700000047683716,
+              "disposeDurationMs": 45.199999928474426,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 11,
+              "component": "react-antd",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 15.5,
+              "disposeDurationMs": 22.199999928474426,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 12,
+              "component": "react-antd",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 13.100000023841858,
+              "disposeDurationMs": 23.5,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 13,
+              "component": "react-antd",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 36.40000009536743,
+              "disposeDurationMs": 28.100000023841858,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 14,
+              "component": "react-antd",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 22.100000023841858,
+              "disposeDurationMs": 24.899999976158142,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 15,
+              "component": "react-antd",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 19.600000023841858,
+              "disposeDurationMs": 25.200000047683716,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 16,
+              "component": "react-antd",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 19.199999928474426,
+              "disposeDurationMs": 21.799999952316284,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 17,
+              "component": "react-antd",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 13.100000023841858,
+              "disposeDurationMs": 22.300000071525574,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 18,
+              "component": "react-antd",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 14.600000023841858,
+              "disposeDurationMs": 22.100000023841858,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 19,
+              "component": "react-antd",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 35.299999952316284,
+              "disposeDurationMs": 29.899999976158142,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 20,
+              "component": "react-antd",
+              "fastSwitch": true,
+              "mounts": 2,
+              "mountDurationMs": 38.90000009536743,
+              "disposeDurationMs": 45.200000047683716,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 21,
+              "component": "react-antd",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 15.200000047683716,
+              "disposeDurationMs": 22.5,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 22,
+              "component": "react-antd",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 13.399999976158142,
+              "disposeDurationMs": 21.40000009536743,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 23,
+              "component": "react-antd",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 13.600000023841858,
+              "disposeDurationMs": 22.100000023841858,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 24,
+              "component": "react-antd",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 13.299999952316284,
+              "disposeDurationMs": 21,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            },
+            {
+              "iteration": 25,
+              "component": "react-antd",
+              "fastSwitch": false,
+              "mounts": 1,
+              "mountDurationMs": 39.10000002384186,
+              "disposeDurationMs": 25.199999928474426,
+              "disposeRejected": 0,
+              "hosts": 0,
+              "iframes": 0,
+              "domElements": 13,
+              "resources": {
+                "mediaHandlers": 0,
+                "resizeObservers": 0,
+                "resizeTargets": 0,
+                "intersectionObservers": 0,
+                "intersectionTargets": 0,
+                "animationFrames": 0,
+                "idleCallbacks": 0
+              },
+              "errors": 0
+            }
+          ],
+          "cleanup": {
+            "errors": [],
+            "hosts": 0,
+            "iframes": 0
+          }
+        }
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "name": "component-memory-session-1",
+      "browser": "chromium",
+      "samples": 25,
+      "unit": "bytes",
+      "min": 56833820,
+      "p50": 56833820,
+      "p95": 56833820,
+      "max": 56833820,
+      "threshold": 25165824,
+      "passed": false,
+      "details": {
+        "warmDocuments": 12,
+        "finalDocuments": 39,
+        "warmNodes": 3214,
+        "finalNodes": 11775,
+        "mountP50Ms": 19.199999928474426,
+        "mountP95Ms": 38.90000009536743,
+        "disposeP50Ms": 23.5,
+        "disposeP95Ms": 45.199999928474426,
+        "cleanupErrors": 0,
+        "cleanupErrorPhases": "[]"
+      }
+    }
+  ]
+}

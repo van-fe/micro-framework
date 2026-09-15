@@ -1,0 +1,518 @@
+{
+  "collectionBatch": "2026-09-08-batch-03",
+  "group": "runtime",
+  "executionStatus": "root-verified-with-explicit-coverage-limits",
+  "testsFrozen": true,
+  "typecheckEvidence": [
+    {
+      "command": "bun run --cwd examples/vue-app typecheck",
+      "exitCode": 0
+    },
+    {
+      "command": "bun run typecheck:tests",
+      "exitCode": 0
+    }
+  ],
+  "browserCoverage": "pending root coordinated runner; real Safari not run",
+  "productSourceChanges": [],
+  "issues": [
+    {
+      "id": "umijs/qiankun#3036",
+      "key": "Q3036",
+      "status": "regression-passed",
+      "originalTrigger": "network interruption on A→B; failed B is retried after returning to A and restoring connectivity",
+      "localContract": "same HTML URL retry must fetch again; A keep-alive survives",
+      "suggestedLayer": "runtime-core / entry-html",
+      "fixtureVersions": {
+        "vue": "3.5.42",
+        "vue-router": "4.5.1",
+        "vue-i18n": "11.1.12",
+        "vite": "8.2.2"
+      },
+      "validationPlan": "real BrowserContext offline, real HTTP deployment; click A, fail B, return A, restore network, click B",
+      "expectedBehavior": "same HTML URL retry must fetch again; A keep-alive survives",
+      "plannedTests": [
+        {
+          "path": "tests/e2e/upstream-batch03-runtime-network.spec.ts",
+          "title": "Q3036 recovers B at the identical URL after A-offline-B-A-online-B without reloading the host"
+        }
+      ],
+      "candidateStatusAfterAllEnginesPass": "regression-passed",
+      "limitations": [
+        "browser offline API models network loss; no OS adapter handoff"
+      ],
+      "cleanupAssertions": "shared fixture destroys runtime and checks zero owned iframe/surface nodes plus exact expected errors and no page errors",
+      "relatedIssues": [],
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-batch03-runtime-network.spec.ts",
+          "title": "Q3036 recovers B at the identical URL after A-offline-B-A-online-B without reloading the host",
+          "runId": "2026-09-08-upstream-04"
+        }
+      ],
+      "resolution": "same HTML URL retry must fetch again; A keep-alive survives；real BrowserContext offline, real HTTP deployment; click A, fail B, return A, restore network, click B 已在Chromium、Firefox、WebKit执行通过；真实Safari未运行。 限制：browser offline API models network loss; no OS adapter handoff",
+      "coverageLimitations": [
+        "browser offline API models network loss; no OS adapter handoff"
+      ]
+    },
+    {
+      "id": "umijs/qiankun#3031",
+      "key": "Q3031",
+      "status": "regression-passed",
+      "originalTrigger": "delayed manual unmount tears down a newly route-registered instance of the same Vite app",
+      "localContract": "same entry and name create distinct per-instance Realm/lifecycle ownership",
+      "suggestedLayer": "runtime-core AppController",
+      "fixtureVersions": {
+        "vue": "3.5.42",
+        "vue-router": "4.5.1",
+        "vue-i18n": "11.1.12",
+        "vite": "8.2.2"
+      },
+      "validationPlan": "real Vite Vue app manually and automatically mounted together; gate manual teardown until automatic instance receives interaction; release gate and interact with automatic instance",
+      "expectedBehavior": "same entry and name create distinct per-instance Realm/lifecycle ownership",
+      "plannedTests": [
+        {
+          "path": "tests/e2e/upstream-batch03-runtime-lifecycle.spec.ts",
+          "title": "Q3031 Q3005 isolates delayed manual unmount from an automatic instance of the same Vite Vue entry"
+        }
+      ],
+      "candidateStatusAfterAllEnginesPass": "regression-passed",
+      "limitations": [
+        "Vue 3.5.42 and Vite 8.2.2; not original unavailable external reproduction"
+      ],
+      "cleanupAssertions": "shared fixture destroys runtime and checks zero owned iframe/surface nodes plus exact expected errors and no page errors",
+      "relatedIssues": [],
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-batch03-runtime-lifecycle.spec.ts",
+          "title": "Q3031 Q3005 isolates delayed manual unmount from an automatic instance of the same Vite Vue entry",
+          "runId": "2026-09-08-upstream-04"
+        }
+      ],
+      "resolution": "same entry and name create distinct per-instance Realm/lifecycle ownership；real Vite Vue app manually and automatically mounted together; gate manual teardown until automatic instance receives interaction; release gate and interact with automatic instance 已在Chromium、Firefox、WebKit执行通过；真实Safari未运行。 限制：Vue 3.5.42 and Vite 8.2.2; not original unavailable external reproduction",
+      "coverageLimitations": [
+        "Vue 3.5.42 and Vite 8.2.2; not original unavailable external reproduction"
+      ]
+    },
+    {
+      "id": "umijs/qiankun#3005",
+      "key": "Q3005",
+      "status": "regression-passed",
+      "originalTrigger": "manual and automatic applications cannot coexist, and manual child routing hides the automatic app",
+      "localContract": "manual mount ownership and child routing must not alter route-registered sibling activation",
+      "suggestedLayer": "runtime-core",
+      "fixtureVersions": {
+        "vue": "3.5.42",
+        "vue-router": "4.5.1",
+        "vue-i18n": "11.1.12",
+        "vite": "8.2.2"
+      },
+      "validationPlan": "two Vite Vue instances; interact with both; navigate manual child to details; assert automatic stays mounted/home; delayed destroy preserves sibling",
+      "expectedBehavior": "manual mount ownership and child routing must not alter route-registered sibling activation",
+      "plannedTests": [
+        {
+          "path": "tests/e2e/upstream-batch03-runtime-lifecycle.spec.ts",
+          "title": "Q3031 Q3005 isolates delayed manual unmount from an automatic instance of the same Vite Vue entry"
+        }
+      ],
+      "candidateStatusAfterAllEnginesPass": "regression-passed",
+      "limitations": [
+        "common Runtime ownership and routing contract covered with two real Vue instances; original React16+Vue exact framework combination not recreated"
+      ],
+      "cleanupAssertions": "shared fixture destroys runtime and checks zero owned iframe/surface nodes plus exact expected errors and no page errors",
+      "relatedIssues": [],
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-batch03-runtime-lifecycle.spec.ts",
+          "title": "Q3031 Q3005 isolates delayed manual unmount from an automatic instance of the same Vite Vue entry",
+          "runId": "2026-09-08-upstream-04"
+        }
+      ],
+      "resolution": "manual mount ownership and child routing must not alter route-registered sibling activation；two Vite Vue instances; interact with both; navigate manual child to details; assert automatic stays mounted/home; delayed destroy preserves sibling 已在Chromium、Firefox、WebKit执行通过；真实Safari未运行。 限制：common Runtime ownership and routing contract covered with two real Vue instances; original React16+Vue exact framework combination not recreated",
+      "coverageLimitations": [
+        "common Runtime ownership and routing contract covered with two real Vue instances; original React16+Vue exact framework combination not recreated"
+      ]
+    },
+    {
+      "id": "umijs/qiankun#2987",
+      "key": "Q2987",
+      "status": "regression-passed",
+      "originalTrigger": "Vue before-unmount clearInterval does not stop timer when moving A→B",
+      "localContract": "native Realm timer identity survives lifecycle and Vue cleanup stops callbacks",
+      "suggestedLayer": "runtime-core / realm-host",
+      "fixtureVersions": {
+        "vue": "3.5.42",
+        "vue-router": "4.5.1",
+        "vue-i18n": "11.1.12",
+        "vite": "8.2.2"
+      },
+      "validationPlan": "real Vue onBeforeUnmount clears timer; switch host route; use independent sibling clock progress to bound observation; former timer count unchanged",
+      "expectedBehavior": "native Realm timer identity survives lifecycle and Vue cleanup stops callbacks",
+      "plannedTests": [
+        {
+          "path": "tests/e2e/upstream-batch03-runtime-lifecycle.spec.ts",
+          "title": "Q2987 clears real Vue onBeforeUnmount intervals during a real route switch while a sibling clock continues"
+        }
+      ],
+      "candidateStatusAfterAllEnginesPass": "regression-passed",
+      "limitations": [
+        "Vue 3.5.42/Vite 8.2.2; no original vite-plugin 1.0.15 adapter"
+      ],
+      "cleanupAssertions": "shared fixture destroys runtime and checks zero owned iframe/surface nodes plus exact expected errors and no page errors",
+      "relatedIssues": [],
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-batch03-runtime-lifecycle.spec.ts",
+          "title": "Q2987 clears real Vue onBeforeUnmount intervals during a real route switch while a sibling clock continues",
+          "runId": "2026-09-08-upstream-04"
+        }
+      ],
+      "resolution": "native Realm timer identity survives lifecycle and Vue cleanup stops callbacks；real Vue onBeforeUnmount clears timer; switch host route; use independent sibling clock progress to bound observation; former timer count unchanged 已在Chromium、Firefox、WebKit执行通过；真实Safari未运行。 限制：Vue 3.5.42/Vite 8.2.2; no original vite-plugin 1.0.15 adapter",
+      "coverageLimitations": [
+        "Vue 3.5.42/Vite 8.2.2; no original vite-plugin 1.0.15 adapter"
+      ]
+    },
+    {
+      "id": "Tencent/wujie#1054",
+      "key": "W1054",
+      "status": "regression-passed",
+      "originalTrigger": "destroy alive app at logout then new login no longer receives computed props",
+      "localContract": "fresh AppController resolves current async props and releases prior Realm",
+      "suggestedLayer": "runtime-core",
+      "fixtureVersions": {
+        "vue": "3.5.42",
+        "vue-router": "4.5.1",
+        "vue-i18n": "11.1.12",
+        "vite": "8.2.2"
+      },
+      "validationPlan": "mount/click/dispose twice same name+URL with different login props; assert new text, different instance IDs and removed iframe each time",
+      "expectedBehavior": "fresh AppController resolves current async props and releases prior Realm",
+      "plannedTests": [
+        {
+          "path": "tests/e2e/upstream-batch03-runtime-lifecycle.spec.ts",
+          "title": "W1054 supplies fresh login props after disposing and recreating an alive application"
+        }
+      ],
+      "candidateStatusAfterAllEnginesPass": "regression-passed",
+      "limitations": [
+        "tests Runtime props supplier equivalent of host computed store snapshot, not WujieVue adapter"
+      ],
+      "cleanupAssertions": "shared fixture destroys runtime and checks zero owned iframe/surface nodes plus exact expected errors and no page errors",
+      "relatedIssues": [],
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-batch03-runtime-lifecycle.spec.ts",
+          "title": "W1054 supplies fresh login props after disposing and recreating an alive application",
+          "runId": "2026-09-08-upstream-04"
+        }
+      ],
+      "resolution": "fresh AppController resolves current async props and releases prior Realm；mount/click/dispose twice same name+URL with different login props; assert new text, different instance IDs and removed iframe each time 已在Chromium、Firefox、WebKit执行通过；真实Safari未运行。 限制：tests Runtime props supplier equivalent of host computed store snapshot, not WujieVue adapter",
+      "coverageLimitations": [
+        "tests Runtime props supplier equivalent of host computed store snapshot, not WujieVue adapter"
+      ]
+    },
+    {
+      "id": "Tencent/wujie#1043",
+      "key": "W1043",
+      "status": "partial-coverage",
+      "originalTrigger": "automatic route synchronization loses history.state values",
+      "localContract": "explicit business prop update forwards route and private state to child native history, isolated from host",
+      "suggestedLayer": "runtime-core public update and services ports",
+      "fixtureVersions": {
+        "vue": "3.5.42",
+        "vue-router": "4.5.1",
+        "vue-i18n": "11.1.12",
+        "vite": "8.2.2"
+      },
+      "validationPlan": "real Vue router navigation with private state; host update changes route/state; child details then native router back restores state; host unchanged",
+      "expectedBehavior": "explicit business prop update forwards route and private state to child native history, isolated from host",
+      "plannedTests": [
+        {
+          "path": "tests/e2e/upstream-batch03-runtime-vue.spec.ts",
+          "title": "W1043 W1031 W1030 forwards host route props and history state into a real Vue router without rewriting native location"
+        }
+      ],
+      "candidateStatusAfterAllEnginesPass": "partial-coverage",
+      "limitations": [
+        "Runtime has no implicit host-child URL/history state synchronization API. Test covers explicit update bridge, not transparent synchronization"
+      ],
+      "statusReason": "Runtime has no implicit host-child URL/history state synchronization API. Test covers explicit update bridge, not transparent synchronization",
+      "nextAction": "补齐所列原始条件，或明确采用已验证的显式Runtime适配契约；不把适配自动等同于原上游API行为。",
+      "cleanupAssertions": "shared fixture destroys runtime and checks zero owned iframe/surface nodes plus exact expected errors and no page errors",
+      "relatedIssues": [],
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-batch03-runtime-vue.spec.ts",
+          "title": "W1043 W1031 W1030 forwards host route props and history state into a real Vue router without rewriting native location",
+          "runId": "2026-09-08-upstream-04"
+        }
+      ],
+      "resolution": "explicit business prop update forwards route and private state to child native history, isolated from host；real Vue router navigation with private state; host update changes route/state; child details then native router back restores state; host unchanged 已在Chromium、Firefox、WebKit执行通过；真实Safari未运行。 限制：Runtime has no implicit host-child URL/history state synchronization API. Test covers explicit update bridge, not transparent synchronization",
+      "coverageLimitations": [
+        "Runtime has no implicit host-child URL/history state synchronization API. Test covers explicit update bridge, not transparent synchronization"
+      ]
+    },
+    {
+      "id": "Tencent/wujie#1031",
+      "key": "W1031",
+      "status": "partial-coverage",
+      "originalTrigger": "changing component URL leaves Vue3 route unchanged and native location reports host address",
+      "localContract": "explicit route props update drives Vue Router; native location stays a real same-origin iframe Location",
+      "suggestedLayer": "runtime-core / realm-host",
+      "fixtureVersions": {
+        "vue": "3.5.42",
+        "vue-router": "4.5.1",
+        "vue-i18n": "11.1.12",
+        "vite": "8.2.2"
+      },
+      "validationPlan": "real Vite Vue router accepts host route update, navigates/back and reads native iframe path/origin",
+      "expectedBehavior": "explicit route props update drives Vue Router; native location stays a real same-origin iframe Location",
+      "plannedTests": [
+        {
+          "path": "tests/e2e/upstream-batch03-runtime-vue.spec.ts",
+          "title": "W1043 W1031 W1030 forwards host route props and history state into a real Vue router without rewriting native location"
+        }
+      ],
+      "candidateStatusAfterAllEnginesPass": "partial-coverage",
+      "limitations": [
+        "Vue3.5.42/Vite8.2.2 instead of Vue3.5.22/Vite7.1.7; native location cannot claim cross-origin entry origin; registration entry URL is immutable and is not a route prop"
+      ],
+      "statusReason": "Vue3.5.42/Vite8.2.2 instead of Vue3.5.22/Vite7.1.7; native location cannot claim cross-origin entry origin; registration entry URL is immutable and is not a route prop",
+      "nextAction": "补齐所列原始条件，或明确采用已验证的显式Runtime适配契约；不把适配自动等同于原上游API行为。",
+      "cleanupAssertions": "shared fixture destroys runtime and checks zero owned iframe/surface nodes plus exact expected errors and no page errors",
+      "relatedIssues": [
+        "Tencent/wujie#1030",
+        "Tencent/wujie#1031"
+      ],
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-batch03-runtime-vue.spec.ts",
+          "title": "W1043 W1031 W1030 forwards host route props and history state into a real Vue router without rewriting native location",
+          "runId": "2026-09-08-upstream-04"
+        }
+      ],
+      "resolution": "explicit route props update drives Vue Router; native location stays a real same-origin iframe Location；real Vite Vue router accepts host route update, navigates/back and reads native iframe path/origin 已在Chromium、Firefox、WebKit执行通过；真实Safari未运行。 限制：Vue3.5.42/Vite8.2.2 instead of Vue3.5.22/Vite7.1.7; native location cannot claim cross-origin entry origin; registration entry URL is immutable and is not a route prop",
+      "coverageLimitations": [
+        "Vue3.5.42/Vite8.2.2 instead of Vue3.5.22/Vite7.1.7; native location cannot claim cross-origin entry origin; registration entry URL is immutable and is not a route prop"
+      ]
+    },
+    {
+      "id": "Tencent/wujie#1030",
+      "key": "W1030",
+      "status": "partial-coverage",
+      "originalTrigger": "same report as W1031: URL changes do not drive Vue3 router and location origin is surprising",
+      "localContract": "real native Location and explicit app update semantics",
+      "suggestedLayer": "runtime-core / realm-host",
+      "fixtureVersions": {
+        "vue": "3.5.42",
+        "vue-router": "4.5.1",
+        "vue-i18n": "11.1.12",
+        "vite": "8.2.2"
+      },
+      "validationPlan": "same test as W1031; separate upstream identity, not a distinct defect",
+      "expectedBehavior": "real native Location and explicit app update semantics",
+      "plannedTests": [
+        {
+          "path": "tests/e2e/upstream-batch03-runtime-vue.spec.ts",
+          "title": "W1043 W1031 W1030 forwards host route props and history state into a real Vue router without rewriting native location"
+        }
+      ],
+      "candidateStatusAfterAllEnginesPass": "partial-coverage",
+      "limitations": [
+        "duplicate scenario retained; explicit bridge does not implement Wujie component url watch or fake native location"
+      ],
+      "statusReason": "duplicate scenario retained; explicit bridge does not implement Wujie component url watch or fake native location",
+      "nextAction": "补齐所列原始条件，或明确采用已验证的显式Runtime适配契约；不把适配自动等同于原上游API行为。",
+      "cleanupAssertions": "shared fixture destroys runtime and checks zero owned iframe/surface nodes plus exact expected errors and no page errors",
+      "relatedIssues": [
+        "Tencent/wujie#1030",
+        "Tencent/wujie#1031"
+      ],
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-batch03-runtime-vue.spec.ts",
+          "title": "W1043 W1031 W1030 forwards host route props and history state into a real Vue router without rewriting native location",
+          "runId": "2026-09-08-upstream-04"
+        }
+      ],
+      "resolution": "real native Location and explicit app update semantics；same test as W1031; separate upstream identity, not a distinct defect 已在Chromium、Firefox、WebKit执行通过；真实Safari未运行。 限制：duplicate scenario retained; explicit bridge does not implement Wujie component url watch or fake native location",
+      "coverageLimitations": [
+        "duplicate scenario retained; explicit bridge does not implement Wujie component url watch or fake native location"
+      ]
+    },
+    {
+      "id": "Tencent/wujie#1003",
+      "key": "W1003",
+      "status": "regression-passed",
+      "originalTrigger": "global router/vue-i18n instances become broken after lifecycle destroy and reentry",
+      "localContract": "real module globals are per Realm; new lifetime creates and disposes router/i18n",
+      "suggestedLayer": "runtime-core / realm-host",
+      "fixtureVersions": {
+        "vue": "3.5.42",
+        "vue-router": "4.5.1",
+        "vue-i18n": "11.1.12",
+        "vite": "8.2.2"
+      },
+      "validationPlan": "A→B→A real Vue router/i18n; click details/counter and assert translated text on both mounts; assert removal between mounts",
+      "expectedBehavior": "real module globals are per Realm; new lifetime creates and disposes router/i18n",
+      "plannedTests": [
+        {
+          "path": "tests/e2e/upstream-batch03-runtime-vue.spec.ts",
+          "title": "W1003 recreates real Vue Router and vue-i18n instances after A-B-A lifecycle destruction"
+        }
+      ],
+      "candidateStatusAfterAllEnginesPass": "regression-passed",
+      "limitations": [
+        "original versions unspecified; pinned Vue3.5.42/router4.5.1/i18n11.1.12"
+      ],
+      "cleanupAssertions": "shared fixture destroys runtime and checks zero owned iframe/surface nodes plus exact expected errors and no page errors",
+      "relatedIssues": [],
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-batch03-runtime-vue.spec.ts",
+          "title": "W1003 recreates real Vue Router and vue-i18n instances after A-B-A lifecycle destruction",
+          "runId": "2026-09-08-upstream-04"
+        }
+      ],
+      "resolution": "real module globals are per Realm; new lifetime creates and disposes router/i18n；A→B→A real Vue router/i18n; click details/counter and assert translated text on both mounts; assert removal between mounts 已在Chromium、Firefox、WebKit执行通过；真实Safari未运行。 限制：original versions unspecified; pinned Vue3.5.42/router4.5.1/i18n11.1.12",
+      "coverageLimitations": [
+        "original versions unspecified; pinned Vue3.5.42/router4.5.1/i18n11.1.12"
+      ]
+    },
+    {
+      "id": "Tencent/wujie#1020",
+      "key": "W1020",
+      "status": "regression-passed",
+      "originalTrigger": "host route-change events not received by alive child after host route changes",
+      "localContract": "runtime event subscription remains live while kept alive and reactivation does not duplicate it",
+      "suggestedLayer": "runtime-core events and keepAlive",
+      "fixtureVersions": {
+        "vue": "3.5.42",
+        "vue-router": "4.5.1",
+        "vue-i18n": "11.1.12",
+        "vite": "8.2.2"
+      },
+      "validationPlan": "emit route changes while visible/hidden/reactivated into real Vue router; assert route view and retained counter; back once restores previous route",
+      "expectedBehavior": "runtime event subscription remains live while kept alive and reactivation does not duplicate it",
+      "plannedTests": [
+        {
+          "path": "tests/e2e/upstream-batch03-runtime-vue.spec.ts",
+          "title": "W1020 delivers host route events to an alive Vue router across hidden and reactivated states exactly once"
+        }
+      ],
+      "candidateStatusAfterAllEnginesPass": "regression-passed",
+      "limitations": [
+        "publish occurs after child mount/subscription ready; EventBus does not promise replay for events emitted before subscription"
+      ],
+      "cleanupAssertions": "shared fixture destroys runtime and checks zero owned iframe/surface nodes plus exact expected errors and no page errors",
+      "relatedIssues": [],
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-batch03-runtime-vue.spec.ts",
+          "title": "W1020 delivers host route events to an alive Vue router across hidden and reactivated states exactly once",
+          "runId": "2026-09-08-upstream-04"
+        }
+      ],
+      "resolution": "runtime event subscription remains live while kept alive and reactivation does not duplicate it；emit route changes while visible/hidden/reactivated into real Vue router; assert route view and retained counter; back once restores previous route 已在Chromium、Firefox、WebKit执行通过；真实Safari未运行。 限制：publish occurs after child mount/subscription ready; EventBus does not promise replay for events emitted before subscription",
+      "coverageLimitations": [
+        "publish occurs after child mount/subscription ready; EventBus does not promise replay for events emitted before subscription"
+      ]
+    },
+    {
+      "id": "Tencent/wujie#991",
+      "key": "W991",
+      "status": "regression-passed",
+      "originalTrigger": "preload+exec+alive loses CSS root variables",
+      "localContract": "preload and prewarm preserve HTML root CSS and bootstrap-added styles through activation",
+      "suggestedLayer": "runtime-core / dom-surface",
+      "fixtureVersions": {
+        "vue": "3.5.42",
+        "vue-router": "4.5.1",
+        "vue-i18n": "11.1.12",
+        "vite": "8.2.2"
+      },
+      "validationPlan": "preload HTML then prewarm bootstrap adding CSS variable; activate/click/deactivate/activate twice; assert background border padding, state and iframe identity",
+      "expectedBehavior": "preload and prewarm preserve HTML root CSS and bootstrap-added styles through activation",
+      "plannedTests": [
+        {
+          "path": "tests/e2e/upstream-batch03-runtime-prewarm.spec.ts",
+          "title": "W991 preserves root CSS variables from preload and pre-execution through alive activation"
+        }
+      ],
+      "candidateStatusAfterAllEnginesPass": "regression-passed",
+      "limitations": [
+        "original component library and exact versions unspecified; equivalent CSS variables/background/border probe, not screenshot-specific message library"
+      ],
+      "cleanupAssertions": "shared fixture destroys runtime and checks zero owned iframe/surface nodes plus exact expected errors and no page errors",
+      "relatedIssues": [],
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-batch03-runtime-prewarm.spec.ts",
+          "title": "W991 preserves root CSS variables from preload and pre-execution through alive activation",
+          "runId": "2026-09-08-upstream-04"
+        }
+      ],
+      "resolution": "preload and prewarm preserve HTML root CSS and bootstrap-added styles through activation；preload HTML then prewarm bootstrap adding CSS variable; activate/click/deactivate/activate twice; assert background border padding, state and iframe identity 已在Chromium、Firefox、WebKit执行通过；真实Safari未运行。 限制：original component library and exact versions unspecified; equivalent CSS variables/background/border probe, not screenshot-specific message library",
+      "coverageLimitations": [
+        "original component library and exact versions unspecified; equivalent CSS variables/background/border probe, not screenshot-specific message library"
+      ]
+    },
+    {
+      "id": "Tencent/wujie#1033",
+      "key": "W1033",
+      "status": "partial-coverage",
+      "originalTrigger": "notification from never-opened preloaded alive application invisible; moving it to host loses styles/svg",
+      "localContract": "hidden prewarm application stays hidden; host notification uses explicit services boundary",
+      "suggestedLayer": "runtime-core services / prewarm",
+      "fixtureVersions": {
+        "vue": "3.5.42",
+        "vue-router": "4.5.1",
+        "vue-i18n": "11.1.12",
+        "vite": "8.2.2"
+      },
+      "validationPlan": "prewarm bootstrap requests host-owned notification service; assert host-visible styled SVG notice and dismissal while app remains hidden; no child token leakage",
+      "expectedBehavior": "hidden prewarm application stays hidden; host notification uses explicit services boundary",
+      "plannedTests": [
+        {
+          "path": "tests/e2e/upstream-batch03-runtime-prewarm.spec.ts",
+          "title": "W1033 sends a notification through an explicit host service while the prewarmed application remains hidden"
+        }
+      ],
+      "candidateStatusAfterAllEnginesPass": "partial-coverage",
+      "limitations": [
+        "explicit host-owned notification is a supported integration path; does not implement original child-owned arbitrary popup visible while hidden or vxe-table tooltip positioning"
+      ],
+      "statusReason": "explicit host-owned notification is a supported integration path; does not implement original child-owned arbitrary popup visible while hidden or vxe-table tooltip positioning",
+      "nextAction": "补齐所列原始条件，或明确采用已验证的显式Runtime适配契约；不把适配自动等同于原上游API行为。",
+      "cleanupAssertions": "shared fixture destroys runtime and checks zero owned iframe/surface nodes plus exact expected errors and no page errors",
+      "relatedIssues": [],
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-batch03-runtime-prewarm.spec.ts",
+          "title": "W1033 sends a notification through an explicit host service while the prewarmed application remains hidden",
+          "runId": "2026-09-08-upstream-04"
+        }
+      ],
+      "resolution": "hidden prewarm application stays hidden; host notification uses explicit services boundary；prewarm bootstrap requests host-owned notification service; assert host-visible styled SVG notice and dismissal while app remains hidden; no child token leakage 已在Chromium、Firefox、WebKit执行通过；真实Safari未运行。 限制：explicit host-owned notification is a supported integration path; does not implement original child-owned arbitrary popup visible while hidden or vxe-table tooltip positioning",
+      "coverageLimitations": [
+        "explicit host-owned notification is a supported integration path; does not implement original child-owned arbitrary popup visible while hidden or vxe-table tooltip positioning"
+      ]
+    }
+  ],
+  "fixtureCorrections": [
+    {
+      "reason": "Vue Router 4 object location consumes query/hash from separate keys. Passing {path: fullUrl, state} strips search from path; this was test fixture misuse, not a Runtime defect.",
+      "evidence": "tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/first-e2e.json",
+      "engines": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ],
+      "correction": "Resolve string URL using router.resolve, then pass explicit path/query/hash/state for mount, update and event navigation. Query and history-state assertions unchanged.",
+      "source": "examples/vue-app/src/upstream-batch03/runtime-entry.ts",
+      "typecheckExitCode": 0,
+      "browserRetest": "pending coordinated root runner"
+    }
+  ],
+  "rootVerificationRun": "2026-09-08-upstream-04"
+}

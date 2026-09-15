@@ -1,0 +1,660 @@
+{
+  "id": "2026-09-08-upstream-04",
+  "collectionBatch": "2026-09-08-batch-03",
+  "completedAt": "2026-09-08T11:09:46.276024+00:00",
+  "scope": "本批新增 **40 条**（qiankun、wujie 各 20），累计 **120 条**。本批 **6 条本地缺陷修复并通过、23 条所列范围回归通过、11 条部分覆盖**。部分覆盖不计作原场景完全兼容。",
+  "browsers": [
+    "Chromium",
+    "Firefox",
+    "WebKit"
+  ],
+  "realSafari": "not-run",
+  "statusCounts": {
+    "regression-passed": 23,
+    "partial-coverage": 11,
+    "fixed": 6
+  },
+  "cumulativeStatusCounts": {
+    "regression-passed": 75,
+    "fixed": 32,
+    "out-of-scope": 2,
+    "partial-coverage": 11
+  },
+  "gates": [
+    {
+      "name": "frozen-install",
+      "command": [
+        "bun",
+        "install",
+        "--frozen-lockfile"
+      ],
+      "exitCode": 0,
+      "log": "tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/frozen-install.log",
+      "executionEvidence": "functions.exec tool chunk bc88ef observed exitCode=0; 937 installs checked without lock changes"
+    },
+    {
+      "name": "architecture-verified",
+      "command": [
+        "bun",
+        "run",
+        "check:architecture"
+      ],
+      "cwd": "/Users/fanfangbo/workspace/micro-framework",
+      "startedAt": "2026-09-08T11:02:33.945064+00:00",
+      "completedAt": "2026-09-08T11:02:33.986356+00:00",
+      "durationSeconds": 0.041244417000000005,
+      "exitCode": 0,
+      "log": "tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/architecture-verified.log",
+      "logSha256": "1a9ca4a890c2dd9cbe19c3da8d7804cf3baf9d3559aa7ad5af620303bc6f3669"
+    },
+    {
+      "name": "typecheck-verified",
+      "command": [
+        "bun",
+        "run",
+        "typecheck"
+      ],
+      "cwd": "/Users/fanfangbo/workspace/micro-framework",
+      "startedAt": "2026-09-08T11:01:15.541062+00:00",
+      "completedAt": "2026-09-08T11:01:28.360388+00:00",
+      "durationSeconds": 12.819209375,
+      "exitCode": 0,
+      "log": "tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/typecheck-verified.log",
+      "logSha256": "a7b7f738221104a85b1deaeb34529cbaec35f01593d0e78a2a8bb13ca8acc31e"
+    },
+    {
+      "name": "build-verified",
+      "command": [
+        "bun",
+        "run",
+        "build"
+      ],
+      "cwd": "/Users/fanfangbo/workspace/micro-framework",
+      "startedAt": "2026-09-08T11:01:15.529556+00:00",
+      "completedAt": "2026-09-08T11:01:23.532747+00:00",
+      "durationSeconds": 8.003227,
+      "exitCode": 0,
+      "log": "tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/build-verified.log",
+      "logSha256": "5204be55b5e4ebd93b33fb0a811103b13ce28eabd2ff1d9eacace9c965333625"
+    },
+    {
+      "name": "unit-verified",
+      "command": [
+        "bun",
+        "run",
+        "test:unit",
+        "--reporter=json",
+        "--outputFile=tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/unit-verified.json"
+      ],
+      "cwd": "/Users/fanfangbo/workspace/micro-framework",
+      "startedAt": "2026-09-08T11:02:32.756242+00:00",
+      "completedAt": "2026-09-08T11:02:34.256347+00:00",
+      "durationSeconds": 1.5000139590000001,
+      "exitCode": 0,
+      "log": "tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/unit-verified.log",
+      "logSha256": "e2a57ef62aeeeeed42198457cc03775c30d0320cf379c90c3d98393cbadad9da",
+      "reportPath": "tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/unit-verified.json",
+      "reportSha256": "609899fea1c7c1d08cb4a7fa77e79aba09d5907c7c13f7e5259248089dcdf226",
+      "counts": {
+        "passed": 174,
+        "failed": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "name": "browser-verified",
+      "command": [
+        "bun",
+        "run",
+        "test:browser",
+        "--reporter=json",
+        "--reporter=verbose",
+        "--outputFile=tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/browser-verified.json"
+      ],
+      "cwd": "/Users/fanfangbo/workspace/micro-framework",
+      "startedAt": "2026-09-08T11:08:29.591135+00:00",
+      "completedAt": "2026-09-08T11:08:43.285252+00:00",
+      "durationSeconds": 13.693987,
+      "exitCode": 0,
+      "log": "tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/browser-verified.log",
+      "logSha256": "f8ac1482c231f7ad2544be8e01972f9e4efacc39c153d0ac0a33c6ca63ef2f0e",
+      "reportPath": "tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/browser-verified.json",
+      "reportSha256": "52bfbf73a838621ea65b6eb08869b2ef5cce44b13f53b29051b3c3438bb88896",
+      "counts": {
+        "passed": 462,
+        "failed": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "name": "e2e-verified",
+      "command": [
+        "bunx",
+        "playwright",
+        "test",
+        "--reporter=json"
+      ],
+      "cwd": "/Users/fanfangbo/workspace/micro-framework",
+      "startedAt": "2026-09-08T11:02:05.303366+00:00",
+      "completedAt": "2026-09-08T11:08:05.447642+00:00",
+      "durationSeconds": 360.142755166,
+      "exitCode": 0,
+      "log": "tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/e2e-verified.log",
+      "logSha256": "a7c7be7030b05fc2f6ac329b4aa915f49fe36bf5672b7c82887d89b500b9fb85",
+      "reportPath": "tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/e2e-verified.json",
+      "reportSha256": "c8212236000308746139137c32112b2213ce9f89fb5226829e1d7cc7b587f909",
+      "counts": {
+        "passed": 360,
+        "failed": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "name": "production-verified",
+      "command": [
+        "bunx",
+        "playwright",
+        "test",
+        "--config",
+        "playwright.production.config.ts",
+        "--reporter=json"
+      ],
+      "cwd": "/Users/fanfangbo/workspace/micro-framework",
+      "startedAt": "2026-09-08T11:09:11.043551+00:00",
+      "completedAt": "2026-09-08T11:09:28.890273+00:00",
+      "durationSeconds": 17.846580832999997,
+      "exitCode": 0,
+      "log": "tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/production-verified.log",
+      "logSha256": "48d66961273b276ebab1f078e62171aa87e15f3e69ca0d67510c6db0dd331cd0",
+      "reportPath": "tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/production-verified.json",
+      "reportSha256": "48d66961273b276ebab1f078e62171aa87e15f3e69ca0d67510c6db0dd331cd0",
+      "counts": {
+        "passed": 15,
+        "failed": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "name": "artifacts-verified",
+      "command": [
+        "bun",
+        "run",
+        "check:artifacts"
+      ],
+      "cwd": "/Users/fanfangbo/workspace/micro-framework",
+      "startedAt": "2026-09-08T11:02:06.503543+00:00",
+      "completedAt": "2026-09-08T11:02:06.887221+00:00",
+      "durationSeconds": 0.383624375,
+      "exitCode": 1,
+      "log": "tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/artifacts-verified.log",
+      "logSha256": "69d5bf7825c99be414ad9376608189b87bcc67f95f599d469c95b5e1f2f19459"
+    }
+  ],
+  "sourceSnapshot": "tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/source-verified-sha256.json",
+  "finalSourceUnchanged": true,
+  "sourceArchives": [
+    {
+      "repository": "umijs/qiankun",
+      "collectionBatch": "2026-09-08-batch-03",
+      "query": "repo:umijs/qiankun is:issue label:bug",
+      "searchReturnedCount": 40,
+      "repositoryMatchingTotalCount": 40,
+      "incompleteResults": false,
+      "allRecentReturnedCount": 100,
+      "allRecentTruncated": true,
+      "collected": 20,
+      "requestedBugIssueCount": 20,
+      "bugLabelCount": 0,
+      "supplementaryCount": 20,
+      "exactBugShortfall": 20,
+      "collectedAt": "2026-09-08T10:37:35.206541+00:00",
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-03-qiankun-sources.json",
+      "metadataArchive": "tests/upstream-issues/collections/2026-09-08-batch-03-qiankun-api.json",
+      "selectionNote": "全部精确bug身份均已登记；选取近期明确故障补充报告，40条均真实无标签。相近报告保留身份并relatedIssues关联，不声明为40种不同缺陷。"
+    },
+    {
+      "repository": "Tencent/wujie",
+      "collectionBatch": "2026-09-08-batch-03",
+      "query": "repo:Tencent/wujie is:issue label:bug",
+      "searchReturnedCount": 10,
+      "repositoryMatchingTotalCount": 10,
+      "incompleteResults": false,
+      "allRecentReturnedCount": 100,
+      "allRecentTruncated": true,
+      "collected": 20,
+      "requestedBugIssueCount": 20,
+      "bugLabelCount": 0,
+      "supplementaryCount": 20,
+      "exactBugShortfall": 20,
+      "collectedAt": "2026-09-08T10:37:34.925591+00:00",
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-03-wujie-sources.json",
+      "metadataArchive": "tests/upstream-issues/collections/2026-09-08-batch-03-wujie-api.json",
+      "selectionNote": "全部精确bug身份均已登记；选取近期明确故障补充报告，40条均真实无标签。相近报告保留身份并relatedIssues关联，不声明为40种不同缺陷。"
+    }
+  ],
+  "partialCoverage": [
+    {
+      "id": "umijs/qiankun#3090",
+      "reason": "自定义fetch本身是已明确不映射的接口（migration-tools/qiankun.ts）；测试验证include凭据的声明式迁移，非原回调调用次数。",
+      "nextAction": "补齐所列原始条件，或明确采用已验证的显式Runtime适配契约；不把适配自动等同于原上游API行为。"
+    },
+    {
+      "id": "umijs/qiankun#3059",
+      "reason": "上游无最小仓库、失败缓存条目或Webpack版本，代表性no-store重复加载不证明Chrome135历史缓存损坏现场",
+      "nextAction": "取得故障缓存条目、Webpack版本及原工程，在Chrome135等原条件下重现后补验证。"
+    },
+    {
+      "id": "umijs/qiankun#3056",
+      "reason": "已覆盖显式应用API基址；本地同源iframe Location不能冒充远端origin，未将任意fetch相对字符串自动变成应用远端地址。",
+      "nextAction": "补齐所列原始条件，或明确采用已验证的显式Runtime适配契约；不把适配自动等同于原上游API行为。"
+    },
+    {
+      "id": "umijs/qiankun#3035",
+      "reason": "原CRA React18+AntD完整工程未提供；本次HTML/原生动态图片覆盖地址机制，未等价覆盖其AntD组件样式。",
+      "nextAction": "补齐所列原始条件，或明确采用已验证的显式Runtime适配契约；不把适配自动等同于原上游API行为。"
+    },
+    {
+      "id": "umijs/qiankun#3021",
+      "reason": "未给原异常栈、版本、复现工程；代表性嵌套运行契约通过不能证明原未知异常完全覆盖。",
+      "nextAction": "取得原嵌套项目、版本和异常栈，再针对原失败点验证。"
+    },
+    {
+      "id": "umijs/qiankun#2982",
+      "reason": "测试是显式链接适配，不覆盖未声明时浏览器隐式/favicon.ico或浏览器标签图标；不能据此称原问题修复。；显式icon/manifest原先在HTML head提取时被丢弃，现保留在应用ShadowRoot；此附带缺陷已保存失败和修复证据。元数据可查询不表示宿主标签图标、PWA、CSP/refresh生效。",
+      "nextAction": "以真实浏览器顶层子目录部署对照隐式/favicon.ico请求；应用ShadowRoot元数据不替代宿主Document策略。"
+    },
+    {
+      "id": "umijs/qiankun#2993",
+      "reason": "iframe内原生加载remote factories；已在宿主求值后直接传入的函数会依JS词法Realm保留宿主window，未将该函数自动重定位",
+      "nextAction": "补原共享配置，区分宿主已求值函数与iframe独立加载remote；前者保留JS原生词法Realm，需显式服务契约。"
+    },
+    {
+      "id": "Tencent/wujie#1043",
+      "reason": "Runtime has no implicit host-child URL/history state synchronization API. Test covers explicit update bridge, not transparent synchronization",
+      "nextAction": "补齐所列原始条件，或明确采用已验证的显式Runtime适配契约；不把适配自动等同于原上游API行为。"
+    },
+    {
+      "id": "Tencent/wujie#1033",
+      "reason": "explicit host-owned notification is a supported integration path; does not implement original child-owned arbitrary popup visible while hidden or vxe-table tooltip positioning",
+      "nextAction": "补齐所列原始条件，或明确采用已验证的显式Runtime适配契约；不把适配自动等同于原上游API行为。"
+    },
+    {
+      "id": "Tencent/wujie#1031",
+      "reason": "Vue3.5.42/Vite8.2.2 instead of Vue3.5.22/Vite7.1.7; native location cannot claim cross-origin entry origin; registration entry URL is immutable and is not a route prop",
+      "nextAction": "补齐所列原始条件，或明确采用已验证的显式Runtime适配契约；不把适配自动等同于原上游API行为。"
+    },
+    {
+      "id": "Tencent/wujie#1030",
+      "reason": "duplicate scenario retained; explicit bridge does not implement Wujie component url watch or fake native location",
+      "nextAction": "补齐所列原始条件，或明确采用已验证的显式Runtime适配契约；不把适配自动等同于原上游API行为。"
+    }
+  ],
+  "releaseReady": false,
+  "releaseGateFailure": {
+    "metric": "bundledRuntimeGzipBytes",
+    "actual": 110025,
+    "budget": 50000,
+    "thresholdChanged": false
+  },
+  "firstFailureEvidence": [
+    "tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/first-browser.log",
+    "tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/first-browser-executed.json",
+    "tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/first-browser-executed.log",
+    "tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/second-browser.json",
+    "tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/dom-third-executed.json",
+    "tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/first-e2e.json",
+    "tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/second-e2e.json",
+    "tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/e2e-final.json",
+    "tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/unit-initial.log"
+  ],
+  "historyNotes": [
+    "首次browser及unit沙箱EPERM为环境失败，使用授权机制后执行。",
+    "首次全量E2E在确认metadata模板默认Document为空失败后主动SIGINT，exit130及skipped保留，不计最终成功。",
+    "Vue Router path对象用法、注册测试activeWhen、Vite内联资源及WebKit跨用例URL缓存为测试fixture修正，不计产品修复。",
+    "旧80条issues/sources保持原结果与历史证据绑定；本次全量门禁没有批量覆写旧结论。"
+  ],
+  "testBindings": {
+    "umijs/qiankun#3151": [
+      {
+        "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+        "title": "batch03 DOM upstream contracts Q3151 prepares head styles before the adjacent inline script runs and preserves relative links on reload",
+        "runId": "2026-09-08-upstream-04"
+      }
+    ],
+    "umijs/qiankun#3125": [
+      {
+        "path": "tests/browser/upstream-batch03-entry.browser.test.ts",
+        "title": "batch03 native entry execution Q3125 Q2971 isolates real Vite production lifecycle and absolute URL dynamic imports in sibling Realms",
+        "runId": "2026-09-08-upstream-04"
+      },
+      {
+        "path": "tests/e2e/upstream-batch03-entry.spec.ts",
+        "title": "W1049 Q3125 Q2971 loads Vite production routes once with isolated URL imports and clean Runtime destruction",
+        "runId": "2026-09-08-upstream-04"
+      }
+    ],
+    "umijs/qiankun#3090": [
+      {
+        "path": "tests/e2e/upstream-batch03-resources.spec.ts",
+        "title": "Q3090 applies declarative include credentials to entry and dynamic script (registered=false)",
+        "runId": "2026-09-08-upstream-04"
+      },
+      {
+        "path": "tests/e2e/upstream-batch03-resources.spec.ts",
+        "title": "Q3090 applies declarative include credentials to entry and dynamic script (registered=true)",
+        "runId": "2026-09-08-upstream-04"
+      }
+    ],
+    "umijs/qiankun#3061": [
+      {
+        "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+        "title": "batch03 DOM upstream contracts Q3061 Q2968 Q2969 W1001 renders actual Vite Vue scoped imports and CSS module assets within the application",
+        "runId": "2026-09-08-upstream-04"
+      },
+      {
+        "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+        "title": "batch03 DOM upstream contracts Q3061 Q2968 Q2969 W1001 preserves Vite dev injected global scoped and CSS module styles",
+        "runId": "2026-09-08-upstream-04"
+      }
+    ],
+    "umijs/qiankun#3059": [
+      {
+        "path": "tests/browser/upstream-batch03-entry.browser.test.ts",
+        "title": "batch03 native entry execution Q3059 resolves real webpack automatic publicPath on cold and repeated application loads",
+        "runId": "2026-09-08-upstream-04"
+      }
+    ],
+    "umijs/qiankun#3056": [
+      {
+        "path": "tests/e2e/upstream-batch03-resources.spec.ts",
+        "title": "Q3056 W995 keep explicit child API origin and host Axios baseURL during Vue Router guards",
+        "runId": "2026-09-08-upstream-04"
+      }
+    ],
+    "umijs/qiankun#3053": [
+      {
+        "path": "tests/browser/upstream-batch03-entry.browser.test.ts",
+        "title": "batch03 native entry execution Q3053 preserves explicit relative publicPath for real webpack lazy chunks on the application origin",
+        "runId": "2026-09-08-upstream-04"
+      }
+    ],
+    "umijs/qiankun#3036": [
+      {
+        "path": "tests/e2e/upstream-batch03-runtime-network.spec.ts",
+        "title": "Q3036 recovers B at the identical URL after A-offline-B-A-online-B without reloading the host",
+        "runId": "2026-09-08-upstream-04"
+      }
+    ],
+    "umijs/qiankun#3035": [
+      {
+        "path": "tests/e2e/upstream-batch03-resources.spec.ts",
+        "title": "Q3035 W1005 resolve static and dynamic image and SVG href before requests with host same-name decoys",
+        "runId": "2026-09-08-upstream-04"
+      }
+    ],
+    "umijs/qiankun#3031": [
+      {
+        "path": "tests/e2e/upstream-batch03-runtime-lifecycle.spec.ts",
+        "title": "Q3031 Q3005 isolates delayed manual unmount from an automatic instance of the same Vite Vue entry",
+        "runId": "2026-09-08-upstream-04"
+      }
+    ],
+    "umijs/qiankun#3021": [
+      {
+        "path": "tests/e2e/upstream-batch03-resources.spec.ts",
+        "title": "Q3021 mounts a nested runtime grandchild with distinct executing Realms and destroys the full tree",
+        "runId": "2026-09-08-upstream-04"
+      }
+    ],
+    "umijs/qiankun#3005": [
+      {
+        "path": "tests/e2e/upstream-batch03-runtime-lifecycle.spec.ts",
+        "title": "Q3031 Q3005 isolates delayed manual unmount from an automatic instance of the same Vite Vue entry",
+        "runId": "2026-09-08-upstream-04"
+      }
+    ],
+    "umijs/qiankun#2987": [
+      {
+        "path": "tests/e2e/upstream-batch03-runtime-lifecycle.spec.ts",
+        "title": "Q2987 clears real Vue onBeforeUnmount intervals during a real route switch while a sibling clock continues",
+        "runId": "2026-09-08-upstream-04"
+      }
+    ],
+    "umijs/qiankun#2984": [
+      {
+        "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+        "title": "batch03 DOM upstream contracts Q2983 Q2984 preserves body substrings in attribute selectors and following rules",
+        "runId": "2026-09-08-upstream-04"
+      }
+    ],
+    "umijs/qiankun#2983": [
+      {
+        "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+        "title": "batch03 DOM upstream contracts Q2983 Q2984 preserves body substrings in attribute selectors and following rules",
+        "runId": "2026-09-08-upstream-04"
+      }
+    ],
+    "umijs/qiankun#2982": [
+      {
+        "path": "tests/e2e/upstream-batch03-resources.spec.ts",
+        "title": "Q2982 keeps explicit favicon and manifest paths in application subdirectory without replacing host metadata",
+        "runId": "2026-09-08-upstream-04"
+      }
+    ],
+    "umijs/qiankun#2993": [
+      {
+        "path": "tests/browser/upstream-batch03-entry.browser.test.ts",
+        "title": "batch03 native entry execution Q2993 evaluates real Module Federation remote factories independently for sibling iframe consumers",
+        "runId": "2026-09-08-upstream-04"
+      }
+    ],
+    "umijs/qiankun#2971": [
+      {
+        "path": "tests/browser/upstream-batch03-entry.browser.test.ts",
+        "title": "batch03 native entry execution Q3125 Q2971 isolates real Vite production lifecycle and absolute URL dynamic imports in sibling Realms",
+        "runId": "2026-09-08-upstream-04"
+      },
+      {
+        "path": "tests/e2e/upstream-batch03-entry.spec.ts",
+        "title": "W1049 Q3125 Q2971 loads Vite production routes once with isolated URL imports and clean Runtime destruction",
+        "runId": "2026-09-08-upstream-04"
+      }
+    ],
+    "umijs/qiankun#2969": [
+      {
+        "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+        "title": "batch03 DOM upstream contracts Q3061 Q2968 Q2969 W1001 renders actual Vite Vue scoped imports and CSS module assets within the application",
+        "runId": "2026-09-08-upstream-04"
+      },
+      {
+        "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+        "title": "batch03 DOM upstream contracts Q3061 Q2968 Q2969 W1001 preserves Vite dev injected global scoped and CSS module styles",
+        "runId": "2026-09-08-upstream-04"
+      }
+    ],
+    "umijs/qiankun#2968": [
+      {
+        "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+        "title": "batch03 DOM upstream contracts Q3061 Q2968 Q2969 W1001 renders actual Vite Vue scoped imports and CSS module assets within the application",
+        "runId": "2026-09-08-upstream-04"
+      },
+      {
+        "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+        "title": "batch03 DOM upstream contracts Q3061 Q2968 Q2969 W1001 preserves Vite dev injected global scoped and CSS module styles",
+        "runId": "2026-09-08-upstream-04"
+      }
+    ],
+    "Tencent/wujie#1061": [
+      {
+        "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+        "title": "batch03 DOM upstream contracts W1046 W1047 W1048 W1061 upgrades React effect loaded web components and retains nested composed event paths",
+        "runId": "2026-09-08-upstream-04"
+      }
+    ],
+    "Tencent/wujie#1054": [
+      {
+        "path": "tests/e2e/upstream-batch03-runtime-lifecycle.spec.ts",
+        "title": "W1054 supplies fresh login props after disposing and recreating an alive application",
+        "runId": "2026-09-08-upstream-04"
+      }
+    ],
+    "Tencent/wujie#1049": [
+      {
+        "path": "tests/browser/upstream-batch03-entry.browser.test.ts",
+        "title": "batch03 native entry execution W1049 requests each real Vite modulepreload and Vue Router lazy chunk once during route changes",
+        "runId": "2026-09-08-upstream-04"
+      },
+      {
+        "path": "tests/e2e/upstream-batch03-entry.spec.ts",
+        "title": "W1049 Q3125 Q2971 loads Vite production routes once with isolated URL imports and clean Runtime destruction",
+        "runId": "2026-09-08-upstream-04"
+      }
+    ],
+    "Tencent/wujie#1048": [
+      {
+        "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+        "title": "batch03 DOM upstream contracts W1046 W1047 W1048 W1061 upgrades React effect loaded web components and retains nested composed event paths",
+        "runId": "2026-09-08-upstream-04"
+      }
+    ],
+    "Tencent/wujie#1047": [
+      {
+        "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+        "title": "batch03 DOM upstream contracts W1046 W1047 W1048 W1061 upgrades React effect loaded web components and retains nested composed event paths",
+        "runId": "2026-09-08-upstream-04"
+      }
+    ],
+    "Tencent/wujie#1046": [
+      {
+        "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+        "title": "batch03 DOM upstream contracts W1046 W1047 W1048 W1061 upgrades React effect loaded web components and retains nested composed event paths",
+        "runId": "2026-09-08-upstream-04"
+      }
+    ],
+    "Tencent/wujie#1043": [
+      {
+        "path": "tests/e2e/upstream-batch03-runtime-vue.spec.ts",
+        "title": "W1043 W1031 W1030 forwards host route props and history state into a real Vue router without rewriting native location",
+        "runId": "2026-09-08-upstream-04"
+      }
+    ],
+    "Tencent/wujie#1040": [
+      {
+        "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+        "title": "batch03 DOM upstream contracts W1040 loads grandchild icon fonts without copying fonts to its parent and cleans up isolated families",
+        "runId": "2026-09-08-upstream-04"
+      }
+    ],
+    "Tencent/wujie#1033": [
+      {
+        "path": "tests/e2e/upstream-batch03-runtime-prewarm.spec.ts",
+        "title": "W1033 sends a notification through an explicit host service while the prewarmed application remains hidden",
+        "runId": "2026-09-08-upstream-04"
+      }
+    ],
+    "Tencent/wujie#1031": [
+      {
+        "path": "tests/e2e/upstream-batch03-runtime-vue.spec.ts",
+        "title": "W1043 W1031 W1030 forwards host route props and history state into a real Vue router without rewriting native location",
+        "runId": "2026-09-08-upstream-04"
+      }
+    ],
+    "Tencent/wujie#1030": [
+      {
+        "path": "tests/e2e/upstream-batch03-runtime-vue.spec.ts",
+        "title": "W1043 W1031 W1030 forwards host route props and history state into a real Vue router without rewriting native location",
+        "runId": "2026-09-08-upstream-04"
+      }
+    ],
+    "Tencent/wujie#1025": [
+      {
+        "path": "tests/browser/upstream-batch03-entry.browser.test.ts",
+        "title": "batch03 native entry execution W1025 matches native parser microtask checkpoints between adjacent inline classic scripts",
+        "runId": "2026-09-08-upstream-04"
+      }
+    ],
+    "Tencent/wujie#1015": [
+      {
+        "path": "tests/browser/upstream-batch03-entry.browser.test.ts",
+        "title": "batch03 native entry execution W1015 links real webpack DLL globals in their owning iframe without host or sibling leakage",
+        "runId": "2026-09-08-upstream-04"
+      }
+    ],
+    "Tencent/wujie#1005": [
+      {
+        "path": "tests/e2e/upstream-batch03-resources.spec.ts",
+        "title": "Q3035 W1005 resolve static and dynamic image and SVG href before requests with host same-name decoys",
+        "runId": "2026-09-08-upstream-04"
+      }
+    ],
+    "Tencent/wujie#1001": [
+      {
+        "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+        "title": "batch03 DOM upstream contracts Q3061 Q2968 Q2969 W1001 renders actual Vite Vue scoped imports and CSS module assets within the application",
+        "runId": "2026-09-08-upstream-04"
+      },
+      {
+        "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+        "title": "batch03 DOM upstream contracts Q3061 Q2968 Q2969 W1001 preserves Vite dev injected global scoped and CSS module styles",
+        "runId": "2026-09-08-upstream-04"
+      }
+    ],
+    "Tencent/wujie#995": [
+      {
+        "path": "tests/e2e/upstream-batch03-resources.spec.ts",
+        "title": "Q3056 W995 keep explicit child API origin and host Axios baseURL during Vue Router guards",
+        "runId": "2026-09-08-upstream-04"
+      }
+    ],
+    "Tencent/wujie#991": [
+      {
+        "path": "tests/e2e/upstream-batch03-runtime-prewarm.spec.ts",
+        "title": "W991 preserves root CSS variables from preload and pre-execution through alive activation",
+        "runId": "2026-09-08-upstream-04"
+      }
+    ],
+    "Tencent/wujie#970": [
+      {
+        "path": "tests/browser/upstream-batch03-entry.browser.test.ts",
+        "title": "batch03 native entry execution W970 installs authored HTML import maps before native iframe module imports",
+        "runId": "2026-09-08-upstream-04"
+      },
+      {
+        "path": "tests/browser/upstream-batch03-entry.browser.test.ts",
+        "title": "batch03 native entry execution W970 resolves host-configured shared dependency URLs inside each consuming iframe",
+        "runId": "2026-09-08-upstream-04"
+      },
+      {
+        "path": "tests/browser/upstream-batch03-entry.browser.test.ts",
+        "title": "batch03 native entry execution W970 resolves authored import-map scopes and prefixes against the HTML base URL",
+        "runId": "2026-09-08-upstream-04"
+      }
+    ],
+    "Tencent/wujie#1003": [
+      {
+        "path": "tests/e2e/upstream-batch03-runtime-vue.spec.ts",
+        "title": "W1003 recreates real Vue Router and vue-i18n instances after A-B-A lifecycle destruction",
+        "runId": "2026-09-08-upstream-04"
+      }
+    ],
+    "Tencent/wujie#1020": [
+      {
+        "path": "tests/e2e/upstream-batch03-runtime-vue.spec.ts",
+        "title": "W1020 delivers host route events to an alive Vue router across hidden and reactivated states exactly once",
+        "runId": "2026-09-08-upstream-04"
+      }
+    ]
+  },
+  "fixtureSnapshot": "tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/fixture-sha256.json",
+  "browserDistributions": "tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/browser-distributions.json",
+  "metadataRelatedFix": {
+    "issue": "umijs/qiankun#2982",
+    "originalIssueStatus": "partial-coverage",
+    "scope": "explicit head metadata retained in application ShadowRoot; template nodes adopted before pre-insertion resource preparation. Implicit top-document favicon/PWA policies remain outside this evidence.",
+    "failureEvidence": [
+      "tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/second-e2e.json",
+      "tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/e2e-final.json"
+    ],
+    "passEvidence": "tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/e2e-verified.json"
+  }
+}

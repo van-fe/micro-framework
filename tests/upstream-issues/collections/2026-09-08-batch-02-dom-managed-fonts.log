@@ -1,0 +1,14 @@
+
+ RUN  v4.1.11 /Users/fanfangbo/workspace/micro-framework
+
+ ✓ |browser-webkit| tests/browser/upstream-batch02-dom-font-messages.browser.test.ts (5 tests) 263ms
+ ✓ |browser-webkit| tests/browser/upstream-batch02-dom-styles.browser.test.ts (3 tests) 138ms
+ ✓ |browser-firefox| tests/browser/upstream-batch02-dom-font-messages.browser.test.ts (5 tests) 308ms
+ ✓ |browser-firefox| tests/browser/upstream-batch02-dom-styles.browser.test.ts (3 tests) 212ms
+
+ Test Files  4 passed (4)
+      Tests  16 passed (16)
+   Start at  15:33:30
+   Duration  2.23s (transform 0ms, setup 0ms, import 160ms, tests 921ms, environment 0ms)
+
+JSON report written to /Users/fanfangbo/workspace/micro-framework/tests/upstream-issues/collections/2026-09-08-batch-02-dom-managed-fonts.json

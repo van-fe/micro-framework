@@ -1,0 +1,2 @@
+$ vitest run "--reporter=json" "--outputFile=tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/unit-verified.json"
+JSON report written to /Users/fanfangbo/workspace/micro-framework/tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/unit-verified.json

@@ -1,0 +1,30 @@
+
+ RUN  v4.1.11 /Users/fanfangbo/workspace/micro-framework
+
+⎯⎯⎯⎯⎯⎯ Unhandled Errors ⎯⎯⎯⎯⎯⎯
+
+Vitest caught 1 unhandled error during the test run.
+This might cause false positive tests. Resolve unhandled errors to make sure your tests are not affected.
+
+⎯⎯⎯⎯⎯⎯ Unhandled Error ⎯⎯⎯⎯⎯⎯⎯
+Error: Port 63315 is already in use
+ ❯ httpServerStart node_modules/.bun/vite@8.2.2+6e857ecf321d5410/node_modules/vite/dist/node/chunks/node.js:11681:10
+ ❯ processTicksAndRejections node:internal/process/task_queues:104:5
+ ❯ startServer node_modules/.bun/vite@8.2.2+6e857ecf321d5410/node_modules/vite/dist/node/chunks/node.js:26694:30
+ ❯ Object.listen node_modules/.bun/vite@8.2.2+6e857ecf321d5410/node_modules/vite/dist/node/chunks/node.js:26511:4
+ ❯ Object.createBrowserServer [as serverFactory] node_modules/.bun/@vitest+browser@4.1.11+5f049fa2996ff13c/node_modules/@vitest/browser/dist/index.js:7958:2
+ ❯ node_modules/.bun/vitest@4.1.11+e4bf84bba5b23659/node_modules/vitest/dist/chunks/cli-api.CnMVyzaz.js:10949:19
+ ❯ node_modules/.bun/vitest@4.1.11+e4bf84bba5b23659/node_modules/vitest/dist/chunks/cli-api.CnMVyzaz.js:10960:3
+ ❯ node_modules/.bun/vitest@4.1.11+e4bf84bba5b23659/node_modules/vitest/dist/chunks/cli-api.CnMVyzaz.js:11067:22
+ ❯ node_modules/.bun/vitest@4.1.11+e4bf84bba5b23659/node_modules/vitest/dist/chunks/cli-api.CnMVyzaz.js:2450:4
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+
+
+ Test Files  no tests
+      Tests  no tests
+     Errors  1 error
+   Start at  15:37:43
+   Duration  91ms (transform 0ms, setup 0ms, import 0ms, tests 0ms, environment 0ms)
+
+JSON report written to /Users/fanfangbo/workspace/micro-framework/tests/upstream-issues/collections/2026-09-08-batch-02-dom-font-vars-firefox-detail.json

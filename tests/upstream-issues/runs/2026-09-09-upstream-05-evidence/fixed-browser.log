@@ -1,0 +1,39 @@
+$ vitest run --config vitest.browser.config.ts "tests/browser/upstream-batch04-" tests/browser/viewport-events.browser.test.ts "--reporter=verbose" "--reporter=json" "--outputFile=tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/fixed-browser.json"
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - import "../../support/webpack-compiler" without a file extension (tests/browser/server/upstream-batch02-entry-fixture.ts:7:39). Add the file extension
+  - import "./upstream-batch03-entry-builds" without a file extension (tests/browser/server/upstream-batch03-entry-fixture.ts:4:36). Add the file extension
+  - import "../../support/webpack-compiler" without a file extension (tests/browser/server/upstream-batch03-entry-builds.ts:8:39). Add the file extension
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+
+ RUN  v4.1.11 /Users/fanfangbo/workspace/micro-framework
+
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - import "../../support/webpack-compiler" without a file extension (tests/browser/server/upstream-batch02-entry-fixture.ts:7:39). Add the file extension
+  - import "./upstream-batch03-entry-builds" without a file extension (tests/browser/server/upstream-batch03-entry-fixture.ts:4:36). Add the file extension
+  - import "../../support/webpack-compiler" without a file extension (tests/browser/server/upstream-batch03-entry-builds.ts:8:39). Add the file extension
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+ ✓ |browser-chromium| tests/browser/upstream-batch04-dom.browser.test.ts > batch04 DOM upstream contracts > Q3067 isolates String prototype extensions and application window and document listeners 19ms
+ ✓ |browser-chromium| tests/browser/upstream-batch04-dom.browser.test.ts > batch04 DOM upstream contracts > Q3042 preserves a readonly nonconfigurable document createElement value and creates scoped nodes 15ms
+ ✓ |browser-chromium| tests/browser/upstream-batch04-dom.browser.test.ts > batch04 DOM upstream contracts > Q3018 retains adjacent dynamically inserted styles across fresh application teardown and reload 27ms
+ ✓ |browser-chromium| tests/browser/viewport-events.browser.test.ts > forwards visible viewport resize into each native Realm with listener removal once abort onresize and destroy semantics 14ms
+ ✓ |browser-chromium| tests/browser/upstream-batch04-base.browser.test.ts > W1044 exposes the effective resource base without changing native document location or sibling bases and restores it on destroy 17ms
+ ✓ |browser-chromium| tests/browser/upstream-batch04-base.browser.test.ts > W1044 preserves an application replacement of the baseURI property during bridge destruction 12ms
+ ✓ |browser-webkit| tests/browser/upstream-batch04-dom.browser.test.ts > batch04 DOM upstream contracts > Q3067 isolates String prototype extensions and application window and document listeners 29ms
+ ✓ |browser-webkit| tests/browser/upstream-batch04-dom.browser.test.ts > batch04 DOM upstream contracts > Q3042 preserves a readonly nonconfigurable document createElement value and creates scoped nodes 20ms
+ ✓ |browser-webkit| tests/browser/upstream-batch04-dom.browser.test.ts > batch04 DOM upstream contracts > Q3018 retains adjacent dynamically inserted styles across fresh application teardown and reload 30ms
+ ✓ |browser-webkit| tests/browser/viewport-events.browser.test.ts > forwards visible viewport resize into each native Realm with listener removal once abort onresize and destroy semantics 14ms
+ ✓ |browser-webkit| tests/browser/upstream-batch04-base.browser.test.ts > W1044 exposes the effective resource base without changing native document location or sibling bases and restores it on destroy 12ms
+ ✓ |browser-webkit| tests/browser/upstream-batch04-base.browser.test.ts > W1044 preserves an application replacement of the baseURI property during bridge destruction 4ms
+ ✓ |browser-firefox| tests/browser/upstream-batch04-dom.browser.test.ts > batch04 DOM upstream contracts > Q3067 isolates String prototype extensions and application window and document listeners 20ms
+ ✓ |browser-firefox| tests/browser/upstream-batch04-dom.browser.test.ts > batch04 DOM upstream contracts > Q3042 preserves a readonly nonconfigurable document createElement value and creates scoped nodes 15ms
+ ✓ |browser-firefox| tests/browser/upstream-batch04-dom.browser.test.ts > batch04 DOM upstream contracts > Q3018 retains adjacent dynamically inserted styles across fresh application teardown and reload 26ms
+ ✓ |browser-firefox| tests/browser/viewport-events.browser.test.ts > forwards visible viewport resize into each native Realm with listener removal once abort onresize and destroy semantics 13ms
+ ✓ |browser-firefox| tests/browser/upstream-batch04-base.browser.test.ts > W1044 exposes the effective resource base without changing native document location or sibling bases and restores it on destroy 12ms
+ ✓ |browser-firefox| tests/browser/upstream-batch04-base.browser.test.ts > W1044 preserves an application replacement of the baseURI property during bridge destruction 6ms
+
+ Test Files  9 passed (9)
+      Tests  18 passed (18)
+   Start at  11:27:51
+   Duration  2.27s (transform 0ms, setup 0ms, import 279ms, tests 307ms, environment 0ms)
+
+JSON report written to /Users/fanfangbo/workspace/micro-framework/tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/fixed-browser.json

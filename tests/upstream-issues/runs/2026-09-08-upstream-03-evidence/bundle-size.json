@@ -1,0 +1,12 @@
+{
+  "generatedAt": "2026-09-08T08:43:26.945Z",
+  "packages": 29,
+  "coreGzipBytes": 8999,
+  "bundledRuntimeGzipBytes": 109025,
+  "bootstrapGzipBytes": 304,
+  "limits": {
+    "coreGzipBytes": 15000,
+    "bundledRuntimeGzipBytes": 50000,
+    "bootstrapGzipBytes": 5000
+  }
+}

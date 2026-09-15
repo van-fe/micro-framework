@@ -1,0 +1,16 @@
+<!doctype html><html><head>
+<script>
+window.readinessOrder = [document.readyState];
+document.addEventListener('readystatechange', () => readinessOrder.push(document.readyState));
+document.addEventListener('DOMContentLoaded', () => readinessOrder.push('DOMContentLoaded'));
+window.onload = () => {
+  readinessOrder.push('onload');
+  window.readinessImageLoaded = document.querySelector('img').naturalWidth > 0;
+  window.readinessOwnRealm = window.Array !== parent.Array;
+};
+window.addEventListener('load', () => readinessOrder.push('load-listener'));
+window.ReadyLifecycle = { mount() {}, unmount() {} };
+</script>
+<script async src="/upstream-readiness-delayed.js"></script>
+<script defer src="/upstream-readiness-defer.js"></script>
+</head><body><img src="/upstream-readiness-image.svg" alt="load resource"></body></html>

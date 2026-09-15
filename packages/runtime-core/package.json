@@ -1,0 +1,26 @@
+{
+  "name": "@micro-framework/runtime-core",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": { ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" } },
+  "scripts": {
+    "build": "vite build && tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@micro-framework/capability-broker": "workspace:*",
+    "@micro-framework/channel": "workspace:*",
+    "@micro-framework/contracts": "workspace:*",
+    "@micro-framework/dom-surface": "workspace:*",
+    "@micro-framework/entry-resolver": "workspace:*",
+    "@micro-framework/realm-host": "workspace:*",
+    "@micro-framework/storage": "workspace:*",
+    "@micro-framework/strong-isolation": "workspace:*"
+  },
+  "devDependencies": { "typescript": "6.0.3", "vite": "8.2.2" }
+}

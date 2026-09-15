@@ -1,0 +1,10 @@
+.batch02-component { box-sizing: border-box; padding: 24px; width: 660px; min-height: 180px; color: #243142; font: 16px/1.5 Arial, sans-serif; background: #fff; }
+.batch02-component h2 { margin: 0 0 20px; }
+.batch02-events .el-input { display: block; width: 320px; margin-bottom: 24px; }
+.batch02-events button { margin-right: 16px; }
+.batch02-monaco-editor { width: 600px; height: 280px; }
+.batch02-sortable-list { list-style: none; margin: 0; padding: 0; width: 360px; }
+.batch02-sortable-list li { box-sizing: border-box; margin-bottom: 12px; padding: 18px; height: 60px; cursor: grab; background: #e5edf8; border: 1px solid #4a6f9e; }
+.batch02-parent-scroll { width: 720px; height: 440px; overflow: auto; border: 2px solid #597089; }
+.batch02-parent-spacer { height: 220px; padding: 20px; box-sizing: border-box; }
+.batch02-child-slot { margin-left: 24px; }

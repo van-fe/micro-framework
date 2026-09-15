@@ -1,0 +1,503 @@
+{
+  "config": {
+    "argv": [
+      "/Users/fanfangbo/.local/share/fnm/node-versions/v24.19.0/installation/bin/node",
+      "/Users/fanfangbo/workspace/micro-framework/node_modules/.bin/playwright",
+      "test",
+      "tests/e2e/upstream-batch02-components-overlays.spec.ts",
+      "tests/e2e/upstream-batch02-components-nested.spec.ts",
+      "--project=chromium",
+      "--reporter=line,json"
+    ],
+    "configFile": "/Users/fanfangbo/workspace/micro-framework/playwright.config.ts",
+    "rootDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "line"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "upstream-batch02-components-nested.spec.ts",
+      "file": "upstream-batch02-components-nested.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "W697 SortableJS sorts a grandchild application's list using a real mouse drag",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 429,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:30:28.599Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "303fc31c7a6a4dacd3b9-b7e292d5d93387959c8e",
+          "file": "upstream-batch02-components-nested.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "Q1116 Monaco places the caret after parent and editor scrolling in a nested application",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6170,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m100\u001b[39m\nReceived:   \u001b[31m50\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m100\u001b[39m\nReceived:   \u001b[31m50\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-nested.spec.ts:31:88",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-nested.spec.ts",
+                      "column": 88,
+                      "line": 31
+                    },
+                    "snippet": "  29 |   await editor.hover();\n  30 |   await page.mouse.wheel(0, 240);\n> 31 |   await expect.poll(async () => Number(await root.getAttribute(\"data-editor-scroll\"))).toBeGreaterThan(100);\n     |                                                                                        ^\n  32 |   const line = root.locator(\".view-line\").filter({ hasText: \"const row16 = 16;\" });\n  33 |   await expect(line).toBeVisible();\n  34 |   const hit = await line.evaluate((element) => {"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-nested.spec.ts",
+                        "column": 88,
+                        "line": 31
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m100\u001b[39m\nReceived:   \u001b[31m50\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n\n  29 |   await editor.hover();\n  30 |   await page.mouse.wheel(0, 240);\n> 31 |   await expect.poll(async () => Number(await root.getAttribute(\"data-editor-scroll\"))).toBeGreaterThan(100);\n     |                                                                                        ^\n  32 |   const line = root.locator(\".view-line\").filter({ hasText: \"const row16 = 16;\" });\n  33 |   await expect(line).toBeVisible();\n  34 |   const hit = await line.evaluate((element) => {\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-nested.spec.ts:31:88"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:30:29.196Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-component-cf845-ing-in-a-nested-application-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-component-cf845-ing-in-a-nested-application-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-nested.spec.ts",
+                    "column": 88,
+                    "line": 31
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "303fc31c7a6a4dacd3b9-97a79231e68622822e47",
+          "file": "upstream-batch02-components-nested.spec.ts",
+          "line": 21,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "upstream-batch02-components-overlays.spec.ts",
+      "file": "upstream-batch02-components-overlays.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "W1106 Ant Design Vue default virtual Select scrolls by dragging its real scrollbar thumb",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5950,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m620\u001b[39m\nReceived:   \u001b[31m120\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m620\u001b[39m\nReceived:   \u001b[31m120\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts:29:76",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts",
+                      "column": 76,
+                      "line": 29
+                    },
+                    "snippet": "  27 |   await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2 + 90, { steps: 12 });\n  28 |   await page.mouse.up();\n> 29 |   await expect.poll(() => holder.evaluate((element) => element.scrollTop)).toBeGreaterThan(before + 500);\n     |                                                                            ^\n  30 |   await expect(thumb).not.toHaveClass(/moving/);\n  31 |   const option = dropdown.locator(\".ant-select-item-option\").nth(2);\n  32 |   const label = (await option.innerText()).trim();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts",
+                        "column": 76,
+                        "line": 29
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m620\u001b[39m\nReceived:   \u001b[31m120\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n\n  27 |   await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2 + 90, { steps: 12 });\n  28 |   await page.mouse.up();\n> 29 |   await expect.poll(() => holder.evaluate((element) => element.scrollTop)).toBeGreaterThan(before + 500);\n     |                                                                            ^\n  30 |   await expect(thumb).not.toHaveClass(/moving/);\n  31 |   const option = dropdown.locator(\".ant-select-item-option\").nth(2);\n  32 |   const label = (await option.innerText()).trim();\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts:29:76"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:30:35.589Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-component-e1a07-ng-its-real-scrollbar-thumb-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-component-e1a07-ng-its-real-scrollbar-thumb-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts",
+                    "column": 76,
+                    "line": 29
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e147f600b35f9693ffcd-53a2b861d6dc46119dcc",
+          "file": "upstream-batch02-components-overlays.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "W300 Element Plus validates trusted mouse and focus events without cross-Realm Vue warnings",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 624,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:30:41.848Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e147f600b35f9693ffcd-1ed867169668ba82af08",
+          "file": "upstream-batch02-components-overlays.spec.ts",
+          "line": 38,
+          "column": 1
+        },
+        {
+          "title": "Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=true)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1510,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m5\u001b[39m\nReceived:   \u001b[31m704\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m5\u001b[39m\nReceived:   \u001b[31m704\u001b[39m\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts:70:45",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts",
+                      "column": 45,
+                      "line": 70
+                    },
+                    "snippet": "  68 |     const anchor = await input.boundingBox(); const floating = await menu.boundingBox();\n  69 |     if (!anchor || !floating) throw new Error(\"Missing Drawer Select geometry.\");\n> 70 |     expect(Math.abs(floating.x - anchor.x)).toBeLessThan(5);\n     |                                             ^\n  71 |     expect(Math.abs(floating.y - (anchor.y + anchor.height))).toBeLessThan(16);\n  72 |     if (local) expect(await menu.evaluate((element) => Boolean(element.closest(\".el-select\")))).toBe(true);\n  73 |     await menu.getByText(\"South\", { exact: true }).click();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts",
+                        "column": 45,
+                        "line": 70
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m5\u001b[39m\nReceived:   \u001b[31m704\u001b[39m\n\n  68 |     const anchor = await input.boundingBox(); const floating = await menu.boundingBox();\n  69 |     if (!anchor || !floating) throw new Error(\"Missing Drawer Select geometry.\");\n> 70 |     expect(Math.abs(floating.x - anchor.x)).toBeLessThan(5);\n     |                                             ^\n  71 |     expect(Math.abs(floating.y - (anchor.y + anchor.height))).toBeLessThan(16);\n  72 |     if (local) expect(await menu.evaluate((element) => Boolean(element.closest(\".el-select\")))).toBe(true);\n  73 |     await menu.getByText(\"South\", { exact: true }).click();\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts:70:45"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:30:42.571Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-component-e35c0-or-popperAppendToBody-true--chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-component-e35c0-or-popperAppendToBody-true--chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts",
+                    "column": 45,
+                    "line": 70
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e147f600b35f9693ffcd-a1c1642274fc8acbd948",
+          "file": "upstream-batch02-components-overlays.spec.ts",
+          "line": 59,
+          "column": 3
+        },
+        {
+          "title": "Q2408 Element UI Drawer Select focuses at its anchor (popperAppendToBody=false)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1425,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m16\u001b[39m\nReceived:   \u001b[31m153\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m16\u001b[39m\nReceived:   \u001b[31m153\u001b[39m\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts:71:63",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts",
+                      "column": 63,
+                      "line": 71
+                    },
+                    "snippet": "  69 |     if (!anchor || !floating) throw new Error(\"Missing Drawer Select geometry.\");\n  70 |     expect(Math.abs(floating.x - anchor.x)).toBeLessThan(5);\n> 71 |     expect(Math.abs(floating.y - (anchor.y + anchor.height))).toBeLessThan(16);\n     |                                                               ^\n  72 |     if (local) expect(await menu.evaluate((element) => Boolean(element.closest(\".el-select\")))).toBe(true);\n  73 |     await menu.getByText(\"South\", { exact: true }).click();\n  74 |     await expect(page.locator(\".batch02-vue2-drawer\")).toHaveAttribute(\"data-selected\", \"South\");"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts",
+                        "column": 63,
+                        "line": 71
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m16\u001b[39m\nReceived:   \u001b[31m153\u001b[39m\n\n  69 |     if (!anchor || !floating) throw new Error(\"Missing Drawer Select geometry.\");\n  70 |     expect(Math.abs(floating.x - anchor.x)).toBeLessThan(5);\n> 71 |     expect(Math.abs(floating.y - (anchor.y + anchor.height))).toBeLessThan(16);\n     |                                                               ^\n  72 |     if (local) expect(await menu.evaluate((element) => Boolean(element.closest(\".el-select\")))).toBe(true);\n  73 |     await menu.getByText(\"South\", { exact: true }).click();\n  74 |     await expect(page.locator(\".batch02-vue2-drawer\")).toHaveAttribute(\"data-selected\", \"South\");\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts:71:63"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:30:44.300Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-component-65456-r-popperAppendToBody-false--chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch02-component-65456-r-popperAppendToBody-false--chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-components-overlays.spec.ts",
+                    "column": 63,
+                    "line": 71
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e147f600b35f9693ffcd-81e16287782f462bf926",
+          "file": "upstream-batch02-components-overlays.spec.ts",
+          "line": 59,
+          "column": 3
+        },
+        {
+          "title": "W1104 the Vue 2 lifecycle adapter does not declare an implicit reserved style prop",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 283,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T06:30:46.216Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e147f600b35f9693ffcd-3a182e1d51fddef29494",
+          "file": "upstream-batch02-components-overlays.spec.ts",
+          "line": 79,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-08T06:30:25.872Z",
+    "duration": 20821.775999999998,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  }
+}

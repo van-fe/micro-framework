@@ -1,0 +1,103 @@
+{
+  "collectionBatch": "2026-09-09-batch-04",
+  "execution": "not-run: centralized browser/build runner owned by parent; test bindings are proposed until matched against actual report",
+  "items": [
+    {
+      "id": "umijs/qiankun#3067",
+      "originalTrigger": "宿主及子应用扩展String.prototype互相污染；两个子应用注册同名customElements冲突；事件注册泄漏。",
+      "localContract": "iframe原生String原型、原生customElements registry各实例隔离；document/window应用自定义事件不交叉触发，销毁后无宿主或兄弟转发。",
+      "fixture": "本批外部classic JS实际在iframe求值；另复用真实React effect动态加载同名web component现有fixture。",
+      "operations": "宿主扩展String，两个iframe分别扩展String；各自注册并dispatch同名自定义事件；销毁首实例继续触发兄弟。现有React用例同时注册同名组件、点击三次并核验兄弟不变和disconnected。",
+      "tests": [
+        {
+          "path": "tests/browser/upstream-batch04-dom.browser.test.ts",
+          "title": "batch04 DOM upstream contracts Q3067 isolates String prototype extensions and application window and document listeners"
+        },
+        {
+          "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+          "title": "batch03 DOM upstream contracts W1046 W1047 W1048 W1061 upgrades React effect loaded web components and retains nested composed event paths"
+        }
+      ],
+      "limitations": [
+        "使用当前锁定React/Vite和三浏览器目标，并非原Chrome112/2.10.5。自定义事件隔离不表示应屏蔽所有浏览器原生全局事件。"
+      ]
+    },
+    {
+      "id": "umijs/qiankun#3042",
+      "originalTrigger": "读取readonly nonconfigurable document.createElement时Proxy返回另一函数违反原生不变量。无最小工程。",
+      "localContract": "document原生对象桥接后，应用锁定createElement数据属性，其读取返回原值且函数可创建scoped节点。",
+      "fixture": "真实iframe加载外部JS，以Object.defineProperty将桥接createElement设为readonly/nonconfigurable。",
+      "operations": "锁定方法，读取身份，调用并挂节点；比较宿主方法身份、兄弟scope和销毁清理。",
+      "tests": [
+        {
+          "path": "tests/browser/upstream-batch04-dom.browser.test.ts",
+          "title": "batch04 DOM upstream contracts Q3042 preserves a readonly nonconfigurable document createElement value and creates scoped nodes"
+        }
+      ],
+      "limitations": [
+        "仅验证应用在bridge安装后锁定该方法；上游未提供是谁在何时锁定方法，不能断言复现原工程全部条件。"
+      ],
+      "recommendedStatusAfterPass": "partial-coverage",
+      "missingDetails": [
+        "原工程、锁定createElement的调用方与发生时机。"
+      ]
+    },
+    {
+      "id": "umijs/qiankun#3018",
+      "originalTrigger": "Vite按lastInsertedStyle.insertAdjacentElement(afterend)插入第二个CSS，卸载后重新挂载样式丢失。",
+      "localContract": "appendChild首style及insertAdjacentElement后续style在ShadowRoot生效、无宿主兄弟污染、销毁清理后新实例同入口样式重新生效。；Runtime保活hide/return保持同Realm、同两张style身份，模块初始化仅一次；dispose/recreate重新执行模块生成样式。",
+      "fixture": "外部iframe JS使用报告中的精确插入API顺序，二次fresh iframe加载。",
+      "operations": "断言style相邻顺序、目标color/width、宿主兄弟不变，每轮销毁后style断开。 新E2E每代三次hide-return验证样式颜色宽度、按钮计数保留、style身份与顺序；两代dispose/recreate验证清理；同类host/sibling不受影响。",
+      "tests": [
+        {
+          "path": "tests/browser/upstream-batch04-dom.browser.test.ts",
+          "title": "batch04 DOM upstream contracts Q3018 retains adjacent dynamically inserted styles across fresh application teardown and reload"
+        },
+        {
+          "path": "tests/e2e/upstream-batch04-styles.spec.ts",
+          "title": "Q3018 preserves module initialized adjacent styles across keepAlive hide return and disposal recreation"
+        }
+      ],
+      "limitations": [
+        "使用原报告appendChild+insertAdjacentElement精确API及模块顶层仅执行一次的缓存条件；不使用Vite本身的sheetsMap内部实现。"
+      ]
+    },
+    {
+      "id": "umijs/qiankun#3007",
+      "originalTrigger": "Vite Vue scoped组件CSS动态注入未被隔离。",
+      "localContract": "真实Vite编译的Vue scoped/global/CSS module样式应用于子ShadowRoot，宿主兄弟样式不变。",
+      "fixture": "复用当前锁定Vue/Vite真实SFC构建产物与Vite dev两条现有测试。",
+      "operations": "检查真实data-v属性、scoped/imported/at-import width/color、CSS module图片请求与尺寸、host/sibling颜色和unmount。",
+      "tests": [
+        {
+          "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+          "title": "batch03 DOM upstream contracts Q3061 Q2968 Q2969 W1001 renders actual Vite Vue scoped imports and CSS module assets within the application"
+        },
+        {
+          "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+          "title": "batch03 DOM upstream contracts Q3061 Q2968 Q2969 W1001 preserves Vite dev injected global scoped and CSS module styles"
+        }
+      ],
+      "limitations": [
+        "覆盖当前锁定版本；项目以Shadow DOM隔离，不依赖experimentalStyleIsolation选择器重写。"
+      ]
+    },
+    {
+      "id": "umijs/qiankun#3129",
+      "originalTrigger": "default-src self禁inline script及eval导致框架求值失败（2.10.16 Edge148）。",
+      "localContract": "同源host CSP script-src self，无unsafe-inline/unsafe-eval，外部module入口在iframe求值并正常Runtime挂载交互销毁。",
+      "fixture": "Playwright真实HTTP response CSP，由route提供外部module，host加载现有外链/src/benchmark.ts；style-src self。",
+      "operations": "挂载点击按钮递增，检查iframe Realm标记、无CSP violation/pageerror，destroy无iframe/button。",
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-batch04-csp.spec.ts",
+          "title": "Q3129 mounts external modules without unsafe inline scripts or eval under same origin CSP"
+        }
+      ],
+      "limitations": [
+        "dev外部module路径，未验证production产物；不覆盖原应用作者inline scripts的nonce/hash迁移。"
+      ],
+      "recommendedStatusAfterPass": "partial-coverage"
+    }
+  ]
+}

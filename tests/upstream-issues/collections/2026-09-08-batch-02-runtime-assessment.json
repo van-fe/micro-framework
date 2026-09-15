@@ -1,0 +1,478 @@
+{
+  "schemaVersion": 1,
+  "batch": "2026-09-08-batch-02",
+  "state": "completed",
+  "issues": [
+    {
+      "id": "umijs/qiankun#1990",
+      "stage": "regression-passed",
+      "scope": "通过浏览器Context离线模式使首次HTML入口请求失败；恢复在线后，同Runtime、同name、同container、同HTML URL再次mount，确认新HTTP请求、错误归属、清理和真实按钮点击。",
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-batch02-runtime-loading.spec.ts",
+          "title": "Q1990 retries the identical HTML entry after offline recovery and sends a fresh HTTP request",
+          "runId": "2026-09-08-upstream-03"
+        }
+      ],
+      "redEvidence": null,
+      "limitations": [
+        "离线由Playwright Context.setOffline实现，未覆盖操作系统断网、代理或Service Worker离线缓存策略。"
+      ],
+      "engines": {
+        "chromium": "passed",
+        "firefox": "passed",
+        "webkit": "passed",
+        "safari": "not-run"
+      },
+      "verificationEvidence": [
+        "tests/upstream-issues/collections/2026-09-08-batch-02-runtime-evidence/runtime-batch-e2e-first.json"
+      ],
+      "recommendedStatus": "regression-passed",
+      "recommendationBasis": "本地首次有效用例已通过，未发现需要修改生产代码的同类缺陷；本条记录新增回归覆盖。",
+      "targetedVerificationState": {
+        "stage": "passed-three-engine-targeted-regression"
+      },
+      "finalVerification": {
+        "runId": "2026-09-08-upstream-03",
+        "status": "regression-passed"
+      }
+    },
+    {
+      "id": "umijs/qiankun#1885",
+      "stage": "regression-passed",
+      "scope": "独立HTTP服务真实关闭，连接失败后在相同端口重启；同URL发新请求且应用可交互。",
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-batch02-runtime-loading.spec.ts",
+          "title": "Q1885 retries the identical HTML entry after server-stopped recovery and sends a fresh HTTP request",
+          "runId": "2026-09-08-upstream-03"
+        }
+      ],
+      "redEvidence": null,
+      "limitations": [
+        "使用本地受控HTTP服务真实关闭并在同端口重启；未覆盖外部CDN、代理或Service Worker缓存策略。"
+      ],
+      "engines": {
+        "chromium": "passed",
+        "firefox": "passed",
+        "webkit": "passed",
+        "safari": "not-run"
+      },
+      "verificationEvidence": [
+        "tests/upstream-issues/collections/2026-09-08-batch-02-runtime-evidence/runtime-batch-e2e-first.json"
+      ],
+      "recommendedStatus": "regression-passed",
+      "recommendationBasis": "本地首次有效用例已通过，未发现需要修改生产代码的同类缺陷；本条记录真实HTTP服务停启后的同URL回归。",
+      "targetedVerificationState": {
+        "stage": "passed-three-engine-targeted-regression"
+      },
+      "finalVerification": {
+        "runId": "2026-09-08-upstream-03",
+        "status": "regression-passed"
+      }
+    },
+    {
+      "id": "umijs/qiankun#2166",
+      "stage": "fixed",
+      "scope": "keepAlive实例成功加载v1后dispose，服务器同HTML地址更新v2且新JS可交互；再v3 chunk404，恢复同URL chunk后重新加载成功。",
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-batch02-runtime-loading.spec.ts",
+          "title": "Q2166 disposes a cached application and loads a new deployment and failed-chunk recovery at the identical entry URL",
+          "runId": "2026-09-08-upstream-03"
+        }
+      ],
+      "redEvidence": "tests/upstream-issues/collections/2026-09-08-batch-02-runtime-evidence/runtime-three-engine-first.json",
+      "limitations": [
+        "测试服务器明确Cache-Control:no-store；不声称覆盖外部HTTP/CDN/Service Worker缓存策略。",
+        "同URL更新/失败恢复保证仅针对未显式声明modulepreload、且无integrity预加载的入口；HTML/shared目录明确预加载及SRI仍保留原生行为，WebKit这些预加载仍有已证明的跨document缓存限制。"
+      ],
+      "engines": {
+        "chromium": "passed",
+        "firefox": "passed",
+        "webkit": "passed",
+        "safari": "not-run"
+      },
+      "verificationEvidence": [
+        "tests/upstream-issues/collections/2026-09-08-batch-02-runtime-evidence/runtime-batch-e2e-first.json"
+      ],
+      "recommendedStatus": "fixed",
+      "recommendationBasis": "有本地WebKit失败及无框架原生对照；删除框架隐式无SRI入口预加载后，同URL更新和失败恢复三引擎通过。",
+      "redObservations": [
+        {
+          "path": "tests/upstream-issues/collections/2026-09-08-batch-02-runtime-evidence/runtime-three-engine-first.json",
+          "engine": "webkit",
+          "title": "Q2166 disposes a cached application and loads a new deployment and failed-chunk recovery at the identical entry URL",
+          "observation": "版本更新后已失败的模块在恢复同URL响应后仍不能重新导入，mount返回AggregateError。"
+        },
+        {
+          "path": "tests/upstream-issues/collections/2026-09-08-batch-02-runtime-evidence/native-module-disposal-control.log",
+          "engine": "webkit",
+          "observation": "无框架对照中modulepreload跨已销毁iframe保留成功/失败响应；未预加载时每个新iframe均发HTTP并读取当前版本或404。"
+        }
+      ],
+      "targetedVerificationState": {
+        "stage": "passed-three-engine-targeted-regression"
+      },
+      "finalVerification": {
+        "runId": "2026-09-08-upstream-03",
+        "status": "fixed"
+      }
+    },
+    {
+      "id": "Tencent/wujie#1028",
+      "stage": "fixed",
+      "scope": "成功加载v1并销毁后，服务器仍提供旧HTML，但删除其引用的版本化入口模块；runtime.errors收到应用deployed、phase=mount和入口URL；清理iframe/host；显式换v2新entry恢复真实按钮交互。",
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-batch02-runtime-loading.spec.ts",
+          "title": "W1028 reports a removed deployment chunk to the runtime error subscriber and permits explicit new-entry recovery",
+          "runId": "2026-09-08-upstream-03"
+        }
+      ],
+      "redEvidence": "tests/upstream-issues/collections/2026-09-08-batch-02-runtime-evidence/runtime-three-engine-first.json",
+      "limitations": [
+        "使用受控版本化entry.vN.js模拟部署后删除旧模块；未运行原Vue3/Vite内容hash发行包或Wujie组件loadError回调。验证本项目公共Runtime错误订阅，不将服务器删除文件本身归因为框架缺陷。",
+        "同URL更新/失败恢复保证仅针对未显式声明modulepreload、且无integrity预加载的入口；HTML/shared目录明确预加载及SRI仍保留原生行为，WebKit这些预加载仍有已证明的跨document缓存限制。"
+      ],
+      "engines": {
+        "chromium": "passed",
+        "firefox": "passed",
+        "webkit": "passed",
+        "safari": "not-run"
+      },
+      "verificationEvidence": [
+        "tests/upstream-issues/collections/2026-09-08-batch-02-runtime-evidence/runtime-batch-e2e-first.json"
+      ],
+      "recommendedStatus": "fixed",
+      "recommendationBasis": "本地WebKit原先从预加载缓存导入已删除的旧模块而未报告404；移除隐式无SRI入口预加载并补加载错误URL上下文后，错误归属、清理和显式新entry恢复三引擎通过。",
+      "redObservations": [
+        {
+          "path": "tests/upstream-issues/collections/2026-09-08-batch-02-runtime-evidence/runtime-three-engine-first.json",
+          "engine": "webkit",
+          "title": "W1028 reports a removed deployment chunk to the runtime error subscriber and permits explicit new-entry recovery",
+          "observation": "服务器已删除旧模块，但再次mount仍成功，捕获错误为null；与要求暴露真实部署404不符。"
+        },
+        {
+          "path": "tests/upstream-issues/collections/2026-09-08-batch-02-runtime-evidence/native-module-disposal-control.log",
+          "engine": "webkit",
+          "observation": "无框架modulepreload对照证明销毁iframe后仍可复用旧响应，未预加载时正确重新请求并得到404。"
+        }
+      ],
+      "targetedVerificationState": {
+        "stage": "passed-three-engine-targeted-regression"
+      },
+      "finalVerification": {
+        "runId": "2026-09-08-upstream-03",
+        "status": "fixed"
+      }
+    },
+    {
+      "id": "Tencent/wujie#298",
+      "stage": "fixed",
+      "scope": "真实iframe应用调用navigator.clipboard.readText方法；宿主与iframe剪贴板底层均是受控端口。验证默认策略拒绝、真实点击的宿主焦点和用户激活、允许后转发的接收者、端口权限拒绝、真实激活过期后拒绝，以及销毁后保留方法引用的AbortError。",
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-batch02-runtime-clipboard.spec.ts",
+          "title": "W298 forwards clipboard.readText via controlled clipboard ports with real host focus and activation (allowed=false)",
+          "runId": "2026-09-08-upstream-03"
+        },
+        {
+          "path": "tests/e2e/upstream-batch02-runtime-clipboard.spec.ts",
+          "title": "W298 forwards clipboard.readText via controlled clipboard ports with real host focus and activation (allowed=true)",
+          "runId": "2026-09-08-upstream-03"
+        }
+      ],
+      "redEvidence": "tests/upstream-issues/collections/2026-09-08-batch-02-runtime-evidence/upstream-batch02-runtime-click-routing-red.log",
+      "limitations": [
+        "仅原生readText文本读取桥接；未覆盖Clipboard.read/write/writeText。宿主/iframe原始API替换为受控端口，从未访问系统剪贴板；浏览器原生权限UI未验证。自动无激活读取仍按既有策略拒绝，不计为自动读取兼容。"
+      ],
+      "engines": {
+        "chromium": "passed",
+        "firefox": "passed",
+        "webkit": "passed",
+        "safari": "not-run"
+      },
+      "verificationEvidence": [
+        "tests/upstream-issues/collections/2026-09-08-batch-02-runtime-evidence/runtime-batch-e2e-first.json"
+      ],
+      "recommendedStatus": "fixed",
+      "recommendationBasis": "本地受控调用路径红测证明原先直接命中未聚焦iframe端口；通过已有能力策略转发至宿主后点击、焦点、激活、拒绝和销毁分支三引擎通过。仅声明受控端口转发修复。",
+      "redObservations": [
+        {
+          "path": "tests/upstream-issues/collections/2026-09-08-batch-02-runtime-evidence/upstream-batch02-runtime-click-routing-red.log",
+          "engine": "chromium",
+          "title": "W298 mediates native clipboard.readText through focused host activation and policy (allowed=true)",
+          "observation": "真实点击后仍命中受控iframe API，得到NotAllowedError: Document is not focused；宿主端口没有收到允许请求。"
+        },
+        {
+          "path": "tests/upstream-issues/collections/2026-09-08-batch-02-runtime-evidence/runtime-three-engine-first.json",
+          "engine": "firefox",
+          "title": "W298 mediates native clipboard.readText through focused host activation and policy (allowed=true)",
+          "observation": "销毁后保存的readText方法返回已分离iframe Promise，其拒绝回调不结算。原生控制证实该行为；inactive分支改用宿主Promise并保留已捕获Realm DOMException。"
+        }
+      ],
+      "targetedVerificationState": {
+        "stage": "passed-three-engine-targeted-regression"
+      },
+      "finalVerification": {
+        "runId": "2026-09-08-upstream-03",
+        "status": "fixed"
+      }
+    },
+    {
+      "id": "umijs/qiankun#1245",
+      "stage": "fixed",
+      "scope": "真实Vue2.7.16+VueRouter3.6.5；首次hash/home→history/home→hash/about，冷动态import route模块，跨app经宿主导航服务产生原生hashchange。",
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-batch02-runtime-routing.spec.ts",
+          "title": "Q1245 Realm document initialization rejects a foreign origin and cancels a pending same-origin navigation",
+          "runId": "2026-09-08-upstream-03"
+        },
+        {
+          "path": "tests/e2e/upstream-batch02-runtime-routing.spec.ts",
+          "title": "Q1245 cold Vue Router hash-home to history-home to hash-about loads the first lazy route in its own Realm",
+          "runId": "2026-09-08-upstream-03"
+        }
+      ],
+      "redEvidence": "tests/upstream-issues/collections/2026-09-08-batch-02-runtime-evidence/upstream-batch02-runtime-routing-red.log",
+      "limitations": [
+        "使用Vue2.7.16/VueRouter3.6.5；未运行原Vue2.6.11/VueRouter3.2.0发行包和共享宿主Vue对象。"
+      ],
+      "engines": {
+        "chromium": "passed",
+        "firefox": "passed",
+        "webkit": "passed",
+        "safari": "not-run"
+      },
+      "verificationEvidence": [
+        "tests/upstream-issues/collections/2026-09-08-batch-02-runtime-evidence/runtime-batch-e2e-first.json"
+      ],
+      "recommendedStatus": "fixed",
+      "recommendationBasis": "本地真实hash→history→hash冷路由失败，原生控制定位about:blank文档不能改写history路径；使用宿主同源真实空HTML文档后冷路由和初始化取消三引擎通过。",
+      "redObservations": [
+        {
+          "path": "tests/upstream-issues/collections/2026-09-08-batch-02-runtime-evidence/upstream-batch02-runtime-routing-red.log",
+          "engine": "chromium",
+          "title": "Q1245 cold Vue Router hash-home to history-home to hash-about loads the first lazy route in its own Realm",
+          "observation": "点击history应用的Open cold hash about后，宿主仍停留#/history/home，无法进入首次lazy about路由。"
+        },
+        {
+          "path": "tests/upstream-issues/collections/2026-09-08-batch-02-runtime-evidence/upstream-native-iframe-history-control.log",
+          "engine": "chromium/firefox/webkit",
+          "observation": "about:blank原生history路径改写触发SecurityError；真实同源空HTTP文档可改写路径且保留独立Realm。"
+        }
+      ],
+      "targetedVerificationState": {
+        "stage": "passed-three-engine-targeted-regression"
+      },
+      "finalVerification": {
+        "runId": "2026-09-08-upstream-03",
+        "status": "fixed"
+      }
+    },
+    {
+      "id": "umijs/qiankun#2346",
+      "stage": "regression-passed",
+      "scope": "真实hash导航快速切换，未完成mount期间交错切换；最终应用和宿主按钮实际点击、host及Shadow hit-test、iframe几何和销毁清理。",
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-batch02-runtime-switching.spec.ts",
+          "title": "Q2346 rapid native tab switching leaves hidden Realms unable to intercept host or application clicks (keepAlive=false)",
+          "runId": "2026-09-08-upstream-03"
+        },
+        {
+          "path": "tests/e2e/upstream-batch02-runtime-switching.spec.ts",
+          "title": "Q2346 rapid native tab switching leaves hidden Realms unable to intercept host or application clicks (keepAlive=true)",
+          "runId": "2026-09-08-upstream-03"
+        }
+      ],
+      "redEvidence": null,
+      "limitations": [
+        "首次测试把未分配的light-DOM iframe computed display误写为none；最终验证hidden+零几何+真实host/app点击+host/Shadow hit-test，未因该断言错误修改生产。"
+      ],
+      "engines": {
+        "chromium": "passed",
+        "firefox": "passed",
+        "webkit": "passed",
+        "safari": "not-run"
+      },
+      "verificationEvidence": [
+        "tests/upstream-issues/collections/2026-09-08-batch-02-runtime-evidence/runtime-batch-e2e-first.json"
+      ],
+      "recommendedStatus": "regression-passed",
+      "recommendationBasis": "真实点击和hit-test未发现框架阻塞；首次失败源于测试对未分配light-DOM iframe computed display的错误假设。修正测试后新增条件三引擎通过，不列为生产修复。",
+      "targetedVerificationState": {
+        "stage": "passed-three-engine-targeted-regression"
+      },
+      "finalVerification": {
+        "runId": "2026-09-08-upstream-03",
+        "status": "regression-passed"
+      }
+    },
+    {
+      "id": "umijs/qiankun#1502",
+      "stage": "fixed",
+      "scope": "挂载后在真实iframe中向window.location赋值为本地不同端口的跨源HTML，验证仅child导航、host URL不变、显式dispose无异常并清理DOM。另验证load途中顶层模块导航且import不结算时，pagehide取消留下status=unmounted、零残留DOM、零错误的handle；显式dispose后status=disposed，并从Runtime手动实例登记中移除，随后runtime.destroy不再次调用该handle。",
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-batch02-runtime-location.spec.ts",
+          "title": "Q1502 native navigation during a pending module import leaves an unmounted handle that can be explicitly disposed",
+          "runId": "2026-09-08-upstream-03"
+        },
+        {
+          "path": "tests/e2e/upstream-batch02-runtime-location.spec.ts",
+          "title": "Q1502 native window.location assignment navigates only the child and disposes after crossing origin",
+          "runId": "2026-09-08-upstream-03"
+        }
+      ],
+      "redEvidence": "tests/upstream-issues/collections/2026-09-08-batch-02-runtime-evidence/runtime-location-red.json",
+      "limitations": [
+        "不把window.location改为fake对象；跨源目标仅本地受控HTML，不访问issue里的外站。"
+      ],
+      "engines": {
+        "chromium": "passed",
+        "firefox": "passed",
+        "webkit": "passed",
+        "safari": "not-run"
+      },
+      "verificationEvidence": [
+        "tests/upstream-issues/collections/2026-09-08-batch-02-runtime-evidence/runtime-batch-e2e-first.json",
+        "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/final-corrections-e2e.json"
+      ],
+      "pendingLoadObservation": "首次三引擎运行均得到pagehide中止load后status=unmounted、剩余DOM=0、errors=[]；测试当时错误期望disposed。按既有AppController取消状态机修正测试为unmounted，再显式dispose验证disposed及手动实例登记移除；只改测试，未因此改生产状态机。修正版与原挂载后导航用例已在final-corrections-e2e.json中各三引擎通过，共6/6。该测试预期错误与runtime-location-red.json记录的真实跨源teardown SecurityError严格区分。",
+      "recommendedStatus": "fixed",
+      "recommendationBasis": "真实生产红测证明挂载后跨源导航的dispose原先抛SecurityError；在pagehide仍同源阶段中止加载并释放旧Realm绑定后，原场景及追加pending import取消→unmounted→显式dispose场景均三引擎通过。推荐fixed仅覆盖上述已验证条件。",
+      "redObservations": [
+        {
+          "path": "tests/upstream-issues/collections/2026-09-08-batch-02-runtime-evidence/runtime-location-red.json",
+          "engine": "chromium",
+          "title": "Q1502 native window.location assignment navigates only the child and disposes after crossing origin",
+          "observation": "child已真实到达跨源目标，但dispose读取跨源WindowProxy.removeEventListener抛SecurityError，并产生卸载/销毁错误。"
+        }
+      ],
+      "pendingTestTitles": [],
+      "pendingLoadPriorResult": {
+        "path": "tests/upstream-issues/collections/2026-09-08-batch-02-runtime-evidence/runtime-batch-e2e-first.json",
+        "title": "Q1502 native navigation during a pending module import aborts and releases the departing Realm",
+        "classification": "test-expectation-error",
+        "engines": [
+          "chromium",
+          "firefox",
+          "webkit"
+        ],
+        "actual": {
+          "status": "unmounted",
+          "remaining": 0,
+          "errors": []
+        },
+        "incorrectExpectedStatus": "disposed"
+      },
+      "targetedVerificationState": {
+        "stage": "passed-three-engine-targeted-regression"
+      },
+      "finalVerification": {
+        "runId": "2026-09-08-upstream-03",
+        "status": "fixed"
+      }
+    }
+  ],
+  "sharedChange": "Q2727 BeforeExecuteEvent/BeforeExecuteHook及AppController await接线；由主控Q2727专项验证。",
+  "evidenceDirectory": "tests/upstream-issues/collections/2026-09-08-batch-02-runtime-evidence",
+  "nativeHistoryControl": {
+    "script": "tests/upstream-issues/collections/2026-09-08-batch-02-runtime-evidence/native-iframe-history-control.mjs",
+    "results": {
+      "about:blank": "三引擎history路径改写均SecurityError",
+      "document.open": "Chromium/WebKit成功，Firefox仍SecurityError",
+      "srcdoc": "三引擎仍SecurityError",
+      "same-origin-empty-http-document": "三引擎成功，原生不同Realm，宿主URL不变"
+    }
+  },
+  "nativeCacheControl": {
+    "script": "native-module-disposal-control.mjs",
+    "result": "WebKit无modulepreload时新iframe同URL正确获取v2/404/恢复；modulepreload保留或remove或消费后均缓存v1且无新entry HTTP，about:blank与实体document结果一致。Chromium/Firefox所有对照均正常。",
+    "evidence": "native-module-disposal-control.log",
+    "relatedOfficialIssue": "https://bugs.webkit.org/show_bug.cgi?id=270357",
+    "followupEvidence": "native-module-disposal-cleanup-control.log",
+    "followupResult": "普通preload(as=script)、window.stop、document.open、先导航about:blank后remove均不能使WebKit重新请求同URL；最终仅移除框架隐式无SRI入口预加载。"
+  },
+  "nativeDetachedPromiseControl": {
+    "result": "Firefox已移除iframe的FramePromise.reject回调不settle；host Promise.reject能settle且FrameDOMException品牌保留。Chromium/WebKit两种都能settle。",
+    "evidence": "native-module-disposal-control.log",
+    "relatedOfficialIssue": "https://bugzilla.mozilla.org/show_bug.cgi?id=1663090"
+  },
+  "verification": {
+    "unit": "20/20 passed: runtime-policy-loader-unit.log",
+    "typecheck": "RealmHost/capability-broker/test types passed",
+    "architecture": "passed: runtime-architecture.log",
+    "browser": "此前完整Browser 408/408通过，副本runtime-related-browser-final.json；主控后续新增用例的完整Browser 411/411亦通过，最终统一报告由主控绑定。",
+    "runtimeE2E": "本组原11条逻辑用例×3引擎=33/33在首轮批次报告通过；追加pending import用例首次3条失败属于disposed错误预期。修正后Q1502两个完整标题在final-corrections-e2e.json中6/6通过，本组12个逻辑用例均已有三引擎通过证据；该修正批次总体22/24，其他两项CSP失败不属于本组，整仓最终门禁仍由主控核验。"
+  },
+  "relatedFixes": [
+    {
+      "id": "fixed-insertion-viewport-intent",
+      "relatedIssue": "umijs/qiankun#2408",
+      "stage": "passed-three-engine-browser-regression",
+      "scope": "首次同步插入body/overlay时，仅按未被框架root尺寸规则影响的真实fixed视口覆盖意图归一化；普通fixed、高z、局部role=dialog保留原尺寸坐标；保留真实CSS入场动画及延迟dialog语义。",
+      "source": "packages/dom-surface/src/synchronous-overlay-preparation.ts",
+      "redEvidence": "tests/upstream-issues/collections/2026-09-08-batch-02-entry-evidence/batch02-fixed-position-first.json",
+      "redObservation": "真实20x20 fixed节点在插入后top从180被改为0；三引擎首轮fixed-position均失败。",
+      "tests": [
+        {
+          "path": "tests/browser/upstream-batch02-overlay-intent.browser.test.ts",
+          "title": "Q2408 related fixed body nodes retain their authored size and offsets across synchronous insertion APIs",
+          "verificationStatus": "passed-chromium-firefox-webkit"
+        },
+        {
+          "path": "tests/browser/upstream-batch02-overlay-intent.browser.test.ts",
+          "title": "viewport overlay intent preserves CSS fullscreen entry animation before delayed dialog semantics",
+          "verificationStatus": "passed-chromium-firefox-webkit"
+        },
+        {
+          "path": "tests/browser/upstream-batch02-overlay-intent.browser.test.ts",
+          "title": "hidden viewport roots retain their viewport intent while local fixed dialogs keep their own geometry",
+          "verificationStatus": "passed-chromium-firefox-webkit"
+        }
+      ],
+      "retainedRegressionTests": [
+        {
+          "path": "tests/browser/realm-dom.browser.test.ts",
+          "title": "prepares a hidden overlay root and elevates it when entering",
+          "verificationStatus": "passed-chromium-firefox-webkit"
+        },
+        {
+          "path": "tests/browser/realm-dom.browser.test.ts",
+          "title": "prepares a fixed viewport body child before dialog semantics appear",
+          "verificationStatus": "passed-chromium-firefox-webkit"
+        },
+        {
+          "path": "tests/browser/realm-dom.browser.test.ts",
+          "title": "marks a detached modal root before connection so its enter animation is not cancelled",
+          "verificationStatus": "passed-chromium-firefox-webkit"
+        }
+      ],
+      "limitations": [
+        "未覆盖已经合法标记为全屏的节点后来修改为局部fixed尺寸时撤销标记；global-overlay-stack-bridge后续refresh仍沿用已有计算路径。"
+      ],
+      "engines": {
+        "chromium": "passed",
+        "firefox": "passed",
+        "webkit": "passed",
+        "safari": "not-run"
+      },
+      "verificationEvidence": "tests/upstream-issues/collections/2026-09-08-batch-02-runtime-evidence/runtime-related-browser-final.json",
+      "verificationNote": "正式完整Browser 408/408通过；本relatedFix新3条+旧hidden/early/80ms动画3条三引擎18/18通过。首次401/405报告保留为runtime-related-browser-first.json。",
+      "recommendedStatus": "fixed",
+      "recommendationBasis": "首次插入普通20x20 fixed节点被拉伸的本地红测明确；按未标记原始计算样式判定视口意图后，新3条与保留旧3条回归三引擎通过。仅覆盖首次插入，不扩展到已合法标记全屏节点后续缩小。"
+    }
+  ],
+  "recommendationScope": "recommendedStatus仅依据每条当前测试条件与已保存本地证据提出，尚未写入总catalog或宣称最终整仓门禁完成；最终报告将按实际path/title绑定。所有WebKit结果均来自Playwright，真实Safari未运行。",
+  "updatedAt": "2026-09-08T08:44:16.462259+00:00",
+  "finalVerification": {
+    "runId": "2026-09-08-upstream-03",
+    "completedAt": "2026-09-08T08:44:16.462259+00:00",
+    "allRequiredBehaviorGatesPassed": true,
+    "releaseReady": false
+  }
+}

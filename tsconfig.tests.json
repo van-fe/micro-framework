@@ -1,0 +1,30 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "types": [
+      "vite/client",
+      "node"
+    ]
+  },
+  "include": [
+    "vitest.browser.config.ts",
+    "vitest.safari.config.ts",
+    "playwright.config.ts",
+    "playwright.benchmark.config.ts",
+    "playwright.production.config.ts",
+    "benchmarks/**/*.ts",
+    "tests/browser/**/*.ts",
+    "tests/e2e/**/*.ts",
+    "tests/production/**/*.ts",
+    "tests/safari/**/*.ts",
+    "playwright.templates.config.ts",
+    "playwright.mobile.config.ts",
+    "tests/templates/**/*.ts",
+    "tests/mobile/**/*.ts",
+    "tests/**/*.d.ts",
+    "playwright.integrations.config.ts",
+    "tests/integrations/**/*.ts"
+  ]
+}

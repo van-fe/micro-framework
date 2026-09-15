@@ -1,0 +1,2351 @@
+{
+  "schemaVersion": 1,
+  "repository": "Tencent/wujie",
+  "collectionBatch": "2026-09-08-batch-02",
+  "collectedAt": "2026-09-08T06:10:53Z",
+  "provenance": "GitHub connector github_search_issues, github_fetch_issue, github_fetch_issue_comments. Issue bodies and comments below are unmodified tool payloads; null labels from fetch are represented as [] only in the collection file.",
+  "labelSearches": [
+    {
+      "query": "repo:Tencent/wujie is:issue label:bug",
+      "topn": 100,
+      "result": {
+        "issues": [
+          {
+            "url": "https://github.com/Tencent/wujie/issues/835",
+            "title": "子应用不能监听自定义合成事件",
+            "issue_number": 835,
+            "body": "**描述bug**\r\n子应用引入的sdk内部派发了自定义合成事件，在window上监听不到；\r\n但是子应用脱离无界环境独立运行时，合成事件能被监听到。\r\n目前有什么办法可以解决这个问题吗？\r\n\r\n**如何复现**\r\n``` javascript\r\nconst customEvent = new CustomEvent('testEvent', {\r\n    bubbles: true,\r\n    composed: true,\r\n    detail: {\r\n      name: 'this is message'\r\n    }\r\n  })\r\nwindow.dispatchEvent(customEvent);\r\n\r\n// 在无界子应用内监听不到，但是独立运行时可以监听到\r\nwindow.addEventListener('testEvent', function(event) {\r\n    console.log(event)\r\n  })\r\n```\r\n",
+            "state": null,
+            "user": null,
+            "assignees": null,
+            "labels": null,
+            "milestone": null,
+            "state_reason": null,
+            "comments": null,
+            "created_at": null,
+            "updated_at": null,
+            "closed_at": null,
+            "display_url": "https://github.com/Tencent/wujie/issues/835",
+            "display_title": "子应用不能监听自定义合成事件"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/823",
+            "title": "window.__WUJIE_MOUNT只要一添加，再次挂载就会报错Cannot set properties of null (setting '_cacheListeners')     at patchEventListener",
+            "issue_number": 823,
+            "body": "**问题:**\r\n我想在子应用的挂载阶段和卸载阶段做一些事情，然后我加了mount、unmout处理。但是加了mount以后，页面第一次载入没问题，卸载完再进入就会报这个错? 我是react应用\r\n**如何复现**\r\n1、代码\r\n`\r\nlet rootAppInstance: any = null;\r\n\r\n// 检查是否在Wujie微前端环境中运行\r\nif ((window as any).__POWERED_BY_WUJIE__) {\r\n  // 定义微前端挂载逻辑\r\n  (window as any).__WUJIE_MOUNT = async () => {\r\n    console.log('Wujie ID:', window.__WUJIE.id);\r\n    console.log('挂载');\r\n    // 检查rootAppInstance是否已经初始化\r\n    if (!rootAppInstance) {\r\n      const rootElement = document.getElementById('root');\r\n      if (rootElement) {\r\n        rootAppInstance = ReactDOM.createRoot(rootElement);\r\n        console.log('应用实例创建成功');\r\n      } else {\r\n        console.error('未找到root元素');\r\n        return; \r\n      }\r\n    }\r\n    rootAppInstance.render(<RootApp />);\r\n    console.log('应用挂载完成');\r\n  };\r\n\r\n  (window as any).__WUJIE_UNMOUNT = () => {\r\n    // 卸载React应用\r\n    if (rootAppInstance) {\r\n      rootAppInstance.unmount();\r\n      console.log('卸载完成');\r\n    } else {\r\n      console.log('没有可卸载的应用实例');\r\n    }\r\n    rootAppInstance = null;\r\n  };\r\n} else {\r\n  // 非Wujie环境下的挂载逻辑\r\n  const rootElement = document.getElementById('root');\r\n  if (rootElement) {\r\n    const root = ReactDOM.createRoot(rootElement);\r\n    root.render(<RootApp />);\r\n  } else {\r\n    console.error('未找到root元素');\r\n  }\r\n}`\r\n2、问题\r\n加上了(window as any).__WUJIE_MOUNT =（）=>{}， 就算什么也不写，再次挂载一定会报错\r\n\r\n**错误截图**\r\n![image](https://github.com/Tencent/wujie/assets/34928410/35de9cd2-07f6-4837-b668-6b4a51d27c1f)\r\n![image](https://github.com/Tencent/wujie/assets/34928410/e915fadf-884b-44be-8e32-5defbd3d6050)\r\n\r\n",
+            "state": null,
+            "user": null,
+            "assignees": null,
+            "labels": null,
+            "milestone": null,
+            "state_reason": null,
+            "comments": null,
+            "created_at": null,
+            "updated_at": null,
+            "closed_at": null,
+            "display_url": "https://github.com/Tencent/wujie/issues/823",
+            "display_title": "window.__WUJIE_MOUNT只要一添加，再次挂载就会报错Cannot set properties of null (setting '_cacheListeners')     at patchEventListener"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/116",
+            "title": "bug: css in js 切换路由样式丢失",
+            "issue_number": 116,
+            "body": "<!-- 请尽量按照下面几个方面给出解决bug必须得信息 -->\r\n\r\n**描述bug**\r\n想问一下 css-in-js 为啥只在第一次渲染的时候生效，而切换一下，css dom 的ruleList 就没了呢（twind方案）\r\n\r\n**如何复现**\r\n给出详细的复现步骤\r\n1、第一步 xxx\r\n2、 第二步 xxx\r\n\r\n**错误截图**\r\n![image](https://user-images.githubusercontent.com/19788268/187641172-d061658f-067a-4529-8896-755b4ed3674d.png)\r\n![image](https://user-images.githubusercontent.com/19788268/187641200-56b4e3e3-1722-4351-9d6e-c40a2fd9be1b.png)\r\n\r\n**最小复现仓库或者地址**\r\n[仓库](https://github.com/colgin/wujie/tree/bug/css-in-js)\r\n",
+            "state": null,
+            "user": null,
+            "assignees": null,
+            "labels": null,
+            "milestone": null,
+            "state_reason": null,
+            "comments": null,
+            "created_at": null,
+            "updated_at": null,
+            "closed_at": null,
+            "display_url": "https://github.com/Tencent/wujie/issues/116",
+            "display_title": "bug: css in js 切换路由样式丢失"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/107",
+            "title": "相对地址转绝对地址时需要区分空路径和hash路径",
+            "issue_number": 107,
+            "body": "<!-- 请尽量按照下面几个方面给出解决bug必须得信息 -->\r\n\r\n**描述bug**\r\n子应用的 a 标签的 href 为空或者 hash 时，无需做绝对地址转换\r\n\r\n**如何复现**\r\n给出详细的复现步骤\r\n1、第一步 xxx\r\n2、 第二步 xxx\r\n\r\n**错误截图**\r\n如果有可以将截图带上\r\n\r\n**最小复现仓库或者地址**\r\n重要！！！，请尽量给出复现仓库，这样能极大加快bug解决速度\r\n",
+            "state": null,
+            "user": null,
+            "assignees": null,
+            "labels": null,
+            "milestone": null,
+            "state_reason": null,
+            "comments": null,
+            "created_at": null,
+            "updated_at": null,
+            "closed_at": null,
+            "display_url": "https://github.com/Tencent/wujie/issues/107",
+            "display_title": "相对地址转绝对地址时需要区分空路径和hash路径"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/102",
+            "title": "子应用执行apply后不符合正常程序预期",
+            "issue_number": 102,
+            "body": "**描述bug**\r\n子应用下使用如下代码，输出结果不合预期。结果为undefined，预期结果为'test'字符串\r\n\r\n**如何复现**\r\n``` \r\n<script>\r\n    const object = {};\r\n    window.addAttributeToObject = function () {\r\n      this.a = \"test\";\r\n    };\r\n    window.addAttributeToObject.apply(object);\r\n    console.log(object.a); // undefined\r\n  </script>\r\n```\r\n\r\n**错误截图**\r\n-\r\n\r\n**最小复现仓库或者地址**\r\n-\r\n",
+            "state": null,
+            "user": null,
+            "assignees": null,
+            "labels": null,
+            "milestone": null,
+            "state_reason": null,
+            "comments": null,
+            "created_at": null,
+            "updated_at": null,
+            "closed_at": null,
+            "display_url": "https://github.com/Tencent/wujie/issues/102",
+            "display_title": "子应用执行apply后不符合正常程序预期"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/78",
+            "title": "TypeError: Cannot redefine property: xxx",
+            "issue_number": 78,
+            "body": "<!-- 请尽量按照下面几个方面给出解决bug必须得信息 -->\r\n\r\n**描述bug**\r\npatchStylesheetElement中对每次插入进来的样式元素进行了Object.defineProperties，但是可能重复插入相同元素导致反复Object.defineProperties，页面就报错\r\n\r\n\r\n**错误截图**\r\n![image](https://user-images.githubusercontent.com/19788268/185350903-abba1c1d-7d44-45ef-9ea4-8e77e992196d.png)\r\n\r\n\r\n",
+            "state": null,
+            "user": null,
+            "assignees": null,
+            "labels": null,
+            "milestone": null,
+            "state_reason": null,
+            "comments": null,
+            "created_at": null,
+            "updated_at": null,
+            "closed_at": null,
+            "display_url": "https://github.com/Tencent/wujie/issues/78",
+            "display_title": "TypeError: Cannot redefine property: xxx"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/70",
+            "title": "IE11下 \"EventTarget\" 未定义",
+            "issue_number": 70,
+            "body": "<!-- 请尽量按照下面几个方面给出解决bug必须得信息 -->\r\n\r\n**描述bug**\r\nIE11浏览器，在 creat-react-app 生成的 demo 项目下，引入 wujie-react，尝试渲染子应用，控制台显示  \"EventTarget\" 未定义\r\n\r\n**如何复现**\r\n\r\n1、第一步，通过 cra 生成最简demo项目\r\n2、第二步，安装 creat-app-polyfill，在入口文件 index.js 中引入 “import \"react-app-polyfill/ie11\";”\r\n<img width=\"578\" alt=\"image\" src=\"https://user-images.githubusercontent.com/44110957/184822311-3b2b7365-ef65-4186-8489-11b233f46d2d.png\">\r\n3、第三步\r\n改写 App 组件，注释无用css和图片等，保留 外层 div 结构，内部引入 wujie-react 组件\r\nwujie-react 组件配置相关的 name 和 url（这里把 name和url 设置为同一个），width/height 100%\r\n<img width=\"667\" alt=\"image\" src=\"https://user-images.githubusercontent.com/44110957/184823142-3fc9ac6e-3490-4287-ba6b-5edd15fc01bb.png\">\r\n\r\n4、第四步，yarn build 打包项目，部署在本机 nginx，通过 IE11 浏览器进行访问\r\n<img width=\"315\" alt=\"image\" src=\"https://user-images.githubusercontent.com/44110957/184823833-8949553a-b76d-4686-a43d-e1b9208a15fa.png\">\r\n\r\n**错误截图**\r\n<img width=\"225\" alt=\"image\" src=\"https://user-images.githubusercontent.com/44110957/184824119-55cf40e2-fcd6-4f66-a092-73dc5e4287d9.png\">\r\n\r\n错误代码定位在 common.ts 中的 EventTarget.prototype.addEventListen \r\n\r\n**最小复现仓库或者地址**\r\n重要！！！，请尽量给出复现仓库，这样能极大加快bug解决速度\r\n",
+            "state": null,
+            "user": null,
+            "assignees": null,
+            "labels": null,
+            "milestone": null,
+            "state_reason": null,
+            "comments": null,
+            "created_at": null,
+            "updated_at": null,
+            "closed_at": null,
+            "display_url": "https://github.com/Tencent/wujie/issues/70",
+            "display_title": "IE11下 \"EventTarget\" 未定义"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/67",
+            "title": "ANTV X6 子应用使用问题",
+            "issue_number": 67,
+            "body": "<!-- 请尽量按照下面几个方面给出解决bug必须得信息 -->\r\n\r\n**描述bug**\r\n在ANTV X6 使用中，会存在鼠标显示位置 和 操作位置不一致的问题\r\n\r\n\r\n**错误截图**\r\n\r\n![企业微信截图_16606160011022](https://user-images.githubusercontent.com/47617448/184784038-648fb97b-b424-4a58-8b60-a5a57f6da8dc.png)\r\n\r\n",
+            "state": null,
+            "user": null,
+            "assignees": null,
+            "labels": null,
+            "milestone": null,
+            "state_reason": null,
+            "comments": null,
+            "created_at": null,
+            "updated_at": null,
+            "closed_at": null,
+            "display_url": "https://github.com/Tencent/wujie/issues/67",
+            "display_title": "ANTV X6 子应用使用问题"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/49",
+            "title": "window事件 和 document.write失效",
+            "issue_number": 49,
+            "body": "<!-- 请尽量按照下面几个方面给出解决bug必须得信息 -->\r\n\r\n**描述bug**\r\nwindow上的事件比如onload 和 document.write添加 script 标签无法生效",
+            "state": null,
+            "user": null,
+            "assignees": null,
+            "labels": null,
+            "milestone": null,
+            "state_reason": null,
+            "comments": null,
+            "created_at": null,
+            "updated_at": null,
+            "closed_at": null,
+            "display_url": "https://github.com/Tencent/wujie/issues/49",
+            "display_title": "window事件 和 document.write失效"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/12",
+            "title": "vite子应用css3变量没有生效",
+            "issue_number": 12,
+            "body": "子应用为vite开发模式:root样式没有转化成:host",
+            "state": null,
+            "user": null,
+            "assignees": null,
+            "labels": null,
+            "milestone": null,
+            "state_reason": null,
+            "comments": null,
+            "created_at": null,
+            "updated_at": null,
+            "closed_at": null,
+            "display_url": "https://github.com/Tencent/wujie/issues/12",
+            "display_title": "vite子应用css3变量没有生效"
+          }
+        ]
+      }
+    },
+    {
+      "query": "repo:Tencent/wujie is:issue label:\"lib bug\"",
+      "topn": 100,
+      "result": {
+        "issues": [
+          {
+            "url": "https://github.com/Tencent/wujie/issues/832",
+            "title": "主应用、子应用均为Vue2，子应用引入使用bpmn-js生成流程图，在火狐浏览器下，主应用嵌入子应用时不显示流程图。",
+            "issue_number": 832,
+            "body": "<!-- 请尽量按照下面几个方面给出解决bug必须得信息 -->\r\n\r\n**描述bug**\r\n分别使用 谷歌浏览器 / 火狐浏览器\r\n在wujie中引入bpmn-js，存在4种情况：\r\n1、在谷歌浏览器中，主应用中嵌入的子应用中的bpmn流程图正常显示；\r\nhttps://github.com/ouzexi/wujie-bpmn-demo/blob/main/imgs/1.png\r\n2、在火狐浏览器中，主应用中嵌入的子应用中的bpmn流程图不显示；\r\nhttps://github.com/ouzexi/wujie-bpmn-demo/blob/main/imgs/2.png\r\n3、在谷歌浏览器中，独立访问子应用中的bpmn流程图正常显示；\r\nhttps://github.com/ouzexi/wujie-bpmn-demo/blob/main/imgs/3.png\r\n4、在火狐浏览器中，独立访问子应用中的bpmn流程图正常显示；\r\nhttps://github.com/ouzexi/wujie-bpmn-demo/blob/main/imgs/4.png\r\n5、在谷歌浏览器控制台中，主应用中嵌入的子应用中的bpmn流程图节点正常插入到dom\r\nhttps://github.com/ouzexi/wujie-bpmn-demo/blob/main/imgs/5.png\r\n6、在火狐浏览器控制台中，主应用中嵌入的子应用中的bpmn流程图节点没有插入到dom\r\nhttps://github.com/ouzexi/wujie-bpmn-demo/blob/main/imgs/6.png\r\n\r\n猜测：shadowRoot在不同浏览器特性不同？导致在火狐浏览器找不到节点插入？\r\n\r\n\r\n**如何复现**\r\n给出详细的复现步骤\r\n1、在子应用中引入使用bpmn-js生成流程图\r\n2、主应用中嵌入子应用，流程图不显示\r\n\r\n**最小复现仓库或者地址**\r\nhttps://github.com/ouzexi/wujie-bpmn-demo",
+            "state": null,
+            "user": null,
+            "assignees": null,
+            "labels": null,
+            "milestone": null,
+            "state_reason": null,
+            "comments": null,
+            "created_at": null,
+            "updated_at": null,
+            "closed_at": null,
+            "display_url": "https://github.com/Tencent/wujie/issues/832",
+            "display_title": "主应用、子应用均为Vue2，子应用引入使用bpmn-js生成流程图，在火狐浏览器下，主应用嵌入子应用时不显示流程图。"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/830",
+            "title": "使用naive-ui表单下拉弹出问题错误",
+            "issue_number": 830,
+            "body": "<!-- 请尽量按照下面几个方面给出解决bug必须得信息 -->\r\n\r\n**描述bug**\r\n子应用使用了`naive-ui`，发现在来回切换子应用后，表单的有下拉选择的组件弹出位置都是错误了，看了下naive-ui并没有采用类似element-plus的弹出方式。\r\n![image](https://github.com/Tencent/wujie/assets/47807522/ab4bf05c-2fd4-4c36-8609-75662830932e)\r\n",
+            "state": null,
+            "user": null,
+            "assignees": null,
+            "labels": null,
+            "milestone": null,
+            "state_reason": null,
+            "comments": null,
+            "created_at": null,
+            "updated_at": null,
+            "closed_at": null,
+            "display_url": "https://github.com/Tencent/wujie/issues/830",
+            "display_title": "使用naive-ui表单下拉弹出问题错误"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/829",
+            "title": "recharts 页面滚动之后Tooltip 触发问题",
+            "issue_number": 829,
+            "body": "<!-- 请尽量按照下面几个方面给出解决bug必须得信息 -->\r\n\r\n**描述bug**\r\n用wujieReact嵌入的页面，如果包含recharts内容，在滚动条滚动之后，无法正常触发Tooltip\r\n\r\n**如何复现**\r\n给出详细的复现步骤\r\n1、在无界官网`在线体验无界`\r\n2、 输入`https://recharts.org`\r\n3、进入任意有Tooltip 的 example\r\n4、滚动一点滚动条\r\n5、鼠标悬停在chart 上，无法触发Tooltip\r\n(经观察：若只向下滚动少量的滚动条，chart 上部可以正常触发Tooltip,下部无法触发，从下往上无法触发的距离大致与滚动条滚动的高度一致)\r\n\r\n**错误截图**\r\n\r\nhttps://github.com/Tencent/wujie/assets/63338728/b56d92b6-a68b-49a1-a942-a71ab99325c2\r\n\r\n\r\n\r\n**最小复现仓库或者地址**\r\n重要！！！，请尽量给出复现仓库，这样能极大加快bug解决速度\r\n",
+            "state": null,
+            "user": null,
+            "assignees": null,
+            "labels": null,
+            "milestone": null,
+            "state_reason": null,
+            "comments": null,
+            "created_at": null,
+            "updated_at": null,
+            "closed_at": null,
+            "display_url": "https://github.com/Tencent/wujie/issues/829",
+            "display_title": "recharts 页面滚动之后Tooltip 触发问题"
+          }
+        ]
+      }
+    }
+  ],
+  "selectedIssues": [
+    {
+      "number": 262,
+      "fetch": {
+        "issue": {
+          "url": "https://github.com/Tencent/wujie/issues/262",
+          "title": "某些使用场景下，document.querySelector 不需要被替换为了shadowRoot.querySelector ",
+          "issue_number": 262,
+          "body": "<!-- 请尽量按照下面几个方面给出解决bug必须得信息 -->\r\n\r\n**描述bug**\r\n在接入使用了 [DOMPurify](https://github.com/cure53/DOMPurify) (版本号2.3.0)库的子应用时，出现了一些诡异的现象，sanitize的结果居然是shadowRoot的body的html。查看源码后发现是document.getElementsByTagName 在wujie中被patch为了shadowRoot的getElementsByTagName， 当_ctx为\r\n\r\n**如何复现**\r\n给出详细的复现步骤\r\n1、可以在 https://wujie-micro.github.io/doc/wujie/ 中在线加载  https://www.jarden.vip/wujie-demo/demo4.html\r\n2、 观察控制台输出\r\n3、 demo的简化版源码放楼下了\r\n\r\n**错误截图**\r\n![1668603650364](https://user-images.githubusercontent.com/15191056/202187266-6f60d5ea-14a0-412e-8ceb-0cd3028a6b20.png)\r\n\r\n**最小复现仓库或者地址**\r\nhttps://www.jarden.vip/wujie-demo/demo4.html",
+          "state": "closed",
+          "user": {
+            "login": "jardenliu",
+            "name": "jardenliu",
+            "email": null,
+            "avatar_url": "https://avatars.githubusercontent.com/u/15191056?v=4",
+            "id": 15191056
+          },
+          "assignees": null,
+          "labels": null,
+          "milestone": null,
+          "state_reason": "completed",
+          "comments": 1,
+          "created_at": "2022-11-16T13:02:12Z",
+          "updated_at": "2022-11-23T06:51:17Z",
+          "closed_at": "2022-11-23T06:51:17Z",
+          "display_url": "https://github.com/Tencent/wujie/issues/262",
+          "display_title": "某些使用场景下，document.querySelector 不需要被替换为了shadowRoot.querySelector "
+        },
+        "url": "https://github.com/Tencent/wujie/issues/262",
+        "title": "某些使用场景下，document.querySelector 不需要被替换为了shadowRoot.querySelector ",
+        "display_url": "https://github.com/Tencent/wujie/issues/262",
+        "display_title": "某些使用场景下，document.querySelector 不需要被替换为了shadowRoot.querySelector "
+      },
+      "comments": {
+        "comments": [
+          {
+            "url": "https://github.com/Tencent/wujie/issues/262#issuecomment-1316988279",
+            "body": "```js\r\nconst doc = new DOMParser().parseFromString('<div id=\"test\"></div>', 'text/html')\r\nconsole.log(\"doc:\", doc)\r\nconsole.log(\"document.querySelector.call test:\", document.querySelector.call(doc, \"#test\"))\r\nconsole.log(\"doc.querySelector test2:\", doc.querySelector(\"#test\"))\r\n```",
+            "user": {
+              "login": "jardenliu",
+              "name": "jardenliu",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/15191056?v=4",
+              "id": 15191056
+            },
+            "id": 1316988279,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<div class=\"highlight highlight-source-js notranslate position-relative overflow-auto\" dir=\"auto\" data-snippet-clipboard-copy-content=\"const doc = new DOMParser().parseFromString('&lt;div id=&quot;test&quot;&gt;&lt;/div&gt;', 'text/html')\nconsole.log(&quot;doc:&quot;, doc)\nconsole.log(&quot;document.querySelector.call test:&quot;, document.querySelector.call(doc, &quot;#test&quot;))\nconsole.log(&quot;doc.querySelector test2:&quot;, doc.querySelector(&quot;#test&quot;))\"><pre class=\"notranslate\"><span class=\"pl-k\">const</span> <span class=\"pl-s1\">doc</span> <span class=\"pl-c1\">=</span> <span class=\"pl-k\">new</span> <span class=\"pl-v\">DOMParser</span><span class=\"pl-kos\">(</span><span class=\"pl-kos\">)</span><span class=\"pl-kos\">.</span><span class=\"pl-en\">parseFromString</span><span class=\"pl-kos\">(</span><span class=\"pl-s\">'&lt;div id=\"test\"&gt;&lt;/div&gt;'</span><span class=\"pl-kos\">,</span> <span class=\"pl-s\">'text/html'</span><span class=\"pl-kos\">)</span>\n<span class=\"pl-smi\">console</span><span class=\"pl-kos\">.</span><span class=\"pl-en\">log</span><span class=\"pl-kos\">(</span><span class=\"pl-s\">\"doc:\"</span><span class=\"pl-kos\">,</span> <span class=\"pl-s1\">doc</span><span class=\"pl-kos\">)</span>\n<span class=\"pl-smi\">console</span><span class=\"pl-kos\">.</span><span class=\"pl-en\">log</span><span class=\"pl-kos\">(</span><span class=\"pl-s\">\"document.querySelector.call test:\"</span><span class=\"pl-kos\">,</span> <span class=\"pl-smi\">document</span><span class=\"pl-kos\">.</span><span class=\"pl-c1\">querySelector</span><span class=\"pl-kos\">.</span><span class=\"pl-en\">call</span><span class=\"pl-kos\">(</span><span class=\"pl-s1\">doc</span><span class=\"pl-kos\">,</span> <span class=\"pl-s\">\"#test\"</span><span class=\"pl-kos\">)</span><span class=\"pl-kos\">)</span>\n<span class=\"pl-smi\">console</span><span class=\"pl-kos\">.</span><span class=\"pl-en\">log</span><span class=\"pl-kos\">(</span><span class=\"pl-s\">\"doc.querySelector test2:\"</span><span class=\"pl-kos\">,</span> <span class=\"pl-s1\">doc</span><span class=\"pl-kos\">.</span><span class=\"pl-en\">querySelector</span><span class=\"pl-kos\">(</span><span class=\"pl-s\">\"#test\"</span><span class=\"pl-kos\">)</span><span class=\"pl-kos\">)</span></pre></div>"
+          }
+        ],
+        "url": "https://github.com/Tencent/wujie/issues/262",
+        "title": "Tencent/wujie Issue #262 comments",
+        "display_url": "https://github.com/Tencent/wujie/issues/262",
+        "display_title": "Tencent/wujie Issue #262 comments"
+      }
+    },
+    {
+      "number": 822,
+      "fetch": {
+        "issue": {
+          "url": "https://github.com/Tencent/wujie/issues/822",
+          "title": "子应用index.html中通过script标签引入js，调用document.querySelectorAll('script')获取长度为0",
+          "issue_number": 822,
+          "body": "<!-- 请尽量按照下面几个方面给出解决bug必须得信息 -->\r\n\r\n**描述bug**\r\n子应用（不区分子应用使用框架）index.html中通过script标签引入js，调用document.querySelectorAll('script')获取长度为0，调用document.querySelector('script')可以获取到一个\r\n\r\n**如何复现**\r\n给出详细的复现步骤\r\n1、第一步 子应用的index.html中引入一篇js，该篇js中写入\r\n```js\r\nconst script = document.querySelectorAll('script');\r\nconsole.log(script);\r\n```\r\n\r\n2、 第二步 运行，查看控制台\r\n\r\n**错误截图**\r\n![image](https://github.com/Tencent/wujie/assets/129245691/fbeb032c-26ad-4992-a758-5ed1e0cd6767)\r\n\r\n**最小复现仓库或者地址**\r\n无，最简单的子应用即可\r\n",
+          "state": "open",
+          "user": {
+            "login": "zhdy2062",
+            "name": "zhdy2062",
+            "email": null,
+            "avatar_url": "https://avatars.githubusercontent.com/u/129245691?v=4",
+            "id": 129245691
+          },
+          "assignees": null,
+          "labels": [
+            {
+              "name": "to do list",
+              "color": "46AFF3",
+              "description": "to do list"
+            }
+          ],
+          "milestone": null,
+          "state_reason": null,
+          "comments": 5,
+          "created_at": "2024-03-27T14:17:13Z",
+          "updated_at": "2025-01-23T08:05:42Z",
+          "closed_at": null,
+          "display_url": "https://github.com/Tencent/wujie/issues/822",
+          "display_title": "子应用index.html中通过script标签引入js，调用document.querySelectorAll('script')获取长度为0"
+        },
+        "url": "https://github.com/Tencent/wujie/issues/822",
+        "title": "子应用index.html中通过script标签引入js，调用document.querySelectorAll('script')获取长度为0",
+        "display_url": "https://github.com/Tencent/wujie/issues/822",
+        "display_title": "子应用index.html中通过script标签引入js，调用document.querySelectorAll('script')获取长度为0"
+      },
+      "comments": {
+        "comments": [
+          {
+            "url": "https://github.com/Tencent/wujie/issues/822#issuecomment-2024657641",
+            "body": "使用document.scripts和document.getElementsByTagName('script')获取无问题",
+            "user": {
+              "login": "zhdy2062",
+              "name": "zhdy2062",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/129245691?v=4",
+              "id": 129245691
+            },
+            "id": 2024657641,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">使用document.scripts和document.getElementsByTagName('script')获取无问题</p>"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/822#issuecomment-2072191394",
+            "body": "确实有这个问题，querySelectorAll 和 getElementsBytagName都会代理到shadow里面查询， 处理了这个问题\r\n\r\n<img width=\"713\" alt=\"image\" src=\"https://github.com/Tencent/wujie/assets/19788268/95c44fbc-beaa-403f-9be4-27f29aab637c\">\r\n\r\n\r\nquerySelectorAll 也可加一下，欢迎pr或者我晚点加上去",
+            "user": {
+              "login": "yiludege",
+              "name": "yiludege",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/19788268?v=4",
+              "id": 19788268
+            },
+            "id": 2072191394,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">确实有这个问题，querySelectorAll 和 getElementsBytagName都会代理到shadow里面查询， 处理了这个问题</p>\n<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://private-user-images.githubusercontent.com/19788268/324834021-95c44fbc-beaa-403f-9be4-27f29aab637c.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODg4NDgwNjAsIm5iZiI6MTc4ODg0Nzc2MCwicGF0aCI6Ii8xOTc4ODI2OC8zMjQ4MzQwMjEtOTVjNDRmYmMtYmVhYS00MDNmLTliZTQtMjdmMjlhYWI2MzdjLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA5MDglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwOTA4VDA2MDkyMFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTMyYjgyZThhZjc0YzQ1ZjY5NTEwN2E3OTUyZTEyZWFmYTBhNGI4YWQzMmI2ZTJkN2QxY2YzN2NmNzRlZTQxNWEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.TgZ2U5aUmTI2mgoHa4oMOd7kTGBp912277aBEPz3mS4\"><img width=\"713\" alt=\"image\" src=\"https://private-user-images.githubusercontent.com/19788268/324834021-95c44fbc-beaa-403f-9be4-27f29aab637c.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODg4NDgwNjAsIm5iZiI6MTc4ODg0Nzc2MCwicGF0aCI6Ii8xOTc4ODI2OC8zMjQ4MzQwMjEtOTVjNDRmYmMtYmVhYS00MDNmLTliZTQtMjdmMjlhYWI2MzdjLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA5MDglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwOTA4VDA2MDkyMFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTMyYjgyZThhZjc0YzQ1ZjY5NTEwN2E3OTUyZTEyZWFmYTBhNGI4YWQzMmI2ZTJkN2QxY2YzN2NmNzRlZTQxNWEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.TgZ2U5aUmTI2mgoHa4oMOd7kTGBp912277aBEPz3mS4\" style=\"max-width: 100%;\"></a>\n<p dir=\"auto\">querySelectorAll 也可加一下，欢迎pr或者我晚点加上去</p>"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/822#issuecomment-2074519748",
+            "body": "> 确实有这个问题，querySelectorAll 和 getElementsBytagName都会代理到shadow里面查询， 处理了这个问题\r\n> \r\n> <img alt=\"image\" width=\"713\" src=\"https://private-user-images.githubusercontent.com/19788268/324834021-95c44fbc-beaa-403f-9be4-27f29aab637c.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTM5NTEzMTIsIm5iZiI6MTcxMzk1MTAxMiwicGF0aCI6Ii8xOTc4ODI2OC8zMjQ4MzQwMjEtOTVjNDRmYmMtYmVhYS00MDNmLTliZTQtMjdmMjlhYWI2MzdjLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MjQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDI0VDA5MzAxMlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTQyNGI3ZTlkOWQzZjc1OWMwYjQ1M2JlZjBkZjcwM2M4MWRkYjhlMzE0ZjY0ZDY0NDllYjRkMjFkYWE2OTFjOTcmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.zbcv-aAwp_nE9z6tSFuMVV8E-WvftJBcW2gRsEuheIE\">\r\n> querySelectorAll 也可加一下，欢迎pr或者我晚点加上去\r\n\r\n您好，我换了个账户提了pr，望指正，https://github.com/Tencent/wujie/pull/843",
+            "user": {
+              "login": "zhangdi2062",
+              "name": "zhangdi2062",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/25027927?v=4",
+              "id": 25027927
+            },
+            "id": 2074519748,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<blockquote>\n<p dir=\"auto\">确实有这个问题，querySelectorAll 和 getElementsBytagName都会代理到shadow里面查询， 处理了这个问题</p>\n<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://private-user-images.githubusercontent.com/19788268/324834021-95c44fbc-beaa-403f-9be4-27f29aab637c.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTM5NTEzMTIsIm5iZiI6MTcxMzk1MTAxMiwicGF0aCI6Ii8xOTc4ODI2OC8zMjQ4MzQwMjEtOTVjNDRmYmMtYmVhYS00MDNmLTliZTQtMjdmMjlhYWI2MzdjLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MjQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDI0VDA5MzAxMlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTQyNGI3ZTlkOWQzZjc1OWMwYjQ1M2JlZjBkZjcwM2M4MWRkYjhlMzE0ZjY0ZDY0NDllYjRkMjFkYWE2OTFjOTcmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.zbcv-aAwp_nE9z6tSFuMVV8E-WvftJBcW2gRsEuheIE\"><img alt=\"image\" width=\"713\" src=\"https://private-user-images.githubusercontent.com/19788268/324834021-95c44fbc-beaa-403f-9be4-27f29aab637c.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTM5NTEzMTIsIm5iZiI6MTcxMzk1MTAxMiwicGF0aCI6Ii8xOTc4ODI2OC8zMjQ4MzQwMjEtOTVjNDRmYmMtYmVhYS00MDNmLTliZTQtMjdmMjlhYWI2MzdjLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MjQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDI0VDA5MzAxMlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTQyNGI3ZTlkOWQzZjc1OWMwYjQ1M2JlZjBkZjcwM2M4MWRkYjhlMzE0ZjY0ZDY0NDllYjRkMjFkYWE2OTFjOTcmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.zbcv-aAwp_nE9z6tSFuMVV8E-WvftJBcW2gRsEuheIE\" style=\"max-width: 100%;\"></a>\nquerySelectorAll 也可加一下，欢迎pr或者我晚点加上去\n</blockquote>\n<p dir=\"auto\">您好，我换了个账户提了pr，望指正，<a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"2260843693\" data-permission-text=\"Title is private\" data-url=\"https://github.com/Tencent/wujie/issues/843\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/Tencent/wujie/pull/843/hovercard\" href=\"https://github.com/Tencent/wujie/pull/843\">#843</a></p>"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/822#issuecomment-2579265192",
+            "body": "你好，这个大概啥时候能修复呢",
+            "user": {
+              "login": "sunny15100",
+              "name": "sunny15100",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/17845065?v=4",
+              "id": 17845065
+            },
+            "id": 2579265192,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">你好，这个大概啥时候能修复呢</p>"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/822#issuecomment-2609106511",
+            "body": "这个啥时候合并啊",
+            "user": {
+              "login": "royalknight56",
+              "name": "royalknight56",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/34654733?v=4",
+              "id": 34654733
+            },
+            "id": 2609106511,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">这个啥时候合并啊</p>"
+          }
+        ],
+        "url": "https://github.com/Tencent/wujie/issues/822",
+        "title": "Tencent/wujie Issue #822 comments",
+        "display_url": "https://github.com/Tencent/wujie/issues/822",
+        "display_title": "Tencent/wujie Issue #822 comments"
+      }
+    },
+    {
+      "number": 1014,
+      "fetch": {
+        "issue": {
+          "url": "https://github.com/Tencent/wujie/issues/1014",
+          "title": "Cannot set property querySelector of [object Document] which has only a getter",
+          "issue_number": 1014,
+          "body": "<!-- 请尽量按照下面几个方面给出解决bug必须得信息 -->\n\n**描述bug**\nUncaught TypeError: Cannot set property querySelector of [object Document] which has only a getter\n    at <anonymous>:2:11778\n    at <anonymous>:2:14473\n    at <anonymous>:2:200\n    at Proxy.<anonymous> (<anonymous>:2:204)\n    at <anonymous>:4:30\n    at iframeWindow.Node.appendChild (iframe.js:461:1)\n    at insertScriptToIframe (iframe.js:720:1)\n    at eval (sandbox.js:324:1)\n（匿名） @ VM56731:2\n（匿名） @ VM56731:2\n（匿名） @ VM56731:2\n（匿名） @ VM56731:2\n（匿名） @ VM56731:4\niframeWindow.Node.appendChild @ iframe.js:461\ninsertScriptToIframe @ iframe.js:720\neval @ sandbox.js:324\nPromise.then\neval @ sandbox.js:319\n（匿名） @ VM56730:1\niframeWindow.Node.appendChild @ iframe.js:461\nexecNextScript @ iframe.js:697\nafterExecScript @ iframe.js:701\ninsertScriptToIframe @ iframe.js:727\neval @ sandbox.js:324\nPromise.then\neval @ sandbox.js:319\n（匿名） @ VM56728:1\niframeWindow.Node.appendChild @ iframe.js:461\nexecNextScript @ iframe.js:697\nafterExecScript @ iframe.js:701\ninsertScriptToIframe @ iframe.js:727\neval @ sandbox.js:324\nPromise.then\neval @ sandbox.js:319\n（匿名） @ VM56726:1\niframeWindow.Node.appendChild @ iframe.js:461\nexecNextScript @ iframe.js:697\nafterExecScript @ iframe.js:701\ninsertScriptToIframe @ iframe.js:727\neval @ sandbox.js:324\nPromise.then\neval @ sandbox.js:319\n（匿名） @ VM56724:1\niframeWindow.Node.appendChild @ iframe.js:461\nexecNextScript @ iframe.js:697\nafterExecScript @ iframe.js:701\ninsertScriptToIframe @ iframe.js:727\neval @ sandbox.js:324\nPromise.then\neval @ sandbox.js:319\n（匿名） @ VM56722:1\niframeWindow.Node.appendChild @ iframe.js:461\nexecNextScript @ iframe.js:697\nafterExecScript @ iframe.js:701\ninsertScriptToIframe @ iframe.js:727\neval @ sandbox.js:324\nPromise.then\neval @ sandbox.js:319\n（匿名） @ VM56720:1\niframeWindow.Node.appendChild @ iframe.js:461\nexecNextScript @ iframe.js:697\nafterExecScript @ iframe.js:701\ninsertScriptToIframe @ iframe.js:727\neval @ sandbox.js:324\nPromise.then\neval @ sandbox.js:319\n（匿名） @ VM56718:1\niframeWindow.Node.appendChild @ iframe.js:461\nexecNextScript @ iframe.js:697\nafterExecScript @ iframe.js:701\ninsertScriptToIframe @ iframe.js:727\neval @ sandbox.js:324\nPromise.then\neval @ sandbox.js:319\n（匿名） @ VM56716:1\niframeWindow.Node.appendChild @ iframe.js:461\nexecNextScript @ iframe.js:697\nafterExecScript @ iframe.js:701\ninsertScriptToIframe @ iframe.js:727\neval @ sandbox.js:324\nPromise.then\neval @ sandbox.js:319\n（匿名） @ VM56713:1\niframeWindow.Node.appendChild @ iframe.js:461\nexecNextScript @ iframe.js:697\nafterExecScript @ iframe.js:701\ninsertScriptToIframe @ iframe.js:727\neval @ sandbox.js:324\nPromise.then\neval @ sandbox.js:319\n（匿名） @ VM56711:1\niframeWindow.Node.appendChild @ iframe.js:461\nexecNextScript @ iframe.js:697\nafterExecScript @ iframe.js:701\ninsertScriptToIframe @ iframe.js:727\neval @ sandbox.js:324\nPromise.then\neval @ sandbox.js:319\n（匿名） @ VM56707:1\niframeWindow.Node.appendChild @ iframe.js:461\nexecNextScript @ iframe.js:697\nafterExecScript @ iframe.js:701\ninsertScriptToIframe @ iframe.js:727\neval @ sandbox.js:324\nPromise.then\neval @ sandbox.js:319\n（匿名） @ VM56704:1\niframeWindow.Node.appendChild @ iframe.js:461\nexecNextScript @ iframe.js:697\nafterExecScript @ iframe.js:701\ninsertScriptToIframe @ iframe.js:727\neval @ sandbox.js:324\nPromise.then\neval @ sandbox.js:319\n（匿名） @ VM56702:1\niframeWindow.Node.appendChild @ iframe.js:461\nexecNextScript @ iframe.js:697\nafterExecScript @ iframe.js:701\ninsertScriptToIframe @ iframe.js:727\neval @ sandbox.js:312\n（匿名） @ VM56701:1\niframeWindow.Node.appendChild @ iframe.js:461\nexecNextScript @ iframe.js:697\nafterExecScript @ iframe.js:701\ninsertScriptToIframe @ iframe.js:727\neval @ sandbox.js:312\n_callee2$ @ sandbox.js:385\neval @ regeneratorRuntime.js:52\neval @ regenerator.js:52\neval @ regeneratorDefine.js:17\nasyncGeneratorStep @ asyncToGenerator.js:3\n_next @ asyncToGenerator.js:17\nPromise.then\nasyncGeneratorStep @ asyncToGenerator.js:8\n_next @ asyncToGenerator.js:17\neval @ asyncToGenerator.js:22\neval @ asyncToGenerator.js:14\nstart @ sandbox.js:402\n_callee2$ @ index.js:207\neval @ regeneratorRuntime.js:52\neval @ regenerator.js:52\neval @ regeneratorDefine.js:17\nasyncGeneratorStep @ asyncToGenerator.js:3\n_next @ asyncToGenerator.js:17\nPromise.then\nasyncGeneratorStep @ asyncToGenerator.js:8\n_next @ asyncToGenerator.js:17\nPromise.then\nasyncGeneratorStep @ asyncToGenerator.js:8\n_next @ asyncToGenerator.js:17\nPromise.then\nasyncGeneratorStep @ asyncToGenerator.js:8\n_next @ asyncToGenerator.js:17\neval @ asyncToGenerator.js:22\neval @ asyncToGenerator.js:14\n_startApp @ index.js:218\nstartApp @ index.js:51\n_callee$ @ index.js:133\ntryCatch @ index.js:2\neval @ index.js:2\neval @ index.js:2\nasyncGeneratorStep @ index.js:3\n_next @ index.js:4\neval @ index.js:4\neval @ index.js:4\nstartApp @ index.js:169\nPromise.then\nexecStartApp @ index.js:172\nmounted @ index.js:111\ninvokeWithErrorHandling @ vue.esm.js:3753\ncallHook$1 @ vue.esm.js:3253\ninsert @ vue.esm.js:4944\ninvokeInsertHook @ vue.esm.js:6975\npatch @ vue.esm.js:7189\nVue._update @ vue.esm.js:2990\nupdateComponent @ vue.esm.js:3096\nWatcher.get @ vue.esm.js:4182\nWatcher.run @ vue.esm.js:4258\nflushSchedulerQueue @ vue.esm.js:3346\neval @ vue.esm.js:3879\nflushCallbacks @ vue.esm.js:3801\nPromise.then\ntimerFunc @ vue.esm.js:3826\nnextTick @ vue.esm.js:3891\nqueueWatcher @ vue.esm.js:3432\nWatcher.update @ vue.esm.js:4249\nDep.notify @ vue.esm.js:817\nreactiveSetter @ vue.esm.js:1052\neval @ vue-router.esm.js:3005\neval @ vue-router.esm.js:3004\nupdateRoute @ vue-router.esm.js:2414\neval @ vue-router.esm.js:2263\neval @ vue-router.esm.js:2402\nstep @ vue-router.esm.js:2084\nstep @ vue-router.esm.js:2091\nrunQueue @ vue-router.esm.js:2095\neval @ vue-router.esm.js:2397\nstep @ vue-router.esm.js:2084\neval @ vue-router.esm.js:2088\neval @ vue-router.esm.js:2384\neval @ vue-router.esm.js:2127\neval @ vue-router.esm.js:2203\nPromise.then\neval @ vue-router.esm.js:2150\neval @ vue-router.esm.js:2171\neval @ vue-router.esm.js:2171\nflatMapComponents @ vue-router.esm.js:2170\neval @ vue-router.esm.js:2106\niterator @ vue-router.esm.js:2362\nstep @ vue-router.esm.js:2087\nstep @ vue-router.esm.js:2091\neval @ vue-router.esm.js:2088\neval @ vue-router.esm.js:2384\n_callee$ @ main.js:444\ntryCatch @ runtime.js:62\ninvoke @ runtime.js:296\nprototype.<computed> @ runtime.js:114\nstep @ asyncToGenerator.js:17\neval @ asyncToGenerator.js:35\nt @ vendors.dll.js:14\neval @ asyncToGenerator.js:14\neval @ main.js:172\niterator @ vue-router.esm.js:2362\nstep @ vue-router.esm.js:2087\nstep @ vue-router.esm.js:2091\nrunQueue @ vue-router.esm.js:2095\nconfirmTransition @ vue-router.esm.js:2392\ntransitionTo @ vue-router.esm.js:2260\npush @ vue-router.esm.js:2715\neval @ vue-router.esm.js:3036\npush @ vue-router.esm.js:3035\n_vueRouter2.default.push @ index.js:114\neval @ loader.js?id=happyBabel!./node_modules/vue-loader/lib/index.js?!./src/views/layout/index.vue?vue&type=script&lang=js:1248\nPromise.then\ngotoViewMenu @ loader.js?id=happyBabel!./node_modules/vue-loader/lib/index.js?!./src/views/layout/index.vue?vue&type=script&lang=js:1109\nclick @ index.vue:27\ninvokeWithErrorHandling @ vue.esm.js:3753\ninvoker @ vue.esm.js:1563\noriginal_1._wrapper @ vue.esm.js:8038\n\n\n子应用抱错\n\n<img width=\"784\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/4d0b81d1-8abb-420a-b973-00d4e676c909\" />",
+          "state": "open",
+          "user": {
+            "login": "yueyunkeji",
+            "name": "yueyunkeji",
+            "email": null,
+            "avatar_url": "https://avatars.githubusercontent.com/u/21034570?v=4",
+            "id": 21034570
+          },
+          "assignees": null,
+          "labels": null,
+          "milestone": null,
+          "state_reason": null,
+          "comments": 0,
+          "created_at": "2025-07-02T10:15:45Z",
+          "updated_at": "2025-07-02T10:15:45Z",
+          "closed_at": null,
+          "display_url": "https://github.com/Tencent/wujie/issues/1014",
+          "display_title": "Cannot set property querySelector of [object Document] which has only a getter"
+        },
+        "url": "https://github.com/Tencent/wujie/issues/1014",
+        "title": "Cannot set property querySelector of [object Document] which has only a getter",
+        "display_url": "https://github.com/Tencent/wujie/issues/1014",
+        "display_title": "Cannot set property querySelector of [object Document] which has only a getter"
+      },
+      "comments": {
+        "comments": [],
+        "note": "fetch_issue reports 0 comments"
+      }
+    },
+    {
+      "number": 596,
+      "fetch": {
+        "issue": {
+          "url": "https://github.com/Tencent/wujie/issues/596",
+          "title": "在子应用中使用document.getElementById(id) id选择器，id为数字就会报以下错误",
+          "issue_number": 596,
+          "body": "DOMException: Failed to execute 'querySelector' on 'Document': '#5441' is not a valid selector.\r\n![image](https://github.com/Tencent/wujie/assets/26263560/e2fb5f33-9559-4049-b77b-961b76b91ea9)\r\n\n```[tasklist]\n### Tasks\n```\n",
+          "state": "closed",
+          "user": {
+            "login": "ty1025",
+            "name": "ty1025",
+            "email": null,
+            "avatar_url": "https://avatars.githubusercontent.com/u/26263560?v=4",
+            "id": 26263560
+          },
+          "assignees": null,
+          "labels": null,
+          "milestone": null,
+          "state_reason": "completed",
+          "comments": 1,
+          "created_at": "2023-06-13T08:56:30Z",
+          "updated_at": "2023-09-06T07:34:41Z",
+          "closed_at": "2023-06-13T08:57:33Z",
+          "display_url": "https://github.com/Tencent/wujie/issues/596",
+          "display_title": "在子应用中使用document.getElementById(id) id选择器，id为数字就会报以下错误"
+        },
+        "url": "https://github.com/Tencent/wujie/issues/596",
+        "title": "在子应用中使用document.getElementById(id) id选择器，id为数字就会报以下错误",
+        "display_url": "https://github.com/Tencent/wujie/issues/596",
+        "display_title": "在子应用中使用document.getElementById(id) id选择器，id为数字就会报以下错误"
+      },
+      "comments": {
+        "comments": [
+          {
+            "url": "https://github.com/Tencent/wujie/issues/596#issuecomment-1707823808",
+            "body": "请问如何处理的",
+            "user": {
+              "login": "Atw-Lee",
+              "name": "Atw-Lee",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/95407716?v=4",
+              "id": 95407716
+            },
+            "id": 1707823808,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">请问如何处理的</p>"
+          }
+        ],
+        "url": "https://github.com/Tencent/wujie/issues/596",
+        "title": "Tencent/wujie Issue #596 comments",
+        "display_url": "https://github.com/Tencent/wujie/issues/596",
+        "display_title": "Tencent/wujie Issue #596 comments"
+      }
+    },
+    {
+      "number": 845,
+      "fetch": {
+        "issue": {
+          "url": "https://github.com/Tencent/wujie/issues/845",
+          "title": "孙子应用的自定义@font-face不生效",
+          "issue_number": 845,
+          "body": "描述bug\r\n孙子应用的字体图标显示为方框，字体图标丢失\r\n\r\n如何复现\r\n1、创建子应用，子应用下创建孙子应用\r\n2、孙子应用上自定义@font-face，并应用，会出现字体图标丢失情况\r\n3、在调试页面将自定义@font-face提到最外层，也就是子应用shadow外层后即可生效\r\n\r\n原因分析\r\n因为@font-face在shadow里面是不生效的，所以即使将孙子应用的@font-face提到该应用shadow外面，该@font-face仍然处于子应用shadow里面所以不会生效。建议提到最外层。",
+          "state": "closed",
+          "user": {
+            "login": "Xudezheng123",
+            "name": "Xudezheng123",
+            "email": null,
+            "avatar_url": "https://avatars.githubusercontent.com/u/39091740?v=4",
+            "id": 39091740
+          },
+          "assignees": null,
+          "labels": [
+            {
+              "name": "to do list",
+              "color": "46AFF3",
+              "description": "to do list"
+            }
+          ],
+          "milestone": null,
+          "state_reason": "completed",
+          "comments": 1,
+          "created_at": "2024-04-25T02:42:45Z",
+          "updated_at": "2026-06-15T03:34:43Z",
+          "closed_at": "2026-06-15T03:34:43Z",
+          "display_url": "https://github.com/Tencent/wujie/issues/845",
+          "display_title": "孙子应用的自定义@font-face不生效"
+        },
+        "url": "https://github.com/Tencent/wujie/issues/845",
+        "title": "孙子应用的自定义@font-face不生效",
+        "display_url": "https://github.com/Tencent/wujie/issues/845",
+        "display_title": "孙子应用的自定义@font-face不生效"
+      },
+      "comments": {
+        "comments": [
+          {
+            "url": "https://github.com/Tencent/wujie/issues/845#issuecomment-2811334618",
+            "body": "这个咋样了，我也遇到相似的问题了。",
+            "user": {
+              "login": "RainManGO",
+              "name": "RainManGO",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/9261077?v=4",
+              "id": 9261077
+            },
+            "id": 2811334618,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">这个咋样了，我也遇到相似的问题了。</p>"
+          }
+        ],
+        "url": "https://github.com/Tencent/wujie/issues/845",
+        "title": "Tencent/wujie Issue #845 comments",
+        "display_url": "https://github.com/Tencent/wujie/issues/845",
+        "display_title": "Tencent/wujie Issue #845 comments"
+      }
+    },
+    {
+      "number": 1059,
+      "fetch": {
+        "issue": {
+          "url": "https://github.com/Tencent/wujie/issues/1059",
+          "title": "子应用使用vite时，第二个css以后加载的font-face无效",
+          "issue_number": 1059,
+          "body": "<!-- 请尽量按照下面几个方面给出解决bug必须得信息 -->\n\n**描述bug**\n当子应用使用vite时，第二个css文件以后的font-face无效\n\n**如何复现**\n1、使用vite开发子应用\n2、 当font-face的设置不在第一个css或者第二个css的时候，font-face无法按照文档描述，放到shadow-root在主应用加载\n\n**问题分析**\n1 vite加载css资源时，使用updateStyle\n第一个css使用appendChild\n后面加载的css使用insertAdjacentElement，确保加载顺序\n\n```js\nfunction updateStyle(id, content) {\n  let style = sheetsMap.get(id);\n  if (!style) {\n    style = document.createElement(\"style\");\n    style.setAttribute(\"type\", \"text/css\");\n    style.setAttribute(\"data-vite-dev-id\", id);\n    style.textContent = content;\n    if (cspNonce) {\n      style.setAttribute(\"nonce\", cspNonce);\n    }\n    if (!lastInsertedStyle) {\n      document.head.appendChild(style);\n      setTimeout(() => {\n        lastInsertedStyle = void 0;\n      }, 0);\n    } else {\n      lastInsertedStyle.insertAdjacentElement(\"afterend\", style);\n    }\n    lastInsertedStyle = style;\n  } else {\n    style.textContent = content;\n  }\n  sheetsMap.set(id, style);\n}\n```\n\n第一个css，使用appendChild加载的css可以正常被patch，从而正确提取font-face，如文档所述\n第二个css也可以正常被patch\n但是以后的css，由于style节点不是被appendChild加载的，导致没有被wujie正确patch。其中的资源路径没有被cssLoader处理，font-face也没有被提取\n",
+          "state": "closed",
+          "user": {
+            "login": "tjyuanpeng",
+            "name": "tjyuanpeng",
+            "email": null,
+            "avatar_url": "https://avatars.githubusercontent.com/u/7835220?v=4",
+            "id": 7835220
+          },
+          "assignees": null,
+          "labels": null,
+          "milestone": null,
+          "state_reason": "completed",
+          "comments": 0,
+          "created_at": "2026-01-16T02:32:21Z",
+          "updated_at": "2026-05-05T07:18:18Z",
+          "closed_at": "2026-05-05T07:18:18Z",
+          "display_url": "https://github.com/Tencent/wujie/issues/1059",
+          "display_title": "子应用使用vite时，第二个css以后加载的font-face无效"
+        },
+        "url": "https://github.com/Tencent/wujie/issues/1059",
+        "title": "子应用使用vite时，第二个css以后加载的font-face无效",
+        "display_url": "https://github.com/Tencent/wujie/issues/1059",
+        "display_title": "子应用使用vite时，第二个css以后加载的font-face无效"
+      },
+      "comments": {
+        "comments": [],
+        "note": "fetch_issue reports 0 comments"
+      }
+    },
+    {
+      "number": 965,
+      "fetch": {
+        "issue": {
+          "url": "https://github.com/Tencent/wujie/issues/965",
+          "title": "html标签内联样式相对路径指向的是主应用的域",
+          "issue_number": 965,
+          "body": "style=\"background-image: url('/static/xxx.png')\"\n子应用的html标签涉及到这种内联样式，发现没有替换成自身站点域名+资源路径\n",
+          "state": "open",
+          "user": {
+            "login": "ShunfuSheng",
+            "name": "ShunfuSheng",
+            "email": null,
+            "avatar_url": "https://avatars.githubusercontent.com/u/23250025?v=4",
+            "id": 23250025
+          },
+          "assignees": null,
+          "labels": null,
+          "milestone": null,
+          "state_reason": null,
+          "comments": 2,
+          "created_at": "2025-03-19T03:05:06Z",
+          "updated_at": "2026-01-06T02:07:32Z",
+          "closed_at": null,
+          "display_url": "https://github.com/Tencent/wujie/issues/965",
+          "display_title": "html标签内联样式相对路径指向的是主应用的域"
+        },
+        "url": "https://github.com/Tencent/wujie/issues/965",
+        "title": "html标签内联样式相对路径指向的是主应用的域",
+        "display_url": "https://github.com/Tencent/wujie/issues/965",
+        "display_title": "html标签内联样式相对路径指向的是主应用的域"
+      },
+      "comments": {
+        "comments": [
+          {
+            "url": "https://github.com/Tencent/wujie/issues/965#issuecomment-2735224498",
+            "body": "你要自己配置对应环境变量",
+            "user": {
+              "login": "ngwszsd",
+              "name": "ngwszsd",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/45424459?v=4",
+              "id": 45424459
+            },
+            "id": 2735224498,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">你要自己配置对应环境变量</p>"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/965#issuecomment-3712816492",
+            "body": "这个请参考[pull/345](https://github.com/Tencent/wujie/pull/345)",
+            "user": {
+              "login": "wenda10086",
+              "name": "wenda10086",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/47812628?v=4",
+              "id": 47812628
+            },
+            "id": 3712816492,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">这个请参考<a href=\"https://github.com/Tencent/wujie/pull/345\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/Tencent/wujie/pull/345/hovercard\">pull/345</a></p>"
+          }
+        ],
+        "url": "https://github.com/Tencent/wujie/issues/965",
+        "title": "Tencent/wujie Issue #965 comments",
+        "display_url": "https://github.com/Tencent/wujie/issues/965",
+        "display_title": "Tencent/wujie Issue #965 comments"
+      }
+    },
+    {
+      "number": 445,
+      "fetch": {
+        "issue": {
+          "url": "https://github.com/Tencent/wujie/issues/445",
+          "title": "子应用使用主题后嵌入后样式丢失",
+          "issue_number": 445,
+          "body": "在本地应用时 - :root[theme-mode=\"wx\"]\r\n接入wujie 主应用后 变为 :host[theme-mode=\"wx\"] 是 样式失效没有挂载上\r\n\r\n个人解决方案 主应用cssloader \r\n```javascript\r\ncssLoader: (code) => {\r\n        const rootStyleReg = /:root/g;\r\n        const hostStyleReg = /:host/g;\r\n        let newCode = code;\r\n        newCode = newCode.replace(rootStyleReg, \":host\").replace(hostStyleReg, \":host html\");\r\n        return newCode;\r\n }\r\n```",
+          "state": "closed",
+          "user": {
+            "login": "luojin315",
+            "name": "luojin315",
+            "email": null,
+            "avatar_url": "https://avatars.githubusercontent.com/u/57562534?v=4",
+            "id": 57562534
+          },
+          "assignees": null,
+          "labels": null,
+          "milestone": null,
+          "state_reason": "completed",
+          "comments": 0,
+          "created_at": "2023-03-16T07:27:05Z",
+          "updated_at": "2023-04-04T03:46:33Z",
+          "closed_at": "2023-04-04T03:46:33Z",
+          "display_url": "https://github.com/Tencent/wujie/issues/445",
+          "display_title": "子应用使用主题后嵌入后样式丢失"
+        },
+        "url": "https://github.com/Tencent/wujie/issues/445",
+        "title": "子应用使用主题后嵌入后样式丢失",
+        "display_url": "https://github.com/Tencent/wujie/issues/445",
+        "display_title": "子应用使用主题后嵌入后样式丢失"
+      },
+      "comments": {
+        "comments": [],
+        "note": "fetch_issue reports 0 comments"
+      }
+    },
+    {
+      "number": 727,
+      "fetch": {
+        "issue": {
+          "url": "https://github.com/Tencent/wujie/issues/727",
+          "title": "CSP不允许样式inline，造成子应用的样式丢失，wujie怎么去支持呢？",
+          "issue_number": 727,
+          "body": "主应用配置了CSP，不允许样式通过inline方式写，但Wujie在加载子应用的时候，会把子应用的css写到主应用的shadow-root下，这样就会以inline方式写入了css，违反了CSP的规则，造成子应用的样式不起作用。我们有办法解决吗？谢谢！",
+          "state": "open",
+          "user": {
+            "login": "swingboat",
+            "name": "swingboat",
+            "email": null,
+            "avatar_url": "https://avatars.githubusercontent.com/u/1180199?v=4",
+            "id": 1180199
+          },
+          "assignees": null,
+          "labels": null,
+          "milestone": null,
+          "state_reason": null,
+          "comments": 1,
+          "created_at": "2023-11-08T03:58:53Z",
+          "updated_at": "2023-11-23T02:19:49Z",
+          "closed_at": null,
+          "display_url": "https://github.com/Tencent/wujie/issues/727",
+          "display_title": "CSP不允许样式inline，造成子应用的样式丢失，wujie怎么去支持呢？"
+        },
+        "url": "https://github.com/Tencent/wujie/issues/727",
+        "title": "CSP不允许样式inline，造成子应用的样式丢失，wujie怎么去支持呢？",
+        "display_url": "https://github.com/Tencent/wujie/issues/727",
+        "display_title": "CSP不允许样式inline，造成子应用的样式丢失，wujie怎么去支持呢？"
+      },
+      "comments": {
+        "comments": [
+          {
+            "url": "https://github.com/Tencent/wujie/issues/727#issuecomment-1823747275",
+            "body": "试试用插件拦截一下[css-ignores](https://wujie-micro.github.io/doc/guide/plugin.html#css-ignores)",
+            "user": {
+              "login": "dengBox",
+              "name": "dengBox",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/29906246?v=4",
+              "id": 29906246
+            },
+            "id": 1823747275,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">试试用插件拦截一下<a href=\"https://wujie-micro.github.io/doc/guide/plugin.html#css-ignores\" rel=\"nofollow\">css-ignores</a></p>"
+          }
+        ],
+        "url": "https://github.com/Tencent/wujie/issues/727",
+        "title": "Tencent/wujie Issue #727 comments",
+        "display_url": "https://github.com/Tencent/wujie/issues/727",
+        "display_title": "Tencent/wujie Issue #727 comments"
+      }
+    },
+    {
+      "number": 467,
+      "fetch": {
+        "issue": {
+          "url": "https://github.com/Tencent/wujie/issues/467",
+          "title": "子应用中有使用rem单位导致样式错乱",
+          "issue_number": 467,
+          "body": "子应用中有使用rem单位，获取的是主应用根标签的font-size，导致子应用中样错乱\r\n![image](https://user-images.githubusercontent.com/28033581/227137150-8291b457-9878-441d-84d1-1a5f9a98bad9.png)\r\n该如何正确处理此类问题呢？",
+          "state": "closed",
+          "user": {
+            "login": "annoyc",
+            "name": "annoyc",
+            "email": null,
+            "avatar_url": "https://avatars.githubusercontent.com/u/28033581?v=4",
+            "id": 28033581
+          },
+          "assignees": null,
+          "labels": null,
+          "milestone": null,
+          "state_reason": "completed",
+          "comments": 1,
+          "created_at": "2023-03-23T07:48:45Z",
+          "updated_at": "2023-03-24T03:52:58Z",
+          "closed_at": "2023-03-24T03:52:58Z",
+          "display_url": "https://github.com/Tencent/wujie/issues/467",
+          "display_title": "子应用中有使用rem单位导致样式错乱"
+        },
+        "url": "https://github.com/Tencent/wujie/issues/467",
+        "title": "子应用中有使用rem单位导致样式错乱",
+        "display_url": "https://github.com/Tencent/wujie/issues/467",
+        "display_title": "子应用中有使用rem单位导致样式错乱"
+      },
+      "comments": {
+        "comments": [
+          {
+            "url": "https://github.com/Tencent/wujie/issues/467#issuecomment-1482211391",
+            "body": "重复 #222 ",
+            "user": {
+              "login": "yiludege",
+              "name": "yiludege",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/19788268?v=4",
+              "id": 19788268
+            },
+            "id": 1482211391,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">重复 <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"1410791092\" data-permission-text=\"Title is private\" data-url=\"https://github.com/Tencent/wujie/issues/222\" data-hovercard-type=\"issue\" data-hovercard-url=\"/Tencent/wujie/issues/222/hovercard\" href=\"https://github.com/Tencent/wujie/issues/222\">#222</a></p>"
+          }
+        ],
+        "url": "https://github.com/Tencent/wujie/issues/467",
+        "title": "Tencent/wujie Issue #467 comments",
+        "display_url": "https://github.com/Tencent/wujie/issues/467",
+        "display_title": "Tencent/wujie Issue #467 comments"
+      }
+    },
+    {
+      "number": 421,
+      "fetch": {
+        "issue": {
+          "url": "https://github.com/Tencent/wujie/issues/421",
+          "title": "fill-available 样式表现不一致",
+          "issue_number": 421,
+          "body": "<!-- 请尽量按照下面几个方面给出解决bug必须得信息 -->\r\n\r\n**描述bug**\r\nheight: -webkit-fill-available 在wujie里下无法自适应填充父元素高度，单独运行应用正常\r\n\r\n**如何复现**\r\n1、父元素高度为：100%，calc(100vh-20px), flex布局等需要计算的属性时\r\n2、子元素 height: -webkit-fill-available \r\n\r\n注：父元素高度为具体数值时，表现正常；父元素高度为非具体数值时，单独运行正常，wujie下表现不正常\r\n\r\n",
+          "state": "open",
+          "user": {
+            "login": "taohailin",
+            "name": "taohailin",
+            "email": null,
+            "avatar_url": "https://avatars.githubusercontent.com/u/22881932?v=4",
+            "id": 22881932
+          },
+          "assignees": null,
+          "labels": null,
+          "milestone": null,
+          "state_reason": null,
+          "comments": 0,
+          "created_at": "2023-02-24T09:01:13Z",
+          "updated_at": "2023-02-24T09:04:50Z",
+          "closed_at": null,
+          "display_url": "https://github.com/Tencent/wujie/issues/421",
+          "display_title": "fill-available 样式表现不一致"
+        },
+        "url": "https://github.com/Tencent/wujie/issues/421",
+        "title": "fill-available 样式表现不一致",
+        "display_url": "https://github.com/Tencent/wujie/issues/421",
+        "display_title": "fill-available 样式表现不一致"
+      },
+      "comments": {
+        "comments": [],
+        "note": "fetch_issue reports 0 comments"
+      }
+    },
+    {
+      "number": 779,
+      "fetch": {
+        "issue": {
+          "url": "https://github.com/Tencent/wujie/issues/779",
+          "title": "子应用图片路径解析错误",
+          "issue_number": 779,
+          "body": "**描述bug**\r\n主、子应用均为vite4+vue3，子应用图片超过4张，地址解析就会出错\r\n\r\n**如何复现**\r\n给出详细的复现步骤：\r\n\r\n4张图片及以下时，解析正确：\r\n![image](https://github.com/Tencent/wujie/assets/95023395/a80aa63e-b11b-46b9-83bb-98a55f297425)\r\n\r\n当增加一张图片时，地址就全部变成了相对路径：\r\n![image](https://github.com/Tencent/wujie/assets/95023395/203380de-cb60-43d4-872d-5a18d52c1e3f)\r\n\r\n反复测试过背景和图片的混合组合，均存在这种问题，当子应用图片大于4张时，就会出现地址解析的问题\r\n\r\n代码如下：\r\n![image](https://github.com/Tencent/wujie/assets/95023395/498985a2-2cde-41dc-a859-20819f115b7c)\r\n\r\n\r\n**最小复现仓库或者地址**\r\n重要！！！，请尽量给出复现仓库，这样能极大加快bug解决速度\r\n",
+          "state": "closed",
+          "user": {
+            "login": "felixzhou555",
+            "name": "felixzhou555",
+            "email": null,
+            "avatar_url": "https://avatars.githubusercontent.com/u/95023395?v=4",
+            "id": 95023395
+          },
+          "assignees": null,
+          "labels": null,
+          "milestone": null,
+          "state_reason": "completed",
+          "comments": 3,
+          "created_at": "2023-12-28T02:54:47Z",
+          "updated_at": "2026-01-13T09:37:25Z",
+          "closed_at": "2023-12-28T03:20:09Z",
+          "display_url": "https://github.com/Tencent/wujie/issues/779",
+          "display_title": "子应用图片路径解析错误"
+        },
+        "url": "https://github.com/Tencent/wujie/issues/779",
+        "title": "子应用图片路径解析错误",
+        "display_url": "https://github.com/Tencent/wujie/issues/779",
+        "display_title": "子应用图片路径解析错误"
+      },
+      "comments": {
+        "comments": [
+          {
+            "url": "https://github.com/Tencent/wujie/issues/779#issuecomment-3235738395",
+            "body": "怎么解决的",
+            "user": {
+              "login": "2019process",
+              "name": "2019process",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/52727002?v=4",
+              "id": 52727002
+            },
+            "id": 3235738395,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">怎么解决的</p>"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/779#issuecomment-3743098931",
+            "body": "怎么解决的",
+            "user": {
+              "login": "xieanwen",
+              "name": "xieanwen",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/24740695?v=4",
+              "id": 24740695
+            },
+            "id": 3743098931,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">怎么解决的</p>"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/779#issuecomment-3743210205",
+            "body": "> 怎么解决的\n\n使用 import icon from '/xxx/xxx/icon.png'方法可以解决",
+            "user": {
+              "login": "2019process",
+              "name": "2019process",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/52727002?v=4",
+              "id": 52727002
+            },
+            "id": 3743210205,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<blockquote>\n<p dir=\"auto\">怎么解决的</p>\n</blockquote>\n<p dir=\"auto\">使用 import icon from '/xxx/xxx/icon.png'方法可以解决</p>"
+          }
+        ],
+        "url": "https://github.com/Tencent/wujie/issues/779",
+        "title": "Tencent/wujie Issue #779 comments",
+        "display_url": "https://github.com/Tencent/wujie/issues/779",
+        "display_title": "Tencent/wujie Issue #779 comments"
+      }
+    },
+    {
+      "number": 1106,
+      "fetch": {
+        "issue": {
+          "url": "https://github.com/Tencent/wujie/issues/1106",
+          "title": "使用 Ant Design Vue中的select并是默认虚拟滚动，下拉框中可正常使用滚轮进行滚动但是鼠标拖动滚动条就卡死",
+          "issue_number": 1106,
+          "body": "使用 Ant Design Vue中的select并是默认虚拟滚动，下拉框中可正常使用滚轮进行滚动但是鼠标拖动滚动条就卡死 \n\nhttps://github.com/user-attachments/assets/83777666-1db9-437c-a8f7-c97383ec35e2",
+          "state": "open",
+          "user": {
+            "login": "panghu2000",
+            "name": "panghu2000",
+            "email": null,
+            "avatar_url": "https://avatars.githubusercontent.com/u/129826741?v=4",
+            "id": 129826741
+          },
+          "assignees": null,
+          "labels": null,
+          "milestone": null,
+          "state_reason": null,
+          "comments": 0,
+          "created_at": "2026-09-03T07:56:26Z",
+          "updated_at": "2026-09-03T08:06:39Z",
+          "closed_at": null,
+          "display_url": "https://github.com/Tencent/wujie/issues/1106",
+          "display_title": "使用 Ant Design Vue中的select并是默认虚拟滚动，下拉框中可正常使用滚轮进行滚动但是鼠标拖动滚动条就卡死"
+        },
+        "url": "https://github.com/Tencent/wujie/issues/1106",
+        "title": "使用 Ant Design Vue中的select并是默认虚拟滚动，下拉框中可正常使用滚轮进行滚动但是鼠标拖动滚动条就卡死",
+        "display_url": "https://github.com/Tencent/wujie/issues/1106",
+        "display_title": "使用 Ant Design Vue中的select并是默认虚拟滚动，下拉框中可正常使用滚轮进行滚动但是鼠标拖动滚动条就卡死"
+      },
+      "comments": {
+        "comments": [],
+        "note": "fetch_issue reports 0 comments"
+      }
+    },
+    {
+      "number": 300,
+      "fetch": {
+        "issue": {
+          "url": "https://github.com/Tencent/wujie/issues/300",
+          "title": "ElementPlus表单出现[Vue warn]: Invalid event arguments: event validation failed for event \"mouseleave\"",
+          "issue_number": 300,
+          "body": "<!-- 请尽量按照下面几个方面给出解决bug必须得信息 -->\r\n\r\n**描述bug**\r\n使用WujieVue实现微服务，各方面状况都非常好。但微服务子应用中如果有ElementPlus的表单时，当鼠标移过表单el-input等元素时，控制台会出现如下警告：\r\n[Vue warn]: Invalid event arguments: event validation failed for event \"mouseleave\"\r\n实现表单代码中并没有使用mouseleave事件，不知道该事件是如何绑定的。\r\n因为同一页面，如果不通过微服务加载，则没有报错，通过微服务加载后就出现。所以初步判断是因为作为微服务加载时引起的。\r\n\r\n",
+          "state": "open",
+          "user": {
+            "login": "yn-tadpole",
+            "name": "yn-tadpole",
+            "email": null,
+            "avatar_url": "https://avatars.githubusercontent.com/u/13926714?v=4",
+            "id": 13926714
+          },
+          "assignees": null,
+          "labels": null,
+          "milestone": null,
+          "state_reason": "reopened",
+          "comments": 28,
+          "created_at": "2022-12-01T12:03:35Z",
+          "updated_at": "2026-06-06T07:30:25Z",
+          "closed_at": null,
+          "display_url": "https://github.com/Tencent/wujie/issues/300",
+          "display_title": "ElementPlus表单出现[Vue warn]: Invalid event arguments: event validation failed for event \"mouseleave\""
+        },
+        "url": "https://github.com/Tencent/wujie/issues/300",
+        "title": "ElementPlus表单出现[Vue warn]: Invalid event arguments: event validation failed for event \"mouseleave\"",
+        "display_url": "https://github.com/Tencent/wujie/issues/300",
+        "display_title": "ElementPlus表单出现[Vue warn]: Invalid event arguments: event validation failed for event \"mouseleave\""
+      },
+      "comments": {
+        "comments": [
+          {
+            "url": "https://github.com/Tencent/wujie/issues/300#issuecomment-1333673394",
+            "body": "另外，界面的el-button的点击事件，好像也会出现如下警告：\r\nInvalid event arguments: event validation failed for event \"click\"\r\n（同一页面，如果不通过微服务加载，则没有报错）",
+            "user": {
+              "login": "yn-tadpole",
+              "name": "yn-tadpole",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/13926714?v=4",
+              "id": 13926714
+            },
+            "id": 1333673394,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">另外，界面的el-button的点击事件，好像也会出现如下警告：<br>\nInvalid event arguments: event validation failed for event \"click\"<br>\n（同一页面，如果不通过微服务加载，则没有报错）</p>"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/300#issuecomment-1430880199",
+            "body": "解决了没？我也遇见了！",
+            "user": {
+              "login": "xjown",
+              "name": "xjown",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/36128840?v=4",
+              "id": 36128840
+            },
+            "id": 1430880199,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">解决了没？我也遇见了！</p>"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/300#issuecomment-1519012940",
+            "body": "同问+1，另外dialog中使用Cascader组件，下拉框按其他空白处就会关闭，Invalid event arguments: event validation failed for event \"focus\". ",
+            "user": {
+              "login": "devcyx",
+              "name": "devcyx",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/38395095?v=4",
+              "id": 38395095
+            },
+            "id": 1519012940,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">同问+1，另外dialog中使用Cascader组件，下拉框按其他空白处就会关闭，Invalid event arguments: event validation failed for event \"focus\".</p>"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/300#issuecomment-1560480081",
+            "body": "+1",
+            "user": {
+              "login": "yaolunmao",
+              "name": "yaolunmao",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/29223334?v=4",
+              "id": 29223334
+            },
+            "id": 1560480081,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">+1</p>"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/300#issuecomment-1573403286",
+            "body": "怎么解决的啊",
+            "user": {
+              "login": "acomping",
+              "name": "acomping",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/91108392?v=4",
+              "id": 91108392
+            },
+            "id": 1573403286,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">怎么解决的啊</p>"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/300#issuecomment-1574660021",
+            "body": "未确认如何解决，因为项目还未上线，忙着其它开发工作。哪位确认了解决方案，请告知一声。",
+            "user": {
+              "login": "yn-tadpole",
+              "name": "yn-tadpole",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/13926714?v=4",
+              "id": 13926714
+            },
+            "id": 1574660021,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">未确认如何解决，因为项目还未上线，忙着其它开发工作。哪位确认了解决方案，请告知一声。</p>"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/300#issuecomment-1576450004",
+            "body": "+1 mark",
+            "user": {
+              "login": "zhoufanglu",
+              "name": "zhoufanglu",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/24451091?v=4",
+              "id": 24451091
+            },
+            "id": 1576450004,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">+1 mark</p>"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/300#issuecomment-1580082727",
+            "body": "mark",
+            "user": {
+              "login": "zdsystem",
+              "name": "zdsystem",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/38235521?v=4",
+              "id": 38235521
+            },
+            "id": 1580082727,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">mark</p>"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/300#issuecomment-1584059477",
+            "body": "同问",
+            "user": {
+              "login": "aibayanyu20",
+              "name": "aibayanyu20",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/45655660?v=4",
+              "id": 45655660
+            },
+            "id": 1584059477,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">同问</p>"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/300#issuecomment-1598051233",
+            "body": "火狐 element-plus  子应用 点击级联会自动关闭 ，这种怎么去解决\r\n![128ab64abaae57044af55b668ebe848](https://github.com/Tencent/wujie/assets/88875972/4fbd2286-0659-4bc8-89e5-564e58ee3ea3)\r\n",
+            "user": {
+              "login": "peak1024",
+              "name": "peak1024",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/88875972?v=4",
+              "id": 88875972
+            },
+            "id": 1598051233,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">火狐 element-plus  子应用 点击级联会自动关闭 ，这种怎么去解决<br>\n<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://private-user-images.githubusercontent.com/88875972/246995805-4fbd2286-0659-4bc8-89e5-564e58ee3ea3.jpg?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODg4NDgwNTgsIm5iZiI6MTc4ODg0Nzc1OCwicGF0aCI6Ii84ODg3NTk3Mi8yNDY5OTU4MDUtNGZiZDIyODYtMDY1OS00YmM4LTg5ZTUtNTY0ZTU4ZWUzZWEzLmpwZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA5MDglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwOTA4VDA2MDkxOFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTg3ZmIzYTM0ZGI3NGJjZTZmMDgzNWI4MTNjNzlmNTFmNjdmMjQyOWM4NGE3ZjA5MGU5ZjlkN2MyYmI1NzUwNzEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRmpwZWcifQ.9MMalIrFf6VRLLWlRKW-rfC_ASWb5lCdy2qghYcWBjs\"><img src=\"https://private-user-images.githubusercontent.com/88875972/246995805-4fbd2286-0659-4bc8-89e5-564e58ee3ea3.jpg?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODg4NDgwNTgsIm5iZiI6MTc4ODg0Nzc1OCwicGF0aCI6Ii84ODg3NTk3Mi8yNDY5OTU4MDUtNGZiZDIyODYtMDY1OS00YmM4LTg5ZTUtNTY0ZTU4ZWUzZWEzLmpwZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA5MDglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwOTA4VDA2MDkxOFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTg3ZmIzYTM0ZGI3NGJjZTZmMDgzNWI4MTNjNzlmNTFmNjdmMjQyOWM4NGE3ZjA5MGU5ZjlkN2MyYmI1NzUwNzEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRmpwZWcifQ.9MMalIrFf6VRLLWlRKW-rfC_ASWb5lCdy2qghYcWBjs\" alt=\"128ab64abaae57044af55b668ebe848\" style=\"max-width: 100%;\"></a></p>"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/300#issuecomment-1599996076",
+            "body": "同问，也是报这个错误，在无界demo的vue3中，也会提示[Vue warn]: Invalid event arguments: event validation failed for event \"mouseenter\".",
+            "user": {
+              "login": "crispyChicken999",
+              "name": "crispyChicken999",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/61417993?v=4",
+              "id": 61417993
+            },
+            "id": 1599996076,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">同问，也是报这个错误，在无界demo的vue3中，也会提示[Vue warn]: Invalid event arguments: event validation failed for event \"mouseenter\".</p>"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/300#issuecomment-1619639261",
+            "body": "我这也有同样的问题，vue3+vite4+element-plus，这个问题现在有解么？",
+            "user": {
+              "login": "JC-Guy",
+              "name": "JC-Guy",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/40263378?v=4",
+              "id": 40263378
+            },
+            "id": 1619639261,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">我这也有同样的问题，vue3+vite4+element-plus，这个问题现在有解么？</p>"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/300#issuecomment-1628371902",
+            "body": "https://github.com/Tencent/wujie/issues/380#issuecomment-1639706857",
+            "user": {
+              "login": "EF1874",
+              "name": "EF1874",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/57347272?v=4",
+              "id": 57347272
+            },
+            "id": 1628371902,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\"><a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"1573858791\" data-permission-text=\"Title is private\" data-url=\"https://github.com/Tencent/wujie/issues/380\" data-hovercard-type=\"issue\" data-hovercard-url=\"/Tencent/wujie/issues/380/hovercard?comment_id=1639706857&amp;comment_type=issue_comment\" href=\"https://github.com/Tencent/wujie/issues/380#issuecomment-1639706857\">#380 (comment)</a></p>"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/300#issuecomment-1643029612",
+            "body": "+1",
+            "user": {
+              "login": "kiccer",
+              "name": "kiccer",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/23536402?v=4",
+              "id": 23536402
+            },
+            "id": 1643029612,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">+1</p>"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/300#issuecomment-1655074240",
+            "body": "+1",
+            "user": {
+              "login": "water5656",
+              "name": "water5656",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/26264581?v=4",
+              "id": 26264581
+            },
+            "id": 1655074240,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">+1</p>"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/300#issuecomment-1705135551",
+            "body": "+1",
+            "user": {
+              "login": "siYuanJun",
+              "name": "siYuanJun",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/46435703?v=4",
+              "id": 46435703
+            },
+            "id": 1705135551,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">+1</p>"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/300#issuecomment-1784560337",
+            "body": "+1,怎么解",
+            "user": {
+              "login": "yusirxiaer",
+              "name": "yusirxiaer",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/17606840?v=4",
+              "id": 17606840
+            },
+            "id": 1784560337,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">+1,怎么解</p>"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/300#issuecomment-1870096730",
+            "body": "+1",
+            "user": {
+              "login": "flynnaire",
+              "name": "flynnaire",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/8220301?v=4",
+              "id": 8220301
+            },
+            "id": 1870096730,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">+1</p>"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/300#issuecomment-1907265761",
+            "body": "+1",
+            "user": {
+              "login": "chenhongen",
+              "name": "chenhongen",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/16499303?v=4",
+              "id": 16499303
+            },
+            "id": 1907265761,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">+1</p>"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/300#issuecomment-2119860054",
+            "body": "+1",
+            "user": {
+              "login": "luoyian",
+              "name": "luoyian",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/113573515?v=4",
+              "id": 113573515
+            },
+            "id": 2119860054,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">+1</p>"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/300#issuecomment-2240916782",
+            "body": "+1\r\n",
+            "user": {
+              "login": "PrayLS",
+              "name": "PrayLS",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/46154127?v=4",
+              "id": 46154127
+            },
+            "id": 2240916782,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">+1</p>"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/300#issuecomment-2527490868",
+            "body": "+1",
+            "user": {
+              "login": "SummerSoulL",
+              "name": "SummerSoulL",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/46665418?v=4",
+              "id": 46665418
+            },
+            "id": 2527490868,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">+1</p>"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/300#issuecomment-2579242963",
+            "body": "求解，怎么解决\r\n",
+            "user": {
+              "login": "Jiang-K-J",
+              "name": "Jiang-K-J",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/143499168?v=4",
+              "id": 143499168
+            },
+            "id": 2579242963,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">求解，怎么解决</p>"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/300#issuecomment-2717092144",
+            "body": "![Image](https://github.com/user-attachments/assets/32893b2e-759a-4ed9-acac-ccc8a7b9622b)引了一下这个插件，解决了",
+            "user": {
+              "login": "qtanran",
+              "name": "qtanran",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/48440870?v=4",
+              "id": 48440870
+            },
+            "id": 2717092144,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\"><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://private-user-images.githubusercontent.com/48440870/421784866-32893b2e-759a-4ed9-acac-ccc8a7b9622b.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODg4NDgwNTgsIm5iZiI6MTc4ODg0Nzc1OCwicGF0aCI6Ii80ODQ0MDg3MC80MjE3ODQ4NjYtMzI4OTNiMmUtNzU5YS00ZWQ5LWFjYWMtY2NjOGE3Yjk2MjJiLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA5MDglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwOTA4VDA2MDkxOFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTU1N2Y1MzFjYmI0NTQxMmU3YmY1M2FhYmE3YTc5YzU4ODc5NTZiN2U2MzhkMGJhOTYzMjljNDA2ZjJkM2EwM2ImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.Q63eZANvIJV_Bt40o2AYk9ujTYQFbyVd1SV8PoXT1NM\"><img src=\"https://private-user-images.githubusercontent.com/48440870/421784866-32893b2e-759a-4ed9-acac-ccc8a7b9622b.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODg4NDgwNTgsIm5iZiI6MTc4ODg0Nzc1OCwicGF0aCI6Ii80ODQ0MDg3MC80MjE3ODQ4NjYtMzI4OTNiMmUtNzU5YS00ZWQ5LWFjYWMtY2NjOGE3Yjk2MjJiLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA5MDglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwOTA4VDA2MDkxOFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTU1N2Y1MzFjYmI0NTQxMmU3YmY1M2FhYmE3YTc5YzU4ODc5NTZiN2U2MzhkMGJhOTYzMjljNDA2ZjJkM2EwM2ImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.Q63eZANvIJV_Bt40o2AYk9ujTYQFbyVd1SV8PoXT1NM\" alt=\"Image\" style=\"max-width: 100%;\"></a>引了一下这个插件，解决了</p>"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/300#issuecomment-3021720089",
+            "body": "引入之后警告消失，但是会报错，\n![Image](https://github.com/user-attachments/assets/611ef483-e03a-4e20-ab74-4c3abb42858e)",
+            "user": {
+              "login": "QSHN",
+              "name": "QSHN",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/16750889?v=4",
+              "id": 16750889
+            },
+            "id": 3021720089,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">引入之后警告消失，但是会报错，<br>\n<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://private-user-images.githubusercontent.com/16750889/460859340-611ef483-e03a-4e20-ab74-4c3abb42858e.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODg4NDgwNTgsIm5iZiI6MTc4ODg0Nzc1OCwicGF0aCI6Ii8xNjc1MDg4OS80NjA4NTkzNDAtNjExZWY0ODMtZTAzYS00ZTIwLWFiNzQtNGMzYWJiNDI4NThlLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA5MDglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwOTA4VDA2MDkxOFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWU1MmEwOTQ0YTU5ZGE0NTcxN2VmYTkwODQ4NTAyMWVhNWFhZjNmNGRmM2NiOTc5OTJhOGE5NzM0MWU5MjJmN2UmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.M8g2gyH2gUGZRrhJYB25InyiV0EbZOC8tPGMDYU6Gpk\"><img src=\"https://private-user-images.githubusercontent.com/16750889/460859340-611ef483-e03a-4e20-ab74-4c3abb42858e.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODg4NDgwNTgsIm5iZiI6MTc4ODg0Nzc1OCwicGF0aCI6Ii8xNjc1MDg4OS80NjA4NTkzNDAtNjExZWY0ODMtZTAzYS00ZTIwLWFiNzQtNGMzYWJiNDI4NThlLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA5MDglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwOTA4VDA2MDkxOFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWU1MmEwOTQ0YTU5ZGE0NTcxN2VmYTkwODQ4NTAyMWVhNWFhZjNmNGRmM2NiOTc5OTJhOGE5NzM0MWU5MjJmN2UmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.M8g2gyH2gUGZRrhJYB25InyiV0EbZOC8tPGMDYU6Gpk\" alt=\"Image\" style=\"max-width: 100%;\"></a></p>"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/300#issuecomment-3022970207",
+            "body": "查了wujie-polyfill 源码，可以在插件里面这样写，然后那些事件报警告，就处理那些事件，因为wujie-polyfill，有些事件处理后，会报异常，\n事件如下：\n![Image](https://github.com/user-attachments/assets/18d09b0a-d3c7-458f-a0d4-e707be2e20d2)\n插件加入以下写法\n```\nplugins: [\n  {\n    // 在子应用所有的js之前\n    jsBeforeLoaders: [\n      {\n        callback(appWindow: any) {\n          const global = appWindow.__WUJIE.proxy;\n          const rawHasInstance = global.Object[global.Symbol.hasInstance];\n          ['MouseEvent', 'FocusEvent'].forEach((prop) => {\n            const target = global[prop];\n            if (!target) return;\n            global[prop] = new Proxy(target, {\n              get(target, p, receiver) {\n                if (p === global.Symbol.hasInstance) {\n                  return (element: any) => {\n                    if (rawHasInstance.call(target, element)) return true;\n                    if (element instanceof global.parent[prop]) return true;\n                    return false;\n                  };\n                }\n\n                return Reflect.get(target, p, receiver);\n              },\n            });\n            if (global[prop]?.prototype?.constructor) global[prop].prototype.constructor = global[prop];\n          });\n        },\n      },\n    ],\n  },\n];\n```",
+            "user": {
+              "login": "QSHN",
+              "name": "QSHN",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/16750889?v=4",
+              "id": 16750889
+            },
+            "id": 3022970207,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">查了wujie-polyfill 源码，可以在插件里面这样写，然后那些事件报警告，就处理那些事件，因为wujie-polyfill，有些事件处理后，会报异常，<br>\n事件如下：<br>\n<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://private-user-images.githubusercontent.com/16750889/460978303-18d09b0a-d3c7-458f-a0d4-e707be2e20d2.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODg4NDgwNTgsIm5iZiI6MTc4ODg0Nzc1OCwicGF0aCI6Ii8xNjc1MDg4OS80NjA5NzgzMDMtMThkMDliMGEtZDNjNy00NThmLWEwZDQtZTcwN2JlMmUyMGQyLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA5MDglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwOTA4VDA2MDkxOFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTA1MDllOGQzNGRmMmMwMGQzMmJlNTIzZGMxMzI1MmYzZjc0MTk1MjBjMjM2YzgxOWZiNGVlNGIzZmM1MzBlZjgmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.Hpl5008UVzEf0Qizg1n5ZDwXtOMAXgIYSPp2vFdFBC4\"><img src=\"https://private-user-images.githubusercontent.com/16750889/460978303-18d09b0a-d3c7-458f-a0d4-e707be2e20d2.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODg4NDgwNTgsIm5iZiI6MTc4ODg0Nzc1OCwicGF0aCI6Ii8xNjc1MDg4OS80NjA5NzgzMDMtMThkMDliMGEtZDNjNy00NThmLWEwZDQtZTcwN2JlMmUyMGQyLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA5MDglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwOTA4VDA2MDkxOFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTA1MDllOGQzNGRmMmMwMGQzMmJlNTIzZGMxMzI1MmYzZjc0MTk1MjBjMjM2YzgxOWZiNGVlNGIzZmM1MzBlZjgmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.Hpl5008UVzEf0Qizg1n5ZDwXtOMAXgIYSPp2vFdFBC4\" alt=\"Image\" style=\"max-width: 100%;\"></a><br>\n插件加入以下写法</p>\n<div class=\"snippet-clipboard-content notranslate position-relative overflow-auto\" data-snippet-clipboard-copy-content=\"plugins: [\n  {\n    // 在子应用所有的js之前\n    jsBeforeLoaders: [\n      {\n        callback(appWindow: any) {\n          const global = appWindow.__WUJIE.proxy;\n          const rawHasInstance = global.Object[global.Symbol.hasInstance];\n          ['MouseEvent', 'FocusEvent'].forEach((prop) =&gt; {\n            const target = global[prop];\n            if (!target) return;\n            global[prop] = new Proxy(target, {\n              get(target, p, receiver) {\n                if (p === global.Symbol.hasInstance) {\n                  return (element: any) =&gt; {\n                    if (rawHasInstance.call(target, element)) return true;\n                    if (element instanceof global.parent[prop]) return true;\n                    return false;\n                  };\n                }\n\n                return Reflect.get(target, p, receiver);\n              },\n            });\n            if (global[prop]?.prototype?.constructor) global[prop].prototype.constructor = global[prop];\n          });\n        },\n      },\n    ],\n  },\n];\"><pre class=\"notranslate\"><code class=\"notranslate\">plugins: [\n  {\n    // 在子应用所有的js之前\n    jsBeforeLoaders: [\n      {\n        callback(appWindow: any) {\n          const global = appWindow.__WUJIE.proxy;\n          const rawHasInstance = global.Object[global.Symbol.hasInstance];\n          ['MouseEvent', 'FocusEvent'].forEach((prop) =&gt; {\n            const target = global[prop];\n            if (!target) return;\n            global[prop] = new Proxy(target, {\n              get(target, p, receiver) {\n                if (p === global.Symbol.hasInstance) {\n                  return (element: any) =&gt; {\n                    if (rawHasInstance.call(target, element)) return true;\n                    if (element instanceof global.parent[prop]) return true;\n                    return false;\n                  };\n                }\n\n                return Reflect.get(target, p, receiver);\n              },\n            });\n            if (global[prop]?.prototype?.constructor) global[prop].prototype.constructor = global[prop];\n          });\n        },\n      },\n    ],\n  },\n];\n</code></pre></div>"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/300#issuecomment-4637812823",
+            "body": "最新版本已经解决了弹窗定位问题。\n\n请按照官方文档配置：https://wujie-micro.github.io/doc/question/#_4%E3%80%81%E5%86%92%E6%B3%A1%E7%B3%BB%E5%88%97%E7%BB%84%E4%BB%B6-%E6%AF%94%E5%A6%82%E4%B8%8B%E6%8B%89%E6%A1%86-%E5%BC%B9%E5%87%BA%E4%BD%8D%E7%BD%AE%E4%B8%8D%E6%AD%A3%E7%A1%AE\n\n该文档详细说明了如何解决冒泡系列组件（下拉框、弹出位置不正确）的问题。",
+            "user": {
+              "login": "yiludege",
+              "name": "yiludege",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/19788268?v=4",
+              "id": 19788268
+            },
+            "id": 4637812823,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">最新版本已经解决了弹窗定位问题。</p>\n<p dir=\"auto\">请按照官方文档配置：<a href=\"https://wujie-micro.github.io/doc/question/#_4%E3%80%81%E5%86%92%E6%B3%A1%E7%B3%BB%E5%88%97%E7%BB%84%E4%BB%B6-%E6%AF%94%E5%A6%82%E4%B8%8B%E6%8B%89%E6%A1%86-%E5%BC%B9%E5%87%BA%E4%BD%8D%E7%BD%AE%E4%B8%8D%E6%AD%A3%E7%A1%AE\" rel=\"nofollow\">https://wujie-micro.github.io/doc/question/#_4%E3%80%81%E5%86%92%E6%B3%A1%E7%B3%BB%E5%88%97%E7%BB%84%E4%BB%B6-%E6%AF%94%E5%A6%82%E4%B8%8B%E6%8B%89%E6%A1%86-%E5%BC%B9%E5%87%BA%E4%BD%8D%E7%BD%AE%E4%B8%8D%E6%AD%A3%E7%A1%AE</a></p>\n<p dir=\"auto\">该文档详细说明了如何解决冒泡系列组件（下拉框、弹出位置不正确）的问题。</p>"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/300#issuecomment-4637826863",
+            "body": "抱歉误关闭，此问题与下拉弹窗定位无关，重新打开。",
+            "user": {
+              "login": "yiludege",
+              "name": "yiludege",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/19788268?v=4",
+              "id": 19788268
+            },
+            "id": 4637826863,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">抱歉误关闭，此问题与下拉弹窗定位无关，重新打开。</p>"
+          }
+        ],
+        "url": "https://github.com/Tencent/wujie/issues/300",
+        "title": "Tencent/wujie Issue #300 comments",
+        "display_url": "https://github.com/Tencent/wujie/issues/300",
+        "display_title": "Tencent/wujie Issue #300 comments"
+      }
+    },
+    {
+      "number": 697,
+      "fetch": {
+        "issue": {
+          "url": "https://github.com/Tencent/wujie/issues/697",
+          "title": "【嵌套子应用中】wujie-vue3@1.0.18 中使用 SortableJS 拖拽排序报错",
+          "issue_number": 697,
+          "body": "<!-- 请尽量按照下面几个方面给出解决bug必须得信息 -->\r\n\r\n**描述bug**\r\n基座 --> 子应用A --> 子应用A的子应用（子应用B）\r\n在嵌套子应用中（子应用B）使用 **SortableJS** 出现报错\r\n（注：项目中使用的 vue-draggable-next，本质应该是 [SortableJS](https://github.com/SortableJS/Sortable/blob/c5a882267542456d75b16d000dc1b603a907613a/src/Sortable.js#L467)）\r\n\r\n**如何复现**\r\n在 **嵌套子应用** 中使用 **Sortable JS** 实现拖拽排序功能即可复现\r\n\r\n\r\n**错误截图**\r\n截图1：\r\n![image](https://github.com/Tencent/wujie/assets/40376068/28f6f5fd-d9db-4d73-ac4f-f3ff1f85c799)\r\n\r\n截图2：\r\n![image](https://github.com/Tencent/wujie/assets/40376068/71a3d23e-bb0d-4ab7-b899-fbdfc62884c2)\r\n\r\n截图3：\r\n![image](https://github.com/Tencent/wujie/assets/40376068/bbd3b27b-77b6-4ba6-b089-d75ef53ea1a5)\r\n\r\n\r\n**最小复现仓库或者地址**\r\n暂不便展示，有错误截图\r\n",
+          "state": "open",
+          "user": {
+            "login": "dizuncainiao",
+            "name": "dizuncainiao",
+            "email": null,
+            "avatar_url": "https://avatars.githubusercontent.com/u/40376068?v=4",
+            "id": 40376068
+          },
+          "assignees": null,
+          "labels": null,
+          "milestone": null,
+          "state_reason": "reopened",
+          "comments": 2,
+          "created_at": "2023-09-21T08:14:53Z",
+          "updated_at": "2026-06-06T07:30:37Z",
+          "closed_at": null,
+          "display_url": "https://github.com/Tencent/wujie/issues/697",
+          "display_title": "【嵌套子应用中】wujie-vue3@1.0.18 中使用 SortableJS 拖拽排序报错"
+        },
+        "url": "https://github.com/Tencent/wujie/issues/697",
+        "title": "【嵌套子应用中】wujie-vue3@1.0.18 中使用 SortableJS 拖拽排序报错",
+        "display_url": "https://github.com/Tencent/wujie/issues/697",
+        "display_title": "【嵌套子应用中】wujie-vue3@1.0.18 中使用 SortableJS 拖拽排序报错"
+      },
+      "comments": {
+        "comments": [
+          {
+            "url": "https://github.com/Tencent/wujie/issues/697#issuecomment-4637815456",
+            "body": "最新版本已经解决了弹窗定位问题。\n\n请按照官方文档配置：https://wujie-micro.github.io/doc/question/#_4%E3%80%81%E5%86%92%E6%B3%A1%E7%B3%BB%E5%88%97%E7%BB%84%E4%BB%B6-%E6%AF%94%E5%A6%82%E4%B8%8B%E6%8B%89%E6%A1%86-%E5%BC%B9%E5%87%BA%E4%BD%8D%E7%BD%AE%E4%B8%8D%E6%AD%A3%E7%A1%AE\n\n该文档详细说明了如何解决冒泡系列组件（下拉框、弹出位置不正确）的问题。",
+            "user": {
+              "login": "yiludege",
+              "name": "yiludege",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/19788268?v=4",
+              "id": 19788268
+            },
+            "id": 4637815456,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">最新版本已经解决了弹窗定位问题。</p>\n<p dir=\"auto\">请按照官方文档配置：<a href=\"https://wujie-micro.github.io/doc/question/#_4%E3%80%81%E5%86%92%E6%B3%A1%E7%B3%BB%E5%88%97%E7%BB%84%E4%BB%B6-%E6%AF%94%E5%A6%82%E4%B8%8B%E6%8B%89%E6%A1%86-%E5%BC%B9%E5%87%BA%E4%BD%8D%E7%BD%AE%E4%B8%8D%E6%AD%A3%E7%A1%AE\" rel=\"nofollow\">https://wujie-micro.github.io/doc/question/#_4%E3%80%81%E5%86%92%E6%B3%A1%E7%B3%BB%E5%88%97%E7%BB%84%E4%BB%B6-%E6%AF%94%E5%A6%82%E4%B8%8B%E6%8B%89%E6%A1%86-%E5%BC%B9%E5%87%BA%E4%BD%8D%E7%BD%AE%E4%B8%8D%E6%AD%A3%E7%A1%AE</a></p>\n<p dir=\"auto\">该文档详细说明了如何解决冒泡系列组件（下拉框、弹出位置不正确）的问题。</p>"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/697#issuecomment-4637827464",
+            "body": "抱歉误关闭，此问题与下拉弹窗定位无关，重新打开。",
+            "user": {
+              "login": "yiludege",
+              "name": "yiludege",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/19788268?v=4",
+              "id": 19788268
+            },
+            "id": 4637827464,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">抱歉误关闭，此问题与下拉弹窗定位无关，重新打开。</p>"
+          }
+        ],
+        "url": "https://github.com/Tencent/wujie/issues/697",
+        "title": "Tencent/wujie Issue #697 comments",
+        "display_url": "https://github.com/Tencent/wujie/issues/697",
+        "display_title": "Tencent/wujie Issue #697 comments"
+      }
+    },
+    {
+      "number": 298,
+      "fetch": {
+        "issue": {
+          "url": "https://github.com/Tencent/wujie/issues/298",
+          "title": "子应用里调navigator.clipboard.readText，会报错DOMException: Document is not focused",
+          "issue_number": 298,
+          "body": "<!-- 请尽量按照下面几个方面给出解决bug必须得信息 -->\r\n\r\n**描述bug**\r\n使用wujie加载的子应用，无法使用navigator.clipboard.readText访问剪切板，会报错 DOMException: Document is not focused，看起来是因为执行子应用js的iframe不是激活态导致，直接使用iframe或qiankun是可以的，请作者大大帮忙看看可以怎么绕过\r\n\r\n**如何复现**\r\n1、启动wujie的demo工程\r\n2、任意选一个字应用，比如wujie/examples/react16，打开src/App.js，在useEffect里加入下面读取剪切板的代码：\r\n```javascript\r\n navigator.clipboard\r\n      .readText()\r\n      .then((res) => console.log('clipboard.readText success', res))\r\n      .catch((e) => console.error('clipboard.readText error',e));\r\n```\r\n3、控制台报错：DOMException: Document is not focused\r\n\r\n**错误截图**\r\n![image](https://user-images.githubusercontent.com/12755494/204980554-311cd8ed-a3b1-44d7-9041-3ffdef83507e.png)\r\n\r\n**最小复现仓库或者地址**\r\nwujie自己的仓库即可复现",
+          "state": "closed",
+          "user": {
+            "login": "banchichen",
+            "name": "banchichen",
+            "email": null,
+            "avatar_url": "https://avatars.githubusercontent.com/u/12755494?v=4",
+            "id": 12755494
+          },
+          "assignees": null,
+          "labels": null,
+          "milestone": null,
+          "state_reason": "completed",
+          "comments": 4,
+          "created_at": "2022-12-01T06:25:06Z",
+          "updated_at": "2022-12-08T03:16:56Z",
+          "closed_at": "2022-12-07T06:32:45Z",
+          "display_url": "https://github.com/Tencent/wujie/issues/298",
+          "display_title": "子应用里调navigator.clipboard.readText，会报错DOMException: Document is not focused"
+        },
+        "url": "https://github.com/Tencent/wujie/issues/298",
+        "title": "子应用里调navigator.clipboard.readText，会报错DOMException: Document is not focused",
+        "display_url": "https://github.com/Tencent/wujie/issues/298",
+        "display_title": "子应用里调navigator.clipboard.readText，会报错DOMException: Document is not focused"
+      },
+      "comments": {
+        "comments": [
+          {
+            "url": "https://github.com/Tencent/wujie/issues/298#issuecomment-1333335346",
+            "body": "我这边先这样绕过了：\r\n```javascript\r\n  const navigator = window.__POWERED_BY_WUJIE__ ? window.parent.navigator : window.navigator;\r\n  navigator.clipboard...\r\n```\r\n使用window.parent.navigator可以正常访问clipboard\r\n供大家参考",
+            "user": {
+              "login": "banchichen",
+              "name": "banchichen",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/12755494?v=4",
+              "id": 12755494
+            },
+            "id": 1333335346,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">我这边先这样绕过了：</p>\n<div class=\"highlight highlight-source-js notranslate position-relative overflow-auto\" dir=\"auto\" data-snippet-clipboard-copy-content=\"  const navigator = window.__POWERED_BY_WUJIE__ ? window.parent.navigator : window.navigator;\n  navigator.clipboard...\"><pre class=\"notranslate\">  <span class=\"pl-k\">const</span> <span class=\"pl-s1\">navigator</span> <span class=\"pl-c1\">=</span> <span class=\"pl-smi\">window</span><span class=\"pl-kos\">.</span><span class=\"pl-c1\">__POWERED_BY_WUJIE__</span> ? <span class=\"pl-smi\">window</span><span class=\"pl-kos\">.</span><span class=\"pl-c1\">parent</span><span class=\"pl-kos\">.</span><span class=\"pl-c1\">navigator</span> : <span class=\"pl-smi\">window</span><span class=\"pl-kos\">.</span><span class=\"pl-c1\">navigator</span><span class=\"pl-kos\">;</span>\n  <span class=\"pl-s1\">navigator</span><span class=\"pl-kos\">.</span><span class=\"pl-c1\">clipboard</span><span class=\"pl-kos\">.</span><span class=\"pl-kos\">.</span><span class=\"pl-kos\">.</span></pre></div>\n<p dir=\"auto\">使用window.parent.navigator可以正常访问clipboard<br>\n供大家参考</p>"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/298#issuecomment-1340462357",
+            "body": "就像报错所说，确实子应用的 document 没有聚焦，子应用的 iframe沙箱 的 display: none\r\n\r\n子应用的 dom 其实是挂载在主应用 shadow 上了，子应用的 iframe沙箱 的对 dom 的操作劫持到 shadow 了",
+            "user": {
+              "login": "yiludege",
+              "name": "yiludege",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/19788268?v=4",
+              "id": 19788268
+            },
+            "id": 1340462357,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">就像报错所说，确实子应用的 document 没有聚焦，子应用的 iframe沙箱 的 display: none</p>\n<p dir=\"auto\">子应用的 dom 其实是挂载在主应用 shadow 上了，子应用的 iframe沙箱 的对 dom 的操作劫持到 shadow 了</p>"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/298#issuecomment-1341905884",
+            "body": "@yiludege 所以这个问题，在wujie的设计下，无解，只能接入的子应用在使用时特殊判断下是吧？",
+            "user": {
+              "login": "banchichen",
+              "name": "banchichen",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/12755494?v=4",
+              "id": 12755494
+            },
+            "id": 1341905884,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\"><a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/yiludege/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/yiludege\">@yiludege</a> 所以这个问题，在wujie的设计下，无解，只能接入的子应用在使用时特殊判断下是吧？</p>"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/298#issuecomment-1341929207",
+            "body": "可以试试用这个插件来处理，这样子应用就不用修改代码了，window上的不少属性 wujie 还没有去做处理，副作用太多了，用户可以自行用插件来做代理处理一下\r\n\r\n```javascript\r\n  plugins: [\r\n    {\r\n      windowPropertyOverride: (subWindow) =>\r\n        Object.defineProperty(subWindow.Navigator.prototype, \"clipboard\", {\r\n          get: () => {\r\n            return subWindow.__POWERED_BY_WUJIE__ ? subWindow.parent.navigator.clipboard : subWindow.navigator;\r\n          },\r\n        }),\r\n    },\r\n  ]\r\n```",
+            "user": {
+              "login": "yiludege",
+              "name": "yiludege",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/19788268?v=4",
+              "id": 19788268
+            },
+            "id": 1341929207,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">可以试试用这个插件来处理，这样子应用就不用修改代码了，window上的不少属性 wujie 还没有去做处理，副作用太多了，用户可以自行用插件来做代理处理一下</p>\n<div class=\"highlight highlight-source-js notranslate position-relative overflow-auto\" dir=\"auto\" data-snippet-clipboard-copy-content=\"  plugins: [\n    {\n      windowPropertyOverride: (subWindow) =&gt;\n        Object.defineProperty(subWindow.Navigator.prototype, &quot;clipboard&quot;, {\n          get: () =&gt; {\n            return subWindow.__POWERED_BY_WUJIE__ ? subWindow.parent.navigator.clipboard : subWindow.navigator;\n          },\n        }),\n    },\n  ]\"><pre class=\"notranslate\">  plugins: <span class=\"pl-kos\">[</span>\n    <span class=\"pl-kos\">{</span>\n      <span class=\"pl-en\">windowPropertyOverride</span>: <span class=\"pl-kos\">(</span><span class=\"pl-s1\">subWindow</span><span class=\"pl-kos\">)</span> <span class=\"pl-c1\">=&gt;</span>\n        <span class=\"pl-v\">Object</span><span class=\"pl-kos\">.</span><span class=\"pl-en\">defineProperty</span><span class=\"pl-kos\">(</span><span class=\"pl-s1\">subWindow</span><span class=\"pl-kos\">.</span><span class=\"pl-c1\">Navigator</span><span class=\"pl-kos\">.</span><span class=\"pl-c1\">prototype</span><span class=\"pl-kos\">,</span> <span class=\"pl-s\">\"clipboard\"</span><span class=\"pl-kos\">,</span> <span class=\"pl-kos\">{</span>\n          <span class=\"pl-en\">get</span>: <span class=\"pl-kos\">(</span><span class=\"pl-kos\">)</span> <span class=\"pl-c1\">=&gt;</span> <span class=\"pl-kos\">{</span>\n            <span class=\"pl-k\">return</span> <span class=\"pl-s1\">subWindow</span><span class=\"pl-kos\">.</span><span class=\"pl-c1\">__POWERED_BY_WUJIE__</span> ? <span class=\"pl-s1\">subWindow</span><span class=\"pl-kos\">.</span><span class=\"pl-c1\">parent</span><span class=\"pl-kos\">.</span><span class=\"pl-c1\">navigator</span><span class=\"pl-kos\">.</span><span class=\"pl-c1\">clipboard</span> : <span class=\"pl-s1\">subWindow</span><span class=\"pl-kos\">.</span><span class=\"pl-c1\">navigator</span><span class=\"pl-kos\">;</span>\n          <span class=\"pl-kos\">}</span><span class=\"pl-kos\">,</span>\n        <span class=\"pl-kos\">}</span><span class=\"pl-kos\">)</span><span class=\"pl-kos\">,</span>\n    <span class=\"pl-kos\">}</span><span class=\"pl-kos\">,</span>\n  <span class=\"pl-kos\">]</span></pre></div>"
+          }
+        ],
+        "url": "https://github.com/Tencent/wujie/issues/298",
+        "title": "Tencent/wujie Issue #298 comments",
+        "display_url": "https://github.com/Tencent/wujie/issues/298",
+        "display_title": "Tencent/wujie Issue #298 comments"
+      }
+    },
+    {
+      "number": 790,
+      "fetch": {
+        "issue": {
+          "url": "https://github.com/Tencent/wujie/issues/790",
+          "title": "子应用中iframe的postMessage通讯，子页面消息发送给主页面接收不到",
+          "issue_number": 790,
+          "body": "<!-- 请尽量按照下面几个方面给出解决bug必须得信息 -->\r\n\r\n**描述bug**\r\n清晰准确的描述bug\r\n\r\n**如何复现**\r\n给出详细的复现步骤\r\n1、第一步 修改示例代码\r\nexamples/vue3/src/views/Home.vue\r\n```vue\r\n<template>\r\n  <div>\r\n    <iframe src=\"http://localhost:7300/contact\" ref=\"iframe\"></iframe>\r\n    <HelloWorld msg=\"Vue3示例\"></HelloWorld>\r\n    <div class=\"content\" style=\"text-align: center\">\r\n      <p>\r\n        当前vue版本\r\n        <el-tag style=\"vertical-align: text-top\" size=\"small\">3.2.24</el-tag>\r\n      </p>\r\n      <p>\r\n        当前element-plus版本\r\n        <el-tag style=\"vertical-align: text-top\" size=\"small\">2.2.6</el-tag>\r\n      </p>\r\n      <p>\r\n        当前ant-design-vue版本\r\n        <el-tag style=\"vertical-align: text-top\" size=\"small\">2.2.8</el-tag>\r\n      </p>\r\n      <p>\r\n        <el-button @click=\"() => open('https://github.com/Tencent/wujie/tree/master/examples/vue3')\"\r\n          >仓库地址</el-button\r\n        >\r\n      </p>\r\n    </div>\r\n  </div>\r\n</template>\r\n\r\n<script setup>\r\nimport HelloWorld from \"@/components/HelloWorld.vue\";\r\nimport {ref, onMounted} from 'vue';\r\nconst iframe = ref();\r\nwindow.addEventListener('message', function(event) {\r\n  console.log(event.origin, event.data);\r\n});\r\n\r\nonMounted(()=>{\r\n  const iframeWindow = iframe.value.contentWindow;\r\n  setInterval(()=>{\r\n    iframeWindow.postMessage('这是来自主页面的消息', 'http://localhost:7300');\r\n  }, 1E3);\r\n  \r\n\r\n})\r\n\r\n</script>\r\n\r\n<style>\r\n:root {\r\n  --host-color: #f16b5f;\r\n}\r\n</style>\r\n\r\n```\r\nexamples/vue3/src/views/Communication.vue\r\n```vue\r\n// script中添加代码\r\n\r\nwindow.addEventListener('message', function(event) {\r\n  console.log( event.origin, event.data);\r\n\r\n  console.log('parent', parent)\r\n  parent.postMessage('子页面的消息', '*');\r\n});\r\n\r\n```\r\n\r\n2、 第二步 本地运行example，打开页面：http://localhost:8000/vue3?vue3=%2Fhome\r\n\r\n**错误截图**\r\n如果有可以将截图带上\r\n![image](https://github.com/Tencent/wujie/assets/3754268/abeeb519-d0b5-4e19-aef1-d07538c7d26a)\r\n过滤”子页面的消息'“，消息为空\r\n直接打开子应用页面：http://localhost:7300/home\r\n过滤”子页面的消息'“\r\n![image](https://github.com/Tencent/wujie/assets/3754268/b79d4687-1e1f-4d4c-a66f-f0ca23ce71ec)\r\n\r\n\r\n**最小复现仓库或者地址**\r\n重要！！！，请尽量给出复现仓库，这样能极大加快bug解决速度\r\n",
+          "state": "closed",
+          "user": {
+            "login": "ljquan",
+            "name": "ljquan",
+            "email": null,
+            "avatar_url": "https://avatars.githubusercontent.com/u/3754268?v=4",
+            "id": 3754268
+          },
+          "assignees": null,
+          "labels": [
+            {
+              "name": "to do list",
+              "color": "46AFF3",
+              "description": "to do list"
+            }
+          ],
+          "milestone": null,
+          "state_reason": "completed",
+          "comments": 1,
+          "created_at": "2024-01-25T11:29:50Z",
+          "updated_at": "2024-06-07T09:26:59Z",
+          "closed_at": "2024-06-07T09:26:59Z",
+          "display_url": "https://github.com/Tencent/wujie/issues/790",
+          "display_title": "子应用中iframe的postMessage通讯，子页面消息发送给主页面接收不到"
+        },
+        "url": "https://github.com/Tencent/wujie/issues/790",
+        "title": "子应用中iframe的postMessage通讯，子页面消息发送给主页面接收不到",
+        "display_url": "https://github.com/Tencent/wujie/issues/790",
+        "display_title": "子应用中iframe的postMessage通讯，子页面消息发送给主页面接收不到"
+      },
+      "comments": {
+        "comments": [
+          {
+            "url": "https://github.com/Tencent/wujie/issues/790#issuecomment-2154455077",
+            "body": "可以看看示例，是可以正常通信的\r\nhttps://wujie-micro.github.io/demo-main-vue/postmessage?vue2=%2Fdemo-vue2%2F%23%2Fpostmessage",
+            "user": {
+              "login": "yiludege",
+              "name": "yiludege",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/19788268?v=4",
+              "id": 19788268
+            },
+            "id": 2154455077,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">可以看看示例，是可以正常通信的<br>\n<a href=\"https://wujie-micro.github.io/demo-main-vue/postmessage?vue2=%2Fdemo-vue2%2F%23%2Fpostmessage\" rel=\"nofollow\">https://wujie-micro.github.io/demo-main-vue/postmessage?vue2=%2Fdemo-vue2%2F%23%2Fpostmessage</a></p>"
+          }
+        ],
+        "url": "https://github.com/Tencent/wujie/issues/790",
+        "title": "Tencent/wujie Issue #790 comments",
+        "display_url": "https://github.com/Tencent/wujie/issues/790",
+        "display_title": "Tencent/wujie Issue #790 comments"
+      }
+    },
+    {
+      "number": 1065,
+      "fetch": {
+        "issue": {
+          "url": "https://github.com/Tencent/wujie/issues/1065",
+          "title": "子应用中使用a标签，target设置为_blank，无法跳转新窗口",
+          "issue_number": 1065,
+          "body": "<  a href=\"/customer/customer_complain/customer_complain?menu_key=self_processing\" target=\"_blank\">立即前往;< /a >",
+          "state": "closed",
+          "user": {
+            "login": "qq364090560",
+            "name": "qq364090560",
+            "email": null,
+            "avatar_url": "https://avatars.githubusercontent.com/u/66709895?v=4",
+            "id": 66709895
+          },
+          "assignees": null,
+          "labels": null,
+          "milestone": null,
+          "state_reason": "completed",
+          "comments": 1,
+          "created_at": "2026-02-07T13:49:51Z",
+          "updated_at": "2026-02-28T01:39:37Z",
+          "closed_at": "2026-02-08T10:00:13Z",
+          "display_url": "https://github.com/Tencent/wujie/issues/1065",
+          "display_title": "子应用中使用a标签，target设置为_blank，无法跳转新窗口"
+        },
+        "url": "https://github.com/Tencent/wujie/issues/1065",
+        "title": "子应用中使用a标签，target设置为_blank，无法跳转新窗口",
+        "display_url": "https://github.com/Tencent/wujie/issues/1065",
+        "display_title": "子应用中使用a标签，target设置为_blank，无法跳转新窗口"
+      },
+      "comments": {
+        "comments": [
+          {
+            "url": "https://github.com/Tencent/wujie/issues/1065#issuecomment-3976008549",
+            "body": "用window.open可以打开",
+            "user": {
+              "login": "dselegent",
+              "name": "dselegent",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/70082666?v=4",
+              "id": 70082666
+            },
+            "id": 3976008549,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">用window.open可以打开</p>"
+          }
+        ],
+        "url": "https://github.com/Tencent/wujie/issues/1065",
+        "title": "Tencent/wujie Issue #1065 comments",
+        "display_url": "https://github.com/Tencent/wujie/issues/1065",
+        "display_title": "Tencent/wujie Issue #1065 comments"
+      }
+    },
+    {
+      "number": 1104,
+      "fetch": {
+        "issue": {
+          "url": "https://github.com/Tencent/wujie/issues/1104",
+          "title": "\"style\" is a reserved attribute and cannot be used as component prop.",
+          "issue_number": 1104,
+          "body": "1.插件版本：\n\"vue\": \"2.6.14\"\n\"wujie-vue2\": \"^2.1.0\"\n\n2.在demo中使用wujie\n\n`<WujieVue name=\"fusion-app\" url=\"http://localhost:5173\" />`\n\n\n组件没有传递属性\"style\"时，报出vue.esm.js:628 [Vue warn]: \"style\" is a reserved attribute and cannot be used as component prop.\n\n<img width=\"732\" height=\"231\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/fe9bee69-5c60-4f0d-8a60-85fe9ff3cc08\" />\n\n\n\n",
+          "state": "open",
+          "user": {
+            "login": "tahara-hzj",
+            "name": "tahara-hzj",
+            "email": null,
+            "avatar_url": "https://avatars.githubusercontent.com/u/19666539?v=4",
+            "id": 19666539
+          },
+          "assignees": null,
+          "labels": null,
+          "milestone": null,
+          "state_reason": null,
+          "comments": 0,
+          "created_at": "2026-08-25T09:32:11Z",
+          "updated_at": "2026-08-25T09:36:06Z",
+          "closed_at": null,
+          "display_url": "https://github.com/Tencent/wujie/issues/1104",
+          "display_title": "\"style\" is a reserved attribute and cannot be used as component prop."
+        },
+        "url": "https://github.com/Tencent/wujie/issues/1104",
+        "title": "\"style\" is a reserved attribute and cannot be used as component prop.",
+        "display_url": "https://github.com/Tencent/wujie/issues/1104",
+        "display_title": "\"style\" is a reserved attribute and cannot be used as component prop."
+      },
+      "comments": {
+        "comments": [],
+        "note": "fetch_issue reports 0 comments"
+      }
+    },
+    {
+      "number": 1028,
+      "fetch": {
+        "issue": {
+          "url": "https://github.com/Tencent/wujie/issues/1028",
+          "title": "子应用重新部署后资源变化，再次访问wujie报url资源找不到404",
+          "issue_number": 1028,
+          "body": "**描述bug**\nvue3+vite 项目 主子应用框架，\n线上环境子应用更新重新部署后，子应用访问报 xxxx/子应用地址/index.xxxx.js 不存在，刷新一下浏览器就可以了\n\n**如何复现**\n1. 主子应用向上部署一个版本；\n2. 子应用更新后再次部署第二个版本；\n3. 子应用再次进入出现资源不存在404问题，wujie底层报出来的，但是在 loadError 方法中无法捕获\n\n**错误截图**\n\n![Image](https://github.com/user-attachments/assets/998427b4-916f-4665-8fcd-408424cac873)\n\n**期望**\nwujie 捕获的错误抛出到组件上 loadError 能接受响应",
+          "state": "open",
+          "user": {
+            "login": "Winna-wnn",
+            "name": "Winna-wnn",
+            "email": null,
+            "avatar_url": "https://avatars.githubusercontent.com/u/68949293?v=4",
+            "id": 68949293
+          },
+          "assignees": null,
+          "labels": null,
+          "milestone": null,
+          "state_reason": null,
+          "comments": 3,
+          "created_at": "2025-09-17T10:26:00Z",
+          "updated_at": "2026-03-01T09:12:03Z",
+          "closed_at": null,
+          "display_url": "https://github.com/Tencent/wujie/issues/1028",
+          "display_title": "子应用重新部署后资源变化，再次访问wujie报url资源找不到404"
+        },
+        "url": "https://github.com/Tencent/wujie/issues/1028",
+        "title": "子应用重新部署后资源变化，再次访问wujie报url资源找不到404",
+        "display_url": "https://github.com/Tencent/wujie/issues/1028",
+        "display_title": "子应用重新部署后资源变化，再次访问wujie报url资源找不到404"
+      },
+      "comments": {
+        "comments": [
+          {
+            "url": "https://github.com/Tencent/wujie/issues/1028#issuecomment-3344558202",
+            "body": "99%是你ci cd的问题",
+            "user": {
+              "login": "ngwszsd",
+              "name": "ngwszsd",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/45424459?v=4",
+              "id": 45424459
+            },
+            "id": 3344558202,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">99%是你ci cd的问题</p>"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/1028#issuecomment-3490063910",
+            "body": "nginx 不要缓存 index.html",
+            "user": {
+              "login": "shunyue1320",
+              "name": "shunyue1320",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/47295879?v=4",
+              "id": 47295879
+            },
+            "id": 3490063910,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">nginx 不要缓存 index.html</p>"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/1028#issuecomment-3979546730",
+            "body": "请教一下部署方式 主子项目同域名么？会存在刷新后状态404问题么？",
+            "user": {
+              "login": "SeriousLose",
+              "name": "SeriousLose",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/31263817?v=4",
+              "id": 31263817
+            },
+            "id": 3979546730,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">请教一下部署方式 主子项目同域名么？会存在刷新后状态404问题么？</p>"
+          }
+        ],
+        "url": "https://github.com/Tencent/wujie/issues/1028",
+        "title": "Tencent/wujie Issue #1028 comments",
+        "display_url": "https://github.com/Tencent/wujie/issues/1028",
+        "display_title": "Tencent/wujie Issue #1028 comments"
+      }
+    }
+  ],
+  "supportingIssues": [
+    {
+      "number": 222,
+      "reason": "W467 is explicitly closed as a duplicate of W222; retained as supporting context, not an additional collected item.",
+      "fetch": {
+        "issue": {
+          "url": "https://github.com/Tencent/wujie/issues/222",
+          "title": "子应用项目是用rem单位实现的布局，必须给主应用的html标签设置fontSize才行，能不能只对当前子应用的html标签设置fontSize",
+          "issue_number": 222,
+          "body": null,
+          "state": "closed",
+          "user": {
+            "login": "expanding",
+            "name": "expanding",
+            "email": null,
+            "avatar_url": "https://avatars.githubusercontent.com/u/26728915?v=4",
+            "id": 26728915
+          },
+          "assignees": null,
+          "labels": null,
+          "milestone": null,
+          "state_reason": "completed",
+          "comments": 2,
+          "created_at": "2022-10-17T02:40:32Z",
+          "updated_at": "2025-07-21T01:40:00Z",
+          "closed_at": "2022-10-21T02:16:39Z",
+          "display_url": "https://github.com/Tencent/wujie/issues/222",
+          "display_title": "子应用项目是用rem单位实现的布局，必须给主应用的html标签设置fontSize才行，能不能只对当前子应用的html标签设置fontSize"
+        },
+        "url": "https://github.com/Tencent/wujie/issues/222",
+        "title": "子应用项目是用rem单位实现的布局，必须给主应用的html标签设置fontSize才行，能不能只对当前子应用的html标签设置fontSize",
+        "display_url": "https://github.com/Tencent/wujie/issues/222",
+        "display_title": "子应用项目是用rem单位实现的布局，必须给主应用的html标签设置fontSize才行，能不能只对当前子应用的html标签设置fontSize"
+      },
+      "comments": {
+        "comments": [
+          {
+            "url": "https://github.com/Tencent/wujie/issues/222#issuecomment-1286369800",
+            "body": "这个地方子应用的dom还是挂载在 主应用上，所以rem最终读取的是主应用的 html，暂时没有办法",
+            "user": {
+              "login": "yiludege",
+              "name": "yiludege",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/19788268?v=4",
+              "id": 19788268
+            },
+            "id": 1286369800,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">这个地方子应用的dom还是挂载在 主应用上，所以rem最终读取的是主应用的 html，暂时没有办法</p>"
+          },
+          {
+            "url": "https://github.com/Tencent/wujie/issues/222#issuecomment-3095008428",
+            "body": "我之前老项目使用了postcss-px2rem这个插件, 单位就是使用的rem, 然后使用wujie集成的话, 子项目布局会乱, 后来我自己写了一个postcss-px-to-vwvh这个插件, 可以解决这个问题, 不知道有没有帮助",
+            "user": {
+              "login": "shr1998vip",
+              "name": "shr1998vip",
+              "email": null,
+              "avatar_url": "https://avatars.githubusercontent.com/u/130375945?v=4",
+              "id": 130375945
+            },
+            "id": 3095008428,
+            "pull_request_review_id": null,
+            "in_reply_to_id": null,
+            "created_at": null,
+            "updated_at": null,
+            "review": null,
+            "side": null,
+            "line": null,
+            "start_line": null,
+            "path": null,
+            "body_html": "<p dir=\"auto\">我之前老项目使用了postcss-px2rem这个插件, 单位就是使用的rem, 然后使用wujie集成的话, 子项目布局会乱, 后来我自己写了一个postcss-px-to-vwvh这个插件, 可以解决这个问题, 不知道有没有帮助</p>"
+          }
+        ],
+        "url": "https://github.com/Tencent/wujie/issues/222",
+        "title": "Tencent/wujie Issue #222 comments",
+        "display_url": "https://github.com/Tencent/wujie/issues/222",
+        "display_title": "Tencent/wujie Issue #222 comments"
+      }
+    }
+  ]
+}

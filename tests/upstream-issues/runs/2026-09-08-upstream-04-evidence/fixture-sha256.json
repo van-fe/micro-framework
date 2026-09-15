@@ -1,0 +1,22 @@
+{
+  "tests/browser/fixtures/upstream-batch03-dom/App.vue": "0c7998a31cf5ae3653c732ce5dcb0f6c2d6ea2805a3e03a62f18773d66760ef8",
+  "tests/browser/fixtures/upstream-batch03-dom/vue.html": "ffacc14b9aec496961827c746506fbf10a8205b39e4c6c60a91e3b9032c773cf",
+  "tests/browser/fixtures/upstream-batch03-dom/scoped.css": "655e4e1f2ae874588fe0ca2512f912b8e088dfeff3d1fc20defb496187e0f68f",
+  "tests/browser/fixtures/upstream-batch03-dom/pixel.svg": "89775383503db40fac961280d697bc737341d63008651ce3660f45df764d5160",
+  "tests/browser/fixtures/upstream-batch03-dom/react.js": "c900a792b0fb564afbb3a693ff42d33f0061cbf8a70da917fc4d8d51546eda5f",
+  "tests/browser/fixtures/upstream-batch03-dom/comp.js": "3c6d38c745cf6ed41e02b5343730f67b502ec162b779bc9994d38e65ca3a8617",
+  "tests/browser/fixtures/upstream-batch03-dom/global.css": "756cbc24d0513726f42459fc7d41002f649e2a6cdae41ad493d62ad603455142",
+  "tests/browser/fixtures/upstream-batch03-dom/react.html": "a474821035290f63b321f08e5b13a6db14b645d52f23242501fc1f76feba69be",
+  "tests/browser/fixtures/upstream-batch03-dom/scoped-at-import.css": "a0f811c2f99c68bd0ff1d4eed96d74bef3149515fb6b746e9d1b27c548c74c50",
+  "tests/browser/fixtures/upstream-batch03-dom/vue.js": "ebe8efc66fedc8fb457e83bd3e71231e1fe89372123e720ba3c50d2a7bb20565",
+  "tests/browser/fixtures/upstream-batch03-dom/probe.module.css": "b3ea7049ae670900f27caa0f78d1bc6a2e666129552c9192836a6263d110d47c",
+  "tests/browser/fixtures/upstream-batch03-entry-src/index.html": "09a49b96c2e69816915cb7682b13529607af82f58e5d0e9a55d158b8224cb6dc",
+  "tests/browser/fixtures/upstream-batch03-entry-src/about.js": "bfe69ae9e373fc67f97d764bc4d901d9b658b8509335f1fd8f125a01c7aabb84",
+  "tests/browser/fixtures/upstream-batch03-entry-src/lazy.cjs": "4dd2837b64539e3bad234e0a5d80c4abb3aedb0816dc2742d92f3f0853c1d585",
+  "tests/browser/fixtures/upstream-batch03-entry-src/home.js": "34f9fd26164fdcffe0f0a81211012119d81e1ff96b8b5050ba0ecc32631fcef7",
+  "tests/browser/fixtures/upstream-batch03-entry-src/vite.js": "4906234c3ebb4cd12c21242ea6e7a8e9a2c8fb2bdda9c81bd9e51228271b5d18",
+  "tests/browser/fixtures/upstream-batch03-entry-src/vendor.cjs": "68f596c810c2578152929c32f405664f7bb5eded4563d09803c80452735de669",
+  "tests/browser/fixtures/upstream-batch03-entry-src/federated.cjs": "1f6e7841d129460b0da8f88bd951a31f890a8f002ab1e6f338266957f82aee12",
+  "tests/browser/fixtures/upstream-batch03-entry-src/webpack.cjs": "787608a5dd359d4bb70333bb5b3d2c2f8b7fa0ffd1ba7a21be7b440d7956f14f",
+  "tests/browser/fixtures/upstream-batch03-entry-src/dll-app.cjs": "676113a814b86ae9ef701483feab78448e0bd1ca7543e8e593ce2cd9e7c38665"
+}

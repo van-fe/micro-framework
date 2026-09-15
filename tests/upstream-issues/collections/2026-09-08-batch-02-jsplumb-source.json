@@ -1,0 +1,76 @@
+{
+  "collectedAt": "2026-09-08",
+  "issue": "https://github.com/umijs/qiankun/issues/1174",
+  "package": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "content": "{\n  \"name\": \"react16\",\n  \"version\": \"0.1.0\",\n  \"private\": true,\n  \"dependencies\": {\n    \"antd\": \"^3.25.2\",\n    \"jsplumb\": \"2.11.2\",\n    \"react\": \"^16.12.0\",\n    \"react-dom\": \"^16.12.0\",\n    \"react-router-dom\": \"^5.1.2\"\n  },\n  \"scripts\": {\n    \"start\": \"rescripts start\",\n    \"build\": \"rescripts build\",\n    \"test\": \"rescripts test\",\n    \"eject\": \"rescripts eject\"\n  },\n  \"browserslist\": {\n    \"production\": [\n      \">0.2%\",\n      \"not dead\",\n      \"not op_mini all\"\n    ],\n    \"development\": [\n      \"last 1 chrome version\",\n      \"last 1 firefox version\",\n      \"last 1 safari version\"\n    ]\n  },\n  \"devDependencies\": {\n    \"@rescripts/cli\": \"^0.0.14\",\n    \"react-scripts\": \"^3.4.1\"\n  }\n}\n",
+      "encoding": "utf-8",
+      "sha": "37590e23b425e876d1c73dcfdc0de34fd49037ae",
+      "display_url": "https://github.com/Orange-C/qiankun/blob/error-case/examples/react16/package.json",
+      "display_title": "package.json"
+    },
+    "isError": false
+  },
+  "source": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Action completed."
+          }
+        ],
+        "structuredContent": {
+          "content": "import React, { lazy, Suspense } from 'react';\nimport { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';\nimport { Divider } from 'antd';\n\nimport 'antd/dist/antd.min.css';\nimport './App.css';\n\nimport LibVersion from './components/LibVersion';\nimport HelloModal from './components/HelloModal';\n\nimport Home from './pages/Home';\nconst About = lazy(() => import('./pages/About'));\n\nconst RouteExample = () => {\n  return (\n    <Router basename={window.__POWERED_BY_QIANKUN__ ? '/react16' : '/'}>\n      <nav>\n        <Link to=\"/\">Home</Link>\n        <Divider type=\"vertical\" />\n        <Link to=\"/about\">About</Link>\n      </nav>\n      <Suspense fallback={null}>\n        <Switch>\n          <Route path=\"/\" exact component={Home} />\n          <Route path=\"/about\" component={About} />\n        </Switch>\n      </Suspense>\n    </Router>\n  );\n};\n\nexport default function App() {\n  return (\n    <div className=\"app-main\">\n      <LibVersion />\n      <HelloModal />\n\n      <Divider />\n\n      <RouteExample />\n    </div>\n  );\n}\n",
+          "encoding": "utf-8",
+          "sha": "55a00d4f244f630a6521ae02948ae47d7a40c4ff",
+          "display_url": "https://github.com/Orange-C/qiankun/blob/error-case/examples/react16/src/App.js",
+          "display_title": "App.js"
+        },
+        "isError": false
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Action completed."
+          }
+        ],
+        "structuredContent": {
+          "content": "import './public-path';\nimport React from 'react';\nimport ReactDOM from 'react-dom';\nimport App from './App';\nimport * as serviceWorker from './serviceWorker';\n\nfunction render(props) {\n  const { container } = props;\n  ReactDOM.render(<App />, container ? container.querySelector('#root') : document.querySelector('#root'));\n}\n\nfunction storeTest(props) {\n  props.onGlobalStateChange((value, prev) => console.log(`[onGlobalStateChange - ${props.name}]:`, value, prev), true);\n  props.setGlobalState({\n    ignore: props.name,\n    user: {\n      name: props.name,\n    },\n  });\n}\n\nif (!window.__POWERED_BY_QIANKUN__) {\n  render({});\n}\n\nexport async function bootstrap() {\n  console.log('[react16] react app bootstraped');\n}\n\nexport async function mount(props) {\n  console.log('[react16] props from main framework', props);\n  storeTest(props);\n  render(props);\n}\n\nexport async function unmount(props) {\n  const { container } = props;\n  ReactDOM.unmountComponentAtNode(container ? container.querySelector('#root') : document.querySelector('#root'));\n}\n\n// If you want your app to work offline and load faster, you can change\n// unregister() to register() below. Note this comes with some pitfalls.\n// Learn more about service workers: https://bit.ly/CRA-PWA\nserviceWorker.unregister();\n",
+          "encoding": "utf-8",
+          "sha": "5723b5c8aca05c39f9dffd919a3887d919f4e21f",
+          "display_url": "https://github.com/Orange-C/qiankun/blob/error-case/examples/react16/src/index.js",
+          "display_title": "index.js"
+        },
+        "isError": false
+      }
+    }
+  ],
+  "home": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "content": "import React, {useMemo,useEffect} from 'react';\nimport {jsPlumb} from 'jsplumb';\n\nexport default function() {\n  const instance = useMemo(() => {\n      return jsPlumb.getInstance({\n          Anchor: 'AutoDefault',\n          Endpoint: 'Blank',\n          Container: String(new Date().getTime()),\n          Connector: ['Flowchart', { cornerRadius: 5 }],\n          PaintStyle: {\n              strokeWidth: 2,\n              stroke: '#d8dee6'\n          },\n          HoverPaintStyle: { strokeWidth: 2, stroke: '#d8dee6' },\n          ConnectionOverlays: [\n              ['Arrow', { location: 1, width: 10, length: 10 }]\n          ]\n      });\n  }, []);\n\n  useEffect(() => {\n    instance.ready(() => {\n          const param = {\n              source : \"window2\",\n              target : \"window3\",\n          };\n          instance.connect(param);\n    });\n  }, [instance]);\n\n  return (\n    <h2 className=\"app-nav-item\" style={{ borderColor: 'red' }}>\n      Home\n      <div id='window2'>2</div>\n      <div id='window3'>3</div>\n    </h2>\n  );\n}\n",
+      "encoding": "utf-8",
+      "sha": "199d9435fac7dbb114af927f69aba09b734004b5",
+      "display_url": "https://github.com/Orange-C/qiankun/blob/error-case/examples/react16/src/pages/Home.js",
+      "display_title": "Home.js"
+    },
+    "isError": false
+  }
+}

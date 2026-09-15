@@ -1,0 +1,2 @@
+@font-face { font-family: "Batch02ExternalIcons"; src:url("./upstream-batch02-font-normal.ttf") }
+.external-font-probe { font:20px "Batch02ExternalIcons";display:inline-block }

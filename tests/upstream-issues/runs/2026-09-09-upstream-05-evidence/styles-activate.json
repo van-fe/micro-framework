@@ -1,0 +1,157 @@
+{
+  "config": {
+    "argv": [
+      "/Users/fanfangbo/.local/share/fnm/node-versions/v24.19.0/installation/bin/node",
+      "/Users/fanfangbo/workspace/micro-framework/node_modules/.bin/playwright",
+      "test",
+      "tests/e2e/upstream-batch04-styles.spec.ts",
+      "--project=webkit",
+      "--reporter=line,json"
+    ],
+    "configFile": "/Users/fanfangbo/workspace/micro-framework/playwright.config.ts",
+    "rootDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "line"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "upstream-batch04-styles.spec.ts",
+      "file": "upstream-batch04-styles.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Q3018 preserves module initialized adjacent styles across keepAlive hide return and disposal recreation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1172,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Q3018_DIAGNOSTIC \u001b[33m0\u001b[39m [\n  {\n    text: \u001b[32m'.batch04-style-first { color: rgb(11,22,33) }'\u001b[39m,\n    media: \u001b[32m''\u001b[39m,\n    rawMedia: \u001b[32m'not all'\u001b[39m,\n    sheetMedia: \u001b[32m''\u001b[39m,\n    disabled: \u001b[33mfalse\u001b[39m,\n    rules: [ \u001b[32m'.batch04-style-first { color: rgb(11, 22, 33); }'\u001b[39m ],\n    connected: \u001b[33mtrue\u001b[39m,\n    owner: \u001b[33mtrue\u001b[39m\n  },\n  {\n    text: \u001b[32m'.batch04-style-second { color: rgb(44,55,66); width: 84px }'\u001b[39m,\n    media: \u001b[32m''\u001b[39m,\n    rawMedia: \u001b[32m'not all'\u001b[39m,\n    sheetMedia: \u001b[32m''\u001b[39m,\n    disabled: \u001b[33mfalse\u001b[39m,\n    rules: [\n      \u001b[32m'.batch04-style-second { color: rgb(44, 55, 66); width: 84px; }'\u001b[39m\n    ],\n    connected: \u001b[33mtrue\u001b[39m,\n    owner: \u001b[33mtrue\u001b[39m\n  }\n]\n"
+                    },
+                    {
+                      "text": "Q3018_DIAGNOSTIC \u001b[33m1\u001b[39m [\n  {\n    text: \u001b[32m'.batch04-style-first { color: rgb(11,22,33) }'\u001b[39m,\n    media: \u001b[32m''\u001b[39m,\n    rawMedia: \u001b[32m'not all'\u001b[39m,\n    sheetMedia: \u001b[32m''\u001b[39m,\n    disabled: \u001b[33mfalse\u001b[39m,\n    rules: [ \u001b[32m'.batch04-style-first { color: rgb(11, 22, 33); }'\u001b[39m ],\n    connected: \u001b[33mtrue\u001b[39m,\n    owner: \u001b[33mtrue\u001b[39m\n  },\n  {\n    text: \u001b[32m'.batch04-style-second { color: rgb(44,55,66); width: 84px }'\u001b[39m,\n    media: \u001b[32m''\u001b[39m,\n    rawMedia: \u001b[32m'not all'\u001b[39m,\n    sheetMedia: \u001b[32m''\u001b[39m,\n    disabled: \u001b[33mfalse\u001b[39m,\n    rules: [\n      \u001b[32m'.batch04-style-second { color: rgb(44, 55, 66); width: 84px; }'\u001b[39m\n    ],\n    connected: \u001b[33mtrue\u001b[39m,\n    owner: \u001b[33mtrue\u001b[39m\n  }\n]\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T03:38:46.482Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b6366a0961a77a89eeb9-8a5547afb7515ae74065",
+          "file": "upstream-batch04-styles.spec.ts",
+          "line": 6,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-09T03:38:42.801Z",
+    "duration": 5062.261,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

@@ -1,0 +1,12 @@
+
+Running 1 test using 1 worker
+
+(node:56386) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/1] [webkit] › tests/e2e/upstream-batch04-style-native.spec.ts:4:1 › Q3018 native stylesheet media control compares repeated shadow roots with CSSOM and reflected activation
+[webkit] › tests/e2e/upstream-batch04-style-native.spec.ts:4:1 › Q3018 native stylesheet media control compares repeated shadow roots with CSSOM and reflected activation
+Q3018_NATIVE_MEDIA [{"reflected":false,"generations":[{"color":"rgb(11, 22, 33)","raw":"not all","sheetMedia":""},{"color":"rgb(11, 22, 33)","raw":"not all","sheetMedia":""}]},{"reflected":true,"generations":[{"color":"rgb(11, 22, 33)","raw":"","sheetMedia":""},{"color":"rgb(11, 22, 33)","raw":"","sheetMedia":""}]}]
+
+  1 passed (5.0s)

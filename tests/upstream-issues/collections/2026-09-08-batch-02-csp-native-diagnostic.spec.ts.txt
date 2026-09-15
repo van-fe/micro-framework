@@ -1,0 +1,41 @@
+import { test, isolateBrowserProcess } from './browser-process-fixture';
+isolateBrowserProcess(import.meta.url);
+test('captures native CSP diagnostic locations', async ({page}) => {
+  const client = await page.context().newCDPSession(page);
+  await client.send('DOM.enable'); await client.send('Audits.enable'); await client.send('Log.enable');
+  client.on('Log.entryAdded', value => console.log('BROWSER_LOG', JSON.stringify(value)));
+  client.on('Audits.issueAdded', value => console.log('AUDIT', JSON.stringify(value)));
+  page.on('console', value => { if(value.type()==='error') console.log('CONSOLE', value.text(), JSON.stringify(value.location())); });
+  await page.addInitScript(() => {
+    document.addEventListener('securitypolicyviolation', event => console.log('CSP_EVENT', JSON.stringify({ directive: event.effectiveDirective, blocked: event.blockedURI, source: event.sourceFile, line:event.lineNumber,column:event.columnNumber,sample:event.sample, target: (event.target as Element).outerHTML, path:event.composedPath().map(node => (node as Element).nodeName)})));
+  });
+  page.on('console', value => { if(value.text().startsWith('CSP_EVENT')) console.log(value.text()); });
+  await page.goto('/__batch02-csp-nonce-host.html');
+  await page.waitForFunction(() => Boolean(window.__createMicroFrameBenchmarkRuntime__));
+  await page.evaluate(async () => {
+    const {origin} = await (await fetch('/__batch02-entry')).json();
+    const runtime = window.__createMicroFrameBenchmarkRuntime__!();
+    await runtime.mountApp({name:'csp-diagnostic',container:'#csp-slot',entry:{type:'html',url:origin+'/csp-nonce.html?allowed=1'}});
+  });
+  console.log('STYLE_NODES',await page.locator('style').evaluateAll(nodes=>nodes.map(node=>({outer:node.outerHTML,sheet:!!(node as HTMLStyleElement).sheet, nonce:node.nonce}))));
+  await page.getByRole('button',{name:'Nonce probe'}).click();
+});
+test('native text/plain style control without creating a runtime', async ({page}) => {
+  await page.addInitScript(() => {
+    (window as any).__nativeStyleCsp=[];
+    document.addEventListener('securitypolicyviolation', event => (window as any).__nativeStyleCsp.push({directive:event.effectiveDirective,line:event.lineNumber,source:event.sourceFile,node:(event.composedPath()[0] as Element)?.outerHTML}));
+  });
+  await page.goto('/__batch02-csp-nonce-host.html');
+  for(const kind of ['plain-style','style-comment','template-text','constructed-sheet']) {
+    await page.evaluate(kind => {
+      const root=document.body.appendChild(document.createElement('section')).attachShadow({mode:'open'});
+      if(kind==='constructed-sheet') { const s=new CSSStyleSheet();s.replaceSync(':host{--probe:yes}');root.adoptedStyleSheets=[s];return; }
+      const marker=document.createElement(kind==='template-text'?'template':'style');
+      if(marker instanceof HTMLStyleElement) marker.type='text/plain';
+      if(kind==='style-comment') marker.appendChild(document.createComment(':host{--probe:yes}'));else marker.textContent=':host{--probe:yes}';
+      root.appendChild(marker);
+      if(kind==='style-comment') (marker.firstChild as Comment).data=':host{--probe:updated}';else marker.textContent=':host{--probe:updated}';
+    },kind);
+    console.log('NATIVE_CONTROL',kind,JSON.stringify(await page.evaluate(()=>(window as any).__nativeStyleCsp.splice(0))));
+  }
+});

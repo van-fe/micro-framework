@@ -1,0 +1,7 @@
+<!doctype html>
+<script>
+  window.__remainingProbe = { order: [] };
+  document.write('<script src="/upstream-order-a.js?document-write-entry-cancel=' + Date.now() + '"><\/script><p id="entry-stale">stale</p>');
+  window.__documentWritePending = true;
+  window.DocumentWriteCancelledLifecycle = { mount() {}, unmount() {} };
+</script>

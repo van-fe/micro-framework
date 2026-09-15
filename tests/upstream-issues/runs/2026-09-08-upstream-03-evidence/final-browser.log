@@ -1,0 +1,428 @@
+$ vitest run --config vitest.browser.config.ts "--reporter=verbose" "--reporter=json" "--outputFile=tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/final-browser.json"
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - import "../../support/webpack-compiler" without a file extension (tests/browser/server/upstream-batch02-entry-fixture.ts:7:39). Add the file extension
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+
+ RUN  v4.1.11 /Users/fanfangbo/workspace/micro-framework
+
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - import "../../support/webpack-compiler" without a file extension (tests/browser/server/upstream-batch02-entry-fixture.ts:7:39). Add the file extension
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+ ✓ |browser-chromium| tests/browser/realm-dom.browser.test.ts > real-browser DOM surface contracts > renders in an open ShadowRoot and keeps application CSS out of the host document 11ms
+ ✓ |browser-chromium| tests/browser/realm-dom.browser.test.ts > real-browser DOM surface contracts > maps document-level CSS custom properties into the application surface 2ms
+ ✓ |browser-chromium| tests/browser/realm-dom.browser.test.ts > real-browser DOM surface contracts > removes the application-owned Shadow surface during destroy 1ms
+ ✓ |browser-chromium| tests/browser/realm-dom.browser.test.ts > real-browser DOM surface contracts > prepares a hidden overlay root and elevates it when entering 3ms
+ ✓ |browser-chromium| tests/browser/realm-dom.browser.test.ts > real-browser DOM surface contracts > prepares a fixed viewport body child before dialog semantics appear 1ms
+ ✓ |browser-webkit| tests/browser/upstream-realm-remaining.browser.test.ts > upstream remaining Realm regressions > W67 keeps document scroll metrics aligned with visible viewport coordinates and restores them on destroy 18ms
+ ✓ |browser-chromium| tests/browser/realm-dom.browser.test.ts > real-browser DOM surface contracts > marks a detached modal root before connection so its enter animation is not cancelled 92ms
+ ✓ |browser-chromium| tests/browser/realm-dom.browser.test.ts > real-browser DOM surface contracts > scopes the Web Animations timeline to the application surface and cancels it on destroy 11ms
+ ✓ |browser-chromium| tests/browser/realm-dom.browser.test.ts > real-browser DOM surface contracts > reads computed styles through the Window that owns each cross-Realm element 3ms
+ ✓ |browser-chromium| tests/browser/realm-dom.browser.test.ts > real-browser DOM surface contracts > cancels host-backed animation and idle callbacks when the visual bridge is destroyed 21ms
+ ✓ |browser-chromium| tests/browser/realm-dom.browser.test.ts > real-browser DOM surface contracts > scopes focus to the application ShadowRoot and restores its last focused element 8ms
+ ✓ |browser-chromium| tests/browser/realm-dom.browser.test.ts > real-browser DOM surface contracts > prevents an application Selection from observing or modifying host ranges 7ms
+ ✓ |browser-chromium| tests/browser/realm-dom.browser.test.ts > real-browser iframe Realm and Document Bridge contracts > adopts a declarative Shadow DOM surface without replacing server nodes 2ms
+ ✓ |browser-chromium| tests/browser/realm-dom.browser.test.ts > real-browser iframe Realm and Document Bridge contracts > installs an Import Map and declared shared preloads without inventing an entry preload 11ms
+ ✓ |browser-chromium| tests/browser/realm-dom.browser.test.ts > real-browser iframe Realm and Document Bridge contracts > keeps Realm globals isolated while routing visual DOM into the ShadowRoot 14ms
+ ✓ |browser-firefox| tests/browser/document-write-handler.browser.test.ts > written document mutations and native handler scope > retains the visible HTML and SVG element scope and the iframe global Realm 21ms
+ ✓ |browser-firefox| tests/browser/document-write-handler.browser.test.ts > written document mutations and native handler scope > preserves application edits to earlier and currently extended text nodes 10ms
+ ✓ |browser-firefox| tests/browser/document-write-handler.browser.test.ts > written document mutations and native handler scope > applies full-document root attributes and restores writer-owned attributes on reopening 11ms
+ ✓ |browser-webkit| tests/browser/upstream-realm-remaining.browser.test.ts > upstream remaining Realm regressions > Q2362 executes dynamic async=false scripts in a,b,c order after c,b,a network completion 612ms
+ ✓ |browser-webkit| tests/browser/upstream-realm-remaining.browser.test.ts > upstream remaining Realm regressions > Q1613 isolates classic UMD global aliases across sibling Realms with host _ absent 8ms
+ ✓ |browser-webkit| tests/browser/upstream-realm-remaining.browser.test.ts > upstream remaining Realm regressions > Q1613 isolates classic UMD global aliases across sibling Realms with host _ present 6ms
+ ✓ |browser-webkit| tests/browser/upstream-realm-remaining.browser.test.ts > upstream remaining Realm regressions > Q1266 preserves cached document script ownership through Promise and timer callbacks 11ms
+ ✓ |browser-webkit| tests/browser/upstream-realm-remaining.browser.test.ts > upstream remaining Realm regressions > W209 adopts app-created constructed stylesheets in visible nested ShadowRoots without host mutation 13ms
+ ✓ |browser-webkit| tests/browser/upstream-realm-remaining.browser.test.ts > upstream remaining Realm regressions > W770 scopes cached Selection objects when sibling applications alternate selections 9ms
+ ✓ |browser-webkit| tests/browser/upstream-realm-remaining.browser.test.ts > upstream remaining Realm regressions > W835 keeps simultaneously registered custom window listeners isolated across siblings 7ms
+ ✓ |browser-webkit| tests/browser/upstream-realm-remaining.browser.test.ts > upstream remaining Realm regressions > W988 keeps simultaneously registered custom document listeners isolated across siblings 7ms
+ ✓ |browser-webkit| tests/browser/upstream-realm-remaining.browser.test.ts > upstream remaining Realm regressions > W78 reinserts the identical style node while connected and after removal 7ms
+ ✓ |browser-webkit| tests/browser/upstream-realm-remaining.browser.test.ts > upstream remaining Realm regressions > W78 reinserts the identical link node while connected and after removal 160ms
+ ✓ |browser-chromium| tests/browser/realm-dom.browser.test.ts > real-browser iframe Realm and Document Bridge contracts > routes additional visual Document APIs and diagnoses APIs that still target the hidden iframe 751ms
+ ✓ |browser-chromium| tests/browser/realm-dom.browser.test.ts > real-browser iframe Realm and Document Bridge contracts > installs named Document Bridge plugins through Runtime and cleans them with the Realm 13ms
+ ✓ |browser-chromium| tests/browser/realm-dom.browser.test.ts > real-browser iframe Realm and Document Bridge contracts > rejects duplicate plugin names and rolls back earlier plugins after an install failure 5ms
+ ✓ |browser-webkit| tests/browser/document-write-handler.browser.test.ts > written document mutations and native handler scope > retains the visible HTML and SVG element scope and the iframe global Realm 17ms
+ ✓ |browser-webkit| tests/browser/document-write-handler.browser.test.ts > written document mutations and native handler scope > preserves application edits to earlier and currently extended text nodes 5ms
+ ✓ |browser-webkit| tests/browser/document-write-handler.browser.test.ts > written document mutations and native handler scope > applies full-document root attributes and restores writer-owned attributes on reopening 4ms
+ ✓ |browser-chromium| tests/browser/upstream-realm-remaining.browser.test.ts > upstream remaining Realm regressions > W67 keeps document scroll metrics aligned with visible viewport coordinates and restores them on destroy 6ms
+ ✓ |browser-firefox| tests/browser/document-write-handler.browser.test.ts > written document mutations and native handler scope > ignores writes from canceled external scripts after a replacement document opens 775ms
+ ✓ |browser-firefox| tests/browser/document-write-handler.browser.test.ts > written document mutations and native handler scope > rejects a failing continuation without leaking an unhandled rejection into the host 46ms
+ ✓ |browser-firefox| tests/browser/document-write-handler.browser.test.ts > written document mutations and native handler scope > protects the host Realm and framework attributes when fragment html attributes are adopted 9ms
+ ✓ |browser-firefox| tests/browser/upstream-realm-remaining.browser.test.ts > upstream remaining Realm regressions > W67 keeps document scroll metrics aligned with visible viewport coordinates and restores them on destroy 7ms
+ ✓ |browser-chromium| tests/browser/upstream-realm-remaining.browser.test.ts > upstream remaining Realm regressions > Q2362 executes dynamic async=false scripts in a,b,c order after c,b,a network completion 607ms
+ ✓ |browser-chromium| tests/browser/upstream-realm-remaining.browser.test.ts > upstream remaining Realm regressions > Q1613 isolates classic UMD global aliases across sibling Realms with host _ absent 10ms
+ ✓ |browser-chromium| tests/browser/upstream-realm-remaining.browser.test.ts > upstream remaining Realm regressions > Q1613 isolates classic UMD global aliases across sibling Realms with host _ present 8ms
+ ✓ |browser-chromium| tests/browser/upstream-realm-remaining.browser.test.ts > upstream remaining Realm regressions > Q1266 preserves cached document script ownership through Promise and timer callbacks 11ms
+ ✓ |browser-chromium| tests/browser/upstream-realm-remaining.browser.test.ts > upstream remaining Realm regressions > W209 adopts app-created constructed stylesheets in visible nested ShadowRoots without host mutation 8ms
+ ✓ |browser-chromium| tests/browser/upstream-realm-remaining.browser.test.ts > upstream remaining Realm regressions > W770 scopes cached Selection objects when sibling applications alternate selections 7ms
+ ✓ |browser-chromium| tests/browser/upstream-realm-remaining.browser.test.ts > upstream remaining Realm regressions > W835 keeps simultaneously registered custom window listeners isolated across siblings 6ms
+ ✓ |browser-chromium| tests/browser/upstream-realm-remaining.browser.test.ts > upstream remaining Realm regressions > W988 keeps simultaneously registered custom document listeners isolated across siblings 6ms
+ ✓ |browser-chromium| tests/browser/upstream-realm-remaining.browser.test.ts > upstream remaining Realm regressions > W78 reinserts the identical style node while connected and after removal 4ms
+ ✓ |browser-webkit| tests/browser/document-write-handler.browser.test.ts > written document mutations and native handler scope > ignores writes from canceled external scripts after a replacement document opens 756ms
+ ✓ |browser-webkit| tests/browser/document-write-handler.browser.test.ts > written document mutations and native handler scope > rejects a failing continuation without leaking an unhandled rejection into the host 41ms
+ ✓ |browser-webkit| tests/browser/document-write-handler.browser.test.ts > written document mutations and native handler scope > protects the host Realm and framework attributes when fragment html attributes are adopted 7ms
+ ✓ |browser-chromium| tests/browser/upstream-realm-remaining.browser.test.ts > upstream remaining Realm regressions > W78 reinserts the identical link node while connected and after removal 162ms
+ ✓ |browser-webkit| tests/browser/document-write.browser.test.ts > real-browser document.write compatibility > streams split markup, multiple arguments and writeln without replacing existing nodes 6ms
+ ✓ |browser-webkit| tests/browser/document-write.browser.test.ts > real-browser document.write compatibility > executes written inline and nested scripts only inside the iframe Realm 5ms
+ ✓ |browser-webkit| tests/browser/document-write.browser.test.ts > real-browser document.write compatibility > loads relative external scripts before dependent inline scripts and nested writes 5ms
+ ✓ |browser-webkit| tests/browser/document-write.browser.test.ts > real-browser document.write compatibility > keeps outer parser input suspended until a reentrant written script returns 4ms
+ ✓ |browser-webkit| tests/browser/document-write.browser.test.ts > real-browser document.write compatibility > schedules written inline modules in their iframe without hanging flush 55ms
+ ✓ |browser-webkit| tests/browser/document-write.browser.test.ts > real-browser document.write compatibility > keeps data scripts visible and executes legacy JavaScript MIME aliases in the iframe 3ms
+ ✓ |browser-chromium| tests/browser/document-write-handler.browser.test.ts > written document mutations and native handler scope > retains the visible HTML and SVG element scope and the iframe global Realm 7ms
+ ✓ |browser-chromium| tests/browser/document-write-handler.browser.test.ts > written document mutations and native handler scope > preserves application edits to earlier and currently extended text nodes 4ms
+ ✓ |browser-chromium| tests/browser/document-write-handler.browser.test.ts > written document mutations and native handler scope > applies full-document root attributes and restores writer-owned attributes on reopening 4ms
+ ✓ |browser-firefox| tests/browser/upstream-realm-remaining.browser.test.ts > upstream remaining Realm regressions > Q2362 executes dynamic async=false scripts in a,b,c order after c,b,a network completion 610ms
+ ✓ |browser-firefox| tests/browser/upstream-realm-remaining.browser.test.ts > upstream remaining Realm regressions > Q1613 isolates classic UMD global aliases across sibling Realms with host _ absent 14ms
+ ✓ |browser-firefox| tests/browser/upstream-realm-remaining.browser.test.ts > upstream remaining Realm regressions > Q1613 isolates classic UMD global aliases across sibling Realms with host _ present 11ms
+ ✓ |browser-firefox| tests/browser/upstream-realm-remaining.browser.test.ts > upstream remaining Realm regressions > Q1266 preserves cached document script ownership through Promise and timer callbacks 15ms
+ ✓ |browser-firefox| tests/browser/upstream-realm-remaining.browser.test.ts > upstream remaining Realm regressions > W209 adopts app-created constructed stylesheets in visible nested ShadowRoots without host mutation 10ms
+ ✓ |browser-firefox| tests/browser/upstream-realm-remaining.browser.test.ts > upstream remaining Realm regressions > W770 scopes cached Selection objects when sibling applications alternate selections 9ms
+ ✓ |browser-firefox| tests/browser/upstream-realm-remaining.browser.test.ts > upstream remaining Realm regressions > W835 keeps simultaneously registered custom window listeners isolated across siblings 8ms
+ ✓ |browser-firefox| tests/browser/upstream-realm-remaining.browser.test.ts > upstream remaining Realm regressions > W988 keeps simultaneously registered custom document listeners isolated across siblings 9ms
+ ✓ |browser-firefox| tests/browser/upstream-realm-remaining.browser.test.ts > upstream remaining Realm regressions > W78 reinserts the identical style node while connected and after removal 6ms
+ ✓ |browser-firefox| tests/browser/upstream-realm-remaining.browser.test.ts > upstream remaining Realm regressions > W78 reinserts the identical link node while connected and after removal 58ms
+ ✓ |browser-firefox| tests/browser/document-write.browser.test.ts > real-browser document.write compatibility > streams split markup, multiple arguments and writeln without replacing existing nodes 5ms
+ ✓ |browser-firefox| tests/browser/document-write.browser.test.ts > real-browser document.write compatibility > executes written inline and nested scripts only inside the iframe Realm 4ms
+ ✓ |browser-firefox| tests/browser/document-write.browser.test.ts > real-browser document.write compatibility > loads relative external scripts before dependent inline scripts and nested writes 7ms
+ ✓ |browser-firefox| tests/browser/document-write.browser.test.ts > real-browser document.write compatibility > keeps outer parser input suspended until a reentrant written script returns 4ms
+ ✓ |browser-firefox| tests/browser/document-write.browser.test.ts > real-browser document.write compatibility > schedules written inline modules in their iframe without hanging flush 60ms
+ ✓ |browser-firefox| tests/browser/document-write.browser.test.ts > real-browser document.write compatibility > keeps data scripts visible and executes legacy JavaScript MIME aliases in the iframe 4ms
+ ✓ |browser-webkit| tests/browser/document-write.browser.test.ts > real-browser document.write compatibility > keeps concurrent streams and their script state local to each application 612ms
+ ✓ |browser-webkit| tests/browser/document-write.browser.test.ts > real-browser document.write compatibility > replaces the application document with open/write/close while keeping its Realm alive 13ms
+ ✓ |browser-webkit| tests/browser/document-write.browser.test.ts > real-browser document.write compatibility > preserves native open/write/close for an application-owned editor or printing iframe 7ms
+ ✓ |browser-webkit| tests/browser/document-write.browser.test.ts > real-browser document.write compatibility > reports a failed written external script through the pending stream 6ms
+ ✓ |browser-webkit| tests/browser/document-write.browser.test.ts > real-browser document.write compatibility > settles pending writes on destroy and ignores subsequent calls 3ms
+ ✓ |browser-chromium| tests/browser/document-write-handler.browser.test.ts > written document mutations and native handler scope > ignores writes from canceled external scripts after a replacement document opens 755ms
+ ✓ |browser-chromium| tests/browser/document-write-handler.browser.test.ts > written document mutations and native handler scope > rejects a failing continuation without leaking an unhandled rejection into the host 37ms
+ ✓ |browser-chromium| tests/browser/document-write-handler.browser.test.ts > written document mutations and native handler scope > protects the host Realm and framework attributes when fragment html attributes are adopted 3ms
+ ✓ |browser-webkit| tests/browser/upstream-readiness-cascade.browser.test.ts > upstream application readiness and HTML cascade > Q1271 retains static body style position when async head styles arrive 65ms
+ ✓ |browser-chromium| tests/browser/document-write.browser.test.ts > real-browser document.write compatibility > streams split markup, multiple arguments and writeln without replacing existing nodes 4ms
+ ✓ |browser-chromium| tests/browser/document-write.browser.test.ts > real-browser document.write compatibility > executes written inline and nested scripts only inside the iframe Realm 4ms
+ ✓ |browser-chromium| tests/browser/document-write.browser.test.ts > real-browser document.write compatibility > loads relative external scripts before dependent inline scripts and nested writes 4ms
+ ✓ |browser-chromium| tests/browser/document-write.browser.test.ts > real-browser document.write compatibility > keeps outer parser input suspended until a reentrant written script returns 3ms
+ ✓ |browser-chromium| tests/browser/document-write.browser.test.ts > real-browser document.write compatibility > schedules written inline modules in their iframe without hanging flush 54ms
+ ✓ |browser-chromium| tests/browser/document-write.browser.test.ts > real-browser document.write compatibility > keeps data scripts visible and executes legacy JavaScript MIME aliases in the iframe 6ms
+ ✓ |browser-firefox| tests/browser/document-write.browser.test.ts > real-browser document.write compatibility > keeps concurrent streams and their script state local to each application 613ms
+ ✓ |browser-firefox| tests/browser/document-write.browser.test.ts > real-browser document.write compatibility > replaces the application document with open/write/close while keeping its Realm alive 8ms
+ ✓ |browser-firefox| tests/browser/document-write.browser.test.ts > real-browser document.write compatibility > preserves native open/write/close for an application-owned editor or printing iframe 7ms
+ ✓ |browser-firefox| tests/browser/document-write.browser.test.ts > real-browser document.write compatibility > reports a failed written external script through the pending stream 6ms
+ ✓ |browser-firefox| tests/browser/document-write.browser.test.ts > real-browser document.write compatibility > settles pending writes on destroy and ignores subsequent calls 4ms
+ ✓ |browser-firefox| tests/browser/upstream-readiness-cascade.browser.test.ts > upstream application readiness and HTML cascade > Q1271 retains static body style position when async head styles arrive 68ms
+ ✓ |browser-webkit| tests/browser/upstream-readiness-cascade.browser.test.ts > upstream application readiness and HTML cascade > W49 dispatches document readiness and window load once after their application resources 474ms
+ ✓ |browser-webkit| tests/browser/upstream-batch02-dom-font-messages.browser.test.ts > batch02 nested application browser contracts > W1106 routes window drag listeners to their application with once, abort and destroy cleanup 9ms
+ ✓ |browser-webkit| tests/browser/upstream-batch02-dom-font-messages.browser.test.ts > batch02 nested application browser contracts > W845 W1059 loads a font from the third insertAdjacentElement style in nested shadows with application family isolation 42ms
+ ✓ |browser-chromium| tests/browser/document-write.browser.test.ts > real-browser document.write compatibility > keeps concurrent streams and their script state local to each application 607ms
+ ✓ |browser-chromium| tests/browser/document-write.browser.test.ts > real-browser document.write compatibility > replaces the application document with open/write/close while keeping its Realm alive 4ms
+ ✓ |browser-chromium| tests/browser/document-write.browser.test.ts > real-browser document.write compatibility > preserves native open/write/close for an application-owned editor or printing iframe 5ms
+ ✓ |browser-chromium| tests/browser/document-write.browser.test.ts > real-browser document.write compatibility > reports a failed written external script through the pending stream 4ms
+ ✓ |browser-chromium| tests/browser/document-write.browser.test.ts > real-browser document.write compatibility > settles pending writes on destroy and ignores subsequent calls 3ms
+ ✓ |browser-webkit| tests/browser/upstream-batch02-dom-font-messages.browser.test.ts > batch02 nested application browser contracts > W845 normalizes a native external stylesheet before activating its font family 61ms
+ ✓ |browser-webkit| tests/browser/upstream-batch02-dom-font-messages.browser.test.ts > batch02 nested application browser contracts > W845 resolves font variables introduced by later CSSOM rules and inline declarations 67ms
+ ✓ |browser-webkit| tests/browser/upstream-batch02-dom-font-messages.browser.test.ts > batch02 nested application browser contracts > W421 preserves fill-available height through an application document root and flex parent 14ms
+ ✓ |browser-webkit| tests/browser/upstream-batch02-dom-font-messages.browser.test.ts > batch02 nested application browser contracts > W790 delivers native nested iframe replies only to its owning application and stops bridging on destroy 123ms
+ ✓ |browser-chromium| tests/browser/upstream-readiness-cascade.browser.test.ts > upstream application readiness and HTML cascade > Q1271 retains static body style position when async head styles arrive 61ms
+ ✓ |browser-firefox| tests/browser/upstream-readiness-cascade.browser.test.ts > upstream application readiness and HTML cascade > W49 dispatches document readiness and window load once after their application resources 472ms
+ ✓ |browser-webkit| tests/browser/upstream-batch02-overlay-intent.browser.test.ts > Q2408 related fixed body nodes retain their authored size and offsets across synchronous insertion APIs 24ms
+ ✓ |browser-firefox| tests/browser/upstream-batch02-dom-font-messages.browser.test.ts > batch02 nested application browser contracts > W1106 routes window drag listeners to their application with once, abort and destroy cleanup 12ms
+ ✓ |browser-firefox| tests/browser/upstream-batch02-dom-font-messages.browser.test.ts > batch02 nested application browser contracts > W845 W1059 loads a font from the third insertAdjacentElement style in nested shadows with application family isolation 34ms
+ ✓ |browser-webkit| tests/browser/upstream-batch02-overlay-intent.browser.test.ts > viewport overlay intent preserves CSS fullscreen entry animation before delayed dialog semantics 134ms
+ ✓ |browser-webkit| tests/browser/upstream-batch02-overlay-intent.browser.test.ts > hidden viewport roots retain their viewport intent while local fixed dialogs keep their own geometry 83ms
+ ✓ |browser-firefox| tests/browser/upstream-batch02-dom-font-messages.browser.test.ts > batch02 nested application browser contracts > W845 normalizes a native external stylesheet before activating its font family 62ms
+ ✓ |browser-firefox| tests/browser/upstream-batch02-dom-font-messages.browser.test.ts > batch02 nested application browser contracts > W845 resolves font variables introduced by later CSSOM rules and inline declarations 68ms
+ ✓ |browser-firefox| tests/browser/upstream-batch02-dom-font-messages.browser.test.ts > batch02 nested application browser contracts > W421 preserves fill-available height through an application document root and flex parent 10ms
+ ✓ |browser-firefox| tests/browser/upstream-batch02-dom-font-messages.browser.test.ts > batch02 nested application browser contracts > W790 delivers native nested iframe replies only to its owning application and stops bridging on destroy 137ms
+ ✓ |browser-chromium| tests/browser/upstream-readiness-cascade.browser.test.ts > upstream application readiness and HTML cascade > W49 dispatches document readiness and window load once after their application resources 467ms
+ ✓ |browser-webkit| tests/browser/devtools.browser.test.ts > real-browser Runtime DevTools > publishes bounded, serializable Runtime snapshots through the global hook 1ms
+ ✓ |browser-webkit| tests/browser/devtools.browser.test.ts > real-browser Runtime DevTools > renders and toggles an isolated Shadow DOM panel from live lifecycle events 187ms
+ ✓ |browser-webkit| tests/browser/devtools.browser.test.ts > real-browser Runtime DevTools > inspects lifecycle events from a real Runtime and iframe Realm 16ms
+ ✓ |browser-webkit| tests/browser/devtools.browser.test.ts > exports browser performance durations and clears only owned marks 0ms
+ ✓ |browser-chromium| tests/browser/upstream-batch02-dom-font-messages.browser.test.ts > batch02 nested application browser contracts > W1106 routes window drag listeners to their application with once, abort and destroy cleanup 9ms
+ ✓ |browser-chromium| tests/browser/upstream-batch02-dom-font-messages.browser.test.ts > batch02 nested application browser contracts > W845 W1059 loads a font from the third insertAdjacentElement style in nested shadows with application family isolation 26ms
+ ✓ |browser-chromium| tests/browser/upstream-batch02-dom-font-messages.browser.test.ts > batch02 nested application browser contracts > W845 normalizes a native external stylesheet before activating its font family 58ms
+ ✓ |browser-firefox| tests/browser/upstream-batch02-dom-styles.browser.test.ts > batch02 application document styles > W445 maps compound root selectors and complete theme declarations to each application root 17ms
+ ✓ |browser-firefox| tests/browser/upstream-batch02-dom-styles.browser.test.ts > batch02 application document styles > W467 resolves stylesheet and inline rem lengths from each application root without changing the host 118ms
+ ✓ |browser-firefox| tests/browser/upstream-batch02-dom-styles.browser.test.ts > batch02 application document styles > Q2137 appends and queries dynamic styles inside a nested application head 11ms
+ ✓ |browser-webkit| tests/browser/upstream-batch02-script-message.browser.test.ts > batch02 executable script and cross-origin messaging contracts > W822 exposes executing HTML classic scripts through querySelectorAll, scripts and currentScript with identical nodes 12ms
+ ✓ |browser-webkit| tests/browser/upstream-batch02-script-message.browser.test.ts > batch02 executable script and cross-origin messaging contracts > W790 receives cross-origin iframe replies with exact origin and source while rejecting wrong targets and sibling delivery 81ms
+ ✓ |browser-chromium| tests/browser/upstream-batch02-dom-font-messages.browser.test.ts > batch02 nested application browser contracts > W845 resolves font variables introduced by later CSSOM rules and inline declarations 59ms
+ ✓ |browser-chromium| tests/browser/upstream-batch02-dom-font-messages.browser.test.ts > batch02 nested application browser contracts > W421 preserves fill-available height through an application document root and flex parent 6ms
+ ✓ |browser-chromium| tests/browser/upstream-batch02-dom-font-messages.browser.test.ts > batch02 nested application browser contracts > W790 delivers native nested iframe replies only to its owning application and stops bridging on destroy 116ms
+ ✓ |browser-webkit| tests/browser/upstream-batch02-script-message.browser.test.ts > batch02 executable script and cross-origin messaging contracts > W790 preserves the native reply event and transferred port and cancels queued delivery on owner destruction 85ms
+ ✓ |browser-firefox| tests/browser/upstream-batch02-entry.browser.test.ts > batch02 native HTML and webpack entries > Q2378 decodes HTML entities in injected query scripts exactly once 28ms
+ ✓ |browser-firefox| tests/browser/upstream-batch02-entry.browser.test.ts > batch02 native HTML and webpack entries > Q2694 preserves authored inline script bytes and native external error stack URLs 35ms
+ ✓ |browser-firefox| tests/browser/upstream-batch02-entry.browser.test.ts > batch02 native HTML and webpack entries > W965 resolves HTML and body inline background URLs from a different application origin 26ms
+ ✓ |browser-firefox| tests/browser/upstream-batch02-entry.browser.test.ts > batch02 native HTML and webpack entries > W779 normalizes imperative image and CSS URLs before their first application request 14ms
+ ✓ |browser-firefox| tests/browser/upstream-batch02-entry.browser.test.ts > batch02 native HTML and webpack entries > Q2727 executes real webpack lazy chunks in separate Realms after asynchronous DOM configuration hooks 26ms
+ ✓ |browser-firefox| tests/browser/upstream-batch02-entry.browser.test.ts > batch02 native HTML and webpack entries > Q2727 cancels a pending beforeExecute hook without executing entry code after its late resolution 8ms
+ ✓ |browser-webkit| tests/browser/preload-strategy.browser.test.ts > real-browser automatic preload strategies > runs immediate, idle, and viewport policies while honoring an application opt-out 68ms
+ ✓ |browser-chromium| tests/browser/devtools.browser.test.ts > real-browser Runtime DevTools > publishes bounded, serializable Runtime snapshots through the global hook 2ms
+ ✓ |browser-webkit| tests/browser/preload-strategy.browser.test.ts > real-browser automatic preload strategies > deduplicates explicit entry targets and cancels a pending viewport policy on destroy 105ms
+ ✓ |browser-chromium| tests/browser/devtools.browser.test.ts > real-browser Runtime DevTools > renders and toggles an isolated Shadow DOM panel from live lifecycle events 244ms
+ ✓ |browser-chromium| tests/browser/devtools.browser.test.ts > real-browser Runtime DevTools > inspects lifecycle events from a real Runtime and iframe Realm 9ms
+ ✓ |browser-chromium| tests/browser/devtools.browser.test.ts > exports browser performance durations and clears only owned marks 0ms
+ ✓ |browser-firefox| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > loads cross-origin module and classic Workers through Realm-owned wrappers 16ms
+ ✓ |browser-firefox| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > isolates localStorage and sessionStorage while preserving the Storage contract 5ms
+ ✓ |browser-firefox| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > filters and de-prefixes Web Storage events for the current application 64ms
+ ✓ |browser-firefox| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > maps logical IndexedDB names to independent physical databases 23ms
+ ✓ |browser-firefox| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > isolates BroadcastChannel traffic and closes owned channels on teardown 68ms
+ ✓ |browser-firefox| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > isolates Web Lock names and releases a held lock when its Realm is destroyed 7ms
+ ✓ |browser-firefox| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > uses the application prefix as the SharedWorker identity when supported 13ms
+ ✓ |browser-chromium| tests/browser/upstream-batch02-overlay-intent.browser.test.ts > Q2408 related fixed body nodes retain their authored size and offsets across synchronous insertion APIs 6ms
+ ✓ |browser-webkit| tests/browser/realm-dom.browser.test.ts > real-browser DOM surface contracts > renders in an open ShadowRoot and keeps application CSS out of the host document 2ms
+ ✓ |browser-webkit| tests/browser/realm-dom.browser.test.ts > real-browser DOM surface contracts > maps document-level CSS custom properties into the application surface 1ms
+ ✓ |browser-webkit| tests/browser/realm-dom.browser.test.ts > real-browser DOM surface contracts > removes the application-owned Shadow surface during destroy 1ms
+ ✓ |browser-webkit| tests/browser/realm-dom.browser.test.ts > real-browser DOM surface contracts > prepares a hidden overlay root and elevates it when entering 1ms
+ ✓ |browser-webkit| tests/browser/realm-dom.browser.test.ts > real-browser DOM surface contracts > prepares a fixed viewport body child before dialog semantics appear 1ms
+ ✓ |browser-webkit| tests/browser/realm-dom.browser.test.ts > real-browser DOM surface contracts > marks a detached modal root before connection so its enter animation is not cancelled 94ms
+ ✓ |browser-chromium| tests/browser/upstream-batch02-overlay-intent.browser.test.ts > viewport overlay intent preserves CSS fullscreen entry animation before delayed dialog semantics 125ms
+ ✓ |browser-chromium| tests/browser/upstream-batch02-overlay-intent.browser.test.ts > hidden viewport roots retain their viewport intent while local fixed dialogs keep their own geometry 42ms
+ ✓ |browser-webkit| tests/browser/realm-dom.browser.test.ts > real-browser DOM surface contracts > scopes the Web Animations timeline to the application surface and cancels it on destroy 7ms
+ ✓ |browser-webkit| tests/browser/realm-dom.browser.test.ts > real-browser DOM surface contracts > reads computed styles through the Window that owns each cross-Realm element 3ms
+ ✓ |browser-webkit| tests/browser/realm-dom.browser.test.ts > real-browser DOM surface contracts > cancels host-backed animation and idle callbacks when the visual bridge is destroyed 16ms
+ ✓ |browser-webkit| tests/browser/realm-dom.browser.test.ts > real-browser DOM surface contracts > scopes focus to the application ShadowRoot and restores its last focused element 4ms
+ ✓ |browser-webkit| tests/browser/realm-dom.browser.test.ts > real-browser DOM surface contracts > prevents an application Selection from observing or modifying host ranges 5ms
+ ✓ |browser-webkit| tests/browser/realm-dom.browser.test.ts > real-browser iframe Realm and Document Bridge contracts > adopts a declarative Shadow DOM surface without replacing server nodes 1ms
+ ✓ |browser-webkit| tests/browser/realm-dom.browser.test.ts > real-browser iframe Realm and Document Bridge contracts > installs an Import Map and declared shared preloads without inventing an entry preload 9ms
+ ✓ |browser-webkit| tests/browser/realm-dom.browser.test.ts > real-browser iframe Realm and Document Bridge contracts > keeps Realm globals isolated while routing visual DOM into the ShadowRoot 8ms
+ ✓ |browser-webkit| tests/browser/realm-dom.browser.test.ts > real-browser iframe Realm and Document Bridge contracts > routes additional visual Document APIs and diagnoses APIs that still target the hidden iframe 5ms
+ ✓ |browser-webkit| tests/browser/realm-dom.browser.test.ts > real-browser iframe Realm and Document Bridge contracts > installs named Document Bridge plugins through Runtime and cleans them with the Realm 14ms
+ ✓ |browser-webkit| tests/browser/realm-dom.browser.test.ts > real-browser iframe Realm and Document Bridge contracts > rejects duplicate plugin names and rolls back earlier plugins after an install failure 6ms
+ ✓ |browser-firefox| tests/browser/realm-dom.browser.test.ts > real-browser DOM surface contracts > renders in an open ShadowRoot and keeps application CSS out of the host document 8ms
+ ✓ |browser-firefox| tests/browser/realm-dom.browser.test.ts > real-browser DOM surface contracts > maps document-level CSS custom properties into the application surface 3ms
+ ✓ |browser-firefox| tests/browser/realm-dom.browser.test.ts > real-browser DOM surface contracts > removes the application-owned Shadow surface during destroy 1ms
+ ✓ |browser-firefox| tests/browser/realm-dom.browser.test.ts > real-browser DOM surface contracts > prepares a hidden overlay root and elevates it when entering 5ms
+ ✓ |browser-firefox| tests/browser/realm-dom.browser.test.ts > real-browser DOM surface contracts > prepares a fixed viewport body child before dialog semantics appear 10ms
+ ✓ |browser-chromium| tests/browser/preload-strategy.browser.test.ts > real-browser automatic preload strategies > runs immediate, idle, and viewport policies while honoring an application opt-out 63ms
+ ✓ |browser-firefox| tests/browser/realm-dom.browser.test.ts > real-browser DOM surface contracts > marks a detached modal root before connection so its enter animation is not cancelled 82ms
+ ✓ |browser-firefox| tests/browser/realm-dom.browser.test.ts > real-browser DOM surface contracts > scopes the Web Animations timeline to the application surface and cancels it on destroy 6ms
+ ✓ |browser-firefox| tests/browser/realm-dom.browser.test.ts > real-browser DOM surface contracts > reads computed styles through the Window that owns each cross-Realm element 4ms
+ ✓ |browser-firefox| tests/browser/realm-dom.browser.test.ts > real-browser DOM surface contracts > cancels host-backed animation and idle callbacks when the visual bridge is destroyed 20ms
+ ✓ |browser-firefox| tests/browser/realm-dom.browser.test.ts > real-browser DOM surface contracts > scopes focus to the application ShadowRoot and restores its last focused element 10ms
+ ✓ |browser-firefox| tests/browser/realm-dom.browser.test.ts > real-browser DOM surface contracts > prevents an application Selection from observing or modifying host ranges 7ms
+ ✓ |browser-firefox| tests/browser/realm-dom.browser.test.ts > real-browser iframe Realm and Document Bridge contracts > adopts a declarative Shadow DOM surface without replacing server nodes 1ms
+ ✓ |browser-firefox| tests/browser/realm-dom.browser.test.ts > real-browser iframe Realm and Document Bridge contracts > installs an Import Map and declared shared preloads without inventing an entry preload 12ms
+ ✓ |browser-firefox| tests/browser/realm-dom.browser.test.ts > real-browser iframe Realm and Document Bridge contracts > keeps Realm globals isolated while routing visual DOM into the ShadowRoot 7ms
+ ✓ |browser-firefox| tests/browser/realm-dom.browser.test.ts > real-browser iframe Realm and Document Bridge contracts > routes additional visual Document APIs and diagnoses APIs that still target the hidden iframe 6ms
+ ✓ |browser-firefox| tests/browser/realm-dom.browser.test.ts > real-browser iframe Realm and Document Bridge contracts > installs named Document Bridge plugins through Runtime and cleans them with the Realm 9ms
+ ✓ |browser-firefox| tests/browser/realm-dom.browser.test.ts > real-browser iframe Realm and Document Bridge contracts > rejects duplicate plugin names and rolls back earlier plugins after an install failure 7ms
+ ✓ |browser-chromium| tests/browser/preload-strategy.browser.test.ts > real-browser automatic preload strategies > deduplicates explicit entry targets and cancels a pending viewport policy on destroy 102ms
+ ✓ |browser-webkit| tests/browser/routing.browser.test.ts > real-browser routing mode contracts > uses only hashchange and matches the normalized hash path in hash mode 155ms
+ ✓ |browser-webkit| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > loads cross-origin module and classic Workers through Realm-owned wrappers 19ms
+ ✓ |browser-webkit| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > isolates localStorage and sessionStorage while preserving the Storage contract 3ms
+ ✓ |browser-firefox| tests/browser/upstream-dom-regressions.browser.test.ts > upstream issue DOM regressions > W835 delivers custom window events locally and respects listener removal 16ms
+ ✓ |browser-firefox| tests/browser/upstream-dom-regressions.browser.test.ts > upstream issue DOM regressions > W102 Q1449 Q748 preserves global function receivers and constructor prototypes 8ms
+ ✓ |browser-firefox| tests/browser/upstream-dom-regressions.browser.test.ts > upstream issue DOM regressions > W78 permits reinserting the same style node without redefining properties 10ms
+ ✓ |browser-firefox| tests/browser/upstream-dom-regressions.browser.test.ts > upstream issue DOM regressions > W107 preserves empty and fragment links while resolving relative assets 1ms
+ ✓ |browser-firefox| tests/browser/upstream-dom-regressions.browser.test.ts > upstream issue DOM regressions > Q1271 keeps asynchronously appended head styles before body styles in the cascade 8ms
+ ✓ |browser-firefox| tests/browser/upstream-dom-regressions.browser.test.ts > upstream issue DOM regressions > Q3019 Q420 scopes insertBefore styles across Realm churn without patching host prototypes 28ms
+ ✓ |browser-firefox| tests/browser/upstream-dom-regressions.browser.test.ts > upstream issue DOM regressions > W12 updates root CSS tokens after a Vite-style dynamic stylesheet edit 8ms
+ ✓ |browser-firefox| tests/browser/upstream-dom-regressions.browser.test.ts > upstream issue DOM regressions > W882 returns the application root for the root selector 7ms
+ ✓ |browser-firefox| tests/browser/upstream-dom-regressions.browser.test.ts > upstream issue DOM regressions > W485 retains a dynamic stylesheet id and node identity 9ms
+ ✓ |browser-firefox| tests/browser/upstream-dom-regressions.browser.test.ts > upstream issue DOM regressions > W988 dispatches custom document events to the same document listeners 6ms
+ ✓ |browser-chromium| tests/browser/routing.browser.test.ts > real-browser routing mode contracts > uses only hashchange and matches the normalized hash path in hash mode 156ms
+ ✓ |browser-webkit| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > filters and de-prefixes Web Storage events for the current application 82ms
+ ✓ |browser-webkit| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > maps logical IndexedDB names to independent physical databases 6ms
+ ✓ |browser-webkit| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > isolates BroadcastChannel traffic and closes owned channels on teardown 56ms
+ ✓ |browser-webkit| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > isolates Web Lock names and releases a held lock when its Realm is destroyed 6ms
+ ✓ |browser-webkit| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > uses the application prefix as the SharedWorker identity when supported 11ms
+ ✓ |browser-chromium| tests/browser/upstream-batch02-script-message.browser.test.ts > batch02 executable script and cross-origin messaging contracts > W822 exposes executing HTML classic scripts through querySelectorAll, scripts and currentScript with identical nodes 12ms
+ ✓ |browser-webkit| tests/browser/upstream-batch02-dom-styles.browser.test.ts > batch02 application document styles > W445 maps compound root selectors and complete theme declarations to each application root 21ms
+ ✓ |browser-chromium| tests/browser/upstream-batch02-script-message.browser.test.ts > batch02 executable script and cross-origin messaging contracts > W790 receives cross-origin iframe replies with exact origin and source while rejecting wrong targets and sibling delivery 89ms
+ ✓ |browser-chromium| tests/browser/upstream-batch02-script-message.browser.test.ts > batch02 executable script and cross-origin messaging contracts > W790 preserves the native reply event and transferred port and cancels queued delivery on owner destruction 64ms
+ ✓ |browser-webkit| tests/browser/upstream-batch02-dom-styles.browser.test.ts > batch02 application document styles > W467 resolves stylesheet and inline rem lengths from each application root without changing the host 118ms
+ ✓ |browser-webkit| tests/browser/upstream-batch02-dom-styles.browser.test.ts > batch02 application document styles > Q2137 appends and queries dynamic styles inside a nested application head 11ms
+ ✓ |browser-firefox| tests/browser/upstream-batch02-script-message.browser.test.ts > batch02 executable script and cross-origin messaging contracts > W822 exposes executing HTML classic scripts through querySelectorAll, scripts and currentScript with identical nodes 14ms
+ ✓ |browser-firefox| tests/browser/upstream-batch02-script-message.browser.test.ts > batch02 executable script and cross-origin messaging contracts > W790 receives cross-origin iframe replies with exact origin and source while rejecting wrong targets and sibling delivery 87ms
+ ✓ |browser-firefox| tests/browser/upstream-batch02-script-message.browser.test.ts > batch02 executable script and cross-origin messaging contracts > W790 preserves the native reply event and transferred port and cancels queued delivery on owner destruction 88ms
+ ✓ |browser-chromium| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > loads cross-origin module and classic Workers through Realm-owned wrappers 18ms
+ ✓ |browser-chromium| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > isolates localStorage and sessionStorage while preserving the Storage contract 3ms
+ ✓ |browser-chromium| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > filters and de-prefixes Web Storage events for the current application 57ms
+ ✓ |browser-chromium| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > maps logical IndexedDB names to independent physical databases 10ms
+ ✓ |browser-chromium| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > isolates BroadcastChannel traffic and closes owned channels on teardown 56ms
+ ✓ |browser-chromium| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > isolates Web Lock names and releases a held lock when its Realm is destroyed 8ms
+ ✓ |browser-chromium| tests/browser/resource-namespace.browser.test.ts > real-browser same-origin resource namespacing > uses the application prefix as the SharedWorker identity when supported 13ms
+ ✓ |browser-webkit| tests/browser/upstream-credentials.browser.test.ts > upstream cross-origin request credentials > Q341 propagates same-origin from html entry through native ESM graphs and dynamic resources 26ms
+ ✓ |browser-webkit| tests/browser/upstream-credentials.browser.test.ts > upstream cross-origin request credentials > Q341 propagates include from html entry through native ESM graphs and dynamic resources 34ms
+ ✓ |browser-webkit| tests/browser/upstream-credentials.browser.test.ts > upstream cross-origin request credentials > Q341 propagates same-origin from module entry through native ESM graphs and dynamic resources 21ms
+ ✓ |browser-webkit| tests/browser/upstream-credentials.browser.test.ts > upstream cross-origin request credentials > Q341 propagates include from module entry through native ESM graphs and dynamic resources 19ms
+ ✓ |browser-webkit| tests/browser/upstream-credentials.browser.test.ts > upstream cross-origin request credentials > Q341 preserves native resource defaults when entry credentials are omitted 28ms
+ ✓ |browser-chromium| tests/browser/upstream-batch02-dom-styles.browser.test.ts > batch02 application document styles > W445 maps compound root selectors and complete theme declarations to each application root 10ms
+ ✓ |browser-chromium| tests/browser/upstream-batch02-dom-styles.browser.test.ts > batch02 application document styles > W467 resolves stylesheet and inline rem lengths from each application root without changing the host 111ms
+ ✓ |browser-chromium| tests/browser/upstream-batch02-dom-styles.browser.test.ts > batch02 application document styles > Q2137 appends and queries dynamic styles inside a nested application head 8ms
+ ✓ |browser-webkit| tests/browser/html-entry.browser.test.ts > real-browser HTML Entry script semantics > runs classic, async, defer, inline and multiple module scripts inside one Realm 18ms
+ ✓ |browser-webkit| tests/browser/html-entry.browser.test.ts > real-browser HTML Entry script semantics > inserts document.write output at its entry position and waits for written dependencies 11ms
+ ✓ |browser-webkit| tests/browser/html-entry.browser.test.ts > real-browser HTML Entry script semantics > rejects entry loading when a document.write dependency fails 10ms
+ ✓ |browser-webkit| tests/browser/html-entry.browser.test.ts > real-browser HTML Entry script semantics > cancels an entry waiting for a written script when its Realm is destroyed 52ms
+ ✓ |browser-firefox| tests/browser/devtools.browser.test.ts > real-browser Runtime DevTools > publishes bounded, serializable Runtime snapshots through the global hook 2ms
+ ✓ |browser-firefox| tests/browser/devtools.browser.test.ts > real-browser Runtime DevTools > renders and toggles an isolated Shadow DOM panel from live lifecycle events 118ms
+ ✓ |browser-firefox| tests/browser/devtools.browser.test.ts > real-browser Runtime DevTools > inspects lifecycle events from a real Runtime and iframe Realm 21ms
+ ✓ |browser-firefox| tests/browser/devtools.browser.test.ts > exports browser performance durations and clears only owned marks 0ms
+ ✓ |browser-chromium| tests/browser/upstream-batch02-entry.browser.test.ts > batch02 native HTML and webpack entries > Q2378 decodes HTML entities in injected query scripts exactly once 10ms
+ ✓ |browser-chromium| tests/browser/upstream-batch02-entry.browser.test.ts > batch02 native HTML and webpack entries > Q2694 preserves authored inline script bytes and native external error stack URLs 15ms
+ ✓ |browser-chromium| tests/browser/upstream-batch02-entry.browser.test.ts > batch02 native HTML and webpack entries > W965 resolves HTML and body inline background URLs from a different application origin 13ms
+ ✓ |browser-chromium| tests/browser/upstream-batch02-entry.browser.test.ts > batch02 native HTML and webpack entries > W779 normalizes imperative image and CSS URLs before their first application request 12ms
+ ✓ |browser-chromium| tests/browser/upstream-batch02-entry.browser.test.ts > batch02 native HTML and webpack entries > Q2727 executes real webpack lazy chunks in separate Realms after asynchronous DOM configuration hooks 20ms
+ ✓ |browser-chromium| tests/browser/upstream-batch02-entry.browser.test.ts > batch02 native HTML and webpack entries > Q2727 cancels a pending beforeExecute hook without executing entry code after its late resolution 7ms
+ ✓ |browser-webkit| tests/browser/upstream-batch02-entry.browser.test.ts > batch02 native HTML and webpack entries > Q2378 decodes HTML entities in injected query scripts exactly once 14ms
+ ✓ |browser-webkit| tests/browser/upstream-batch02-entry.browser.test.ts > batch02 native HTML and webpack entries > Q2694 preserves authored inline script bytes and native external error stack URLs 23ms
+ ✓ |browser-webkit| tests/browser/upstream-batch02-entry.browser.test.ts > batch02 native HTML and webpack entries > W965 resolves HTML and body inline background URLs from a different application origin 16ms
+ ✓ |browser-webkit| tests/browser/upstream-batch02-entry.browser.test.ts > batch02 native HTML and webpack entries > W779 normalizes imperative image and CSS URLs before their first application request 16ms
+ ✓ |browser-webkit| tests/browser/upstream-batch02-entry.browser.test.ts > batch02 native HTML and webpack entries > Q2727 executes real webpack lazy chunks in separate Realms after asynchronous DOM configuration hooks 26ms
+ ✓ |browser-webkit| tests/browser/upstream-batch02-entry.browser.test.ts > batch02 native HTML and webpack entries > Q2727 cancels a pending beforeExecute hook without executing entry code after its late resolution 8ms
+ ✓ |browser-chromium| tests/browser/channel.browser.test.ts > real-browser MessageChannel runtime contracts > clones Service RPC arguments/results and serializes remote errors 2ms
+ ✓ |browser-chromium| tests/browser/channel.browser.test.ts > real-browser MessageChannel runtime contracts > delivers cloned events in both directions and releases subscriptions 102ms
+ ✓ |browser-firefox| tests/browser/preload-strategy.browser.test.ts > real-browser automatic preload strategies > runs immediate, idle, and viewport policies while honoring an application opt-out 63ms
+ ✓ |browser-webkit| tests/browser/upstream-batch02-native.browser.test.ts > batch02 native Window contracts > Q1212 preserves window name and writable native accessor receivers without leaking to siblings 21ms
+ ✓ |browser-webkit| tests/browser/upstream-batch02-native.browser.test.ts > batch02 native Window contracts > Q1174 preserves receiver identity when the same function is shared across native window and objects 13ms
+ ✓ |browser-webkit| tests/browser/upstream-batch02-native.browser.test.ts > batch02 native Window contracts > Q2951 invokes native window listener methods with their original receiver and removal options 18ms
+ ✓ |browser-firefox| tests/browser/preload-strategy.browser.test.ts > real-browser automatic preload strategies > deduplicates explicit entry targets and cancels a pending viewport policy on destroy 104ms
+ ✓ |browser-chromium| tests/browser/upstream-credentials.browser.test.ts > upstream cross-origin request credentials > Q341 propagates same-origin from html entry through native ESM graphs and dynamic resources 25ms
+ ✓ |browser-chromium| tests/browser/upstream-credentials.browser.test.ts > upstream cross-origin request credentials > Q341 propagates include from html entry through native ESM graphs and dynamic resources 19ms
+ ✓ |browser-chromium| tests/browser/upstream-credentials.browser.test.ts > upstream cross-origin request credentials > Q341 propagates same-origin from module entry through native ESM graphs and dynamic resources 12ms
+ ✓ |browser-chromium| tests/browser/upstream-credentials.browser.test.ts > upstream cross-origin request credentials > Q341 propagates include from module entry through native ESM graphs and dynamic resources 11ms
+ ✓ |browser-chromium| tests/browser/upstream-credentials.browser.test.ts > upstream cross-origin request credentials > Q341 preserves native resource defaults when entry credentials are omitted 12ms
+ ✓ |browser-webkit| tests/browser/channel.browser.test.ts > real-browser MessageChannel runtime contracts > clones Service RPC arguments/results and serializes remote errors 2ms
+ ✓ |browser-webkit| tests/browser/channel.browser.test.ts > real-browser MessageChannel runtime contracts > delivers cloned events in both directions and releases subscriptions 103ms
+ ✓ |browser-chromium| tests/browser/html-entry.browser.test.ts > real-browser HTML Entry script semantics > runs classic, async, defer, inline and multiple module scripts inside one Realm 12ms
+ ✓ |browser-chromium| tests/browser/html-entry.browser.test.ts > real-browser HTML Entry script semantics > inserts document.write output at its entry position and waits for written dependencies 10ms
+ ✓ |browser-chromium| tests/browser/html-entry.browser.test.ts > real-browser HTML Entry script semantics > rejects entry loading when a document.write dependency fails 8ms
+ ✓ |browser-chromium| tests/browser/html-entry.browser.test.ts > real-browser HTML Entry script semantics > cancels an entry waiting for a written script when its Realm is destroyed 52ms
+ ✓ |browser-firefox| tests/browser/upstream-batch02-overlay-intent.browser.test.ts > Q2408 related fixed body nodes retain their authored size and offsets across synchronous insertion APIs 4ms
+ ✓ |browser-webkit| tests/browser/capability-broker.browser.test.ts > real-browser Capability Broker contracts > reports the capability surface of the actual browser engine 6ms
+ ✓ |browser-webkit| tests/browser/capability-broker.browser.test.ts > real-browser Capability Broker contracts > accepts a privileged request only during a real host user gesture 40ms
+ ✓ |browser-webkit| tests/browser/capability-broker.browser.test.ts > real-browser Capability Broker contracts > uses structured clones and releases media resources owned by the application 37ms
+ ✓ |browser-firefox| tests/browser/upstream-batch02-overlay-intent.browser.test.ts > viewport overlay intent preserves CSS fullscreen entry animation before delayed dialog semantics 122ms
+ ✓ |browser-firefox| tests/browser/upstream-batch02-overlay-intent.browser.test.ts > hidden viewport roots retain their viewport intent while local fixed dialogs keep their own geometry 42ms
+ ✓ |browser-chromium| tests/browser/upstream-dom-regressions.browser.test.ts > upstream issue DOM regressions > W835 delivers custom window events locally and respects listener removal 11ms
+ ✓ |browser-chromium| tests/browser/upstream-dom-regressions.browser.test.ts > upstream issue DOM regressions > W102 Q1449 Q748 preserves global function receivers and constructor prototypes 5ms
+ ✓ |browser-chromium| tests/browser/upstream-dom-regressions.browser.test.ts > upstream issue DOM regressions > W78 permits reinserting the same style node without redefining properties 7ms
+ ✓ |browser-chromium| tests/browser/upstream-dom-regressions.browser.test.ts > upstream issue DOM regressions > W107 preserves empty and fragment links while resolving relative assets 0ms
+ ✓ |browser-chromium| tests/browser/upstream-dom-regressions.browser.test.ts > upstream issue DOM regressions > Q1271 keeps asynchronously appended head styles before body styles in the cascade 7ms
+ ✓ |browser-chromium| tests/browser/upstream-dom-regressions.browser.test.ts > upstream issue DOM regressions > Q3019 Q420 scopes insertBefore styles across Realm churn without patching host prototypes 20ms
+ ✓ |browser-chromium| tests/browser/upstream-dom-regressions.browser.test.ts > upstream issue DOM regressions > W12 updates root CSS tokens after a Vite-style dynamic stylesheet edit 7ms
+ ✓ |browser-chromium| tests/browser/upstream-dom-regressions.browser.test.ts > upstream issue DOM regressions > W882 returns the application root for the root selector 7ms
+ ✓ |browser-chromium| tests/browser/upstream-dom-regressions.browser.test.ts > upstream issue DOM regressions > W485 retains a dynamic stylesheet id and node identity 9ms
+ ✓ |browser-chromium| tests/browser/upstream-dom-regressions.browser.test.ts > upstream issue DOM regressions > W988 dispatches custom document events to the same document listeners 7ms
+ ✓ |browser-chromium| tests/browser/server-registry.browser.test.ts > server registry browser bootstrap > installs a native Import Map before modules and parses server registrations 54ms
+ ✓ |browser-webkit| tests/browser/upstream-dom-regressions.browser.test.ts > upstream issue DOM regressions > W835 delivers custom window events locally and respects listener removal 24ms
+ ✓ |browser-webkit| tests/browser/upstream-dom-regressions.browser.test.ts > upstream issue DOM regressions > W102 Q1449 Q748 preserves global function receivers and constructor prototypes 9ms
+ ✓ |browser-webkit| tests/browser/upstream-dom-regressions.browser.test.ts > upstream issue DOM regressions > W78 permits reinserting the same style node without redefining properties 9ms
+ ✓ |browser-webkit| tests/browser/upstream-dom-regressions.browser.test.ts > upstream issue DOM regressions > W107 preserves empty and fragment links while resolving relative assets 0ms
+ ✓ |browser-webkit| tests/browser/upstream-dom-regressions.browser.test.ts > upstream issue DOM regressions > Q1271 keeps asynchronously appended head styles before body styles in the cascade 9ms
+ ✓ |browser-webkit| tests/browser/upstream-dom-regressions.browser.test.ts > upstream issue DOM regressions > Q3019 Q420 scopes insertBefore styles across Realm churn without patching host prototypes 23ms
+ ✓ |browser-webkit| tests/browser/upstream-dom-regressions.browser.test.ts > upstream issue DOM regressions > W12 updates root CSS tokens after a Vite-style dynamic stylesheet edit 9ms
+ ✓ |browser-webkit| tests/browser/upstream-dom-regressions.browser.test.ts > upstream issue DOM regressions > W882 returns the application root for the root selector 9ms
+ ✓ |browser-webkit| tests/browser/upstream-dom-regressions.browser.test.ts > upstream issue DOM regressions > W485 retains a dynamic stylesheet id and node identity 16ms
+ ✓ |browser-webkit| tests/browser/upstream-dom-regressions.browser.test.ts > upstream issue DOM regressions > W988 dispatches custom document events to the same document listeners 8ms
+ ✓ |browser-chromium| tests/browser/capability-broker.browser.test.ts > real-browser Capability Broker contracts > reports the capability surface of the actual browser engine 2ms
+ ✓ |browser-chromium| tests/browser/capability-broker.browser.test.ts > real-browser Capability Broker contracts > accepts a privileged request only during a real host user gesture 24ms
+ ✓ |browser-chromium| tests/browser/capability-broker.browser.test.ts > real-browser Capability Broker contracts > uses structured clones and releases media resources owned by the application 25ms
+ ✓ |browser-firefox| tests/browser/html-entry.browser.test.ts > real-browser HTML Entry script semantics > runs classic, async, defer, inline and multiple module scripts inside one Realm 39ms
+ ✓ |browser-firefox| tests/browser/html-entry.browser.test.ts > real-browser HTML Entry script semantics > inserts document.write output at its entry position and waits for written dependencies 24ms
+ ✓ |browser-firefox| tests/browser/html-entry.browser.test.ts > real-browser HTML Entry script semantics > rejects entry loading when a document.write dependency fails 16ms
+ ✓ |browser-webkit| tests/browser/upstream-script-regressions.browser.test.ts > upstream dynamic script removal regressions > removes a script through its head surface after executing only in its iframe 10ms
+ ✓ |browser-webkit| tests/browser/upstream-script-regressions.browser.test.ts > upstream dynamic script removal regressions > removes a script through its body surface after executing only in its iframe 6ms
+ ✓ |browser-webkit| tests/browser/upstream-script-regressions.browser.test.ts > upstream dynamic script removal regressions > keeps removal ownership current when a routed script moves between head and body 5ms
+ ✓ |browser-webkit| tests/browser/upstream-script-regressions.browser.test.ts > upstream dynamic script removal regressions > rejects removal of unrouted and foreign-Realm scripts 9ms
+ ✓ |browser-webkit| tests/browser/upstream-script-regressions.browser.test.ts > upstream dynamic script removal regressions > allows an inline script to remove itself before appendChild returns 4ms
+ ✓ |browser-firefox| tests/browser/html-entry.browser.test.ts > real-browser HTML Entry script semantics > cancels an entry waiting for a written script when its Realm is destroyed 59ms
+ ✓ |browser-chromium| tests/browser/upstream-batch02-native.browser.test.ts > batch02 native Window contracts > Q1212 preserves window name and writable native accessor receivers without leaking to siblings 18ms
+ ✓ |browser-chromium| tests/browser/upstream-batch02-native.browser.test.ts > batch02 native Window contracts > Q1174 preserves receiver identity when the same function is shared across native window and objects 10ms
+ ✓ |browser-chromium| tests/browser/upstream-batch02-native.browser.test.ts > batch02 native Window contracts > Q2951 invokes native window listener methods with their original receiver and removal options 19ms
+ ✓ |browser-chromium| tests/browser/upstream-script-regressions.browser.test.ts > upstream dynamic script removal regressions > removes a script through its head surface after executing only in its iframe 5ms
+ ✓ |browser-chromium| tests/browser/upstream-script-regressions.browser.test.ts > upstream dynamic script removal regressions > removes a script through its body surface after executing only in its iframe 4ms
+ ✓ |browser-chromium| tests/browser/upstream-script-regressions.browser.test.ts > upstream dynamic script removal regressions > keeps removal ownership current when a routed script moves between head and body 5ms
+ ✓ |browser-chromium| tests/browser/upstream-script-regressions.browser.test.ts > upstream dynamic script removal regressions > rejects removal of unrouted and foreign-Realm scripts 7ms
+ ✓ |browser-chromium| tests/browser/upstream-script-regressions.browser.test.ts > upstream dynamic script removal regressions > allows an inline script to remove itself before appendChild returns 4ms
+ ✓ |browser-webkit| tests/browser/upstream-batch02-dom-queries.browser.test.ts > batch02 application Document contracts > W262 respects an independent DOMParser Document when borrowing application query methods 11ms
+ ✓ |browser-webkit| tests/browser/upstream-batch02-dom-queries.browser.test.ts > batch02 application Document contracts > W1014 lets strict application scripts wrap and restore document.querySelector without affecting siblings 12ms
+ ✓ |browser-webkit| tests/browser/upstream-batch02-dom-queries.browser.test.ts > batch02 application Document contracts > W596 treats numeric and punctuation-rich ids as literal identifiers 12ms
+ ✓ |browser-webkit| tests/browser/upstream-batch02-dom-queries.browser.test.ts > batch02 application Document contracts > W822 exposes application scripts consistently through static and live query collections 12ms
+ ✓ |browser-chromium| tests/browser/upstream-batch02-dom-queries.browser.test.ts > batch02 application Document contracts > W262 respects an independent DOMParser Document when borrowing application query methods 5ms
+ ✓ |browser-chromium| tests/browser/upstream-batch02-dom-queries.browser.test.ts > batch02 application Document contracts > W1014 lets strict application scripts wrap and restore document.querySelector without affecting siblings 9ms
+ ✓ |browser-chromium| tests/browser/upstream-batch02-dom-queries.browser.test.ts > batch02 application Document contracts > W596 treats numeric and punctuation-rich ids as literal identifiers 9ms
+ ✓ |browser-chromium| tests/browser/upstream-batch02-dom-queries.browser.test.ts > batch02 application Document contracts > W822 exposes application scripts consistently through static and live query collections 8ms
+ ✓ |browser-webkit| tests/browser/server-registry.browser.test.ts > server registry browser bootstrap > installs a native Import Map before modules and parses server registrations 55ms
+ ✓ |browser-chromium| tests/browser/deployment-diagnostics.browser.test.ts > real-browser deployment diagnostics > scans actual HTTP responses and verifies the published manifest resource graph 14ms
+ ✓ |browser-chromium| tests/browser/deployment-diagnostics.browser.test.ts > real-browser deployment diagnostics > collects a genuine CSP violation from an isolated browser Realm 3ms
+ ✓ |browser-chromium| tests/browser/storage.browser.test.ts > real-browser persistent application storage > persists structured-clone values after the original connection closes 4ms
+ ✓ |browser-chromium| tests/browser/storage.browser.test.ts > real-browser persistent application storage > isolates namespaces and clears only the current application 2ms
+ ✓ |browser-webkit| tests/browser/deployment-diagnostics.browser.test.ts > real-browser deployment diagnostics > scans actual HTTP responses and verifies the published manifest resource graph 15ms
+ ✓ |browser-webkit| tests/browser/deployment-diagnostics.browser.test.ts > real-browser deployment diagnostics > collects a genuine CSP violation from an isolated browser Realm 3ms
+ ✓ |browser-firefox| tests/browser/routing.browser.test.ts > real-browser routing mode contracts > uses only hashchange and matches the normalized hash path in hash mode 170ms
+ ✓ |browser-chromium| tests/browser/upstream-batch02-root-shadow.browser.test.ts > Q2137 keeps root-level children visible and nested native ShadowRoot styles scoped while scripts stay in the iframe 9ms
+ ✓ |browser-webkit| tests/browser/upstream-batch02-root-shadow.browser.test.ts > Q2137 keeps root-level children visible and nested native ShadowRoot styles scoped while scripts stay in the iframe 18ms
+ ✓ |browser-chromium| tests/browser/upstream-entry-regressions.browser.test.ts > upstream HTML Entry regressions > Q187 preserves interleaved style and link document order 3ms
+ ✓ |browser-chromium| tests/browser/upstream-entry-regressions.browser.test.ts > upstream HTML Entry regressions > Q2171 Q777 loads spaced asset URLs and discovers the lifecycle before unrelated final globals 9ms
+ ✓ |browser-webkit| tests/browser/document-write-assets.browser.test.ts > document.write resource and executable-content boundaries > preserves entry base URLs, data scripts and inert templates while handlers execute in the app Realm 20ms
+ ✓ |browser-chromium| tests/browser/document-write-assets.browser.test.ts > document.write resource and executable-content boundaries > preserves entry base URLs, data scripts and inert templates while handlers execute in the app Realm 11ms
+ ✓ |browser-chromium| tests/browser/resource-manifest.browser.test.ts > real-browser resource manifest contracts > fetches a schema v2 manifest and prefetches its complete SRI resource graph 5ms
+ ✓ |browser-chromium| tests/browser/resource-manifest.browser.test.ts > real-browser resource manifest contracts > verifies Ed25519 signatures and rejects a modified manifest 3ms
+ ✓ |browser-webkit| tests/browser/resource-manifest.browser.test.ts > real-browser resource manifest contracts > fetches a schema v2 manifest and prefetches its complete SRI resource graph 8ms
+ ✓ |browser-webkit| tests/browser/resource-manifest.browser.test.ts > real-browser resource manifest contracts > verifies Ed25519 signatures and rejects a modified manifest 4ms
+ ✓ |browser-firefox| tests/browser/upstream-credentials.browser.test.ts > upstream cross-origin request credentials > Q341 propagates same-origin from html entry through native ESM graphs and dynamic resources 69ms
+ ✓ |browser-chromium| tests/browser/upstream-batch02-fixed-position.browser.test.ts > Q2408 fixed offset coordinates use the native Realm document root and preserve transformed local containers 6ms
+ ✓ |browser-chromium| tests/browser/dom-guard.browser.test.ts > real-browser DOM Guard contracts > diagnoses host Window access and tracked visual nodes escaping the ShadowRoot 4ms
+ ✓ |browser-chromium| tests/browser/dom-guard.browser.test.ts > real-browser DOM Guard contracts > blocks Service Worker registration on the iframe Navigator instance 2ms
+ ✓ |browser-webkit| tests/browser/upstream-entry-regressions.browser.test.ts > upstream HTML Entry regressions > Q187 preserves interleaved style and link document order 7ms
+ ✓ |browser-webkit| tests/browser/upstream-entry-regressions.browser.test.ts > upstream HTML Entry regressions > Q2171 Q777 loads spaced asset URLs and discovers the lifecycle before unrelated final globals 18ms
+ ✓ |browser-firefox| tests/browser/upstream-credentials.browser.test.ts > upstream cross-origin request credentials > Q341 propagates include from html entry through native ESM graphs and dynamic resources 61ms
+ ✓ |browser-firefox| tests/browser/upstream-credentials.browser.test.ts > upstream cross-origin request credentials > Q341 propagates same-origin from module entry through native ESM graphs and dynamic resources 44ms
+ ✓ |browser-chromium| tests/browser/upstream-overlay-viewport.browser.test.ts > upstream body portal viewport geometry > W67 keeps a default body overlay in viewport geometry without changing node identity or event paths 3ms
+ ✓ |browser-chromium| tests/browser/upstream-overlay-viewport.browser.test.ts > upstream body portal viewport geometry > W67 preserves an explicit nested overlay container and application-owned popover state 1ms
+ ✓ |browser-chromium| tests/browser/upstream-overlay-viewport.browser.test.ts > upstream body portal viewport geometry > W67 synchronously hides retained overlays and removes top-layer state on surface destruction 1ms
+ ✓ |browser-webkit| tests/browser/storage.browser.test.ts > real-browser persistent application storage > persists structured-clone values after the original connection closes 6ms
+ ✓ |browser-webkit| tests/browser/storage.browser.test.ts > real-browser persistent application storage > isolates namespaces and clears only the current application 6ms
+ ✓ |browser-firefox| tests/browser/upstream-credentials.browser.test.ts > upstream cross-origin request credentials > Q341 propagates include from module entry through native ESM graphs and dynamic resources 43ms
+ ✓ |browser-firefox| tests/browser/upstream-credentials.browser.test.ts > upstream cross-origin request credentials > Q341 preserves native resource defaults when entry credentials are omitted 41ms
+ ✓ |browser-chromium| tests/browser/asset-rewriter.browser.test.ts > HTML Entry asset rewriting > resolves standard URL attributes, lists, SVG references, srcsets, and inline image-set 1ms
+ ✓ |browser-chromium| tests/browser/surface-activation.browser.test.ts > hides an inactive surface despite its author display and restores its CSSOM and focus 1ms
+ ✓ |browser-webkit| tests/browser/upstream-batch02-fixed-position.browser.test.ts > Q2408 fixed offset coordinates use the native Realm document root and preserve transformed local containers 17ms
+ ✓ |browser-firefox| tests/browser/upstream-batch02-dom-queries.browser.test.ts > batch02 application Document contracts > W262 respects an independent DOMParser Document when borrowing application query methods 15ms
+ ✓ |browser-firefox| tests/browser/upstream-batch02-dom-queries.browser.test.ts > batch02 application Document contracts > W1014 lets strict application scripts wrap and restore document.querySelector without affecting siblings 18ms
+ ✓ |browser-firefox| tests/browser/upstream-batch02-dom-queries.browser.test.ts > batch02 application Document contracts > W596 treats numeric and punctuation-rich ids as literal identifiers 14ms
+ ✓ |browser-firefox| tests/browser/upstream-batch02-dom-queries.browser.test.ts > batch02 application Document contracts > W822 exposes application scripts consistently through static and live query collections 24ms
+ ✓ |browser-webkit| tests/browser/dom-guard.browser.test.ts > real-browser DOM Guard contracts > diagnoses host Window access and tracked visual nodes escaping the ShadowRoot 5ms
+ ✓ |browser-webkit| tests/browser/dom-guard.browser.test.ts > real-browser DOM Guard contracts > blocks Service Worker registration on the iframe Navigator instance 3ms
+ ✓ |browser-webkit| tests/browser/upstream-overlay-viewport.browser.test.ts > upstream body portal viewport geometry > W67 keeps a default body overlay in viewport geometry without changing node identity or event paths 3ms
+ ✓ |browser-webkit| tests/browser/upstream-overlay-viewport.browser.test.ts > upstream body portal viewport geometry > W67 preserves an explicit nested overlay container and application-owned popover state 1ms
+ ✓ |browser-webkit| tests/browser/upstream-overlay-viewport.browser.test.ts > upstream body portal viewport geometry > W67 synchronously hides retained overlays and removes top-layer state on surface destruction 0ms
+ ✓ |browser-webkit| tests/browser/surface-activation.browser.test.ts > hides an inactive surface despite its author display and restores its CSSOM and focus 2ms
+ ✓ |browser-webkit| tests/browser/asset-rewriter.browser.test.ts > HTML Entry asset rewriting > resolves standard URL attributes, lists, SVG references, srcsets, and inline image-set 2ms
+ ✓ |browser-firefox| tests/browser/channel.browser.test.ts > real-browser MessageChannel runtime contracts > clones Service RPC arguments/results and serializes remote errors 3ms
+ ✓ |browser-firefox| tests/browser/channel.browser.test.ts > real-browser MessageChannel runtime contracts > delivers cloned events in both directions and releases subscriptions 103ms
+ ✓ |browser-firefox| tests/browser/upstream-batch02-native.browser.test.ts > batch02 native Window contracts > Q1212 preserves window name and writable native accessor receivers without leaking to siblings 18ms
+ ✓ |browser-firefox| tests/browser/upstream-batch02-native.browser.test.ts > batch02 native Window contracts > Q1174 preserves receiver identity when the same function is shared across native window and objects 8ms
+ ✓ |browser-firefox| tests/browser/upstream-batch02-native.browser.test.ts > batch02 native Window contracts > Q2951 invokes native window listener methods with their original receiver and removal options 16ms
+ ✓ |browser-firefox| tests/browser/capability-broker.browser.test.ts > real-browser Capability Broker contracts > reports the capability surface of the actual browser engine 2ms
+ ✓ |browser-firefox| tests/browser/capability-broker.browser.test.ts > real-browser Capability Broker contracts > accepts a privileged request only during a real host user gesture 33ms
+ ✓ |browser-firefox| tests/browser/capability-broker.browser.test.ts > real-browser Capability Broker contracts > uses structured clones and releases media resources owned by the application 24ms
+ ✓ |browser-firefox| tests/browser/upstream-script-regressions.browser.test.ts > upstream dynamic script removal regressions > removes a script through its head surface after executing only in its iframe 12ms
+ ✓ |browser-firefox| tests/browser/upstream-script-regressions.browser.test.ts > upstream dynamic script removal regressions > removes a script through its body surface after executing only in its iframe 9ms
+ ✓ |browser-firefox| tests/browser/upstream-script-regressions.browser.test.ts > upstream dynamic script removal regressions > keeps removal ownership current when a routed script moves between head and body 10ms
+ ✓ |browser-firefox| tests/browser/upstream-script-regressions.browser.test.ts > upstream dynamic script removal regressions > rejects removal of unrouted and foreign-Realm scripts 14ms
+ ✓ |browser-firefox| tests/browser/upstream-script-regressions.browser.test.ts > upstream dynamic script removal regressions > allows an inline script to remove itself before appendChild returns 8ms
+ ✓ |browser-firefox| tests/browser/server-registry.browser.test.ts > server registry browser bootstrap > installs a native Import Map before modules and parses server registrations 63ms
+ ✓ |browser-firefox| tests/browser/upstream-entry-regressions.browser.test.ts > upstream HTML Entry regressions > Q187 preserves interleaved style and link document order 2ms
+ ✓ |browser-firefox| tests/browser/upstream-entry-regressions.browser.test.ts > upstream HTML Entry regressions > Q2171 Q777 loads spaced asset URLs and discovers the lifecycle before unrelated final globals 12ms
+ ✓ |browser-firefox| tests/browser/document-write-assets.browser.test.ts > document.write resource and executable-content boundaries > preserves entry base URLs, data scripts and inert templates while handlers execute in the app Realm 12ms
+ ✓ |browser-firefox| tests/browser/upstream-batch02-root-shadow.browser.test.ts > Q2137 keeps root-level children visible and nested native ShadowRoot styles scoped while scripts stay in the iframe 12ms
+ ✓ |browser-firefox| tests/browser/deployment-diagnostics.browser.test.ts > real-browser deployment diagnostics > scans actual HTTP responses and verifies the published manifest resource graph 7ms
+ ✓ |browser-firefox| tests/browser/deployment-diagnostics.browser.test.ts > real-browser deployment diagnostics > collects a genuine CSP violation from an isolated browser Realm 5ms
+ ✓ |browser-firefox| tests/browser/storage.browser.test.ts > real-browser persistent application storage > persists structured-clone values after the original connection closes 27ms
+ ✓ |browser-firefox| tests/browser/storage.browser.test.ts > real-browser persistent application storage > isolates namespaces and clears only the current application 23ms
+ ✓ |browser-firefox| tests/browser/dom-guard.browser.test.ts > real-browser DOM Guard contracts > diagnoses host Window access and tracked visual nodes escaping the ShadowRoot 5ms
+ ✓ |browser-firefox| tests/browser/dom-guard.browser.test.ts > real-browser DOM Guard contracts > blocks Service Worker registration on the iframe Navigator instance 4ms
+ ✓ |browser-firefox| tests/browser/upstream-batch02-fixed-position.browser.test.ts > Q2408 fixed offset coordinates use the native Realm document root and preserve transformed local containers 8ms
+ ✓ |browser-firefox| tests/browser/resource-manifest.browser.test.ts > real-browser resource manifest contracts > fetches a schema v2 manifest and prefetches its complete SRI resource graph 5ms
+ ✓ |browser-firefox| tests/browser/resource-manifest.browser.test.ts > real-browser resource manifest contracts > verifies Ed25519 signatures and rejects a modified manifest 3ms
+ ✓ |browser-firefox| tests/browser/upstream-overlay-viewport.browser.test.ts > upstream body portal viewport geometry > W67 keeps a default body overlay in viewport geometry without changing node identity or event paths 2ms
+ ✓ |browser-firefox| tests/browser/upstream-overlay-viewport.browser.test.ts > upstream body portal viewport geometry > W67 preserves an explicit nested overlay container and application-owned popover state 1ms
+ ✓ |browser-firefox| tests/browser/upstream-overlay-viewport.browser.test.ts > upstream body portal viewport geometry > W67 synchronously hides retained overlays and removes top-layer state on surface destruction 1ms
+ ✓ |browser-firefox| tests/browser/surface-activation.browser.test.ts > hides an inactive surface despite its author display and restores its CSSOM and focus 3ms
+ ✓ |browser-firefox| tests/browser/asset-rewriter.browser.test.ts > HTML Entry asset rewriting > resolves standard URL attributes, lists, SVG references, srcsets, and inline image-set 2ms
+
+ Test Files  102 passed (102)
+      Tests  411 passed (411)
+   Start at  16:22:43
+   Duration  10.75s (transform 0ms, setup 0ms, import 2.80s, tests 17.49s, environment 0ms)
+
+JSON report written to /Users/fanfangbo/workspace/micro-framework/tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/final-browser.json

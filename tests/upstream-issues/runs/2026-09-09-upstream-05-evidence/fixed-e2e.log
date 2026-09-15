@@ -1,0 +1,294 @@
+
+Running 63 tests using 1 worker
+
+(node:54577) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/63] [chromium] › tests/e2e/upstream-batch04-canvas-base.spec.ts:5:1 › W992 retains painted canvas pixels and native node identity over keepAlive hide and return
+[2/63] [chromium] › tests/e2e/upstream-batch04-canvas-base.spec.ts:27:1 › W1044 resolves relative HTML resources from the child base in a fresh isolated browser context
+(node:54583) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[3/63] [chromium] › tests/e2e/upstream-batch04-components.spec.ts:10:1 › W1012 renders real bpmn-js SVG transforms and flow geometry in the application Realm
+[4/63] [chromium] › tests/e2e/upstream-batch04-components.spec.ts:26:34 › W1038 reanchors Element UI Select after viewport enlargement with local=false
+[5/63] [chromium] › tests/e2e/upstream-batch04-components.spec.ts:26:34 › W1038 reanchors Element UI Select after viewport enlargement with local=true
+[6/63] [chromium] › tests/e2e/upstream-batch04-components.spec.ts:44:51 › W1038 reanchors react menu after visible viewport enlargement
+[7/63] [chromium] › tests/e2e/upstream-batch04-components.spec.ts:44:51 › W1038 reanchors vue3 menu after visible viewport enlargement
+(node:54592) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[8/63] [chromium] › tests/e2e/upstream-batch04-csp.spec.ts:5:1 › Q3129 mounts external modules without unsafe inline scripts or eval under same origin CSP
+(node:54597) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[9/63] [chromium] › tests/e2e/upstream-batch04-routing.spec.ts:41:1 › Q2990 performs Vue hash router push in mounted under a history host without changing its URL
+[10/63] [chromium] › tests/e2e/upstream-batch04-routing.spec.ts:50:1 › Q2976 W1007 W1045 keeps an explicit child route through repeated reloads and subsequent navigation without recursive encoding
+(node:54610) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[11/63] [chromium] › tests/e2e/upstream-batch04-runtime-lifecycle.spec.ts:6:1 › Q2991 repeatedly destroys real Vue 2 instances and subscriptions without retaining connected Realms
+[12/63] [chromium] › tests/e2e/upstream-batch04-runtime-lifecycle.spec.ts:33:1 › W1039 reopens a real host dialog with an alive Vue router after repeated child navigation
+(node:54616) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[13/63] [chromium] › tests/e2e/upstream-batch04-runtime-loading.spec.ts:6:1 › Q3001 Q3093 manual load failure preserves host and sibling while lifecycle loading settles
+[14/63] [chromium] › tests/e2e/upstream-batch04-runtime-loading.spec.ts:46:1 › W1057 configured load timeout removes a delayed entry Realm and permits recovery at the same URL
+[15/63] [chromium] › tests/e2e/upstream-batch04-runtime-loading.spec.ts:79:40 › W976 W1017 delayed resource A-B-A switching retains one interactive application (keepAlive=false)
+[16/63] [chromium] › tests/e2e/upstream-batch04-runtime-loading.spec.ts:79:40 › W976 W1017 delayed resource A-B-A switching retains one interactive application (keepAlive=true)
+[17/63] [chromium] › tests/e2e/upstream-batch04-runtime-loading.spec.ts:109:39 › Q3093 native lifecycle loading indicator clears after manual load (success=true)
+[18/63] [chromium] › tests/e2e/upstream-batch04-runtime-loading.spec.ts:109:39 › Q3093 native lifecycle loading indicator clears after manual load (success=false)
+(node:54629) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[19/63] [chromium] › tests/e2e/upstream-batch04-runtime-network.spec.ts:6:53 › W1057 HTML script timeout closes the pending transport and recovers at the same URL
+[20/63] [chromium] › tests/e2e/upstream-batch04-runtime-network.spec.ts:6:53 › W1057 HTML style timeout closes the pending transport and recovers at the same URL
+  1) [chromium] › tests/e2e/upstream-batch04-runtime-network.spec.ts:6:53 › W1057 HTML style timeout closes the pending transport and recovers at the same URL 
+
+    Error: expect(received).toContain(expected) // indexOf
+
+    Expected value: "/slow.css"
+    Received array: []
+
+    Call Log:
+    - Timeout 5000ms exceeded while waiting on the predicate
+
+      22 |   await expect(page.locator('#html-timeout-slot iframe, #html-timeout-slot micro-app-host')).toHaveCount(0);
+      23 |   // Must precede server recovery/cleanup; ending it ourselves is not cancellation evidence.
+    > 24 |   await expect.poll(() => slowDeployment.aborted).toContain(resource);
+         |                                                   ^
+      25 |   slowDeployment.slow = false;
+      26 |   await page.evaluate(async url => {
+      27 |     const s = window.__upstreamRuntime__!;
+        at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-network.spec.ts:24:51
+
+    Error Context: test-results/upstream-batch04-runtime-n-2850e-nd-recovers-at-the-same-URL-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/upstream-batch04-runtime-n-2850e-nd-recovers-at-the-same-URL-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/upstream-batch04-runtime-n-2850e-nd-recovers-at-the-same-URL-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+(node:54653) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[21/63] [chromium] › tests/e2e/upstream-batch04-styles.spec.ts:6:1 › Q3018 preserves module initialized adjacent styles across keepAlive hide return and disposal recreation
+(node:54658) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[22/63] [firefox] › tests/e2e/upstream-batch04-canvas-base.spec.ts:5:1 › W992 retains painted canvas pixels and native node identity over keepAlive hide and return
+[23/63] [firefox] › tests/e2e/upstream-batch04-canvas-base.spec.ts:27:1 › W1044 resolves relative HTML resources from the child base in a fresh isolated browser context
+(node:54669) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[24/63] [firefox] › tests/e2e/upstream-batch04-components.spec.ts:10:1 › W1012 renders real bpmn-js SVG transforms and flow geometry in the application Realm
+[25/63] [firefox] › tests/e2e/upstream-batch04-components.spec.ts:26:34 › W1038 reanchors Element UI Select after viewport enlargement with local=false
+[26/63] [firefox] › tests/e2e/upstream-batch04-components.spec.ts:26:34 › W1038 reanchors Element UI Select after viewport enlargement with local=true
+[27/63] [firefox] › tests/e2e/upstream-batch04-components.spec.ts:44:51 › W1038 reanchors react menu after visible viewport enlargement
+[28/63] [firefox] › tests/e2e/upstream-batch04-components.spec.ts:44:51 › W1038 reanchors vue3 menu after visible viewport enlargement
+(node:54685) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[29/63] [firefox] › tests/e2e/upstream-batch04-csp.spec.ts:5:1 › Q3129 mounts external modules without unsafe inline scripts or eval under same origin CSP
+(node:54694) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[30/63] [firefox] › tests/e2e/upstream-batch04-routing.spec.ts:41:1 › Q2990 performs Vue hash router push in mounted under a history host without changing its URL
+[31/63] [firefox] › tests/e2e/upstream-batch04-routing.spec.ts:50:1 › Q2976 W1007 W1045 keeps an explicit child route through repeated reloads and subsequent navigation without recursive encoding
+(node:54707) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[32/63] [firefox] › tests/e2e/upstream-batch04-runtime-lifecycle.spec.ts:6:1 › Q2991 repeatedly destroys real Vue 2 instances and subscriptions without retaining connected Realms
+[33/63] [firefox] › tests/e2e/upstream-batch04-runtime-lifecycle.spec.ts:33:1 › W1039 reopens a real host dialog with an alive Vue router after repeated child navigation
+(node:54716) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[34/63] [firefox] › tests/e2e/upstream-batch04-runtime-loading.spec.ts:6:1 › Q3001 Q3093 manual load failure preserves host and sibling while lifecycle loading settles
+[35/63] [firefox] › tests/e2e/upstream-batch04-runtime-loading.spec.ts:46:1 › W1057 configured load timeout removes a delayed entry Realm and permits recovery at the same URL
+[36/63] [firefox] › tests/e2e/upstream-batch04-runtime-loading.spec.ts:79:40 › W976 W1017 delayed resource A-B-A switching retains one interactive application (keepAlive=false)
+[37/63] [firefox] › tests/e2e/upstream-batch04-runtime-loading.spec.ts:79:40 › W976 W1017 delayed resource A-B-A switching retains one interactive application (keepAlive=true)
+[38/63] [firefox] › tests/e2e/upstream-batch04-runtime-loading.spec.ts:109:39 › Q3093 native lifecycle loading indicator clears after manual load (success=true)
+[39/63] [firefox] › tests/e2e/upstream-batch04-runtime-loading.spec.ts:109:39 › Q3093 native lifecycle loading indicator clears after manual load (success=false)
+(node:54729) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[40/63] [firefox] › tests/e2e/upstream-batch04-runtime-network.spec.ts:6:53 › W1057 HTML script timeout closes the pending transport and recovers at the same URL
+[41/63] [firefox] › tests/e2e/upstream-batch04-runtime-network.spec.ts:6:53 › W1057 HTML style timeout closes the pending transport and recovers at the same URL
+  2) [firefox] › tests/e2e/upstream-batch04-runtime-network.spec.ts:6:53 › W1057 HTML style timeout closes the pending transport and recovers at the same URL 
+
+    Error: expect(received).toContain(expected) // indexOf
+
+    Expected value: "/slow.css"
+    Received array: []
+
+    Call Log:
+    - Timeout 5000ms exceeded while waiting on the predicate
+
+      22 |   await expect(page.locator('#html-timeout-slot iframe, #html-timeout-slot micro-app-host')).toHaveCount(0);
+      23 |   // Must precede server recovery/cleanup; ending it ourselves is not cancellation evidence.
+    > 24 |   await expect.poll(() => slowDeployment.aborted).toContain(resource);
+         |                                                   ^
+      25 |   slowDeployment.slow = false;
+      26 |   await page.evaluate(async url => {
+      27 |     const s = window.__upstreamRuntime__!;
+        at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-network.spec.ts:24:51
+
+    Error Context: test-results/upstream-batch04-runtime-n-2850e-nd-recovers-at-the-same-URL-firefox/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/upstream-batch04-runtime-n-2850e-nd-recovers-at-the-same-URL-firefox/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/upstream-batch04-runtime-n-2850e-nd-recovers-at-the-same-URL-firefox/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+(node:54749) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[42/63] [firefox] › tests/e2e/upstream-batch04-styles.spec.ts:6:1 › Q3018 preserves module initialized adjacent styles across keepAlive hide return and disposal recreation
+(node:54757) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[43/63] [webkit] › tests/e2e/upstream-batch04-canvas-base.spec.ts:5:1 › W992 retains painted canvas pixels and native node identity over keepAlive hide and return
+[44/63] [webkit] › tests/e2e/upstream-batch04-canvas-base.spec.ts:27:1 › W1044 resolves relative HTML resources from the child base in a fresh isolated browser context
+(node:54776) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[45/63] [webkit] › tests/e2e/upstream-batch04-components.spec.ts:10:1 › W1012 renders real bpmn-js SVG transforms and flow geometry in the application Realm
+[46/63] [webkit] › tests/e2e/upstream-batch04-components.spec.ts:26:34 › W1038 reanchors Element UI Select after viewport enlargement with local=false
+[47/63] [webkit] › tests/e2e/upstream-batch04-components.spec.ts:26:34 › W1038 reanchors Element UI Select after viewport enlargement with local=true
+[48/63] [webkit] › tests/e2e/upstream-batch04-components.spec.ts:44:51 › W1038 reanchors react menu after visible viewport enlargement
+[49/63] [webkit] › tests/e2e/upstream-batch04-components.spec.ts:44:51 › W1038 reanchors vue3 menu after visible viewport enlargement
+(node:54796) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[50/63] [webkit] › tests/e2e/upstream-batch04-csp.spec.ts:5:1 › Q3129 mounts external modules without unsafe inline scripts or eval under same origin CSP
+(node:54808) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[51/63] [webkit] › tests/e2e/upstream-batch04-routing.spec.ts:41:1 › Q2990 performs Vue hash router push in mounted under a history host without changing its URL
+[52/63] [webkit] › tests/e2e/upstream-batch04-routing.spec.ts:50:1 › Q2976 W1007 W1045 keeps an explicit child route through repeated reloads and subsequent navigation without recursive encoding
+(node:54822) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[53/63] [webkit] › tests/e2e/upstream-batch04-runtime-lifecycle.spec.ts:6:1 › Q2991 repeatedly destroys real Vue 2 instances and subscriptions without retaining connected Realms
+[54/63] [webkit] › tests/e2e/upstream-batch04-runtime-lifecycle.spec.ts:33:1 › W1039 reopens a real host dialog with an alive Vue router after repeated child navigation
+(node:54836) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[55/63] [webkit] › tests/e2e/upstream-batch04-runtime-loading.spec.ts:6:1 › Q3001 Q3093 manual load failure preserves host and sibling while lifecycle loading settles
+[56/63] [webkit] › tests/e2e/upstream-batch04-runtime-loading.spec.ts:46:1 › W1057 configured load timeout removes a delayed entry Realm and permits recovery at the same URL
+[57/63] [webkit] › tests/e2e/upstream-batch04-runtime-loading.spec.ts:79:40 › W976 W1017 delayed resource A-B-A switching retains one interactive application (keepAlive=false)
+[58/63] [webkit] › tests/e2e/upstream-batch04-runtime-loading.spec.ts:79:40 › W976 W1017 delayed resource A-B-A switching retains one interactive application (keepAlive=true)
+[59/63] [webkit] › tests/e2e/upstream-batch04-runtime-loading.spec.ts:109:39 › Q3093 native lifecycle loading indicator clears after manual load (success=true)
+[60/63] [webkit] › tests/e2e/upstream-batch04-runtime-loading.spec.ts:109:39 › Q3093 native lifecycle loading indicator clears after manual load (success=false)
+(node:54921) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[61/63] [webkit] › tests/e2e/upstream-batch04-runtime-network.spec.ts:6:53 › W1057 HTML script timeout closes the pending transport and recovers at the same URL
+[62/63] [webkit] › tests/e2e/upstream-batch04-runtime-network.spec.ts:6:53 › W1057 HTML style timeout closes the pending transport and recovers at the same URL
+  3) [webkit] › tests/e2e/upstream-batch04-runtime-network.spec.ts:6:53 › W1057 HTML style timeout closes the pending transport and recovers at the same URL 
+
+    Error: expect(received).toContain(expected) // indexOf
+
+    Expected value: "/slow.css"
+    Received array: []
+
+    Call Log:
+    - Timeout 5000ms exceeded while waiting on the predicate
+
+      22 |   await expect(page.locator('#html-timeout-slot iframe, #html-timeout-slot micro-app-host')).toHaveCount(0);
+      23 |   // Must precede server recovery/cleanup; ending it ourselves is not cancellation evidence.
+    > 24 |   await expect.poll(() => slowDeployment.aborted).toContain(resource);
+         |                                                   ^
+      25 |   slowDeployment.slow = false;
+      26 |   await page.evaluate(async url => {
+      27 |     const s = window.__upstreamRuntime__!;
+        at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-runtime-network.spec.ts:24:51
+
+    Error Context: test-results/upstream-batch04-runtime-n-2850e-nd-recovers-at-the-same-URL-webkit/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/upstream-batch04-runtime-n-2850e-nd-recovers-at-the-same-URL-webkit/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/upstream-batch04-runtime-n-2850e-nd-recovers-at-the-same-URL-webkit/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+(node:54944) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[63/63] [webkit] › tests/e2e/upstream-batch04-styles.spec.ts:6:1 › Q3018 preserves module initialized adjacent styles across keepAlive hide return and disposal recreation
+  4) [webkit] › tests/e2e/upstream-batch04-styles.spec.ts:6:1 › Q3018 preserves module initialized adjacent styles across keepAlive hide return and disposal recreation 
+
+    Error: expect(locator).toHaveCSS(expected) failed
+
+    Locator:  locator('#adjacent-style-slot .batch04-style-first')
+    Expected: "rgb(11, 22, 33)"
+    Received: "rgb(0, 0, 0)"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCSS" with timeout 5000ms
+      - waiting for locator('#adjacent-style-slot .batch04-style-first')
+        14 × locator resolved to <p class="batch04-style-first">First style</p>
+           - unexpected value "rgb(0, 0, 0)"
+
+
+      45 |     });
+      46 |     for (let cycle = 0; cycle < 3; cycle++) {
+    > 47 |       await expect(page.locator('#adjacent-style-slot .batch04-style-first')).toHaveCSS('color', 'rgb(11, 22, 33)');
+         |                                                                               ^
+      48 |       await expect(page.locator('#adjacent-style-slot .batch04-style-second')).toHaveCSS('color', 'rgb(44, 55, 66)');
+      49 |       await expect(page.locator('#adjacent-style-slot .batch04-style-second')).toHaveCSS('width', '84px');
+      50 |       await page.locator('#adjacent-style-slot button').click();
+        at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch04-styles.spec.ts:47:79
+
+    Error Context: test-results/upstream-batch04-styles-Q3-7152d-urn-and-disposal-recreation-webkit/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/upstream-batch04-styles-Q3-7152d-urn-and-disposal-recreation-webkit/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/upstream-batch04-styles-Q3-7152d-urn-and-disposal-recreation-webkit/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+  4 failed
+    [chromium] › tests/e2e/upstream-batch04-runtime-network.spec.ts:6:53 › W1057 HTML style timeout closes the pending transport and recovers at the same URL 
+    [firefox] › tests/e2e/upstream-batch04-runtime-network.spec.ts:6:53 › W1057 HTML style timeout closes the pending transport and recovers at the same URL 
+    [webkit] › tests/e2e/upstream-batch04-runtime-network.spec.ts:6:53 › W1057 HTML style timeout closes the pending transport and recovers at the same URL 
+    [webkit] › tests/e2e/upstream-batch04-styles.spec.ts:6:1 › Q3018 preserves module initialized adjacent styles across keepAlive hide return and disposal recreation 
+  59 passed (1.7m)

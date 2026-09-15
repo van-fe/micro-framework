@@ -1,0 +1,414 @@
+{
+  "collectionBatch": "2026-09-08-batch-03",
+  "group": "dom",
+  "executionStatus": "root-verified-with-explicit-coverage-limits",
+  "issues": [
+    {
+      "id": "umijs/qiankun#3151",
+      "status": "regression-passed",
+      "scenario": "同一 HTML response 中 head 后相邻 inline script 立即追加 style/link；重建再次验证。",
+      "expectedBehavior": "真实 HTML Entry + RealmHost；同步样式隔离、相对子源 CSS 请求、销毁再加载。",
+      "suggestedLayer": "dom-bridge / dom-surface / entry-resolver",
+      "testIdea": "真实 HTML Entry + RealmHost；同步样式隔离、相对子源 CSS 请求、销毁再加载。",
+      "plannedTests": [
+        {
+          "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+          "title": "batch03 DOM upstream contracts Q3151 prepares head styles before the adjacent inline script runs and preserves relative links on reload"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+          "title": "batch03 DOM upstream contracts Q3151 prepares head styles before the adjacent inline script runs and preserves relative links on reload",
+          "runId": "2026-09-08-upstream-04"
+        }
+      ],
+      "resolution": "真实 HTML Entry + RealmHost；同步样式隔离、相对子源 CSS 请求、销毁再加载。 已在 Chromium、Firefox、WebKit 通过；真实Safari未运行。 已在Chromium、Firefox、WebKit执行通过；真实Safari未运行。 限制：本地不是 streaming loader；覆盖原即时插入时序对应契约，未声称复现上游补丁竞态。",
+      "coverageLimits": [
+        "本地不是 streaming loader；覆盖原即时插入时序对应契约，未声称复现上游补丁竞态。"
+      ],
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-03-qiankun-sources.json",
+      "coverageLimitations": [
+        "本地不是 streaming loader；覆盖原即时插入时序对应契约，未声称复现上游补丁竞态。"
+      ]
+    },
+    {
+      "id": "umijs/qiankun#2983",
+      "status": "regression-passed",
+      "scenario": "CSS 属性值 body1 被 body 根选择器替换污染。",
+      "expectedBehavior": "原 CSS 三规则：两个 min-height 计算结果、后续 green 规则均正确。",
+      "suggestedLayer": "dom-bridge / dom-surface / entry-resolver",
+      "testIdea": "原 CSS 三规则：两个 min-height 计算结果、后续 green 规则均正确。",
+      "plannedTests": [
+        {
+          "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+          "title": "batch03 DOM upstream contracts Q2983 Q2984 preserves body substrings in attribute selectors and following rules"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+          "title": "batch03 DOM upstream contracts Q2983 Q2984 preserves body substrings in attribute selectors and following rules",
+          "runId": "2026-09-08-upstream-04"
+        }
+      ],
+      "resolution": "原 CSS 三规则：两个 min-height 计算结果、后续 green 规则均正确。 已在 Chromium、Firefox、WebKit 通过；真实Safari未运行。 已在Chromium、Firefox、WebKit执行通过；真实Safari未运行。 限制：使用原选择器和数值；不加载上游运行时。",
+      "coverageLimits": [
+        "使用原选择器和数值；不加载上游运行时。"
+      ],
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-03-qiankun-sources.json",
+      "coverageLimitations": [
+        "使用原选择器和数值；不加载上游运行时。"
+      ]
+    },
+    {
+      "id": "umijs/qiankun#2984",
+      "status": "regression-passed",
+      "scenario": "CSS 属性值 body1 被 body 根选择器替换污染；与 Q2983 同一正文。",
+      "expectedBehavior": "原 CSS 三规则：两个 min-height 计算结果、后续 green 规则均正确。",
+      "suggestedLayer": "dom-bridge / dom-surface / entry-resolver",
+      "testIdea": "原 CSS 三规则：两个 min-height 计算结果、后续 green 规则均正确。",
+      "plannedTests": [
+        {
+          "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+          "title": "batch03 DOM upstream contracts Q2983 Q2984 preserves body substrings in attribute selectors and following rules"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+          "title": "batch03 DOM upstream contracts Q2983 Q2984 preserves body substrings in attribute selectors and following rules",
+          "runId": "2026-09-08-upstream-04"
+        }
+      ],
+      "resolution": "原 CSS 三规则：两个 min-height 计算结果、后续 green 规则均正确。 已在 Chromium、Firefox、WebKit 通过；真实Safari未运行。 已在Chromium、Firefox、WebKit执行通过；真实Safari未运行。 限制：与 Q2983 共享一个场景，非独立缺陷。",
+      "coverageLimits": [
+        "与 Q2983 共享一个场景，非独立缺陷。"
+      ],
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-03-qiankun-sources.json",
+      "coverageLimitations": [
+        "与 Q2983 共享一个场景，非独立缺陷。"
+      ]
+    },
+    {
+      "id": "umijs/qiankun#3061",
+      "status": "regression-passed",
+      "scenario": "Vite main.ts import 全局 CSS 覆盖宿主，样式隔离失效。",
+      "expectedBehavior": "Vite 8.2.2 真生产产物的主入口 CSS import；宿主和兄弟颜色不变、子应用颜色正确。",
+      "suggestedLayer": "dom-bridge / dom-surface / entry-resolver",
+      "testIdea": "Vite 8.2.2 真生产产物的主入口 CSS import；宿主和兄弟颜色不变、子应用颜色正确。",
+      "plannedTests": [
+        {
+          "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+          "title": "batch03 DOM upstream contracts Q3061 Q2968 Q2969 W1001 renders actual Vite Vue scoped imports and CSS module assets within the application"
+        },
+        {
+          "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+          "title": "batch03 DOM upstream contracts Q3061 Q2968 Q2969 W1001 preserves Vite dev injected global scoped and CSS module styles"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+          "title": "batch03 DOM upstream contracts Q3061 Q2968 Q2969 W1001 renders actual Vite Vue scoped imports and CSS module assets within the application",
+          "runId": "2026-09-08-upstream-04"
+        },
+        {
+          "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+          "title": "batch03 DOM upstream contracts Q3061 Q2968 Q2969 W1001 preserves Vite dev injected global scoped and CSS module styles",
+          "runId": "2026-09-08-upstream-04"
+        }
+      ],
+      "resolution": "Vite 8.2.2 真生产产物的主入口 CSS import；宿主和兄弟颜色不变、子应用颜色正确。 已在 Chromium、Firefox、WebKit 通过；真实Safari未运行。 已在Chromium、Firefox、WebKit执行通过；真实Safari未运行。 限制：Vite 8.2.2 Vue 3.5.42真实生产和dev CSS注入均执行；dev关闭HMR，未执行HMR更新；不承诺未提供的历史版本。",
+      "coverageLimits": [
+        "Vite 8.2.2 Vue 3.5.42真实生产和dev CSS注入均执行；dev关闭HMR，未执行HMR更新；不承诺未提供的历史版本。"
+      ],
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-03-qiankun-sources.json",
+      "coverageLimitations": [
+        "Vite 8.2.2 Vue 3.5.42真实生产和dev CSS注入均执行；dev关闭HMR，未执行HMR更新；不承诺未提供的历史版本。"
+      ]
+    },
+    {
+      "id": "umijs/qiankun#2968",
+      "status": "regression-passed",
+      "scenario": "Vue 组件添加 scoped 后样式消失。",
+      "expectedBehavior": "Vue 3.5.42 + 现有 plugin-vue 真 SFC scoped 编译产物 data-v 属性和83px几何。",
+      "suggestedLayer": "dom-bridge / dom-surface / entry-resolver",
+      "testIdea": "Vue 3.5.42 + 现有 plugin-vue 真 SFC scoped 编译产物 data-v 属性和83px几何。",
+      "plannedTests": [
+        {
+          "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+          "title": "batch03 DOM upstream contracts Q3061 Q2968 Q2969 W1001 renders actual Vite Vue scoped imports and CSS module assets within the application"
+        },
+        {
+          "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+          "title": "batch03 DOM upstream contracts Q3061 Q2968 Q2969 W1001 preserves Vite dev injected global scoped and CSS module styles"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+          "title": "batch03 DOM upstream contracts Q3061 Q2968 Q2969 W1001 renders actual Vite Vue scoped imports and CSS module assets within the application",
+          "runId": "2026-09-08-upstream-04"
+        },
+        {
+          "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+          "title": "batch03 DOM upstream contracts Q3061 Q2968 Q2969 W1001 preserves Vite dev injected global scoped and CSS module styles",
+          "runId": "2026-09-08-upstream-04"
+        }
+      ],
+      "resolution": "Vue 3.5.42 + 现有 plugin-vue 真 SFC scoped 编译产物 data-v 属性和83px几何。 已在 Chromium、Firefox、WebKit 通过；真实Safari未运行。 已在Chromium、Firefox、WebKit执行通过；真实Safari未运行。 限制：原 issue 未给 Vue 版本，采用仓库锁定版本，不声称所有历史版本兼容。",
+      "coverageLimits": [
+        "原 issue 未给 Vue 版本，采用仓库锁定版本，不声称所有历史版本兼容。"
+      ],
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-03-qiankun-sources.json",
+      "coverageLimitations": [
+        "原 issue 未给 Vue 版本，采用仓库锁定版本，不声称所有历史版本兼容。"
+      ]
+    },
+    {
+      "id": "umijs/qiankun#2969",
+      "status": "regression-passed",
+      "scenario": "scoped Vue 组件 import 外部 CSS 后样式丢失。",
+      "expectedBehavior": "Vue 3.5.42 真 SFC scoped src 外部 CSS，91px宽和对应 scoped属性。",
+      "suggestedLayer": "dom-bridge / dom-surface / entry-resolver",
+      "testIdea": "Vue 3.5.42 真 SFC scoped src 外部 CSS，91px宽和对应 scoped属性。",
+      "plannedTests": [
+        {
+          "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+          "title": "batch03 DOM upstream contracts Q3061 Q2968 Q2969 W1001 renders actual Vite Vue scoped imports and CSS module assets within the application"
+        },
+        {
+          "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+          "title": "batch03 DOM upstream contracts Q3061 Q2968 Q2969 W1001 preserves Vite dev injected global scoped and CSS module styles"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+          "title": "batch03 DOM upstream contracts Q3061 Q2968 Q2969 W1001 renders actual Vite Vue scoped imports and CSS module assets within the application",
+          "runId": "2026-09-08-upstream-04"
+        },
+        {
+          "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+          "title": "batch03 DOM upstream contracts Q3061 Q2968 Q2969 W1001 preserves Vite dev injected global scoped and CSS module styles",
+          "runId": "2026-09-08-upstream-04"
+        }
+      ],
+      "resolution": "Vue 3.5.42 真 SFC scoped src 外部 CSS，91px宽和对应 scoped属性。 已在 Chromium、Firefox、WebKit 通过；真实Safari未运行。 已在Chromium、Firefox、WebKit执行通过；真实Safari未运行。 限制：真实Vue scoped src外部样式和标准scoped @import两种写法均通过生产与dev验证；未验证未知私有loader变体。",
+      "coverageLimits": [
+        "源报告图示不能确定 import 写法；采用标准 style scoped src 外部样式路径，其他 loader 特定 import 变体未覆盖。"
+      ],
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-03-qiankun-sources.json",
+      "coverageLimitations": [
+        "真实Vue scoped src外部样式和标准scoped @import两种写法均通过生产与dev验证；未验证未知私有loader变体。"
+      ]
+    },
+    {
+      "id": "Tencent/wujie#1001",
+      "status": "fixed",
+      "scenario": "Vite + Vue 3 CSS module 相对图片 URL 解析到宿主域。",
+      "expectedBehavior": "真实 Vite CSS module hash类名+外部SVG产物；独立端口资源请求和 decode 24x16。",
+      "suggestedLayer": "dom-bridge / dom-surface / entry-resolver",
+      "testIdea": "真实 Vite CSS module hash类名+外部SVG产物；独立端口资源请求和 decode 24x16。",
+      "plannedTests": [
+        {
+          "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+          "title": "batch03 DOM upstream contracts Q3061 Q2968 Q2969 W1001 renders actual Vite Vue scoped imports and CSS module assets within the application"
+        },
+        {
+          "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+          "title": "batch03 DOM upstream contracts Q3061 Q2968 Q2969 W1001 preserves Vite dev injected global scoped and CSS module styles"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+          "title": "batch03 DOM upstream contracts Q3061 Q2968 Q2969 W1001 renders actual Vite Vue scoped imports and CSS module assets within the application",
+          "runId": "2026-09-08-upstream-04"
+        },
+        {
+          "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+          "title": "batch03 DOM upstream contracts Q3061 Q2968 Q2969 W1001 preserves Vite dev injected global scoped and CSS module styles",
+          "runId": "2026-09-08-upstream-04"
+        }
+      ],
+      "resolution": "真实 Vite CSS module hash类名+外部SVG产物；独立端口资源请求和 decode 24x16。 已在 Chromium、Firefox、WebKit 通过；真实Safari未运行。 首次真实非内联dev资源得到宿主63315 URL；最低层style文本setter URL重写后资源归属子源并decode24x16。 已在Chromium、Firefox、WebKit执行通过；真实Safari未运行。 限制：Vite 8.2.2 Vue 3.5.42真实生产和dev CSS注入均执行；dev关闭HMR，未执行HMR更新；不承诺未提供的历史版本。",
+      "coverageLimits": [
+        "Vite 8.2.2 Vue 3.5.42真实生产和dev CSS注入均执行；dev关闭HMR，未执行HMR更新；不承诺未提供的历史版本。"
+      ],
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-03-wujie-sources.json",
+      "failureEvidence": "tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/dom-third-executed.json",
+      "coverageLimitations": [
+        "Vite 8.2.2 Vue 3.5.42真实生产和dev CSS注入均执行；dev关闭HMR，未执行HMR更新；不承诺未提供的历史版本。"
+      ]
+    },
+    {
+      "id": "Tencent/wujie#1040",
+      "status": "regression-passed",
+      "scenario": "孙应用 iconfont 不显示，父中重复加载同图标库有冲突。",
+      "expectedBehavior": "三层 app ShadowRoot，孙级相对 TTF URL；同 family 双应用20/40px glyph宽、父无字体复制和销毁清理。",
+      "suggestedLayer": "dom-bridge / dom-surface / entry-resolver",
+      "testIdea": "三层 app ShadowRoot，孙级相对 TTF URL；同 family 双应用20/40px glyph宽、父无字体复制和销毁清理。",
+      "plannedTests": [
+        {
+          "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+          "title": "batch03 DOM upstream contracts W1040 loads grandchild icon fonts without copying fonts to its parent and cleans up isolated families"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+          "title": "batch03 DOM upstream contracts W1040 loads grandchild icon fonts without copying fonts to its parent and cleans up isolated families",
+          "runId": "2026-09-08-upstream-04"
+        }
+      ],
+      "resolution": "三层 app ShadowRoot，孙级相对 TTF URL；同 family 双应用20/40px glyph宽、父无字体复制和销毁清理。 已在 Chromium、Firefox、WebKit 通过；真实Safari未运行。 已在Chromium、Firefox、WebKit执行通过；真实Safari未运行。 限制：真实可加载TTF探针取自已有batch02，保留嵌套关键条件；非原 DU-bai 仓库字体/项目。",
+      "coverageLimits": [
+        "真实可加载TTF探针取自已有batch02，保留嵌套关键条件；非原 DU-bai 仓库字体/项目。"
+      ],
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-03-wujie-sources.json",
+      "coverageLimitations": [
+        "真实可加载TTF探针取自已有batch02，保留嵌套关键条件；非原 DU-bai 仓库字体/项目。"
+      ]
+    },
+    {
+      "id": "Tencent/wujie#1046",
+      "status": "fixed",
+      "scenario": "React useEffect 动态追加 comp.js 注册已有 custom element 后不渲染。",
+      "expectedBehavior": "真实React useEffect、外部脚本、原生iframe registry、升级已有元素、按钮点击计数、双应用同名和unmount。",
+      "suggestedLayer": "dom-bridge / dom-surface / entry-resolver",
+      "testIdea": "真实React useEffect、外部脚本、原生iframe registry、升级已有元素、按钮点击计数、双应用同名和unmount。",
+      "plannedTests": [
+        {
+          "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+          "title": "batch03 DOM upstream contracts W1046 W1047 W1048 W1061 upgrades React effect loaded web components and retains nested composed event paths"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+          "title": "batch03 DOM upstream contracts W1046 W1047 W1048 W1061 upgrades React effect loaded web components and retains nested composed event paths",
+          "runId": "2026-09-08-upstream-04"
+        }
+      ],
+      "resolution": "真实React useEffect、外部脚本、原生iframe registry、升级已有元素、按钮点击计数、双应用同名和unmount。 已在 Chromium、Firefox、WebKit 通过；真实Safari未运行。 第三次报告已确认comp.js子源加载且native registry存在definition，但节点不升级；native iframe adoption+upgrade+原节点返还修复。 已在Chromium、Firefox、WebKit执行通过；真实Safari未运行。 限制：React useEffect外部script、自主最小组件；同名双应用定义/闭包/instanceof隔离；定义后同步native adoption可能触发已有后代自定义元素的原生adoption生命周期，未验证第三方复杂嵌套组件。",
+      "coverageLimits": [
+        "React useEffect外部script、自主最小组件；同名双应用定义/闭包/instanceof隔离；定义后同步native adoption可能触发已有后代自定义元素的原生adoption生命周期，未验证第三方复杂嵌套组件。"
+      ],
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-03-wujie-sources.json",
+      "failureEvidence": "tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/dom-third-executed.json",
+      "coverageLimitations": [
+        "React useEffect外部script、自主最小组件；同名双应用定义/闭包/instanceof隔离；定义后同步native adoption可能触发已有后代自定义元素的原生adoption生命周期，未验证第三方复杂嵌套组件。"
+      ]
+    },
+    {
+      "id": "Tencent/wujie#1047",
+      "status": "fixed",
+      "scenario": "React useEffect 动态追加 comp.js 注册已有 custom element 后不渲染。",
+      "expectedBehavior": "真实React useEffect、外部脚本、原生iframe registry、升级已有元素、按钮点击计数、双应用同名和unmount。",
+      "suggestedLayer": "dom-bridge / dom-surface / entry-resolver",
+      "testIdea": "真实React useEffect、外部脚本、原生iframe registry、升级已有元素、按钮点击计数、双应用同名和unmount。",
+      "plannedTests": [
+        {
+          "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+          "title": "batch03 DOM upstream contracts W1046 W1047 W1048 W1061 upgrades React effect loaded web components and retains nested composed event paths"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+          "title": "batch03 DOM upstream contracts W1046 W1047 W1048 W1061 upgrades React effect loaded web components and retains nested composed event paths",
+          "runId": "2026-09-08-upstream-04"
+        }
+      ],
+      "resolution": "真实React useEffect、外部脚本、原生iframe registry、升级已有元素、按钮点击计数、双应用同名和unmount。 已在 Chromium、Firefox、WebKit 通过；真实Safari未运行。 第三次报告已确认comp.js子源加载且native registry存在definition，但节点不升级；native iframe adoption+upgrade+原节点返还修复。 已在Chromium、Firefox、WebKit执行通过；真实Safari未运行。 限制：React useEffect外部script、自主最小组件；同名双应用定义/闭包/instanceof隔离；定义后同步native adoption可能触发已有后代自定义元素的原生adoption生命周期，未验证第三方复杂嵌套组件。",
+      "coverageLimits": [
+        "React useEffect外部script、自主最小组件；同名双应用定义/闭包/instanceof隔离；定义后同步native adoption可能触发已有后代自定义元素的原生adoption生命周期，未验证第三方复杂嵌套组件。"
+      ],
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-03-wujie-sources.json",
+      "failureEvidence": "tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/dom-third-executed.json",
+      "coverageLimitations": [
+        "React useEffect外部script、自主最小组件；同名双应用定义/闭包/instanceof隔离；定义后同步native adoption可能触发已有后代自定义元素的原生adoption生命周期，未验证第三方复杂嵌套组件。"
+      ]
+    },
+    {
+      "id": "Tencent/wujie#1048",
+      "status": "fixed",
+      "scenario": "React useEffect 动态追加 comp.js 注册已有 custom element 后不渲染。",
+      "expectedBehavior": "真实React useEffect、外部脚本、原生iframe registry、升级已有元素、按钮点击计数、双应用同名和unmount。",
+      "suggestedLayer": "dom-bridge / dom-surface / entry-resolver",
+      "testIdea": "真实React useEffect、外部脚本、原生iframe registry、升级已有元素、按钮点击计数、双应用同名和unmount。",
+      "plannedTests": [
+        {
+          "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+          "title": "batch03 DOM upstream contracts W1046 W1047 W1048 W1061 upgrades React effect loaded web components and retains nested composed event paths"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+          "title": "batch03 DOM upstream contracts W1046 W1047 W1048 W1061 upgrades React effect loaded web components and retains nested composed event paths",
+          "runId": "2026-09-08-upstream-04"
+        }
+      ],
+      "resolution": "真实React useEffect、外部脚本、原生iframe registry、升级已有元素、按钮点击计数、双应用同名和unmount。 已在 Chromium、Firefox、WebKit 通过；真实Safari未运行。 第三次报告已确认comp.js子源加载且native registry存在definition，但节点不升级；native iframe adoption+upgrade+原节点返还修复。 已在Chromium、Firefox、WebKit执行通过；真实Safari未运行。 限制：React useEffect外部script、自主最小组件；同名双应用定义/闭包/instanceof隔离；定义后同步native adoption可能触发已有后代自定义元素的原生adoption生命周期，未验证第三方复杂嵌套组件。",
+      "coverageLimits": [
+        "React useEffect外部script、自主最小组件；同名双应用定义/闭包/instanceof隔离；定义后同步native adoption可能触发已有后代自定义元素的原生adoption生命周期，未验证第三方复杂嵌套组件。"
+      ],
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-03-wujie-sources.json",
+      "failureEvidence": "tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/dom-third-executed.json",
+      "coverageLimitations": [
+        "React useEffect外部script、自主最小组件；同名双应用定义/闭包/instanceof隔离；定义后同步native adoption可能触发已有后代自定义元素的原生adoption生命周期，未验证第三方复杂嵌套组件。"
+      ]
+    },
+    {
+      "id": "Tencent/wujie#1061",
+      "status": "regression-passed",
+      "scenario": "Web component 点击 composedPath 偶发遗漏内层节点，建议主应用也注册。",
+      "expectedBehavior": "内层原生button经组件open ShadowRoot冒泡；组件和应用document监听器均保留路径，宿主registry不注册。",
+      "suggestedLayer": "dom-bridge / dom-surface / entry-resolver",
+      "testIdea": "内层原生button经组件open ShadowRoot冒泡；组件和应用document监听器均保留路径，宿主registry不注册。",
+      "plannedTests": [
+        {
+          "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+          "title": "batch03 DOM upstream contracts W1046 W1047 W1048 W1061 upgrades React effect loaded web components and retains nested composed event paths"
+        }
+      ],
+      "tests": [
+        {
+          "path": "tests/browser/upstream-batch03-dom.browser.test.ts",
+          "title": "batch03 DOM upstream contracts W1046 W1047 W1048 W1061 upgrades React effect loaded web components and retains nested composed event paths",
+          "runId": "2026-09-08-upstream-04"
+        }
+      ],
+      "resolution": "内层原生button经组件open ShadowRoot冒泡；组件和应用document监听器均保留路径，宿主registry不注册。 已在 Chromium、Firefox、WebKit 通过；真实Safari未运行。 已在Chromium、Firefox、WebKit执行通过；真实Safari未运行。 限制：原报告只有截图，无具体组件版本/时序；本fixture验证明确open shadow事件，不宣称复现偶发时序。",
+      "coverageLimits": [
+        "原报告只有截图，无具体组件版本/时序；本fixture验证明确open shadow事件，不宣称复现偶发时序。"
+      ],
+      "sourceArchive": "tests/upstream-issues/collections/2026-09-08-batch-03-wujie-sources.json",
+      "relatedFixes": [
+        "W1046/1047/1048 native custom element upgrade; original intermittent missing-path mechanism itself was not reproduced."
+      ],
+      "coverageLimitations": [
+        "原报告只有截图，无具体组件版本/时序；本fixture验证明确open shadow事件，不宣称复现偶发时序。"
+      ]
+    }
+  ],
+  "report": "tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/dom-fourth.json",
+  "command": "bun run test:browser tests/browser/upstream-batch03-dom.browser.test.ts --reporter=json --outputFile=tests/upstream-issues/runs/2026-09-08-upstream-04-evidence/dom-fourth.json",
+  "exitCode": 0,
+  "engines": [
+    "chromium",
+    "firefox",
+    "webkit"
+  ],
+  "realSafari": "not-run",
+  "assertions": {
+    "passed": 21,
+    "failed": 0,
+    "pending": 0
+  },
+  "releaseGates": "Parent agent final gates pending",
+  "rootVerificationRun": "2026-09-08-upstream-04"
+}

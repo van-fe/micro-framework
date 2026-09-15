@@ -1,0 +1,2404 @@
+{
+  "config": {
+    "argv": [
+      "/Users/fanfangbo/.local/share/fnm/node-versions/v24.19.0/installation/bin/node",
+      "/Users/fanfangbo/workspace/micro-framework/node_modules/.bin/playwright",
+      "test",
+      "tests/e2e/upstream-batch03-resources.spec.ts",
+      "tests/e2e/upstream-batch03-runtime-lifecycle.spec.ts",
+      "tests/e2e/upstream-batch03-runtime-network.spec.ts",
+      "tests/e2e/upstream-batch03-runtime-prewarm.spec.ts",
+      "tests/e2e/upstream-batch03-runtime-vue.spec.ts",
+      "--reporter=json"
+    ],
+    "configFile": "/Users/fanfangbo/workspace/micro-framework/playwright.config.ts",
+    "rootDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "upstream-batch03-resources.spec.ts",
+      "file": "upstream-batch03-resources.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Q3090 applies declarative include credentials to entry and dynamic script (registered=false)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 533,
+                  "error": {
+                    "message": "Error: page.evaluate: Event",
+                    "stack": "Error: page.evaluate: Event\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts:9:14",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                      "column": 14,
+                      "line": 9
+                    },
+                    "snippet": "   7 |   await page.context().addCookies([{name:\"batch03\",value:\"credential\",url:resourceOrigin.url,sameSite:\"Lax\"}]);\n   8 |   await addSlot(page,\"resource-slot\");\n>  9 |   await page.evaluate(async ({url,registered})=>{\n     |              ^\n  10 |     const s=window.__upstreamRuntime__!;\n  11 |     const app={name:\"resource-app\",container:\"#resource-slot\",entry:{type:\"html\" as const,url:url+\"/app/entry.html\",credentials:\"include\" as const}};\n  12 |     if(registered){s.runtime.registerApps([app]);await s.runtime.start({preload:false});}"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                        "column": 14,
+                        "line": 9
+                      },
+                      "message": "Error: page.evaluate: Event\n\n   7 |   await page.context().addCookies([{name:\"batch03\",value:\"credential\",url:resourceOrigin.url,sameSite:\"Lax\"}]);\n   8 |   await addSlot(page,\"resource-slot\");\n>  9 |   await page.evaluate(async ({url,registered})=>{\n     |              ^\n  10 |     const s=window.__upstreamRuntime__!;\n  11 |     const app={name:\"resource-app\",container:\"#resource-slot\",entry:{type:\"html\" as const,url:url+\"/app/entry.html\",credentials:\"include\" as const}};\n  12 |     if(registered){s.runtime.registerApps([app]);await s.runtime.start({preload:false});}\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts:9:14"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-runtime-fixture.ts",
+                        "column": 29,
+                        "line": 77
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 7\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"message\": \"[object Event]\",\u001b[39m\n\u001b[31m+     \"name\": \"resource-app\",\u001b[39m\n\u001b[31m+     \"phase\": \"mount\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n   at upstream-runtime-fixture.ts:77\n\n  75 |         return result;\n  76 |       });\n> 77 |       expect(result.errors).toEqual(result.expectedErrors);\n     |                             ^\n  78 |       expect(result.children).toBe(0);\n  79 |       expect(pageErrors).toEqual([]);\n  80 |     }\n    at Object.base.extend.runtimeCase.auto (/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-runtime-fixture.ts:77:29)"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:44:04.910Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch03-resources-79b97-ic-script-registered-false--chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch03-resources-79b97-ic-script-registered-false--chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                    "column": 14,
+                    "line": 9
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "fbbe8fac4f26cb1464b8-19b224cdbba4eba9c9c1",
+          "file": "upstream-batch03-resources.spec.ts",
+          "line": 6,
+          "column": 41
+        },
+        {
+          "title": "Q3090 applies declarative include credentials to entry and dynamic script (registered=true)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5175,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('button', { name: 'Request child API' })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'Request child API' })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('button', { name: 'Request child API' })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'Request child API' })\u001b[22m\n\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts:15:69",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                      "column": 69,
+                      "line": 15
+                    },
+                    "snippet": "  13 |     else s.handles.push(await s.runtime.mountApp(app));\n  14 |   },{url:resourceOrigin.url,registered});\n> 15 |   await expect(page.getByRole(\"button\",{name:\"Request child API\"})).toBeVisible();\n     |                                                                     ^\n  16 |   const requests=resourceOrigin.requests.filter(r=>r.path.endsWith(\"entry.html\")||r.path.endsWith(\"dynamic.js\"));\n  17 |   expect(requests.map(r=>r.path)).toEqual([\"/app/entry.html\",\"/app/dynamic.js\"]);\n  18 |   expect(requests.every(r=>r.cookie.includes(\"batch03=credential\"))).toBe(true);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                        "column": 69,
+                        "line": 15
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('button', { name: 'Request child API' })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'Request child API' })\u001b[22m\n\n\n  13 |     else s.handles.push(await s.runtime.mountApp(app));\n  14 |   },{url:resourceOrigin.url,registered});\n> 15 |   await expect(page.getByRole(\"button\",{name:\"Request child API\"})).toBeVisible();\n     |                                                                     ^\n  16 |   const requests=resourceOrigin.requests.filter(r=>r.path.endsWith(\"entry.html\")||r.path.endsWith(\"dynamic.js\"));\n  17 |   expect(requests.map(r=>r.path)).toEqual([\"/app/entry.html\",\"/app/dynamic.js\"]);\n  18 |   expect(requests.every(r=>r.cookie.includes(\"batch03=credential\"))).toBe(true);\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts:15:69"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:44:05.960Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch03-resources-d666e-mic-script-registered-true--chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch03-resources-d666e-mic-script-registered-true--chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                    "column": 69,
+                    "line": 15
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "fbbe8fac4f26cb1464b8-3afbb61570bf3d410575",
+          "file": "upstream-batch03-resources.spec.ts",
+          "line": 6,
+          "column": 41
+        },
+        {
+          "title": "Q3035 W1005 resolve static and dynamic image and SVG href before requests with host same-name decoys",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 162,
+                  "error": {
+                    "message": "Error: page.evaluate: Event",
+                    "stack": "Error: page.evaluate: Event\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts:26:14",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                      "column": 14,
+                      "line": 26
+                    },
+                    "snippet": "  24 |   page.on(\"request\",request=>{if(request.url().includes(\"same.svg\")&&!request.url().startsWith(resourceOrigin.url)) wrong.push(request.url());});\n  25 |   await addSlot(page,\"resource-slot\");\n> 26 |   await page.evaluate(async url=>{const s=window.__upstreamRuntime__!;s.handles.push(await s.runtime.mountApp({name:\"images\",container:\"#resource-slot\",entry:{type:\"html\",url:url+\"/app/entry.html\"}}));},resourceOrigin.url);\n     |              ^\n  27 |   await expect.poll(()=>page.locator(\"#resource-slot img\").evaluateAll(nodes=>nodes.map(n=>(n as HTMLImageElement).naturalWidth))).toEqual([13,13]);\n  28 |   for(const id of [\"static-svg\",\"dynamic-svg\"]){\n  29 |     expect(await page.locator('#'+id).evaluate(n=>n.getAttribute('href')||n.getAttributeNS('http://www.w3.org/1999/xlink','href'))).toBe(resourceOrigin.url+\"/app/same.svg\");"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                        "column": 14,
+                        "line": 26
+                      },
+                      "message": "Error: page.evaluate: Event\n\n  24 |   page.on(\"request\",request=>{if(request.url().includes(\"same.svg\")&&!request.url().startsWith(resourceOrigin.url)) wrong.push(request.url());});\n  25 |   await addSlot(page,\"resource-slot\");\n> 26 |   await page.evaluate(async url=>{const s=window.__upstreamRuntime__!;s.handles.push(await s.runtime.mountApp({name:\"images\",container:\"#resource-slot\",entry:{type:\"html\",url:url+\"/app/entry.html\"}}));},resourceOrigin.url);\n     |              ^\n  27 |   await expect.poll(()=>page.locator(\"#resource-slot img\").evaluateAll(nodes=>nodes.map(n=>(n as HTMLImageElement).naturalWidth))).toEqual([13,13]);\n  28 |   for(const id of [\"static-svg\",\"dynamic-svg\"]){\n  29 |     expect(await page.locator('#'+id).evaluate(n=>n.getAttribute('href')||n.getAttributeNS('http://www.w3.org/1999/xlink','href'))).toBe(resourceOrigin.url+\"/app/same.svg\");\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts:26:14"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-runtime-fixture.ts",
+                        "column": 29,
+                        "line": 77
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 7\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"message\": \"[object Event]\",\u001b[39m\n\u001b[31m+     \"name\": \"images\",\u001b[39m\n\u001b[31m+     \"phase\": \"mount\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n   at upstream-runtime-fixture.ts:77\n\n  75 |         return result;\n  76 |       });\n> 77 |       expect(result.errors).toEqual(result.expectedErrors);\n     |                             ^\n  78 |       expect(result.children).toBe(0);\n  79 |       expect(pageErrors).toEqual([]);\n  80 |     }\n    at Object.base.extend.runtimeCase.auto (/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-runtime-fixture.ts:77:29)"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:44:11.462Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch03-resources-6839a--with-host-same-name-decoys-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch03-resources-6839a--with-host-same-name-decoys-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                    "column": 14,
+                    "line": 26
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "fbbe8fac4f26cb1464b8-7a887b3ad4186858f736",
+          "file": "upstream-batch03-resources.spec.ts",
+          "line": 22,
+          "column": 1
+        },
+        {
+          "title": "Q3056 W995 keep explicit child API origin and host Axios baseURL during Vue Router guards",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 417,
+                  "error": {
+                    "message": "Error: page.evaluate: Event",
+                    "stack": "Error: page.evaluate: Event\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts:44:16",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                      "column": 16,
+                      "line": 44
+                    },
+                    "snippet": "  42 |   },resourceOrigin.url);\n  43 |   for(let cycle=0;cycle<2;cycle++){\n> 44 |     await page.evaluate(async url=>{const s=window.__upstreamRuntime__!;s.handles.push(await s.runtime.mountApp({name:\"api-child\",container:\"#resource-slot\",entry:{type:\"html\",url:url+\"/app/entry.html\"}}));},resourceOrigin.url);\n     |                ^\n  45 |     const button=page.getByRole(\"button\",{name:\"Request child API\"}); await button.click();await expect(button).toHaveAttribute(\"data-result\",new URL(resourceOrigin.url).host);\n  46 |     const result=await page.evaluate(async cycle=>(Reflect.get(window,\"batch03HostRequests\") as {navigate(path:string):Promise<unknown>}).navigate('/host-'+cycle),cycle);\n  47 |     expect(result).toEqual({origin:new URL(resourceOrigin.url).host,path:\"/host-api/api/data\"});"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                        "column": 16,
+                        "line": 44
+                      },
+                      "message": "Error: page.evaluate: Event\n\n  42 |   },resourceOrigin.url);\n  43 |   for(let cycle=0;cycle<2;cycle++){\n> 44 |     await page.evaluate(async url=>{const s=window.__upstreamRuntime__!;s.handles.push(await s.runtime.mountApp({name:\"api-child\",container:\"#resource-slot\",entry:{type:\"html\",url:url+\"/app/entry.html\"}}));},resourceOrigin.url);\n     |                ^\n  45 |     const button=page.getByRole(\"button\",{name:\"Request child API\"}); await button.click();await expect(button).toHaveAttribute(\"data-result\",new URL(resourceOrigin.url).host);\n  46 |     const result=await page.evaluate(async cycle=>(Reflect.get(window,\"batch03HostRequests\") as {navigate(path:string):Promise<unknown>}).navigate('/host-'+cycle),cycle);\n  47 |     expect(result).toEqual({origin:new URL(resourceOrigin.url).host,path:\"/host-api/api/data\"});\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts:44:16"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-runtime-fixture.ts",
+                        "column": 29,
+                        "line": 77
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 7\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"message\": \"[object Event]\",\u001b[39m\n\u001b[31m+     \"name\": \"api-child\",\u001b[39m\n\u001b[31m+     \"phase\": \"mount\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n   at upstream-runtime-fixture.ts:77\n\n  75 |         return result;\n  76 |       });\n> 77 |       expect(result.errors).toEqual(result.expectedErrors);\n     |                             ^\n  78 |       expect(result.children).toBe(0);\n  79 |       expect(pageErrors).toEqual([]);\n  80 |     }\n    at Object.base.extend.runtimeCase.auto (/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-runtime-fixture.ts:77:29)"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:44:11.907Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch03-resources-70d89-RL-during-Vue-Router-guards-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch03-resources-70d89-RL-during-Vue-Router-guards-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                    "column": 16,
+                    "line": 44
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "fbbe8fac4f26cb1464b8-6d40bd66c0494aa77c31",
+          "file": "upstream-batch03-resources.spec.ts",
+          "line": 36,
+          "column": 1
+        },
+        {
+          "title": "Q2982 keeps explicit favicon and manifest paths in application subdirectory without replacing host metadata",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 168,
+                  "error": {
+                    "message": "Error: page.evaluate: Event",
+                    "stack": "Error: page.evaluate: Event\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts:57:14",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                      "column": 14,
+                      "line": 57
+                    },
+                    "snippet": "  55 |   const before=await page.locator('head link[rel=\"icon\"],head link[rel=\"manifest\"]').evaluateAll(nodes=>nodes.map(n=>n.outerHTML));\n  56 |   await addSlot(page,\"resource-slot\");\n> 57 |   await page.evaluate(async url=>{const s=window.__upstreamRuntime__!;s.handles.push(await s.runtime.mountApp({name:\"metadata\",container:\"#resource-slot\",entry:{type:\"html\",url:url+\"/app/entry.html\"}}));},resourceOrigin.url);\n     |              ^\n  58 |   expect(await page.locator('#resource-slot link[rel=\"icon\"]').getAttribute('href')).toBe(resourceOrigin.url+\"/app/favicon.svg\");\n  59 |   expect(await page.locator('#resource-slot link[rel=\"manifest\"]').getAttribute('href')).toBe(resourceOrigin.url+\"/app/manifest.json\");\n  60 |   expect(await page.locator('head link[rel=\"icon\"],head link[rel=\"manifest\"]').evaluateAll(nodes=>nodes.map(n=>n.outerHTML))).toEqual(before);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                        "column": 14,
+                        "line": 57
+                      },
+                      "message": "Error: page.evaluate: Event\n\n  55 |   const before=await page.locator('head link[rel=\"icon\"],head link[rel=\"manifest\"]').evaluateAll(nodes=>nodes.map(n=>n.outerHTML));\n  56 |   await addSlot(page,\"resource-slot\");\n> 57 |   await page.evaluate(async url=>{const s=window.__upstreamRuntime__!;s.handles.push(await s.runtime.mountApp({name:\"metadata\",container:\"#resource-slot\",entry:{type:\"html\",url:url+\"/app/entry.html\"}}));},resourceOrigin.url);\n     |              ^\n  58 |   expect(await page.locator('#resource-slot link[rel=\"icon\"]').getAttribute('href')).toBe(resourceOrigin.url+\"/app/favicon.svg\");\n  59 |   expect(await page.locator('#resource-slot link[rel=\"manifest\"]').getAttribute('href')).toBe(resourceOrigin.url+\"/app/manifest.json\");\n  60 |   expect(await page.locator('head link[rel=\"icon\"],head link[rel=\"manifest\"]').evaluateAll(nodes=>nodes.map(n=>n.outerHTML))).toEqual(before);\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts:57:14"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-runtime-fixture.ts",
+                        "column": 29,
+                        "line": 77
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 7\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"message\": \"[object Event]\",\u001b[39m\n\u001b[31m+     \"name\": \"metadata\",\u001b[39m\n\u001b[31m+     \"phase\": \"mount\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n   at upstream-runtime-fixture.ts:77\n\n  75 |         return result;\n  76 |       });\n> 77 |       expect(result.errors).toEqual(result.expectedErrors);\n     |                             ^\n  78 |       expect(result.children).toBe(0);\n  79 |       expect(pageErrors).toEqual([]);\n  80 |     }\n    at Object.base.extend.runtimeCase.auto (/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-runtime-fixture.ts:77:29)"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:44:12.604Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch03-resources-c1d42-out-replacing-host-metadata-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch03-resources-c1d42-out-replacing-host-metadata-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                    "column": 14,
+                    "line": 57
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "fbbe8fac4f26cb1464b8-218046529fd5ec7f77f4",
+          "file": "upstream-batch03-resources.spec.ts",
+          "line": 54,
+          "column": 1
+        },
+        {
+          "title": "Q3021 mounts a nested runtime grandchild with distinct executing Realms and destroys the full tree",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 437,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:44:13.060Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fbbe8fac4f26cb1464b8-92aa45195803b2305c2d",
+          "file": "upstream-batch03-resources.spec.ts",
+          "line": 63,
+          "column": 1
+        },
+        {
+          "title": "Q3090 applies declarative include credentials to entry and dynamic script (registered=false)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 11,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 819,
+                  "error": {
+                    "message": "Error: page.evaluate: undefined",
+                    "stack": "Error: page.evaluate: undefined\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts:9:14",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                      "column": 14,
+                      "line": 9
+                    },
+                    "snippet": "   7 |   await page.context().addCookies([{name:\"batch03\",value:\"credential\",url:resourceOrigin.url,sameSite:\"Lax\"}]);\n   8 |   await addSlot(page,\"resource-slot\");\n>  9 |   await page.evaluate(async ({url,registered})=>{\n     |              ^\n  10 |     const s=window.__upstreamRuntime__!;\n  11 |     const app={name:\"resource-app\",container:\"#resource-slot\",entry:{type:\"html\" as const,url:url+\"/app/entry.html\",credentials:\"include\" as const}};\n  12 |     if(registered){s.runtime.registerApps([app]);await s.runtime.start({preload:false});}"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                        "column": 14,
+                        "line": 9
+                      },
+                      "message": "Error: page.evaluate: undefined\n\n   7 |   await page.context().addCookies([{name:\"batch03\",value:\"credential\",url:resourceOrigin.url,sameSite:\"Lax\"}]);\n   8 |   await addSlot(page,\"resource-slot\");\n>  9 |   await page.evaluate(async ({url,registered})=>{\n     |              ^\n  10 |     const s=window.__upstreamRuntime__!;\n  11 |     const app={name:\"resource-app\",container:\"#resource-slot\",entry:{type:\"html\" as const,url:url+\"/app/entry.html\",credentials:\"include\" as const}};\n  12 |     if(registered){s.runtime.registerApps([app]);await s.runtime.start({preload:false});}\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts:9:14"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-runtime-fixture.ts",
+                        "column": 29,
+                        "line": 77
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 7\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"message\": \"[object Event]\",\u001b[39m\n\u001b[31m+     \"name\": \"resource-app\",\u001b[39m\n\u001b[31m+     \"phase\": \"mount\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n   at upstream-runtime-fixture.ts:77\n\n  75 |         return result;\n  76 |       });\n> 77 |       expect(result.errors).toEqual(result.expectedErrors);\n     |                             ^\n  78 |       expect(result.children).toBe(0);\n  79 |       expect(pageErrors).toEqual([]);\n  80 |     }\n    at Object.base.extend.runtimeCase.auto (/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-runtime-fixture.ts:77:29)"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:44:24.083Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch03-resources-79b97-ic-script-registered-false--firefox/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch03-resources-79b97-ic-script-registered-false--firefox/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                    "column": 14,
+                    "line": 9
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "fbbe8fac4f26cb1464b8-15f6597ce4c283aac5b8",
+          "file": "upstream-batch03-resources.spec.ts",
+          "line": 6,
+          "column": 41
+        },
+        {
+          "title": "Q3090 applies declarative include credentials to entry and dynamic script (registered=true)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5636,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('button', { name: 'Request child API' })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'Request child API' })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('button', { name: 'Request child API' })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'Request child API' })\u001b[22m\n\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts:15:69",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                      "column": 69,
+                      "line": 15
+                    },
+                    "snippet": "  13 |     else s.handles.push(await s.runtime.mountApp(app));\n  14 |   },{url:resourceOrigin.url,registered});\n> 15 |   await expect(page.getByRole(\"button\",{name:\"Request child API\"})).toBeVisible();\n     |                                                                     ^\n  16 |   const requests=resourceOrigin.requests.filter(r=>r.path.endsWith(\"entry.html\")||r.path.endsWith(\"dynamic.js\"));\n  17 |   expect(requests.map(r=>r.path)).toEqual([\"/app/entry.html\",\"/app/dynamic.js\"]);\n  18 |   expect(requests.every(r=>r.cookie.includes(\"batch03=credential\"))).toBe(true);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                        "column": 69,
+                        "line": 15
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('button', { name: 'Request child API' })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'Request child API' })\u001b[22m\n\n\n  13 |     else s.handles.push(await s.runtime.mountApp(app));\n  14 |   },{url:resourceOrigin.url,registered});\n> 15 |   await expect(page.getByRole(\"button\",{name:\"Request child API\"})).toBeVisible();\n     |                                                                     ^\n  16 |   const requests=resourceOrigin.requests.filter(r=>r.path.endsWith(\"entry.html\")||r.path.endsWith(\"dynamic.js\"));\n  17 |   expect(requests.map(r=>r.path)).toEqual([\"/app/entry.html\",\"/app/dynamic.js\"]);\n  18 |   expect(requests.every(r=>r.cookie.includes(\"batch03=credential\"))).toBe(true);\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts:15:69"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:44:25.837Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch03-resources-d666e-mic-script-registered-true--firefox/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch03-resources-d666e-mic-script-registered-true--firefox/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                    "column": 69,
+                    "line": 15
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "fbbe8fac4f26cb1464b8-d92a9c4ee17d447159ac",
+          "file": "upstream-batch03-resources.spec.ts",
+          "line": 6,
+          "column": 41
+        },
+        {
+          "title": "Q3035 W1005 resolve static and dynamic image and SVG href before requests with host same-name decoys",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 707,
+                  "error": {
+                    "message": "Error: page.evaluate: undefined",
+                    "stack": "Error: page.evaluate: undefined\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts:26:14",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                      "column": 14,
+                      "line": 26
+                    },
+                    "snippet": "  24 |   page.on(\"request\",request=>{if(request.url().includes(\"same.svg\")&&!request.url().startsWith(resourceOrigin.url)) wrong.push(request.url());});\n  25 |   await addSlot(page,\"resource-slot\");\n> 26 |   await page.evaluate(async url=>{const s=window.__upstreamRuntime__!;s.handles.push(await s.runtime.mountApp({name:\"images\",container:\"#resource-slot\",entry:{type:\"html\",url:url+\"/app/entry.html\"}}));},resourceOrigin.url);\n     |              ^\n  27 |   await expect.poll(()=>page.locator(\"#resource-slot img\").evaluateAll(nodes=>nodes.map(n=>(n as HTMLImageElement).naturalWidth))).toEqual([13,13]);\n  28 |   for(const id of [\"static-svg\",\"dynamic-svg\"]){\n  29 |     expect(await page.locator('#'+id).evaluate(n=>n.getAttribute('href')||n.getAttributeNS('http://www.w3.org/1999/xlink','href'))).toBe(resourceOrigin.url+\"/app/same.svg\");"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                        "column": 14,
+                        "line": 26
+                      },
+                      "message": "Error: page.evaluate: undefined\n\n  24 |   page.on(\"request\",request=>{if(request.url().includes(\"same.svg\")&&!request.url().startsWith(resourceOrigin.url)) wrong.push(request.url());});\n  25 |   await addSlot(page,\"resource-slot\");\n> 26 |   await page.evaluate(async url=>{const s=window.__upstreamRuntime__!;s.handles.push(await s.runtime.mountApp({name:\"images\",container:\"#resource-slot\",entry:{type:\"html\",url:url+\"/app/entry.html\"}}));},resourceOrigin.url);\n     |              ^\n  27 |   await expect.poll(()=>page.locator(\"#resource-slot img\").evaluateAll(nodes=>nodes.map(n=>(n as HTMLImageElement).naturalWidth))).toEqual([13,13]);\n  28 |   for(const id of [\"static-svg\",\"dynamic-svg\"]){\n  29 |     expect(await page.locator('#'+id).evaluate(n=>n.getAttribute('href')||n.getAttributeNS('http://www.w3.org/1999/xlink','href'))).toBe(resourceOrigin.url+\"/app/same.svg\");\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts:26:14"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-runtime-fixture.ts",
+                        "column": 29,
+                        "line": 77
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 7\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"message\": \"[object Event]\",\u001b[39m\n\u001b[31m+     \"name\": \"images\",\u001b[39m\n\u001b[31m+     \"phase\": \"mount\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n   at upstream-runtime-fixture.ts:77\n\n  75 |         return result;\n  76 |       });\n> 77 |       expect(result.errors).toEqual(result.expectedErrors);\n     |                             ^\n  78 |       expect(result.children).toBe(0);\n  79 |       expect(pageErrors).toEqual([]);\n  80 |     }\n    at Object.base.extend.runtimeCase.auto (/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-runtime-fixture.ts:77:29)"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:44:32.180Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch03-resources-6839a--with-host-same-name-decoys-firefox/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch03-resources-6839a--with-host-same-name-decoys-firefox/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                    "column": 14,
+                    "line": 26
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "fbbe8fac4f26cb1464b8-a968caab1276e84b64d3",
+          "file": "upstream-batch03-resources.spec.ts",
+          "line": 22,
+          "column": 1
+        },
+        {
+          "title": "Q3056 W995 keep explicit child API origin and host Axios baseURL during Vue Router guards",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 14,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 713,
+                  "error": {
+                    "message": "Error: page.evaluate: undefined",
+                    "stack": "Error: page.evaluate: undefined\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts:44:16",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                      "column": 16,
+                      "line": 44
+                    },
+                    "snippet": "  42 |   },resourceOrigin.url);\n  43 |   for(let cycle=0;cycle<2;cycle++){\n> 44 |     await page.evaluate(async url=>{const s=window.__upstreamRuntime__!;s.handles.push(await s.runtime.mountApp({name:\"api-child\",container:\"#resource-slot\",entry:{type:\"html\",url:url+\"/app/entry.html\"}}));},resourceOrigin.url);\n     |                ^\n  45 |     const button=page.getByRole(\"button\",{name:\"Request child API\"}); await button.click();await expect(button).toHaveAttribute(\"data-result\",new URL(resourceOrigin.url).host);\n  46 |     const result=await page.evaluate(async cycle=>(Reflect.get(window,\"batch03HostRequests\") as {navigate(path:string):Promise<unknown>}).navigate('/host-'+cycle),cycle);\n  47 |     expect(result).toEqual({origin:new URL(resourceOrigin.url).host,path:\"/host-api/api/data\"});"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                        "column": 16,
+                        "line": 44
+                      },
+                      "message": "Error: page.evaluate: undefined\n\n  42 |   },resourceOrigin.url);\n  43 |   for(let cycle=0;cycle<2;cycle++){\n> 44 |     await page.evaluate(async url=>{const s=window.__upstreamRuntime__!;s.handles.push(await s.runtime.mountApp({name:\"api-child\",container:\"#resource-slot\",entry:{type:\"html\",url:url+\"/app/entry.html\"}}));},resourceOrigin.url);\n     |                ^\n  45 |     const button=page.getByRole(\"button\",{name:\"Request child API\"}); await button.click();await expect(button).toHaveAttribute(\"data-result\",new URL(resourceOrigin.url).host);\n  46 |     const result=await page.evaluate(async cycle=>(Reflect.get(window,\"batch03HostRequests\") as {navigate(path:string):Promise<unknown>}).navigate('/host-'+cycle),cycle);\n  47 |     expect(result).toEqual({origin:new URL(resourceOrigin.url).host,path:\"/host-api/api/data\"});\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts:44:16"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-runtime-fixture.ts",
+                        "column": 29,
+                        "line": 77
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 7\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"message\": \"[object Event]\",\u001b[39m\n\u001b[31m+     \"name\": \"api-child\",\u001b[39m\n\u001b[31m+     \"phase\": \"mount\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n   at upstream-runtime-fixture.ts:77\n\n  75 |         return result;\n  76 |       });\n> 77 |       expect(result.errors).toEqual(result.expectedErrors);\n     |                             ^\n  78 |       expect(result.children).toBe(0);\n  79 |       expect(pageErrors).toEqual([]);\n  80 |     }\n    at Object.base.extend.runtimeCase.auto (/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-runtime-fixture.ts:77:29)"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:44:33.565Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch03-resources-70d89-RL-during-Vue-Router-guards-firefox/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch03-resources-70d89-RL-during-Vue-Router-guards-firefox/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                    "column": 16,
+                    "line": 44
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "fbbe8fac4f26cb1464b8-aee6ba52c53a0d050dba",
+          "file": "upstream-batch03-resources.spec.ts",
+          "line": 36,
+          "column": 1
+        },
+        {
+          "title": "Q2982 keeps explicit favicon and manifest paths in application subdirectory without replacing host metadata",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 15,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 710,
+                  "error": {
+                    "message": "Error: page.evaluate: undefined",
+                    "stack": "Error: page.evaluate: undefined\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts:57:14",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                      "column": 14,
+                      "line": 57
+                    },
+                    "snippet": "  55 |   const before=await page.locator('head link[rel=\"icon\"],head link[rel=\"manifest\"]').evaluateAll(nodes=>nodes.map(n=>n.outerHTML));\n  56 |   await addSlot(page,\"resource-slot\");\n> 57 |   await page.evaluate(async url=>{const s=window.__upstreamRuntime__!;s.handles.push(await s.runtime.mountApp({name:\"metadata\",container:\"#resource-slot\",entry:{type:\"html\",url:url+\"/app/entry.html\"}}));},resourceOrigin.url);\n     |              ^\n  58 |   expect(await page.locator('#resource-slot link[rel=\"icon\"]').getAttribute('href')).toBe(resourceOrigin.url+\"/app/favicon.svg\");\n  59 |   expect(await page.locator('#resource-slot link[rel=\"manifest\"]').getAttribute('href')).toBe(resourceOrigin.url+\"/app/manifest.json\");\n  60 |   expect(await page.locator('head link[rel=\"icon\"],head link[rel=\"manifest\"]').evaluateAll(nodes=>nodes.map(n=>n.outerHTML))).toEqual(before);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                        "column": 14,
+                        "line": 57
+                      },
+                      "message": "Error: page.evaluate: undefined\n\n  55 |   const before=await page.locator('head link[rel=\"icon\"],head link[rel=\"manifest\"]').evaluateAll(nodes=>nodes.map(n=>n.outerHTML));\n  56 |   await addSlot(page,\"resource-slot\");\n> 57 |   await page.evaluate(async url=>{const s=window.__upstreamRuntime__!;s.handles.push(await s.runtime.mountApp({name:\"metadata\",container:\"#resource-slot\",entry:{type:\"html\",url:url+\"/app/entry.html\"}}));},resourceOrigin.url);\n     |              ^\n  58 |   expect(await page.locator('#resource-slot link[rel=\"icon\"]').getAttribute('href')).toBe(resourceOrigin.url+\"/app/favicon.svg\");\n  59 |   expect(await page.locator('#resource-slot link[rel=\"manifest\"]').getAttribute('href')).toBe(resourceOrigin.url+\"/app/manifest.json\");\n  60 |   expect(await page.locator('head link[rel=\"icon\"],head link[rel=\"manifest\"]').evaluateAll(nodes=>nodes.map(n=>n.outerHTML))).toEqual(before);\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts:57:14"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-runtime-fixture.ts",
+                        "column": 29,
+                        "line": 77
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 7\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"message\": \"[object Event]\",\u001b[39m\n\u001b[31m+     \"name\": \"metadata\",\u001b[39m\n\u001b[31m+     \"phase\": \"mount\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n   at upstream-runtime-fixture.ts:77\n\n  75 |         return result;\n  76 |       });\n> 77 |       expect(result.errors).toEqual(result.expectedErrors);\n     |                             ^\n  78 |       expect(result.children).toBe(0);\n  79 |       expect(pageErrors).toEqual([]);\n  80 |     }\n    at Object.base.extend.runtimeCase.auto (/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-runtime-fixture.ts:77:29)"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:44:34.945Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch03-resources-c1d42-out-replacing-host-metadata-firefox/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch03-resources-c1d42-out-replacing-host-metadata-firefox/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                    "column": 14,
+                    "line": 57
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "fbbe8fac4f26cb1464b8-5833307a85d7db9d9fc2",
+          "file": "upstream-batch03-resources.spec.ts",
+          "line": 54,
+          "column": 1
+        },
+        {
+          "title": "Q3021 mounts a nested runtime grandchild with distinct executing Realms and destroys the full tree",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 16,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 978,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:44:36.341Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fbbe8fac4f26cb1464b8-13f322a7569016804d6b",
+          "file": "upstream-batch03-resources.spec.ts",
+          "line": 63,
+          "column": 1
+        },
+        {
+          "title": "Q3090 applies declarative include credentials to entry and dynamic script (registered=false)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 22,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 584,
+                  "error": {
+                    "message": "Error: page.evaluate: [object Event]",
+                    "stack": "Error: page.evaluate: [object Event]\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts:9:14",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                      "column": 14,
+                      "line": 9
+                    },
+                    "snippet": "   7 |   await page.context().addCookies([{name:\"batch03\",value:\"credential\",url:resourceOrigin.url,sameSite:\"Lax\"}]);\n   8 |   await addSlot(page,\"resource-slot\");\n>  9 |   await page.evaluate(async ({url,registered})=>{\n     |              ^\n  10 |     const s=window.__upstreamRuntime__!;\n  11 |     const app={name:\"resource-app\",container:\"#resource-slot\",entry:{type:\"html\" as const,url:url+\"/app/entry.html\",credentials:\"include\" as const}};\n  12 |     if(registered){s.runtime.registerApps([app]);await s.runtime.start({preload:false});}"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                        "column": 14,
+                        "line": 9
+                      },
+                      "message": "Error: page.evaluate: [object Event]\n\n   7 |   await page.context().addCookies([{name:\"batch03\",value:\"credential\",url:resourceOrigin.url,sameSite:\"Lax\"}]);\n   8 |   await addSlot(page,\"resource-slot\");\n>  9 |   await page.evaluate(async ({url,registered})=>{\n     |              ^\n  10 |     const s=window.__upstreamRuntime__!;\n  11 |     const app={name:\"resource-app\",container:\"#resource-slot\",entry:{type:\"html\" as const,url:url+\"/app/entry.html\",credentials:\"include\" as const}};\n  12 |     if(registered){s.runtime.registerApps([app]);await s.runtime.start({preload:false});}\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts:9:14"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-runtime-fixture.ts",
+                        "column": 29,
+                        "line": 77
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 7\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"message\": \"[object Event]\",\u001b[39m\n\u001b[31m+     \"name\": \"resource-app\",\u001b[39m\n\u001b[31m+     \"phase\": \"mount\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n   at upstream-runtime-fixture.ts:77\n\n  75 |         return result;\n  76 |       });\n> 77 |       expect(result.errors).toEqual(result.expectedErrors);\n     |                             ^\n  78 |       expect(result.children).toBe(0);\n  79 |       expect(pageErrors).toEqual([]);\n  80 |     }\n    at Object.base.extend.runtimeCase.auto (/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-runtime-fixture.ts:77:29)"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:44:52.636Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch03-resources-79b97-ic-script-registered-false--webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch03-resources-79b97-ic-script-registered-false--webkit/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                    "column": 14,
+                    "line": 9
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "fbbe8fac4f26cb1464b8-9873c7e28d071d2d2106",
+          "file": "upstream-batch03-resources.spec.ts",
+          "line": 6,
+          "column": 41
+        },
+        {
+          "title": "Q3090 applies declarative include credentials to entry and dynamic script (registered=true)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 23,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5381,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('button', { name: 'Request child API' })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'Request child API' })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('button', { name: 'Request child API' })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'Request child API' })\u001b[22m\n\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts:15:69",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                      "column": 69,
+                      "line": 15
+                    },
+                    "snippet": "  13 |     else s.handles.push(await s.runtime.mountApp(app));\n  14 |   },{url:resourceOrigin.url,registered});\n> 15 |   await expect(page.getByRole(\"button\",{name:\"Request child API\"})).toBeVisible();\n     |                                                                     ^\n  16 |   const requests=resourceOrigin.requests.filter(r=>r.path.endsWith(\"entry.html\")||r.path.endsWith(\"dynamic.js\"));\n  17 |   expect(requests.map(r=>r.path)).toEqual([\"/app/entry.html\",\"/app/dynamic.js\"]);\n  18 |   expect(requests.every(r=>r.cookie.includes(\"batch03=credential\"))).toBe(true);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                        "column": 69,
+                        "line": 15
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('button', { name: 'Request child API' })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'Request child API' })\u001b[22m\n\n\n  13 |     else s.handles.push(await s.runtime.mountApp(app));\n  14 |   },{url:resourceOrigin.url,registered});\n> 15 |   await expect(page.getByRole(\"button\",{name:\"Request child API\"})).toBeVisible();\n     |                                                                     ^\n  16 |   const requests=resourceOrigin.requests.filter(r=>r.path.endsWith(\"entry.html\")||r.path.endsWith(\"dynamic.js\"));\n  17 |   expect(requests.map(r=>r.path)).toEqual([\"/app/entry.html\",\"/app/dynamic.js\"]);\n  18 |   expect(requests.every(r=>r.cookie.includes(\"batch03=credential\"))).toBe(true);\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts:15:69"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:44:53.642Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch03-resources-d666e-mic-script-registered-true--webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch03-resources-d666e-mic-script-registered-true--webkit/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                    "column": 69,
+                    "line": 15
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "fbbe8fac4f26cb1464b8-ef021e8c2aa8e72b8362",
+          "file": "upstream-batch03-resources.spec.ts",
+          "line": 6,
+          "column": 41
+        },
+        {
+          "title": "Q3035 W1005 resolve static and dynamic image and SVG href before requests with host same-name decoys",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 24,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 425,
+                  "error": {
+                    "message": "Error: page.evaluate: [object Event]",
+                    "stack": "Error: page.evaluate: [object Event]\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts:26:14",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                      "column": 14,
+                      "line": 26
+                    },
+                    "snippet": "  24 |   page.on(\"request\",request=>{if(request.url().includes(\"same.svg\")&&!request.url().startsWith(resourceOrigin.url)) wrong.push(request.url());});\n  25 |   await addSlot(page,\"resource-slot\");\n> 26 |   await page.evaluate(async url=>{const s=window.__upstreamRuntime__!;s.handles.push(await s.runtime.mountApp({name:\"images\",container:\"#resource-slot\",entry:{type:\"html\",url:url+\"/app/entry.html\"}}));},resourceOrigin.url);\n     |              ^\n  27 |   await expect.poll(()=>page.locator(\"#resource-slot img\").evaluateAll(nodes=>nodes.map(n=>(n as HTMLImageElement).naturalWidth))).toEqual([13,13]);\n  28 |   for(const id of [\"static-svg\",\"dynamic-svg\"]){\n  29 |     expect(await page.locator('#'+id).evaluate(n=>n.getAttribute('href')||n.getAttributeNS('http://www.w3.org/1999/xlink','href'))).toBe(resourceOrigin.url+\"/app/same.svg\");"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                        "column": 14,
+                        "line": 26
+                      },
+                      "message": "Error: page.evaluate: [object Event]\n\n  24 |   page.on(\"request\",request=>{if(request.url().includes(\"same.svg\")&&!request.url().startsWith(resourceOrigin.url)) wrong.push(request.url());});\n  25 |   await addSlot(page,\"resource-slot\");\n> 26 |   await page.evaluate(async url=>{const s=window.__upstreamRuntime__!;s.handles.push(await s.runtime.mountApp({name:\"images\",container:\"#resource-slot\",entry:{type:\"html\",url:url+\"/app/entry.html\"}}));},resourceOrigin.url);\n     |              ^\n  27 |   await expect.poll(()=>page.locator(\"#resource-slot img\").evaluateAll(nodes=>nodes.map(n=>(n as HTMLImageElement).naturalWidth))).toEqual([13,13]);\n  28 |   for(const id of [\"static-svg\",\"dynamic-svg\"]){\n  29 |     expect(await page.locator('#'+id).evaluate(n=>n.getAttribute('href')||n.getAttributeNS('http://www.w3.org/1999/xlink','href'))).toBe(resourceOrigin.url+\"/app/same.svg\");\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts:26:14"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-runtime-fixture.ts",
+                        "column": 29,
+                        "line": 77
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 7\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"message\": \"[object Event]\",\u001b[39m\n\u001b[31m+     \"name\": \"images\",\u001b[39m\n\u001b[31m+     \"phase\": \"mount\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n   at upstream-runtime-fixture.ts:77\n\n  75 |         return result;\n  76 |       });\n> 77 |       expect(result.errors).toEqual(result.expectedErrors);\n     |                             ^\n  78 |       expect(result.children).toBe(0);\n  79 |       expect(pageErrors).toEqual([]);\n  80 |     }\n    at Object.base.extend.runtimeCase.auto (/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-runtime-fixture.ts:77:29)"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:44:59.363Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch03-resources-6839a--with-host-same-name-decoys-webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch03-resources-6839a--with-host-same-name-decoys-webkit/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                    "column": 14,
+                    "line": 26
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "fbbe8fac4f26cb1464b8-64e25d9b5988b522e308",
+          "file": "upstream-batch03-resources.spec.ts",
+          "line": 22,
+          "column": 1
+        },
+        {
+          "title": "Q3056 W995 keep explicit child API origin and host Axios baseURL during Vue Router guards",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 25,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 459,
+                  "error": {
+                    "message": "Error: page.evaluate: [object Event]",
+                    "stack": "Error: page.evaluate: [object Event]\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts:44:16",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                      "column": 16,
+                      "line": 44
+                    },
+                    "snippet": "  42 |   },resourceOrigin.url);\n  43 |   for(let cycle=0;cycle<2;cycle++){\n> 44 |     await page.evaluate(async url=>{const s=window.__upstreamRuntime__!;s.handles.push(await s.runtime.mountApp({name:\"api-child\",container:\"#resource-slot\",entry:{type:\"html\",url:url+\"/app/entry.html\"}}));},resourceOrigin.url);\n     |                ^\n  45 |     const button=page.getByRole(\"button\",{name:\"Request child API\"}); await button.click();await expect(button).toHaveAttribute(\"data-result\",new URL(resourceOrigin.url).host);\n  46 |     const result=await page.evaluate(async cycle=>(Reflect.get(window,\"batch03HostRequests\") as {navigate(path:string):Promise<unknown>}).navigate('/host-'+cycle),cycle);\n  47 |     expect(result).toEqual({origin:new URL(resourceOrigin.url).host,path:\"/host-api/api/data\"});"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                        "column": 16,
+                        "line": 44
+                      },
+                      "message": "Error: page.evaluate: [object Event]\n\n  42 |   },resourceOrigin.url);\n  43 |   for(let cycle=0;cycle<2;cycle++){\n> 44 |     await page.evaluate(async url=>{const s=window.__upstreamRuntime__!;s.handles.push(await s.runtime.mountApp({name:\"api-child\",container:\"#resource-slot\",entry:{type:\"html\",url:url+\"/app/entry.html\"}}));},resourceOrigin.url);\n     |                ^\n  45 |     const button=page.getByRole(\"button\",{name:\"Request child API\"}); await button.click();await expect(button).toHaveAttribute(\"data-result\",new URL(resourceOrigin.url).host);\n  46 |     const result=await page.evaluate(async cycle=>(Reflect.get(window,\"batch03HostRequests\") as {navigate(path:string):Promise<unknown>}).navigate('/host-'+cycle),cycle);\n  47 |     expect(result).toEqual({origin:new URL(resourceOrigin.url).host,path:\"/host-api/api/data\"});\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts:44:16"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-runtime-fixture.ts",
+                        "column": 29,
+                        "line": 77
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 7\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"message\": \"[object Event]\",\u001b[39m\n\u001b[31m+     \"name\": \"api-child\",\u001b[39m\n\u001b[31m+     \"phase\": \"mount\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n   at upstream-runtime-fixture.ts:77\n\n  75 |         return result;\n  76 |       });\n> 77 |       expect(result.errors).toEqual(result.expectedErrors);\n     |                             ^\n  78 |       expect(result.children).toBe(0);\n  79 |       expect(pageErrors).toEqual([]);\n  80 |     }\n    at Object.base.extend.runtimeCase.auto (/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-runtime-fixture.ts:77:29)"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:45:00.128Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch03-resources-70d89-RL-during-Vue-Router-guards-webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch03-resources-70d89-RL-during-Vue-Router-guards-webkit/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                    "column": 16,
+                    "line": 44
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "fbbe8fac4f26cb1464b8-e7b16e903efd67930602",
+          "file": "upstream-batch03-resources.spec.ts",
+          "line": 36,
+          "column": 1
+        },
+        {
+          "title": "Q2982 keeps explicit favicon and manifest paths in application subdirectory without replacing host metadata",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 26,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 458,
+                  "error": {
+                    "message": "Error: page.evaluate: [object Event]",
+                    "stack": "Error: page.evaluate: [object Event]\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts:57:14",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                      "column": 14,
+                      "line": 57
+                    },
+                    "snippet": "  55 |   const before=await page.locator('head link[rel=\"icon\"],head link[rel=\"manifest\"]').evaluateAll(nodes=>nodes.map(n=>n.outerHTML));\n  56 |   await addSlot(page,\"resource-slot\");\n> 57 |   await page.evaluate(async url=>{const s=window.__upstreamRuntime__!;s.handles.push(await s.runtime.mountApp({name:\"metadata\",container:\"#resource-slot\",entry:{type:\"html\",url:url+\"/app/entry.html\"}}));},resourceOrigin.url);\n     |              ^\n  58 |   expect(await page.locator('#resource-slot link[rel=\"icon\"]').getAttribute('href')).toBe(resourceOrigin.url+\"/app/favicon.svg\");\n  59 |   expect(await page.locator('#resource-slot link[rel=\"manifest\"]').getAttribute('href')).toBe(resourceOrigin.url+\"/app/manifest.json\");\n  60 |   expect(await page.locator('head link[rel=\"icon\"],head link[rel=\"manifest\"]').evaluateAll(nodes=>nodes.map(n=>n.outerHTML))).toEqual(before);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                        "column": 14,
+                        "line": 57
+                      },
+                      "message": "Error: page.evaluate: [object Event]\n\n  55 |   const before=await page.locator('head link[rel=\"icon\"],head link[rel=\"manifest\"]').evaluateAll(nodes=>nodes.map(n=>n.outerHTML));\n  56 |   await addSlot(page,\"resource-slot\");\n> 57 |   await page.evaluate(async url=>{const s=window.__upstreamRuntime__!;s.handles.push(await s.runtime.mountApp({name:\"metadata\",container:\"#resource-slot\",entry:{type:\"html\",url:url+\"/app/entry.html\"}}));},resourceOrigin.url);\n     |              ^\n  58 |   expect(await page.locator('#resource-slot link[rel=\"icon\"]').getAttribute('href')).toBe(resourceOrigin.url+\"/app/favicon.svg\");\n  59 |   expect(await page.locator('#resource-slot link[rel=\"manifest\"]').getAttribute('href')).toBe(resourceOrigin.url+\"/app/manifest.json\");\n  60 |   expect(await page.locator('head link[rel=\"icon\"],head link[rel=\"manifest\"]').evaluateAll(nodes=>nodes.map(n=>n.outerHTML))).toEqual(before);\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts:57:14"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-runtime-fixture.ts",
+                        "column": 29,
+                        "line": 77
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 7\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"message\": \"[object Event]\",\u001b[39m\n\u001b[31m+     \"name\": \"metadata\",\u001b[39m\n\u001b[31m+     \"phase\": \"mount\",\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n   at upstream-runtime-fixture.ts:77\n\n  75 |         return result;\n  76 |       });\n> 77 |       expect(result.errors).toEqual(result.expectedErrors);\n     |                             ^\n  78 |       expect(result.children).toBe(0);\n  79 |       expect(pageErrors).toEqual([]);\n  80 |     }\n    at Object.base.extend.runtimeCase.auto (/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-runtime-fixture.ts:77:29)"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:45:00.928Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch03-resources-c1d42-out-replacing-host-metadata-webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch03-resources-c1d42-out-replacing-host-metadata-webkit/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                    "column": 14,
+                    "line": 57
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "fbbe8fac4f26cb1464b8-590132b7724b745a0e8c",
+          "file": "upstream-batch03-resources.spec.ts",
+          "line": 54,
+          "column": 1
+        },
+        {
+          "title": "Q3021 mounts a nested runtime grandchild with distinct executing Realms and destroys the full tree",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 27,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 663,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:45:01.721Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fbbe8fac4f26cb1464b8-decdb03daf9b3f4b591d",
+          "file": "upstream-batch03-resources.spec.ts",
+          "line": 63,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "upstream-batch03-runtime-lifecycle.spec.ts",
+      "file": "upstream-batch03-runtime-lifecycle.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Q3031 Q3005 isolates delayed manual unmount from an automatic instance of the same Vite Vue entry",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 756,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:44:13.770Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0ad97bbbe0f9300626a6-fccde358d6f857b9b3cc",
+          "file": "upstream-batch03-runtime-lifecycle.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "W1054 supplies fresh login props after disposing and recreating an alive application",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 195,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:44:14.630Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0ad97bbbe0f9300626a6-5402004f47194c4aa67a",
+          "file": "upstream-batch03-runtime-lifecycle.spec.ts",
+          "line": 30,
+          "column": 1
+        },
+        {
+          "title": "Q2987 clears real Vue onBeforeUnmount intervals during a real route switch while a sibling clock continues",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 751,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:44:14.829Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0ad97bbbe0f9300626a6-812f938a149d2d8b6c4a",
+          "file": "upstream-batch03-runtime-lifecycle.spec.ts",
+          "line": 47,
+          "column": 1
+        },
+        {
+          "title": "Q3031 Q3005 isolates delayed manual unmount from an automatic instance of the same Vite Vue entry",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 17,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 949,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:44:38.025Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0ad97bbbe0f9300626a6-07d9cb060343e05c9ed7",
+          "file": "upstream-batch03-runtime-lifecycle.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "W1054 supplies fresh login props after disposing and recreating an alive application",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 17,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 300,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:44:39.332Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0ad97bbbe0f9300626a6-fd61513180aba7d915f2",
+          "file": "upstream-batch03-runtime-lifecycle.spec.ts",
+          "line": 30,
+          "column": 1
+        },
+        {
+          "title": "Q2987 clears real Vue onBeforeUnmount intervals during a real route switch while a sibling clock continues",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 17,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 742,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:44:39.636Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0ad97bbbe0f9300626a6-5f9477bb57dc19faef72",
+          "file": "upstream-batch03-runtime-lifecycle.spec.ts",
+          "line": 47,
+          "column": 1
+        },
+        {
+          "title": "Q3031 Q3005 isolates delayed manual unmount from an automatic instance of the same Vite Vue entry",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 28,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 742,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:45:02.707Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0ad97bbbe0f9300626a6-7bfc2706799c07b1c14d",
+          "file": "upstream-batch03-runtime-lifecycle.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "W1054 supplies fresh login props after disposing and recreating an alive application",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 28,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 438,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:45:03.587Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0ad97bbbe0f9300626a6-b505dae3a2982d31d03f",
+          "file": "upstream-batch03-runtime-lifecycle.spec.ts",
+          "line": 30,
+          "column": 1
+        },
+        {
+          "title": "Q2987 clears real Vue onBeforeUnmount intervals during a real route switch while a sibling clock continues",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 28,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 789,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:45:04.029Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0ad97bbbe0f9300626a6-435ff21f06f08eb37017",
+          "file": "upstream-batch03-runtime-lifecycle.spec.ts",
+          "line": 47,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "upstream-batch03-runtime-network.spec.ts",
+      "file": "upstream-batch03-runtime-network.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Q3036 recovers B at the identical URL after A-offline-B-A-online-B without reloading the host",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 235,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:44:15.783Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "97fe1f187905b1f39257-b0b1a64601d3bd49e30c",
+          "file": "upstream-batch03-runtime-network.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "Q3036 recovers B at the identical URL after A-offline-B-A-online-B without reloading the host",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 18,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 728,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:44:40.721Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "97fe1f187905b1f39257-7ca73cb921bb5d05701c",
+          "file": "upstream-batch03-runtime-network.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "Q3036 recovers B at the identical URL after A-offline-B-A-online-B without reloading the host",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 29,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 531,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:45:05.022Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "97fe1f187905b1f39257-f9c54a38d5e50e1e3ef5",
+          "file": "upstream-batch03-runtime-network.spec.ts",
+          "line": 6,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "upstream-batch03-runtime-prewarm.spec.ts",
+      "file": "upstream-batch03-runtime-prewarm.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "W991 preserves root CSS variables from preload and pre-execution through alive activation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 242,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:44:16.294Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7273037ba2264b2eee17-bb39551fb733cc069d64",
+          "file": "upstream-batch03-runtime-prewarm.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "W1033 sends a notification through an explicit host service while the prewarmed application remains hidden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 162,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:44:16.637Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7273037ba2264b2eee17-e3023eac7f018065306e",
+          "file": "upstream-batch03-runtime-prewarm.spec.ts",
+          "line": 54,
+          "column": 1
+        },
+        {
+          "title": "W991 preserves root CSS variables from preload and pre-execution through alive activation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 19,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 766,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:44:42.102Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7273037ba2264b2eee17-c4935a3e3e525dbd6ed9",
+          "file": "upstream-batch03-runtime-prewarm.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "W1033 sends a notification through an explicit host service while the prewarmed application remains hidden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 19,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 253,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:44:43.211Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7273037ba2264b2eee17-77156ea4f52d3ba5de49",
+          "file": "upstream-batch03-runtime-prewarm.spec.ts",
+          "line": 54,
+          "column": 1
+        },
+        {
+          "title": "W991 preserves root CSS variables from preload and pre-execution through alive activation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 30,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 548,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:45:05.876Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7273037ba2264b2eee17-3942ca44465cf3923eed",
+          "file": "upstream-batch03-runtime-prewarm.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "W1033 sends a notification through an explicit host service while the prewarmed application remains hidden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 30,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 283,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:45:06.561Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7273037ba2264b2eee17-3f0f82f3377a33a50aed",
+          "file": "upstream-batch03-runtime-prewarm.spec.ts",
+          "line": 54,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "upstream-batch03-runtime-vue.spec.ts",
+      "file": "upstream-batch03-runtime-vue.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "W1003 recreates real Vue Router and vue-i18n instances after A-B-A lifecycle destruction",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 722,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:44:16.985Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "106d677d0121906b8652-e40d1d12c8dde6885d66",
+          "file": "upstream-batch03-runtime-vue.spec.ts",
+          "line": 7,
+          "column": 1
+        },
+        {
+          "title": "W1043 W1031 W1030 forwards host route props and history state into a real Vue router without rewriting native location",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5187,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[data-route]')\nExpected: \u001b[32m\"/orders\u001b[7m?filter=open\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"/orders\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-route]')\u001b[22m\n\u001b[2m    14 × locator resolved to <p data-route=\"\">/orders</p>\u001b[22m\n\u001b[2m       - unexpected value \"/orders\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[data-route]')\nExpected: \u001b[32m\"/orders\u001b[7m?filter=open\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"/orders\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-route]')\u001b[22m\n\u001b[2m    14 × locator resolved to <p data-route=\"\">/orders</p>\u001b[22m\n\u001b[2m       - unexpected value \"/orders\"\u001b[22m\n\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-runtime-vue.spec.ts:40:46",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-runtime-vue.spec.ts",
+                      "column": 46,
+                      "line": 40
+                    },
+                    "snippet": "  38 |   await expect(page.locator('[data-history-state]')).toHaveText('initial-private');\n  39 |   await page.evaluate(() => window.__upstreamRuntime__!.handles[0]!.update({ route: '/orders?filter=open', routeState: { secret: 'order-private' } }));\n> 40 |   await expect(page.locator('[data-route]')).toHaveText('/orders?filter=open');\n     |                                              ^\n  41 |   await expect(page.locator('[data-history-state]')).toHaveText('order-private');\n  42 |   await page.getByRole('button', { name: 'Open details', exact: true }).click();\n  43 |   await expect(page.locator('[data-route]')).toHaveText('/details');"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-runtime-vue.spec.ts",
+                        "column": 46,
+                        "line": 40
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[data-route]')\nExpected: \u001b[32m\"/orders\u001b[7m?filter=open\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"/orders\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-route]')\u001b[22m\n\u001b[2m    14 × locator resolved to <p data-route=\"\">/orders</p>\u001b[22m\n\u001b[2m       - unexpected value \"/orders\"\u001b[22m\n\n\n  38 |   await expect(page.locator('[data-history-state]')).toHaveText('initial-private');\n  39 |   await page.evaluate(() => window.__upstreamRuntime__!.handles[0]!.update({ route: '/orders?filter=open', routeState: { secret: 'order-private' } }));\n> 40 |   await expect(page.locator('[data-route]')).toHaveText('/orders?filter=open');\n     |                                              ^\n  41 |   await expect(page.locator('[data-history-state]')).toHaveText('order-private');\n  42 |   await page.getByRole('button', { name: 'Open details', exact: true }).click();\n  43 |   await expect(page.locator('[data-route]')).toHaveText('/details');\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-runtime-vue.spec.ts:40:46"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:44:17.803Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch03-runtime-v-548ae-t-rewriting-native-location-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch03-runtime-v-548ae-t-rewriting-native-location-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-runtime-vue.spec.ts",
+                    "column": 46,
+                    "line": 40
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "106d677d0121906b8652-11d3022ddf88e5858cb5",
+          "file": "upstream-batch03-runtime-vue.spec.ts",
+          "line": 28,
+          "column": 1
+        },
+        {
+          "title": "W1020 delivers host route events to an alive Vue router across hidden and reactivated states exactly once",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 10,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 604,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:44:23.202Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "106d677d0121906b8652-0438dcd28f887f6d8cb2",
+          "file": "upstream-batch03-runtime-vue.spec.ts",
+          "line": 59,
+          "column": 1
+        },
+        {
+          "title": "W1003 recreates real Vue Router and vue-i18n instances after A-B-A lifecycle destruction",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 20,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1191,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:44:43.793Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "106d677d0121906b8652-c20705ef0f40dc3e8c68",
+          "file": "upstream-batch03-runtime-vue.spec.ts",
+          "line": 7,
+          "column": 1
+        },
+        {
+          "title": "W1043 W1031 W1030 forwards host route props and history state into a real Vue router without rewriting native location",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 20,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5271,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[data-route]')\nExpected: \u001b[32m\"/orders\u001b[7m?filter=open\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"/orders\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-route]')\u001b[22m\n\u001b[2m    14 × locator resolved to <p data-route=\"\">/orders</p>\u001b[22m\n\u001b[2m       - unexpected value \"/orders\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[data-route]')\nExpected: \u001b[32m\"/orders\u001b[7m?filter=open\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"/orders\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-route]')\u001b[22m\n\u001b[2m    14 × locator resolved to <p data-route=\"\">/orders</p>\u001b[22m\n\u001b[2m       - unexpected value \"/orders\"\u001b[22m\n\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-runtime-vue.spec.ts:40:46",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-runtime-vue.spec.ts",
+                      "column": 46,
+                      "line": 40
+                    },
+                    "snippet": "  38 |   await expect(page.locator('[data-history-state]')).toHaveText('initial-private');\n  39 |   await page.evaluate(() => window.__upstreamRuntime__!.handles[0]!.update({ route: '/orders?filter=open', routeState: { secret: 'order-private' } }));\n> 40 |   await expect(page.locator('[data-route]')).toHaveText('/orders?filter=open');\n     |                                              ^\n  41 |   await expect(page.locator('[data-history-state]')).toHaveText('order-private');\n  42 |   await page.getByRole('button', { name: 'Open details', exact: true }).click();\n  43 |   await expect(page.locator('[data-route]')).toHaveText('/details');"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-runtime-vue.spec.ts",
+                        "column": 46,
+                        "line": 40
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[data-route]')\nExpected: \u001b[32m\"/orders\u001b[7m?filter=open\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"/orders\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-route]')\u001b[22m\n\u001b[2m    14 × locator resolved to <p data-route=\"\">/orders</p>\u001b[22m\n\u001b[2m       - unexpected value \"/orders\"\u001b[22m\n\n\n  38 |   await expect(page.locator('[data-history-state]')).toHaveText('initial-private');\n  39 |   await page.evaluate(() => window.__upstreamRuntime__!.handles[0]!.update({ route: '/orders?filter=open', routeState: { secret: 'order-private' } }));\n> 40 |   await expect(page.locator('[data-route]')).toHaveText('/orders?filter=open');\n     |                                              ^\n  41 |   await expect(page.locator('[data-history-state]')).toHaveText('order-private');\n  42 |   await page.getByRole('button', { name: 'Open details', exact: true }).click();\n  43 |   await expect(page.locator('[data-route]')).toHaveText('/details');\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-runtime-vue.spec.ts:40:46"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:44:45.366Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch03-runtime-v-548ae-t-rewriting-native-location-firefox/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch03-runtime-v-548ae-t-rewriting-native-location-firefox/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-runtime-vue.spec.ts",
+                    "column": 46,
+                    "line": 40
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "106d677d0121906b8652-7b0fefef7044e778ddd4",
+          "file": "upstream-batch03-runtime-vue.spec.ts",
+          "line": 28,
+          "column": 1
+        },
+        {
+          "title": "W1020 delivers host route events to an alive Vue router across hidden and reactivated states exactly once",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 21,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 978,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:44:50.970Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "106d677d0121906b8652-8fba67ba4e9a39203a19",
+          "file": "upstream-batch03-runtime-vue.spec.ts",
+          "line": 59,
+          "column": 1
+        },
+        {
+          "title": "W1003 recreates real Vue Router and vue-i18n instances after A-B-A lifecycle destruction",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 31,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 887,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:45:07.032Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "106d677d0121906b8652-9823ee2f3ce32795bf33",
+          "file": "upstream-batch03-runtime-vue.spec.ts",
+          "line": 7,
+          "column": 1
+        },
+        {
+          "title": "W1043 W1031 W1030 forwards host route props and history state into a real Vue router without rewriting native location",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 31,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5298,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[data-route]')\nExpected: \u001b[32m\"/orders\u001b[7m?filter=open\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"/orders\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-route]')\u001b[22m\n\u001b[2m    14 × locator resolved to <p data-route=\"\">/orders</p>\u001b[22m\n\u001b[2m       - unexpected value \"/orders\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[data-route]')\nExpected: \u001b[32m\"/orders\u001b[7m?filter=open\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"/orders\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-route]')\u001b[22m\n\u001b[2m    14 × locator resolved to <p data-route=\"\">/orders</p>\u001b[22m\n\u001b[2m       - unexpected value \"/orders\"\u001b[22m\n\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-runtime-vue.spec.ts:40:46",
+                    "location": {
+                      "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-runtime-vue.spec.ts",
+                      "column": 46,
+                      "line": 40
+                    },
+                    "snippet": "  38 |   await expect(page.locator('[data-history-state]')).toHaveText('initial-private');\n  39 |   await page.evaluate(() => window.__upstreamRuntime__!.handles[0]!.update({ route: '/orders?filter=open', routeState: { secret: 'order-private' } }));\n> 40 |   await expect(page.locator('[data-route]')).toHaveText('/orders?filter=open');\n     |                                              ^\n  41 |   await expect(page.locator('[data-history-state]')).toHaveText('order-private');\n  42 |   await page.getByRole('button', { name: 'Open details', exact: true }).click();\n  43 |   await expect(page.locator('[data-route]')).toHaveText('/details');"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-runtime-vue.spec.ts",
+                        "column": 46,
+                        "line": 40
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[data-route]')\nExpected: \u001b[32m\"/orders\u001b[7m?filter=open\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"/orders\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-route]')\u001b[22m\n\u001b[2m    14 × locator resolved to <p data-route=\"\">/orders</p>\u001b[22m\n\u001b[2m       - unexpected value \"/orders\"\u001b[22m\n\n\n  38 |   await expect(page.locator('[data-history-state]')).toHaveText('initial-private');\n  39 |   await page.evaluate(() => window.__upstreamRuntime__!.handles[0]!.update({ route: '/orders?filter=open', routeState: { secret: 'order-private' } }));\n> 40 |   await expect(page.locator('[data-route]')).toHaveText('/orders?filter=open');\n     |                                              ^\n  41 |   await expect(page.locator('[data-history-state]')).toHaveText('order-private');\n  42 |   await page.getByRole('button', { name: 'Open details', exact: true }).click();\n  43 |   await expect(page.locator('[data-route]')).toHaveText('/details');\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-runtime-vue.spec.ts:40:46"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:45:08.069Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch03-runtime-v-548ae-t-rewriting-native-location-webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch03-runtime-v-548ae-t-rewriting-native-location-webkit/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-runtime-vue.spec.ts",
+                    "column": 46,
+                    "line": 40
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "106d677d0121906b8652-82a4e51b789f5333115f",
+          "file": "upstream-batch03-runtime-vue.spec.ts",
+          "line": 28,
+          "column": 1
+        },
+        {
+          "title": "W1020 delivers host route events to an alive Vue router across hidden and reactivated states exactly once",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 32,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 765,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:45:13.576Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "106d677d0121906b8652-743787440e727730a143",
+          "file": "upstream-batch03-runtime-vue.spec.ts",
+          "line": 59,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-08T10:44:01.615Z",
+    "duration": 72913.439,
+    "expected": 27,
+    "skipped": 0,
+    "unexpected": 18,
+    "flaky": 0
+  }
+}

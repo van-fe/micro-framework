@@ -1,0 +1,45 @@
+{
+  "collectionBatch": "2026-09-09-batch-04",
+  "runId": "2026-09-09-upstream-05",
+  "completedAt": "2026-09-09T04:00:03.007637+00:00",
+  "newIssues": 20,
+  "cumulativeIssues": 140,
+  "statusCounts": {
+    "partial-coverage": 10,
+    "regression-passed": 8,
+    "fixed": 2
+  },
+  "old120IssuesAndSourcesPreserved": true,
+  "preciseBugNew": 0,
+  "supplementaryNew": 20,
+  "exactBugShortfallPerRepository": 10,
+  "engines": [
+    "chromium",
+    "firefox",
+    "webkit"
+  ],
+  "realSafari": false,
+  "releaseReady": false,
+  "issueStatuses": {
+    "umijs/qiankun#3093": "partial-coverage",
+    "umijs/qiankun#3067": "regression-passed",
+    "umijs/qiankun#3042": "partial-coverage",
+    "umijs/qiankun#3018": "fixed",
+    "umijs/qiankun#3007": "regression-passed",
+    "umijs/qiankun#3001": "regression-passed",
+    "umijs/qiankun#2991": "partial-coverage",
+    "umijs/qiankun#2990": "regression-passed",
+    "umijs/qiankun#2976": "partial-coverage",
+    "umijs/qiankun#3129": "regression-passed",
+    "Tencent/wujie#1057": "partial-coverage",
+    "Tencent/wujie#1045": "partial-coverage",
+    "Tencent/wujie#1044": "partial-coverage",
+    "Tencent/wujie#1039": "regression-passed",
+    "Tencent/wujie#1038": "fixed",
+    "Tencent/wujie#1017": "partial-coverage",
+    "Tencent/wujie#1012": "regression-passed",
+    "Tencent/wujie#992": "partial-coverage",
+    "Tencent/wujie#1007": "partial-coverage",
+    "Tencent/wujie#976": "regression-passed"
+  }
+}

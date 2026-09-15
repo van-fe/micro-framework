@@ -1,0 +1,73 @@
+[
+  {
+    "phase": "architecture",
+    "argv": [
+      "bun",
+      "run",
+      "check:architecture"
+    ],
+    "env": {},
+    "startedAt": "2026-09-09T03:48:12.025144+00:00",
+    "finishedAt": "2026-09-09T03:48:12.057470+00:00",
+    "exitCode": 0,
+    "log": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-architecture.log"
+  },
+  {
+    "phase": "typecheck",
+    "argv": [
+      "bun",
+      "run",
+      "typecheck"
+    ],
+    "env": {},
+    "startedAt": "2026-09-09T03:48:12.057790+00:00",
+    "finishedAt": "2026-09-09T03:48:22.093373+00:00",
+    "exitCode": 0,
+    "log": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-typecheck.log"
+  },
+  {
+    "phase": "build",
+    "argv": [
+      "bun",
+      "run",
+      "build"
+    ],
+    "env": {},
+    "startedAt": "2026-09-09T03:48:22.093772+00:00",
+    "finishedAt": "2026-09-09T03:48:26.988765+00:00",
+    "exitCode": 0,
+    "log": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-build.log"
+  },
+  {
+    "phase": "unit",
+    "argv": [
+      "bun",
+      "run",
+      "test:unit",
+      "--reporter=verbose",
+      "--reporter=json",
+      "--outputFile=/Users/fanfangbo/workspace/micro-framework/tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-unit.json"
+    ],
+    "env": {},
+    "startedAt": "2026-09-09T03:48:26.989368+00:00",
+    "finishedAt": "2026-09-09T03:48:28.285490+00:00",
+    "exitCode": 0,
+    "log": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-unit.log"
+  },
+  {
+    "phase": "browser",
+    "argv": [
+      "bun",
+      "run",
+      "test:browser",
+      "--reporter=verbose",
+      "--reporter=json",
+      "--outputFile=/Users/fanfangbo/workspace/micro-framework/tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-browser.json"
+    ],
+    "env": {},
+    "startedAt": "2026-09-09T03:48:28.285798+00:00",
+    "finishedAt": "2026-09-09T03:48:41.712674+00:00",
+    "exitCode": 1,
+    "log": "tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/final-browser.log"
+  }
+]

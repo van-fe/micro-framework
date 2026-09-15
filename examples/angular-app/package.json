@@ -1,0 +1,32 @@
+{
+  "name": "@micro-framework/example-angular",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "compile": "ngc -p tsconfig.app.json",
+    "build": "bun run compile && vite build",
+    "build:webpack": "bun run compile && webpack --config webpack.config.mjs",
+    "typecheck": "ngc -p tsconfig.app.json --noEmit"
+  },
+  "dependencies": {
+    "@micro-framework/adapter-angular": "workspace:*",
+    "@micro-framework/runtime": "workspace:*",
+    "@angular/core": "22.1.5",
+    "@angular/common": "22.1.5",
+    "@angular/platform-browser": "22.1.5",
+    "rxjs": "7.8.2"
+  },
+  "devDependencies": {
+    "@angular/compiler": "22.1.5",
+    "@angular/compiler-cli": "22.1.5",
+    "@micro-framework/vite-plugin": "workspace:*",
+    "@micro-framework/webpack-plugin": "workspace:*",
+    "webpack": "5.110.3",
+    "webpack-cli": "7.2.3",
+    "typescript": "6.0.3",
+    "vite": "8.2.2",
+    "@babel/core": "8.0.1"
+  }
+}

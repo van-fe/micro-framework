@@ -1,0 +1,5 @@
+{
+  "command": "PLAYWRIGHT_JSON_OUTPUT_NAME=tests/upstream-issues/runs/2026-09-09-upstream-05-evidence/runtime-network-final.json bunx playwright test tests/e2e/upstream-batch04-runtime-network.spec.ts --reporter=json,line",
+  "exitCode": 1,
+  "toolSessionId": 34201
+}

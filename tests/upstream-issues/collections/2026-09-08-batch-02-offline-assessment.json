@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "collectionBatch": "2026-09-08-batch-02",
+  "scope": "Automatic atomic caching of the native same-origin Realm HTML response preserves response policy headers. The host is already loaded and Service Worker controlled; both host and application resource servers close their sockets, independent network requests fail, and a new Runtime creates a fresh iframe, mounts the cached module graph, and handles a real click.",
+  "relatedFixes": ["offline-cache automatically includes the required native Realm document"],
+  "unit": {
+    "report": "tests/upstream-issues/runs/2026-09-08-batch-02-offline-cache-unit.json",
+    "exitCode": 0,
+    "passed": 13
+  },
+  "production": {
+    "report": "tests/upstream-issues/runs/2026-09-08-batch-02-offline-production-socket.json",
+    "exitCode": 0,
+    "logicalCases": 2,
+    "passed": 6,
+    "projects": ["chromium", "firefox", "webkit"],
+    "tests": [
+      "atomically activates a host-owned application cache and serves it offline",
+      "creates a new native Realm and mounts the complete cached module graph while offline"
+    ]
+  },
+  "iterations": [
+    {
+      "report": "tests/upstream-issues/runs/2026-09-08-batch-02-offline-production-first.json",
+      "exitCode": 1,
+      "passed": 4,
+      "failed": 2,
+      "cause": "The test omitted an emitted static bootstrap helper. WebKit also failed native cached iframe navigation under setOffline(true)."
+    },
+    {
+      "report": "tests/upstream-issues/runs/2026-09-08-batch-02-offline-production-graph-complete.json",
+      "exitCode": 1,
+      "passed": 5,
+      "failed": 1,
+      "cause": "Only the native WebKit setOffline iframe navigation limitation remained."
+    }
+  ],
+  "nativeControl": {
+    "report": "tests/upstream-issues/runs/2026-09-08-batch-02-native-offline-iframe.json",
+    "script": "scripts/diagnose-offline-iframe-navigation.mjs",
+    "result": "Without framework code, Chromium and Firefox pass setOffline and socket-failure cases. WebKit reports an internal navigation error with setOffline(true), but passes when the real server closes connections."
+  },
+  "limits": [
+    "The failed test graph and browser offline simulation are not framework red/green evidence.",
+    "Actual Safari offline behavior and initial page loading after a complete browser shutdown were not tested.",
+    "Bootstrap and application dependency graphs remain explicit; query parameters are not ignored.",
+    "Legacy cache records must be cached again to include the native Realm HTML resource."
+  ]
+}

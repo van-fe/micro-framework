@@ -1,0 +1,52 @@
+[WebServer] (node:65188) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+[WebServer] (node:65189) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+
+Running 18 tests using 1 worker
+
+(node:65195) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/18] [chromium] › tests/production/framework-hydration.spec.ts:4:3 › react hydrates server nodes, preserves state on update and releases its Realm
+[2/18] [chromium] › tests/production/framework-hydration.spec.ts:4:3 › vue hydrates server nodes, preserves state on update and releases its Realm
+[3/18] [chromium] › tests/production/offline-cache.spec.ts:48:1 › atomically activates a host-owned application cache and serves it offline
+[4/18] [chromium] › tests/production/offline-cache.spec.ts:97:1 › creates a new native Realm and mounts the complete cached module graph while offline
+[5/18] [chromium] › tests/production/ssr-hydration.spec.ts:15:1 › streams Declarative Shadow DOM before hydrating it in an iframe Realm
+(node:65205) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[6/18] [chromium] › tests/production/upstream-batch04-csp.spec.ts:6:1 › Q3129 production bundle mounts external modules under same origin CSP without unsafe inline scripts or eval
+(node:65210) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[7/18] [firefox] › tests/production/framework-hydration.spec.ts:4:3 › react hydrates server nodes, preserves state on update and releases its Realm
+[8/18] [firefox] › tests/production/framework-hydration.spec.ts:4:3 › vue hydrates server nodes, preserves state on update and releases its Realm
+[9/18] [firefox] › tests/production/offline-cache.spec.ts:48:1 › atomically activates a host-owned application cache and serves it offline
+[10/18] [firefox] › tests/production/offline-cache.spec.ts:97:1 › creates a new native Realm and mounts the complete cached module graph while offline
+[11/18] [firefox] › tests/production/ssr-hydration.spec.ts:15:1 › streams Declarative Shadow DOM before hydrating it in an iframe Realm
+(node:65222) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[12/18] [firefox] › tests/production/upstream-batch04-csp.spec.ts:6:1 › Q3129 production bundle mounts external modules under same origin CSP without unsafe inline scripts or eval
+(node:65229) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[13/18] [webkit] › tests/production/framework-hydration.spec.ts:4:3 › react hydrates server nodes, preserves state on update and releases its Realm
+[14/18] [webkit] › tests/production/framework-hydration.spec.ts:4:3 › vue hydrates server nodes, preserves state on update and releases its Realm
+[15/18] [webkit] › tests/production/offline-cache.spec.ts:48:1 › atomically activates a host-owned application cache and serves it offline
+[16/18] [webkit] › tests/production/offline-cache.spec.ts:97:1 › creates a new native Realm and mounts the complete cached module graph while offline
+[17/18] [webkit] › tests/production/ssr-hydration.spec.ts:15:1 › streams Declarative Shadow DOM before hydrating it in an iframe Realm
+(node:65247) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[18/18] [webkit] › tests/production/upstream-batch04-csp.spec.ts:6:1 › Q3129 production bundle mounts external modules under same origin CSP without unsafe inline scripts or eval
+  18 passed (19.9s)

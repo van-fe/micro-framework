@@ -1,0 +1,22 @@
+{
+  "name": "@micro-framework/example-vanilla",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 5174 --strictPort",
+    "preview": "vite preview",
+    "build": "vite build",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@micro-framework/adapter-vanilla": "workspace:*",
+    "@micro-framework/strong-isolation": "workspace:*"
+  },
+  "devDependencies": {
+    "@micro-framework/vite-plugin": "workspace:*",
+    "typescript": "6.0.3",
+    "vite": "8.2.2"
+  }
+}

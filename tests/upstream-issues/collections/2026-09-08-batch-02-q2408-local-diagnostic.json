@@ -1,0 +1,1275 @@
+{
+  "geometry": {
+    "collected": {
+      ".el-select": {
+        "node": "DIV",
+        "cls": "el-select",
+        "rect": {
+          "x": 852,
+          "y": 125,
+          "width": 193,
+          "height": 40,
+          "top": 125,
+          "right": 1045,
+          "bottom": 165,
+          "left": 852
+        },
+        "offset": [
+          32,
+          125,
+          193,
+          40
+        ],
+        "client": [
+          0,
+          0,
+          193,
+          40
+        ],
+        "scroll": [
+          0,
+          0
+        ],
+        "position": "relative",
+        "display": "inline-block",
+        "overflow": "visible",
+        "transform": "none",
+        "contain": "none",
+        "popper": null,
+        "nativeOffsetParent": "DIV",
+        "effectiveOffsetParent": "DIV",
+        "parent": "DIV",
+        "owner": "http://127.0.0.1:5173/benchmark.html"
+      },
+      ".el-input__inner": {
+        "node": "INPUT",
+        "cls": "el-input__inner",
+        "rect": {
+          "x": 852,
+          "y": 125,
+          "width": 193,
+          "height": 40,
+          "top": 125,
+          "right": 1045,
+          "bottom": 165,
+          "left": 852
+        },
+        "offset": [
+          0,
+          0,
+          193,
+          40
+        ],
+        "client": [
+          1,
+          1,
+          191,
+          38
+        ],
+        "scroll": [
+          0,
+          0
+        ],
+        "position": "static",
+        "display": "inline-block",
+        "overflow": "clip",
+        "transform": "none",
+        "contain": "none",
+        "popper": null,
+        "nativeOffsetParent": "DIV",
+        "effectiveOffsetParent": "DIV",
+        "parent": "DIV",
+        "owner": "http://127.0.0.1:5173/benchmark.html"
+      },
+      ".el-select-dropdown": {
+        "node": "DIV",
+        "cls": "el-select-dropdown el-popper",
+        "rect": {
+          "x": 852,
+          "y": 12,
+          "width": 193,
+          "height": 116,
+          "top": 12,
+          "right": 1045,
+          "bottom": 128,
+          "left": 852
+        },
+        "offset": [
+          852,
+          12,
+          193,
+          116
+        ],
+        "client": [
+          1,
+          1,
+          191,
+          114
+        ],
+        "scroll": [
+          0,
+          0
+        ],
+        "position": "fixed",
+        "display": "block",
+        "overflow": "visible",
+        "transform": "none",
+        "contain": "none",
+        "popper": "bottom-start",
+        "effectiveOffsetParent": "HTML",
+        "parent": "DIV",
+        "owner": "http://127.0.0.1:5173/benchmark.html"
+      },
+      ".el-drawer": {
+        "node": "DIV",
+        "cls": "el-drawer rtl",
+        "rect": {
+          "x": 820,
+          "y": 0,
+          "width": 460,
+          "height": 720,
+          "top": 0,
+          "right": 1280,
+          "bottom": 720,
+          "left": 820
+        },
+        "offset": [
+          820,
+          0,
+          460,
+          720
+        ],
+        "client": [
+          0,
+          0,
+          460,
+          720
+        ],
+        "scroll": [
+          0,
+          0
+        ],
+        "position": "absolute",
+        "display": "flex",
+        "overflow": "hidden",
+        "transform": "none",
+        "contain": "none",
+        "popper": null,
+        "nativeOffsetParent": "DIV",
+        "effectiveOffsetParent": "DIV",
+        "parent": "DIV",
+        "owner": "http://127.0.0.1:5173/benchmark.html"
+      },
+      ".el-drawer__wrapper": {
+        "node": "DIV",
+        "cls": "el-drawer__wrapper",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 720,
+          "top": 0,
+          "right": 1280,
+          "bottom": 720,
+          "left": 0
+        },
+        "offset": [
+          0,
+          0,
+          1280,
+          720
+        ],
+        "client": [
+          0,
+          0,
+          1280,
+          720
+        ],
+        "scroll": [
+          0,
+          0
+        ],
+        "position": "fixed",
+        "display": "block",
+        "overflow": "hidden",
+        "transform": "none",
+        "contain": "none",
+        "popper": null,
+        "effectiveOffsetParent": "HTML",
+        "parent": "MICRO-APP-BODY",
+        "owner": "http://127.0.0.1:5173/benchmark.html"
+      },
+      "micro-app-body": {
+        "node": "MICRO-APP-BODY",
+        "cls": "el-popup-parent--hidden",
+        "rect": {
+          "x": 148,
+          "y": 88,
+          "width": 780,
+          "height": 40,
+          "top": 88,
+          "right": 928,
+          "bottom": 128,
+          "left": 148
+        },
+        "offset": [
+          0,
+          0,
+          780,
+          40
+        ],
+        "client": [
+          0,
+          0,
+          780,
+          40
+        ],
+        "scroll": [
+          0,
+          0
+        ],
+        "position": "static",
+        "display": "block",
+        "overflow": "hidden",
+        "transform": "none",
+        "contain": "none",
+        "popper": null,
+        "nativeOffsetParent": "MICRO-APP-HOST",
+        "effectiveOffsetParent": "MICRO-APP-HOST",
+        "parent": "#document-fragment",
+        "owner": "http://127.0.0.1:5173/benchmark.html"
+      }
+    },
+    "ancestors": [
+      {
+        "node": "DIV",
+        "cls": "el-select-dropdown el-popper",
+        "rect": {
+          "x": 852,
+          "y": 12,
+          "width": 193,
+          "height": 116,
+          "top": 12,
+          "right": 1045,
+          "bottom": 128,
+          "left": 852
+        },
+        "offset": [
+          852,
+          12,
+          193,
+          116
+        ],
+        "client": [
+          1,
+          1,
+          191,
+          114
+        ],
+        "scroll": [
+          0,
+          0
+        ],
+        "position": "fixed",
+        "display": "block",
+        "overflow": "visible",
+        "transform": "none",
+        "contain": "none",
+        "popper": "bottom-start",
+        "effectiveOffsetParent": "HTML",
+        "parent": "DIV",
+        "owner": "http://127.0.0.1:5173/benchmark.html"
+      },
+      {
+        "node": "DIV",
+        "cls": "el-select",
+        "rect": {
+          "x": 852,
+          "y": 125,
+          "width": 193,
+          "height": 40,
+          "top": 125,
+          "right": 1045,
+          "bottom": 165,
+          "left": 852
+        },
+        "offset": [
+          32,
+          125,
+          193,
+          40
+        ],
+        "client": [
+          0,
+          0,
+          193,
+          40
+        ],
+        "scroll": [
+          0,
+          0
+        ],
+        "position": "relative",
+        "display": "inline-block",
+        "overflow": "visible",
+        "transform": "none",
+        "contain": "none",
+        "popper": null,
+        "nativeOffsetParent": "DIV",
+        "effectiveOffsetParent": "DIV",
+        "parent": "DIV",
+        "owner": "http://127.0.0.1:5173/benchmark.html"
+      },
+      {
+        "node": "DIV",
+        "cls": "",
+        "rect": {
+          "x": 820,
+          "y": 77,
+          "width": 460,
+          "height": 136,
+          "top": 77,
+          "right": 1280,
+          "bottom": 213,
+          "left": 820
+        },
+        "offset": [
+          0,
+          77,
+          460,
+          136
+        ],
+        "client": [
+          0,
+          0,
+          460,
+          136
+        ],
+        "scroll": [
+          0,
+          0
+        ],
+        "position": "static",
+        "display": "block",
+        "overflow": "visible",
+        "transform": "none",
+        "contain": "none",
+        "popper": null,
+        "nativeOffsetParent": "DIV",
+        "effectiveOffsetParent": "DIV",
+        "parent": "SECTION",
+        "owner": "http://127.0.0.1:5173/benchmark.html"
+      },
+      {
+        "node": "SECTION",
+        "cls": "el-drawer__body",
+        "rect": {
+          "x": 820,
+          "y": 77,
+          "width": 460,
+          "height": 643,
+          "top": 77,
+          "right": 1280,
+          "bottom": 720,
+          "left": 820
+        },
+        "offset": [
+          0,
+          77,
+          460,
+          643
+        ],
+        "client": [
+          0,
+          0,
+          460,
+          643
+        ],
+        "scroll": [
+          0,
+          0
+        ],
+        "position": "static",
+        "display": "block",
+        "overflow": "auto",
+        "transform": "none",
+        "contain": "none",
+        "popper": null,
+        "nativeOffsetParent": "DIV",
+        "effectiveOffsetParent": "DIV",
+        "parent": "DIV",
+        "owner": "http://127.0.0.1:5173/benchmark.html"
+      },
+      {
+        "node": "DIV",
+        "cls": "el-drawer rtl",
+        "rect": {
+          "x": 820,
+          "y": 0,
+          "width": 460,
+          "height": 720,
+          "top": 0,
+          "right": 1280,
+          "bottom": 720,
+          "left": 820
+        },
+        "offset": [
+          820,
+          0,
+          460,
+          720
+        ],
+        "client": [
+          0,
+          0,
+          460,
+          720
+        ],
+        "scroll": [
+          0,
+          0
+        ],
+        "position": "absolute",
+        "display": "flex",
+        "overflow": "hidden",
+        "transform": "none",
+        "contain": "none",
+        "popper": null,
+        "nativeOffsetParent": "DIV",
+        "effectiveOffsetParent": "DIV",
+        "parent": "DIV",
+        "owner": "http://127.0.0.1:5173/benchmark.html"
+      },
+      {
+        "node": "DIV",
+        "cls": "el-drawer__container el-drawer__open",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 720,
+          "top": 0,
+          "right": 1280,
+          "bottom": 720,
+          "left": 0
+        },
+        "offset": [
+          0,
+          0,
+          1280,
+          720
+        ],
+        "client": [
+          0,
+          0,
+          1280,
+          720
+        ],
+        "scroll": [
+          0,
+          0
+        ],
+        "position": "relative",
+        "display": "block",
+        "overflow": "visible",
+        "transform": "none",
+        "contain": "none",
+        "popper": null,
+        "nativeOffsetParent": "DIV",
+        "effectiveOffsetParent": "DIV",
+        "parent": "DIV",
+        "owner": "http://127.0.0.1:5173/benchmark.html"
+      },
+      {
+        "node": "DIV",
+        "cls": "el-drawer__wrapper",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 720,
+          "top": 0,
+          "right": 1280,
+          "bottom": 720,
+          "left": 0
+        },
+        "offset": [
+          0,
+          0,
+          1280,
+          720
+        ],
+        "client": [
+          0,
+          0,
+          1280,
+          720
+        ],
+        "scroll": [
+          0,
+          0
+        ],
+        "position": "fixed",
+        "display": "block",
+        "overflow": "hidden",
+        "transform": "none",
+        "contain": "none",
+        "popper": null,
+        "effectiveOffsetParent": "HTML",
+        "parent": "MICRO-APP-BODY",
+        "owner": "http://127.0.0.1:5173/benchmark.html"
+      },
+      {
+        "node": "MICRO-APP-BODY",
+        "cls": "el-popup-parent--hidden",
+        "rect": {
+          "x": 148,
+          "y": 88,
+          "width": 780,
+          "height": 40,
+          "top": 88,
+          "right": 928,
+          "bottom": 128,
+          "left": 148
+        },
+        "offset": [
+          0,
+          0,
+          780,
+          40
+        ],
+        "client": [
+          0,
+          0,
+          780,
+          40
+        ],
+        "scroll": [
+          0,
+          0
+        ],
+        "position": "static",
+        "display": "block",
+        "overflow": "hidden",
+        "transform": "none",
+        "contain": "none",
+        "popper": null,
+        "nativeOffsetParent": "MICRO-APP-HOST",
+        "effectiveOffsetParent": "MICRO-APP-HOST",
+        "parent": "#document-fragment",
+        "owner": "http://127.0.0.1:5173/benchmark.html"
+      },
+      {
+        "node": "#document-fragment"
+      }
+    ],
+    "nativeRoot": {
+      "node": "HTML",
+      "cls": "",
+      "rect": {
+        "x": 0,
+        "y": -180,
+        "width": 1280,
+        "height": 720,
+        "top": -180,
+        "right": 1280,
+        "bottom": 540,
+        "left": 0
+      },
+      "offset": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "client": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "scroll": [
+        0,
+        0
+      ],
+      "position": "static",
+      "display": "block",
+      "overflow": "visible",
+      "transform": "none",
+      "contain": "none",
+      "popper": null,
+      "parent": "#document",
+      "owner": "http://127.0.0.1:5173/__micro_frame__/realm.html"
+    },
+    "surface": {
+      "node": "MICRO-APP-HOST",
+      "cls": "",
+      "rect": {
+        "x": 148,
+        "y": 88,
+        "width": 780,
+        "height": 40,
+        "top": 88,
+        "right": 928,
+        "bottom": 128,
+        "left": 148
+      },
+      "offset": [
+        148,
+        268,
+        780,
+        40
+      ],
+      "client": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "scroll": [
+        0,
+        180
+      ],
+      "position": "relative",
+      "display": "block",
+      "overflow": "visible",
+      "transform": "none",
+      "contain": "none",
+      "popper": null,
+      "nativeOffsetParent": "BODY",
+      "effectiveOffsetParent": "BODY",
+      "parent": "MAIN",
+      "owner": "http://127.0.0.1:5173/benchmark.html"
+    },
+    "hostRoot": {
+      "node": "HTML",
+      "cls": "",
+      "rect": {
+        "x": 0,
+        "y": -180,
+        "width": 1280,
+        "height": 1216,
+        "top": -180,
+        "right": 1280,
+        "bottom": 1036,
+        "left": 0
+      },
+      "offset": [
+        0,
+        0,
+        1280,
+        1216
+      ],
+      "client": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "scroll": [
+        0,
+        180
+      ],
+      "position": "static",
+      "display": "block",
+      "overflow": "visible",
+      "transform": "none",
+      "contain": "none",
+      "popper": null,
+      "parent": "#document",
+      "owner": "http://127.0.0.1:5173/benchmark.html"
+    },
+    "popperData": [
+      "_uid",
+      "_isVue",
+      "__v_skip",
+      "_scope",
+      "$options",
+      "_renderProxy",
+      "_self",
+      "$parent",
+      "$root",
+      "$children",
+      "$refs",
+      "_provided",
+      "_watcher",
+      "_inactive",
+      "_directInactive",
+      "_isMounted",
+      "_isDestroyed",
+      "_isBeingDestroyed",
+      "_events",
+      "_hasHookEvent",
+      "_vnode",
+      "_staticTrees",
+      "$vnode",
+      "$slots",
+      "$scopedSlots",
+      "_c",
+      "$createElement",
+      "$attrs",
+      "$listeners",
+      "_props",
+      "createPopper",
+      "updatePopper",
+      "doDestroy",
+      "destroyPopper",
+      "resetTransformOrigin",
+      "appendArrow",
+      "_data",
+      "currentPlacement",
+      "showPopper",
+      "minWidth",
+      "_computedWatchers",
+      "$el",
+      "referenceElm",
+      "popperElm",
+      "appended"
+    ],
+    "warning": "[\"Error in event handler for \\\"updatePopper\\\": \\\"TypeError: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'.\\\"\"]"
+  },
+  "exceptions": [
+    {
+      "error": "TypeError: parameter 1 is not of type 'Element'.\n    at http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/visual-bridge/dist/index.js:155:82\n    at getStyleComputedProperty (http://127.0.0.1:5179/node_modules/.vite/deps/element-ui.js?v=4587bdd5:2327:16)\n    at getScrollParent (http://127.0.0.1:5179/node_modules/.vite/deps/element-ui.js?v=4587bdd5:2354:35)\n    at getScrollParent (http://127.0.0.1:5179/node_modules/.vite/deps/element-ui.js?v=4587bdd5:2355:11)\n    at getScrollParent (http://127.0.0.1:5179/node_modules/.vite/deps/element-ui.js?v=4587bdd5:2355:11)\n    at getScrollParent (http://127.0.0.1:5179/node_modules/.vite/deps/element-ui.js?v=4587bdd5:2355:11)\n    at getOffsetRectRelativeToCustomParent (http://127.0.0.1:5179/node_modules/.vite/deps/element-ui.js?v=4587bdd5:2453:24)\n    at Popper._getOffsets (http://127.0.0.1:5179/node_modules/.vite/deps/element-ui.js?v=4587bdd5:1905:27)\n    at Popper.update (http://127.0.0.1:5179/node_modules/.vite/deps/element-ui.js?v=4587bdd5:1778:24)\n    at new Popper (http://127.0.0.1:5179/node_modules/.vite/deps/element-ui.js?v=4587bdd5:1747:9)",
+      "frames": [
+        {
+          "name": "",
+          "url": "",
+          "location": {
+            "scriptId": "25",
+            "lineNumber": 154,
+            "columnNumber": 81
+          },
+          "values": {
+            "parent": "object"
+          }
+        },
+        {
+          "name": "getStyleComputedProperty",
+          "url": "",
+          "location": {
+            "scriptId": "60",
+            "lineNumber": 2326,
+            "columnNumber": 15
+          },
+          "values": {
+            "element": {
+              "node": "#document",
+              "cls": null,
+              "offset": [
+                null,
+                null,
+                null,
+                null
+              ]
+            },
+            "parent": "object"
+          }
+        },
+        {
+          "name": "getScrollParent",
+          "url": "",
+          "location": {
+            "scriptId": "60",
+            "lineNumber": 2353,
+            "columnNumber": 34
+          },
+          "values": {
+            "element": {
+              "node": "HTML",
+              "cls": "",
+              "rect": {
+                "x": 0,
+                "y": -180,
+                "width": 1280,
+                "height": 1216,
+                "top": -180,
+                "right": 1280,
+                "bottom": 1036,
+                "left": 0
+              },
+              "offset": [
+                0,
+                0,
+                1280,
+                1216
+              ],
+              "position": "static",
+              "display": "block",
+              "overflow": "visible",
+              "parent": "#document",
+              "owner": "http://127.0.0.1:5173/benchmark.html"
+            },
+            "parent": {
+              "node": "#document",
+              "cls": null,
+              "offset": [
+                null,
+                null,
+                null,
+                null
+              ]
+            }
+          }
+        },
+        {
+          "name": "getScrollParent",
+          "url": "",
+          "location": {
+            "scriptId": "60",
+            "lineNumber": 2354,
+            "columnNumber": 10
+          },
+          "values": {
+            "element": {
+              "node": "BODY",
+              "cls": "",
+              "rect": {
+                "x": 8,
+                "y": -172,
+                "width": 1264,
+                "height": 1200,
+                "top": -172,
+                "right": 1272,
+                "bottom": 1028,
+                "left": 8
+              },
+              "offset": [
+                0,
+                0,
+                1264,
+                1200
+              ],
+              "position": "static",
+              "display": "block",
+              "overflow": "visible",
+              "parent": "HTML",
+              "owner": "http://127.0.0.1:5173/benchmark.html"
+            },
+            "parent": {
+              "node": "HTML",
+              "cls": "",
+              "rect": {
+                "x": 0,
+                "y": -180,
+                "width": 1280,
+                "height": 1216,
+                "top": -180,
+                "right": 1280,
+                "bottom": 1036,
+                "left": 0
+              },
+              "offset": [
+                0,
+                0,
+                1280,
+                1216
+              ],
+              "position": "static",
+              "display": "block",
+              "overflow": "visible",
+              "parent": "#document",
+              "owner": "http://127.0.0.1:5173/benchmark.html"
+            }
+          }
+        },
+        {
+          "name": "getScrollParent",
+          "url": "",
+          "location": {
+            "scriptId": "60",
+            "lineNumber": 2354,
+            "columnNumber": 10
+          },
+          "values": {
+            "element": {
+              "node": "MAIN",
+              "cls": "",
+              "rect": {
+                "x": 148,
+                "y": 88,
+                "width": 780,
+                "height": 40,
+                "top": 88,
+                "right": 928,
+                "bottom": 128,
+                "left": 148
+              },
+              "offset": [
+                148,
+                268,
+                780,
+                40
+              ],
+              "position": "static",
+              "display": "block",
+              "overflow": "visible",
+              "parent": "BODY",
+              "owner": "http://127.0.0.1:5173/benchmark.html"
+            },
+            "parent": {
+              "node": "BODY",
+              "cls": "",
+              "rect": {
+                "x": 8,
+                "y": -172,
+                "width": 1264,
+                "height": 1200,
+                "top": -172,
+                "right": 1272,
+                "bottom": 1028,
+                "left": 8
+              },
+              "offset": [
+                0,
+                0,
+                1264,
+                1200
+              ],
+              "position": "static",
+              "display": "block",
+              "overflow": "visible",
+              "parent": "HTML",
+              "owner": "http://127.0.0.1:5173/benchmark.html"
+            }
+          }
+        },
+        {
+          "name": "getScrollParent",
+          "url": "",
+          "location": {
+            "scriptId": "60",
+            "lineNumber": 2354,
+            "columnNumber": 10
+          },
+          "values": {
+            "element": {
+              "node": "MICRO-APP-HOST",
+              "cls": "",
+              "rect": {
+                "x": 148,
+                "y": 88,
+                "width": 780,
+                "height": 40,
+                "top": 88,
+                "right": 928,
+                "bottom": 128,
+                "left": 148
+              },
+              "offset": [
+                148,
+                268,
+                780,
+                40
+              ],
+              "position": "relative",
+              "display": "block",
+              "overflow": "visible",
+              "parent": "MAIN",
+              "owner": "http://127.0.0.1:5173/benchmark.html"
+            },
+            "parent": {
+              "node": "MAIN",
+              "cls": "",
+              "rect": {
+                "x": 148,
+                "y": 88,
+                "width": 780,
+                "height": 40,
+                "top": 88,
+                "right": 928,
+                "bottom": 128,
+                "left": 148
+              },
+              "offset": [
+                148,
+                268,
+                780,
+                40
+              ],
+              "position": "static",
+              "display": "block",
+              "overflow": "visible",
+              "parent": "BODY",
+              "owner": "http://127.0.0.1:5173/benchmark.html"
+            }
+          }
+        },
+        {
+          "name": "getOffsetRectRelativeToCustomParent",
+          "url": "",
+          "location": {
+            "scriptId": "60",
+            "lineNumber": 2452,
+            "columnNumber": 23
+          },
+          "values": {
+            "element": {
+              "node": "DIV",
+              "cls": "el-input el-input--suffix",
+              "rect": {
+                "x": 852,
+                "y": 125,
+                "width": 193,
+                "height": 40,
+                "top": 125,
+                "right": 1045,
+                "bottom": 165,
+                "left": 852
+              },
+              "offset": [
+                0,
+                0,
+                193,
+                40
+              ],
+              "position": "relative",
+              "display": "block",
+              "overflow": "visible",
+              "parent": "DIV",
+              "owner": "http://127.0.0.1:5173/benchmark.html"
+            },
+            "parent": {
+              "node": "MICRO-APP-HOST",
+              "cls": "",
+              "rect": {
+                "x": 148,
+                "y": 88,
+                "width": 780,
+                "height": 40,
+                "top": 88,
+                "right": 928,
+                "bottom": 128,
+                "left": 148
+              },
+              "offset": [
+                148,
+                268,
+                780,
+                40
+              ],
+              "position": "relative",
+              "display": "block",
+              "overflow": "visible",
+              "parent": "MAIN",
+              "owner": "http://127.0.0.1:5173/benchmark.html"
+            },
+            "fixed": true,
+            "scrollParent": "undefined"
+          }
+        },
+        {
+          "name": "Popper._getOffsets",
+          "url": "",
+          "location": {
+            "scriptId": "60",
+            "lineNumber": 1904,
+            "columnNumber": 26
+          },
+          "values": {
+            "parent": "object",
+            "popper": {
+              "node": "DIV",
+              "cls": "el-select-dropdown el-popper",
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0,
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              },
+              "offset": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "position": "fixed",
+              "display": "none",
+              "overflow": "visible",
+              "parent": "DIV",
+              "owner": "http://127.0.0.1:5173/benchmark.html"
+            },
+            "reference": {
+              "node": "DIV",
+              "cls": "el-input el-input--suffix",
+              "rect": {
+                "x": 852,
+                "y": 125,
+                "width": 193,
+                "height": 40,
+                "top": 125,
+                "right": 1045,
+                "bottom": 165,
+                "left": 852
+              },
+              "offset": [
+                0,
+                0,
+                193,
+                40
+              ],
+              "position": "relative",
+              "display": "block",
+              "overflow": "visible",
+              "parent": "DIV",
+              "owner": "http://127.0.0.1:5173/benchmark.html"
+            }
+          }
+        },
+        {
+          "name": "Popper.update",
+          "url": "",
+          "location": {
+            "scriptId": "60",
+            "lineNumber": 1777,
+            "columnNumber": 23
+          },
+          "values": {
+            "parent": "object",
+            "data": {}
+          }
+        },
+        {
+          "name": "Popper",
+          "url": "",
+          "location": {
+            "scriptId": "60",
+            "lineNumber": 1746,
+            "columnNumber": 8
+          },
+          "values": {
+            "parent": "object",
+            "popper": {
+              "node": "DIV",
+              "cls": "el-select-dropdown el-popper",
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0,
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              },
+              "offset": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "position": "fixed",
+              "display": "none",
+              "overflow": "visible",
+              "parent": "DIV",
+              "owner": "http://127.0.0.1:5173/benchmark.html"
+            },
+            "reference": {
+              "node": "DIV",
+              "cls": "el-input el-input--suffix",
+              "rect": {
+                "x": 852,
+                "y": 125,
+                "width": 193,
+                "height": 40,
+                "top": 125,
+                "right": 1045,
+                "bottom": 165,
+                "left": 852
+              },
+              "offset": [
+                0,
+                0,
+                193,
+                40
+              ],
+              "position": "relative",
+              "display": "block",
+              "overflow": "visible",
+              "parent": "DIV",
+              "owner": "http://127.0.0.1:5173/benchmark.html"
+            }
+          }
+        },
+        {
+          "name": "createPopper",
+          "url": "",
+          "location": {
+            "scriptId": "60",
+            "lineNumber": 2612,
+            "columnNumber": 20
+          },
+          "values": {
+            "parent": "object",
+            "popper": {
+              "node": "DIV",
+              "cls": "el-select-dropdown el-popper",
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0,
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              },
+              "offset": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "position": "fixed",
+              "display": "none",
+              "overflow": "visible",
+              "parent": "DIV",
+              "owner": "http://127.0.0.1:5173/benchmark.html"
+            },
+            "reference": {
+              "node": "DIV",
+              "cls": "el-input el-input--suffix",
+              "rect": {
+                "x": 852,
+                "y": 125,
+                "width": 193,
+                "height": 40,
+                "top": 125,
+                "right": 1045,
+                "bottom": 165,
+                "left": 852
+              },
+              "offset": [
+                0,
+                0,
+                193,
+                40
+              ],
+              "position": "relative",
+              "display": "block",
+              "overflow": "visible",
+              "parent": "DIV",
+              "owner": "http://127.0.0.1:5173/benchmark.html"
+            }
+          }
+        },
+        {
+          "name": "updatePopper",
+          "url": "",
+          "location": {
+            "scriptId": "60",
+            "lineNumber": 2627,
+            "columnNumber": 16
+          },
+          "values": {
+            "parent": "object"
+          }
+        }
+      ]
+    }
+  ]
+}

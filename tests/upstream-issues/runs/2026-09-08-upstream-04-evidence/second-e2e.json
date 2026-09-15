@@ -1,0 +1,1865 @@
+{
+  "config": {
+    "argv": [
+      "/Users/fanfangbo/.local/share/fnm/node-versions/v24.19.0/installation/bin/node",
+      "/Users/fanfangbo/workspace/micro-framework/node_modules/.bin/playwright",
+      "test",
+      "tests/e2e/upstream-batch03",
+      "--reporter=json"
+    ],
+    "configFile": "/Users/fanfangbo/workspace/micro-framework/playwright.config.ts",
+    "rootDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/fanfangbo/workspace/micro-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Users/fanfangbo/workspace/micro-framework/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "upstream-batch03-entry.spec.ts",
+      "file": "upstream-batch03-entry.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "W1049 Q3125 Q2971 loads Vite production routes once with isolated URL imports and clean Runtime destruction",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 475,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:52:28.290Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "bff51528346b00a069be-daba997e15900bd19c75",
+          "file": "upstream-batch03-entry.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "W1049 Q3125 Q2971 loads Vite production routes once with isolated URL imports and clean Runtime destruction",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 841,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:53:06.682Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "bff51528346b00a069be-e4987cc063998ec4ca75",
+          "file": "upstream-batch03-entry.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "W1049 Q3125 Q2971 loads Vite production routes once with isolated URL imports and clean Runtime destruction",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 14,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 660,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:53:50.625Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "bff51528346b00a069be-aa55d0a1323237986467",
+          "file": "upstream-batch03-entry.spec.ts",
+          "line": 9,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "upstream-batch03-resources.spec.ts",
+      "file": "upstream-batch03-resources.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Q3090 applies declarative include credentials to entry and dynamic script (registered=false)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 190,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:52:29.197Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fbbe8fac4f26cb1464b8-19b224cdbba4eba9c9c1",
+          "file": "upstream-batch03-resources.spec.ts",
+          "line": 6,
+          "column": 41
+        },
+        {
+          "title": "Q3090 applies declarative include credentials to entry and dynamic script (registered=true)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 161,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:52:29.484Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fbbe8fac4f26cb1464b8-3afbb61570bf3d410575",
+          "file": "upstream-batch03-resources.spec.ts",
+          "line": 6,
+          "column": 41
+        },
+        {
+          "title": "Q3035 W1005 resolve static and dynamic image and SVG href before requests with host same-name decoys",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 169,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:52:29.649Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fbbe8fac4f26cb1464b8-7a887b3ad4186858f736",
+          "file": "upstream-batch03-resources.spec.ts",
+          "line": 22,
+          "column": 1
+        },
+        {
+          "title": "Q3056 W995 keep explicit child API origin and host Axios baseURL during Vue Router guards",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 545,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:52:29.822Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fbbe8fac4f26cb1464b8-6d40bd66c0494aa77c31",
+          "file": "upstream-batch03-resources.spec.ts",
+          "line": 37,
+          "column": 1
+        },
+        {
+          "title": "Q2982 keeps explicit favicon and manifest paths in application subdirectory without replacing host metadata",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 30033,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                        "column": 64,
+                        "line": 59
+                      },
+                      "message": "Error: locator.getAttribute: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#resource-slot link[rel=\"icon\"]')\u001b[22m\n\n\n  57 |   await addSlot(page,\"resource-slot\");\n  58 |   await page.evaluate(async url=>{const s=window.__upstreamRuntime__!;s.handles.push(await s.runtime.mountApp({name:\"metadata\",container:\"#resource-slot\",entry:{type:\"html\",url:url+\"/app/entry.html\"}}));},resourceOrigin.url);\n> 59 |   expect(await page.locator('#resource-slot link[rel=\"icon\"]').getAttribute('href')).toBe(resourceOrigin.url+\"/app/favicon.svg\");\n     |                                                                ^\n  60 |   expect(await page.locator('#resource-slot link[rel=\"manifest\"]').getAttribute('href')).toBe(resourceOrigin.url+\"/app/manifest.json\");\n  61 |   expect(await page.locator('head link[rel=\"icon\"],head link[rel=\"manifest\"]').evaluateAll(nodes=>nodes.map(n=>n.outerHTML))).toEqual(before);\n  62 | });\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts:59:64"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:52:30.372Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch03-resources-c1d42-out-replacing-host-metadata-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch03-resources-c1d42-out-replacing-host-metadata-chromium/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "fbbe8fac4f26cb1464b8-218046529fd5ec7f77f4",
+          "file": "upstream-batch03-resources.spec.ts",
+          "line": 55,
+          "column": 1
+        },
+        {
+          "title": "Q3021 mounts a nested runtime grandchild with distinct executing Realms and destroys the full tree",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 509,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:53:00.635Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fbbe8fac4f26cb1464b8-92aa45195803b2305c2d",
+          "file": "upstream-batch03-resources.spec.ts",
+          "line": 64,
+          "column": 1
+        },
+        {
+          "title": "Q3090 applies declarative include credentials to entry and dynamic script (registered=false)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 816,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:53:08.318Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fbbe8fac4f26cb1464b8-15f6597ce4c283aac5b8",
+          "file": "upstream-batch03-resources.spec.ts",
+          "line": 6,
+          "column": 41
+        },
+        {
+          "title": "Q3090 applies declarative include credentials to entry and dynamic script (registered=true)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 258,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:53:09.509Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fbbe8fac4f26cb1464b8-d92a9c4ee17d447159ac",
+          "file": "upstream-batch03-resources.spec.ts",
+          "line": 6,
+          "column": 41
+        },
+        {
+          "title": "Q3035 W1005 resolve static and dynamic image and SVG href before requests with host same-name decoys",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 262,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:53:09.772Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fbbe8fac4f26cb1464b8-a968caab1276e84b64d3",
+          "file": "upstream-batch03-resources.spec.ts",
+          "line": 22,
+          "column": 1
+        },
+        {
+          "title": "Q3056 W995 keep explicit child API origin and host Axios baseURL during Vue Router guards",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 378,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:53:10.042Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fbbe8fac4f26cb1464b8-aee6ba52c53a0d050dba",
+          "file": "upstream-batch03-resources.spec.ts",
+          "line": 37,
+          "column": 1
+        },
+        {
+          "title": "Q2982 keeps explicit favicon and manifest paths in application subdirectory without replacing host metadata",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 30070,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                        "column": 64,
+                        "line": 59
+                      },
+                      "message": "Error: locator.getAttribute: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#resource-slot link[rel=\"icon\"]')\u001b[22m\n\n\n  57 |   await addSlot(page,\"resource-slot\");\n  58 |   await page.evaluate(async url=>{const s=window.__upstreamRuntime__!;s.handles.push(await s.runtime.mountApp({name:\"metadata\",container:\"#resource-slot\",entry:{type:\"html\",url:url+\"/app/entry.html\"}}));},resourceOrigin.url);\n> 59 |   expect(await page.locator('#resource-slot link[rel=\"icon\"]').getAttribute('href')).toBe(resourceOrigin.url+\"/app/favicon.svg\");\n     |                                                                ^\n  60 |   expect(await page.locator('#resource-slot link[rel=\"manifest\"]').getAttribute('href')).toBe(resourceOrigin.url+\"/app/manifest.json\");\n  61 |   expect(await page.locator('head link[rel=\"icon\"],head link[rel=\"manifest\"]').evaluateAll(nodes=>nodes.map(n=>n.outerHTML))).toEqual(before);\n  62 | });\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts:59:64"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:53:10.424Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch03-resources-c1d42-out-replacing-host-metadata-firefox/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch03-resources-c1d42-out-replacing-host-metadata-firefox/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "fbbe8fac4f26cb1464b8-5833307a85d7db9d9fc2",
+          "file": "upstream-batch03-resources.spec.ts",
+          "line": 55,
+          "column": 1
+        },
+        {
+          "title": "Q3021 mounts a nested runtime grandchild with distinct executing Realms and destroys the full tree",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 791,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:53:40.845Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fbbe8fac4f26cb1464b8-13f322a7569016804d6b",
+          "file": "upstream-batch03-resources.spec.ts",
+          "line": 64,
+          "column": 1
+        },
+        {
+          "title": "Q3090 applies declarative include credentials to entry and dynamic script (registered=false)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 15,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 439,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:53:51.653Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fbbe8fac4f26cb1464b8-9873c7e28d071d2d2106",
+          "file": "upstream-batch03-resources.spec.ts",
+          "line": 6,
+          "column": 41
+        },
+        {
+          "title": "Q3090 applies declarative include credentials to entry and dynamic script (registered=true)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 15,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 243,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:53:52.242Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fbbe8fac4f26cb1464b8-ef021e8c2aa8e72b8362",
+          "file": "upstream-batch03-resources.spec.ts",
+          "line": 6,
+          "column": 41
+        },
+        {
+          "title": "Q3035 W1005 resolve static and dynamic image and SVG href before requests with host same-name decoys",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 15,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 265,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:53:52.490Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fbbe8fac4f26cb1464b8-64e25d9b5988b522e308",
+          "file": "upstream-batch03-resources.spec.ts",
+          "line": 22,
+          "column": 1
+        },
+        {
+          "title": "Q3056 W995 keep explicit child API origin and host Axios baseURL during Vue Router guards",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 15,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 393,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:53:52.761Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fbbe8fac4f26cb1464b8-e7b16e903efd67930602",
+          "file": "upstream-batch03-resources.spec.ts",
+          "line": 37,
+          "column": 1
+        },
+        {
+          "title": "Q2982 keeps explicit favicon and manifest paths in application subdirectory without replacing host metadata",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 15,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 30024,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts",
+                        "column": 64,
+                        "line": 59
+                      },
+                      "message": "Error: locator.getAttribute: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#resource-slot link[rel=\"icon\"]')\u001b[22m\n\n\n  57 |   await addSlot(page,\"resource-slot\");\n  58 |   await page.evaluate(async url=>{const s=window.__upstreamRuntime__!;s.handles.push(await s.runtime.mountApp({name:\"metadata\",container:\"#resource-slot\",entry:{type:\"html\",url:url+\"/app/entry.html\"}}));},resourceOrigin.url);\n> 59 |   expect(await page.locator('#resource-slot link[rel=\"icon\"]').getAttribute('href')).toBe(resourceOrigin.url+\"/app/favicon.svg\");\n     |                                                                ^\n  60 |   expect(await page.locator('#resource-slot link[rel=\"manifest\"]').getAttribute('href')).toBe(resourceOrigin.url+\"/app/manifest.json\");\n  61 |   expect(await page.locator('head link[rel=\"icon\"],head link[rel=\"manifest\"]').evaluateAll(nodes=>nodes.map(n=>n.outerHTML))).toEqual(before);\n  62 | });\n    at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch03-resources.spec.ts:59:64"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:53:53.158Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch03-resources-c1d42-out-replacing-host-metadata-webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/fanfangbo/workspace/micro-framework/test-results/upstream-batch03-resources-c1d42-out-replacing-host-metadata-webkit/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "fbbe8fac4f26cb1464b8-590132b7724b745a0e8c",
+          "file": "upstream-batch03-resources.spec.ts",
+          "line": 55,
+          "column": 1
+        },
+        {
+          "title": "Q3021 mounts a nested runtime grandchild with distinct executing Realms and destroys the full tree",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 16,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 853,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:54:23.412Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fbbe8fac4f26cb1464b8-decdb03daf9b3f4b591d",
+          "file": "upstream-batch03-resources.spec.ts",
+          "line": 64,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "upstream-batch03-runtime-lifecycle.spec.ts",
+      "file": "upstream-batch03-runtime-lifecycle.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Q3031 Q3005 isolates delayed manual unmount from an automatic instance of the same Vite Vue entry",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 895,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:53:01.460Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0ad97bbbe0f9300626a6-fccde358d6f857b9b3cc",
+          "file": "upstream-batch03-runtime-lifecycle.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "W1054 supplies fresh login props after disposing and recreating an alive application",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 205,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:53:02.447Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0ad97bbbe0f9300626a6-5402004f47194c4aa67a",
+          "file": "upstream-batch03-runtime-lifecycle.spec.ts",
+          "line": 34,
+          "column": 1
+        },
+        {
+          "title": "Q2987 clears real Vue onBeforeUnmount intervals during a real route switch while a sibling clock continues",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 742,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:53:02.660Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0ad97bbbe0f9300626a6-812f938a149d2d8b6c4a",
+          "file": "upstream-batch03-runtime-lifecycle.spec.ts",
+          "line": 51,
+          "column": 1
+        },
+        {
+          "title": "Q3031 Q3005 isolates delayed manual unmount from an automatic instance of the same Vite Vue entry",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 10,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 969,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:53:42.290Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0ad97bbbe0f9300626a6-07d9cb060343e05c9ed7",
+          "file": "upstream-batch03-runtime-lifecycle.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "W1054 supplies fresh login props after disposing and recreating an alive application",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 10,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 277,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:53:43.567Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0ad97bbbe0f9300626a6-fd61513180aba7d915f2",
+          "file": "upstream-batch03-runtime-lifecycle.spec.ts",
+          "line": 34,
+          "column": 1
+        },
+        {
+          "title": "Q2987 clears real Vue onBeforeUnmount intervals during a real route switch while a sibling clock continues",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 10,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 725,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:53:43.848Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0ad97bbbe0f9300626a6-5f9477bb57dc19faef72",
+          "file": "upstream-batch03-runtime-lifecycle.spec.ts",
+          "line": 51,
+          "column": 1
+        },
+        {
+          "title": "Q3031 Q3005 isolates delayed manual unmount from an automatic instance of the same Vite Vue entry",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 17,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 880,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:54:24.676Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0ad97bbbe0f9300626a6-7bfc2706799c07b1c14d",
+          "file": "upstream-batch03-runtime-lifecycle.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "W1054 supplies fresh login props after disposing and recreating an alive application",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 17,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 355,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:54:25.697Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0ad97bbbe0f9300626a6-b505dae3a2982d31d03f",
+          "file": "upstream-batch03-runtime-lifecycle.spec.ts",
+          "line": 34,
+          "column": 1
+        },
+        {
+          "title": "Q2987 clears real Vue onBeforeUnmount intervals during a real route switch while a sibling clock continues",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 17,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 806,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:54:26.058Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0ad97bbbe0f9300626a6-435ff21f06f08eb37017",
+          "file": "upstream-batch03-runtime-lifecycle.spec.ts",
+          "line": 51,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "upstream-batch03-runtime-network.spec.ts",
+      "file": "upstream-batch03-runtime-network.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Q3036 recovers B at the identical URL after A-offline-B-A-online-B without reloading the host",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 251,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:53:03.609Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "97fe1f187905b1f39257-b0b1a64601d3bd49e30c",
+          "file": "upstream-batch03-runtime-network.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "Q3036 recovers B at the identical URL after A-offline-B-A-online-B without reloading the host",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 11,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 722,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:53:44.919Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "97fe1f187905b1f39257-7ca73cb921bb5d05701c",
+          "file": "upstream-batch03-runtime-network.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "Q3036 recovers B at the identical URL after A-offline-B-A-online-B without reloading the host",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 18,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 565,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:54:27.067Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "97fe1f187905b1f39257-f9c54a38d5e50e1e3ef5",
+          "file": "upstream-batch03-runtime-network.spec.ts",
+          "line": 6,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "upstream-batch03-runtime-prewarm.spec.ts",
+      "file": "upstream-batch03-runtime-prewarm.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "W991 preserves root CSS variables from preload and pre-execution through alive activation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 263,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:53:04.148Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7273037ba2264b2eee17-bb39551fb733cc069d64",
+          "file": "upstream-batch03-runtime-prewarm.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "W1033 sends a notification through an explicit host service while the prewarmed application remains hidden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 181,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:53:04.499Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7273037ba2264b2eee17-e3023eac7f018065306e",
+          "file": "upstream-batch03-runtime-prewarm.spec.ts",
+          "line": 54,
+          "column": 1
+        },
+        {
+          "title": "W991 preserves root CSS variables from preload and pre-execution through alive activation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 697,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:53:46.305Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7273037ba2264b2eee17-c4935a3e3e525dbd6ed9",
+          "file": "upstream-batch03-runtime-prewarm.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "W1033 sends a notification through an explicit host service while the prewarmed application remains hidden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 236,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:53:47.338Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7273037ba2264b2eee17-77156ea4f52d3ba5de49",
+          "file": "upstream-batch03-runtime-prewarm.spec.ts",
+          "line": 54,
+          "column": 1
+        },
+        {
+          "title": "W991 preserves root CSS variables from preload and pre-execution through alive activation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 19,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 554,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:54:27.994Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7273037ba2264b2eee17-3942ca44465cf3923eed",
+          "file": "upstream-batch03-runtime-prewarm.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "W1033 sends a notification through an explicit host service while the prewarmed application remains hidden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 19,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 289,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:54:28.687Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7273037ba2264b2eee17-3f0f82f3377a33a50aed",
+          "file": "upstream-batch03-runtime-prewarm.spec.ts",
+          "line": 54,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "upstream-batch03-runtime-vue.spec.ts",
+      "file": "upstream-batch03-runtime-vue.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "W1003 recreates real Vue Router and vue-i18n instances after A-B-A lifecycle destruction",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 726,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:53:04.877Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "106d677d0121906b8652-e40d1d12c8dde6885d66",
+          "file": "upstream-batch03-runtime-vue.spec.ts",
+          "line": 7,
+          "column": 1
+        },
+        {
+          "title": "W1043 W1031 W1030 forwards host route props and history state into a real Vue router without rewriting native location",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 250,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:53:05.686Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "106d677d0121906b8652-11d3022ddf88e5858cb5",
+          "file": "upstream-batch03-runtime-vue.spec.ts",
+          "line": 28,
+          "column": 1
+        },
+        {
+          "title": "W1020 delivers host route events to an alive Vue router across hidden and reactivated states exactly once",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 531,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:53:05.940Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "106d677d0121906b8652-0438dcd28f887f6d8cb2",
+          "file": "upstream-batch03-runtime-vue.spec.ts",
+          "line": 59,
+          "column": 1
+        },
+        {
+          "title": "W1003 recreates real Vue Router and vue-i18n instances after A-B-A lifecycle destruction",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1208,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:53:47.892Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "106d677d0121906b8652-c20705ef0f40dc3e8c68",
+          "file": "upstream-batch03-runtime-vue.spec.ts",
+          "line": 7,
+          "column": 1
+        },
+        {
+          "title": "W1043 W1031 W1030 forwards host route props and history state into a real Vue router without rewriting native location",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 367,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:53:49.443Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "106d677d0121906b8652-7b0fefef7044e778ddd4",
+          "file": "upstream-batch03-runtime-vue.spec.ts",
+          "line": 28,
+          "column": 1
+        },
+        {
+          "title": "W1020 delivers host route events to an alive Vue router across hidden and reactivated states exactly once",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 474,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:53:49.815Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "106d677d0121906b8652-8fba67ba4e9a39203a19",
+          "file": "upstream-batch03-runtime-vue.spec.ts",
+          "line": 59,
+          "column": 1
+        },
+        {
+          "title": "W1003 recreates real Vue Router and vue-i18n instances after A-B-A lifecycle destruction",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 20,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 943,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:54:29.179Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "106d677d0121906b8652-9823ee2f3ce32795bf33",
+          "file": "upstream-batch03-runtime-vue.spec.ts",
+          "line": 7,
+          "column": 1
+        },
+        {
+          "title": "W1043 W1031 W1030 forwards host route props and history state into a real Vue router without rewriting native location",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 20,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 354,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:54:30.266Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "106d677d0121906b8652-82a4e51b789f5333115f",
+          "file": "upstream-batch03-runtime-vue.spec.ts",
+          "line": 28,
+          "column": 1
+        },
+        {
+          "title": "W1020 delivers host route events to an alive Vue router across hidden and reactivated states exactly once",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 20,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 516,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T10:54:30.624Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "106d677d0121906b8652-743787440e727730a143",
+          "file": "upstream-batch03-runtime-vue.spec.ts",
+          "line": 59,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-08T10:52:24.000Z",
+    "duration": 127175.10399999999,
+    "expected": 45,
+    "skipped": 0,
+    "unexpected": 3,
+    "flaky": 0
+  }
+}

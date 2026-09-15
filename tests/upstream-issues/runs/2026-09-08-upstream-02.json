@@ -1,0 +1,1343 @@
+{
+  "id": "2026-09-08-upstream-02",
+  "completedAt": "2026-09-08T05:12:45.927375+00:00",
+  "scope": "40条已收集问题的本项目等价场景；39条适用场景完成，IE11按既有产品范围排除。上游旧框架本身没有重跑；代表性组件版本与覆盖限制逐条记在catalog.resolution。",
+  "browsers": [
+    "Chromium",
+    "Firefox",
+    "WebKit"
+  ],
+  "realSafari": "not-run",
+  "statusCounts": {
+    "regression-passed": 31,
+    "fixed": 8,
+    "out-of-scope": 1
+  },
+  "gates": [
+    {
+      "id": "install",
+      "command": "bun install --frozen-lockfile",
+      "exitCode": 0,
+      "logPath": "tests/upstream-issues/runs/2026-09-08-upstream-02-evidence/final-install.log",
+      "logSha256": "4f28e71042aeca8a03172848370fd3b58fd436b4b250c1f5fb6df4d630afe751"
+    },
+    {
+      "id": "architecture",
+      "command": "bun run check:architecture",
+      "exitCode": 0,
+      "logPath": "tests/upstream-issues/runs/2026-09-08-upstream-02-evidence/final-architecture.log",
+      "logSha256": "617eb24df2610b28b256fc5bfe13c3b2132e3c8044abc9d05a244bfe3213a7bb"
+    },
+    {
+      "id": "typecheck",
+      "command": "bun run typecheck",
+      "exitCode": 0,
+      "logPath": "tests/upstream-issues/runs/2026-09-08-upstream-02-evidence/final-typecheck.log",
+      "logSha256": "1d2d6e37de22bf6f5bad309206e52ed8075d069a87e5aa0ad4490f7e3bc80dc4"
+    },
+    {
+      "id": "build",
+      "command": "bun run build",
+      "exitCode": 0,
+      "logPath": "tests/upstream-issues/runs/2026-09-08-upstream-02-evidence/final-build.log",
+      "logSha256": "bb2723c7916943a5fc06f7d7fe53a975df540c0bd061b10943e8b7640358324c"
+    },
+    {
+      "id": "unit",
+      "command": "bun run test:unit --reporter=json --outputFile=/private/tmp/micro-upstream-final-unit.json",
+      "exitCode": 0,
+      "logPath": "tests/upstream-issues/runs/2026-09-08-upstream-02-evidence/final-unit.log",
+      "passed": 153,
+      "failed": 0,
+      "logSha256": "58861c5afe4ee7ede914c490bb4b355dce5159de80770a2d283bed555ffa950e",
+      "reportPath": "tests/upstream-issues/runs/2026-09-08-upstream-02-evidence/final-unit.json"
+    },
+    {
+      "id": "browser",
+      "command": "bun run test:browser --reporter=json --outputFile=/private/tmp/micro-upstream-final-browser.json",
+      "exitCode": 0,
+      "logPath": "tests/upstream-issues/runs/2026-09-08-upstream-02-evidence/final-browser.log",
+      "passed": 321,
+      "failed": 0,
+      "skipped": 0,
+      "logSha256": "229ff555fe3ef661ad72ee1dd336c7c0a775cfb83f1edd0df36d03420e1d8329",
+      "reportPath": "tests/upstream-issues/runs/2026-09-08-upstream-02-evidence/final-browser.json"
+    },
+    {
+      "id": "e2e",
+      "command": "PLAYWRIGHT_JSON_OUTPUT_NAME=/private/tmp/micro-upstream-final-e2e.json bun run test:e2e --reporter=json",
+      "exitCode": 0,
+      "logPath": "tests/upstream-issues/runs/2026-09-08-upstream-02-evidence/final-e2e.log",
+      "passed": 222,
+      "failed": 0,
+      "skipped": 0,
+      "flaky": 0,
+      "logSha256": "7c2429b19da18fe9b35a792bdbb9ad591db14f94fbb6be8b713592df6ace571b",
+      "reportPath": "tests/upstream-issues/runs/2026-09-08-upstream-02-evidence/final-e2e.json"
+    }
+  ],
+  "tests": [
+    {
+      "path": "tests/browser/upstream-dom-regressions.browser.test.ts",
+      "title": "Q3019 Q420 scopes insertBefore styles across Realm churn without patching host prototypes",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/e2e/upstream-lifecycle-regressions.spec.ts",
+      "title": "Q2368 assigns fresh identities when a middle same-app tab is replaced at the same DOM position",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/e2e/upstream-lifecycle-regressions.spec.ts",
+      "title": "Q578 keeps host styles inserted after application unmount in the host document",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/e2e/upstream-runtime-routes.spec.ts",
+      "title": "Q578 loads a host route stylesheet after native navigation away from a child application",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/e2e/upstream-runtime-routes.spec.ts",
+      "title": "Q2735 completes native hash A-B-A navigation with live DOM and isolated Realms (keepAlive=false)",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/e2e/upstream-runtime-routes.spec.ts",
+      "title": "Q2735 completes native hash A-B-A navigation with live DOM and isolated Realms (keepAlive=true)",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/e2e/upstream-runtime-routes.spec.ts",
+      "title": "Q2854 requests a new entry after a 404 with the same name and container",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/upstream-entry-regressions.browser.test.ts",
+      "title": "Q2171 Q777 loads spaced asset URLs and discovers the lifecycle before unrelated final globals",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/upstream-realm-remaining.browser.test.ts",
+      "title": "Q2362 executes dynamic async=false scripts in a,b,c order after c,b,a network completion",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/e2e/upstream-runtime-eviction.spec.ts",
+      "title": "Q1089 completes keepAlive eviction without waiting on its own unmount (maxInstances=0, remount=false)",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/e2e/upstream-runtime-eviction.spec.ts",
+      "title": "Q1089 completes keepAlive eviction without waiting on its own unmount (maxInstances=0, remount=true)",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/e2e/upstream-runtime-eviction.spec.ts",
+      "title": "Q1089 rejects a reentrant mount during keepAlive disposal and completes lifecycle cleanup once",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/e2e/upstream-runtime-races.spec.ts",
+      "title": "Q1089 serializes remount behind an unfinished unmount (keepAlive=false)",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/e2e/upstream-runtime-races.spec.ts",
+      "title": "Q1089 serializes remount behind an unfinished unmount (keepAlive=true)",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/e2e/upstream-runtime-races.spec.ts",
+      "title": "Q1089 cancels an unfinished first mount before honoring the newest mount request",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/e2e/upstream-runtime-races.spec.ts",
+      "title": "Q1089 lets a newer unmount supersede a mount waiting behind asynchronous teardown",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/e2e/upstream-runtime-races.spec.ts",
+      "title": "Q1089 serializes a reentrant mount requested by an unmounting lifecycle listener",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/e2e/upstream-runtime-races.spec.ts",
+      "title": "Q222 switches applications from real AntD confirm.onOk without an event teardown error",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/upstream-script-regressions.browser.test.ts",
+      "title": "removes a script through its head surface after executing only in its iframe",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/upstream-script-regressions.browser.test.ts",
+      "title": "removes a script through its body surface after executing only in its iframe",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/upstream-script-regressions.browser.test.ts",
+      "title": "keeps removal ownership current when a routed script moves between head and body",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/upstream-script-regressions.browser.test.ts",
+      "title": "rejects removal of unrouted and foreign-Realm scripts",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/upstream-script-regressions.browser.test.ts",
+      "title": "allows an inline script to remove itself before appendChild returns",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/upstream-dom-regressions.browser.test.ts",
+      "title": "Q1271 keeps asynchronously appended head styles before body styles in the cascade",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/upstream-readiness-cascade.browser.test.ts",
+      "title": "Q1271 retains static body style position when async head styles arrive",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/upstream-realm-remaining.browser.test.ts",
+      "title": "Q1613 isolates classic UMD global aliases across sibling Realms with host _ absent",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/upstream-realm-remaining.browser.test.ts",
+      "title": "Q1613 isolates classic UMD global aliases across sibling Realms with host _ present",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/upstream-realm-remaining.browser.test.ts",
+      "title": "Q1266 preserves cached document script ownership through Promise and timer callbacks",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/upstream-dom-regressions.browser.test.ts",
+      "title": "W102 Q1449 Q748 preserves global function receivers and constructor prototypes",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/e2e/upstream-runtime-routes.spec.ts",
+      "title": "Q886 isolates an application entry ReferenceError and navigates to a working application",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/e2e/upstream-runtime-routes.spec.ts",
+      "title": "Q886 isolates an application bootstrap ReferenceError and navigates to a working application",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/upstream-credentials.browser.test.ts",
+      "title": "Q341 propagates same-origin from html entry through native ESM graphs and dynamic resources",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/upstream-credentials.browser.test.ts",
+      "title": "Q341 propagates include from html entry through native ESM graphs and dynamic resources",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/upstream-credentials.browser.test.ts",
+      "title": "Q341 propagates same-origin from module entry through native ESM graphs and dynamic resources",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/upstream-credentials.browser.test.ts",
+      "title": "Q341 propagates include from module entry through native ESM graphs and dynamic resources",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/upstream-credentials.browser.test.ts",
+      "title": "Q341 preserves native resource defaults when entry credentials are omitted",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/upstream-entry-regressions.browser.test.ts",
+      "title": "Q187 preserves interleaved style and link document order",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/upstream-dom-regressions.browser.test.ts",
+      "title": "W835 delivers custom window events locally and respects listener removal",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/upstream-realm-remaining.browser.test.ts",
+      "title": "W835 keeps simultaneously registered custom window listeners isolated across siblings",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/e2e/upstream-lifecycle-regressions.spec.ts",
+      "title": "W823 remounts a React application twice with working event handlers and one surface",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/e2e/upstream-runtime-races.spec.ts",
+      "title": "W823 awaits asynchronous React beforeUnmount before remounting with working events (keepAlive=false)",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/e2e/upstream-runtime-races.spec.ts",
+      "title": "W823 awaits asynchronous React unmount before remounting with working events (keepAlive=false)",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/e2e/upstream-runtime-races.spec.ts",
+      "title": "W823 awaits asynchronous React beforeUnmount before reactivating with working events (keepAlive=true)",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/e2e/upstream-runtime-races.spec.ts",
+      "title": "W823 awaits asynchronous React deactivate before reactivating with working events (keepAlive=true)",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/e2e/upstream-lifecycle-regressions.spec.ts",
+      "title": "W116 retains CSSOM-inserted rules when the same keepAlive surface is reactivated",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/surface-activation.browser.test.ts",
+      "title": "hides an inactive surface despite its author display and restores its CSSOM and focus",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/upstream-dom-regressions.browser.test.ts",
+      "title": "W107 preserves empty and fragment links while resolving relative assets",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/e2e/upstream-runtime-navigation.spec.ts",
+      "title": "W107 keeps empty and fragment anchor clicks inside the application without navigating the host",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/upstream-dom-regressions.browser.test.ts",
+      "title": "W78 permits reinserting the same style node without redefining properties",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/upstream-realm-remaining.browser.test.ts",
+      "title": "W78 reinserts the identical style node while connected and after removal",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/upstream-realm-remaining.browser.test.ts",
+      "title": "W78 reinserts the identical link node while connected and after removal",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/upstream-overlay-viewport.browser.test.ts",
+      "title": "W67 keeps a default body overlay in viewport geometry without changing node identity or event paths",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/upstream-overlay-viewport.browser.test.ts",
+      "title": "W67 preserves an explicit nested overlay container and application-owned popover state",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/upstream-overlay-viewport.browser.test.ts",
+      "title": "W67 synchronously hides retained overlays and removes top-layer state on surface destruction",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/upstream-realm-remaining.browser.test.ts",
+      "title": "W67 keeps document scroll metrics aligned with visible viewport coordinates and restores them on destroy",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/e2e/upstream-components-diagrams.spec.ts",
+      "title": "W67 X6 Dnd follows the pointer in an offset scrolled and scaled host",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/upstream-readiness-cascade.browser.test.ts",
+      "title": "W49 dispatches document readiness and window load once after their application resources",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/document-write-assets.browser.test.ts",
+      "title": "preserves entry base URLs, data scripts and inert templates while handlers execute in the app Realm",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/document-write-handler.browser.test.ts",
+      "title": "retains the visible HTML and SVG element scope and the iframe global Realm",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/document-write-handler.browser.test.ts",
+      "title": "preserves application edits to earlier and currently extended text nodes",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/document-write-handler.browser.test.ts",
+      "title": "applies full-document root attributes and restores writer-owned attributes on reopening",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/document-write-handler.browser.test.ts",
+      "title": "ignores writes from canceled external scripts after a replacement document opens",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/document-write-handler.browser.test.ts",
+      "title": "rejects a failing continuation without leaking an unhandled rejection into the host",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/document-write-handler.browser.test.ts",
+      "title": "protects the host Realm and framework attributes when fragment html attributes are adopted",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/document-write.browser.test.ts",
+      "title": "streams split markup, multiple arguments and writeln without replacing existing nodes",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/document-write.browser.test.ts",
+      "title": "executes written inline and nested scripts only inside the iframe Realm",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/document-write.browser.test.ts",
+      "title": "loads relative external scripts before dependent inline scripts and nested writes",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/document-write.browser.test.ts",
+      "title": "keeps outer parser input suspended until a reentrant written script returns",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/document-write.browser.test.ts",
+      "title": "schedules written inline modules in their iframe without hanging flush",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/document-write.browser.test.ts",
+      "title": "keeps data scripts visible and executes legacy JavaScript MIME aliases in the iframe",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/document-write.browser.test.ts",
+      "title": "keeps concurrent streams and their script state local to each application",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/document-write.browser.test.ts",
+      "title": "replaces the application document with open/write/close while keeping its Realm alive",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/document-write.browser.test.ts",
+      "title": "preserves native open/write/close for an application-owned editor or printing iframe",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/document-write.browser.test.ts",
+      "title": "reports a failed written external script through the pending stream",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/document-write.browser.test.ts",
+      "title": "settles pending writes on destroy and ignores subsequent calls",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/html-entry.browser.test.ts",
+      "title": "inserts document.write output at its entry position and waits for written dependencies",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/html-entry.browser.test.ts",
+      "title": "rejects entry loading when a document.write dependency fails",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/html-entry.browser.test.ts",
+      "title": "cancels an entry waiting for a written script when its Realm is destroyed",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/e2e/isolation.spec.ts",
+      "title": "supports document.write in every adapter while retaining application and host isolation",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/upstream-dom-regressions.browser.test.ts",
+      "title": "W12 updates root CSS tokens after a Vite-style dynamic stylesheet edit",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/e2e/upstream-runtime-navigation.spec.ts",
+      "title": "W12 applies a real Vite WebSocket CSS HMR update to root variables without replacing the Realm",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/e2e/upstream-components-diagrams.spec.ts",
+      "title": "W832 Vue2 host and child insert bpmn-js flow nodes in the visible ShadowRoot",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/e2e/upstream-components-overlays.spec.ts",
+      "title": "W830 Naive UI select uses current trigger geometry after A-B-A switching (keepAlive=false)",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/e2e/upstream-components-overlays.spec.ts",
+      "title": "W830 Naive UI select uses current trigger geometry after A-B-A switching (keepAlive=true)",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/e2e/upstream-components-overlays.spec.ts",
+      "title": "W829 Recharts hits the lower chart area after the host page scrolls",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/upstream-dom-regressions.browser.test.ts",
+      "title": "W882 returns the application root for the root selector",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/upstream-dom-regressions.browser.test.ts",
+      "title": "W485 retains a dynamic stylesheet id and node identity",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/upstream-realm-remaining.browser.test.ts",
+      "title": "W209 adopts app-created constructed stylesheets in visible nested ShadowRoots without host mutation",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/upstream-dom-regressions.browser.test.ts",
+      "title": "W988 dispatches custom document events to the same document listeners",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/upstream-realm-remaining.browser.test.ts",
+      "title": "W988 keeps simultaneously registered custom document listeners isolated across siblings",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/e2e/upstream-components-overlays.spec.ts",
+      "title": "W896 Element Plus draggable dialog reaches the host viewport right and bottom boundaries",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/browser/upstream-realm-remaining.browser.test.ts",
+      "title": "W770 scopes cached Selection objects when sibling applications alternate selections",
+      "executions": 3,
+      "passed": 3
+    },
+    {
+      "path": "tests/e2e/upstream-components-diagrams.spec.ts",
+      "title": "W288 Monaco places a caret by mouse in existing middle code before inserting text",
+      "executions": 3,
+      "passed": 3
+    }
+  ],
+  "evidenceValidation": {
+    "requiredSuites": {
+      "tests/browser/upstream-dom-regressions.browser.test.ts": {
+        "minimumLogicalCases": 10,
+        "passedLogicalCases": 10,
+        "sourceSha256": "1bc2460b9d87c4226c1fad0f5fd58caddf54e8131bfa9c2a9cad07dd1206c058"
+      },
+      "tests/browser/upstream-entry-regressions.browser.test.ts": {
+        "minimumLogicalCases": 2,
+        "passedLogicalCases": 2,
+        "sourceSha256": "c591fdc52a01a297826e13dd2dffac4e7c3f05c3ad114a43e120ecf881b837c7"
+      },
+      "tests/browser/upstream-script-regressions.browser.test.ts": {
+        "minimumLogicalCases": 5,
+        "passedLogicalCases": 5,
+        "sourceSha256": "bfe2e6c360d04324cc101dda2b957f723f101d23860a901e4acec14c02d81ac0"
+      },
+      "tests/browser/upstream-realm-remaining.browser.test.ts": {
+        "minimumLogicalCases": 11,
+        "passedLogicalCases": 11,
+        "sourceSha256": "e773492a2a324ab7c17f7cdbb826ce0fa488d19abf519a2f347de289561f259c"
+      },
+      "tests/browser/upstream-readiness-cascade.browser.test.ts": {
+        "minimumLogicalCases": 2,
+        "passedLogicalCases": 2,
+        "sourceSha256": "4f8e11d9076c7d302c038c50ae3fa32e15ec87fb2c1aa00eb9c5984e52fba944"
+      },
+      "tests/browser/upstream-credentials.browser.test.ts": {
+        "minimumLogicalCases": 5,
+        "passedLogicalCases": 5,
+        "sourceSha256": "060ac58e684cbb811efac7527a8df4f87760d375808e61a8dc0dbab33ea917b4"
+      },
+      "tests/browser/upstream-overlay-viewport.browser.test.ts": {
+        "minimumLogicalCases": 3,
+        "passedLogicalCases": 3,
+        "sourceSha256": "57635a9f930b742cb3f644c1a66788f51b2bee55eb42744f8a3d421f07a9e872"
+      },
+      "tests/browser/document-write.browser.test.ts": {
+        "minimumLogicalCases": 11,
+        "passedLogicalCases": 11,
+        "sourceSha256": "4eab66f7a0b16f6cf10127e32507476096c992ea8967f1c40c3be4f9ac505716"
+      },
+      "tests/browser/document-write-handler.browser.test.ts": {
+        "minimumLogicalCases": 6,
+        "passedLogicalCases": 6,
+        "sourceSha256": "3b96ee27b6e42f71a02b0e8a8771ab567f1e74decbad40e2fa333642f1735859"
+      },
+      "tests/browser/document-write-assets.browser.test.ts": {
+        "minimumLogicalCases": 1,
+        "passedLogicalCases": 1,
+        "sourceSha256": "3444156f213d67cf7a89fe79d53fc276607601f71440a75bfebbc1ca14ec69ca"
+      },
+      "tests/browser/html-entry.browser.test.ts": {
+        "minimumLogicalCases": 4,
+        "passedLogicalCases": 4,
+        "sourceSha256": "faf85f5e1527733c39992e8cb5883b536e4222456bc2214220a81225a802d778"
+      },
+      "tests/e2e/upstream-lifecycle-regressions.spec.ts": {
+        "minimumLogicalCases": 4,
+        "passedLogicalCases": 4,
+        "sourceSha256": "c9259b3877d9198316f96abcba70923c58529bea94ce4cdb88a4dc6f0e8b7b4a"
+      },
+      "tests/e2e/upstream-runtime-routes.spec.ts": {
+        "minimumLogicalCases": 6,
+        "passedLogicalCases": 6,
+        "sourceSha256": "70e4d8b5d74235cc1c316b91ba353e611f25a90cae74495529981aa4ddac58db"
+      },
+      "tests/e2e/upstream-runtime-races.spec.ts": {
+        "minimumLogicalCases": 10,
+        "passedLogicalCases": 10,
+        "sourceSha256": "0de35351e62f3bc19676d0ce63b4c97cac98d5c9b929a8656743451e552f9aee"
+      },
+      "tests/e2e/upstream-runtime-eviction.spec.ts": {
+        "minimumLogicalCases": 3,
+        "passedLogicalCases": 3,
+        "sourceSha256": "880b73ad065fab08886f65aaecb2c472286cc0ee5ed48cb6503562ab00539c64"
+      },
+      "tests/e2e/upstream-runtime-navigation.spec.ts": {
+        "minimumLogicalCases": 2,
+        "passedLogicalCases": 2,
+        "sourceSha256": "376e736debaa356479c7806f624fe8c27ad7e77badf5efac7071d870ff736a74"
+      },
+      "tests/e2e/upstream-components-diagrams.spec.ts": {
+        "minimumLogicalCases": 3,
+        "passedLogicalCases": 3,
+        "sourceSha256": "d371718317269b4e8b7d55dff975aabf1774707ae1ad6aa76a0e58bb507f03e1"
+      },
+      "tests/e2e/upstream-components-overlays.spec.ts": {
+        "minimumLogicalCases": 4,
+        "passedLogicalCases": 4,
+        "sourceSha256": "e0807b280bcf00eebb05a61508a5b28f6fd962bba89330f822a35cd35955b1c2"
+      },
+      "tests/e2e/isolation.spec.ts": {
+        "minimumLogicalCases": 20,
+        "passedLogicalCases": 20,
+        "sourceSha256": "14390be2e2cc45b26eb973b7157d8c19ad8017a6cdbf498ddc70856d216d32bc"
+      }
+    },
+    "runtimeManifestSha256": "01afcbc2ad31ffdbef4a3c13ec618d8426a2897bd937d1c1f38269de72dc475f",
+    "runtimeRequiredLogicalCases": 21,
+    "gateManifestSha256": "cc7ed6a26b8fe2c9249c64db65857e4dcbdb8dd19d39232b2373cc18cc1fab26",
+    "browserConfig": {
+      "path": "vitest.browser.config.ts",
+      "sha256": "dc133572a84585493818c753eb624999a595ae21b25e54a84182a88b1ed6cd5c",
+      "instances": [
+        {
+          "browser": "chromium",
+          "name": "browser-chromium"
+        },
+        {
+          "browser": "firefox",
+          "name": "browser-firefox"
+        },
+        {
+          "browser": "webkit",
+          "name": "browser-webkit"
+        }
+      ],
+      "command": "bun run test:browser --reporter=json --outputFile=/private/tmp/micro-upstream-final-browser.json",
+      "reportLimit": "Vitest JSON omits per-assertion browser names; each source suite/title has exactly three passed executions, backed by this three-instance config and the unfiltered full-run command."
+    },
+    "playwrightProjectNames": [
+      "chromium",
+      "firefox",
+      "webkit"
+    ]
+  },
+  "sourceSha256": {
+    "packages/dom-bridge/src/document-write-tree.ts": "1105d6a5ebe7f171c28419da7124518ddc1d792374641b77c560ceccf35528c5",
+    "packages/dom-bridge/src/document-bridge-plugins.ts": "07c88f4462f963c99a927ec9c276047f38e8d96ab74cad5c3ce3ec277bf2548b",
+    "packages/dom-bridge/src/unbridged-document-api-diagnostics.ts": "273484afaa229ffd0756a53011d484b7f5ae0be594661d6cb9150afdaa7b155c",
+    "packages/dom-bridge/src/document-write-script.ts": "1fe75000aa758aca18abe70d2fbded2f6c28bf4c2025b6863f9c5bb2fb42fd85",
+    "packages/dom-bridge/src/resource-credentials.ts": "4e165198112d2493af9fdca600ab604d6100c7ef486b970c437e05e1e58120ac",
+    "packages/dom-bridge/src/index.ts": "e45373fb49fc4d417119b7b471e26c21798cbb1c37859851f259e95b77173fe2",
+    "packages/dom-bridge/src/document-readiness.ts": "ed4925e006ba77a5e5a4eb4b8789a14f65644625df118bf002ad87d3a70dc13e",
+    "packages/dom-bridge/src/document-bridge.ts": "d6a0f2399a1cdcc008242ac7db9fa479d5cd2a4222e25c3c49ea420bc5a00fa8",
+    "packages/dom-bridge/src/document-write.ts": "c2de3b0b19b9cb3807e70b974f3cf982f64e929c2862714741ee221abaad264c",
+    "packages/dom-bridge/src/anchor-navigation.ts": "513286bcc4d89e0052ac8c7b3bfe2a5a6fc69f0df753db6bd251c327f820f00a",
+    "packages/dom-bridge/src/document-write-parser.ts": "280ebb493f62499685c9032eb836cbbb2f785b7c7c295563f70dabe08552e7c4",
+    "packages/dom-bridge/src/cross-realm-instance-compatibility.ts": "82558a9fbae766537307508994dcda9b9af74aedb8af8d33214c1244c589aae2",
+    "packages/dom-surface/src/synchronous-overlay-preparation.ts": "1c8fc3bf87c3c0b9afebcbc55e45e574c50ae211a5ae2e1285a2f9b60c772298",
+    "packages/dom-surface/src/document-style-token-bridge.ts": "e527fbb48819c2f58cb78dedf8be9d36d8511b98ba0fc607091d5ab75280d5c2",
+    "packages/dom-surface/src/create-dom-surface.ts": "efb4a9d228f1a612f7fdbd159983f413dca0f586f7b5be9ebb53593394b8e4bd",
+    "packages/dom-surface/src/index.ts": "635a7b43171fa08c9dc1a65a631b2172a5ba3e526f3a985deb2124b9488f207c",
+    "packages/dom-surface/src/body-overlay-viewport-bridge.ts": "cc89bb97224ee049c4c53004e71412ae838a8b3214d29b1372953cb08f761366",
+    "packages/dom-surface/src/global-overlay-stack-bridge.ts": "ce5453b4bddd1ad7033a3bf7984bd8ef61a9cd2825c7422dd0a1c329558e3a62",
+    "packages/entry-resolver/src/prefetch-entry.ts": "e94164928561fa4aa6c255a58ec4147a541313d02ee5d539673dfea140b094ed",
+    "packages/entry-resolver/src/resolve-entry.ts": "2c1c24e7b9fd01b4af3fea51f61cc812cb789d6d7714a6dbfcf3e3880f0decff",
+    "packages/entry-resolver/src/types.ts": "3e9aa3d4c050b5b7143304b704ae646ba66a69bd7b83d1fc785c82e0ff50c04e",
+    "packages/entry-resolver/src/resource-manifest.ts": "4bc9b2e343c7d7b9fb655cbdc0dec57772d6b9226f2edc8108cf078bbca08aa1",
+    "packages/entry-resolver/src/request-credentials.ts": "fd270a71fee86226d6b67c4baef072f2c14c928ca44c853ac25075ac54358faf",
+    "packages/entry-resolver/src/index.ts": "049bfb84670efa9565216987f79ed93f4b9d4d98fa7070dad4b5fd9593c08257",
+    "packages/entry-resolver/src/asset-rewriter.ts": "03d818cad6951cbbffcd6f759df1939d87d7cd28d26c17af414e193e15f5b67d",
+    "packages/realm-host/src/module-loader.ts": "6ae2672e0df1255aa39ba37e8aac1743333ebcbef254ccba7b6aed2ac63e01ea",
+    "packages/realm-host/src/html-entry-styles.ts": "976b939d55188f4af130f5052424289051cc1c08037092c1c8470919942e4cb8",
+    "packages/realm-host/src/html-entry-loader.ts": "fc7f601737e11b0442399d6c12f3947a6bfb34cb865bb3c614f94b40f4fe7029",
+    "packages/realm-host/src/script-executor.ts": "972933d8b120b56462ee7f2640cbfa7c684eedf7ed9b32449fac4da006d23c1f",
+    "packages/realm-host/src/realm-loading-plan.ts": "c4662fb52e607886731bf24478297f4017da89c42c112f4a30b1d94a25b8c745",
+    "packages/realm-host/src/script-scheduler.ts": "86037d289ef8c4f66c99c8fa957509c7a745ecb29371ff7c8b8bbd1d573a54ae",
+    "packages/realm-host/src/realm-bootstrap.ts": "bc33448a94e58ca732e9c24ec4fdc2ae9604c3ddfdbf97cce4bf24bee3ff1dd4",
+    "packages/realm-host/src/realm-host.ts": "3425a4fc972fa6bda297b59447fb7881b70912f59a9e57829854595faa65e818",
+    "packages/realm-host/src/lifecycle-discovery.ts": "732f178b6241da5035a76961eaeaf73f770f5844ef4b599a4763b31e4fcc2200",
+    "packages/realm-host/src/index.ts": "ce1fe6e20122731c45382f550488520555bed12a935280973be72b6ac74c766a",
+    "packages/realm-host/src/realm-errors.ts": "e7b76dad29fa3c7ed83c83a31539ecaefd67b1549ee94fd60dbe28371dbce0c1",
+    "packages/runtime-core/src/index.ts": "ac0cfdc49aff97d64acbf9c5dd190d6381e9a3e2a7d5c421f082838e46bc4429",
+    "packages/visual-bridge/src/selection-bridge.ts": "b00b446211d28c9273a4125fe4defadcf76d0db86f347510ddd46f3b68ee9c36",
+    "packages/visual-bridge/src/focus-bridge.ts": "b03eed13fb9d53fb6e21042ce4908320663c03b9ed340effd3e02bdfbad6fcf0",
+    "packages/visual-bridge/src/document-scroll-bridge.ts": "9ab63a313741e1657dec68b6c6ed2df763e162572c0503f0b19b34321c0c13cc",
+    "packages/visual-bridge/src/visual-surface.ts": "24445be36311a7b45507bf0f73c44ddd17cd0e66d4e579dc6e5f52bcdae9a20a",
+    "packages/visual-bridge/src/computed-style-bridge.ts": "9c0c8c87e1e02b95774af6aa84acf356ce6b7f2502190c587c1459a20d52363c",
+    "packages/visual-bridge/src/install-visual-bridge.ts": "72a3d220c3ea2584b8075b4ba0b25ab1105394e476f6a3761d97e8aa18c3bd62",
+    "packages/visual-bridge/src/scheduler-bridge.ts": "5e33c26a49096691d8f624d7133372046a37f7f3be2848964395a78ccc3e3a6d",
+    "packages/visual-bridge/src/index.ts": "0e62d50c35179a64690c17803fdddb96656cf33dabee6b8b455a242fddbdf2ad",
+    "packages/visual-bridge/src/animation-bridge.ts": "7290282a1c0e92fa35258eddc426ae2d5215f82c335d0c4046391c1544967693",
+    "packages/adapter-angular/src/angular-lifecycle.ts": "db08af5bce02685eefff9afb12a9f032d85518fd733f787806fb62dec560fb8f",
+    "packages/adapter-angular/src/index.ts": "4fe9936b8c26876591f68b1b184bf0c6efad6d20baa7a2ee70a65f3e407d14cb",
+    "packages/server-registry/src/rollout.ts": "683d310b240819bbbc5ae7aea6317989597b17085c527f21530ae3fb1e79bc89",
+    "packages/server-registry/src/server-registry.ts": "ff0a9cd3c496f46a41acd394545b02df4855ac6c63bc7c588556959c057e2e94",
+    "packages/server-registry/src/index.ts": "89e80419cb43f180c5889b216d8a6053c5b3255d05ad1309f8c7272fc8429961",
+    "packages/shared-resolver/src/types.ts": "e7feff34ece80eab974cfb8a2a6136f3a07e7ad88e5d179ec4f730f41652f149",
+    "packages/shared-resolver/src/index.ts": "fff94465883cc9d1cc9b6766c27037d7fce3afd786600e6b7bd733171f6249e5",
+    "packages/shared-resolver/src/resolve-shared-dependencies.ts": "a5bc734c310695dbeb9783ae64413ee0f0de1d3abf059eb3ca8ab13ab589e2bf",
+    "packages/vite-plugin/src/micro-application-plugin.ts": "e95b2b60d521ba49bb1abfbd938ca2e487934e83f2415b438f76d69aa42ef3fd",
+    "packages/vite-plugin/src/build-manifest.ts": "8dcbfc85c63915c5276572e499d27f5a1221d6b7765cdcc32eb9907ac73b6dfc",
+    "packages/vite-plugin/src/shared-conflict-report.ts": "daa131aac56558ba49bf5155eed83707f9bc6e2a5dd6d507c0cfe8e7cf0932d8",
+    "packages/vite-plugin/src/micro-host-plugin.ts": "a12c262c61fd1c82d57b4b80ef47d78b336cc60f508873c8971df028905bf4c9",
+    "packages/vite-plugin/src/index.ts": "95f76faa23a9c939e9ce43f45e97fa1b44b5ec56f827461d9b8ff9d47bbb88b5",
+    "packages/strong-isolation/src/guest.ts": "4c7825aa4c76b7a39019311ba16cb04c5f4264fa4a09cd913addd8b0b50b0d91",
+    "packages/strong-isolation/src/protocol.ts": "05961567473168e02e46a275226cfee00a583c738dd5b960d7f41b2aa0a2aef4",
+    "packages/strong-isolation/src/index.ts": "31cb9edf0360463e0a34e4cfcd20827f7a4ed5ee0f7698a94436b070e73d7d9e",
+    "packages/strong-isolation/src/frame-host.ts": "15273e7eaed71c8396a4739887899f3f77b8e139f66c091a7b4dadcbb6cd4d84",
+    "packages/dom-guard/src/install-dom-guard.ts": "b224c54708cd10c9044f85e56f04a882907f14cfa417e8e7f74644cc97a063b9",
+    "packages/dom-guard/src/eslint-plugin.ts": "186123fed4359fdc61d687a01a3f6c3d3b52d3e971f9781b2282b476140b035c",
+    "packages/dom-guard/src/index.ts": "f113812b5e91fc689e65a6b65f66c915b6ad02de8cc8b854f43df968fe9cacc0",
+    "packages/contracts/src/state.ts": "c26905863c0beca7b022845d1bbde878adad5176b8bc48af1bda17582a1c6aca",
+    "packages/contracts/src/lifecycle.ts": "67bc5133722bdd17c0f04ce4bc5c32558230ab62dbc7e8ae4f9c7a97d987e7d8",
+    "packages/contracts/src/shared-dependencies.ts": "0ab01cb03eb5feb0bb65c77642e0c5b84e08a203d477aa62ee8332e08aedaeaa",
+    "packages/contracts/src/capabilities.ts": "18d1d4ed309cf11fea7da531efd558c88e9bad6247dd1f77a5559a8c431c5a2d",
+    "packages/contracts/src/application.ts": "1046fec3c4af42fdbf7a1f7862080b5a3062d9028f9e7c109d1684d079b14cf7",
+    "packages/contracts/src/runtime.ts": "e7052bde4a5d3dfabf83fe029bbd079a38c9b9bc70c01b3a0353e6b80c9174cb",
+    "packages/contracts/src/resource-manifest.ts": "a46cee6fb0590d8c280fcdd61704cf437c7738775c93d0d27630ef458e76e44b",
+    "packages/contracts/src/runtime-services.ts": "7e654d3606bba66a1734650ecc91bc72f448f71ebfb7c9d367385e9b76c722b8",
+    "packages/contracts/src/diagnostics.ts": "13104c26b049e4d2319574615f1feec2afa9c0ca06ce7d9381f9508c4d7985a6",
+    "packages/contracts/src/index.ts": "93395ac0417778f7e3a9d31ca5dd5d8828d5fb53609fe6414c3c04b6f1ea1b03",
+    "packages/contracts/src/document-bridge.ts": "a0e980ca3431e533e5ad32058ab7e06fe7f2fc22514be544a189dfad0febb7a8",
+    "packages/adapter-vue2/src/vue2-lifecycle.ts": "c780c701548ab40256abc7872b88a16307714d6e2e731ca843246aef6218ad99",
+    "packages/adapter-vue2/src/index.ts": "2b4af1c21e670597fc36e966b522b4c437a424dbf3bf4848d32a1c6e2b82d385",
+    "packages/runtime/src/index.ts": "69b628f6f86564f8255c3039343c8caa569fbf0690924c44ec72b5ab90833e39",
+    "packages/adapter-vue/src/runtime-context.ts": "0a0d6558123225a9ad267098ca42bd833bf9b19e0bc499fae47b9c19da29ff36",
+    "packages/adapter-vue/src/vue-lifecycle.ts": "190354595bd8729ca5a7f9d27ad12ceba28921f1af1f268b700ec1fd0b75d8a9",
+    "packages/adapter-vue/src/index.ts": "b35d626707aef2738e2173c9772bf0032e9b9d870aa2d3ac0e755114ed48ba30",
+    "packages/cli/src/cli.ts": "9375a79787b1d5d11527cfa70f6c31254c742453689136fd80d92154352ee754",
+    "packages/cli/src/run-cli.ts": "f81466e70d0decadc01b014f8e8c28bf202ff3afeb114209876230e641f7b829",
+    "packages/cli/src/templates.ts": "1369deae2ccc1a9997f583fe4197a57545288121084f45f29f6191f1af4e1d3a",
+    "packages/cli/src/dev-registry-server.ts": "a51d5eb7f37b3c4d134c0a177e51a66d1ab2e36fe1e2ba70cc626912c6fe0654",
+    "packages/cli/src/index.ts": "f3b18007f0eef9cd3f7a565721cde5bb9d674f1476245aaf50c432d8fd73f8b7",
+    "packages/cli/src/source-files.ts": "036b668c3ef93ccb9bdc3442ec5be8c7d83ce3f33e65ccc8a28952f194150916",
+    "packages/adapter-react/src/react-lifecycle.ts": "4142e121db6ecddc21fa38b2b1b4a53214db43c6505d2621788ede25fbb99016",
+    "packages/adapter-react/src/index.ts": "fad83b36d881beaf98a662dabe86ddcae3cfc085d6fdd886f225f898af36e93b",
+    "packages/storage/src/worker-bridge.ts": "d10acf0c223a1743e4cd8da269d89cc6f62b0cd897e7d4365cdc3cca4451dc98",
+    "packages/storage/src/web-locks-bridge.ts": "90c8f72bb09e1755d2017758d5e055c6d7b3cf3dddac61069f26179fa21c93cc",
+    "packages/storage/src/realm-window.ts": "bdb0c60eb7ad8e0427e2fafe0fa2e468ec96624b6cbaf790a3948d48ad97f0f8",
+    "packages/storage/src/indexed-db-bridge.ts": "d3f232a4570470890a560d9801a6e62d4d072ddb3eabbc9c60393f2fe5952fde",
+    "packages/storage/src/browser-resource-namespace.ts": "89169972dad77ab6b92d8832b89efa60860e9c43f17db630525b31e2cd67be50",
+    "packages/storage/src/storage-key.ts": "c80e9a537778c835c59c9d951e1712bbad098b7187ec3102db1d726bcb313dca",
+    "packages/storage/src/replace-property.ts": "3ad04979ea61200121c4f0d9d09f5ccb01c0f54d9570dcab7e55a379494620b7",
+    "packages/storage/src/indexed-db-storage.ts": "423b8eda6de4919acd447d5e0d741f2404eae92c1bb60e98aeba321738eababe",
+    "packages/storage/src/memory-storage.ts": "73c5777a8bf39c2f83577ca74ef1590142eb2298aa85e651ce5f8d87666ca2b0",
+    "packages/storage/src/web-storage-bridge.ts": "e7ba870841954e4183025145c2000775a1fb9acef20beffa6464df8781ba3e30",
+    "packages/storage/src/messaging-resource-bridges.ts": "e0ebf203263059ebb6d10f2ff6a9b2d453a6fb853aff85b45f667e651553d1da",
+    "packages/storage/src/index.ts": "86a6d8c2f84e8a45277c23276a49bb42c09c00a4eba9b3fdc879d60d1bea3afc",
+    "packages/storage/src/create-application-storage.ts": "c27e85a58831f2a54ca45b9d056d4e86319446fdeefe4eedeb64f586f8071b55",
+    "packages/channel/src/runtime-channel.ts": "6a18f00a830ab592cd354d408fbb878540818b3654ed3f9b45eb92d95af884a8",
+    "packages/channel/src/protocol.ts": "9401e4c2c95ee6ff852351fc12a03af57521eaf7e5ec3abc22ac557f3ec93b03",
+    "packages/channel/src/index.ts": "bec21bf0e4b8ee62da9e98680ef3a68605f8b70690691ccc2c67f5ae67ec97cb",
+    "packages/ssr/src/render.ts": "864bed07acd6181acbf83a3530cb59e1698bc6eaf003534587bdeda3491f767a",
+    "packages/ssr/src/index.ts": "d529880ca8d3a685e000a6db6bbb096542e1fa82341641536ac2f47d20de4013",
+    "packages/migration-tools/src/source-bindings.ts": "3a4e76e9906e7a39ee48f9762e0dbd5ca24bef1748f591d586bdfa2fc21d141b",
+    "packages/migration-tools/src/wujie-options.ts": "ebc9fbe95fc8766bc5474b29abdeb11893a7dcca2304b0c540e9701dfbcdd6f0",
+    "packages/migration-tools/src/vue-sfc.ts": "289509b7e0b7cc599b4c717aca6d4046a95776e127e7f55526600ea6a189e831",
+    "packages/migration-tools/src/vue-sfc-scanner.ts": "5815512910c8f00fc2ac81fd78e04bb4c74c71c27bb43a1349ce89c0d2263e77",
+    "packages/migration-tools/src/qiankun.ts": "6f1b0d75f3de88d5cfdb563b86013bea2545a267ec3fd2b1c68b11efaa7a2693",
+    "packages/migration-tools/src/postcss-custom-syntaxes.d.ts": "7122c9209f920f93be058a11b4b8c700ac2d5f1428a84954a7dee251f55c82eb",
+    "packages/migration-tools/src/script-region-scanner.ts": "96677113b1a1a6b439a7448430780ba27d80a98012a4e4931da2def2dffdf3cc",
+    "packages/migration-tools/src/source-syntax.ts": "5449965bcfea0fd3e27f8e470d600ce0d44705685ad52aa37d97a777a8610ba1",
+    "packages/migration-tools/src/wujie.ts": "daa92bfa53a88bf93e69db1a3f0876c4c7e3e51359623d160a33de3d601ef2d4",
+    "packages/migration-tools/src/diagnostics.ts": "cdb9679878df960d1ecc84c478143dc82a8c6ee93f603539bb24a1e9ab034a72",
+    "packages/migration-tools/src/index.ts": "bb6918fa5e06d2dfbff4150d914983fdff4ab8bb52aa91a8237c05aa9591351b",
+    "packages/migration-tools/src/source-codemod.ts": "f59838ad88d679bb5cbed34aaf5384e7d5421d49f66702f536fb3a8ea6dafc50",
+    "packages/migration-tools/src/source-scanner.ts": "a3b918fad52b3d4a0fe37f191328917ba3247f15f75fa6c3461a5b93ab336abb",
+    "packages/devtools/src/global-hook.ts": "b2bbce711bd4c0daa3e85bdc91a74f3c5f2f167f50ceac801610efcd536ca3d2",
+    "packages/devtools/src/devtools-panel.ts": "dbcf5141eb5a398aa6de38288e497d5c32ae54898deed6ff8c814ffc0569c4f2",
+    "packages/devtools/src/types.ts": "d08f48dc7a1984e1145fcd8aca238d51a58025b3b8327c7626f2f0880032bfdf",
+    "packages/devtools/src/network-waterfall.ts": "5ae874498e202f5cf5982ddc6934f83310bcf182dd93b03601227e089a1557a6",
+    "packages/devtools/src/runtime-inspector.ts": "a99c1393ef37ff9d3fce1475e6a2c0af79d1ed545ae8ebd29f2b6f1238487373",
+    "packages/devtools/src/runtime-telemetry.ts": "c3d8a64eb9737d459fa3b0264d56fa64168cb9a11ada5cfa0d295d16b1c505be",
+    "packages/devtools/src/index.ts": "07f27943bd992561acd2c4184b1a7d5a35f72fa242fc6254aa57574460156536",
+    "packages/deployment-diagnostics/src/integrity.ts": "ea7a14207fb6330d5b4723c563235da66ed0cd61e1ff6c9466dab346990afb31",
+    "packages/deployment-diagnostics/src/csp-policy.ts": "b08de5b37de4b194d985efdb492ad360ab3b6ac74402bb57d4a5fae770580057",
+    "packages/deployment-diagnostics/src/scan-context.ts": "22fab9f0a4cb26ccdd6645ceb2a44896fd03e81feb456b5a2fb61b1a12915e2e",
+    "packages/deployment-diagnostics/src/browser-report-collector.ts": "4bf4cf724e3f483fcc90695462c32f9dc1ace845675dc8cce8f928f74d182c16",
+    "packages/deployment-diagnostics/src/deployment-scanner.ts": "1b9506503ee8d05fe84055859c80b3abedcf1d8a649f822e63f52f6df77289ec",
+    "packages/deployment-diagnostics/src/manifest-scan.ts": "c0fdf80c02389f30e73fbd54bef6af928d18f3ca8a71a23931e8bfd256a307d8",
+    "packages/deployment-diagnostics/src/types.ts": "19aa1a52b9ef067e2b6962929368a78537dccf4284f3472bc893eb1307fc71db",
+    "packages/deployment-diagnostics/src/index.ts": "3c7eb23a24bcee593a338d3d300f05a898925d147400122f178ba55d16e84036",
+    "packages/deployment-diagnostics/src/resource-scan.ts": "2ba7f86dec0ef52416a31b9ea947b292fdfb99439b12a55c42df8ef3cdbec85b",
+    "packages/deployment-diagnostics/src/cors-configuration.ts": "3e736ccf2b364e3fcac0b615f3519be3ca5563d9cfb6305e02e408302bae82de",
+    "packages/runtime-core/src/loading/automatic-preload-coordinator.ts": "42e572280ecfb96568cfde0ced8757004e376c94486fb1176a1f6104129fb946",
+    "packages/runtime-core/src/loading/load-circuit-breaker.ts": "e7bab3225be71fa0056be74354293a34253773825a0beb645a0c5b32e5162809",
+    "packages/runtime-core/src/loading/application-preloader.ts": "f0c38d8717f8a880250a6a8deb0444f5ffefbf6a8ebf174f15bebac157dce95f",
+    "packages/runtime-core/src/runtime/micro-runtime.ts": "937aea9f7f939c0a62a0235ef875fd4f853966e063c4157178a113127c91c9fe",
+    "packages/runtime-core/src/state/create-store.ts": "8f313bb45dda727a67ee42c6e690e360044a6b586f6aa5aa984af3caef50abf5",
+    "packages/runtime-core/src/application/runtime-port.ts": "52e10b7f85504ec010ec50caba2d969e172427f14828a4e7e9339caf4cb1d3f8",
+    "packages/runtime-core/src/application/app-controller.ts": "023cb177eb8dde3d8251bf273d1d8e037b462378a466aa34fc34d4a29ddd52c6",
+    "packages/runtime-core/src/application/lifecycle.ts": "b2f67099d01dd83a65afdc4cfb0b5d04a7bba2e4ef28ff7beca3d64adff7bbd1",
+    "packages/runtime-core/src/application/evict-inactive-applications.ts": "d8ff81d2044dcf8b13bfd7248d0f67de4a168b7601aeec24894fd709dbb63064",
+    "packages/runtime-core/src/application/application-context.ts": "902f71e1339982a0c3b838d9a5c634396602ae1b13c5d1237210cfa613bbf26f",
+    "packages/runtime-core/src/application/controlled-operation.ts": "478644c9b923cacbcde543e223d288ec616c084b1a655184b76ffd1606b2f46d",
+    "packages/runtime-core/src/routing/matches-route.ts": "91f728c55f5f3c71283edd711afcce3dc9f36e5107d3a7f65424f8161e02d657",
+    "packages/runtime-core/src/infrastructure/emitter.ts": "92866f4ad370b7dfddb2f9edb7db053a364eebb1280dfe3ec20361fb20c20bf2",
+    "packages/runtime-core/src/infrastructure/resource-scope.ts": "8e872f434a114caffffe8ba3b78d56e04c75ec3fc8abc3df335738223742f732",
+    "packages/runtime-core/src/infrastructure/services.ts": "843523e370c02fe785a8ededc546c20fcd09b32d0c20361397e8825b1c59a503",
+    "packages/adapter-vanilla/src/vanilla-lifecycle.ts": "e8efa1edc1a0be135c3251ba4cbf06422d2a507783a8ab12eda124677351e9d0",
+    "packages/adapter-vanilla/src/index.ts": "6c8cc5e32d3aa792cb21252f572baac3f8d4733a401d53a1ab43d12385c7e1ca",
+    "packages/offline-cache/src/worker-scope.ts": "ac5a2b6ebb8296400916cc2b0e4c28a1bab77b98d48b035da18d6e78297735f3",
+    "packages/offline-cache/src/offline-cache-manager.ts": "6df568f5455a4b6eb8d93284a41a0f2737e7fb0d030952a35bd9c0f7b5a0b049",
+    "packages/offline-cache/src/protocol.ts": "19f43c4f1c671590db61d625a089b086e7cafe7e60a1c7dc7ccdb12415cdf98c",
+    "packages/offline-cache/src/worker-cache-store.ts": "438c587bea9ccfc0939d6ac7b79d2caeaf290b4a6103a57b3c5d6a856bd7f534",
+    "packages/offline-cache/src/index.ts": "68247f47d5ccdd945593b7a89f89c104485d08ce6fdf7e60062ea20001312e85",
+    "packages/offline-cache/src/worker-runtime.ts": "c2c93ccf9e2c694a6dfdbaa0be05d3a57fb8b6aed43686784ce185baf32d098d",
+    "packages/offline-cache/src/worker.ts": "763e21c68ac889745ed9dc74d5f49b1508ddeb3f9fd51083078eff65a8d10ab6",
+    "packages/capability-broker/src/browser-features.ts": "472ee6786d65c4837047f2189f191bceb53899176d1cba83a3550f73da193a2a",
+    "packages/capability-broker/src/capability-policy.ts": "0f8b4d9fd75f57582057de3e0e2e32b339b229948da6d87e00ad6f5fddc2f889",
+    "packages/capability-broker/src/browser-capability-broker.ts": "c7d7c875767c9a2ba6125e851842409e689572925e82c48e2eb205a8ad43d25b",
+    "packages/capability-broker/src/browser-api-types.ts": "caad4441b6d0b2e3c15e2916335b49fa5f26d9544e64afbf1c88cb0ba4758ad6",
+    "packages/capability-broker/src/input-validation.ts": "c6f569b7e86f90039e6ee7e765be40bf59c79defc5c91afdb6d58b5629d813e0",
+    "packages/capability-broker/src/index.ts": "592c8fe71ee234677e3e98134cd1b26a56f2071691d006a25800663373f9681f",
+    "packages/capability-broker/src/capability-ownership.ts": "498685136d147adf820262801acd143b5179f16dbb47a34b11d3b27c3f91a315",
+    "packages/capability-broker/src/capability-result.ts": "8bcb8cf9495291b3796143673cd4ebe94c2f084449012626debe61f1b286fa0c",
+    "packages/capability-broker/src/data-capability-handlers.ts": "fcafc5fd52a0e576851cdf3bd2c3528060b29a79804a6faa733a95e3d6f6647a",
+    "packages/capability-broker/src/resource-capability-handler.ts": "29f2a8e744ab651f1bf84b42ab886d41fbd59abe63842e8342763b4bd23c476e",
+    "packages/compat-api/src/default-runtime.ts": "87f57db94ed79fc19efb0486db247f72a223ad8f354db8e85ff1529419f72a90",
+    "packages/compat-api/src/errors.ts": "215d4e0fc52404bb97885d8ca735176b75402e3a15719cdd48e44f0b535fdaa0",
+    "packages/compat-api/src/runtime-events.ts": "b1bcad5f3f6edbb538ff38d913c0196fb40154be76a54cc3b7cc22a28acfc54e",
+    "packages/compat-api/src/index.ts": "450dca39cbd5cb52eb50870ee8202e85981919de6863d52e946551f581243dee",
+    "packages/compat-api/src/global-state.ts": "ce5f37d292d6a0a3e6a0c29b71e4e5e319fdb4d6f97cc63b4488110b6d138d3d",
+    "packages/compat-api/src/registration.ts": "b436926097d5abfaf0679369d0d3a1856a3b530ec4c2835f19cf6c3fa3cfb37c",
+    "packages/webpack-plugin/src/micro-host-webpack-plugin.ts": "a2579c54fa7b3295b7ee8ecccc12ca48dbc249af6a04a4b4cd499cb3847ef3c6",
+    "packages/webpack-plugin/src/index.ts": "07bafd3b1e06e7480072415d8e96e42fe139fcb3e9b78aa08315cd9dcc6a03e8",
+    "packages/webpack-plugin/src/micro-application-webpack-plugin.ts": "af15a758656db1dd64d91ec986383fc64c896d13ed274e8b849376a74e0a49d5"
+  },
+  "reportSha256": {
+    "unit": "4eeab50b0207585ed538d0ab045299d399abc2e7dfffb6e97037b408e2d936cd",
+    "browser": "85e105b8141b1dd6db23e970c1b50eeba0dbb58082ae2de6fe09eac1196a02de",
+    "e2e": "d9ea298316b71986d51795a092aced9eab3f307fffa96c3186071de60d91908c"
+  },
+  "releaseGates": [
+    {
+      "id": "artifacts",
+      "command": "bun run check:artifacts",
+      "exitCode": 1,
+      "status": "failed-size-budget",
+      "reportPath": "tests/upstream-issues/runs/2026-09-08-upstream-02-evidence/bundle-size.json",
+      "logPath": "tests/upstream-issues/runs/2026-09-08-upstream-02-evidence/artifacts.log",
+      "measurements": {
+        "generatedAt": "2026-09-08T05:13:42.194Z",
+        "packages": 29,
+        "coreGzipBytes": 8854,
+        "bundledRuntimeGzipBytes": 100468,
+        "bootstrapGzipBytes": 304,
+        "limits": {
+          "coreGzipBytes": 15000,
+          "bundledRuntimeGzipBytes": 50000,
+          "bootstrapGzipBytes": 5000
+        }
+      },
+      "nextAction": "完整 Runtime 超出现有 50,000 字节预算；需要进一步压缩或明确调整预算。当前没有修改阈值。",
+      "reportSha256": "b3111e405b50b4bc44f859e580a2c9d299093f65b6dee134763a21430425beee",
+      "logSha256": "b5857549d99408333203f99dea5dbcfd5d65bcd7ea360e482e2ae0fc261cb819"
+    }
+  ],
+  "releaseReady": false,
+  "earlierFullRuns": [
+    {
+      "reportPath": "tests/upstream-issues/runs/2026-09-08-upstream-02-evidence/first-full-e2e.json",
+      "reportSha256": "8ee1293ffdaf0d7d0e663da5b529b4fc39fb7afe0053f894b67269b5551bd96c",
+      "logPath": "tests/upstream-issues/runs/2026-09-08-upstream-02-evidence/first-full-e2e.log",
+      "passed": 221,
+      "failed": 1,
+      "failure": "WebKit 的 Q578 在 fixture 初始 page.goto 阶段超时，框架尚未创建；没有观察到宿主页导航提交。"
+    },
+    {
+      "reportPath": "tests/upstream-issues/runs/2026-09-08-upstream-02-evidence/second-full-e2e.json",
+      "reportSha256": "2623224241fe2b6266756ab80e32fd9b937971f77ec4ae156edab53f802d79b3",
+      "logPath": "tests/upstream-issues/runs/2026-09-08-upstream-02-evidence/second-full-e2e.log",
+      "passed": 221,
+      "failed": 1,
+      "failure": "WebKit 的 Q578 在 fixture 初始 page.goto 阶段超时，框架尚未创建；没有观察到宿主页导航提交。"
+    }
+  ],
+  "browserToolchainFinding": {
+    "status": "independently-reproduced-toolchain-navigation-stall",
+    "specificUpstreamRootCause": "not-confirmed",
+    "environment": "macOS 26.6.2 + Playwright 1.62.1 / bundled WebKit 2336",
+    "control": "纯 Node 静态 HTTP、空 context、无框架/Vite；移除 route 与 Desktop Safari 配置后仍前 74 次成功，第 75 次导航策略阶段停滞且服务器收到 0 个请求。",
+    "batchedControl": "每 50 次重建浏览器，150/150 按原 load 条件与 30 秒超时通过。",
+    "diagnosticScript": "scripts/diagnose-webkit-context-navigation.mjs",
+    "rawLogs": [
+      "tests/upstream-issues/runs/2026-09-08-upstream-02-evidence/webkit-empty-context-desktop-route-red.log",
+      "tests/upstream-issues/runs/2026-09-08-upstream-02-evidence/webkit-empty-context-plain-no-route-red.log",
+      "tests/upstream-issues/runs/2026-09-08-upstream-02-evidence/webkit-empty-context-batched-green.log"
+    ],
+    "mitigation": "macOS E2E 三引擎统一按测试文件隔离浏览器进程；原生每测试 context、场景、断言、timeout=30000、retries=0 均不变。Linux 保留 worker 复用，本批未运行 Linux。",
+    "fixture": "tests/e2e/browser-process-fixture.ts",
+    "verifiedWorkerCount": 45,
+    "workersByFile": [
+      {
+        "project": "chromium",
+        "path": "cancellation-boundaries.spec.ts",
+        "workerIndex": 0
+      },
+      {
+        "project": "chromium",
+        "path": "compatibility.spec.ts",
+        "workerIndex": 1
+      },
+      {
+        "project": "chromium",
+        "path": "component-matrix.spec.ts",
+        "workerIndex": 2
+      },
+      {
+        "project": "chromium",
+        "path": "cross-tab.spec.ts",
+        "workerIndex": 3
+      },
+      {
+        "project": "chromium",
+        "path": "isolation.spec.ts",
+        "workerIndex": 4
+      },
+      {
+        "project": "chromium",
+        "path": "lifecycle-failures.spec.ts",
+        "workerIndex": 5
+      },
+      {
+        "project": "chromium",
+        "path": "realm-errors.spec.ts",
+        "workerIndex": 6
+      },
+      {
+        "project": "chromium",
+        "path": "strong-isolation.spec.ts",
+        "workerIndex": 7
+      },
+      {
+        "project": "chromium",
+        "path": "upstream-components-diagrams.spec.ts",
+        "workerIndex": 8
+      },
+      {
+        "project": "chromium",
+        "path": "upstream-components-overlays.spec.ts",
+        "workerIndex": 9
+      },
+      {
+        "project": "chromium",
+        "path": "upstream-lifecycle-regressions.spec.ts",
+        "workerIndex": 10
+      },
+      {
+        "project": "chromium",
+        "path": "upstream-runtime-eviction.spec.ts",
+        "workerIndex": 11
+      },
+      {
+        "project": "chromium",
+        "path": "upstream-runtime-navigation.spec.ts",
+        "workerIndex": 12
+      },
+      {
+        "project": "chromium",
+        "path": "upstream-runtime-races.spec.ts",
+        "workerIndex": 13
+      },
+      {
+        "project": "chromium",
+        "path": "upstream-runtime-routes.spec.ts",
+        "workerIndex": 14
+      },
+      {
+        "project": "firefox",
+        "path": "cancellation-boundaries.spec.ts",
+        "workerIndex": 15
+      },
+      {
+        "project": "firefox",
+        "path": "compatibility.spec.ts",
+        "workerIndex": 16
+      },
+      {
+        "project": "firefox",
+        "path": "component-matrix.spec.ts",
+        "workerIndex": 17
+      },
+      {
+        "project": "firefox",
+        "path": "cross-tab.spec.ts",
+        "workerIndex": 18
+      },
+      {
+        "project": "firefox",
+        "path": "isolation.spec.ts",
+        "workerIndex": 19
+      },
+      {
+        "project": "firefox",
+        "path": "lifecycle-failures.spec.ts",
+        "workerIndex": 20
+      },
+      {
+        "project": "firefox",
+        "path": "realm-errors.spec.ts",
+        "workerIndex": 21
+      },
+      {
+        "project": "firefox",
+        "path": "strong-isolation.spec.ts",
+        "workerIndex": 22
+      },
+      {
+        "project": "firefox",
+        "path": "upstream-components-diagrams.spec.ts",
+        "workerIndex": 23
+      },
+      {
+        "project": "firefox",
+        "path": "upstream-components-overlays.spec.ts",
+        "workerIndex": 24
+      },
+      {
+        "project": "firefox",
+        "path": "upstream-lifecycle-regressions.spec.ts",
+        "workerIndex": 25
+      },
+      {
+        "project": "firefox",
+        "path": "upstream-runtime-eviction.spec.ts",
+        "workerIndex": 26
+      },
+      {
+        "project": "firefox",
+        "path": "upstream-runtime-navigation.spec.ts",
+        "workerIndex": 27
+      },
+      {
+        "project": "firefox",
+        "path": "upstream-runtime-races.spec.ts",
+        "workerIndex": 28
+      },
+      {
+        "project": "firefox",
+        "path": "upstream-runtime-routes.spec.ts",
+        "workerIndex": 29
+      },
+      {
+        "project": "webkit",
+        "path": "cancellation-boundaries.spec.ts",
+        "workerIndex": 30
+      },
+      {
+        "project": "webkit",
+        "path": "compatibility.spec.ts",
+        "workerIndex": 31
+      },
+      {
+        "project": "webkit",
+        "path": "component-matrix.spec.ts",
+        "workerIndex": 32
+      },
+      {
+        "project": "webkit",
+        "path": "cross-tab.spec.ts",
+        "workerIndex": 33
+      },
+      {
+        "project": "webkit",
+        "path": "isolation.spec.ts",
+        "workerIndex": 34
+      },
+      {
+        "project": "webkit",
+        "path": "lifecycle-failures.spec.ts",
+        "workerIndex": 35
+      },
+      {
+        "project": "webkit",
+        "path": "realm-errors.spec.ts",
+        "workerIndex": 36
+      },
+      {
+        "project": "webkit",
+        "path": "strong-isolation.spec.ts",
+        "workerIndex": 37
+      },
+      {
+        "project": "webkit",
+        "path": "upstream-components-diagrams.spec.ts",
+        "workerIndex": 38
+      },
+      {
+        "project": "webkit",
+        "path": "upstream-components-overlays.spec.ts",
+        "workerIndex": 39
+      },
+      {
+        "project": "webkit",
+        "path": "upstream-lifecycle-regressions.spec.ts",
+        "workerIndex": 40
+      },
+      {
+        "project": "webkit",
+        "path": "upstream-runtime-eviction.spec.ts",
+        "workerIndex": 41
+      },
+      {
+        "project": "webkit",
+        "path": "upstream-runtime-navigation.spec.ts",
+        "workerIndex": 42
+      },
+      {
+        "project": "webkit",
+        "path": "upstream-runtime-races.spec.ts",
+        "workerIndex": 43
+      },
+      {
+        "project": "webkit",
+        "path": "upstream-runtime-routes.spec.ts",
+        "workerIndex": 44
+      }
+    ],
+    "officialProtocolSource": "https://github.com/microsoft/playwright/blob/v1.62.1/browser_patches/webkit/patches/bootstrap.diff"
+  },
+  "testHarnessSourceSha256": {
+    "tests/e2e/browser-process-fixture.ts": "9c8a7bf91eb05c7012a386a6bf9a4b72d8c67da9a033158f95f9a7a67aaa0b9d",
+    "tests/e2e/cancellation-boundaries.spec.ts": "55bb91586bb69047204b40b513b2c217513b815ed661e16f5a9379e5e66a667a",
+    "tests/e2e/compatibility.spec.ts": "729a56e33aaf207c7fc76305782d98217d7f39c1d32b047b17d05c052660e178",
+    "tests/e2e/component-matrix.spec.ts": "8886ccfc180ef40a8763d8faf5ff02ffac35889f311ed51aac915277ff26b6bd",
+    "tests/e2e/cross-tab.spec.ts": "bce6286ddc4fe71ddef4703ec95035675233f99c9b47f14ea542a5fe35b6a6e7",
+    "tests/e2e/isolation.spec.ts": "14390be2e2cc45b26eb973b7157d8c19ad8017a6cdbf498ddc70856d216d32bc",
+    "tests/e2e/lifecycle-failures.spec.ts": "eafed85e619ca95a4e235973bd0453ebb97be6d8b17c15102495a6a0d30a7a76",
+    "tests/e2e/realm-errors.spec.ts": "8c92a1f4fa27d2b2653f1c30ca8e7054b8ba26c0c5af4e8f7bec969aeb65741a",
+    "tests/e2e/strong-isolation.spec.ts": "e0c16b43b53728bae2d50ea6cd9af3ca621acc01d595ac11913ac7d02478fa01",
+    "tests/e2e/upstream-components-diagrams.spec.ts": "d371718317269b4e8b7d55dff975aabf1774707ae1ad6aa76a0e58bb507f03e1",
+    "tests/e2e/upstream-components-fixture.ts": "8cf2bffd8f8573fff35061ab4dd35460415849e2f19f31f08e8ec2a6357bc1ec",
+    "tests/e2e/upstream-components-overlays.spec.ts": "e0807b280bcf00eebb05a61508a5b28f6fd962bba89330f822a35cd35955b1c2",
+    "tests/e2e/upstream-lifecycle-regressions.spec.ts": "c9259b3877d9198316f96abcba70923c58529bea94ce4cdb88a4dc6f0e8b7b4a",
+    "tests/e2e/upstream-runtime-eviction.spec.ts": "880b73ad065fab08886f65aaecb2c472286cc0ee5ed48cb6503562ab00539c64",
+    "tests/e2e/upstream-runtime-fixture.ts": "480cad06422d95d3cb819b589f9a5ccf086c76d34ac941f5d7f668eb47ca9eb9",
+    "tests/e2e/upstream-runtime-navigation.spec.ts": "376e736debaa356479c7806f624fe8c27ad7e77badf5efac7071d870ff736a74",
+    "tests/e2e/upstream-runtime-races.spec.ts": "0de35351e62f3bc19676d0ce63b4c97cac98d5c9b929a8656743451e552f9aee",
+    "tests/e2e/upstream-runtime-routes.spec.ts": "70e4d8b5d74235cc1c316b91ba353e611f25a90cae74495529981aa4ddac58db",
+    "scripts/diagnose-webkit-context-navigation.mjs": "5c02ba4b5529463f180eb2c58a20c0ec7b030fd84e85881e6bdc7763db1c057c"
+  },
+  "deduplicationCheck": {
+    "status": "passed",
+    "scope": "临时副本，原 catalog 没有被改写",
+    "result": "将已存在 issue 的 repository 改为大写并将 status/tests/resolution 置为新收集状态后导入，Imported 0; skipped 1。副本 SHA-256 与 mtime 均完全不变，已处理状态和证据未被覆盖。"
+  },
+  "environment": {
+    "os": "macOS 26.6.2 (25G83)",
+    "bun": "1.4.0",
+    "node": "24.19.0",
+    "playwright": "1.62.1",
+    "vitest": "4.1.11",
+    "vite": "8.2.2",
+    "browserBuildsFromInstalledPlaywrightManifest": {
+      "chromium": {
+        "revision": "1234",
+        "version": "151.0.7922.34"
+      },
+      "firefox": {
+        "revision": "1538",
+        "version": "153.0"
+      },
+      "webkit": {
+        "revision": "2336",
+        "version": "26.5"
+      }
+    },
+    "realSafari": "not-run-this-batch"
+  },
+  "configurationSha256": {
+    "bun.lock": "659a49293ad90eaed555846832d051f9517c4487af16933a0b89945674c40fe5",
+    "package.json": "380316a6a4187c07785e0f8b00b8f33da48860f1256997afefd9ade5fd3e0b73",
+    "playwright.config.ts": "416fc8b4786c9310144b32e9d520337fe72a472ef59529e1ca5b64e25714974d",
+    "vitest.browser.config.ts": "dc133572a84585493818c753eb624999a595ae21b25e54a84182a88b1ed6cd5c",
+    "tsconfig.tests.json": "a6494556b769748a468fd4a1bbb7da6fde149227a382d5f833a8220ace13859f",
+    "examples/component-matrix-app/package.json": "f8d7250b8764ef50c4e1a963ed873dc92d79133511abb9cdc0ed133f0f85d8e7",
+    "scripts/check-artifacts.mjs": "c57b060ba862890c22869bb7922c9252847ae67ac9127bf688d64b712dce5b18",
+    "scripts/upstream-issues.mjs": "c0cb45e041d023af66b1939294bd903e402a6fe62546d6ad25426e3fb0b7061f"
+  },
+  "preservedFailureEvidence": [
+    {
+      "issue": "umijs/qiankun#1271",
+      "path": "tests/upstream-issues/runs/2026-09-08-upstream-02-evidence/q1271-style-placement-red.log",
+      "kind": "controlled-reversion",
+      "finding": "仅临时恢复所有静态样式放入 head 的旧放置策略，三引擎均在原 body 样式级联断言失败；恢复修复后同断言通过。"
+    },
+    {
+      "issue": "umijs/qiankun#1089",
+      "path": "tests/upstream-issues/runs/2026-09-08-upstream-02-evidence/q1089-eviction-red.log",
+      "kind": "observed-before-fix",
+      "finding": "maxInstances=0 的卸载/重新挂载被自身 unmount promise 阻塞。"
+    },
+    {
+      "issue": "umijs/qiankun#1089",
+      "path": "tests/upstream-issues/runs/2026-09-08-upstream-02-evidence/q1089-dispose-reentrancy-red.log",
+      "kind": "observed-before-fix",
+      "finding": "dispose 的回调重入 mount 被错误接受，并跳过 unmount/dispose 生命周期清理；该红测已返回 disposed，没有发生死锁。修复后拒绝重入挂载并各执行一次清理。"
+    },
+    {
+      "issue": "Tencent/wujie#49",
+      "path": "tests/upstream-issues/runs/2026-09-08-upstream-02-evidence/w49-stale-write-red.log",
+      "kind": "observed-before-fix",
+      "finding": "document.open 替换写入流后，旧外部脚本仍会污染新流。日志中另有 SVG 断言假设修正，后者不计作产品缺陷。"
+    }
+  ],
+  "failureEvidenceLimitations": [
+    "W209 的跨 Realm constructed CSSStyleSheet NotAllowedError 已在三个引擎实际观察；原始失败只保留在本任务会话工具输出，未声称存在独立持久化红测日志。",
+    "W67 与 W107 的初始失败见本任务会话执行记录；最终完整报告保留相同场景的通过结果。",
+    "Q951、Q187 的首次缺陷与修复证据沿用 upstream-01 历史记录；本批重新执行关联回归。"
+  ],
+  "additionalGates": [
+    {
+      "id": "docs",
+      "command": "bun run docs:build",
+      "exitCode": 0,
+      "logPath": "tests/upstream-issues/runs/2026-09-08-upstream-02-evidence/final-docs.log",
+      "logSha256": "02df6ee501c3049df03ec63732dafb7f069dd5d4dfc080c987be8a04d20f17b8"
+    }
+  ],
+  "sourceSnapshotNote": "最终门禁后、生产源码冻结状态下记录所有库包 src 的递归摘要，包含 Runtime application/runtime 子目录。"
+}

@@ -1,0 +1,173 @@
+
+Running 5 tests using 1 worker
+
+(node:26017) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/5] [chromium] › tests/e2e/upstream-batch02-runtime-clipboard.spec.ts:19:3 › W298 mediates native clipboard.readText through focused host activation and policy (allowed=false)
+  1) [chromium] › tests/e2e/upstream-batch02-runtime-clipboard.spec.ts:19:3 › W298 mediates native clipboard.readText through focused host activation and policy (allowed=false) 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 8
+
+    - Array []
+    + Array [
+    +   Object {
+    +     "active": true,
+    +     "focused": true,
+    +     "host": false,
+    +     "receiver": true,
+    +   },
+    + ]
+
+      85 |       } else {
+      86 |         await expect(output).toContainText("NotAllowedError");
+    > 87 |         expect(await page.evaluate(() => window.__clipboardCase__!.calls)).toEqual([]);
+         |                                                                            ^
+      88 |       }
+      89 |       expect(await page.evaluate(() => {
+      90 |         const iframe = document.querySelector<HTMLIFrameElement>("#clipboard-slot iframe")!;
+        at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-clipboard.spec.ts:87:76
+
+    Error Context: test-results/upstream-batch02-runtime-c-e49e2-n-and-policy-allowed-false--chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/upstream-batch02-runtime-c-e49e2-n-and-policy-allowed-false--chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/upstream-batch02-runtime-c-e49e2-n-and-policy-allowed-false--chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+(node:26025) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[2/5] [chromium] › tests/e2e/upstream-batch02-runtime-clipboard.spec.ts:19:3 › W298 mediates native clipboard.readText through focused host activation and policy (allowed=true)
+  2) [chromium] › tests/e2e/upstream-batch02-runtime-clipboard.spec.ts:19:3 › W298 mediates native clipboard.readText through focused host activation and policy (allowed=true) 
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator:  getByLabel('Clipboard result')
+    Expected: "Controlled clipboard text"
+    Received: "NotAllowedError: Document is not focused"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveText" with timeout 5000ms
+      - waiting for getByLabel('Clipboard result')
+        14 × locator resolved to <output aria-label="Clipboard result">NotAllowedError: Document is not focused</output>
+           - unexpected value "NotAllowedError: Document is not focused"
+
+
+      76 |       await page.getByRole("button", { name: "Read controlled clipboard" }).click();
+      77 |       if (allowed) {
+    > 78 |         await expect(output).toHaveText("Controlled clipboard text");
+         |                              ^
+      79 |         expect(await page.evaluate(() => window.__clipboardCase__!.calls)).toEqual([
+      80 |           { host: true, focused: true, active: true, receiver: true },
+      81 |         ]);
+        at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-clipboard.spec.ts:78:30
+
+    Error Context: test-results/upstream-batch02-runtime-c-48078-on-and-policy-allowed-true--chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/upstream-batch02-runtime-c-48078-on-and-policy-allowed-true--chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/upstream-batch02-runtime-c-48078-on-and-policy-allowed-true--chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+(node:26068) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[3/5] [chromium] › tests/e2e/upstream-batch02-runtime-routing.spec.ts:6:1 › Q1245 cold Vue Router hash-home to history-home to hash-about loads the first lazy route in its own Realm
+  3) [chromium] › tests/e2e/upstream-batch02-runtime-routing.spec.ts:6:1 › Q1245 cold Vue Router hash-home to history-home to hash-about loads the first lazy route in its own Realm 
+
+    Error: page.evaluate: TypeError: state.runtime.services.register is not a function
+        at eval (eval at evaluate (:311:30), <anonymous>:7:28)
+        at UtilityScript.evaluate (<anonymous>:313:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at eval (eval at evaluate (:311:30), <anonymous>:7:28)
+        at UtilityScript.evaluate (<anonymous>:313:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-routing.spec.ts:10:14
+
+    Error Context: test-results/upstream-batch02-runtime-r-8653b-lazy-route-in-its-own-Realm-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/upstream-batch02-runtime-r-8653b-lazy-route-in-its-own-Realm-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/upstream-batch02-runtime-r-8653b-lazy-route-in-its-own-Realm-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+(node:26078) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[4/5] [chromium] › tests/e2e/upstream-batch02-runtime-switching.spec.ts:7:3 › Q2346 rapid native tab switching leaves hidden Realms unable to intercept host or application clicks (keepAlive=false)
+  4) [chromium] › tests/e2e/upstream-batch02-runtime-switching.spec.ts:7:3 › Q2346 rapid native tab switching leaves hidden Realms unable to intercept host or application clicks (keepAlive=false) 
+
+    Error: page.evaluate: TypeError: state.runtime.services.register is not a function
+        at eval (eval at evaluate (:311:30), <anonymous>:6:30)
+        at UtilityScript.evaluate (<anonymous>:313:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at eval (eval at evaluate (:311:30), <anonymous>:6:30)
+        at UtilityScript.evaluate (<anonymous>:313:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-switching.spec.ts:21:16
+
+    Error Context: test-results/upstream-batch02-runtime-s-17df3-ion-clicks-keepAlive-false--chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/upstream-batch02-runtime-s-17df3-ion-clicks-keepAlive-false--chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/upstream-batch02-runtime-s-17df3-ion-clicks-keepAlive-false--chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+(node:26087) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[5/5] [chromium] › tests/e2e/upstream-batch02-runtime-switching.spec.ts:7:3 › Q2346 rapid native tab switching leaves hidden Realms unable to intercept host or application clicks (keepAlive=true)
+  5) [chromium] › tests/e2e/upstream-batch02-runtime-switching.spec.ts:7:3 › Q2346 rapid native tab switching leaves hidden Realms unable to intercept host or application clicks (keepAlive=true) 
+
+    Error: page.evaluate: TypeError: state.runtime.services.register is not a function
+        at eval (eval at evaluate (:311:30), <anonymous>:6:30)
+        at UtilityScript.evaluate (<anonymous>:313:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at eval (eval at evaluate (:311:30), <anonymous>:6:30)
+        at UtilityScript.evaluate (<anonymous>:313:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at /Users/fanfangbo/workspace/micro-framework/tests/e2e/upstream-batch02-runtime-switching.spec.ts:21:16
+
+    Error Context: test-results/upstream-batch02-runtime-s-ce0f5-tion-clicks-keepAlive-true--chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/upstream-batch02-runtime-s-ce0f5-tion-clicks-keepAlive-true--chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/upstream-batch02-runtime-s-ce0f5-tion-clicks-keepAlive-true--chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+  5 failed
+    [chromium] › tests/e2e/upstream-batch02-runtime-clipboard.spec.ts:19:3 › W298 mediates native clipboard.readText through focused host activation and policy (allowed=false) 
+    [chromium] › tests/e2e/upstream-batch02-runtime-clipboard.spec.ts:19:3 › W298 mediates native clipboard.readText through focused host activation and policy (allowed=true) 
+    [chromium] › tests/e2e/upstream-batch02-runtime-routing.spec.ts:6:1 › Q1245 cold Vue Router hash-home to history-home to hash-about loads the first lazy route in its own Realm 
+    [chromium] › tests/e2e/upstream-batch02-runtime-switching.spec.ts:7:3 › Q2346 rapid native tab switching leaves hidden Realms unable to intercept host or application clicks (keepAlive=false) 
+    [chromium] › tests/e2e/upstream-batch02-runtime-switching.spec.ts:7:3 › Q2346 rapid native tab switching leaves hidden Realms unable to intercept host or application clicks (keepAlive=true) 

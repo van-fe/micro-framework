@@ -1,0 +1,142 @@
+{
+  "id": "2026-09-08-status-clarification",
+  "assessedAt": "2026-09-08T03:51:14.422354+00:00",
+  "kind": "status-classification-only",
+  "note": "仅复核已有记录、测试及运行证据；未新增复现尝试，未重新执行浏览器测试。历史运行记录保持原样，当前状态以 catalog.json 为准。",
+  "changes": [
+    {
+      "id": "umijs/qiankun#2735",
+      "from": "needs-reproduction",
+      "to": "test-not-written",
+      "reason": "尚未编写此 issue 触发场景对应的测试，因此也没有对应执行结果；现有其他功能测试不作为该场景的证据。"
+    },
+    {
+      "id": "umijs/qiankun#2854",
+      "from": "needs-reproduction",
+      "to": "test-not-written",
+      "reason": "尚未编写此 issue 触发场景对应的测试，因此也没有对应执行结果；现有其他功能测试不作为该场景的证据。"
+    },
+    {
+      "id": "umijs/qiankun#2362",
+      "from": "needs-reproduction",
+      "to": "test-not-written",
+      "reason": "尚未编写此 issue 触发场景对应的测试，因此也没有对应执行结果；现有其他功能测试不作为该场景的证据。"
+    },
+    {
+      "id": "umijs/qiankun#1089",
+      "from": "needs-reproduction",
+      "to": "test-not-written",
+      "reason": "尚未编写此 issue 触发场景对应的测试，因此也没有对应执行结果；现有其他功能测试不作为该场景的证据。"
+    },
+    {
+      "id": "umijs/qiankun#222",
+      "from": "needs-reproduction",
+      "to": "test-not-written",
+      "reason": "尚未编写此 issue 触发场景对应的测试，因此也没有对应执行结果；现有其他功能测试不作为该场景的证据。"
+    },
+    {
+      "id": "umijs/qiankun#1271",
+      "from": "needs-reproduction",
+      "to": "partial-coverage",
+      "reason": "已执行的是 module 入口下手工插入 body style 的简化探针；原 issue 的 HTML Entry body 静态样式条件尚未覆盖。"
+    },
+    {
+      "id": "umijs/qiankun#1613",
+      "from": "needs-reproduction",
+      "to": "test-not-written",
+      "reason": "尚未编写此 issue 触发场景对应的测试，因此也没有对应执行结果；现有其他功能测试不作为该场景的证据。"
+    },
+    {
+      "id": "umijs/qiankun#1266",
+      "from": "needs-reproduction",
+      "to": "test-not-written",
+      "reason": "尚未编写此 issue 触发场景对应的测试，因此也没有对应执行结果；现有其他功能测试不作为该场景的证据。"
+    },
+    {
+      "id": "umijs/qiankun#886",
+      "from": "needs-reproduction",
+      "to": "test-not-written",
+      "reason": "尚未编写此 issue 触发场景对应的测试，因此也没有对应执行结果；现有其他功能测试不作为该场景的证据。"
+    },
+    {
+      "id": "umijs/qiankun#341",
+      "from": "needs-reproduction",
+      "to": "contract-not-assessed",
+      "reason": "尚未确认上游自定义 fetch/credentials 配置与本项目公共 API 的对应关系；没有执行该凭证传递场景的测试。"
+    },
+    {
+      "id": "Tencent/wujie#116",
+      "from": "fixed",
+      "to": "regression-passed",
+      "reason": "CSSOM 规则保活探针通过，但没有在本项目复现原报告的规则丢失；额外修复的失活后仍可见问题单列在 relatedFixes。"
+    },
+    {
+      "id": "Tencent/wujie#67",
+      "from": "needs-reproduction",
+      "to": "missing-reproduction-details",
+      "reason": "上游报告缺少 missingDetails 所列信息，尚未构造本地复现；没有尝试后无法复现的结论。"
+    },
+    {
+      "id": "Tencent/wujie#49",
+      "from": "unsupported",
+      "to": "partially-unsupported",
+      "reason": "同一 issue 的 document.write 与 window.onload 结论不同，必须按 scenarioStatuses 分别读取。"
+    },
+    {
+      "id": "Tencent/wujie#832",
+      "from": "needs-reproduction",
+      "to": "test-not-written",
+      "reason": "尚未编写此 issue 触发场景对应的测试，因此也没有对应执行结果；现有其他功能测试不作为该场景的证据。"
+    },
+    {
+      "id": "Tencent/wujie#830",
+      "from": "needs-reproduction",
+      "to": "missing-reproduction-details",
+      "reason": "上游报告缺少 missingDetails 所列信息，尚未构造本地复现；没有尝试后无法复现的结论。"
+    },
+    {
+      "id": "Tencent/wujie#829",
+      "from": "needs-reproduction",
+      "to": "test-not-written",
+      "reason": "尚未编写此 issue 触发场景对应的测试，因此也没有对应执行结果；现有其他功能测试不作为该场景的证据。"
+    },
+    {
+      "id": "Tencent/wujie#209",
+      "from": "needs-reproduction",
+      "to": "test-not-written",
+      "reason": "尚未编写此 issue 触发场景对应的测试，因此也没有对应执行结果；现有其他功能测试不作为该场景的证据。"
+    },
+    {
+      "id": "Tencent/wujie#896",
+      "from": "needs-reproduction",
+      "to": "test-not-written",
+      "reason": "尚未编写此 issue 触发场景对应的测试，因此也没有对应执行结果；现有其他功能测试不作为该场景的证据。"
+    },
+    {
+      "id": "Tencent/wujie#770",
+      "from": "needs-reproduction",
+      "to": "test-not-written",
+      "reason": "尚未编写此 issue 触发场景对应的测试，因此也没有对应执行结果；现有其他功能测试不作为该场景的证据。"
+    },
+    {
+      "id": "Tencent/wujie#288",
+      "from": "needs-reproduction",
+      "to": "test-not-written",
+      "reason": "尚未编写此 issue 触发场景对应的测试，因此也没有对应执行结果；现有其他功能测试不作为该场景的证据。"
+    }
+  ],
+  "currentCounts": {
+    "regression-passed": 18,
+    "test-not-written": 14,
+    "fixed": 2,
+    "partial-coverage": 1,
+    "contract-not-assessed": 1,
+    "out-of-scope": 1,
+    "missing-reproduction-details": 2,
+    "partially-unsupported": 1
+  },
+  "historicalRun": {
+    "path": "runs/2026-09-08-upstream-01.json",
+    "sha256": "2c1ca390ce98623189cd83338e1078d52a0c77e8021fd1dcae360cfa9634b2b3"
+  }
+}

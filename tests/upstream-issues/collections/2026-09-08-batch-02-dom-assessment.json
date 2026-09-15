@@ -1,0 +1,614 @@
+{
+  "schemaVersion": 1,
+  "collectionBatch": "2026-09-08-batch-02",
+  "updatedAt": "2026-09-08T08:44:16.462259+00:00",
+  "state": "completed",
+  "sourcePaths": [
+    "tests/upstream-issues/collections/2026-09-08-batch-02-wujie.sources.json",
+    "tests/upstream-issues/collections/2026-09-08-batch-02-qiankun-sources.json"
+  ],
+  "evidence": [
+    "tests/upstream-issues/collections/2026-09-08-batch-02-dom-initial-red.json",
+    "tests/upstream-issues/collections/2026-09-08-batch-02-dom-font-message-red.json",
+    "tests/upstream-issues/collections/2026-09-08-batch-02-dom-root-combined.json",
+    "tests/upstream-issues/collections/2026-09-08-batch-02-dom-managed-fonts.json",
+    "tests/upstream-issues/collections/2026-09-08-batch-02-dom-webkit-activation-detail.json",
+    "tests/upstream-issues/collections/2026-09-08-batch-02-native-webkit-font-media.log",
+    "tests/upstream-issues/collections/2026-09-08-batch-02-dom-font-vars-red.json",
+    "tests/upstream-issues/collections/2026-09-08-batch-02-dom-font-final-targeted2.json",
+    "tests/upstream-issues/collections/2026-09-08-batch-02-dom-media-attributes-final.json",
+    "tests/upstream-issues/runs/2026-09-08-batch-02-script-message-native-event-contract.json",
+    "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/final-browser.json",
+    "tests/upstream-issues/collections/2026-09-08-batch-02-root-shadow-first.json",
+    "tests/upstream-issues/collections/2026-09-08-batch-02-root-shadow-final.json",
+    "tests/upstream-issues/collections/2026-09-08-batch-02-eruda-visible-red.json",
+    "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/batch02-e2e-first.json",
+    "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/final-corrections-e2e.json",
+    "tests/upstream-issues/collections/2026-09-08-batch-02-csp-native-diagnostic.log",
+    "tests/upstream-issues/collections/2026-09-08-batch-02-csp-native-control.log",
+    "tests/upstream-issues/collections/2026-09-08-batch-02-csp-native-diagnostic.spec.ts.txt",
+    "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/full-e2e-before-navigation-test-fix.json"
+  ],
+  "issues": [
+    {
+      "id": "Tencent/wujie#262",
+      "stage": "fixed",
+      "scope": "DOMParser创建独立Document后借用document查询方法；另加DOMPurify2.3.0真实净化输入。",
+      "redEvidenceDescription": "首次三引擎借用querySelector/getElementsByTagName时接收者均错误；底层按真实接收者查询后，DOMPurify 2.3.0实际净化不安全输入的E2E三引擎全部通过。",
+      "tests": [
+        {
+          "path": "tests/browser/upstream-batch02-dom-queries.browser.test.ts",
+          "title": "W262 respects an independent DOMParser Document when borrowing application query methods",
+          "runId": "2026-09-08-upstream-03"
+        },
+        {
+          "path": "tests/e2e/upstream-batch02-dom-libraries.spec.ts",
+          "title": "W262 DOMPurify 2.3.0 sanitizes parsed documents inside its native application Realm",
+          "runId": "2026-09-08-upstream-03"
+        }
+      ],
+      "engines": {
+        "chromium": "e2e-passed",
+        "firefox": "e2e-passed",
+        "webkit": "e2e-passed",
+        "safari": "not-run"
+      },
+      "limitations": [
+        "未运行原upstream完整工程；这里只归纳明确测试条件。"
+      ],
+      "browserEvidence": "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/final-browser.json",
+      "pendingVerification": [],
+      "recommendedStatus": "fixed",
+      "e2eEvidence": "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/full-e2e-before-navigation-test-fix.json",
+      "targetedVerificationState": {
+        "stage": "e2e-passed-three-engines"
+      },
+      "finalVerification": {
+        "runId": "2026-09-08-upstream-03",
+        "status": "fixed"
+      }
+    },
+    {
+      "id": "Tencent/wujie#822",
+      "stage": "fixed",
+      "scope": "iframe原生脚本与可见节点统一Document查询，NodeList静态快照及HTMLCollection实时更新。",
+      "redEvidenceDescription": "首次三引擎querySelector返回null且querySelectorAll没有自己的script。",
+      "tests": [
+        {
+          "path": "tests/browser/upstream-batch02-dom-queries.browser.test.ts",
+          "title": "W822 exposes application scripts consistently through static and live query collections",
+          "runId": "2026-09-08-upstream-03"
+        },
+        {
+          "path": "tests/browser/upstream-batch02-script-message.browser.test.ts",
+          "title": "W822 exposes executing HTML classic scripts through querySelectorAll, scripts and currentScript with identical nodes",
+          "runId": "2026-09-08-upstream-03"
+        }
+      ],
+      "engines": {
+        "chromium": "browser-contract-passed",
+        "firefox": "browser-contract-passed",
+        "webkit": "browser-contract-passed",
+        "safari": "not-run"
+      },
+      "limitations": [
+        "未运行原upstream完整工程；这里只归纳明确测试条件。"
+      ],
+      "browserEvidence": "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/final-browser.json",
+      "recommendedStatus": "fixed",
+      "pendingVerification": [],
+      "targetedVerificationState": {
+        "stage": "browser-contracts-passed"
+      },
+      "finalVerification": {
+        "runId": "2026-09-08-upstream-03",
+        "status": "fixed"
+      }
+    },
+    {
+      "id": "Tencent/wujie#1014",
+      "stage": "regression-passed",
+      "scope": "strict脚本可包装并恢复document.querySelector，同时宿主/兄弟方法不变。",
+      "redEvidenceDescription": "首轮三引擎即通过，原getter只读错误未在本框架出现。",
+      "tests": [
+        {
+          "path": "tests/browser/upstream-batch02-dom-queries.browser.test.ts",
+          "title": "W1014 lets strict application scripts wrap and restore document.querySelector without affecting siblings",
+          "runId": "2026-09-08-upstream-03"
+        }
+      ],
+      "engines": {
+        "chromium": "browser-contract-passed",
+        "firefox": "browser-contract-passed",
+        "webkit": "browser-contract-passed",
+        "safari": "not-run"
+      },
+      "limitations": [
+        "未运行原upstream完整工程；这里只归纳明确测试条件。"
+      ],
+      "browserEvidence": "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/final-browser.json",
+      "recommendedStatus": "regression-passed",
+      "pendingVerification": [],
+      "targetedVerificationState": {
+        "stage": "browser-contracts-passed"
+      },
+      "finalVerification": {
+        "runId": "2026-09-08-upstream-03",
+        "status": "regression-passed"
+      }
+    },
+    {
+      "id": "Tencent/wujie#596",
+      "stage": "regression-passed",
+      "scope": "数字及包含标点的literal id，双应用隔离，空id返回null。",
+      "redEvidenceDescription": "原数字id及特殊字符在首轮即通过；仅新增空id边界出现SyntaxError，已修，不能宣称原数字id错误复现。",
+      "tests": [
+        {
+          "path": "tests/browser/upstream-batch02-dom-queries.browser.test.ts",
+          "title": "W596 treats numeric and punctuation-rich ids as literal identifiers",
+          "runId": "2026-09-08-upstream-03"
+        }
+      ],
+      "engines": {
+        "chromium": "browser-contract-passed",
+        "firefox": "browser-contract-passed",
+        "webkit": "browser-contract-passed",
+        "safari": "not-run"
+      },
+      "limitations": [
+        "未运行原upstream完整工程；这里只归纳明确测试条件。"
+      ],
+      "recommendedStatus": "regression-passed",
+      "relatedFixes": [
+        {
+          "scope": "getElementById(\"\")返回null，避免把空id交给CSS选择器而抛SyntaxError。",
+          "evidence": "tests/upstream-issues/collections/2026-09-08-batch-02-dom-initial-red.json",
+          "classification": "fixed-related-edge-not-original-numeric-id-bug"
+        }
+      ],
+      "browserEvidence": "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/final-browser.json",
+      "pendingVerification": [],
+      "targetedVerificationState": {
+        "stage": "browser-contracts-passed"
+      },
+      "finalVerification": {
+        "runId": "2026-09-08-upstream-03",
+        "status": "regression-passed"
+      }
+    },
+    {
+      "id": "Tencent/wujie#845",
+      "stage": "fixed",
+      "scope": "嵌套ShadowRoot下真实字体，两个应用相同family不同字宽，宿主同名family不受污染；原生externalCSS路径；销毁字体清理。",
+      "redEvidenceDescription": "首次三引擎document.fonts.load为空；后续WebKit精测确认CSS-connected font卸载残留及link.media激活重解析导致宿主同名family污染。独立无框架原生对照定位媒体激活路径；最终内部禁用媒体容器保留定义，仅登记应用FontFace，stylesheet.media激活保留CSSOM。最新18项三引擎精准回归全绿，完整Browser门禁408/408通过。",
+      "tests": [
+        {
+          "path": "tests/browser/upstream-batch02-dom-font-messages.browser.test.ts",
+          "title": "W845 W1059 loads a font from the third insertAdjacentElement style in nested shadows with application family isolation",
+          "runId": "2026-09-08-upstream-03"
+        },
+        {
+          "path": "tests/browser/upstream-batch02-dom-font-messages.browser.test.ts",
+          "title": "W845 normalizes a native external stylesheet before activating its font family",
+          "runId": "2026-09-08-upstream-03"
+        },
+        {
+          "path": "tests/browser/upstream-batch02-dom-font-messages.browser.test.ts",
+          "title": "W845 resolves font variables introduced by later CSSOM rules and inline declarations",
+          "runId": "2026-09-08-upstream-03"
+        }
+      ],
+      "engines": {
+        "chromium": "browser-contract-passed",
+        "firefox": "browser-contract-passed",
+        "webkit": "browser-contract-passed",
+        "safari": "not-run"
+      },
+      "limitations": [
+        "未运行原upstream完整工程；这里只归纳明确测试条件。",
+        "字体命名隔离要求可读CSSOM；opaque跨源样式表不能归一，不宣称完整FontFaceSet事件、迭代或手动注册桥接。",
+        "真实Safari未运行。"
+      ],
+      "browserEvidence": "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/final-browser.json",
+      "recommendedStatus": "fixed",
+      "pendingVerification": [],
+      "latestSourceBrowserEvidence": "tests/upstream-issues/collections/2026-09-08-batch-02-root-shadow-final.json",
+      "targetedVerificationState": {
+        "stage": "browser-contracts-passed"
+      },
+      "finalVerification": {
+        "runId": "2026-09-08-upstream-03",
+        "status": "fixed"
+      }
+    },
+    {
+      "id": "Tencent/wujie#1059",
+      "stage": "fixed",
+      "scope": "按Vite appendChild首个style、insertAdjacentElement追加第2至第5个style，第3个font-face及相对字体URL生效。",
+      "redEvidenceDescription": "首次三引擎document.fonts.load为空；后续WebKit精测确认CSS-connected font卸载残留及link.media激活重解析导致宿主同名family污染。独立无框架原生对照定位媒体激活路径；最终内部禁用媒体容器保留定义，仅登记应用FontFace，stylesheet.media激活保留CSSOM。最新18项三引擎精准回归全绿，完整Browser门禁408/408通过。",
+      "tests": [
+        {
+          "path": "tests/browser/upstream-batch02-dom-font-messages.browser.test.ts",
+          "title": "W845 W1059 loads a font from the third insertAdjacentElement style in nested shadows with application family isolation",
+          "runId": "2026-09-08-upstream-03"
+        }
+      ],
+      "engines": {
+        "chromium": "browser-contract-passed",
+        "firefox": "browser-contract-passed",
+        "webkit": "browser-contract-passed",
+        "safari": "not-run"
+      },
+      "limitations": [
+        "未运行原upstream完整工程；这里只归纳明确测试条件。",
+        "字体命名隔离要求可读CSSOM；opaque跨源样式表不能归一，不宣称完整FontFaceSet事件、迭代或手动注册桥接。",
+        "真实Safari未运行。"
+      ],
+      "browserEvidence": "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/final-browser.json",
+      "recommendedStatus": "fixed",
+      "pendingVerification": [],
+      "latestSourceBrowserEvidence": "tests/upstream-issues/collections/2026-09-08-batch-02-root-shadow-final.json",
+      "targetedVerificationState": {
+        "stage": "browser-contracts-passed"
+      },
+      "finalVerification": {
+        "runId": "2026-09-08-upstream-03",
+        "status": "fixed"
+      }
+    },
+    {
+      "id": "Tencent/wujie#445",
+      "stage": "fixed",
+      "scope": "root属性compound selector、body后代selector、全部CSS声明和动态theme属性切换。",
+      "redEvidenceDescription": "首次三引擎只有custom properties桥，完整颜色声明未作用于应用。",
+      "tests": [
+        {
+          "path": "tests/browser/upstream-batch02-dom-styles.browser.test.ts",
+          "title": "W445 maps compound root selectors and complete theme declarations to each application root",
+          "runId": "2026-09-08-upstream-03"
+        }
+      ],
+      "engines": {
+        "chromium": "browser-contract-passed",
+        "firefox": "browser-contract-passed",
+        "webkit": "browser-contract-passed",
+        "safari": "not-run"
+      },
+      "limitations": [
+        "未运行原upstream完整工程；这里只归纳明确测试条件。"
+      ],
+      "browserEvidence": "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/final-browser.json",
+      "recommendedStatus": "fixed",
+      "pendingVerification": [],
+      "latestSourceBrowserEvidence": "tests/upstream-issues/collections/2026-09-08-batch-02-root-shadow-final.json",
+      "targetedVerificationState": {
+        "stage": "browser-contracts-passed"
+      },
+      "finalVerification": {
+        "runId": "2026-09-08-upstream-03",
+        "status": "fixed"
+      }
+    },
+    {
+      "id": "Tencent/wujie#467",
+      "stage": "fixed",
+      "scope": "两应用root分别20/24px；stylesheet和inline rem、calc、padding、root font动态变化；宿主html不变。",
+      "redEvidenceDescription": "首次三引擎按宿主16px计算，width32而非40px。",
+      "tests": [
+        {
+          "path": "tests/browser/upstream-batch02-dom-styles.browser.test.ts",
+          "title": "W467 resolves stylesheet and inline rem lengths from each application root without changing the host",
+          "runId": "2026-09-08-upstream-03"
+        }
+      ],
+      "engines": {
+        "chromium": "browser-contract-passed",
+        "firefox": "browser-contract-passed",
+        "webkit": "browser-contract-passed",
+        "safari": "not-run"
+      },
+      "limitations": [
+        "未运行原upstream完整工程；这里只归纳明确测试条件。"
+      ],
+      "browserEvidence": "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/final-browser.json",
+      "recommendedStatus": "fixed",
+      "pendingVerification": [],
+      "latestSourceBrowserEvidence": "tests/upstream-issues/collections/2026-09-08-batch-02-root-shadow-final.json",
+      "targetedVerificationState": {
+        "stage": "browser-contracts-passed"
+      },
+      "finalVerification": {
+        "runId": "2026-09-08-upstream-03",
+        "status": "fixed"
+      }
+    },
+    {
+      "id": "Tencent/wujie#421",
+      "stage": "fixed",
+      "scope": "html/body百分比根高度、calc父容器和flex子节点fill-available；保留CSS.supports能力分支。",
+      "redEvidenceDescription": "首次三引擎应用root CSS未映射，parent高度0而非280。",
+      "tests": [
+        {
+          "path": "tests/browser/upstream-batch02-dom-font-messages.browser.test.ts",
+          "title": "W421 preserves fill-available height through an application document root and flex parent",
+          "runId": "2026-09-08-upstream-03"
+        }
+      ],
+      "engines": {
+        "chromium": "browser-contract-passed",
+        "firefox": "browser-contract-passed",
+        "webkit": "browser-contract-passed",
+        "safari": "not-run"
+      },
+      "limitations": [
+        "未运行原upstream完整工程；这里只归纳明确测试条件。"
+      ],
+      "browserEvidence": "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/final-browser.json",
+      "recommendedStatus": "fixed",
+      "pendingVerification": [],
+      "latestSourceBrowserEvidence": "tests/upstream-issues/collections/2026-09-08-batch-02-root-shadow-final.json",
+      "targetedVerificationState": {
+        "stage": "browser-contracts-passed"
+      },
+      "finalVerification": {
+        "runId": "2026-09-08-upstream-03",
+        "status": "fixed"
+      }
+    },
+    {
+      "id": "Tencent/wujie#790",
+      "stage": "fixed",
+      "scope": "可见原生iframe同源及跨端口向parent.postMessage回复；保留同一个MessageEvent与source/ports身份，跨源document访问必须抛，targetOrigin负控，双应用并发隔离，port ping/pong与destroy取消已排队投递。",
+      "redEvidenceDescription": "首次三引擎所属应用收不到回复；后续跨源Firefox明确拒绝跨Realm MessageEvent constructor的source WindowProxy，collector保留原生事件在宿主派发结束后重派发。新增3条逻辑×3引擎9/9通过，完整Browser门禁408/408通过。",
+      "tests": [
+        {
+          "path": "tests/browser/upstream-batch02-dom-font-messages.browser.test.ts",
+          "title": "W790 delivers native nested iframe replies only to its owning application and stops bridging on destroy",
+          "runId": "2026-09-08-upstream-03"
+        },
+        {
+          "path": "tests/browser/upstream-batch02-script-message.browser.test.ts",
+          "title": "W790 preserves the native reply event and transferred port and cancels queued delivery on owner destruction",
+          "runId": "2026-09-08-upstream-03"
+        },
+        {
+          "path": "tests/browser/upstream-batch02-script-message.browser.test.ts",
+          "title": "W790 receives cross-origin iframe replies with exact origin and source while rejecting wrong targets and sibling delivery",
+          "runId": "2026-09-08-upstream-03"
+        }
+      ],
+      "engines": {
+        "chromium": "browser-contract-passed",
+        "firefox": "browser-contract-passed",
+        "webkit": "browser-contract-passed",
+        "safari": "not-run"
+      },
+      "limitations": [
+        "未运行原upstream完整工程；这里只归纳明确测试条件。"
+      ],
+      "browserEvidence": "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/final-browser.json",
+      "recommendedStatus": "fixed",
+      "pendingVerification": [],
+      "targetedVerificationState": {
+        "stage": "browser-contracts-passed"
+      },
+      "finalVerification": {
+        "runId": "2026-09-08-upstream-03",
+        "status": "fixed"
+      }
+    },
+    {
+      "id": "Tencent/wujie#1065",
+      "stage": "regression-passed",
+      "scope": "root-relative target=_blank真实点击打开app origin，宿主页面不导航。",
+      "redEvidenceDescription": "真实点击root-relative target=_blank后读取原生popup URL和页面正文，三引擎首轮全部通过；未取得该项自身的修改前失败证据，不宣称已复现原bug。",
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-batch02-dom-libraries.spec.ts",
+          "title": "W1065 a root-relative target blank link opens the application origin in a native popup",
+          "runId": "2026-09-08-upstream-03"
+        }
+      ],
+      "engines": {
+        "chromium": "e2e-passed",
+        "firefox": "e2e-passed",
+        "webkit": "e2e-passed",
+        "safari": "not-run"
+      },
+      "limitations": [
+        "未运行原upstream完整工程；这里只归纳明确测试条件。"
+      ],
+      "browserEvidence": "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/final-browser.json",
+      "pendingVerification": [],
+      "recommendedStatus": "regression-passed",
+      "e2eEvidence": "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/full-e2e-before-navigation-test-fix.json",
+      "targetedVerificationState": {
+        "stage": "e2e-passed-three-engines"
+      },
+      "finalVerification": {
+        "runId": "2026-09-08-upstream-03",
+        "status": "regression-passed"
+      }
+    },
+    {
+      "id": "umijs/qiankun#2137",
+      "stage": "fixed",
+      "scope": "嵌套应用动态style查询/插入；documentElement直接子节点在应用owned ShadowRoot可见且可查询，普通内层原生ShadowRoot的样式与应用rem/字体同步生效，脚本仍在iframe执行。真实eruda 2.4.1保持默认useShadowDom，覆盖可见入口→Console→关闭→销毁。",
+      "redEvidenceDescription": "首次简化head.appendChild没有出现原contains异常；相关内部style误查询已修。首轮真实eruda仅检查容器和版本，虽三引擎通过，但不足以证明交互可用。加强可见交互后Chromium明确复现.eruda-entry-btn隐藏。底层root可见插入及owned ShadowRoot样式修复后通用合同三引擎通过；WebKit首次嵌套:host实际32px而CSSOM已40px，调整嵌套样式激活次序后专项36/36通过。最终新构建下真实eruda默认ShadowDOM的可见入口→Console点击→关闭→销毁在三引擎全部通过。",
+      "tests": [
+        {
+          "path": "tests/browser/upstream-batch02-dom-styles.browser.test.ts",
+          "title": "Q2137 appends and queries dynamic styles inside a nested application head",
+          "runId": "2026-09-08-upstream-03"
+        },
+        {
+          "path": "tests/browser/upstream-batch02-root-shadow.browser.test.ts",
+          "title": "Q2137 keeps root-level children visible and nested native ShadowRoot styles scoped while scripts stay in the iframe",
+          "runId": "2026-09-08-upstream-03"
+        },
+        {
+          "path": "tests/e2e/upstream-batch02-dom-libraries.spec.ts",
+          "title": "Q2137 eruda 2.4.1 initializes and destroys its dynamic styles in a nested application",
+          "runId": "2026-09-08-upstream-03"
+        }
+      ],
+      "engines": {
+        "chromium": "real-eruda-entry-console-close-e2e-passed",
+        "firefox": "real-eruda-entry-console-close-e2e-passed",
+        "webkit": "real-eruda-entry-console-close-e2e-passed",
+        "safari": "not-run"
+      },
+      "limitations": [
+        "未运行原upstream完整工程；这里只归纳明确测试条件。",
+        "不宣称复现原contains异常；不将本次普通owned ShadowRoot的样式接入扩展描述为完整跨Realm CustomElementRegistry支持。"
+      ],
+      "relatedFixes": [
+        {
+          "scope": "document.querySelector(\"style\")排除框架内部style，只返回应用style。",
+          "evidence": "tests/upstream-issues/collections/2026-09-08-batch-02-dom-initial-red.json",
+          "classification": "fixed-related-query-edge-not-original-contains-exception"
+        },
+        {
+          "scope": "字体解析激活策略引入的同步head.appendChild样式延迟已经修复，保留原同步getComputedStyle断言。",
+          "evidence": "tests/upstream-issues/collections/2026-09-08-batch-02-dom-managed-fonts.json",
+          "classification": "fixed-during-this-implementation"
+        }
+      ],
+      "browserEvidence": "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/final-browser.json",
+      "pendingVerification": [],
+      "recommendedStatus": "fixed",
+      "latestSourceBrowserEvidence": "tests/upstream-issues/collections/2026-09-08-batch-02-root-shadow-final.json",
+      "visibleInteractionRedEvidence": "tests/upstream-issues/collections/2026-09-08-batch-02-eruda-visible-red.json",
+      "priorE2EEvidence": {
+        "path": "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/batch02-e2e-first.json",
+        "limitation": "The old container/version checks passed, but did not assert a visible entry or usable Console and do not establish interaction compatibility."
+      },
+      "e2eEvidence": "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/full-e2e-before-navigation-test-fix.json",
+      "targetedVerificationState": {
+        "stage": "strengthened-real-library-e2e-passed-three-engines"
+      },
+      "finalVerification": {
+        "runId": "2026-09-08-upstream-03",
+        "status": "fixed"
+      }
+    },
+    {
+      "id": "umijs/qiankun#2141",
+      "stage": "regression-passed",
+      "scope": "真实Emotion11生成CSS，Runtime A→B→A，两种keepAlive。",
+      "redEvidenceDescription": "真实Emotion 11在Runtime A→B→A路由中，两种keepAlive模式的颜色与padding均保留，首轮三引擎6/6通过；未观察原CSS丢失错误。",
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-batch02-dom-libraries.spec.ts",
+          "title": "Q2141 Emotion 11 keeps generated CSS correct over A to B to A (keepAlive=false)",
+          "runId": "2026-09-08-upstream-03"
+        },
+        {
+          "path": "tests/e2e/upstream-batch02-dom-libraries.spec.ts",
+          "title": "Q2141 Emotion 11 keeps generated CSS correct over A to B to A (keepAlive=true)",
+          "runId": "2026-09-08-upstream-03"
+        }
+      ],
+      "engines": {
+        "chromium": "e2e-passed",
+        "firefox": "e2e-passed",
+        "webkit": "e2e-passed",
+        "safari": "not-run"
+      },
+      "limitations": [
+        "未运行原upstream完整工程；这里只归纳明确测试条件。"
+      ],
+      "browserEvidence": "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/final-browser.json",
+      "pendingVerification": [],
+      "recommendedStatus": "regression-passed",
+      "e2eEvidence": "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/full-e2e-before-navigation-test-fix.json",
+      "targetedVerificationState": {
+        "stage": "e2e-passed-three-engines"
+      },
+      "finalVerification": {
+        "runId": "2026-09-08-upstream-03",
+        "status": "regression-passed"
+      }
+    },
+    {
+      "id": "Tencent/wujie#727",
+      "stage": "fixed",
+      "scope": "真实HTTP CSP style-src无unsafe-inline：外部应用CSS和按钮可用，框架基础样式有效且无违规；作者合法nonce允许inline CSS，缺nonce必须保持被拒绝且不能被token桥重新应用。",
+      "redEvidenceDescription": "初始主控Chromium红测应用已运行但host display为inline且两条框架style CSP违规。constructed sheet首轮E2E让布局/作者样式生效，Firefox/WebKit三条件均通过；Chromium外链例仍2条、合法nonce例仍3条style-src-elem违规，缺nonce负控通过。已修框架检查marker在连接前设置text/plain，避免空inline style先连接。该源修未通过新构建CSP E2E，不把剩余违规推测为已消除。 第一次连接前text/plain修正后仍失败，不能消除Chromium的原生检查。CDP捕获违规节点为框架两个STYLE标记，栈指向连接和marker.textContent；不创建Runtime的原生对照确认text/plain style及注释内容也被检查，而template和构造样式表均无违规。随后将内部标记改为惰性template，等待统一重建验证。 最终新构建下外链CSS、合法nonce正控、缺nonce负控在三个引擎9/9全部通过；合法路径无style CSP违规，缺nonce作者CSS仍被拒绝且未被token桥恢复。",
+      "tests": [
+        {
+          "path": "tests/e2e/upstream-batch02-assets-csp.spec.ts",
+          "title": "W727 mounts and styles an HTML application under style-src without unsafe-inline and emits no style CSP violations",
+          "runId": "2026-09-08-upstream-03"
+        },
+        {
+          "path": "tests/e2e/upstream-batch02-assets-csp.spec.ts",
+          "title": "W727 respects author inline-style nonce authorization without restoring blocked CSS (nonce=false)",
+          "runId": "2026-09-08-upstream-03"
+        },
+        {
+          "path": "tests/e2e/upstream-batch02-assets-csp.spec.ts",
+          "title": "W727 respects author inline-style nonce authorization without restoring blocked CSS (nonce=true)",
+          "runId": "2026-09-08-upstream-03"
+        }
+      ],
+      "engines": {
+        "chromium": "csp-external-and-nonce-positive-negative-e2e-passed",
+        "firefox": "csp-external-and-nonce-positive-negative-e2e-passed",
+        "webkit": "csp-external-and-nonce-positive-negative-e2e-passed",
+        "safari": "not-run"
+      },
+      "limitations": [
+        "未运行原upstream完整工程；这里只归纳明确测试条件。"
+      ],
+      "pendingVerification": [],
+      "recommendedStatus": "fixed",
+      "firstE2EEvidence": "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/batch02-e2e-first.json",
+      "sourceFixDescription": "两个内部检查标记改为惰性template，保留data属性及生成CSS textContent；实际样式继续使用constructed stylesheet。SSR客户端接管会替换服务器内部style标记，保留head/body/业务节点身份。作者style与nonce授权仍完全经过原生CSP。",
+      "latestFailedE2EEvidence": "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/final-corrections-e2e.json",
+      "e2eEvidence": "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/full-e2e-before-navigation-test-fix.json",
+      "targetedVerificationState": {
+        "stage": "strict-csp-e2e-passed-three-engines"
+      },
+      "finalVerification": {
+        "runId": "2026-09-08-upstream-03",
+        "status": "fixed"
+      }
+    }
+  ],
+  "verificationState": {
+    "scope": "This assessment covers the 14 listed DOM issues, not unrelated failures in the complete repository run.",
+    "sourceFreeze": "DOM production, tests and documentation remain frozen after final verification.",
+    "finalBrowser": {
+      "path": "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/final-browser.json",
+      "passed": 411,
+      "failed": 0,
+      "engines": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    },
+    "finalDomE2E": {
+      "path": "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/full-e2e-before-navigation-test-fix.json",
+      "passed": 24,
+      "failed": 0,
+      "scope": "The 5 DOM library cases and 3 CSP cases, in each of the 3 engines."
+    },
+    "completeRepositoryE2EAtThisAssessment": {
+      "path": "tests/upstream-issues/runs/2026-09-08-upstream-03-evidence/full-e2e-before-navigation-test-fix.json",
+      "passed": 308,
+      "failed": 4,
+      "scope": "Unrelated W107 navigation and W1106 WebKit drag failures are being handled by the parent; this does not imply a full repository gate pass."
+    },
+    "remainingAcceptance": [],
+    "recommendationPolicy": "recommendedStatus classifies only the exact tested conditions. fixed requires reproduced failure and passing correction; regression-passed means the reported condition passed without its own before-fix failure.",
+    "safari": "not-run"
+  },
+  "finalVerification": {
+    "runId": "2026-09-08-upstream-03",
+    "completedAt": "2026-09-08T08:44:16.462259+00:00",
+    "allRequiredBehaviorGatesPassed": true,
+    "releaseReady": false
+  }
+}

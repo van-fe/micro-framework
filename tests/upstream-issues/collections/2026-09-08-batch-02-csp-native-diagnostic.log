@@ -1,0 +1,73 @@
+
+Running 1 test using 1 worker
+
+(node:58881) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/1] [chromium] › tests/e2e/upstream-batch02-csp-diagnostic.spec.ts:3:1 › captures native CSP diagnostic locations
+[chromium] › tests/e2e/upstream-batch02-csp-diagnostic.spec.ts:3:1 › captures native CSP diagnostic locations
+CONSOLE Applying inline style violates the following Content Security Policy directive 'style-src 'self' http://127.0.0.1:* 'nonce-batch02-authorized''. Either the 'unsafe-inline' keyword, a hash ('sha256-jXt7y3/txXysRbNhbezz/vRDsV+sFVu+qXdmqLsLIeI='), or a nonce ('nonce-...') is required to enable inline execution. The action has been blocked. {"url":"http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/dom-surface/dist/index.js","line":925,"column":0,"lineNumber":925,"columnNumber":0}
+
+BROWSER_LOG {"entry":{"source":"security","level":"error","text":"Applying inline style violates the following Content Security Policy directive 'style-src 'self' http://127.0.0.1:* 'nonce-batch02-authorized''. Either the 'unsafe-inline' keyword, a hash ('sha256-jXt7y3/txXysRbNhbezz/vRDsV+sFVu+qXdmqLsLIeI='), or a nonce ('nonce-...') is required to enable inline execution. The action has been blocked.","timestamp":1788855538137.837,"url":"http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/dom-surface/dist/index.js","lineNumber":925,"stackTrace":{"callFrames":[{"functionName":"J","scriptId":"17","url":"http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/dom-surface/dist/index.js","lineNumber":925,"columnNumber":15},{"functionName":"#A","scriptId":"13","url":"http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js","lineNumber":414,"columnNumber":12},{"functionName":"#k","scriptId":"13","url":"http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js","lineNumber":386,"columnNumber":17},{"functionName":"#C","scriptId":"13","url":"http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js","lineNumber":190,"columnNumber":40},{"functionName":"mount","scriptId":"13","url":"http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js","lineNumber":180,"columnNumber":90},{"functionName":"mountApp","scriptId":"13","url":"http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js","lineNumber":990,"columnNumber":18},{"functionName":"eval","scriptId":"48","url":"","lineNumber":5,"columnNumber":18}]}}}
+
+AUDIT {"issue":{"code":"ContentSecurityPolicyIssue","details":{"contentSecurityPolicyIssueDetails":{"violatedDirective":"style-src-elem","isReportOnly":false,"contentSecurityPolicyViolationType":"kInlineViolation","sourceCodeLocation":{"scriptId":"17","url":"http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/dom-surface/dist/index.js","lineNumber":925,"columnNumber":16},"violatingNodeId":3}}}}
+
+CONSOLE Applying inline style violates the following Content Security Policy directive 'style-src 'self' http://127.0.0.1:* 'nonce-batch02-authorized''. Either the 'unsafe-inline' keyword, a hash ('sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU='), or a nonce ('nonce-...') is required to enable inline execution. The action has been blocked. {"url":"http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/dom-surface/dist/index.js","line":925,"column":0,"lineNumber":925,"columnNumber":0}
+
+BROWSER_LOG {"entry":{"source":"security","level":"error","text":"Applying inline style violates the following Content Security Policy directive 'style-src 'self' http://127.0.0.1:* 'nonce-batch02-authorized''. Either the 'unsafe-inline' keyword, a hash ('sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU='), or a nonce ('nonce-...') is required to enable inline execution. The action has been blocked.","timestamp":1788855538139.001,"url":"http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/dom-surface/dist/index.js","lineNumber":925,"stackTrace":{"callFrames":[{"functionName":"J","scriptId":"17","url":"http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/dom-surface/dist/index.js","lineNumber":925,"columnNumber":15},{"functionName":"#A","scriptId":"13","url":"http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js","lineNumber":414,"columnNumber":12},{"functionName":"#k","scriptId":"13","url":"http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js","lineNumber":386,"columnNumber":17},{"functionName":"#C","scriptId":"13","url":"http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js","lineNumber":190,"columnNumber":40},{"functionName":"mount","scriptId":"13","url":"http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js","lineNumber":180,"columnNumber":90},{"functionName":"mountApp","scriptId":"13","url":"http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/runtime-core/dist/index.js","lineNumber":990,"columnNumber":18},{"functionName":"eval","scriptId":"48","url":"","lineNumber":5,"columnNumber":18}]}}}
+
+AUDIT {"issue":{"code":"ContentSecurityPolicyIssue","details":{"contentSecurityPolicyIssueDetails":{"violatedDirective":"style-src-elem","isReportOnly":false,"contentSecurityPolicyViolationType":"kInlineViolation","sourceCodeLocation":{"scriptId":"17","url":"http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/dom-surface/dist/index.js","lineNumber":925,"columnNumber":16},"violatingNodeId":4}}}}
+
+CSP_EVENT {"directive":"style-src-elem","blocked":"inline","source":"http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/dom-surface/dist/index.js","line":926,"column":16,"sample":"","target":"<micro-app-host data-micro-app=\"csp-diagnostic\" data-micro-instance=\"csp-diagnostic:1\"></micro-app-host>","path":["STYLE","#document-fragment","MICRO-APP-HOST","MAIN","BODY","HTML","#document",null]}
+
+CSP_EVENT {"directive":"style-src-elem","blocked":"inline","source":"http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/dom-surface/dist/index.js","line":926,"column":16,"sample":"","target":"<micro-app-host data-micro-app=\"csp-diagnostic\" data-micro-instance=\"csp-diagnostic:1\"></micro-app-host>","path":["STYLE","#document-fragment","MICRO-APP-HOST","MAIN","BODY","HTML","#document",null]}
+
+CONSOLE Applying inline style violates the following Content Security Policy directive 'style-src 'self' http://127.0.0.1:* 'nonce-batch02-authorized''. Either the 'unsafe-inline' keyword, a hash ('sha256-tbnm5LQ2yKojKffcGgk5YhnRW8B0Tw85DRo86KP4JTk='), or a nonce ('nonce-...') is required to enable inline execution. The action has been blocked. {"url":"http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/dom-surface/dist/index.js","line":5,"column":0,"lineNumber":5,"columnNumber":0}
+
+BROWSER_LOG {"entry":{"source":"security","level":"error","text":"Applying inline style violates the following Content Security Policy directive 'style-src 'self' http://127.0.0.1:* 'nonce-batch02-authorized''. Either the 'unsafe-inline' keyword, a hash ('sha256-tbnm5LQ2yKojKffcGgk5YhnRW8B0Tw85DRo86KP4JTk='), or a nonce ('nonce-...') is required to enable inline execution. The action has been blocked.","timestamp":1788855538161.537,"url":"http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/dom-surface/dist/index.js","lineNumber":5,"stackTrace":{"callFrames":[{"functionName":"i","scriptId":"17","url":"http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/dom-surface/dist/index.js","lineNumber":5,"columnNumber":40},{"functionName":"s","scriptId":"17","url":"http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/dom-surface/dist/index.js","lineNumber":285,"columnNumber":4},{"functionName":"k","scriptId":"17","url":"http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/dom-surface/dist/index.js","lineNumber":513,"columnNumber":4},{"functionName":"stylesChanged","scriptId":"25","url":"http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/dom-bridge/dist/index.js","lineNumber":5547,"columnNumber":33},{"functionName":"h","scriptId":"25","url":"http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/dom-bridge/dist/index.js","lineNumber":5404,"columnNumber":15},{"functionName":"","scriptId":"25","url":"http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/dom-bridge/dist/index.js","lineNumber":5445,"columnNumber":2},{"functionName":"g","scriptId":"21","url":"http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/realm-host/dist/index.js","lineNumber":137,"columnNumber":32},{"functionName":"y","scriptId":"21","url":"http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/realm-host/dist/index.js","lineNumber":174,"columnNumber":70},{"functionName":"#d","scriptId":"21","url":"http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/realm-host/dist/index.js","lineNumber":422,"columnNumber":55}]}}}
+
+AUDIT {"issue":{"code":"ContentSecurityPolicyIssue","details":{"contentSecurityPolicyIssueDetails":{"violatedDirective":"style-src-elem","isReportOnly":false,"contentSecurityPolicyViolationType":"kInlineViolation","sourceCodeLocation":{"scriptId":"17","url":"http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/dom-surface/dist/index.js","lineNumber":5,"columnNumber":41},"violatingNodeId":4}}}}
+
+CSP_EVENT {"directive":"style-src-elem","blocked":"inline","source":"http://127.0.0.1:5173/@fs/Users/fanfangbo/workspace/micro-framework/packages/dom-surface/dist/index.js","line":6,"column":41,"sample":"","target":"<micro-app-host data-micro-app=\"csp-diagnostic\" data-micro-instance=\"csp-diagnostic:1\"><iframe hidden=\"\" tabindex=\"-1\" aria-hidden=\"true\" title=\"JavaScript Realm for csp-diagnostic\" src=\"http://127.0.0.1:5173/__micro_frame__/realm.html\"></iframe></micro-app-host>","path":["STYLE","#document-fragment","MICRO-APP-HOST","MAIN","BODY","HTML","#document",null]}
+
+STYLE_NODES [
+  {
+    outer: '<style type="text/plain" data-micro-surface-style="" media="not all">\n' +
+      '    :where(:host) { display: block; min-width: 0; }\n' +
+      '    :host([hidden]) { display: none !important; }\n' +
+      '    :host([data-micro-global-overlay]) { position: relative; z-index: 2147483000; }\n' +
+      '    [data-micro-global-overlay-root] {\n' +
+      '      position: fixed !important;\n' +
+      '      left: var(--micro-global-overlay-left, 0px) !important;\n' +
+      '      top: var(--micro-global-overlay-top, 0px) !important;\n' +
+      '      right: auto !important;\n' +
+      '      bottom: auto !important;\n' +
+      '      width: 100vw !important;\n' +
+      '      height: 100vh !important;\n' +
+      '    }\n' +
+      '    [data-micro-global-overlay-measuring] { transform: none !important; }\n' +
+      '    :where([data-micro-viewport-overlay]) {\n' +
+      '      margin: 0; padding: 0; border: 0; background: transparent; color: inherit;\n' +
+      '      width: auto; height: auto; inset: auto; overflow: visible;\n' +
+      '    }\n' +
+      '    :where(micro-app-head) { display: none; }\n' +
+      '    :where(micro-app-body) { display: block; min-height: 100%; outline: none; }\n' +
+      '    :where(micro-app-overlay) { position: relative; z-index: 0; }\n' +
+      '  </style>',
+    sheet: false,
+    nonce: ''
+  },
+  {
+    outer: '<style type="text/plain" data-micro-document-tokens="" media="not all">:host{--csp-author-color:rgb(70, 90, 110);}</style>',
+    sheet: false,
+    nonce: ''
+  },
+  {
+    outer: '<style media="not all" nonce="">:root { --csp-author-color: rgb(70, 90, 110); } .csp-nonce-probe { color: var(--csp-author-color); width: 37px; }</style>',
+    sheet: true,
+    nonce: 'batch02-authorized'
+  }
+]
+
+  1 passed (3.8s)

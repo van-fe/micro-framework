@@ -1,0 +1,37 @@
+[WebServer] (node:67262) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+[WebServer] (node:67263) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+
+Running 15 tests using 1 worker
+
+(node:67268) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/15] [chromium] › tests/production/framework-hydration.spec.ts:4:3 › react hydrates server nodes, preserves state on update and releases its Realm
+[2/15] [chromium] › tests/production/framework-hydration.spec.ts:4:3 › vue hydrates server nodes, preserves state on update and releases its Realm
+[3/15] [chromium] › tests/production/offline-cache.spec.ts:48:1 › atomically activates a host-owned application cache and serves it offline
+[4/15] [chromium] › tests/production/offline-cache.spec.ts:97:1 › creates a new native Realm and mounts the complete cached module graph while offline
+[5/15] [chromium] › tests/production/ssr-hydration.spec.ts:15:1 › streams Declarative Shadow DOM before hydrating it in an iframe Realm
+(node:67279) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[6/15] [firefox] › tests/production/framework-hydration.spec.ts:4:3 › react hydrates server nodes, preserves state on update and releases its Realm
+[7/15] [firefox] › tests/production/framework-hydration.spec.ts:4:3 › vue hydrates server nodes, preserves state on update and releases its Realm
+[8/15] [firefox] › tests/production/offline-cache.spec.ts:48:1 › atomically activates a host-owned application cache and serves it offline
+[9/15] [firefox] › tests/production/offline-cache.spec.ts:97:1 › creates a new native Realm and mounts the complete cached module graph while offline
+[10/15] [firefox] › tests/production/ssr-hydration.spec.ts:15:1 › streams Declarative Shadow DOM before hydrating it in an iframe Realm
+(node:67330) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[11/15] [webkit] › tests/production/framework-hydration.spec.ts:4:3 › react hydrates server nodes, preserves state on update and releases its Realm
+[12/15] [webkit] › tests/production/framework-hydration.spec.ts:4:3 › vue hydrates server nodes, preserves state on update and releases its Realm
+[13/15] [webkit] › tests/production/offline-cache.spec.ts:48:1 › atomically activates a host-owned application cache and serves it offline
+[14/15] [webkit] › tests/production/offline-cache.spec.ts:97:1 › creates a new native Realm and mounts the complete cached module graph while offline
+[15/15] [webkit] › tests/production/ssr-hydration.spec.ts:15:1 › streams Declarative Shadow DOM before hydrating it in an iframe Realm
+  15 passed (18.0s)
