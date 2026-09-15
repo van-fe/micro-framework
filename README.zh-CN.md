@@ -1,4 +1,4 @@
-# Micro Frame
+# Micro Framework
 
 [English](README.md) | **简体中文**
 

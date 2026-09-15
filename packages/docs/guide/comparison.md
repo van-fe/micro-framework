@@ -1,16 +1,16 @@
-# 为什么选择 Micro Frame：与 qiankun、wujie 的能力和性能对比
+# 为什么选择 Micro Framework：与 qiankun、wujie 的能力和性能对比
 
-Micro Frame 面向需要长期治理的现代微前端系统：用真实 iframe Realm 隔离 JavaScript，用固定 ShadowRoot
+Micro Framework 面向需要长期治理的现代微前端系统：用真实 iframe Realm 隔离 JavaScript，用固定 ShadowRoot
 承载 DOM/CSS，并把生命周期、通信、版本、部署诊断与资源回收收敛到同一个 Runtime 契约。本文先回答为什么
-选择 Micro Frame，再用 qiankun 和 wujie 说明三种架构的能力与性能取舍。
+选择 Micro Framework，再用 qiankun 和 wujie 说明三种架构的能力与性能取舍。
 
-对比基线为 2026-09-14 的 Micro Frame 当前实现、qiankun 稳定版 `2.10.16` 与 wujie `2.1.0`。
+对比基线为 2026-09-14 的 Micro Framework 当前实现、qiankun 稳定版 `2.10.16` 与 wujie `2.1.0`。
 
-外部方案的能力以官方文档为准；Micro Frame 的能力只引用已有源码和自动化证据。性能章节会明确区分
-**架构推导**、**Micro Frame 实测**和**尚未完成的外部框架同机实测**，避免用不同应用、不同机器或宣传数据
+外部方案的能力以官方文档为准；Micro Framework 的能力只引用已有源码和自动化证据。性能章节会明确区分
+**架构推导**、**Micro Framework 实测**和**尚未完成的外部框架同机实测**，避免用不同应用、不同机器或宣传数据
 直接下结论。
 
-参考基线：[Micro Frame 实现状态](/reference/implementation-status)、
+参考基线：[Micro Framework 实现状态](/reference/implementation-status)、
 [性能与稳定性基准](/reference/benchmarking)、
 [qiankun 指南](https://qiankun.umijs.org/zh/guide/)、
 [qiankun API](https://qiankun.umijs.org/zh/api/)、
@@ -21,23 +21,23 @@ Micro Frame 面向需要长期治理的现代微前端系统：用真实 iframe 
 ## 核心结论
 
 - 新建平台或正在升级微前端治理体系，并且重视隔离确定性、原生 ESM、资源回收、版本治理和可观测性时，
-  **推荐选择 Micro Frame**。
-- 相比 qiankun，Micro Frame 不把多个应用放在宿主 JavaScript Realm 中通过沙箱协调，而是为每个实例创建真实
+  **推荐选择 Micro Framework**。
+- 相比 qiankun，Micro Framework 不把多个应用放在宿主 JavaScript Realm 中通过沙箱协调，而是为每个实例创建真实
   浏览器 Realm，并在销毁 iframe 时硬重置全局环境与模块图。
-- 相比 wujie，Micro Frame 同样使用 iframe + Shadow DOM，但进一步把显式状态机、取消/超时、结构化 RPC、
+- 相比 wujie，Micro Framework 同样使用 iframe + Shadow DOM，但进一步把显式状态机、取消/超时、结构化 RPC、
   Capability、Import Map、完整性校验、部署诊断和自动化门禁纳入统一 Runtime。
 - 当前实测已覆盖三引擎 HTML Entry 首次/重复挂载、冷挂载、keepAlive、销毁循环、样式扫描和真实组件内存；
   性能结论以可复现数据为准，不用架构宣传代替测试。
-- Micro Frame 当前仍处于内部验证阶段，不能用局部基准领先或能力列表更长代替生产成熟度、业务组件矩阵和
+- Micro Framework 当前仍处于内部验证阶段，不能用局部基准领先或能力列表更长代替生产成熟度、业务组件矩阵和
   真实设备验证。
 
 如果当前平台已经使用 qiankun，迁移决策不应从 API 对照表开始，而应先确认现有问题是否真的来自隔离、资源所有权
 或运行时治理。具体判断标准、实测证据和灰度步骤见[为什么以及怎样从 qiankun 迁移](/migration/from-qiankun)。
 
-## 为什么选择 Micro Frame
+## 为什么选择 Micro Framework
 
 ::: tip 一句话理由
-选择 Micro Frame 的核心理由不是“API 更多”或“某次基准更快”，而是把**真实 Realm 隔离、固定 Shadow DOM
+选择 Micro Framework 的核心理由不是“API 更多”或“某次基准更快”，而是把**真实 Realm 隔离、固定 Shadow DOM
 边界、可取消生命周期和可验证工程门禁**做成不可绕过的默认路径。
 :::
 
@@ -92,7 +92,7 @@ keepAlive 与预热也有明确预算：默认最多保活 3 个实例、预热 
 
 ### 6. 从构建到运行时使用同一条治理链
 
-Micro Frame 把通常散落在接入脚本、网关配置和业务约定中的问题连成一条可检查链路：
+Micro Framework 把通常散落在接入脚本、网关配置和业务约定中的问题连成一条可检查链路：
 
 - Vite manifest 描述完整 chunk/asset 图、SHA-384、共享依赖范围与可选签名；
 - Runtime 按 SemVer 为每个 Realm 生成 Import Map，并执行完整性校验、并发预取和版本回退；
@@ -101,24 +101,24 @@ Micro Frame 把通常散落在接入脚本、网关配置和业务约定中的�
 - Chromium、Firefox、WebKit 合同和生产基准进入固定门禁；真实 macOS Safari、移动实机和长时 soak 单独记录
   是否在当前变更上执行，不能用历史结果替代。
 
-因此，更适合选择 Micro Frame 的组织通常不是只想“把多个页面拼起来”，而是希望把隔离、版本、通信、部署、
+因此，更适合选择 Micro Framework 的组织通常不是只想“把多个页面拼起来”，而是希望把隔离、版本、通信、部署、
 诊断和回收变成多个团队共同遵守的工程契约。
 
 ## 核心架构
 
 | 方案 | JavaScript 执行边界 | 可视 DOM / CSS 边界 | 主要取舍 |
 | --- | --- | --- | --- |
-| Micro Frame | 每个应用实例在独立隐藏同源 iframe Realm 中原生执行 | 每实例固定使用自己的 ShadowRoot，通过 Document Bridge 连接 | 隔离和销毁边界明确；承担 iframe、跨 Realm 身份和 DOM Bridge 成本 |
+| Micro Framework | 每个应用实例在独立隐藏同源 iframe Realm 中原生执行 | 每实例固定使用自己的 ShadowRoot，通过 Document Bridge 连接 | 隔离和销毁边界明确；承担 iframe、跨 Realm 身份和 DOM Bridge 成本 |
 | qiankun 2.10.16 | 非 iframe 的 JavaScript 沙箱，不提供每实例独立浏览器 Realm | 默认样式隔离；可选严格 Shadow DOM 或实验性选择器改写 | 少一层 iframe 固定成本，生态成熟；隔离依赖沙箱和生命周期清理 |
 | wujie 2.1.0 | 子应用运行在 iframe `window` 中 | Web Component / Shadow DOM，iframe `document` 代理到可视容器 | 接近原生 Realm，并提供路由同步、预执行和保活；依赖较多运行时代理与约定 |
 
-三者默认都不应被当成恶意代码安全容器。Micro Frame 与 wujie 的同源 iframe 仍可能主动访问宿主；
-qiankun 的沙箱也面向微应用协作而不是运行未知第三方代码。Micro Frame 另有显式跨 Origin 可见 sandbox iframe
+三者默认都不应被当成恶意代码安全容器。Micro Framework 与 wujie 的同源 iframe 仍可能主动访问宿主；
+qiankun 的沙箱也面向微应用协作而不是运行未知第三方代码。Micro Framework 另有显式跨 Origin 可见 sandbox iframe
 模式，但这与默认模式的兼容性和展示语义不同。
 
 ## 能力对比
 
-| 维度 | Micro Frame 当前实现 | qiankun 2.10.16 | wujie 2.1.0 |
+| 维度 | Micro Framework 当前实现 | qiankun 2.10.16 | wujie 2.1.0 |
 | --- | --- | --- | --- |
 | 应用入口 | URL HTML Entry 与原生 ESM Entry；稳定入口要求可发现生命周期 | URL HTML Entry，也接受内联 scripts/styles/html 对象 | URL 或直接 HTML，可运行未改生命周期的应用 |
 | 激活方式 | `activeWhen` 路由激活；`mountApp()` 手动挂载；兼容 API 委托同一内核 | `activeRule` 路由激活；`loadMicroApp()` 手动挂载 | `setupApp/preloadApp/startApp` 或 Vue/React 组件 |
@@ -135,7 +135,7 @@ qiankun 的沙箱也面向微应用协作而不是运行未知第三方代码。
 | 工程扩展 | 部署诊断、CLI、迁移扫描、DevTools、离线缓存、SSR/Hydration、服务端注册与跨域强隔离 | 成熟社区、Umi 集成和大量生产案例 | Vue/React 组件封装、路由同步、降级与插件生态 |
 | 当前成熟度 | 架构 PoC 与 Runtime MVP 可用，仍是内部验证阶段 | 官方稳定版，公开生产案例最多 | 已有正式版本和生产来源 |
 
-表格中的“有或没有”不等于绝对优劣。例如 wujie 的运行时 `replace` 能降低存量应用改造成本，但 Micro Frame
+表格中的“有或没有”不等于绝对优劣。例如 wujie 的运行时 `replace` 能降低存量应用改造成本，但 Micro Framework
 为了原生 ESM、CSP 和可审计执行路径，明确把源码转换放在构建期；这是产品边界差异，不是漏掉一个同名 API。
 
 ## 性能应该怎样比较
@@ -151,7 +151,7 @@ qiankun 的沙箱也面向微应用协作而不是运行未知第三方代码。
 
 ### 架构层面的性能画像
 
-| 场景 | Micro Frame | qiankun | wujie |
+| 场景 | Micro Framework | qiankun | wujie |
 | --- | --- | --- | --- |
 | 冷启动 | 需要创建 Realm + ShadowRoot + Bridge；可用 manifest 预取或 Realm 预热把成本前移 | 不创建每应用 iframe，固定成本通常更小；仍需 HTML 加载、脚本执行沙箱和生命周期 | 需要创建 iframe + Web Component；可用 preload/exec 把成本前移 |
 | 业务 JS 稳态 | JavaScript 在 iframe Realm 中原生执行；可视 DOM 和跨 Realm 兼容访问经过 Bridge | 与宿主共享 Realm，但全局访问走沙箱语义 | JavaScript 在 iframe Realm 中执行；可视 DOM 访问经过代理 |
@@ -163,7 +163,7 @@ qiankun 的沙箱也面向微应用协作而不是运行未知第三方代码。
 这里的“通常”是架构推导，不是三个框架的同机测速结论。实际结果可能被应用包体、组件库、网络、浏览器、
 预取时机和业务清理质量反转。
 
-## Micro Frame 当前实测
+## Micro Framework 当前实测
 
 仓库先构建静态生产产物，再在回环 HTTP 服务上用 Chromium、Firefox、WebKit 串行测量。2026-09-14 完成的
 MFOPT-000～006 从冻结基线开始，先保存失败样本，再修复资源所有权、异常清理、HTML Entry 重复解析、样式重复扫描
@@ -215,7 +215,7 @@ query/通配/返回节点从 `59/20/444` 降至 `46/7/219`；重复挂载为 `39
 按设计跳过。全部本地浏览器验收在应用导航前验证 fetch、XHR、Beacon、iframe、Worker 五类探针零外发并阻止
 Service Worker。完整条件、原始样本与已知限制见[性能与稳定性基准](/reference/benchmarking)。
 
-这些结果证明 Micro Frame 自身的回归门禁和优化收益，不是 qiankun 或 wujie 的发布版本对比。仓库仍保留相同
+这些结果证明 Micro Framework 自身的回归门禁和优化收益，不是 qiankun 或 wujie 的发布版本对比。仓库仍保留相同
 122 节点工作负载的 same-Realm Proxy 与 iframe + Web Component 架构 baseline，但在完成三套真实运行时、同版本
 应用、同机器同缓存策略的测试前，本文不提供竞品性能排名。
 
@@ -231,12 +231,12 @@ Service Worker。完整条件、原始样本与已知限制见[性能与稳定�
 - 单独覆盖 Portal/Teleport、编辑器、图表、地图、Worker、WebGL 与目标移动设备；
 - 公开原始样本和失败 trace，不只发布平均值或最佳值。
 
-Micro Frame 可先运行 `bun run benchmark` 复用现有测量边界，再把真实 qiankun/wujie fixture 接入独立的
+Micro Framework 可先运行 `bun run benchmark` 复用现有测量边界，再把真实 qiankun/wujie fixture 接入独立的
 外部框架基准；在这项工作完成前，架构 baseline 应继续保持中性命名。
 
-## 什么时候选择 Micro Frame
+## 什么时候选择 Micro Framework
 
-以下条件越多，Micro Frame 的收益越明确：
+以下条件越多，Micro Framework 的收益越明确：
 
 - 新建微前端平台，或准备把现有平台升级为可长期治理的基础设施；
 - 必须用浏览器真实 Realm 隔离全局对象、原型和原生 ESM 模块图；
@@ -248,7 +248,7 @@ Micro Frame 可先运行 `bun run benchmark` 复用现有测量边界，再把�
 
 ### 存量项目暂不迁移的情形
 
-“选择 Micro Frame”不等于要求所有存量系统立即迁移。现有 qiankun/wujie 系统运行稳定、没有明确的隔离或治理
+“选择 Micro Framework”不等于要求所有存量系统立即迁移。现有 qiankun/wujie 系统运行稳定、没有明确的隔离或治理
 问题，或者强依赖自定义 template/fetch、`sync/prefix`、运行时 replace/plugins、零生命周期改造与老浏览器降级时，
 应先保持现状并完成差距盘点。这是迁移风险边界，不是对竞品的优先推荐。
 

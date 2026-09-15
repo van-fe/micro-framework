@@ -6,7 +6,7 @@ const documentationSidebar = [
     collapsed: true,
     items: [
       { text: "快速开始", link: "/guide/getting-started" },
-      { text: "为什么选择 Micro Frame", link: "/guide/comparison" },
+      { text: "为什么选择 Micro Framework", link: "/guide/comparison" },
       { text: "核心概念", link: "/guide/core-concepts" },
       { text: "宿主接入", link: "/guide/host-integration" },
       { text: "微应用接入", link: "/guide/micro-application" },
@@ -78,8 +78,8 @@ const documentationSidebar = [
 export default defineConfig({
   base: process.env.DOCS_BASE || "/",
   lang: "zh-CN",
-  title: "Micro Frame",
-  titleTemplate: ":title · Micro Frame",
+  title: "Micro Framework",
+  titleTemplate: ":title · Micro Framework",
   description: "基于 iframe Realm 与 Shadow DOM 的现代微前端运行时",
   cleanUrls: true,
   lastUpdated: true,
@@ -91,7 +91,7 @@ export default defineConfig({
     lineNumbers: true,
   },
   themeConfig: {
-    siteTitle: "Micro Frame",
+    siteTitle: "Micro Framework",
     nav: [
       { text: "指南", link: "/guide/getting-started" },
       { text: "为什么选择", link: "/guide/comparison" },
@@ -122,7 +122,7 @@ export default defineConfig({
     },
     footer: {
       message: "面向可信内部应用的意外污染隔离，不是恶意代码安全边界。",
-      copyright: "Micro Frame documentation",
+      copyright: "Micro Framework documentation",
     },
   },
 });

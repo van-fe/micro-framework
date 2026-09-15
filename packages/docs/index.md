@@ -2,7 +2,7 @@
 layout: home
 
 hero:
-  name: Micro Frame
+  name: Micro Framework
   text: 真实 Realm 隔离的现代微前端运行时
   tagline: 每个实例在独立 iframe Realm 中执行 JavaScript，并将 DOM 与 CSS 渲染到应用自己的 ShadowRoot。保留熟悉的开发方式，同时阻止可信内部应用的意外全局污染。
   actions:
@@ -36,14 +36,14 @@ features:
 
 ## 设计边界
 
-Micro Frame 面向**可信内部应用的意外污染隔离**。同源 iframe 仍能主动访问 `parent`、`top` 或宿主节点，因此它不是执行未知恶意代码的安全容器。需要运行不可信代码时，应采用不同 Origin 的可见 sandbox iframe 与序列化消息协议。
+Micro Framework 面向**可信内部应用的意外污染隔离**。同源 iframe 仍能主动访问 `parent`、`top` 或宿主节点，因此它不是执行未知恶意代码的安全容器。需要运行不可信代码时，应采用不同 Origin 的可见 sandbox iframe 与序列化消息协议。
 
 ## 当前里程碑
 
 - Bun monorepo 与 Vite 8.2.2 工具链；
 - 原生 ESM Entry 与 HTML Entry；
 - React + Ant Design、Vue 3 + Element Plus、Vue 2 + Element UI、Vanilla、兼容迁移示例；
-- Micro Frame 选型优势、与 qiankun/wujie 的能力性能对比、迁移指南与配置迁移规划器；
+- Micro Framework 选型优势、与 qiankun/wujie 的能力性能对比、迁移指南与配置迁移规划器；
 - 每实例 Import Map、共享依赖 SemVer 协商与 iframe `modulepreload`；
 - 应用命名空间 IndexedDB 持久化与 structured-clone 语义；
 - 直接 IndexedDB、BroadcastChannel、SharedWorker、Web Locks 命名空间与可选 Web Storage 兼容桥；

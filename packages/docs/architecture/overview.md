@@ -1,6 +1,6 @@
 # 架构总览
 
-Micro Frame 把“JavaScript 全局隔离”和“可视 DOM/CSS 承载”拆成两个由浏览器原生能力负责的边界。
+Micro Framework 把“JavaScript 全局隔离”和“可视 DOM/CSS 承载”拆成两个由浏览器原生能力负责的边界。
 
 ## 运行链路
 

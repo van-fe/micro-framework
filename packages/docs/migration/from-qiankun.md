@@ -1,13 +1,13 @@
 # 从 qiankun 迁移
 
 本文先回答“为什么迁移”，再说明“怎样迁移”。对比基线是截至 2026-09-14 可查的 qiankun 稳定版
-`2.10.16` 与 Micro Frame 当前实现；不把候选版本能力当作稳定承诺，也不把 Micro Frame 自身优化前后的
+`2.10.16` 与 Micro Framework 当前实现；不把候选版本能力当作稳定承诺，也不把 Micro Framework 自身优化前后的
 性能数据包装成两个框架的横向跑分。
 
 参考资料：[qiankun 指南](https://qiankun.umijs.org/zh/guide/)、
 [qiankun API](https://qiankun.umijs.org/zh/api/)、
 [qiankun 稳定版发布页](https://github.com/umijs/qiankun/releases)、
-[Micro Frame 实现状态](/reference/implementation-status)和
+[Micro Framework 实现状态](/reference/implementation-status)和
 [性能与稳定性基准](/reference/benchmarking)。
 
 ## 为什么要从 qiankun 迁移
@@ -19,7 +19,7 @@
 :::
 
 qiankun 的优势是成熟、接入成本低、HTML Entry 和预取策略完整。它很适合快速把多个存量应用纳入同一宿主。
-Micro Frame 选择的是另一条路线：每个应用实例在独立 iframe Realm 中原生执行 JavaScript，可视 DOM/CSS 固定
+Micro Framework 选择的是另一条路线：每个应用实例在独立 iframe Realm 中原生执行 JavaScript，可视 DOM/CSS 固定
 进入自己的 ShadowRoot，生命周期和宿主资源全部归一个可销毁的 Runtime 实例管理。
 
 因此，下面五类问题才是迁移信号。
@@ -27,17 +27,17 @@ Micro Frame 选择的是另一条路线：每个应用实例在独立 iframe Rea
 ### 1. 全局污染已经从偶发故障变成治理成本
 
 如果团队持续处理全局变量覆盖、原型修改、模块单例串状态、多实例互相影响，问题的关键通常不是再补一层白名单，
-而是 JavaScript 是否真的运行在独立浏览器 Realm。Micro Frame 的 `window`、`globalThis`、内建构造器、原型链和
+而是 JavaScript 是否真的运行在独立浏览器 Realm。Micro Framework 的 `window`、`globalThis`、内建构造器、原型链和
 ESM module map 都属于应用实例；销毁 iframe 会一并丢弃该实例的全局环境和模块图。
 
-这仍不是运行恶意代码的安全边界。同源微应用可以主动访问 `parent`，Micro Frame 解决的是可信内部应用的意外污染。
+这仍不是运行恶意代码的安全边界。同源微应用可以主动访问 `parent`，Micro Framework 解决的是可信内部应用的意外污染。
 
 ### 2. 卸载“看起来成功”，但长期运行仍持续涨内存
 
 微前端的泄漏经常不在应用容器本身，而在宿主 Window/Document 持有的监听器、Observer、媒体查询、调度任务和
 组件框架委托事件。只移除 DOM 或调用应用 `unmount`，不能证明这些宿主资源已经释放。
 
-Micro Frame 把这些资源登记到应用实例：`matchMedia`、ResizeObserver、IntersectionObserver、Document 监听、
+Micro Framework 把这些资源登记到应用实例：`matchMedia`、ResizeObserver、IntersectionObserver、Document 监听、
 动画帧和 idle callback 都有明确所有者；清理中的某一步抛错时，后续清理仍会执行并聚合保留错误，重复销毁保持幂等。
 这使“卸载后资源归零”成为框架合同，而不是依赖每个业务团队都写对清理代码。
 
@@ -46,14 +46,14 @@ Micro Frame 把这些资源登记到应用实例：`matchMedia`、ResizeObserver
 qiankun 提供默认沙箱、严格 Shadow DOM 和实验性选择器改写等选择，不同应用可以采用不同边界。这个灵活性适合
 渐进接入；当平台进入长期治理阶段，它也可能让 Portal、全局 Token、字体、弹层、动画和 CSSOM 问题分散到各项目。
 
-Micro Frame 固定使用应用 ShadowRoot，不提供“临时关闭隔离”的逃生开关。Portal、Teleport、`append-to-body`、
+Micro Framework 固定使用应用 ShadowRoot，不提供“临时关闭隔离”的逃生开关。Portal、Teleport、`append-to-body`、
 焦点、Selection、SVG、字体/rem、动态 CSSOM 和跨 Realm `instanceof` 的兼容由底层 Bridge 统一处理，并用 React +
 Ant Design、Vue 3 + Element Plus、Vue 2 + Element UI 和 Vanilla 的真实浏览器矩阵验证。
 
 ### 4. 平台需要原生 ESM、CSP 和可审计执行路径
 
 如果目标是让入口模块、Import Map、`modulepreload`、完整性校验和浏览器缓存保持原生语义，运行时源码改写和隐式
-模板转换会逐渐成为发布治理障碍。Micro Frame 把 HTML Entry 和原生 ESM Entry 都作为一等入口，脚本在应用 iframe
+模板转换会逐渐成为发布治理障碍。Micro Framework 把 HTML Entry 和原生 ESM Entry 都作为一等入口，脚本在应用 iframe
 Document 中由浏览器原生加载；默认路径不使用 `eval`、`new Function`、`with`、Blob 模块或运行时源码改写。
 
 相应代价是：依赖自定义 `fetch/getTemplate/getPublicPath`、内联资源对象或同步宿主全局的项目，必须先改部署或构建链，
@@ -61,7 +61,7 @@ Document 中由浏览器原生加载；默认路径不使用 `eval`、`new Funct
 
 ### 5. 多团队平台需要统一、可验证的运行时契约
 
-Micro Frame 用同一个 Runtime Core 管理路由和手动实例，提供显式状态机、AbortSignal、阶段超时、latest-wins、fallback、
+Micro Framework 用同一个 Runtime Core 管理路由和手动实例，提供显式状态机、AbortSignal、阶段超时、latest-wins、fallback、
 熔断、keepAlive LRU、Realm 预热、结构化 Service RPC、Capability 和部署诊断。`runtime.destroy()` 会覆盖该 Runtime
 拥有的全部实例，测试、灰度和不同业务域也可以分别创建独立 Runtime。
 
@@ -70,8 +70,8 @@ Micro Frame 用同一个 Runtime Core 管理路由和手动实例，提供显式
 
 ## 这轮优化提供了什么证据
 
-下面的数据全部来自仓库内无业务数据的生产构建负载，是 **Micro Frame 自身冻结基线与优化后的对比**，不是
-qiankun 与 Micro Frame 的同机横向排名。
+下面的数据全部来自仓库内无业务数据的生产构建负载，是 **Micro Framework 自身冻结基线与优化后的对比**，不是
+qiankun 与 Micro Framework 的同机横向排名。
 
 | 验证项 | 冻结基线 / 补丁前 | 当前结果 |
 | --- | --- | --- |
@@ -86,7 +86,7 @@ qiankun 与 Micro Frame 的同机横向排名。
 媒体查询、Observer 和调度资源全部为 0。所有本地浏览器验收都在应用导航前启用网络保护，验证 fetch、XHR、Beacon、
 iframe、Worker 五类探针零外发并阻止 Service Worker。
 
-这组证据最重要的含义不是“框架从未出现泄漏”。相反，测试先在 Micro Frame 自身复现了真实 React/Vue 组件保留链，
+这组证据最重要的含义不是“框架从未出现泄漏”。相反，测试先在 Micro Framework 自身复现了真实 React/Vue 组件保留链，
 再把资源所有权修到最低责任层并建立长期门禁。迁移决策应看这种问题能否被框架级复现、修复和持续阻止，而不是只看
 架构名称。
 
@@ -101,14 +101,14 @@ iframe、Worker 五类探针零外发并阻止 Service Worker。
 - 近期目标是最低改造成本、成熟社区案例或 Umi 生态集成；
 - 强依赖自定义 `fetch/getTemplate/getPublicPath`、内联资源对象或函数形式预取/单例策略；
 - 需要关闭沙箱、依赖宿主 `window` 隐式变量、共享类实例或跨应用框架单例；
-- 必须支持 Micro Frame 浏览器基线之外的旧浏览器；
+- 必须支持 Micro Framework 浏览器基线之外的旧浏览器；
 - 尚无真实 Safari、目标移动设备和业务组件矩阵的灰度验收资源。
 
 迁移不是架构洁癖。没有可量化问题、负责人和回退方案时，保留成熟运行时通常更稳妥。
 
 ## 核心差异
 
-| 维度 | qiankun 2.10.16 | Micro Frame 当前实现 | 迁移影响 |
+| 维度 | qiankun 2.10.16 | Micro Framework 当前实现 | 迁移影响 |
 | --- | --- | --- | --- |
 | JavaScript 隔离 | 非 iframe 的 JavaScript 沙箱 | 每实例在隐藏同源 iframe 的真实 Realm 内执行 | 宿主全局读取、隐式原型和模块单例共享会失效 |
 | DOM 与 CSS | 默认隔离；可选严格 Shadow DOM 或实验性选择器改写 | DOM/CSS 固定进入应用自己的 ShadowRoot | Portal、全局 Token、宿主选择器必须验收 |
@@ -198,7 +198,7 @@ registerMicroApps([{
 await start({ prefetch: true, singular: false });
 ```
 
-兼容 API 仍使用 Micro Frame 的 iframe Realm、Shadow DOM 和 Runtime Core，不会复现旧沙箱实现。不要让两个运行时
+兼容 API 仍使用 Micro Framework 的 iframe Realm、Shadow DOM 和 Runtime Core，不会复现旧沙箱实现。不要让两个运行时
 同时接管同一路由和容器。
 
 ### 3. 整理微应用入口和宿主依赖

@@ -83,7 +83,7 @@ await telemetry.destroy();
 
 ## Chromium 扩展
 
-仓库 `extensions/devtools` 是可直接“加载已解压扩展”的 Manifest V3 包。在宿主 DevTools 中选择 Micro Frame，
+仓库 `extensions/devtools` 是可直接“加载已解压扩展”的 Manifest V3 包。在宿主 DevTools 中打开该扩展的面板，
 即可查看多 Runtime、多实例和最近错误。需要宿主先调用 `exposeRuntimeToDevtools()`。
 
 扩展通过 Chrome 官方 inspectedWindow 接口读取固定快照表达式，无后台服务、站点权限、业务数据修改或网络上传。

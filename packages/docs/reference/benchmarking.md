@@ -107,7 +107,7 @@ JS listeners 均为 28/13，应用所属媒体查询、ResizeObserver、Intersec
 同步样式读取没有下降，因此不计为优化收益。动态 CSSOM、SVG、字体/rem、嵌套 ShadowRoot、弹层与同步读取回归
 仍在三引擎通过。
 
-结构化结果保存在 `benchmarks/optimization-results/mfopt-006-final/summary.json`。这些数字用于 Micro Frame
+结构化结果保存在 `benchmarks/optimization-results/mfopt-006-final/summary.json`。这些数字用于 Micro Framework
 自身回归，不是跨硬件 SLA，也不是 qiankun/wujie 发布版本的横向跑分。
 
 2026-09-02 同一环境完成正式时间型门禁，Chromium、Firefox、WebKit 各连续运行 60 分钟并通过 12/12：

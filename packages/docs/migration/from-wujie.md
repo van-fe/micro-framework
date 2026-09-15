@@ -1,20 +1,20 @@
 # 从 wujie 迁移
 
-本文对比 2026-09-01 可查的 wujie `2.1.0` 与 Micro Frame 当前实现，并给出可执行迁移顺序。
+本文对比 2026-09-01 可查的 wujie `2.1.0` 与 Micro Framework 当前实现，并给出可执行迁移顺序。
 
 参考资料：[wujie 方案原理](https://wujie-micro.github.io/doc/guide/)、
 [setupApp](https://wujie-micro.github.io/doc/api/setupApp.html)、
 [preloadApp](https://wujie-micro.github.io/doc/api/preloadApp.html)、
 [startApp](https://wujie-micro.github.io/doc/api/startApp.html)、
-[Micro Frame 实现状态](/reference/implementation-status)。
+[Micro Framework 实现状态](/reference/implementation-status)。
 
 ## 先给结论
 
-wujie 与 Micro Frame 都采用 iframe 承载 JavaScript 环境，并把可视 DOM 连接到 Web Component/Shadow DOM，因此迁移时的 DOM 与组件库风险通常小于从同 Realm 沙箱迁入。但两者的产品模型并不相同：
+wujie 与 Micro Framework 都采用 iframe 承载 JavaScript 环境，并把可视 DOM 连接到 Web Component/Shadow DOM，因此迁移时的 DOM 与组件库风险通常小于从同 Realm 沙箱迁入。但两者的产品模型并不相同：
 
 - wujie 强调组件式启动、子应用路由同步、预执行和 keepAlive；
-- Micro Frame 强调每实例 Realm、显式生命周期状态机、原生 ESM、可取消操作和 Runtime 资源边界；
-- wujie 可以让未做生命周期改造的子应用运行；Micro Frame 的稳定入口要求可发现的 `mount/unmount` 生命周期；
+- Micro Framework 强调每实例 Realm、显式生命周期状态机、原生 ESM、可取消操作和 Runtime 资源边界；
+- wujie 可以让未做生命周期改造的子应用运行；Micro Framework 的稳定入口要求可发现的 `mount/unmount` 生命周期；
 - wujie 的 `$wujie`、bus 和同源 `window.parent` 通信不能直接照搬，应迁到 props、Event 或 Service。
 
 如果系统高度依赖 `sync/prefix`、`replace`、插件链或老浏览器降级，当前不建议迁移。`alive` 可以映射到
@@ -23,7 +23,7 @@ keepAlive，`preload.exec` 可以映射到手动 Realm 预热，但两者仍需�
 
 ## 核心差异
 
-| 维度 | wujie 2.1.0 | Micro Frame 当前实现 | 迁移影响 |
+| 维度 | wujie 2.1.0 | Micro Framework 当前实现 | 迁移影响 |
 | --- | --- | --- | --- |
 | JavaScript 环境 | 同源 iframe 沙箱 | 每应用实例独立的隐藏同源 iframe Realm | 模型接近，但实例和销毁边界更严格 |
 | 可视 DOM | Web Component/Shadow DOM，代理 iframe `document` | 应用自有 ShadowRoot，桥接 iframe `document` | 弹层和组件库仍需回归，不能假设补丁完全相同 |
@@ -138,7 +138,7 @@ export function unmount() {
 
 ### 4. 重新设计路由同步
 
-Micro Frame 不复制 wujie 的 query 同步协议。推荐由宿主拥有应用激活路由，子应用拥有应用内部路由；确实需要刷新恢复时，定义版本化、可序列化的路由参数，而不是直接代理整个 iframe history。
+Micro Framework 不复制 wujie 的 query 同步协议。推荐由宿主拥有应用激活路由，子应用拥有应用内部路由；确实需要刷新恢复时，定义版本化、可序列化的路由参数，而不是直接代理整个 iframe history。
 
 ### 5. 迁移通信和扩展点
 

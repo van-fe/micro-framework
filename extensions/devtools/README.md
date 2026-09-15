@@ -1,6 +1,6 @@
-# Micro Frame DevTools extension
+# Micro Framework DevTools extension
 
-Load this folder unpacked in Chromium/Chrome/Edge's extensions developer mode. Open the host page's DevTools and select **Micro Frame**. The host must call `exposeRuntimeToDevtools(window, runtime)` before application mounting to expose lifecycle history.
+Load this folder unpacked in Chromium/Chrome/Edge's extensions developer mode. Open the host page's DevTools and select this extension's panel. The host must call `exposeRuntimeToDevtools(window, runtime)` before application mounting to expose lifecycle history.
 
 The extension displays each Runtime, same-name application instances, states and recent errors. It refreshes only while the panel is visible. Navigation and reload are handled by the next snapshot. All page strings are rendered with `textContent`.
 
