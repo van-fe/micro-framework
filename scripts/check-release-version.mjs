@@ -1,7 +1,13 @@
-import { readFile } from "node:fs/promises";
+import { appendFile, readFile } from "node:fs/promises";
 import { root, workspacePackages } from "./workspace-packages.mjs";
-import { releaseVersion } from "./release-plan.mjs";
+import { releaseRequest } from "./release-plan.mjs";
 
 const { version } = JSON.parse(await readFile(`${root}/package.json`, "utf8"));
-const tag = releaseVersion(await workspacePackages(), version, process.env.RELEASE_TAG);
-console.log(`Release ${version}, npm dist-tag: ${tag}`);
+const { releaseTag, distTag } = releaseRequest(
+  await workspacePackages({ includeDevelopment: true }), version,
+  process.env.RELEASE_TAG, process.env.RELEASE_DRY_RUN === "true",
+);
+if (process.env.GITHUB_OUTPUT) {
+  await appendFile(process.env.GITHUB_OUTPUT, `release_tag=${releaseTag}\n`);
+}
+console.log(`Release ${version}, tag: ${releaseTag}, npm dist-tag: ${distTag}`);

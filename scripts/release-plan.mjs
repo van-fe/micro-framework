@@ -32,3 +32,9 @@ export function publicationOrder(packages) {
   for (const pkg of packages) visit(pkg);
   return ordered;
 }
+
+export function releaseRequest(packages, version, requestedTag, dryRun = false) {
+  assert.ok(requestedTag || dryRun, "An existing version tag is required for publication; omit it only for dry-run");
+  const releaseTag = requestedTag || `v${version}`;
+  return { releaseTag, distTag: releaseVersion(packages, version, releaseTag) };
+}

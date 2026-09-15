@@ -5,8 +5,8 @@ on:
   workflow_dispatch:
     inputs:
       tag:
-        description: 'Existing version tag, e.g. v0.0.1'
-        required: true
+        description: 'Existing version tag (v0.1.0); leave empty only for a branch dry-run'
+        required: false
         type: string
       dry_run:
         description: Validate and pack without publishing
@@ -18,45 +18,82 @@ concurrency:
   group: npm-publish
   cancel-in-progress: false
 jobs:
-  publish:
+  prepare:
     runs-on: ubuntu-latest
     timeout-minutes: 45
-    environment: npm
-    permissions:
-      contents: read
-      id-token: write
+    outputs:
+      release_tag: ${{ steps.version.outputs.release_tag }}
+      commit_sha: ${{ steps.revision.outputs.sha }}
     env:
       RELEASE_TAG: ${{ github.event.release.tag_name || inputs.tag }}
+      RELEASE_DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: refs/tags/${{ github.event.release.tag_name || inputs.tag }}
+          ref: ${{ (github.event.release.tag_name || inputs.tag) && format('refs/tags/{0}', github.event.release.tag_name || inputs.tag) || github.sha }}
           persist-credentials: false
+      - name: Record immutable source revision
+        id: revision
+        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
-          registry-url: https://registry.npmjs.org
       - uses: oven-sh/setup-bun@v2
         with:
           bun-version: '1.4.0'
-      - run: node scripts/check-release-version.mjs
+      - name: Validate release version
+        id: version
+        run: node scripts/check-release-version.mjs
       - run: bun install --frozen-lockfile
       - run: bun run check:architecture
       - run: bun run typecheck
       - run: bun run test:unit
       - run: bun run test:release
       - run: bun run release:prepare:npm
+      - name: Validate npm publication
+        run: node scripts/publish-npm.mjs --dry-run
+        env:
+          RELEASE_TAG: ${{ steps.version.outputs.release_tag }}
+          npm_config_offline: 'true'
       - uses: actions/upload-artifact@v4
         with:
           name: npm-packages
           path: .artifacts/npm/
           include-hidden-files: true
-      - name: Validate npm publication
-        run: node scripts/publish-npm.mjs --dry-run
-        env:
-          npm_config_offline: 'true'
+          if-no-files-found: error
+      - name: Preserve release diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: npm-release-diagnostics
+          path: .artifacts/bundle-size.json
+          include-hidden-files: true
+          if-no-files-found: ignore
+          retention-days: 14
+  publish:
+    needs: prepare
+    if: github.event_name == 'release' || !inputs.dry_run
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment: npm
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.prepare.outputs.commit_sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          registry-url: https://registry.npmjs.org
+      - uses: actions/download-artifact@v4
+        with:
+          name: npm-packages
+          path: .artifacts/npm/
       - name: Publish npm packages
-        if: github.event_name == 'release' || !inputs.dry_run
         run: node scripts/publish-npm.mjs
         env:
+          RELEASE_TAG: ${{ needs.prepare.outputs.release_tag }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

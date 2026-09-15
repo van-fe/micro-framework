@@ -6,6 +6,8 @@
 
 The documentation site is hosted on GitHub Pages and updates automatically after pushes to `main`.
 
+Current version: **0.1.0**. The [npm workflow](.github/workflows/npm.yml) publishes `@micro-framework/*` when a matching GitHub Release is published. Manual runs default to dry-run; leave the tag empty to validate a branch. Configure the `npm` environment with `NPM_TOKEN` or trusted publishing before publication. [Release setup](packages/docs/en/reference/release-readiness.md).
+
 A micro-frontend runtime for modern browsers. Each micro-application instance executes JavaScript in its own hidden, same-origin iframe Realm and renders visible DOM and CSS into an application-owned ShadowRoot.
 
 The isolation model prevents accidental global pollution between trusted internal applications. A same-origin iframe is not a security boundary against malicious code.

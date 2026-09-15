@@ -6,6 +6,8 @@
 
 在线文档已部署到 GitHub Pages，后续推送到 `main` 会自动更新。
 
+当前版本：**0.1.0**。[npm 发布工作流](.github/workflows/npm.yml) 在发布匹配版本的 GitHub Release 后发布 `@micro-framework/*`。手动运行默认 dry-run，留空 tag 可验证分支；实际发布前配置 `npm` environment 的 `NPM_TOKEN` 或 Trusted Publisher。详见[发布配置](packages/docs/reference/release-readiness.md)。
+
 一个面向现代浏览器的微前端运行时。每个微应用实例在独立、同源、不可见的 iframe Realm 中执行 JavaScript，并把可视 DOM 与 CSS 渲染到应用自己的 ShadowRoot。
 
 当前安全目标是阻止内部可信应用的意外全局污染，不把同源 iframe 当成恶意代码安全边界。

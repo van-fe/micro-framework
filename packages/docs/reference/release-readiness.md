@@ -18,22 +18,23 @@ VitePress 读取 Pages 返回的 base path，兼容项目子路径和自定义�
 
 ## 发布到 npm
 
-`npm.yml` 在 GitHub Release **published** 后发布所有框架库包，也支持手动选择现有 tag（默认 dry-run）。
+`npm.yml` 在 GitHub Release **published** 后发布所有框架库包，也支持手动运行（默认 dry-run）。手动 dry-run 不填 tag 时验证所选分支的当前版本；实际发布必须填写匹配版本的已有 tag。
 仓库根目录、文档站和示例始终不发布。包为 public scoped packages，源 workspace 的 `private: true` 保留，
 仅发布暂存区删除私有标记；日常 push 只部署文档，不会发布 npm。
 
-1. 在 npm 中准备 `@micro-framework` scope 的发布权限；确定项目许可证并补充元数据及根 `LICENSE`。
+1. 在 npm 中准备 `@micro-framework` scope 的发布权限；项目已采用 MIT，根 `LICENSE` 会随发布包一起打包。
 2. 建立 GitHub `npm` environment。首次发布可将可用于 CI 发布的 granular token 保存为该环境的 `NPM_TOKEN` secret。
    已有包推荐逐包配置 npm Trusted Publisher：owner `van-fe`、repository `micro-framework`、workflow `npm.yml`、environment `npm`，允许 publish。
    配置后可移除 token，使用工作流的 OIDC 身份。Node 24 提供兼容的 npm CLI；详见 [npm Trusted Publishing](https://docs.npmjs.com/trusted-publishers/)。
-3. 同步根和全部 workspace 的版本并用 Bun 更新锁文件，提交后创建匹配的 tag，例如当前版本 `v0.0.1`。
-4. 先手动运行 **Publish npm packages**，填写该 tag，保持 `dry_run` 勾选；通过后发布对应 GitHub Release，或手动取消 dry-run。
+3. 同步根和全部 workspace 的版本并用 Bun 更新锁文件，提交后创建匹配的 tag，例如当前版本 `v0.1.0`。
+4. 先手动运行 **Publish npm packages**，保持 `dry_run` 勾选，可先留空 tag 验证分支，或填写该 tag 验证版本；通过后发布对应 GitHub Release，或手动取消 dry-run。
 
 版本 tag 必须严格等于根版本前加 `v`。稳定版本发布到 `latest`，含预发布标识的版本发布到 `next`。
-流程执行冻结安装、架构/类型/单元/发布脚本测试，以及框架构建、产物和体积门禁；任何失败都会阻止上传和发布。
+流程执行冻结安装、架构/类型/单元/发布脚本测试，以及框架构建、产物和体积门禁；任何失败都会阻止发布；体积检查失败仍会上传 `npm-release-diagnostics` 诊断报告。
 浏览器与完整应用验收由 `validate.yml` 执行，创建 Release 前还应确认该提交通过这些验收。
 当前已知 Runtime 体积超预算，因此正式发布仍会被门禁阻止，不能把新增工作流当作发布就绪。
 
+`prepare` job 不持有发布凭据；仅 `publish` job 使用 `npm` environment、OIDC / `NPM_TOKEN`，检出已验证的同一 commit SHA 并下载原打包产物。
 发布产物保存为 `npm-packages` artifact；`.artifacts/npm/manifest.json` 记录 SHA-256。
 脚本先校验整批 tarball，再按依赖顺序发布；重试会跳过 npm 上内容完全一致的版本，遇到同版本内容不同则失败，
 网络或权限错误不会当作包不存在。多包发布不具备事务性；部分失败应重跑原 job，保留相同源码与产物。
@@ -41,7 +42,7 @@ VitePress 读取 Pages 返回的 base path，兼容项目子路径和自定义�
 ```bash
 # 本地仅打包及 dry-run，不进行真实发布；仍执行体积门禁。
 bun run release:prepare:npm
-RELEASE_TAG=v0.0.1 npm_config_offline=true node scripts/publish-npm.mjs --dry-run
+RELEASE_TAG=v0.1.0 npm_config_offline=true node scripts/publish-npm.mjs --dry-run
 ```
 
 ## 本地与 CI
@@ -96,8 +97,8 @@ manifest 的 `workspace:*` 为同批版本，包含 dist 与用于声明映射�
 仅安装测试用 CLI 工具本身使用 tarball overrides；四种生成应用不改写 manifest、不注入 overrides，
 由临时 registry 提供同批 tarball，并校验安装前后的 package.json 完全一致。
 
-npm 目标为 public `@micro-framework/*` 包，版本以根 `package.json` 的 `0.0.1` 为准。
-正式发布前仍需确定许可证与版本兼容政策，并按上文配置发布身份；本地准备不执行真实发布。
+npm 目标为 public `@micro-framework/*` 包，版本以根 `package.json` 的 `0.1.0` 为准。
+项目采用 MIT；正式发布前仍需确认版本兼容政策，并按上文配置发布身份；本地准备不执行真实发布。
 
 ## 外部验收表
 

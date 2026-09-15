@@ -12,21 +12,21 @@ See [GitHub Pages custom workflows](https://docs.github.com/en/pages/getting-sta
 
 ## npm publication
 
-npm.yml publishes library packages after a GitHub Release is published, or accepts an existing tag manually with dry-run enabled by default. Root, documentation, and examples are never published. Public scoped staging packages omit private; source workspaces retain it. Ordinary pushes deploy docs only.
+npm.yml publishes library packages after a GitHub Release is published, or runs manually with dry-run enabled by default. Leave the tag empty to validate the selected branch at its current version; actual publication requires an existing matching version tag. Root, documentation, and examples are never published. Public scoped staging packages omit private; source workspaces retain it. Ordinary pushes deploy docs only.
 
 1. Obtain publishing rights for the scope. The repository uses MIT and includes LICENSE; confirm release metadata/version policy.
 2. Configure the GitHub npm environment. A CI-capable granular NPM_TOKEN can bootstrap first publication. For existing packages, configure Trusted Publisher with owner van-fe, repository micro-framework, workflow npm.yml, and environment npm; then OIDC can replace the token. See [npm Trusted Publishing](https://docs.npmjs.com/trusted-publishers/).
-3. Align all workspace/root versions and the Bun lockfile, commit, and create a matching tag such as v0.0.1.
+3. Align all workspace/root versions and the Bun lockfile, commit, and create a matching tag such as v0.1.0.
 4. Run the publication workflow in dry-run mode first, then publish the release or explicitly disable dry-run.
 
 Tags must equal `v` plus the root version. Stable versions use latest, prereleases next. Frozen installation, architecture, types, unit/release-script tests, framework builds, artifacts, and size checks gate publication. Validate browser/application gates on the same commit before release. The current size failure is not waived.
 
-The npm-packages artifact and staging manifest record SHA-256. Scripts validate the whole batch before publishing in dependency order. Retries skip only identical published versions; differing content fails. Network/permission failures are not treated as missing packages. Multi-package publishing is not transactional; retry partial failures from the same job/source/artifacts.
+The prepare job checks and packs without publishing credentials. Only the publish job uses the npm environment, NPM_TOKEN/OIDC, the validated commit SHA, and the exact downloaded artifacts. Failed size checks still upload npm-release-diagnostics. The npm-packages artifact and staging manifest record SHA-256. Scripts validate the whole batch before publishing in dependency order. Retries skip only identical published versions; differing content fails. Network/permission failures are not treated as missing packages. Multi-package publishing is not transactional; retry partial failures from the same job/source/artifacts.
 
 ```bash
 # Local packaging and dry-run only; no publication. The size gate still applies.
 bun run release:prepare:npm
-RELEASE_TAG=v0.0.1 npm_config_offline=true node scripts/publish-npm.mjs --dry-run
+RELEASE_TAG=v0.1.0 npm_config_offline=true node scripts/publish-npm.mjs --dry-run
 ```
 
 ## Local and CI checks

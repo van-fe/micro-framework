@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { publicationOrder, releaseVersion } from "./release-plan.mjs";
+import { publicationOrder, releaseVersion, releaseRequest } from "./release-plan.mjs";
 
 const pkg = (name, dependencies = {}) => ({ manifest: {
   name: `@micro-framework/${name}`, version: "0.0.1", dependencies,
@@ -29,4 +29,15 @@ test("rejects missing workspaces and circular release dependencies", () => {
     pkg("a", { "@micro-framework/b": "workspace:*" }),
     pkg("b", { "@micro-framework/a": "workspace:*" }),
   ]));
+});
+
+test("branch dry-runs infer the current version but publication requires a matching tag", () => {
+  const packages = [{ manifest: { name: "@micro-framework/runtime", version: "0.1.0" } }];
+  assert.deepEqual(releaseRequest(packages, "0.1.0", "", true), { releaseTag: "v0.1.0", distTag: "latest" });
+  assert.deepEqual(releaseRequest(packages, "0.1.0", "v0.1.0"), { releaseTag: "v0.1.0", distTag: "latest" });
+  assert.throws(() => releaseRequest(packages, "0.1.0", "", false), /tag is required/);
+  assert.throws(() => releaseRequest(packages, "0.1.0", "v0.0.1", true), /must match/);
+  assert.throws(() => releaseRequest([...packages, {
+    manifest: { name: "@micro-framework/docs", version: "0.0.1" },
+  }], "0.1.0", "v0.1.0"), /Version mismatch/);
 });
