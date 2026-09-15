@@ -7,7 +7,8 @@ DOCS_BASE=/micro-framework/ bun run docs:build:site
 bun run test:pages
 ```
 
-这组验收直接服务最终 Pages 产物，在 Chromium、Firefox、WebKit 中分别验证独立宿主与文档内嵌演示。
+这组验收直接服务最终 Pages 产物，在 Chromium、Firefox、WebKit 中分别验证独立宿主、中英文文档内嵌演示，以及桌面/移动端同篇语言切换和按语言搜索。
+文档构建会检查两种语言的页面清单一致，避免新增页面后切换语言进入 404。
 覆盖四框架加载、实际弹层操作、市场/语言更新、iframe Realm 与 Shadow DOM 隔离及完整销毁，
 并检查资源请求不再依赖开发服务器。导航前通过本地假接收端验证遥测零外发，始终阻止 Service Worker。
 GitHub Pages 工作流在上传部署产物前运行同一组测试。

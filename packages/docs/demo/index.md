@@ -7,8 +7,7 @@ aside: false
 ---
 
 <script setup lang="ts">
-const demoUrl = import.meta.env.VITE_MICRO_FRAME_DEMO_URL
-  || (import.meta.env.DEV ? "http://127.0.0.1:5173/" : "");
+import DemoPreview from "../.vitepress/theme/DemoPreview.vue";
 </script>
 
 # 履约运营台交互演示
@@ -17,29 +16,13 @@ const demoUrl = import.meta.env.VITE_MICRO_FRAME_DEMO_URL
 四个独立微应用分别承载订单处置、营收分析、现代客户风险和传统系统迁移。它们拥有各自的 iframe Realm、
 模块图和 ShadowRoot，但组合后保持一致的产品体验。
 
-宿主右上角提供中文/English 切换，并通过生命周期 update 将 locale 同步给全部微应用。
+演示默认使用当前文档语言。宿主右上角提供中文/English 切换，并通过生命周期 update 将 locale 同步给全部微应用。
 React 示例使用 Ant Design，Vue 3 使用 Element Plus，Vue 2 使用 Element UI。
 四个微应用都提供了可操作弹窗。它们默认覆盖整个宿主视口，同时弹层 DOM 与样式仍归各自
 ShadowRoot 所有；显式指定容器时才会按容器范围定位。这可以直接验证 React Portal、
 Vue Teleport、Element UI `append-to-body` 与原生 `dialog` 的默认全局行为。
 
-<p v-if="!demoUrl">在线演示尚未配置。可按下方说明在本地运行完整演示。</p>
-
-<div v-if="demoUrl" class="demo-toolbar">
-  <span><i></i> Live micro-frontend composition</span>
-  <a :href="demoUrl" target="_blank" rel="noreferrer">在独立窗口打开 ↗</a>
-</div>
-
-<div v-if="demoUrl" class="demo-frame-shell">
-  <div class="demo-frame-stage">
-    <iframe
-      :src="demoUrl"
-      title="Northstar fulfillment command center"
-      loading="eager"
-      allow="clipboard-read; clipboard-write"
-    ></iframe>
-  </div>
-</div>
+<DemoPreview />
 
 ::: tip 本地运行
 在仓库根目录执行 `bun run dev`，然后打开本页。默认情况下，文档运行于
@@ -84,81 +67,3 @@ VITE_MICRO_FRAME_DEMO_URL=https://demo.example.com/ bun run docs:build
 
 完整站点构建默认嵌入同站演示；配置该变量时使用指定地址。仅运行 `docs:build` 且未配置演示地址时，
 仍显示本地运行说明。本地开发文档使用 `127.0.0.1:5173`。
-
-<style>
-.demo-toolbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-  z-index: 2;
-  width: min(1196px, calc(100vw - 48px));
-  margin: 26px 0 0 calc(50% - min(598px, calc(50vw - 24px)));
-  padding: 10px 13px;
-  border: 1px solid var(--vp-c-divider);
-  border-bottom: 0;
-  border-radius: 14px 14px 0 0;
-  background: var(--vp-c-bg-soft);
-  font-size: 13px;
-}
-
-.demo-toolbar span {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--vp-c-text-2);
-  font-weight: 650;
-}
-
-.demo-toolbar i {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #72a943;
-  box-shadow: 0 0 0 4px rgba(114, 169, 67, .12);
-}
-
-.demo-toolbar a {
-  color: var(--vp-c-brand-1);
-  font-weight: 650;
-  text-decoration: none;
-}
-
-.demo-frame-shell {
-  position: relative;
-  z-index: 2;
-  width: min(1196px, calc(100vw - 48px));
-  margin: 0 0 28px calc(50% - min(598px, calc(50vw - 24px)));
-  padding: 8px;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 0 0 16px 16px;
-  background: var(--vp-c-bg-soft);
-  box-shadow: 0 22px 70px rgba(22, 33, 27, .09);
-  overflow: hidden;
-}
-
-.demo-frame-stage {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.demo-frame-stage iframe {
-  display: block;
-  width: 100%;
-  height: min(900px, 80vh);
-  min-height: 600px;
-  scroll-margin-top: calc(var(--vp-nav-height) + 16px);
-  border: 0;
-  border-radius: 10px;
-  background: #f4f6f2;
-}
-
-@media (max-width: 768px) {
-  .demo-toolbar,
-  .demo-frame-shell {
-    width: calc(100vw - 24px);
-  }
-
-}
-</style>

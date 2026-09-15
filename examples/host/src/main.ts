@@ -33,7 +33,7 @@ const workspaceTitle = document.querySelector<HTMLElement>("#host-title")!;
 const workspaceEyebrow = document.querySelector<HTMLElement>("#workspace-eyebrow")!;
 const workspaceDescription = document.querySelector<HTMLElement>("#workspace-description")!;
 const mountedApps = new Set<string>();
-let activeLocale: Locale = "zh-CN";
+let activeLocale: Locale = new URLSearchParams(location.search).get("locale") === "en-US" ? "en-US" : "zh-CN";
 let activePeriod = "live";
 let activeWorkspaceView: WorkspaceView = "overview";
 hostGlobal.textContent = window.__realmCollision__;

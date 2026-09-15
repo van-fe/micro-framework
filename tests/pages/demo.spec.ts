@@ -1,7 +1,8 @@
 import { expect, test } from "../e2e/browser-process-fixture";
 
-for (const embedded of [false, true]) {
-  test(`production demo mounts and cleans up all four frameworks (${embedded ? "embedded" : "standalone"})`, async ({ page, context }, testInfo) => {
+for (const variant of ["standalone", "zh", "en"] as const) {
+  const embedded = variant !== "standalone";
+  test(`production demo mounts and cleans up all four frameworks (${variant})`, async ({ page, context }, testInfo) => {
     const errors: string[] = [];
     const failedResources: string[] = [];
     const requests: string[] = [];
@@ -10,9 +11,14 @@ for (const embedded of [false, true]) {
       if (response.status() >= 400) failedResources.push(`${response.status()} ${response.url()}`);
     });
     page.on("request", (request) => requests.push(request.url()));
-    await page.goto(embedded ? "demo/" : "playground/");
+    await page.goto(variant === "en" ? "en/demo/" : embedded ? "demo/" : "playground/");
     const surface = embedded ? page.frameLocator(".demo-frame-shell iframe") : page;
     await expect(surface.locator("#runtime-status")).toHaveText("mounted 4 applications");
+    await expect(surface.locator("#locale-filter")).toHaveValue(variant === "en" ? "en-US" : "zh-CN");
+    if (variant === "en") {
+      await expect(surface.locator("#host-title")).toContainText("Fulfillment");
+      await surface.locator("#locale-filter").selectOption("zh-CN");
+    }
     if (embedded) await page.locator(".demo-frame-shell").scrollIntoViewIfNeeded();
     const host = embedded ? page.frames().find((frame) => frame.url().includes("/playground/"))! : page.mainFrame();
     for (const selector of ["#vanilla-root", "#react-root .ant-btn", "#vue-root .el-button", "#vue2-root .el-button"]) {

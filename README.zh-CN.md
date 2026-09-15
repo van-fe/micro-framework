@@ -2,7 +2,7 @@
 
 [English](README.md) | **简体中文**
 
-[在线文档](https://van-fe.github.io/micro-framework/) · [仓库内文档](packages/docs/index.md) · [MIT 许可证](LICENSE)
+[在线文档](https://van-fe.github.io/micro-framework/) · [English docs](https://van-fe.github.io/micro-framework/en/) · [仓库内文档](packages/docs/index.md) · [MIT 许可证](LICENSE)
 
 在线文档已部署到 GitHub Pages，后续推送到 `main` 会自动更新。
 

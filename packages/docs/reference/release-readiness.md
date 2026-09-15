@@ -8,7 +8,7 @@
 在仓库 Settings → Pages → Build and deployment 中将 Source 设为 **GitHub Actions**。
 `docs.yml` 在默认分支每次 push 后构建并部署，也支持在默认分支手动运行；其他分支不覆盖线上文档。
 VitePress 读取 Pages 返回的 base path，兼容项目子路径和自定义域名，本地开发仍使用 `/`。
-在线文档：[Micro Framework 文档站](https://van-fe.github.io/micro-framework/)。当前公开仓库使用 GitHub Actions 作为 Pages 发布来源，后续推送到 `main` 自动更新。
+在线文档：[中文版](https://van-fe.github.io/micro-framework/) · [English](https://van-fe.github.io/micro-framework/en/)。两种语言支持同篇切换、独立搜索及跟随语言的在线演示。当前公开仓库使用 GitHub Actions 作为 Pages 发布来源，后续推送到 `main` 自动更新。
 
 工作流运行 `docs:build:site`，将宿主和 Vanilla、React、Vue 3、Vue 2 微应用一起发布到站点的 `/playground/` 目录，
 文档默认直接嵌入它。发布前在 Chromium、Firefox、WebKit 中验证独立窗口和文档内嵌两种形式，覆盖四应用加载、

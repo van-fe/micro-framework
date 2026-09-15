@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "vitepress dev . --host 127.0.0.1 --port 5178 --strictPort",
-    "build": "vitepress build .",
+    "build": "node ../../scripts/check-docs-locales.mjs && vitepress build .",
     "preview": "vitepress preview . --host 127.0.0.1 --port 4178 --strictPort"
   },
   "devDependencies": {

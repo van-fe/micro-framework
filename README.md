@@ -2,7 +2,7 @@
 
 **English** | [简体中文](README.zh-CN.md)
 
-[Documentation](https://van-fe.github.io/micro-framework/) · [Documentation source](packages/docs/index.md) · [MIT License](LICENSE)
+[Documentation](https://van-fe.github.io/micro-framework/en/) · [中文文档](https://van-fe.github.io/micro-framework/) · [Documentation source](packages/docs/en/index.md) · [MIT License](LICENSE)
 
 The documentation site is hosted on GitHub Pages and updates automatically after pushes to `main`.
 
