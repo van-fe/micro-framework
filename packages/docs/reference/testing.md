@@ -1,5 +1,17 @@
 # 测试与工程门禁
 
+## 文档站与在线演示
+
+```bash
+DOCS_BASE=/micro-framework/ bun run docs:build:site
+bun run test:pages
+```
+
+这组验收直接服务最终 Pages 产物，在 Chromium、Firefox、WebKit 中分别验证独立宿主与文档内嵌演示。
+覆盖四框架加载、实际弹层操作、市场/语言更新、iframe Realm 与 Shadow DOM 隔离及完整销毁，
+并检查资源请求不再依赖开发服务器。导航前通过本地假接收端验证遥测零外发，始终阻止 Service Worker。
+GitHub Pages 工作流在上传部署产物前运行同一组测试。
+
 ## macOS E2E 浏览器进程隔离
 
 `tests/e2e/browser-process-fixture.ts` 使用 Playwright 的 worker fixture，让 macOS 上三个引擎的浏览器进程

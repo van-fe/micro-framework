@@ -36,7 +36,7 @@
 - 根 README 默认提供英文说明，新增 `README.zh-CN.md` 中文版并提供双向语言切换及在线/仓库内文档链接；两版同步可选写入用法、最新验证证据与体积限制。
 - `document.write` 流式兼容及 `parse5` 拆入独立 `@micro-framework/document-write` 包，默认 Runtime 不依赖该包；宿主须显式传入安装器。未启用时实际调用 write/writeln/open/close 会被阻止并输出去重的安装指引，宿主与独立 Document 保留原生行为。文档明确默认行为、启用步骤、调用检测范围及原有兼容边界。
 - npm 命名空间统一为 `@micro-framework`，同步工作区依赖、源码导入、构建 external、CLI 模板、架构检查和文档。
-- 公开仓库已使用 GitHub Actions 成功构建并部署文档到 `https://van-fe.github.io/micro-framework/`，线上首页、三份文档及入口脚本 HTTP 验证通过；默认分支每次推送自动更新，支持子路径与手动触发，线上未配置演示地址时显示本地运行说明。
+- 公开仓库通过 GitHub Actions 构建并部署文档到 `https://van-fe.github.io/micro-framework/`，默认分支每次推送自动更新。完整站点同时构建宿主及 Vanilla、React、Vue 3、Vue 2 演示到 `/playground/`，文档默认直接嵌入；生产 HTML/ESM、样式、共享模块和 Realm 启动资源均使用部署子路径。内嵌页采用原生响应式 iframe 视口，支持内部滚动和四框架弹层；保留独立演示地址覆盖。
 - 增加 GitHub Release/手动 npm 发布工作流：版本一致性、产物哈希与依赖顺序检查，public 暂存打包、dry-run、OIDC 或 token 认证、稳定版/预发布 dist-tag，以及相同产物的重试去重；保留现有体积门禁，尚未执行远端发布。
 
 - 每次产生文件变更的任务完成前，更新本文件的当前版本净变化，并以 `type(scope): message` 格式进行本地 Git 提交。
@@ -49,6 +49,7 @@
 
 ### 验证范围与已知限制
 
+- Pages 完整站点构建及三浏览器独立/内嵌演示 6/6 通过，覆盖四框架真实弹层、市场/语言切换、隔离和销毁；最终产物的 HTML/JS/CSS 不含开发服务器地址。冻结安装、全项目类型检查、架构检查、192 项单测与工作流 actionlint 通过。
 - `@micro-framework/*` 命名与可选写入验证：41 个包、冻结安装、架构/类型检查和全量构建通过；单测 192/192、三引擎 Browser Mode 507/507、发布脚本测试 7/7 通过。E2E 全量 423 项通过，旧默认写入断言调整后另外 3 项三引擎定向复核通过；默认不加载可选包与显式启用的四框架写入均有覆盖。两个发布工作流已有 actionlint 证据，文档子路径构建及 30 个 tarball 的依赖核验/离线 dry-run 通过；GitHub Pages 文档部署已成功，npm 发布仍受体积门禁阻止。
 - 其他矩阵保留既有验收证据：移动端 4/4，安全可执行的 production hydration/SSR/CSP 12/12，模板浏览器 24/24，Angular Vite/Webpack 集成 6/6。最终 benchmark 43 通过、2 按设计跳过，45 个 Context 均验证五类外发被阻止且 Service Worker 为 0。production offline-cache 用例需注册 Service Worker，与本地必须阻止 Service Worker 的约束冲突，因此未无保护执行；真实 Safari 和长时 soak 未执行。
 - 上游台账累计 140 条；报告数量不代表独立缺陷数，部分覆盖的原始条件差异见 [上游台账](tests/upstream-issues/README.md)。

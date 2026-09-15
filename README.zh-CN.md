@@ -234,5 +234,9 @@ tarball 准备、产物完整性与体积预算。文档已通过 GitHub Actions
 ```bash
 bun run docs:dev
 bun run docs:build
+bun run docs:build:site
 bun run docs:preview
 ```
+
+`docs:build:site` 同时构建宿主与四个微应用到 `/playground/`，供文档演示页直接嵌入。
+GitHub Pages 项目路径使用 `DOCS_BASE=/micro-framework/`；部署工作流会先通过三浏览器演示验收再发布。

@@ -1,4 +1,5 @@
 import { createRuntime, type MicroRuntime } from "@micro-framework/runtime";
+import { demoEntries, demoRealm, demoSharedUrl } from "./demo-entries";
 import {
   translate,
   workspaceMessages,
@@ -102,6 +103,7 @@ const documentWrite = new URLSearchParams(location.search).get("documentWrite") 
   ? (await import("@micro-framework/document-write")).installDocumentWrite
   : undefined;
 const runtime = createRuntime({
+  ...demoRealm,
   documentBridge: { documentWrite },
   services: {
     probe: {
@@ -119,7 +121,7 @@ const runtime = createRuntime({
   sharedDependencies: {
     "@micro-framework/demo-shared": [{
       version: "1.0.0",
-      url: "http://127.0.0.1:5174/src/shared-marker.ts",
+      url: demoSharedUrl,
     }],
   },
   hooks: {
@@ -141,10 +143,7 @@ runtime.errors.subscribe(({ error, phase }) => {
 runtime.registerApps([
   {
     name: "vanilla-orders",
-    entry: {
-      url: "http://127.0.0.1:5174/micro.html",
-      type: "html",
-    },
+    entry: demoEntries.vanilla,
     container: "#vanilla-slot",
     activeWhen: alwaysActive,
     sharedDependencies: {
@@ -158,7 +157,7 @@ runtime.registerApps([
   },
   {
     name: "react-dashboard",
-    entry: { url: "http://127.0.0.1:5175/src/lifecycle.tsx", type: "module" },
+    entry: demoEntries.react,
     container: "#react-slot",
     activeWhen: alwaysActive,
     props: {
@@ -170,7 +169,7 @@ runtime.registerApps([
   },
   {
     name: "vue-profile",
-    entry: { url: "http://127.0.0.1:5176/src/lifecycle.ts", type: "module" },
+    entry: demoEntries.vue,
     container: "#vue-slot",
     activeWhen: alwaysActive,
     props: {
@@ -181,7 +180,7 @@ runtime.registerApps([
   },
   {
     name: "vue2-console",
-    entry: { url: "http://127.0.0.1:5179/src/lifecycle.ts", type: "module" },
+    entry: demoEntries.vue2,
     container: "#vue2-slot",
     activeWhen: alwaysActive,
     props: {

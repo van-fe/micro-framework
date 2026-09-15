@@ -10,8 +10,11 @@
 VitePress 读取 Pages 返回的 base path，兼容项目子路径和自定义域名，本地开发仍使用 `/`。
 在线文档：[Micro Framework 文档站](https://van-fe.github.io/micro-framework/)。当前公开仓库使用 GitHub Actions 作为 Pages 发布来源，后续推送到 `main` 自动更新。
 
-文档站不包含示例服务。可设置仓库 Actions variable `MICRO_FRAME_DEMO_URL` 为已部署的 HTTPS 演示地址；
-未设置时线上页面显示本地运行说明。配置方式参见 [GitHub Pages 官方说明](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)。
+工作流运行 `docs:build:site`，将宿主和 Vanilla、React、Vue 3、Vue 2 微应用一起发布到站点的 `/playground/` 目录，
+文档默认直接嵌入它。发布前在 Chromium、Firefox、WebKit 中验证独立窗口和文档内嵌两种形式，覆盖四应用加载、
+语言/市场更新、弹层、Realm/Shadow DOM 隔离和销毁；使用假接收端验证遥测零外发并阻止 Service Worker。
+可设置仓库 Actions variable `MICRO_FRAME_DEMO_URL` 覆盖为其他已部署的 HTTPS 演示地址。
+配置方式参见 [GitHub Pages 官方说明](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)。
 
 ## 发布到 npm
 

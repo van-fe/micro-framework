@@ -218,5 +218,9 @@ The documentation site lives in `packages/docs` and builds with VitePress. Linke
 ```bash
 bun run docs:dev
 bun run docs:build
+bun run docs:build:site
 bun run docs:preview
 ```
+
+`docs:build:site` includes the host and all four micro-applications in `/playground/`, embedded in the documentation demo page.
+Set `DOCS_BASE=/micro-framework/` for GitHub Pages project paths; the deployment workflow also runs the three-browser demo checks before publishing.

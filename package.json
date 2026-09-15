@@ -19,6 +19,8 @@
     "dev:demo": "bun run dev",
     "docs:dev": "bun run --filter @micro-framework/docs dev",
     "docs:build": "bun run --filter @micro-framework/docs build",
+    "docs:build:site": "node scripts/build-pages.mjs",
+    "test:pages": "playwright test --config playwright.pages.config.ts",
     "docs:preview": "bun run --filter @micro-framework/docs preview",
     "typecheck": "bun run --workspaces --if-present typecheck && bun run typecheck:tests",
     "typecheck:tests": "tsc -p tsconfig.tests.json --noEmit",

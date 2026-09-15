@@ -29,10 +29,14 @@ jobs:
       - run: bun install --frozen-lockfile
       - uses: actions/configure-pages@v5
         id: pages
-      - run: bun run docs:build
+      - run: bun run docs:build:site
         env:
           DOCS_BASE: ${{ steps.pages.outputs.base_path }}/
           VITE_MICRO_FRAME_DEMO_URL: ${{ vars.MICRO_FRAME_DEMO_URL }}
+      - run: bunx playwright install --with-deps chromium firefox webkit
+      - run: bun run test:pages
+        env:
+          DOCS_BASE: ${{ steps.pages.outputs.base_path }}/
       - uses: actions/upload-pages-artifact@v4
         with:
           path: packages/docs/.vitepress/dist

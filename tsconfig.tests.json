@@ -9,6 +9,8 @@
     ]
   },
   "include": [
+    "playwright.pages.config.ts",
+    "tests/pages/**/*.ts",
     "vitest.browser.config.ts",
     "vitest.safari.config.ts",
     "playwright.config.ts",
